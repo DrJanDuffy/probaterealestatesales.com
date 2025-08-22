@@ -86,3 +86,23 @@
     box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
   }
 }
+
+/* RealScout Widget Integration */
+realscout-office-listings {
+  --rs-listing-divider-color: rgb(101, 141, 172);
+  --rs-listing-card-border-radius: 12px;
+  --rs-listing-card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --rs-listing-card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --rs-listing-price-color: rgb(37, 99, 235);
+  --rs-listing-status-color: rgb(34, 197, 94);
+  --rs-listing-address-color: rgb(107, 114, 128);
+  width: 100%;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Ensure widget responsiveness */
+@media (max-width: 768px) {
+  realscout-office-listings {
+    --rs-listing-card-padding: 16px;
+  }
+}

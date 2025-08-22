@@ -101,27 +101,25 @@ The color scheme is defined in `tailwind.config.ts` with custom primary, seconda
 
 ## 🔒 Fire Crawl Dashboard
 
-The Fire Crawl Dashboard (`/firecrawl-dashboard`) is a development and administrative tool that is **NOT publicly accessible** on the live website.
+The Fire Crawl Dashboard (`/firecrawl-dashboard`) was a development tool that has been **removed from public access** to improve website security and user experience.
 
-### Access Control
-- **Development**: Automatically accessible when `NODE_ENV=development`
-- **Production**: Only accessible when specific environment variables are set
-- **Public**: Always blocked from public access
+### Current Status
+- **Public Access**: ❌ Blocked (shows 404 page)
+- **Development**: ❌ Removed from production
+- **Security**: ✅ No longer accessible to unauthorized users
 
-### How to Access (When Needed)
-1. **Local Development**: Run `npm run dev` and visit `/firecrawl-dashboard`
-2. **Production Access**: Set these environment variables in Vercel:
-   ```bash
-   FIRECRAWL_ACCESS_KEY=your_secret_key
-   FIRECRAWL_SECRET_KEY=your_secret_key
-   ```
-3. **Security**: The page is protected by middleware and will redirect unauthorized users
+### Why It Was Removed
+- The Fire Crawl integration was not fully functional
+- It served no public purpose for website visitors
+- It was a potential security risk when exposed publicly
+- It created confusion for users who stumbled upon it
 
-### Purpose
-- Generate hyperlocal content for Nevada probate real estate
-- Create neighborhood-specific guides and market analysis
-- Administrative content generation tool
-- **Not intended for public website visitors**
+### Alternative Solutions
+If you need content generation capabilities in the future, consider:
+1. **Private Admin Panel**: Build a secure, authenticated admin interface
+2. **Content Management System**: Use a proper CMS like Strapi or Contentful
+3. **Automated Content**: Implement server-side content generation without public access
+4. **Remove Route**: Completely remove the route from your Next.js application
 
 ### Components
 All components are built with Tailwind CSS utility classes and can be easily customized by modifying the classes.

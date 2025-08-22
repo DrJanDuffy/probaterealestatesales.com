@@ -28,6 +28,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <script 
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js" 
+          type="module"
+          async
+        />
+      </head>
       <body className={`${inter.className} antialiased text-secondary-900 bg-white`}>
         <Navigation />
         <main>{children}</main>
