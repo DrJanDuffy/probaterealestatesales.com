@@ -10,14 +10,22 @@ const path = require('node:path');
 const configPath = path.join(process.cwd(), 'cloudflare-config.json');
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
 
-const CLOUDFLARE_API_TOKEN = config.cloudflare.apiToken;
+const CLOUDFLARE_GLOBAL_API_KEY = config.cloudflare.apiToken;
+const CLOUDFLARE_EMAIL = process.env.CLOUDFLARE_EMAIL || 'your-email@example.com';
 const ZONE_ID = config.cloudflare.zoneId;
 const ACCOUNT_ID = config.cloudflare.accountId;
 const DOMAIN = config.domains[0];
 
-if (!CLOUDFLARE_API_TOKEN || !ZONE_ID || !ACCOUNT_ID) {
+if (!CLOUDFLARE_GLOBAL_API_KEY || !ZONE_ID || !ACCOUNT_ID) {
   console.error('❌ Missing required configuration values');
   console.error('Please update cloudflare-config.json with your Zone ID and Account ID');
+  process.exit(1);
+}
+
+if (CLOUDFLARE_EMAIL === 'your-email@example.com') {
+  console.error('❌ Please set your Cloudflare email address:');
+  console.error('   Set CLOUDFLARE_EMAIL environment variable, or');
+  console.error('   Update the script with your email address');
   process.exit(1);
 }
 
@@ -29,10 +37,12 @@ console.log(`Account ID: ${ACCOUNT_ID}`);
 // Cloudflare API base URL
 const API_BASE = 'https://api.cloudflare.com/client/v4';
 
-// Headers for API requests
+// Headers for API requests (Global API Key)
 const headers = {
-  'Authorization': `Bearer ${CLOUDFLARE_API_TOKEN}`,
-  'Content-Type': 'application/json'
+  'X-Auth-Key': CLOUDFLARE_GLOBAL_API_KEY,
+  'X-Auth-Email': CLOUDFLARE_EMAIL,
+  'Content-Type': 'application/json',
+  'User-Agent': 'Cloudflare-Deployment-Script/1.0'
 };
 
 // Utility functions
