@@ -18,6 +18,11 @@ dist/
 .env.test.local
 .env.production.local
 
+# Configuration files with sensitive data
+cloudflare-config.json
+secrets.json
+config.json
+
 # Vercel
 .vercel
 
