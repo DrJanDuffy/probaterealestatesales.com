@@ -4,6 +4,7 @@ import FeaturedProperties from '@/components/FeaturedProperties';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Testimonials from '@/components/Testimonials';
 import ContactSection from '@/components/ContactSection';
+import PropertyValuationCalculator from '@/components/PropertyValuationCalculator';
 import FAQ from '@/components/FAQ';
 import SchemaMarkup from '@/components/SchemaMarkup';
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Services />
       <FeaturedProperties />
+      <PropertyValuationCalculator />
       <WhyChooseUs />
       <FAQ />
       <Testimonials />

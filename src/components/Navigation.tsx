@@ -24,6 +24,7 @@ const navigation = {
   ],
   resources: [
     { name: 'Nevada Probate Guide', href: '/resources/nevada-probate-guide', description: 'Complete guide to Nevada probate process' },
+    { name: 'Las Vegas Guide', href: '/resources/las-vegas-probate-guide', description: 'Las Vegas & Clark County probate guide' },
     { name: 'FAQ', href: '/#faq', description: 'Frequently asked questions about probate' },
     { name: 'Timeline', href: '/resources/nevada-probate-guide#timeline', description: '6-8 month Nevada probate timeline' },
     { name: 'Costs', href: '/resources/nevada-probate-guide#costs', description: 'Nevada probate costs breakdown' },
