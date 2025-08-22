@@ -121,6 +121,8 @@ export default defineConfig({
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
     timeout: 120 * 1000,
+    stdout: 'ready',
+    stderr: 'error',
   },
 
   /* Global setup and teardown */

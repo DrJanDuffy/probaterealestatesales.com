@@ -87,18 +87,40 @@ tests/
 
 ### Environment Variables
 ```bash
-# Base URL for testing
+# Base URL for testing (default: http://localhost:3000)
 BASE_URL=http://localhost:3000
+
+# Alternative port for development
+BASE_URL=http://localhost:3001
 
 # CI environment
 CI=true
+
+# Copy from example file
+cp playwright.env.example .env
 ```
 
 ## 🔧 Test Commands
 
+### Port Management
+```bash
+# Force port 3000 (default)
+npm run dev
+
+# Use alternative port 3001
+npm run dev:alt
+
+# Test against specific port
+npm run test:port3000  # Tests against port 3000
+npm run test:port3001  # Tests against port 3001
+
+# Environment variable override
+BASE_URL=http://localhost:3002 npm test
+```
+
 ### Development Workflow
 ```bash
-# 1. Start development server
+# 1. Start development server (port 3000)
 npm run dev
 
 # 2. In another terminal, run tests
@@ -106,6 +128,10 @@ npm run test:ui
 
 # 3. View results in browser
 npm run test:report
+
+# Alternative workflow with different port
+npm run dev:alt  # Starts on port 3001
+npm run test:port3001  # Tests against port 3001
 ```
 
 ### Specific Test Suites

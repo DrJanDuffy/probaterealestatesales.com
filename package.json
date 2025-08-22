@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
+    "dev:alt": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "lint": "biome check .",
@@ -17,7 +18,9 @@
     "test:headed": "playwright test --headed",
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
-    "test:install": "playwright install"
+    "test:install": "playwright install",
+    "test:port3000": "BASE_URL=http://localhost:3000 npm test",
+    "test:port3001": "BASE_URL=http://localhost:3001 npm test"
   },
   "dependencies": {
     "@playwright/test": "^1.55.0",
