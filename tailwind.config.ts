@@ -71,9 +71,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    require('ultracite'),
-  ],
+  plugins: [],
 };
 
 export default config;
