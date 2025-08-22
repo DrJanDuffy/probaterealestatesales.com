@@ -127,7 +127,7 @@ export default function SEOMetaTags({
       <meta name="twitter:image:alt" content={fullTitle} />
 
       {/* Business-specific Meta Tags */}
-      <meta name="business:contact_data:street_address" content="123 Main Street" />
+      <meta name="business:contact_data:street_address" content="City Centre Place, 400 S 4th Street Suite 250 B" />
       <meta name="business:contact_data:locality" content="Las Vegas" />
       <meta name="business:contact_data:region" content="NV" />
       <meta name="business:contact_data:postal_code" content="89101" />
@@ -185,7 +185,7 @@ export default function SEOMetaTags({
             "email": "DrJan@probaterealestatesales.com",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "123 Main Street",
+              "streetAddress": "City Centre Place, 400 S 4th Street Suite 250 B",
               "addressLocality": "Las Vegas",
               "addressRegion": "NV",
               "postalCode": "89101",

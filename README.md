@@ -99,28 +99,6 @@ src/
 ### Colors
 The color scheme is defined in `tailwind.config.ts` with custom primary, secondary, and accent colors.
 
-## 🔒 Fire Crawl Dashboard
-
-The Fire Crawl Dashboard (`/firecrawl-dashboard`) was a development tool that has been **removed from public access** to improve website security and user experience.
-
-### Current Status
-- **Public Access**: ❌ Blocked (shows 404 page)
-- **Development**: ❌ Removed from production
-- **Security**: ✅ No longer accessible to unauthorized users
-
-### Why It Was Removed
-- The Fire Crawl integration was not fully functional
-- It served no public purpose for website visitors
-- It was a potential security risk when exposed publicly
-- It created confusion for users who stumbled upon it
-
-### Alternative Solutions
-If you need content generation capabilities in the future, consider:
-1. **Private Admin Panel**: Build a secure, authenticated admin interface
-2. **Content Management System**: Use a proper CMS like Strapi or Contentful
-3. **Automated Content**: Implement server-side content generation without public access
-4. **Remove Route**: Completely remove the route from your Next.js application
-
 ### Components
 All components are built with Tailwind CSS utility classes and can be easily customized by modifying the classes.
 
@@ -178,8 +156,8 @@ This project is licensed under the MIT License.
 ## 🆘 Support
 
 For support or questions, please contact:
-- Email: info@probaterealestate.com
-- Phone: (555) 123-4567
+- Email: info@nevadaprobate.com
+- Phone: (702) 555-0123
 
 ## 🔄 Updates
 

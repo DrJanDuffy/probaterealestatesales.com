@@ -19,15 +19,11 @@
     "test:debug": "playwright test --debug",
     "test:report": "playwright show-report",
     "test:install": "playwright install",
-    "firecrawl:generate": "node scripts/firecrawl-hyperlocal.js",
-    "firecrawl:setup": "cp firecrawl-mcp.config.json .env && echo 'Please add your FIRECRAWL_API_KEY to .env file'",
     "test:port3000": "BASE_URL=http://localhost:3000 npm test",
     "test:port3001": "BASE_URL=http://localhost:3001 npm test"
   },
   "dependencies": {
-    "@mendable/firecrawl-js": "^3.1.0",
     "clsx": "^2.1.1",
-    "firecrawl-mcp": "^1.12.0",
     "lucide-react": "^0.460.0",
     "next": "15.5.0",
     "react": "^18.3.1",

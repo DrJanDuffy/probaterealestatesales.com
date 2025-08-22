@@ -41,7 +41,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="text-sm text-secondary-500">Call Us Today</p>
-                    <p className="font-semibold text-secondary-900">(555) 123-4567</p>
+                    <p className="font-semibold text-secondary-900">(702) 555-0123</p>
                   </div>
                 </div>
                 
@@ -51,7 +51,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="text-sm text-secondary-500">Email Us</p>
-                    <p className="font-semibold text-secondary-900">info@probaterealestate.com</p>
+                    <p className="font-semibold text-secondary-900">info@nevadaprobate.com</p>
                   </div>
                 </div>
               </div>

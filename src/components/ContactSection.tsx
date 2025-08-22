@@ -103,7 +103,7 @@ export default function ContactSection() {
                   rows={4}
                   className="input-field resize-none"
                   placeholder="Tell us about your situation and how we can help..."
-                ></textarea>
+                />
               </div>
               
               <button type="submit" className="btn-primary w-full group">
@@ -127,7 +127,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">Phone</h4>
-                    <p className="text-secondary-600">(555) 123-4567</p>
+                    <p className="text-secondary-600">(702) 555-0123</p>
                     <p className="text-sm text-secondary-500">Available 24/7 for urgent matters</p>
                   </div>
                 </div>
@@ -138,7 +138,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">Email</h4>
-                    <p className="text-secondary-600">info@probaterealestate.com</p>
+                    <p className="text-secondary-600">info@nevadaprobate.com</p>
                     <p className="text-sm text-secondary-500">We respond within 2 hours</p>
                   </div>
                 </div>
@@ -149,8 +149,9 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">Office</h4>
-                    <p className="text-secondary-600">123 Business Street, Suite 100</p>
-                    <p className="text-secondary-600">Los Angeles, CA 90210</p>
+                    <p className="text-secondary-600">City Centre Place</p>
+                    <p className="text-secondary-600">400 S 4th Street Suite 250 B</p>
+                    <p className="text-secondary-600">Las Vegas, NV 89101</p>
                   </div>
                 </div>
                 
@@ -177,7 +178,7 @@ export default function ContactSection() {
                 For urgent probate matters outside business hours, call our emergency line:
               </p>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600 mb-2">(555) 999-8888</div>
+                <div className="text-2xl font-bold text-primary-600 mb-2">(702) 999-8888</div>
                 <p className="text-sm text-secondary-500">Available 24/7 for urgent matters</p>
               </div>
             </div>
