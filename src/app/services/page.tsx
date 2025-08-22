@@ -166,19 +166,19 @@ export default function ServicesPage() {
 
           {/* Multi-Option CTA Strategy */}
           <div className="cta-matrix space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-            <button type="button" className="primary-cta bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2">
+            <a href="http://drjanduffy.realscout.com/onboarding" className="primary-cta bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2">
               <Phone className="w-5 h-5" />
               <span>Need Immediate Help? Call (702) 555-0123</span>
               <span className="availability text-sm block opacity-90">Available 24/7 for urgent matters</span>
-            </button>
-            <button type="button" className="secondary-cta bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+            </a>
+            <a href="http://drjanduffy.realscout.com/onboarding" className="secondary-cta bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
               <Download className="w-5 h-5" />
               <span>Download: "2025 Nevada Probate Timeline + Checklist"</span>
-            </button>
-            <button type="button" className="tertiary-cta bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
+            </a>
+            <a href="http://drjanduffy.realscout.com/onboarding" className="tertiary-cta bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">
               <Calculator className="w-5 h-5" />
               <span>Get Free Property Assessment</span>
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -234,11 +234,11 @@ export default function ServicesPage() {
                 </div>
               </div>
               
-              <button type="button" className="micro-conversion w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2">
+              <a href="http://drjanduffy.realscout.com/onboarding" className="micro-conversion w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2">
                 <span>See Our Court Confirmation Process</span>
                 <ArrowRight className="w-4 h-4" />
                 <span className="incentive text-xs opacity-90 block">+ Get free court checklist</span>
-              </button>
+              </a>
             </div>
 
             {/* Independent Administration */}
@@ -284,11 +284,11 @@ export default function ServicesPage() {
                 </div>
               </div>
               
-              <button className="micro-conversion w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2">
+              <a href="http://drjanduffy.realscout.com/onboarding" className="micro-conversion w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2">
                 <span>Learn About Independent Administration</span>
                 <ArrowRight className="w-4 h-4" />
                 <span className="incentive text-xs opacity-90 block">+ Get qualification checklist</span>
-              </button>
+              </a>
             </div>
 
             {/* Trust Administration */}
@@ -334,11 +334,11 @@ export default function ServicesPage() {
                 </div>
               </div>
               
-              <button className="micro-conversion w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2">
+              <a href="http://drjanduffy.realscout.com/onboarding" className="micro-conversion w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2">
                 <span>Start Trust Administration</span>
                 <ArrowRight className="w-4 h-4" />
                 <span className="incentive text-xs opacity-90 block">+ Get trust review</span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -464,9 +464,9 @@ export default function ServicesPage() {
                 <p className="savings text-xl font-bold text-blue-600">
                   Time Saved: <span>4-6 months</span>
                 </p>
-                <button className="cta bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 mt-4">
+                <a href="http://drjanduffy.realscout.com/onboarding" className="cta bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 mt-4 inline-block">
                   Start Accelerated Process Today
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -512,10 +512,10 @@ export default function ServicesPage() {
             <p className="text-xl text-gray-700 mb-4">
               Questions? Our probate specialists are online now
             </p>
-            <button className="chat-trigger bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 flex items-center mx-auto space-x-2">
+            <a href="http://drjanduffy.realscout.com/onboarding" className="chat-trigger bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 flex items-center mx-auto space-x-2 inline-block">
               <MessageCircle className="w-5 h-5" />
               <span>Chat with Probate Expert</span>
-            </button>
+            </a>
             <p className="availability text-sm text-gray-600 mt-3">
               Average response: 30 seconds
             </p>
@@ -552,12 +552,12 @@ export default function ServicesPage() {
           </div>
           
           <div className="space-x-4">
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105">
+            <a href="http://drjanduffy.realscout.com/onboarding" className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 inline-block">
               Get Free Property Assessment
-            </button>
-            <button className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105">
+            </a>
+            <a href="http://drjanduffy.realscout.com/onboarding" className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 inline-block">
               Download Probate Guide
-            </button>
+            </a>
           </div>
         </div>
       </section>

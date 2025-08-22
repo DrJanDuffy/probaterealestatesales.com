@@ -56,9 +56,9 @@ export default function Services() {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <div 
-              key={index}
+              key={service.title}
               className="card p-8 hover:scale-105 transition-transform duration-300 group"
             >
               <div className="mb-6">
@@ -76,9 +76,9 @@ export default function Services() {
               </p>
               
               <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center gap-3 text-sm text-secondary-600">
-                    <div className="w-2 h-2 bg-primary-400 rounded-full"></div>
+                {service.features.map((feature) => (
+                  <li key={`${service.title}-${feature}`} className="flex items-center gap-3 text-sm text-secondary-600">
+                    <div className="w-2 h-2 bg-primary-400 rounded-full" />
                     {feature}
                   </li>
                 ))}
@@ -97,9 +97,9 @@ export default function Services() {
               Schedule a free consultation to discuss your specific situation and learn 
               how we can help maximize the value of your probate property.
             </p>
-            <button className="btn-primary">
+            <a href="http://drjanduffy.realscout.com/onboarding" className="btn-primary inline-block">
               Schedule Free Consultation
-            </button>
+            </a>
           </div>
         </div>
       </div>

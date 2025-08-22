@@ -26,18 +26,17 @@
   },
   "dependencies": {
     "@mendable/firecrawl-js": "^3.1.0",
-    "@playwright/test": "^1.55.0",
     "clsx": "^2.1.1",
     "firecrawl-mcp": "^1.12.0",
     "lucide-react": "^0.460.0",
     "next": "15.5.0",
-    "playwright": "^1.55.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.0",
+    "@playwright/test": "^1.55.0",
     "@types/node": "^22.10.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",

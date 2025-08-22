@@ -1,47 +1,230 @@
-<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="55.240213000000004">
-<testsuite name="homepage.spec.ts" timestamp="2025-08-22T14:45:46.320Z" hostname="chromium" tests="1" failures="1" skipped="0" time="18.847" errors="0">
-<testcase name="Homepage Tests › should load homepage successfully" classname="homepage.spec.ts" time="18.847">
-<failure message="homepage.spec.ts:8:7 should load homepage successfully" type="FAILURE">
-<![CDATA[  [chromium] › homepage.spec.ts:8:7 › Homepage Tests › should load homepage successfully ───────────
+<testsuites id="" name="" tests="5" failures="5" skipped="0" errors="0" time="56.477664999999995">
+<testsuite name="basic.spec.ts" timestamp="2025-08-22T15:32:17.440Z" hostname="chromium" tests="1" failures="1" skipped="0" time="17.58" errors="0">
+<testcase name="basic test" classname="basic.spec.ts" time="17.58">
+<failure message="basic.spec.ts:3:5 basic test" type="FAILURE">
+<![CDATA[  [chromium] › basic.spec.ts:3:5 › basic test ──────────────────────────────────────────────────────
 
     Error: expect(page).toHaveTitle(expected) failed
 
     Expected pattern: /Nevada Probate Real Estate/
-    Received string:  ""
+    Received string:  "Probate Real Estate Sales | Professional Property Solutions"
     Timeout: 10000ms
 
     Call log:
       - Expect "toHaveTitle" with timeout 10000ms
-        13 × unexpected value ""
+        13 × unexpected value "Probate Real Estate Sales | Professional Property Solutions"
 
 
-       8 |   test('should load homepage successfully', async ({ page }) => {
-       9 |     // Check page title
-    > 10 |     await expect(page).toHaveTitle(/Nevada Probate Real Estate/);
-         |                        ^
-      11 |     
-      12 |     // Check main heading
-      13 |     await expect(page.locator('h1')).toContainText('Nevada Probate Real Estate');
-        at C:\Users\geneb\probaterealestatesales.com\tests\homepage.spec.ts:10:24
+      3 | test("basic test", async ({ page }) => {
+      4 |   await page.goto("http://localhost:3000");
+    > 5 |   await expect(page).toHaveTitle(/Nevada Probate Real Estate/);
+        |                      ^
+      6 | });
+      7 |
+        at C:\Users\geneb\probaterealestatesales.com\tests\basic.spec.ts:5:22
 
     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\homepage-Homepage-Tests-should-load-homepage-successfully-chromium\test-failed-1.png
+    ..\test-results\basic-basic-test-chromium\test-failed-1.png
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
     attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\homepage-Homepage-Tests-should-load-homepage-successfully-chromium\video.webm
+    ..\test-results\basic-basic-test-chromium\video.webm
     ────────────────────────────────────────────────────────────────────────────────────────────────
 
-    Error Context: ..\test-results\homepage-Homepage-Tests-should-load-homepage-successfully-chromium\error-context.md
+    Error Context: ..\test-results\basic-basic-test-chromium\error-context.md
 ]]>
 </failure>
 <system-out>
 <![CDATA[
-[[ATTACHMENT|homepage-Homepage-Tests-should-load-homepage-successfully-chromium\test-failed-1.png]]
+[[ATTACHMENT|basic-basic-test-chromium\test-failed-1.png]]
 
-[[ATTACHMENT|homepage-Homepage-Tests-should-load-homepage-successfully-chromium\video.webm]]
+[[ATTACHMENT|basic-basic-test-chromium\video.webm]]
 
-[[ATTACHMENT|homepage-Homepage-Tests-should-load-homepage-successfully-chromium\error-context.md]]
+[[ATTACHMENT|basic-basic-test-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="basic.spec.ts" timestamp="2025-08-22T15:32:17.440Z" hostname="firefox" tests="1" failures="1" skipped="0" time="24.07" errors="0">
+<testcase name="basic test" classname="basic.spec.ts" time="24.07">
+<failure message="basic.spec.ts:3:5 basic test" type="FAILURE">
+<![CDATA[  [firefox] › basic.spec.ts:3:5 › basic test ───────────────────────────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Nevada Probate Real Estate/
+    Received string:  "Probate Real Estate Sales | Professional Property Solutions"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 10000ms
+        11 × unexpected value "Probate Real Estate Sales | Professional Property Solutions"
+
+
+      3 | test("basic test", async ({ page }) => {
+      4 |   await page.goto("http://localhost:3000");
+    > 5 |   await expect(page).toHaveTitle(/Nevada Probate Real Estate/);
+        |                      ^
+      6 | });
+      7 |
+        at C:\Users\geneb\probaterealestatesales.com\tests\basic.spec.ts:5:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\basic-basic-test-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\basic-basic-test-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\basic-basic-test-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|basic-basic-test-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|basic-basic-test-firefox\video.webm]]
+
+[[ATTACHMENT|basic-basic-test-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="basic.spec.ts" timestamp="2025-08-22T15:32:17.440Z" hostname="webkit" tests="1" failures="1" skipped="0" time="18.364" errors="0">
+<testcase name="basic test" classname="basic.spec.ts" time="18.364">
+<failure message="basic.spec.ts:3:5 basic test" type="FAILURE">
+<![CDATA[  [webkit] › basic.spec.ts:3:5 › basic test ────────────────────────────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Nevada Probate Real Estate/
+    Received string:  "Probate Real Estate Sales | Professional Property Solutions"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 10000ms
+        13 × unexpected value "Probate Real Estate Sales | Professional Property Solutions"
+
+
+      3 | test("basic test", async ({ page }) => {
+      4 |   await page.goto("http://localhost:3000");
+    > 5 |   await expect(page).toHaveTitle(/Nevada Probate Real Estate/);
+        |                      ^
+      6 | });
+      7 |
+        at C:\Users\geneb\probaterealestatesales.com\tests\basic.spec.ts:5:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\basic-basic-test-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\basic-basic-test-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\basic-basic-test-webkit\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|basic-basic-test-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|basic-basic-test-webkit\video.webm]]
+
+[[ATTACHMENT|basic-basic-test-webkit\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="basic.spec.ts" timestamp="2025-08-22T15:32:17.440Z" hostname="Mobile Chrome" tests="1" failures="1" skipped="0" time="17.308" errors="0">
+<testcase name="basic test" classname="basic.spec.ts" time="17.308">
+<failure message="basic.spec.ts:3:5 basic test" type="FAILURE">
+<![CDATA[  [Mobile Chrome] › basic.spec.ts:3:5 › basic test ─────────────────────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Nevada Probate Real Estate/
+    Received string:  "Probate Real Estate Sales | Professional Property Solutions"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 10000ms
+        13 × unexpected value "Probate Real Estate Sales | Professional Property Solutions"
+
+
+      3 | test("basic test", async ({ page }) => {
+      4 |   await page.goto("http://localhost:3000");
+    > 5 |   await expect(page).toHaveTitle(/Nevada Probate Real Estate/);
+        |                      ^
+      6 | });
+      7 |
+        at C:\Users\geneb\probaterealestatesales.com\tests\basic.spec.ts:5:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\basic-basic-test-Mobile-Chrome\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\basic-basic-test-Mobile-Chrome\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\basic-basic-test-Mobile-Chrome\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|basic-basic-test-Mobile-Chrome\test-failed-1.png]]
+
+[[ATTACHMENT|basic-basic-test-Mobile-Chrome\video.webm]]
+
+[[ATTACHMENT|basic-basic-test-Mobile-Chrome\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="basic.spec.ts" timestamp="2025-08-22T15:32:17.440Z" hostname="Mobile Safari" tests="1" failures="1" skipped="0" time="16.534" errors="0">
+<testcase name="basic test" classname="basic.spec.ts" time="16.534">
+<failure message="basic.spec.ts:3:5 basic test" type="FAILURE">
+<![CDATA[  [Mobile Safari] › basic.spec.ts:3:5 › basic test ─────────────────────────────────────────────────
+
+    Error: expect(page).toHaveTitle(expected) failed
+
+    Expected pattern: /Nevada Probate Real Estate/
+    Received string:  "Probate Real Estate Sales | Professional Property Solutions"
+    Timeout: 10000ms
+
+    Call log:
+      - Expect "toHaveTitle" with timeout 10000ms
+        13 × unexpected value "Probate Real Estate Sales | Professional Property Solutions"
+
+
+      3 | test("basic test", async ({ page }) => {
+      4 |   await page.goto("http://localhost:3000");
+    > 5 |   await expect(page).toHaveTitle(/Nevada Probate Real Estate/);
+        |                      ^
+      6 | });
+      7 |
+        at C:\Users\geneb\probaterealestatesales.com\tests\basic.spec.ts:5:22
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\basic-basic-test-Mobile-Safari\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\basic-basic-test-Mobile-Safari\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\basic-basic-test-Mobile-Safari\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|basic-basic-test-Mobile-Safari\test-failed-1.png]]
+
+[[ATTACHMENT|basic-basic-test-Mobile-Safari\video.webm]]
+
+[[ATTACHMENT|basic-basic-test-Mobile-Safari\error-context.md]]
 ]]>
 </system-out>
 </testcase>

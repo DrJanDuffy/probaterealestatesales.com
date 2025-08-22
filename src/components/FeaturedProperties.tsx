@@ -31,9 +31,9 @@ export default function FeaturedProperties() {
 
         {/* View All Properties CTA */}
         <div className="text-center mt-12">
-          <button type="button" className="btn-primary">
+          <a href="http://drjanduffy.realscout.com/onboarding" className="btn-primary inline-block">
             View All Properties
-          </button>
+          </a>
         </div>
       </div>
     </section>

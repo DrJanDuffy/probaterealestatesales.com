@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 4
     },
     "preserveOutput": "failures-only",
     "reporter": [
@@ -43,7 +43,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 4
         },
         "id": "chromium",
         "name": "chromium",
@@ -59,7 +59,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 4
         },
         "id": "firefox",
         "name": "firefox",
@@ -75,7 +75,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 4
         },
         "id": "webkit",
         "name": "webkit",
@@ -91,7 +91,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 4
         },
         "id": "Mobile Chrome",
         "name": "Mobile Chrome",
@@ -107,7 +107,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 4
         },
         "id": "Mobile Safari",
         "name": "Mobile Safari",
@@ -128,109 +128,398 @@
       "command": "npm run dev",
       "url": "http://localhost:3000",
       "reuseExistingServer": true,
-      "timeout": 120000
+      "timeout": 120000,
+      "stdout": "ready",
+      "stderr": "error"
     }
   },
   "suites": [
     {
-      "title": "homepage.spec.ts",
-      "file": "homepage.spec.ts",
+      "title": "basic.spec.ts",
+      "file": "basic.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [],
-      "suites": [
+      "specs": [
         {
-          "title": "Homepage Tests",
-          "file": "homepage.spec.ts",
-          "line": 3,
-          "column": 6,
-          "specs": [
+          "title": "basic test",
+          "ok": false,
+          "tags": [],
+          "tests": [
             {
-              "title": "should load homepage successfully",
-              "ok": false,
-              "tags": [],
-              "tests": [
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
                 {
-                  "timeout": 60000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 17580,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n\n    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts:5:22",
+                    "location": {
+                      "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                      "column": 22,
+                      "line": 5
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"basic test\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://localhost:3000\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
                     {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 18847,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"\"\u001b[22m\n\n    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\homepage.spec.ts:10:24",
-                        "location": {
-                          "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\homepage.spec.ts",
-                          "column": 24,
-                          "line": 10
-                        },
-                        "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m   test(\u001b[32m'should load homepage successfully'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m  9 |\u001b[39m     \u001b[90m// Check page title\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     \n \u001b[90m 12 |\u001b[39m     \u001b[90m// Check main heading\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h1'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Nevada Probate Real Estate'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      "location": {
+                        "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                        "column": 22,
+                        "line": 5
                       },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\homepage.spec.ts",
-                            "column": 24,
-                            "line": 10
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  8 |\u001b[39m   test(\u001b[32m'should load homepage successfully'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m  9 |\u001b[39m     \u001b[90m// Check page title\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     \n \u001b[90m 12 |\u001b[39m     \u001b[90m// Check main heading\u001b[39m\n \u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'h1'\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m'Nevada Probate Real Estate'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\homepage.spec.ts:10:24\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-22T14:45:50.109Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\homepage-Homepage-Tests-should-load-homepage-successfully-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\homepage-Homepage-Tests-should-load-homepage-successfully-chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\homepage-Homepage-Tests-should-load-homepage-successfully-chromium\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\homepage.spec.ts",
-                        "column": 24,
-                        "line": 10
-                      }
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"basic test\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://localhost:3000\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts:5:22\u001b[22m"
                     }
                   ],
-                  "status": "unexpected"
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-22T15:32:19.691Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-chromium\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                    "column": 22,
+                    "line": 5
+                  }
                 }
               ],
-              "id": "84e7eb052e8cbae1c9f0-17bf5e90c57379446462",
-              "file": "homepage.spec.ts",
-              "line": 8,
-              "column": 7
+              "status": "unexpected"
             }
-          ]
+          ],
+          "id": "8946741c555a0c4515d8-b7449261bf9ae1736db0",
+          "file": "basic.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "basic test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "failed",
+                  "duration": 24070,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    11 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    11 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n\n    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts:5:22",
+                    "location": {
+                      "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                      "column": 22,
+                      "line": 5
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"basic test\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://localhost:3000\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                        "column": 22,
+                        "line": 5
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    11 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"basic test\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://localhost:3000\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts:5:22\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-22T15:32:19.989Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-firefox\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-firefox\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-firefox\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                    "column": 22,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8946741c555a0c4515d8-a4c2d2b3d0c340cb8e53",
+          "file": "basic.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "basic test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 18364,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n\n    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts:5:22",
+                    "location": {
+                      "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                      "column": 22,
+                      "line": 5
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"basic test\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://localhost:3000\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                        "column": 22,
+                        "line": 5
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"basic test\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://localhost:3000\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts:5:22\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-22T15:32:19.645Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-webkit\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-webkit\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-webkit\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                    "column": 22,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8946741c555a0c4515d8-f339baa7e78a99d690f7",
+          "file": "basic.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "basic test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Chrome",
+              "projectName": "Mobile Chrome",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "failed",
+                  "duration": 17308,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n\n    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts:5:22",
+                    "location": {
+                      "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                      "column": 22,
+                      "line": 5
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"basic test\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://localhost:3000\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                        "column": 22,
+                        "line": 5
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"basic test\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://localhost:3000\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts:5:22\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-22T15:32:20.900Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-Mobile-Chrome\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-Mobile-Chrome\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-Mobile-Chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                    "column": 22,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8946741c555a0c4515d8-90d88193edb95df67b11",
+          "file": "basic.spec.ts",
+          "line": 3,
+          "column": 5
+        },
+        {
+          "title": "basic test",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Mobile Safari",
+              "projectName": "Mobile Safari",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 2,
+                  "status": "failed",
+                  "duration": 16534,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n\n    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts:5:22",
+                    "location": {
+                      "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                      "column": 22,
+                      "line": 5
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"basic test\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://localhost:3000\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                        "column": 22,
+                        "line": 5
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Nevada Probate Real Estate/\u001b[39m\nReceived string:  \u001b[31m\"Probate Real Estate Sales | Professional Property Solutions\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 10000ms\u001b[22m\n\u001b[2m    13 × unexpected value \"Probate Real Estate Sales | Professional Property Solutions\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test(\u001b[32m\"basic test\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"http://localhost:3000\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveTitle(\u001b[35m/Nevada Probate Real Estate/\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                      \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts:5:22\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-22T15:32:48.864Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-Mobile-Safari\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-Mobile-Safari\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\geneb\\probaterealestatesales.com\\test-results\\basic-basic-test-Mobile-Safari\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\geneb\\probaterealestatesales.com\\tests\\basic.spec.ts",
+                    "column": 22,
+                    "line": 5
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "8946741c555a0c4515d8-b3c63e4738a88a7de900",
+          "file": "basic.spec.ts",
+          "line": 3,
+          "column": 5
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-22T14:45:28.063Z",
-    "duration": 55240.213,
+    "startTime": "2025-08-22T15:32:14.586Z",
+    "duration": 56477.66499999999,
     "expected": 0,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 5,
     "flaky": 0
   }
 }
