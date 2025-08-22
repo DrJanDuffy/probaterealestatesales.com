@@ -27,6 +27,7 @@ const navigation = {
     { name: 'FAQ', href: '/#faq', description: 'Frequently asked questions about probate' },
     { name: 'Timeline', href: '/resources/nevada-probate-guide#timeline', description: '6-8 month Nevada probate timeline' },
     { name: 'Costs', href: '/resources/nevada-probate-guide#costs', description: 'Nevada probate costs breakdown' },
+    { name: 'Content Generator', href: '/firecrawl-dashboard', description: 'AI-powered hyperlocal content generation' },
   ],
 };
 
