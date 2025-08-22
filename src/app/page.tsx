@@ -4,7 +4,6 @@ import FeaturedProperties from '@/components/FeaturedProperties';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Testimonials from '@/components/Testimonials';
 import ContactSection from '@/components/ContactSection';
-import UltraciteDemo from '@/components/UltraciteDemo';
 
 export default function Home() {
   return (
@@ -14,7 +13,6 @@ export default function Home() {
       <FeaturedProperties />
       <WhyChooseUs />
       <Testimonials />
-      <UltraciteDemo />
       <ContactSection />
     </main>
   );
