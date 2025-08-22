@@ -11,12 +11,20 @@
     "format": "biome format --write .",
     "type-check": "tsc --noEmit",
     "deploy:cloudflare": "node scripts/deploy-cloudflare.js",
-    "cloudflare:optimize": "node scripts/deploy-cloudflare.js"
+    "cloudflare:optimize": "node scripts/deploy-cloudflare.js",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report",
+    "test:install": "playwright install"
   },
   "dependencies": {
+    "@playwright/test": "^1.55.0",
     "clsx": "^2.1.1",
     "lucide-react": "^0.460.0",
     "next": "15.5.0",
+    "playwright": "^1.55.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^2.5.4"
