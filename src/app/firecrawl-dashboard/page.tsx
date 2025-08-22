@@ -5,6 +5,41 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 // Force dynamic rendering for this interactive page
 export const dynamic = 'force-dynamic';
 
+// Security: Only allow access in development or with specific environment variable
+const isDevelopment = process.env.NODE_ENV === 'development';
+const hasAccessKey = process.env.FIRECRAWL_ACCESS_KEY === process.env.FIRECRAWL_SECRET_KEY;
+
+// Access control component
+function AccessDenied() {
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="max-w-md mx-auto text-center">
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="text-red-500 text-6xl mb-4">🔒</div>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Access Denied</h1>
+          <p className="text-gray-600 mb-6">
+            This page is not publicly accessible. The Fire Crawl Dashboard is a development and administrative tool.
+          </p>
+          <div className="bg-gray-100 rounded-lg p-4 text-sm text-gray-700">
+            <p className="font-semibold mb-2">If you need access:</p>
+            <ul className="text-left space-y-1">
+              <li>• Contact the website administrator</li>
+              <li>• Ensure proper authentication</li>
+              <li>• Check environment configuration</li>
+            </ul>
+          </div>
+          <a 
+            href="/"
+            className="inline-block mt-6 px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Return to Homepage
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export const metadata: Metadata = {
   title: 'Fire Crawl Dashboard | Nevada Probate Real Estate Content Generator',
   description: 'Generate hyperlocal content for Nevada probate real estate using AI-powered web crawling. Create neighborhood-specific guides, market analysis, and court procedures.',
@@ -14,9 +49,16 @@ export const metadata: Metadata = {
     description: 'AI-powered hyperlocal content generation for Nevada probate real estate',
     type: 'website',
   },
+  // Add robots meta to prevent indexing
+  robots: 'noindex, nofollow',
 };
 
 export default function FireCrawlDashboardPage() {
+  // Check access before rendering
+  if (!isDevelopment && !hasAccessKey) {
+    return <AccessDenied />;
+  }
+
   return (
     <>
       <SchemaMarkup 

@@ -99,6 +99,30 @@ src/
 ### Colors
 The color scheme is defined in `tailwind.config.ts` with custom primary, secondary, and accent colors.
 
+## 🔒 Fire Crawl Dashboard
+
+The Fire Crawl Dashboard (`/firecrawl-dashboard`) is a development and administrative tool that is **NOT publicly accessible** on the live website.
+
+### Access Control
+- **Development**: Automatically accessible when `NODE_ENV=development`
+- **Production**: Only accessible when specific environment variables are set
+- **Public**: Always blocked from public access
+
+### How to Access (When Needed)
+1. **Local Development**: Run `npm run dev` and visit `/firecrawl-dashboard`
+2. **Production Access**: Set these environment variables in Vercel:
+   ```bash
+   FIRECRAWL_ACCESS_KEY=your_secret_key
+   FIRECRAWL_SECRET_KEY=your_secret_key
+   ```
+3. **Security**: The page is protected by middleware and will redirect unauthorized users
+
+### Purpose
+- Generate hyperlocal content for Nevada probate real estate
+- Create neighborhood-specific guides and market analysis
+- Administrative content generation tool
+- **Not intended for public website visitors**
+
 ### Components
 All components are built with Tailwind CSS utility classes and can be easily customized by modifying the classes.
 
