@@ -4,6 +4,8 @@ import FeaturedProperties from '@/components/FeaturedProperties';
 import WhyChooseUs from '@/components/WhyChooseUs';
 import Testimonials from '@/components/Testimonials';
 import ContactSection from '@/components/ContactSection';
+import FAQ from '@/components/FAQ';
+import SchemaMarkup from '@/components/SchemaMarkup';
 
 export default function Home() {
   return (
@@ -12,8 +14,10 @@ export default function Home() {
       <Services />
       <FeaturedProperties />
       <WhyChooseUs />
+      <FAQ />
       <Testimonials />
       <ContactSection />
+      <SchemaMarkup type="home" />
     </main>
   );
 }
