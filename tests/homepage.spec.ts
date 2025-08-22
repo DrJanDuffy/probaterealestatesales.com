@@ -123,9 +123,10 @@ test.describe('Homepage Tests', () => {
   test('should load images with proper alt text', async ({ page }) => {
     // Check all images have alt text
     const images = page.locator('img');
-    await expect(images).toHaveCount(images.count());
+    const imageCount = await images.count();
+    await expect(images).toHaveCount(imageCount);
     
-    for (let i = 0; i < await images.count(); i++) {
+    for (let i = 0; i < imageCount; i++) {
       const alt = await images.nth(i).getAttribute('alt');
       expect(alt).toBeTruthy();
     }

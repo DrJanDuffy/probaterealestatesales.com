@@ -11,13 +11,13 @@
  * 4. Create structured data for SEO
  */
 
-import { FirecrawlApp } from '@mendable/firecrawl-js';
+import { FirecrawlAppV1 } from '@mendable/firecrawl-js';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 
 class FireCrawlHyperlocal {
   constructor(apiKey) {
-    this.firecrawl = new FirecrawlApp({ apiKey });
+    this.firecrawl = new FirecrawlAppV1({ apiKey });
     this.outputDir = './firecrawl-data';
     this.nevadaTargets = [
       'https://www.nevadarealtor.com',

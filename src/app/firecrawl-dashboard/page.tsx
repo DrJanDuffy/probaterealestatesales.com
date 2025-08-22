@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import FireCrawlContentGenerator from '@/components/FireCrawlContentGenerator';
 import SchemaMarkup from '@/components/SchemaMarkup';
 
+// Force dynamic rendering for this interactive page
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'Fire Crawl Dashboard | Nevada Probate Real Estate Content Generator',
   description: 'Generate hyperlocal content for Nevada probate real estate using AI-powered web crawling. Create neighborhood-specific guides, market analysis, and court procedures.',
@@ -17,7 +20,7 @@ export default function FireCrawlDashboardPage() {
   return (
     <>
       <SchemaMarkup 
-        type="webpage"
+        type="service"
         customSchema={{
           "@context": "https://schema.org",
           "@type": "WebPage",

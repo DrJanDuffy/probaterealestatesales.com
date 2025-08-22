@@ -39,7 +39,7 @@ export default function ServicesPage() {
   return (
     <>
       <SchemaMarkup 
-        type="services"
+        type="service"
         customSchema={{
           "@context": "https://schema.org",
           "@graph": [

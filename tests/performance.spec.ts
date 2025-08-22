@@ -7,7 +7,7 @@ test.describe('Performance Tests', () => {
     
     // Measure performance metrics
     const performanceMetrics = await page.evaluate(() => {
-      return new Promise((resolve) => {
+      return new Promise<Record<string, number>>((resolve) => {
         new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const metrics: Record<string, number> = {};
@@ -198,7 +198,7 @@ test.describe('Performance Tests', () => {
     
     // Get resource sizes
     const resourceSizes = await page.evaluate(() => {
-      const resources = performance.getEntriesByType('resource');
+      const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
       return resources.map(resource => ({
         name: resource.name,
         size: resource.transferSize || 0,
