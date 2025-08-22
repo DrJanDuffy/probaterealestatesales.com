@@ -6,10 +6,42 @@ import { ChevronDown, ChevronUp } from 'lucide-react';
 interface FAQItem {
   question: string;
   answer: string;
-  category: 'general' | 'process' | 'legal' | 'financial' | 'timeline';
+  category: 'general' | 'nevada-law' | 'process' | 'legal' | 'financial' | 'timeline' | 'trusts';
 }
 
 const faqData: FAQItem[] = [
+  // Nevada-Specific Questions
+  {
+    question: "How long does probate take in Nevada?",
+    answer: "Nevada probate typically takes 6-8 months, which is significantly faster than California's 9-18 month process. Clark County has two probate commissioners: James Fontana (Fridays) and Russell Geis (Wednesdays at 9:30 AM). Court orders take about 3 weeks to release. This faster timeline makes Nevada an attractive option for probate property sales.",
+    category: "nevada-law"
+  },
+  {
+    question: "What is a certificate of incumbency in Nevada?",
+    answer: "A certificate of incumbency in Nevada is a 5-7 page document (also known as affidavit of successor trustee) that's required after trustors die. It costs $750 from attorneys and must be recorded with Clark County. This document proves your authority as successor trustee and is essential for trust administration and property transfers. Title companies cannot create these documents - only attorneys can.",
+    category: "nevada-law"
+  },
+  {
+    question: "How much does probate cost in Las Vegas?",
+    answer: "Nevada probate costs average $8,000-9,000 in attorney fees. Court costs vary by county: Clark County $1,000, Washoe County $1,300, and rural counties like Esmeralda $850. Trust administration is more affordable at $2,500 and takes only 3 months vs 6-8 months for probate. Certificate of incumbency costs $750.",
+    category: "nevada-law"
+  },
+  {
+    question: "What is Nevada's small estate limit?",
+    answer: "Nevada's small estate limit is $100,000 (vs California's $184,500). For estates under $25,000, Nevada offers a simplified 'set-aside' procedure that avoids formal probate entirely. This makes Nevada an attractive option for smaller estates and can save significant time and money.",
+    category: "nevada-law"
+  },
+  {
+    question: "What are the two methods of selling property in Nevada probate?",
+    answer: "Nevada offers two methods: 1) Court Confirmation - requires court approval for each step, and 2) Independent Administration - gives the personal representative more authority to act without court supervision. Independent administration is faster and more cost-effective but requires family cooperation. The choice depends on your specific situation and family dynamics.",
+    category: "nevada-law"
+  },
+  {
+    question: "Do I need a certificate of incumbency?",
+    answer: "Yes, if you're dealing with a trust after the trustors have passed away. The certificate of incumbency proves your authority as successor trustee and is required for property transfers, bank accounts, and other trust assets. Without it, you cannot legally act on behalf of the trust or transfer trust property.",
+    category: "nevada-law"
+  },
+
   // General Questions
   {
     question: "What is a probate sale?",
@@ -29,30 +61,47 @@ const faqData: FAQItem[] = [
 
   // Process Questions
   {
-    question: "What is the step-by-step process for a probate sale?",
-    answer: "The probate sale process involves: 1) Court appointment of executor/administrator, 2) Property appraisal and market analysis, 3) Court petition for sale authorization, 4) Court approval and order, 5) Property listing and marketing, 6) Offer acceptance and contract execution, 7) Court confirmation of sale, 8) Closing and distribution of proceeds. Each step requires proper documentation and court oversight.",
+    question: "What is the step-by-step process for a Nevada probate sale?",
+    answer: "The Nevada probate sale process involves: 1) Court appointment of executor/administrator, 2) Property appraisal and market analysis, 3) Court petition for sale authorization, 4) Court approval and order (3 weeks to release), 5) Property listing and marketing, 6) Offer acceptance and contract execution, 7) Court confirmation of sale (if required), 8) Closing and distribution of proceeds. Nevada requires approximately 30 documents throughout the process.",
     category: "process"
   },
   {
-    question: "How long does the entire probate sale process take?",
-    answer: "The complete probate sale process typically takes 6-18 months, depending on court schedules, property complexity, and market conditions. Simple cases may complete in 6-8 months, while complex estates with multiple properties or disputes can take 1-2 years. The court confirmation process alone can add 2-4 months to the timeline.",
+    question: "What documents are needed for a Nevada probate sale?",
+    answer: "Required documents include: death certificate, will (if applicable), letters testamentary or administration, property deed, property appraisal, court order authorizing sale, listing agreement, purchase contract, and court confirmation documents. Nevada's process requires about 30 documents total, which is more than many other states but ensures thorough legal compliance.",
     category: "process"
   },
   {
-    question: "What documents are needed for a probate sale?",
-    answer: "Required documents include: death certificate, will (if applicable), letters testamentary or administration, property deed, property appraisal, court order authorizing sale, listing agreement, purchase contract, and court confirmation documents. Additional documents may be required depending on the specific circumstances and court requirements.",
+    question: "When can I sign a binding listing agreement?",
+    answer: "You can only sign a binding listing agreement after obtaining letters testamentary or letters of administration with the court stamp and signature. This cannot be done before obtaining proper court authority. The court order typically takes 3 weeks to release after approval.",
     category: "process"
+  },
+
+  // Trust Administration
+  {
+    question: "How does trust administration compare to probate in Nevada?",
+    answer: "Trust administration in Nevada is significantly faster and more affordable than probate. Trust administration costs $2,500 and takes only 3 months, while probate costs $8,000-9,000 and takes 6-8 months. Trust setup costs $3,500 for a married couple including deed transfer. The key is having proper trust documentation and a certificate of incumbency.",
+    category: "trusts"
+  },
+  {
+    question: "What is the difference between a certificate of incumbency and letters testamentary?",
+    answer: "A certificate of incumbency is used for trust administration and proves you're the successor trustee. Letters testamentary are used for probate and prove you're the executor of the estate. Both documents give you legal authority, but they're used in different contexts. The certificate of incumbency is typically faster to obtain and less expensive.",
+    category: "trusts"
+  },
+  {
+    question: "Can title companies create certificates of incumbency?",
+    answer: "No, title companies cannot create valid certificates of incumbency. Only attorneys can create these documents. Title companies can help with the recording process once the document is created, but the legal document itself must come from a qualified attorney familiar with Nevada trust law.",
+    category: "trusts"
   },
 
   // Legal Questions
   {
-    question: "Do I need an attorney for a probate sale?",
-    answer: "While you can represent yourself in probate court, it's highly recommended to work with an experienced probate attorney, especially for real estate transactions. An attorney can help navigate complex legal requirements, ensure proper documentation, protect your interests, and help avoid costly mistakes that could delay the process or result in legal complications.",
+    question: "Do I need an attorney for a Nevada probate sale?",
+    answer: "While you can represent yourself in probate court, it's highly recommended to work with an experienced Nevada probate attorney, especially for real estate transactions. An attorney can help navigate Nevada's 30-document requirement, ensure compliance with Nevada Revised Statutes, protect your interests, and help avoid costly mistakes that could delay the process.",
     category: "legal"
   },
   {
     question: "What happens if there are multiple beneficiaries with different opinions?",
-    answer: "When multiple beneficiaries disagree on selling a probate property, the court will typically require majority agreement or may appoint a neutral party to make decisions. In some cases, the court may order the property sold if it's in the best interest of the estate. Clear communication and professional mediation can often resolve conflicts before they reach court.",
+    answer: "When multiple beneficiaries disagree on selling a probate property, the court will typically require majority agreement or may appoint a neutral party to make decisions. In Nevada, family dynamics are a key factor that attorneys assess early in the process. Clear communication and professional mediation can often resolve conflicts before they reach court.",
     category: "legal"
   },
   {
@@ -63,8 +112,8 @@ const faqData: FAQItem[] = [
 
   // Financial Questions
   {
-    question: "What are the total costs involved in a probate sale?",
-    answer: "Probate sale costs typically include: court filing fees ($200-500), attorney fees (3-5% of property value), real estate agent commissions (5-6%), title insurance ($1,000-3,000), escrow fees ($500-1,500), property taxes and insurance, and potential capital gains taxes. Total costs usually range from 8-12% of the property's sale price, but can vary based on specific circumstances.",
+    question: "What are the total costs involved in a Nevada probate sale?",
+    answer: "Nevada probate sale costs include: court filing fees ($1,000 in Clark County, $1,300 in Washoe County, $850 in rural counties), attorney fees ($8,000-9,000), real estate agent commissions (5-6%), title insurance ($1,000-3,000), escrow fees ($500-1,500), property taxes and insurance, and potential capital gains taxes. Total costs usually range from 8-12% of the property's sale price.",
     category: "financial"
   },
   {
@@ -74,34 +123,37 @@ const faqData: FAQItem[] = [
   },
   {
     question: "What happens to the proceeds from a probate sale?",
-    answer: "Sale proceeds are distributed according to the deceased person's will or state intestacy laws if no will exists. The proceeds first pay estate debts, taxes, and administrative costs, then are distributed to beneficiaries. The executor is responsible for proper accounting and distribution, with court oversight to ensure compliance with legal requirements.",
+    answer: "Sale proceeds are distributed according to the deceased person's will or Nevada intestacy laws if no will exists. The proceeds first pay estate debts, taxes, and administrative costs, then are distributed to beneficiaries. The executor is responsible for proper accounting and distribution, with court oversight to ensure compliance with Nevada legal requirements.",
     category: "financial"
   },
 
   // Timeline Questions
   {
-    question: "How long does probate take in Nevada?",
-    answer: "In Nevada, probate typically takes 6-12 months for simple estates, but can extend to 18-24 months for complex cases. Factors affecting timeline include: court caseload, property complexity, beneficiary cooperation, creditor claims, and whether the estate is contested. Working with experienced professionals can help expedite the process and avoid delays.",
+    question: "Can I speed up the Nevada probate sale process?",
+    answer: "Yes, several strategies can expedite the process: hire experienced Nevada professionals early, prepare all 30 required documents in advance, respond promptly to court requests, consider summary probate for estates under $100,000, and maintain open communication with all parties involved. However, court schedules and Nevada's legal requirements set minimum timelines that cannot be bypassed.",
     category: "timeline"
   },
   {
-    question: "Can I speed up the probate sale process?",
-    answer: "Yes, several strategies can expedite the process: hire experienced professionals early, prepare all required documents in advance, respond promptly to court requests, consider summary probate for small estates, and maintain open communication with all parties involved. However, court schedules and legal requirements set minimum timelines that cannot be bypassed.",
+    question: "What are the most common delays in Nevada probate sales?",
+    answer: "Common delays include: court scheduling conflicts (Clark County has only 2 probate commissioners), incomplete documentation (Nevada requires 30 documents), beneficiary disputes, property condition issues, market timing, and creditor claim resolution. Professional Nevada probate real estate agents can help minimize delays by ensuring proper preparation and maintaining court relationships.",
     category: "timeline"
   },
   {
-    question: "What are the most common delays in probate sales?",
-    answer: "Common delays include: court scheduling conflicts, incomplete documentation, beneficiary disputes, property condition issues, market timing, and creditor claim resolution. Professional probate real estate agents can help minimize delays by ensuring proper preparation, maintaining court relationships, and implementing efficient marketing strategies.",
+    question: "Why does Nevada probate take longer than Colorado?",
+    answer: "Nevada requires approximately 30 documents throughout the probate process, while Colorado only requires 7 documents. This additional documentation requirement adds time but ensures thorough legal compliance. Nevada's 6-8 month timeline is still significantly faster than California's 9-18 month process, making it a middle ground between efficiency and legal thoroughness.",
     category: "timeline"
   }
 ];
 
 const categoryLabels = {
-  general: "General Questions",
-  process: "Process & Procedures",
-  legal: "Legal Requirements",
-  financial: "Costs & Finances",
-  timeline: "Timelines & Delays"
+  'all': "All Questions",
+  'nevada-law': "Nevada Law & Process",
+  'general': "General Questions",
+  'process': "Process & Procedures",
+  'trusts': "Trust Administration",
+  'legal': "Legal Requirements",
+  'financial': "Costs & Finances",
+  'timeline': "Timelines & Delays"
 };
 
 export default function FAQ() {
@@ -130,27 +182,16 @@ export default function FAQ() {
             id="faq-heading"
             className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4"
           >
-            Frequently Asked Questions
+            Nevada Probate Real Estate FAQ
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Get answers to the most common questions about probate real estate sales. 
-            Our comprehensive FAQ covers everything from the basics to complex legal requirements.
+            Get answers to the most common questions about probate real estate sales in Nevada. 
+            Our comprehensive FAQ covers Nevada-specific laws, timelines, and processes.
           </p>
         </div>
 
         {/* Category Filter */}
         <nav className="flex flex-wrap justify-center gap-2 mb-8" aria-label="FAQ Categories">
-          <button
-            type="button"
-            onClick={() => setActiveCategory('all')}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              activeCategory === 'all'
-                ? 'bg-blue-600 text-white'
-                : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
-            }`}
-          >
-            All Questions
-          </button>
           {Object.entries(categoryLabels).map(([key, label]) => (
             <button
               key={key}
@@ -215,11 +256,11 @@ export default function FAQ() {
         <div className="mt-12 text-center">
           <div className="bg-blue-50 rounded-lg p-8 max-w-2xl mx-auto">
             <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              Still Have Questions?
+              Need Nevada-Specific Help?
             </h3>
             <p className="text-gray-600 mb-4">
-              Our probate real estate experts are here to help. Get personalized answers 
-              to your specific situation.
+              Our Nevada probate real estate experts are here to help. Get personalized answers 
+              about Clark County probate court procedures and Nevada probate law.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

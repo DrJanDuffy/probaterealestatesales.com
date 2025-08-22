@@ -1,10 +1,10 @@
 'use client';
 
 import { useEffect } from 'react';
-import { defaultSchemas, generateBreadcrumbSchema, generateArticleSchema } from '@/lib/schema';
+import { defaultSchemas, generateBreadcrumbSchema, generateArticleSchema, generateLegalServiceSchema } from '@/lib/schema';
 
 interface SchemaMarkupProps {
-  type: 'home' | 'service' | 'faq' | 'article' | 'contact';
+  type: 'home' | 'service' | 'faq' | 'article' | 'contact' | 'legal' | 'location' | 'property';
   breadcrumbs?: Array<{ name: string; url: string }>;
   article?: {
     headline: string;
@@ -16,13 +16,17 @@ interface SchemaMarkupProps {
     url: string;
   };
   customSchema?: any;
+  location?: string;
+  serviceType?: string;
 }
 
 export default function SchemaMarkup({ 
   type, 
   breadcrumbs, 
   article, 
-  customSchema 
+  customSchema,
+  location,
+  serviceType
 }: SchemaMarkupProps) {
   useEffect(() => {
     // Remove any existing schema markup
@@ -40,7 +44,9 @@ export default function SchemaMarkup({
           defaultSchemas.localBusiness,
           defaultSchemas.realEstateAgent,
           defaultSchemas.organization,
-          defaultSchemas.faqPage
+          defaultSchemas.faqPage,
+          defaultSchemas.howTo,
+          defaultSchemas.legalService
         ];
         break;
       
@@ -51,20 +57,99 @@ export default function SchemaMarkup({
           {
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Probate Real Estate Services",
-            description: "Comprehensive probate real estate services including property valuation, sale management, and estate liquidation.",
+            name: "Nevada Probate Real Estate Services",
+            description: "Comprehensive probate real estate services in Las Vegas and Clark County, including property valuation, sale management, and estate liquidation following Nevada Revised Statutes.",
             provider: {
               "@type": "Organization",
-              name: "Probate Real Estate Sales",
+              name: "Las Vegas Probate Real Estate Sales",
               url: "https://probaterealestatesales.com"
             },
-            areaServed: ["Las Vegas", "Henderson", "North Las Vegas", "Boulder City", "Mesquite"],
-            serviceType: "Real Estate Services",
+            areaServed: [
+              "Las Vegas", "Henderson", "North Las Vegas", "Boulder City", "Mesquite",
+              "Summerlin", "Spring Valley", "Enterprise", "Anthem", "Seven Hills",
+              "MacDonald Ranch", "Green Valley", "Centennial Hills", "Southern Highlands",
+              "Mountains Edge", "Clark County", "Nevada"
+            ],
+            serviceType: "Probate Real Estate Services",
             offers: {
               "@type": "Offer",
-              description: "Professional probate real estate services",
+              description: "Professional Nevada probate real estate services with 6-8 month timeline",
               price: "Variable",
               priceCurrency: "USD"
+            }
+          }
+        ];
+        break;
+      
+      case 'legal':
+        schemas = [
+          defaultSchemas.legalService,
+          defaultSchemas.organization,
+          {
+            "@context": "https://schema.org",
+            "@type": "LegalService",
+            name: "Nevada Probate Legal Services",
+            description: "Expert legal services for Nevada probate administration, including certificate of incumbency, trust administration, and court representation.",
+            provider: {
+              "@type": "Organization",
+              name: "Las Vegas Probate Real Estate Sales",
+              url: "https://probaterealestatesales.com"
+            },
+            serviceType: "Probate Administration",
+            areaServed: {
+              "@type": "AdministrativeArea",
+              name: "Clark County, Nevada"
+            }
+          }
+        ];
+        break;
+      
+      case 'location':
+        if (location) {
+          schemas = [
+            defaultSchemas.localBusiness,
+            {
+              "@context": "https://schema.org",
+              "@type": "Place",
+              name: `${location} Probate Real Estate Services`,
+              description: `Expert probate real estate services in ${location}, Nevada. Specialized in inherited property sales with Nevada's fastest probate process.`,
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: location,
+                addressRegion: "NV",
+                addressCountry: "US"
+              },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: 36.1699,
+                longitude: -115.1398
+              },
+              containedInPlace: {
+                "@type": "AdministrativeArea",
+                name: "Clark County, Nevada"
+              }
+            }
+          ];
+        }
+        break;
+      
+      case 'property':
+        schemas = [
+          defaultSchemas.realEstateAgent,
+          {
+            "@context": "https://schema.org",
+            "@type": "RealEstateListing",
+            name: "Nevada Probate Property",
+            description: "Inherited property available for sale through Nevada probate process",
+            address: {
+              "@type": "PostalAddress",
+              addressRegion: "NV",
+              addressCountry: "US"
+            },
+            listingStatus: "For Sale",
+            provider: {
+              "@type": "Organization",
+              name: "Las Vegas Probate Real Estate Sales"
             }
           }
         ];
@@ -73,7 +158,8 @@ export default function SchemaMarkup({
       case 'faq':
         schemas = [
           defaultSchemas.faqPage,
-          defaultSchemas.organization
+          defaultSchemas.organization,
+          defaultSchemas.howTo
         ];
         break;
       
@@ -93,16 +179,16 @@ export default function SchemaMarkup({
           {
             "@context": "https://schema.org",
             "@type": "ContactPage",
-            name: "Contact Us",
-            description: "Get in touch with our probate real estate experts",
+            name: "Contact Las Vegas Probate Real Estate Experts",
+            description: "Get in touch with our Nevada probate real estate experts for free consultation",
             mainEntity: {
               "@type": "Organization",
-              name: "Probate Real Estate Sales",
+              name: "Las Vegas Probate Real Estate Sales",
               contactPoint: {
                 "@type": "ContactPoint",
                 telephone: "+1-702-555-0123",
                 contactType: "customer service",
-                areaServed: "US",
+                areaServed: "US-NV",
                 availableLanguage: "English"
               }
             }
@@ -119,6 +205,16 @@ export default function SchemaMarkup({
     // Add custom schema if provided
     if (customSchema) {
       schemas.push(customSchema);
+    }
+
+    // Add location-specific legal service schema if applicable
+    if (location && serviceType) {
+      schemas.push(generateLegalServiceSchema({
+        name: `${location} ${serviceType}`,
+        description: `${serviceType} services in ${location}, Nevada`,
+        price: "Variable",
+        area: location
+      }));
     }
 
     // Inject schemas into head
@@ -138,7 +234,7 @@ export default function SchemaMarkup({
         script.remove();
       }
     };
-  }, [type, breadcrumbs, article, customSchema]);
+  }, [type, breadcrumbs, article, customSchema, location, serviceType]);
 
   return null; // This component doesn't render anything visible
 }

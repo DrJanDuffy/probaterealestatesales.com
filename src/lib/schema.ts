@@ -89,6 +89,37 @@ export interface RealEstateAgentSchema {
   };
 }
 
+export interface LegalServiceSchema {
+  "@context": "https://schema.org";
+  "@type": "LegalService";
+  name: string;
+  description: string;
+  provider: {
+    "@type": "Organization";
+    name: string;
+    url: string;
+  };
+  serviceType: string;
+  areaServed: {
+    "@type": "AdministrativeArea";
+    name: string;
+  };
+  hasOfferCatalog: {
+    "@type": "OfferCatalog";
+    name: string;
+    itemListElement: Array<{
+      "@type": "Offer";
+      itemOffered: {
+        "@type": "Service";
+        name: string;
+        description: string;
+        price: string;
+        priceCurrency: string;
+      };
+    }>;
+  };
+}
+
 export interface ServiceSchema {
   "@context": "https://schema.org";
   "@type": "Service";
@@ -223,19 +254,64 @@ export interface OrganizationSchema {
   };
 }
 
-// Default schema data for the probate real estate business
+export interface HowToSchema {
+  "@context": "https://schema.org";
+  "@type": "HowTo";
+  name: string;
+  description: string;
+  estimatedCost: {
+    "@type": "MonetaryAmount";
+    currency: string;
+    value: string;
+  };
+  totalTime: string;
+  step: Array<{
+    "@type": "HowToStep";
+    name: string;
+    text: string;
+  }>;
+}
+
+export interface RealEstateListingSchema {
+  "@context": "https://schema.org";
+  "@type": "RealEstateListing";
+  name: string;
+  description: string;
+  address: {
+    "@type": "PostalAddress";
+    streetAddress: string;
+    addressLocality: string;
+    addressRegion: string;
+    postalCode: string;
+    addressCountry: string;
+  };
+  numberOfRooms: number;
+  floorSize: {
+    "@type": "QuantitativeValue";
+    value: number;
+    unitCode: string;
+  };
+  price: {
+    "@type": "MonetaryAmount";
+    currency: string;
+    value: string;
+  };
+  listingStatus: string;
+}
+
+// Default schema data for the Nevada probate real estate business
 export const defaultSchemas = {
   localBusiness: {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "Probate Real Estate Sales",
-    description: "Specialized probate real estate services helping families navigate inherited property sales with compassion and expertise.",
+    name: "Las Vegas Probate Real Estate Sales",
+    description: "Expert probate real estate services in Las Vegas and Clark County. Specialized in inherited property sales with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
     url: "https://probaterealestatesales.com",
     telephone: "+1-702-555-0123",
     email: "DrJan@probaterealestatesales.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Main Street",
+      streetAddress: "123 Las Vegas Blvd",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
       postalCode: "89101",
@@ -260,30 +336,30 @@ export const defaultSchemas = {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Probate Real Estate Services",
+      name: "Nevada Probate Real Estate Services",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Probate Property Valuation",
-            description: "Professional appraisal and market analysis for inherited properties"
+            name: "Nevada Probate Property Valuation",
+            description: "Professional appraisal and market analysis for inherited properties in Las Vegas area"
           }
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Probate Sale Management",
-            description: "Complete handling of probate property sales from listing to closing"
+            name: "Clark County Probate Sale Management",
+            description: "Complete handling of probate property sales with Nevada's 6-8 month timeline"
           }
         },
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Estate Liquidation",
-            description: "Comprehensive estate liquidation and property disposition services"
+            name: "Nevada Estate Liquidation",
+            description: "Comprehensive estate liquidation services following Nevada Revised Statutes"
           }
         }
       ]
@@ -294,19 +370,24 @@ export const defaultSchemas = {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     name: "Dr. Janet Duffy",
-    description: "Licensed real estate agent specializing in probate sales and inherited property transactions.",
+    description: "Licensed Nevada real estate agent specializing in probate sales and inherited property transactions. Expert in Clark County probate court procedures and Nevada probate law.",
     url: "https://probaterealestatesales.com",
     telephone: "+1-702-555-0123",
     email: "DrJan@probaterealestatesales.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Main Street",
+      streetAddress: "123 Las Vegas Blvd",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
       postalCode: "89101",
       addressCountry: "US"
     },
-    areaServed: ["Las Vegas", "Henderson", "North Las Vegas", "Boulder City", "Mesquite"],
+    areaServed: [
+      "Las Vegas", "Henderson", "North Las Vegas", "Boulder City", "Mesquite",
+      "Summerlin", "Spring Valley", "Enterprise", "Anthem", "Seven Hills",
+      "MacDonald Ranch", "Green Valley", "Centennial Hills", "Southern Highlands",
+      "Mountains Edge", "Clark County", "Washoe County", "Nevada"
+    ],
     serviceArea: {
       "@type": "GeoCircle",
       geoMidpoint: {
@@ -318,17 +399,17 @@ export const defaultSchemas = {
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Probate Real Estate Services",
+      name: "Nevada Probate Real Estate Services",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Probate Property Sales",
-            description: "Expert guidance through the probate sale process",
+            name: "Nevada Probate Property Sales",
+            description: "Expert guidance through Nevada's 6-8 month probate process",
             provider: {
               "@type": "Organization",
-              name: "Probate Real Estate Sales"
+              name: "Las Vegas Probate Real Estate Sales"
             }
           }
         },
@@ -336,12 +417,65 @@ export const defaultSchemas = {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: "Estate Planning Consultation",
-            description: "Strategic advice for estate planning and property disposition",
+            name: "Nevada Estate Planning Consultation",
+            description: "Strategic advice for estate planning following Nevada Revised Statutes",
             provider: {
               "@type": "Organization",
-              name: "Probate Real Estate Sales"
+              name: "Las Vegas Probate Real Estate Sales"
             }
+          }
+        }
+      ]
+    }
+  },
+
+  legalService: {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: "Nevada Probate Legal Services",
+    description: "Comprehensive probate legal services in Nevada, including certificate of incumbency, trust administration, and probate court representation.",
+    provider: {
+      "@type": "Organization",
+      name: "Las Vegas Probate Real Estate Sales",
+      url: "https://probaterealestatesales.com"
+    },
+    serviceType: "Probate Administration",
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: "Clark County, Nevada"
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Nevada Probate Legal Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Certificate of Incumbency",
+            description: "Nevada certificate of incumbency (affidavit of successor trustee) - $750",
+            price: "750.00",
+            priceCurrency: "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Probate Administration",
+            description: "Complete Nevada probate administration - $8,000-9,000",
+            price: "8000-9000",
+            priceCurrency: "USD"
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Trust Administration",
+            description: "Nevada trust administration - $2,500 (3 months vs 6-8 months for probate)",
+            price: "2500.00",
+            priceCurrency: "USD"
           }
         }
       ]
@@ -354,42 +488,50 @@ export const defaultSchemas = {
     mainEntity: [
       {
         "@type": "Question",
-        name: "What is a probate sale?",
+        name: "How long does probate take in Nevada?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "A probate sale is the sale of real estate that occurs when someone passes away and their property needs to be sold as part of the estate settlement process. This typically happens when the deceased person's will requires the property to be sold or when the beneficiaries decide to sell rather than keep the inherited property."
+          text: "Nevada probate typically takes 6-8 months, which is faster than California's 9-18 month process. Clark County has two probate commissioners: James Fontana (Fridays) and Russell Geis (Wednesdays at 9:30 AM). Court orders take about 3 weeks to release."
         }
       },
       {
         "@type": "Question",
-        name: "How long does the probate process take?",
+        name: "What is a certificate of incumbency in Nevada?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "The probate process typically takes 6-12 months, but can vary depending on the complexity of the estate, court schedules, and whether there are any disputes. Simple estates may be completed in as little as 3-4 months, while complex cases can take 1-2 years or longer."
+          text: "A certificate of incumbency in Nevada is a 5-7 page document (also known as affidavit of successor trustee) that's required after trustors die. It costs $750 from attorneys and must be recorded with Clark County. This document is essential for trust administration and property transfers."
         }
       },
       {
         "@type": "Question",
-        name: "Do I need an attorney for a probate sale?",
+        name: "How much does probate cost in Las Vegas?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "While you can represent yourself in probate court, it's highly recommended to work with an experienced probate attorney, especially for real estate transactions. An attorney can help navigate complex legal requirements, ensure proper documentation, and protect your interests throughout the process."
+          text: "Nevada probate costs average $8,000-9,000 in attorney fees. Court costs vary by county: Clark County $1,000, Washoe County $1,300, and rural counties like Esmeralda $850. Trust administration is more affordable at $2,500 and takes only 3 months."
         }
       },
       {
         "@type": "Question",
-        name: "What are the costs involved in a probate sale?",
+        name: "What is Nevada's small estate limit?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Probate sale costs typically include court filing fees, attorney fees, real estate agent commissions, title insurance, escrow fees, and potential capital gains taxes. Total costs usually range from 6-10% of the property's sale price, but can vary based on the specific circumstances."
+          text: "Nevada's small estate limit is $100,000 (vs California's $184,500). For estates under $25,000, Nevada offers a simplified 'set-aside' procedure that avoids formal probate entirely. This makes Nevada an attractive option for smaller estates."
         }
       },
       {
         "@type": "Question",
-        name: "Can I sell a probate property before probate is complete?",
+        name: "Do I need a certificate of incumbency?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "In most cases, you cannot sell a probate property until the court grants permission through a court order. The executor or administrator must petition the court for authorization to sell the property, and the sale must be approved before it can proceed."
+          text: "Yes, if you're dealing with a trust after the trustors have passed away. The certificate of incumbency proves your authority as successor trustee and is required for property transfers, bank accounts, and other trust assets. Title companies cannot create these documents - only attorneys can."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What are the two methods of selling property in Nevada probate?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Nevada offers two methods: 1) Court Confirmation - requires court approval for each step, and 2) Independent Administration - gives the personal representative more authority to act without court supervision. Independent administration is faster and more cost-effective but requires family cooperation."
         }
       }
     ]
@@ -398,15 +540,15 @@ export const defaultSchemas = {
   organization: {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Probate Real Estate Sales",
-    description: "Leading provider of probate real estate services in Nevada, helping families navigate inherited property sales with expertise and compassion.",
+    name: "Las Vegas Probate Real Estate Sales",
+    description: "Leading provider of probate real estate services in Nevada, specializing in Clark County probate court procedures and Nevada's fastest probate timeline (6-8 months vs California's 9-18 months).",
     url: "https://probaterealestatesales.com",
     logo: "https://probaterealestatesales.com/logo.png",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+1-702-555-0123",
       contactType: "customer service",
-      areaServed: "US",
+      areaServed: "US-NV",
       availableLanguage: "English"
     },
     sameAs: [
@@ -422,12 +564,47 @@ export const defaultSchemas = {
     foundingDate: "2020",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Main Street",
+      streetAddress: "123 Las Vegas Blvd",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
       postalCode: "89101",
       addressCountry: "US"
     }
+  },
+
+  howTo: {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "How to Sell Property in Nevada Probate",
+    description: "Complete guide to selling inherited property through Nevada's probate process, including timeline, costs, and required documents.",
+    estimatedCost: {
+      "@type": "MonetaryAmount",
+      currency: "USD",
+      value: "9000"
+    },
+    totalTime: "P6M",
+    step: [
+      {
+        "@type": "HowToStep",
+        name: "Obtain Letters Testamentary",
+        text: "File with Clark County District Court to obtain letters testamentary or letters of administration. This gives you legal authority to act on behalf of the estate."
+      },
+      {
+        "@type": "HowToStep",
+        name: "Sign Binding Listing Agreement",
+        text: "Once letters are issued with court stamp and signature, you can sign a binding listing agreement. This cannot be done before obtaining proper court authority."
+      },
+      {
+        "@type": "HowToStep",
+        name: "Choose Sale Method",
+        text: "Select between court confirmation (requires court approval for each step) or independent administration (more authority, faster process)."
+      },
+      {
+        "@type": "HowToStep",
+        name: "Complete Property Transfer",
+        text: "Follow Nevada's 6-8 month timeline, ensuring all 30 required documents are properly filed with the court."
+      }
+    ]
   }
 };
 
@@ -465,7 +642,7 @@ export function generateArticleSchema(article: {
     },
     publisher: {
       "@type": "Organization",
-      name: "Probate Real Estate Sales",
+      name: "Las Vegas Probate Real Estate Sales",
       logo: {
         "@type": "ImageObject",
         url: "https://probaterealestatesales.com/logo.png"
@@ -476,6 +653,46 @@ export function generateArticleSchema(article: {
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": article.url
+    }
+  };
+}
+
+export function generateLegalServiceSchema(service: {
+  name: string;
+  description: string;
+  price: string;
+  area: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LegalService",
+    name: service.name,
+    description: service.description,
+    provider: {
+      "@type": "Organization",
+      name: "Las Vegas Probate Real Estate Sales",
+      url: "https://probaterealestatesales.com"
+    },
+    serviceType: "Probate Administration",
+    areaServed: {
+      "@type": "AdministrativeArea",
+      name: service.area
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Nevada Probate Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service.name,
+            description: service.description,
+            price: service.price,
+            priceCurrency: "USD"
+          }
+        }
+      ]
     }
   };
 }
