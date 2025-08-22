@@ -7,7 +7,7 @@ import { Menu, X, ChevronDown, MapPin, FileText, Phone, Home } from 'lucide-reac
 const navigation = {
   main: [
     { name: 'Home', href: '/', icon: Home },
-    { name: 'Services', href: '/#services', icon: FileText },
+    { name: 'Services', href: '/services', icon: FileText },
     { name: 'About', href: '/#about', icon: FileText },
     { name: 'Contact', href: '/#contact', icon: Phone },
   ],
