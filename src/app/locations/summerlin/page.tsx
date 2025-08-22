@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { MapPin, Clock, DollarSign, Users, Phone, Mail, Calendar, Home, TreePine, Golf, Mountain } from 'lucide-react';
+import { MapPin, Clock, DollarSign, Users, Phone, Mail, Calendar, Home, TreePine, Flag, Mountain } from 'lucide-react';
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
@@ -69,7 +69,7 @@ export default function SummerlinPage() {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <Golf className="h-6 w-6 text-purple-600 mt-1" />
+                  <Flag className="h-6 w-6 text-purple-600 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Golf Course Properties</h3>
                     <p className="text-gray-600">Properties bordering world-class golf courses command premium prices and require expert probate real estate knowledge.</p>
@@ -237,7 +237,7 @@ export default function SummerlinPage() {
                 </div>
                 
                 <div className="flex items-center gap-3">
-                  <Golf className="h-6 w-6 text-purple-600" />
+                  <Flag className="h-6 w-6 text-purple-600" />
                   <div>
                     <p className="font-semibold text-gray-900">Golf Course Premiums</p>
                     <p className="text-gray-600">Understanding of golf course property value premiums</p>
