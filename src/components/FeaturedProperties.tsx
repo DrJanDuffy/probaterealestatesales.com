@@ -1,5 +1,7 @@
 'use client';
 
+/// <reference path="../types/realscout.d.ts" />
+
 export default function FeaturedProperties() {
   return (
     <section className="section-padding bg-secondary-50">
