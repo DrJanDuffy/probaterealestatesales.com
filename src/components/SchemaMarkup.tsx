@@ -58,7 +58,7 @@ export default function SchemaMarkup({
             "@context": "https://schema.org",
             "@type": "Service",
             name: "Nevada Probate Real Estate Services",
-            description: "Comprehensive probate real estate services in Las Vegas and Clark County, including inherited property worth assessment, sale management, and estate liquidation following Nevada Revised Statutes.",
+            description: "Comprehensive probate real estate services in Las Vegas and Clark County, including court-approved property sales, inherited property worth assessment, sale management, and estate liquidation following Nevada Revised Statutes.",
             provider: {
               "@type": "Organization",
               name: "Las Vegas Probate Real Estate Sales",

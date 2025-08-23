@@ -6,7 +6,7 @@ const schemaData = {
   "name": "Dr. Jan Duffy",
   "alternateName": "Dr. Janet Duffy",
           "jobTitle": "Probate Real Estate Specialist",
-     "description": "Las Vegas probate real estate expert with 20+ years experience, specializing in inherited property sales, estate liquidation, and the 9 exceptions to probate including inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques.",
+     "description": "Las Vegas probate real estate expert with 20+ years experience, specializing in inherited property sales, estate liquidation, and court-approved property sales with comprehensive probate real estate services.",
   "url": "https://probaterealestatesales.com",
   "image": "https://probaterealestatesales.com/images/dr-jan-duffy.jpg",
   "telephone": "+1-702-830-9222",
@@ -62,19 +62,15 @@ const schemaData = {
      "Clark County Probate Court",
      "Estate Liquidation",
      "Property Valuation",
-     "Court-Approved Sales",
-     "9 Exceptions to Probate",
-     "Inventory and Appraisal",
-     "Orders for Probate and Letters",
-     "Different Ways of Holding Title",
-     "Sale of Real Property in Probate",
-     "Full Authority vs. Limited Authority",
-     "Legal Documents in Probate",
-     "Homeowner Tax Obligations",
-     "Estate Taxes and Capital Gains",
-     "Parent-Child Transfer Exclusions",
-     "Change in Ownership Statements",
-     "Probate Marketing Techniques"
+     "Court-Approved Property Sales",
+     "Comprehensive Probate Real Estate Services",
+     "Legal Compliance",
+     "Property Preparation and Sale",
+     "Probate Process Navigation",
+     "Family Support Services",
+     "Estate Property Valuation",
+     "Court Documentation",
+     "Probate Timeline Management"
    ],
   "memberOf": [
     {
@@ -144,7 +140,7 @@ const businessSchema = {
   "@context": "https://schema.org",
   "@type": "RealEstateAgent",
   "name": "Dr. Jan Duffy - Probate Real Estate Specialist",
-  "description": "Las Vegas's premier probate real estate expert providing compassionate, professional guidance through inherited property sales with court approval.",
+  "description": "Las Vegas's premier probate real estate expert providing comprehensive probate real estate services with court-approved property sales and legal compliance.",
   "url": "https://probaterealestatesales.com",
   "telephone": "+1-702-830-9222",
   "email": "DrJanSells@ProbateRealEstateSales.com",
@@ -230,7 +226,7 @@ const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Probate Real Estate Sales",
-  "description": "Las Vegas probate real estate services specializing in inherited property sales and estate liquidation",
+  "description": "Las Vegas probate real estate services specializing in comprehensive probate real estate services, court-approved property sales, and estate liquidation",
   "url": "https://probaterealestatesales.com",
   "telephone": "+1-702-830-9222",
   "email": "DrJanSells@ProbateRealEstateSales.com",
@@ -407,7 +403,7 @@ export default function SchemaMarkupExpert() {
               <div className="space-y-3">
                                  <div className="flex items-center gap-3">
                    <Award className="h-5 w-5 text-primary-600" />
-                   <span className="text-sm text-secondary-700">9 Exceptions to Probate Expert</span>
+                   <span className="text-sm text-secondary-700">Court-Approved Property Sale</span>
                  </div>
                                  <div className="flex items-center gap-3">
                    <GraduationCap className="h-5 w-5 text-blue-600" />
