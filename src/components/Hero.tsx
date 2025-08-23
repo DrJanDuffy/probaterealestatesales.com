@@ -91,10 +91,10 @@ export default function Hero() {
                   <span className="font-medium">5-Star Reviews</span>
                 </div>
                 
-                <div className="flex items-center gap-2 text-secondary-700">
-                  <Shield className="h-5 w-5 text-primary-600" />
-                  <span className="font-medium">500+ Properties Sold</span>
-                </div>
+                                 <div className="flex items-center gap-2 text-secondary-700">
+                   <Shield className="h-5 w-5 text-primary-600" />
+                   <span className="font-medium">Comprehensive Probate Real Estate Services</span>
+                 </div>
                 
                 <div className="flex items-center gap-2 text-secondary-700">
                   <Award className="h-5 w-5 text-accent-600" />
