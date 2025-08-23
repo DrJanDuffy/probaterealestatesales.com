@@ -180,7 +180,7 @@ export default function ProbateCostCalculator() {
                    id="estateSize"
                    name="estateSize"
                    value={estateSize}
-                   onChange={(e) => setEstateSize(e.target.value)}
+                                       onChange={(e) => setEstateSize(e.target.value as EstateSize)}
                    aria-label="Estate size category"
                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                  >
@@ -201,7 +201,7 @@ export default function ProbateCostCalculator() {
                    id="complexity"
                    name="complexity"
                    value={complexity}
-                   onChange={(e) => setComplexity(e.target.value)}
+                                       onChange={(e) => setComplexity(e.target.value as ProbateComplexity)}
                    aria-label="Probate complexity level"
                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                  >
