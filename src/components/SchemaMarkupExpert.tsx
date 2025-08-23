@@ -37,7 +37,7 @@ const schemaData = {
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "degree",
-      "name": "Doctor of Philosophy",
+      "name": "Doctor of Philosophy in Research",
       "recognizedBy": {
         "@type": "Organization",
         "name": "University of Nevada, Las Vegas"
@@ -397,10 +397,10 @@ export default function SchemaMarkupExpert() {
                   <Award className="h-5 w-5 text-primary-600" />
                   <span className="text-sm text-secondary-700">Probate Real Estate Specialist (CPRES)</span>
                 </div>
-                <div className="flex items-center gap-3">
-                  <GraduationCap className="h-5 w-5 text-blue-600" />
-                  <span className="text-sm text-secondary-700">Doctor of Philosophy</span>
-                </div>
+                                 <div className="flex items-center gap-3">
+                   <GraduationCap className="h-5 w-5 text-blue-600" />
+                   <span className="text-sm text-secondary-700">Doctor of Philosophy in Research</span>
+                 </div>
                 <div className="flex items-center gap-3">
                   <Building className="h-5 w-5 text-green-600" />
                   <span className="text-sm text-secondary-700">Nevada Real Estate License</span>

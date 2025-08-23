@@ -64,7 +64,7 @@ export default function Hero() {
                     <Star className="h-5 w-5 text-green-600" />
                   </div>
                   <div>
-                    <p className="font-semibold text-secondary-900">Ph.D. in Real Estate</p>
+                    <p className="font-semibold text-secondary-900">Ph.D. in Research</p>
                     <p className="text-sm text-secondary-600">Academic Excellence</p>
                   </div>
                 </div>

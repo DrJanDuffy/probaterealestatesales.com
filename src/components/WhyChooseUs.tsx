@@ -50,8 +50,8 @@ const credentials = [
   {
     icon: GraduationCap,
     title: 'Doctor of Philosophy',
-    subtitle: 'Real Estate & Urban Development',
-    description: 'Academic expertise in real estate markets and urban development',
+    subtitle: 'Research',
+    description: 'Academic expertise in research methodology and analysis',
     color: 'text-blue-600',
     bgColor: 'bg-blue-100'
   },
