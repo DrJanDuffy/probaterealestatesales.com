@@ -177,14 +177,14 @@ export default function FAQ() {
   return (
     <section className="py-16 bg-gray-50" aria-labelledby="faq-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 
+        <div className="text-center mb-8">
+          <h2
             id="faq-heading"
-            className="text-3xl font-bold text-gray-900 sm:text-4xl mb-4"
+            className="text-3xl font-bold text-secondary-900 sm:text-4xl mb-4"
           >
             Nevada Probate Real Estate FAQ
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
             Get answers to the most common questions about probate real estate sales in Nevada. 
             Our comprehensive FAQ covers Nevada-specific laws, timelines, and processes.
           </p>
@@ -199,8 +199,8 @@ export default function FAQ() {
               onClick={() => setActiveCategory(key)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                 activeCategory === key
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-300'
+                  ? 'bg-primary-600 text-white'
+                  : 'bg-white text-secondary-700 hover:bg-secondary-100 border border-secondary-300'
               }`}
             >
               {label}
@@ -215,23 +215,23 @@ export default function FAQ() {
             return (
               <article 
                 key={`faq-${faq.category}-${index}`}
-                className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
+                className="bg-white rounded-lg shadow-sm border border-secondary-200 overflow-hidden"
               >
                 <button
                   type="button"
                   onClick={() => toggleItem(index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
-                  aria-expanded={isOpen}
+                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-secondary-50 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-inset"
+                  aria-expanded={isOpen ? 'true' : 'false'}
                   aria-controls={`faq-answer-${index}`}
                 >
-                  <h3 className="text-lg font-medium text-gray-900 pr-4">
+                  <h3 className="text-lg font-medium text-secondary-900 pr-4">
                     {faq.question}
                   </h3>
                   <span className="flex-shrink-0">
                     {isOpen ? (
-                      <ChevronUp className="h-5 w-5 text-gray-500" aria-hidden="true" />
+                      <ChevronUp className="h-5 w-5 text-secondary-500" aria-hidden="true" />
                     ) : (
-                      <ChevronDown className="h-5 w-5 text-gray-500" aria-hidden="true" />
+                      <ChevronDown className="h-5 w-5 text-secondary-500" aria-hidden="true" />
                     )}
                   </span>
                 </button>
@@ -240,9 +240,8 @@ export default function FAQ() {
                   <div 
                     id={`faq-answer-${index}`}
                     className="px-6 pb-4"
-                    aria-hidden={false}
                   >
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-secondary-600 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -254,23 +253,23 @@ export default function FAQ() {
 
         {/* Additional Help Section */}
         <div className="mt-12 text-center">
-          <div className="bg-blue-50 rounded-lg p-8 max-w-2xl mx-auto">
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+          <div className="bg-primary-50 rounded-lg p-8 max-w-2xl mx-auto">
+            <h3 className="text-xl font-semibold text-secondary-900 mb-3">
               Need Nevada-Specific Help?
             </h3>
-            <p className="text-gray-600 mb-4">
+            <p className="text-secondary-600 mb-4">
               Our Nevada probate real estate experts are here to help. Get personalized answers 
               about Clark County probate court procedures and Nevada probate law.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                              <a href="tel:+1-702-830-9222" className="text-blue-600 hover:text-blue-800 font-semibold">
-                  Call Now: (702) 830-9222
-                </a>
+              <a href="tel:+1-702-830-9222" className="text-primary-600 hover:text-primary-800 font-semibold">
+                Call Now: (702) 830-9222
+              </a>
               <a
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
+                href="http://drjanduffy.realscout.com/onboarding"
+                className="inline-flex items-center justify-center px-6 py-3 border border-secondary-300 text-base font-medium rounded-md text-secondary-700 bg-white hover:bg-secondary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
               >
-                Send Message
+                Free Consultation
               </a>
             </div>
           </div>

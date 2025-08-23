@@ -51,12 +51,12 @@ export default function NevadaProbateGuidePage() {
       <section className="py-8 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex flex-wrap gap-4 justify-center">
-            <a href="#timeline" className="text-blue-600 hover:text-blue-800 font-medium">Timeline</a>
-            <a href="#costs" className="text-blue-600 hover:text-blue-800 font-medium">Costs</a>
-            <a href="#process" className="text-blue-600 hover:text-blue-800 font-medium">Process</a>
-            <a href="#advantages" className="text-blue-600 hover:text-blue-800 font-medium">Nevada Advantages</a>
-            <a href="#documents" className="text-blue-600 hover:text-blue-800 font-medium">Required Documents</a>
-            <a href="#faq" className="text-blue-600 hover:text-blue-800 font-medium">FAQ</a>
+            <a href="#timeline" className="text-primary-600 hover:text-primary-800 font-medium">Timeline</a>
+            <a href="#costs" className="text-primary-600 hover:text-primary-800 font-medium">Costs</a>
+            <a href="#process" className="text-primary-600 hover:text-primary-800 font-medium">Process</a>
+            <a href="#advantages" className="text-primary-600 hover:text-primary-800 font-medium">Nevada Advantages</a>
+            <a href="#documents" className="text-primary-600 hover:text-primary-800 font-medium">Required Documents</a>
+            <a href="#faq" className="text-primary-600 hover:text-primary-800 font-medium">FAQ</a>
           </nav>
         </div>
       </section>
