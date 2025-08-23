@@ -47,23 +47,26 @@ const additionalCosts = {
   escrowFees: 0.002 // 0.2% of sale price
 };
 
+type EstateSize = 'under100k' | 'over100k' | 'over500k' | 'over1m';
+type ProbateComplexity = 'simple' | 'standard' | 'complex';
+
 const estateSizeCategories = [
-  { label: 'Under $100,000', value: 'under100k', description: 'Simplified probate available' },
-  { label: '$100,000 - $500,000', value: 'over100k', description: 'Standard probate process' },
-  { label: '$500,000 - $1,000,000', value: 'over500k', description: 'Standard probate process' },
-  { label: 'Over $1,000,000', value: 'over1m', description: 'Complex probate process' }
+  { label: 'Under $100,000', value: 'under100k' as EstateSize, description: 'Simplified probate available' },
+  { label: '$100,000 - $500,000', value: 'over100k' as EstateSize, description: 'Standard probate process' },
+  { label: '$500,000 - $1,000,000', value: 'over500k' as EstateSize, description: 'Standard probate process' },
+  { label: 'Over $1,000,000', value: 'over1m' as EstateSize, description: 'Complex probate process' }
 ];
 
 const probateComplexity = [
-  { label: 'Simple', value: 'simple', description: 'Single heir, no disputes, clear title' },
-  { label: 'Standard', value: 'standard', description: 'Multiple heirs, some complexity' },
-  { label: 'Complex', value: 'complex', description: 'Multiple heirs, disputes, unclear title' }
+  { label: 'Simple', value: 'simple' as ProbateComplexity, description: 'Single heir, no disputes, clear title' },
+  { label: 'Standard', value: 'standard' as ProbateComplexity, description: 'Multiple heirs, some complexity' },
+  { label: 'Complex', value: 'complex' as ProbateComplexity, description: 'Multiple heirs, disputes, unclear title' }
 ];
 
 export default function ProbateCostCalculator() {
   const [estateValue, setEstateValue] = useState(500000);
-  const [estateSize, setEstateSize] = useState('over100k');
-  const [complexity, setComplexity] = useState('standard');
+  const [estateSize, setEstateSize] = useState<EstateSize>('over100k');
+  const [complexity, setComplexity] = useState<ProbateComplexity>('standard');
   const [propertyValue, setPropertyValue] = useState(400000);
   const [timeline, setTimeline] = useState(8);
   const [hasRealEstate, setHasRealEstate] = useState(true);
