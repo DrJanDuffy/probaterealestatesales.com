@@ -133,7 +133,7 @@ export default function SEOMetaTags({
       <meta name="business:contact_data:postal_code" content="89101" />
       <meta name="business:contact_data:country_name" content="United States" />
               <meta name="business:contact_data:phone_number" content="+1-702-830-9222" />
-      <meta name="business:contact_data:email" content="DrJan@probaterealestatesales.com" />
+      <meta name="business:contact_data:email" content="DrJanSells@ProbateRealEstateSales.com" />
       <meta name="business:contact_data:website" content="https://probaterealestatesales.com" />
 
       {/* Additional SEO Meta Tags */}
@@ -182,7 +182,7 @@ export default function SEOMetaTags({
             "description": "Specialized probate real estate services helping families navigate inherited property sales with compassion and expertise.",
             "url": "https://probaterealestatesales.com",
             "telephone": "+1-702-830-9222",
-            "email": "DrJan@probaterealestatesales.com",
+            "email": "DrJanSells@ProbateRealEstateSales.com",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "City Centre Place, 400 S 4th Street Suite 250 B",

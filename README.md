@@ -156,7 +156,7 @@ This project is licensed under the MIT License.
 ## 🆘 Support
 
 For support or questions, please contact:
-- Email: info@nevadaprobate.com
+- Email: DrJanSells@ProbateRealEstateSales.com
 - Phone: (702) 555-0123
 
 ## 🔄 Updates

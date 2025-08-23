@@ -51,7 +51,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="text-sm text-secondary-500">Email Us</p>
-                    <p className="font-semibold text-secondary-900">info@nevadaprobate.com</p>
+                    <p className="font-semibold text-secondary-900">DrJanSells@ProbateRealEstateSales.com</p>
                   </div>
                 </div>
               </div>

@@ -138,7 +138,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">Email</h4>
-                    <p className="text-secondary-600">info@nevadaprobate.com</p>
+                    <p className="text-secondary-600">DrJanSells@ProbateRealEstateSales.com</p>
                     <p className="text-sm text-secondary-500">We respond within 2 hours</p>
                   </div>
                 </div>
