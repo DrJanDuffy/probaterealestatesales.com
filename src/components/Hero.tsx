@@ -194,26 +194,31 @@ export default function Hero() {
                 </div>
               </div>
               
-              {/* Property Valuation Card */}
-              <div className="relative z-10">
-                <div className="bg-white rounded-2xl shadow-2xl p-6 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
-                  <div className="space-y-4">
-                    <h4 className="text-lg font-bold text-secondary-900">Property Valuation</h4>
-                    <div className="space-y-2">
-                      <div className="h-3 bg-primary-200 rounded w-3/4" />
-                      <div className="h-3 bg-secondary-200 rounded w-1/2" />
-                      <div className="h-3 bg-accent-200 rounded w-5/6" />
-                      <div className="h-3 bg-primary-100 rounded w-2/3" />
-                    </div>
-                    <div className="pt-4 border-t border-secondary-200">
-                      <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-primary-600">$450,000</span>
-                        <span className="text-sm text-secondary-500">Estimated Value</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+                             {/* Nevada Probate Services Card */}
+               <div className="relative z-10">
+                 <div className="bg-white rounded-2xl shadow-2xl p-6 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
+                   <div className="space-y-4">
+                     <h4 className="text-lg font-bold text-secondary-900 text-center">Overwhelmed by Nevada Probate?</h4>
+                     <p className="text-sm text-secondary-600 text-center font-medium">
+                       We Sell Inherited Properties in 45 Days While You Focus on Family
+                     </p>
+                     <div className="space-y-3 pt-2">
+                       <div className="flex items-center gap-2 text-sm">
+                         <div className="w-2 h-2 bg-primary-500 rounded-full" />
+                         <span className="text-secondary-700"><strong>For Executors:</strong> Navigate Clark County Court with confidence</span>
+                       </div>
+                       <div className="flex items-center gap-2 text-sm">
+                         <div className="w-2 h-2 bg-accent-500 rounded-full" />
+                         <span className="text-secondary-700"><strong>For Heirs:</strong> Get fair market value without delays</span>
+                       </div>
+                       <div className="flex items-center gap-2 text-sm">
+                         <div className="w-2 h-2 bg-green-500 rounded-full" />
+                         <span className="text-secondary-700"><strong>For Attorneys:</strong> Trusted partner for 50+ law firms</span>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+               </div>
               
               {/* Floating Elements */}
               <div className="absolute -top-4 -right-4 w-24 h-24 bg-accent-200 rounded-full opacity-20 animate-bounce-gentle" />
