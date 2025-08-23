@@ -19,10 +19,10 @@ export default function Hero() {
             <div className="space-y-8">
               {/* Professional Headline */}
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">
-                  <Award className="h-4 w-4" />
-                  Probate Real Estate Specialist (CPRES)
-                </div>
+                                 <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">
+                   <Award className="h-4 w-4" />
+                   Probate Real Estate Specialist
+                 </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
                   <span className="text-gradient">Dr. Jan Duffy</span>
