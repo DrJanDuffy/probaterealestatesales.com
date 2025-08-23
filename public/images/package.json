@@ -1,0 +1,17 @@
+{
+  "name": "image-optimization",
+  "version": "1.0.0",
+  "description": "Image optimization tools for probaterealestatesales.com",
+  "main": "optimize-images.js",
+  "scripts": {
+    "optimize": "node optimize-images.js",
+    "install-deps": "npm install sharp"
+  },
+  "dependencies": {
+    "sharp": "^0.33.0"
+  },
+  "devDependencies": {},
+  "keywords": ["image", "optimization", "web", "performance"],
+  "author": "Dr. Jan Duffy Team",
+  "license": "MIT"
+}

@@ -1,0 +1,16 @@
+# Image file handling
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.svg text
+*.ico binary
+
+# Optimize image storage
+*.jpg -text
+*.jpeg -text
+*.png -text
+*.gif -text
+*.webp -text
+*.ico -text
