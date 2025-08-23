@@ -57,7 +57,7 @@ const credentials = [
   },
   {
     icon: Award,
-    title: 'Certified Probate Real Estate Specialist',
+            title: 'Probate Real Estate Specialist',
     subtitle: 'CPRES Designation',
     description: 'Professional certification in probate real estate management',
     color: 'text-primary-600',

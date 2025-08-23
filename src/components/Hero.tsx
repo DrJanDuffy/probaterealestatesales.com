@@ -21,7 +21,7 @@ export default function Hero() {
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">
                   <Award className="h-4 w-4" />
-                  Certified Probate Real Estate Specialist (CPRES)
+                  Probate Real Estate Specialist (CPRES)
                 </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
@@ -165,7 +165,7 @@ export default function Hero() {
                     <div className="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full border-4 border-primary-200 shadow-lg">
                       <Image
                         src="/images/dr-jan-duffy.jpg"
-                        alt="Dr. Jan Duffy - Certified Probate Real Estate Specialist"
+                        alt="Dr. Jan Duffy - Probate Real Estate Specialist"
                         width={192}
                         height={192}
                         className="w-full h-full object-cover"
@@ -173,7 +173,7 @@ export default function Hero() {
                       />
                     </div>
                     <h3 className="text-xl font-bold text-secondary-900 mb-2">Dr. Jan Duffy</h3>
-                    <p className="text-secondary-600">Certified Probate Real Estate Specialist</p>
+                    <p className="text-secondary-600">Probate Real Estate Specialist</p>
                   </div>
                   
                   {/* Credentials */}

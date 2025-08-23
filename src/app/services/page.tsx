@@ -495,7 +495,7 @@ export default function ServicesPage() {
           <div className="certifications flex justify-center space-x-8 mb-16">
             <div className="text-center">
               <Award className="w-16 h-16 text-yellow-500 mx-auto mb-2" />
-              <p className="text-sm text-gray-600">Certified Probate Real Estate Specialist</p>
+                              <p className="text-sm text-gray-600">Probate Real Estate Specialist</p>
             </div>
             <div className="text-center">
               <Building2 className="w-16 h-16 text-blue-500 mx-auto mb-2" />

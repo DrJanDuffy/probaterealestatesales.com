@@ -5,7 +5,7 @@ const schemaData = {
   "@type": "Person",
   "name": "Dr. Jan Duffy",
   "alternateName": "Dr. Janet Duffy",
-  "jobTitle": "Certified Probate Real Estate Specialist",
+          "jobTitle": "Probate Real Estate Specialist",
   "description": "Las Vegas probate real estate expert with 20+ years experience, specializing in inherited property sales and estate liquidation following Nevada Revised Statutes.",
   "url": "https://probaterealestatesales.com",
   "image": "https://probaterealestatesales.com/images/dr-jan-duffy.jpg",
@@ -28,7 +28,7 @@ const schemaData = {
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "certification",
-      "name": "Certified Probate Real Estate Specialist (CPRES)",
+              "name": "Probate Real Estate Specialist (CPRES)",
       "recognizedBy": {
         "@type": "Organization",
         "name": "National Association of Probate Professionals"
@@ -395,7 +395,7 @@ export default function SchemaMarkupExpert() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Award className="h-5 w-5 text-primary-600" />
-                  <span className="text-sm text-secondary-700">Certified Probate Real Estate Specialist (CPRES)</span>
+                  <span className="text-sm text-secondary-700">Probate Real Estate Specialist (CPRES)</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <GraduationCap className="h-5 w-5 text-blue-600" />
