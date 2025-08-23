@@ -6,7 +6,7 @@ const schemaData = {
   "name": "Dr. Jan Duffy",
   "alternateName": "Dr. Janet Duffy",
           "jobTitle": "Probate Real Estate Specialist",
-  "description": "Las Vegas probate real estate expert with 20+ years experience, specializing in inherited property sales and estate liquidation following Nevada Revised Statutes.",
+     "description": "Las Vegas probate real estate expert with 20+ years experience, specializing in inherited property sales, estate liquidation, and the 9 exceptions to probate including inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques.",
   "url": "https://probaterealestatesales.com",
   "image": "https://probaterealestatesales.com/images/dr-jan-duffy.jpg",
   "telephone": "+1-702-830-9222",
@@ -53,17 +53,29 @@ const schemaData = {
       }
     }
   ],
-  "knowsAbout": [
-    "Probate Real Estate",
-    "Estate Sales",
-    "Nevada Probate Law",
-    "Las Vegas Real Estate",
-    "Inherited Property Sales",
-    "Clark County Probate Court",
-    "Estate Liquidation",
-    "Property Valuation",
-    "Court-Approved Sales"
-  ],
+     "knowsAbout": [
+     "Probate Real Estate",
+     "Estate Sales",
+     "Nevada Probate Law",
+     "Las Vegas Real Estate",
+     "Inherited Property Sales",
+     "Clark County Probate Court",
+     "Estate Liquidation",
+     "Property Valuation",
+     "Court-Approved Sales",
+     "9 Exceptions to Probate",
+     "Inventory and Appraisal",
+     "Orders for Probate and Letters",
+     "Different Ways of Holding Title",
+     "Sale of Real Property in Probate",
+     "Full Authority vs. Limited Authority",
+     "Legal Documents in Probate",
+     "Homeowner Tax Obligations",
+     "Estate Taxes and Capital Gains",
+     "Parent-Child Transfer Exclusions",
+     "Change in Ownership Statements",
+     "Probate Marketing Techniques"
+   ],
   "memberOf": [
     {
       "@type": "Organization",

@@ -73,9 +73,9 @@ const credentials = [
   },
   {
     icon: Building,
-    title: 'Court Recognized Expert',
+    title: 'Court-Approved Expert in 9 Exceptions to Probate',
     subtitle: 'Approved Expert Witness',
-    description: 'Recognized by Nevada probate courts as an expert in probate real estate',
+    description: 'Specialized knowledge in inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques',
     color: 'text-purple-600',
     bgColor: 'bg-purple-100'
   }
