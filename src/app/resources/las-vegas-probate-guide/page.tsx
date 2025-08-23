@@ -43,12 +43,13 @@ export default function LasVegasProbateGuide() {
       <SchemaMarkup 
         type="article"
         article={{
-          title: "Las Vegas Probate Real Estate Guide 2025",
+          headline: "Las Vegas Probate Real Estate Guide 2025",
           description: "Complete guide to probate real estate in Las Vegas, Nevada including court procedures, timelines, and costs.",
           author: "Dr. Janet Duffy",
-          publishedTime: "2025-01-01T00:00:00Z",
-          modifiedTime: new Date().toISOString(),
-          section: "Probate Guides"
+          datePublished: "2025-01-01T00:00:00Z",
+          dateModified: new Date().toISOString(),
+          url: "https://probaterealestatesales.com/resources/las-vegas-probate-guide",
+          image: "https://probaterealestatesales.com/images/las-vegas-probate-guide.jpg"
         }}
         customSchema={{
           "@context": "https://schema.org",
