@@ -1,3 +1,5 @@
+"use client";
+
 import { Calculator, DollarSign, FileText, Gavel, Home, Users, Clock, AlertTriangle, CheckCircle, ArrowRight, Info } from 'lucide-react';
 import { useState } from 'react';
 
@@ -211,34 +213,36 @@ export default function ProbateCostCalculator() {
               {/* Property Information */}
               {hasRealEstate && (
                 <>
-                  <div className="mb-6">
-                    <label className="block text-sm font-medium text-secondary-700 mb-2">
-                      Real Estate Value
-                    </label>
-                    <div className="relative">
-                      <span className="absolute left-3 top-3 text-gray-500">$</span>
-                      <input
-                        type="number"
-                        value={propertyValue}
-                        onChange={(e) => setPropertyValue(Number(e.target.value))}
-                        className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                        placeholder="400000"
-                      />
-                    </div>
-                  </div>
+                                     <div className="mb-6">
+                     <label htmlFor="propertyValue" className="block text-sm font-medium text-secondary-700 mb-2">
+                       Real Estate Value
+                     </label>
+                     <div className="relative">
+                       <span className="absolute left-3 top-3 text-gray-500">$</span>
+                       <input
+                         id="propertyValue"
+                         type="number"
+                         value={propertyValue}
+                         onChange={(e) => setPropertyValue(Number(e.target.value))}
+                         className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                         placeholder="400000"
+                       />
+                     </div>
+                   </div>
 
-                  <div className="mb-6">
-                    <label className="block text-sm font-medium text-secondary-700 mb-2">
-                      Expected Timeline (months)
-                    </label>
-                    <input
-                      type="number"
-                      value={timeline}
-                      onChange={(e) => setTimeline(Number(e.target.value))}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      placeholder="8"
-                    />
-                  </div>
+                                     <div className="mb-6">
+                     <label htmlFor="timeline" className="block text-sm font-medium text-secondary-700 mb-2">
+                       Expected Timeline (months)
+                     </label>
+                     <input
+                       id="timeline"
+                       type="number"
+                       value={timeline}
+                       onChange={(e) => setTimeline(Number(e.target.value))}
+                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                       placeholder="8"
+                     />
+                   </div>
                 </>
               )}
 
