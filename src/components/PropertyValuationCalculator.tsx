@@ -110,7 +110,10 @@ export default function PropertyValuationCalculator() {
         high: Math.round(estimatedValue * 1.1)
       };
       
-      const factors = {
+      const factors: {
+        positive: string[];
+        negative: string[];
+      } = {
         positive: [],
         negative: []
       };
