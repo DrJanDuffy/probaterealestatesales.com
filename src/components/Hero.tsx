@@ -182,10 +182,10 @@ export default function Hero() {
                        <Award className="h-5 w-5 text-primary-600" />
                        <span className="text-sm text-secondary-700">9 Exceptions to Probate Expert</span>
                      </div>
-                    <div className="flex items-center gap-3">
-                      <Shield className="h-5 w-5 text-accent-600" />
-                      <span className="text-sm text-secondary-700">Court Approved</span>
-                    </div>
+                                         <div className="flex items-center gap-3">
+                       <Shield className="h-5 w-5 text-accent-600" />
+                       <span className="text-sm text-secondary-700">Court Trusted</span>
+                     </div>
                     <div className="flex items-center gap-3">
                       <Star className="h-5 w-5 text-green-600" />
                       <span className="text-sm text-secondary-700">500+ Sales</span>
