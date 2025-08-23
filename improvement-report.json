@@ -1,0 +1,58 @@
+[
+  {
+    "priority": "HIGH",
+    "element": ".trust-badges",
+    "recommendation": "Add trust badges (BBB, certifications)",
+    "impact": "Conversion Rate",
+    "effort": "Medium"
+  },
+  {
+    "priority": "HIGH",
+    "element": ".live-chat",
+    "recommendation": "Implement live chat for immediate assistance",
+    "impact": "Conversion Rate",
+    "effort": "Medium"
+  },
+  {
+    "priority": "HIGH",
+    "element": ".calculator",
+    "recommendation": "Add probate timeline calculator",
+    "impact": "Conversion Rate",
+    "effort": "Medium"
+  },
+  {
+    "priority": "HIGH",
+    "element": ".video",
+    "recommendation": "Include explainer video for probate process",
+    "impact": "Conversion Rate",
+    "effort": "Medium"
+  },
+  {
+    "priority": "HIGH",
+    "element": ".faq-schema",
+    "recommendation": "Implement FAQ schema markup",
+    "impact": "Conversion Rate",
+    "effort": "Medium"
+  },
+  {
+    "priority": "HIGH",
+    "element": ".progress-bar",
+    "recommendation": "Add progress indicator for multi-step forms",
+    "impact": "Conversion Rate",
+    "effort": "Medium"
+  },
+  {
+    "priority": "HIGH",
+    "element": ".social-proof",
+    "recommendation": "Display real-time social proof notifications",
+    "impact": "Conversion Rate",
+    "effort": "Medium"
+  },
+  {
+    "priority": "HIGH",
+    "element": ".comparison-table",
+    "recommendation": "Add comparison table vs traditional probate",
+    "impact": "Conversion Rate",
+    "effort": "Medium"
+  }
+]

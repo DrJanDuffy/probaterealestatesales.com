@@ -1,0 +1,624 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e4]:
+      - link "Nevada Probate Real Estate" [ref=e6]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e10]: Nevada Probate Real Estate
+      - button [ref=e12] [cursor=pointer]:
+        - img [ref=e13] [cursor=pointer]
+  - main [ref=e14]:
+    - main [ref=e15]:
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]:
+            - heading "Probate Real Estate Solutions" [level=1] [ref=e23]:
+              - generic [ref=e24]: Probate Real Estate
+              - generic [ref=e25]: Solutions
+            - paragraph [ref=e26]: We help families navigate property sales during difficult times with compassion, expertise, and maximum value for your estate.
+          - generic [ref=e27]:
+            - link "Get Free Consultation" [ref=e28]:
+              - /url: http://drjanduffy.realscout.com/onboarding
+              - text: Get Free Consultation
+              - img [ref=e29]
+            - link "Learn More" [ref=e31]:
+              - /url: http://drjanduffy.realscout.com/onboarding
+          - generic [ref=e32]:
+            - generic [ref=e33]:
+              - img [ref=e35]
+              - generic [ref=e37]:
+                - paragraph [ref=e38]: Call Us Today
+                - paragraph [ref=e39]: (702) 555-0123
+            - generic [ref=e40]:
+              - img [ref=e42]
+              - generic [ref=e45]:
+                - paragraph [ref=e46]: Email Us
+                - paragraph [ref=e47]: info@nevadaprobate.com
+        - generic [ref=e57]:
+          - generic [ref=e58]: $450,000
+          - generic [ref=e59]: Estimated Value
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - heading "Comprehensive Probate Services" [level=2] [ref=e65]
+          - paragraph [ref=e66]: We provide end-to-end solutions to help families navigate the complex process of probate real estate with confidence and peace of mind.
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - img [ref=e71]
+            - heading "Property Valuation" [level=3] [ref=e74]
+            - paragraph [ref=e75]: Accurate market analysis and property valuation to ensure maximum value for your estate.
+            - list [ref=e76]:
+              - listitem [ref=e77]: Market Analysis
+              - listitem [ref=e79]: Comparative Sales
+              - listitem [ref=e81]: Property Condition Assessment
+          - generic [ref=e83]:
+            - img [ref=e86]
+            - heading "Financial Planning" [level=3] [ref=e88]
+            - paragraph [ref=e89]: Comprehensive financial planning including tax implications and estate distribution.
+            - list [ref=e90]:
+              - listitem [ref=e91]: Tax Planning
+              - listitem [ref=e93]: Estate Distribution
+              - listitem [ref=e95]: Financial Reporting
+          - generic [ref=e97]:
+            - img [ref=e100]
+            - heading "Family Consultation" [level=3] [ref=e105]
+            - paragraph [ref=e106]: Sensitive guidance for families during difficult times with clear communication.
+            - list [ref=e107]:
+              - listitem [ref=e108]: Family Meetings
+              - listitem [ref=e110]: Legal Guidance
+              - listitem [ref=e112]: Emotional Support
+          - generic [ref=e114]:
+            - img [ref=e117]
+            - heading "Legal Documentation" [level=3] [ref=e120]
+            - paragraph [ref=e121]: Complete handling of all legal documents and probate court requirements.
+            - list [ref=e122]:
+              - listitem [ref=e123]: Court Filings
+              - listitem [ref=e125]: Document Preparation
+              - listitem [ref=e127]: Legal Compliance
+          - generic [ref=e129]:
+            - img [ref=e132]
+            - heading "Risk Management" [level=3] [ref=e134]
+            - paragraph [ref=e135]: Protect your interests with comprehensive risk assessment and mitigation.
+            - list [ref=e136]:
+              - listitem [ref=e137]: Risk Assessment
+              - listitem [ref=e139]: Insurance Review
+              - listitem [ref=e141]: Liability Protection
+          - generic [ref=e143]:
+            - img [ref=e146]
+            - heading "Market Optimization" [level=3] [ref=e149]
+            - paragraph [ref=e150]: Strategic marketing and sales approach to maximize property value.
+            - list [ref=e151]:
+              - listitem [ref=e152]: Marketing Strategy
+              - listitem [ref=e154]: Buyer Outreach
+              - listitem [ref=e156]: Negotiation Support
+        - generic [ref=e159]:
+          - heading "Ready to Get Started?" [level=3] [ref=e160]
+          - paragraph [ref=e161]: Schedule a free consultation to discuss your specific situation and learn how we can help maximize the value of your probate property.
+          - link "Schedule Free Consultation" [ref=e162]:
+            - /url: http://drjanduffy.realscout.com/onboarding
+      - generic [ref=e164]:
+        - generic [ref=e165]:
+          - heading "Featured Properties" [level=2] [ref=e166]
+          - paragraph [ref=e167]: Discover our carefully curated selection of properties available through probate sales. Each property offers unique value and potential for buyers and investors.
+        - link "View All Properties" [ref=e171]:
+          - /url: http://drjanduffy.realscout.com/onboarding
+      - generic [ref=e174]:
+        - generic [ref=e175]:
+          - img [ref=e177]
+          - heading "Property Valuation Calculator" [level=2] [ref=e179]
+          - paragraph [ref=e180]: Get an instant estimate of your inherited property's value. Our advanced algorithm considers location, condition, and market factors.
+        - generic [ref=e181]:
+          - generic [ref=e182]:
+            - heading "Property Details" [level=3] [ref=e183]:
+              - img [ref=e184]
+              - text: Property Details
+            - generic [ref=e187]:
+              - generic [ref=e188]:
+                - generic [ref=e189]: Property Type
+                - combobox "Select property type" [ref=e190]:
+                  - option "Single Family Home" [selected]
+                  - option "Multi-Family"
+                  - option "Condominium"
+                  - option "Townhouse"
+                  - option "Other"
+              - generic [ref=e191]:
+                - generic [ref=e192]:
+                  - generic [ref=e193]: Square Footage
+                  - spinbutton "Square Footage" [ref=e194]: "2000"
+                - generic [ref=e195]:
+                  - generic [ref=e196]: Lot Size (sq ft)
+                  - spinbutton "Lot Size (sq ft)" [ref=e197]: "6000"
+              - generic [ref=e198]:
+                - generic [ref=e199]:
+                  - generic [ref=e200]: Bedrooms
+                  - spinbutton "Bedrooms" [ref=e201]: "3"
+                - generic [ref=e202]:
+                  - generic [ref=e203]: Bathrooms
+                  - spinbutton "Bathrooms" [ref=e204]: "2"
+                - generic [ref=e205]:
+                  - generic [ref=e206]: Year Built
+                  - spinbutton "Year Built" [ref=e207]: "2000"
+              - generic [ref=e208]:
+                - generic [ref=e209]:
+                  - generic [ref=e210]: Property Condition
+                  - combobox "Property Condition" [ref=e211]:
+                    - option "Excellent"
+                    - option "Good" [selected]
+                    - option "Fair"
+                    - option "Poor"
+                - generic [ref=e212]:
+                  - generic [ref=e213]: Location Quality
+                  - combobox "Location Quality" [ref=e214]:
+                    - option "Premium"
+                    - option "Good" [selected]
+                    - option "Average"
+                    - option "Below Average"
+              - generic [ref=e215]:
+                - generic [ref=e216]:
+                  - checkbox "Swimming Pool" [ref=e217]
+                  - generic [ref=e218]: Swimming Pool
+                - generic [ref=e219]:
+                  - checkbox "Garage" [checked] [ref=e220]
+                  - generic [ref=e221]: Garage
+              - generic [ref=e222]:
+                - generic [ref=e223]: Recent Comparable Sales in Area
+                - spinbutton "Recent Comparable Sales in Area" [ref=e224]: "450000"
+                - paragraph [ref=e225]: Enter the sale price of a similar property recently sold in your area
+              - button "Calculate Property Value" [ref=e226] [cursor=pointer]:
+                - img [ref=e227] [cursor=pointer]
+                - text: Calculate Property Value
+          - generic [ref=e231]:
+            - img [ref=e233]
+            - heading "Get Your Property Valuation" [level=3] [ref=e235]
+            - paragraph [ref=e236]: Fill out the form and click calculate to get an instant estimate of your inherited property's market value.
+      - generic [ref=e238]:
+        - generic [ref=e239]:
+          - heading "Why Choose Probate Real Estate Sales?" [level=2] [ref=e240]
+          - paragraph [ref=e241]: We combine deep expertise with compassionate service to deliver exceptional results for families during challenging times.
+        - generic [ref=e242]:
+          - generic [ref=e243]:
+            - img [ref=e246]
+            - generic [ref=e249]:
+              - generic [ref=e250]: 500+
+              - generic [ref=e251]: Average
+            - heading "Proven Track Record" [level=3] [ref=e252]
+            - paragraph [ref=e253]: Over 15 years of experience in probate real estate with hundreds of successful transactions.
+          - generic [ref=e254]:
+            - img [ref=e257]
+            - generic [ref=e260]:
+              - generic [ref=e261]: 45 days
+              - generic [ref=e262]: Average
+            - heading "Fast Turnaround" [level=3] [ref=e263]
+            - paragraph [ref=e264]: Average time from listing to closing is 45 days, well below market average.
+          - generic [ref=e265]:
+            - img [ref=e268]
+            - generic [ref=e270]:
+              - generic [ref=e271]: 100%
+              - generic [ref=e272]: Average
+            - heading "Compassionate Service" [level=3] [ref=e273]
+            - paragraph [ref=e274]: We understand this is a difficult time and provide caring, sensitive support.
+          - generic [ref=e275]:
+            - img [ref=e278]
+            - generic [ref=e280]:
+              - generic [ref=e281]: 15+ years
+              - generic [ref=e282]: Average
+            - heading "Legal Expertise" [level=3] [ref=e283]
+            - paragraph [ref=e284]: Full legal compliance and documentation handling to protect your interests.
+          - generic [ref=e285]:
+            - img [ref=e288]
+            - generic [ref=e293]:
+              - generic [ref=e294]: 200+
+              - generic [ref=e295]: Average
+            - heading "Family Focused" [level=3] [ref=e296]
+            - paragraph [ref=e297]: Dedicated to helping families navigate complex situations with clarity.
+          - generic [ref=e298]:
+            - img [ref=e301]
+            - generic [ref=e304]:
+              - generic [ref=e305]: +12%
+              - generic [ref=e306]: Average
+            - heading "Maximum Value" [level=3] [ref=e307]
+            - paragraph [ref=e308]: Our properties consistently sell above market value through strategic marketing.
+        - generic [ref=e310]:
+          - generic [ref=e311]:
+            - generic [ref=e312]: $50M+
+            - generic [ref=e313]: Total Property Value Sold
+          - generic [ref=e314]:
+            - generic [ref=e315]: 500+
+            - generic [ref=e316]: Families Helped
+          - generic [ref=e317]:
+            - generic [ref=e318]: 15+
+            - generic [ref=e319]: Years of Experience
+          - generic [ref=e320]:
+            - generic [ref=e321]: 98%
+            - generic [ref=e322]: Client Satisfaction
+        - generic [ref=e323]:
+          - heading "Trusted by Leading Organizations" [level=3] [ref=e324]
+          - generic [ref=e325]:
+            - generic [ref=e326]: NAR
+            - generic [ref=e327]: CRMLS
+            - generic [ref=e328]: Probate Court
+            - generic [ref=e329]: Legal Bar
+            - generic [ref=e330]: BBB A+
+      - region "Nevada Probate Real Estate FAQ" [ref=e331]:
+        - generic [ref=e332]:
+          - generic [ref=e333]:
+            - heading "Nevada Probate Real Estate FAQ" [level=2] [ref=e334]
+            - paragraph [ref=e335]: Get answers to the most common questions about probate real estate sales in Nevada. Our comprehensive FAQ covers Nevada-specific laws, timelines, and processes.
+          - navigation "FAQ Categories" [ref=e336]:
+            - button "All Questions" [ref=e337] [cursor=pointer]
+            - button "Nevada Law & Process" [ref=e338] [cursor=pointer]
+            - button "General Questions" [ref=e339] [cursor=pointer]
+            - button "Process & Procedures" [ref=e340] [cursor=pointer]
+            - button "Trust Administration" [ref=e341] [cursor=pointer]
+            - button "Legal Requirements" [ref=e342] [cursor=pointer]
+            - button "Costs & Finances" [ref=e343] [cursor=pointer]
+            - button "Timelines & Delays" [ref=e344] [cursor=pointer]
+          - generic [ref=e345]:
+            - article [ref=e346]:
+              - button "How long does probate take in Nevada?" [ref=e347] [cursor=pointer]:
+                - heading "How long does probate take in Nevada?" [level=3] [ref=e348] [cursor=pointer]
+                - img [ref=e350] [cursor=pointer]
+            - article [ref=e352]:
+              - button "What is a certificate of incumbency in Nevada?" [ref=e353] [cursor=pointer]:
+                - heading "What is a certificate of incumbency in Nevada?" [level=3] [ref=e354] [cursor=pointer]
+                - img [ref=e356] [cursor=pointer]
+            - article [ref=e358]:
+              - button "How much does probate cost in Las Vegas?" [ref=e359] [cursor=pointer]:
+                - heading "How much does probate cost in Las Vegas?" [level=3] [ref=e360] [cursor=pointer]
+                - img [ref=e362] [cursor=pointer]
+            - article [ref=e364]:
+              - button "What is Nevada's small estate limit?" [ref=e365] [cursor=pointer]:
+                - heading "What is Nevada's small estate limit?" [level=3] [ref=e366] [cursor=pointer]
+                - img [ref=e368] [cursor=pointer]
+            - article [ref=e370]:
+              - button "What are the two methods of selling property in Nevada probate?" [ref=e371] [cursor=pointer]:
+                - heading "What are the two methods of selling property in Nevada probate?" [level=3] [ref=e372] [cursor=pointer]
+                - img [ref=e374] [cursor=pointer]
+            - article [ref=e376]:
+              - button "Do I need a certificate of incumbency?" [ref=e377] [cursor=pointer]:
+                - heading "Do I need a certificate of incumbency?" [level=3] [ref=e378] [cursor=pointer]
+                - img [ref=e380] [cursor=pointer]
+            - article [ref=e382]:
+              - button "What is a probate sale?" [ref=e383] [cursor=pointer]:
+                - heading "What is a probate sale?" [level=3] [ref=e384] [cursor=pointer]
+                - img [ref=e386] [cursor=pointer]
+            - article [ref=e388]:
+              - button "How is a probate sale different from a traditional home sale?" [ref=e389] [cursor=pointer]:
+                - heading "How is a probate sale different from a traditional home sale?" [level=3] [ref=e390] [cursor=pointer]
+                - img [ref=e392] [cursor=pointer]
+            - article [ref=e394]:
+              - button "Who can sell a probate property?" [ref=e395] [cursor=pointer]:
+                - heading "Who can sell a probate property?" [level=3] [ref=e396] [cursor=pointer]
+                - img [ref=e398] [cursor=pointer]
+            - article [ref=e400]:
+              - button "What is the step-by-step process for a Nevada probate sale?" [ref=e401] [cursor=pointer]:
+                - heading "What is the step-by-step process for a Nevada probate sale?" [level=3] [ref=e402] [cursor=pointer]
+                - img [ref=e404] [cursor=pointer]
+            - article [ref=e406]:
+              - button "What documents are needed for a Nevada probate sale?" [ref=e407] [cursor=pointer]:
+                - heading "What documents are needed for a Nevada probate sale?" [level=3] [ref=e408] [cursor=pointer]
+                - img [ref=e410] [cursor=pointer]
+            - article [ref=e412]:
+              - button "When can I sign a binding listing agreement?" [ref=e413] [cursor=pointer]:
+                - heading "When can I sign a binding listing agreement?" [level=3] [ref=e414] [cursor=pointer]
+                - img [ref=e416] [cursor=pointer]
+            - article [ref=e418]:
+              - button "How does trust administration compare to probate in Nevada?" [ref=e419] [cursor=pointer]:
+                - heading "How does trust administration compare to probate in Nevada?" [level=3] [ref=e420] [cursor=pointer]
+                - img [ref=e422] [cursor=pointer]
+            - article [ref=e424]:
+              - button "What is the difference between a certificate of incumbency and letters testamentary?" [ref=e425] [cursor=pointer]:
+                - heading "What is the difference between a certificate of incumbency and letters testamentary?" [level=3] [ref=e426] [cursor=pointer]
+                - img [ref=e428] [cursor=pointer]
+            - article [ref=e430]:
+              - button "Can title companies create certificates of incumbency?" [ref=e431] [cursor=pointer]:
+                - heading "Can title companies create certificates of incumbency?" [level=3] [ref=e432] [cursor=pointer]
+                - img [ref=e434] [cursor=pointer]
+            - article [ref=e436]:
+              - button "Do I need an attorney for a Nevada probate sale?" [ref=e437] [cursor=pointer]:
+                - heading "Do I need an attorney for a Nevada probate sale?" [level=3] [ref=e438] [cursor=pointer]
+                - img [ref=e440] [cursor=pointer]
+            - article [ref=e442]:
+              - button "What happens if there are multiple beneficiaries with different opinions?" [ref=e443] [cursor=pointer]:
+                - heading "What happens if there are multiple beneficiaries with different opinions?" [level=3] [ref=e444] [cursor=pointer]
+                - img [ref=e446] [cursor=pointer]
+            - article [ref=e448]:
+              - button "Can the court force a sale if beneficiaries don't agree?" [ref=e449] [cursor=pointer]:
+                - heading "Can the court force a sale if beneficiaries don't agree?" [level=3] [ref=e450] [cursor=pointer]
+                - img [ref=e452] [cursor=pointer]
+            - article [ref=e454]:
+              - button "What are the total costs involved in a Nevada probate sale?" [ref=e455] [cursor=pointer]:
+                - heading "What are the total costs involved in a Nevada probate sale?" [level=3] [ref=e456] [cursor=pointer]
+                - img [ref=e458] [cursor=pointer]
+            - article [ref=e460]:
+              - button "How is the sale price determined for a probate property?" [ref=e461] [cursor=pointer]:
+                - heading "How is the sale price determined for a probate property?" [level=3] [ref=e462] [cursor=pointer]
+                - img [ref=e464] [cursor=pointer]
+            - article [ref=e466]:
+              - button "What happens to the proceeds from a probate sale?" [ref=e467] [cursor=pointer]:
+                - heading "What happens to the proceeds from a probate sale?" [level=3] [ref=e468] [cursor=pointer]
+                - img [ref=e470] [cursor=pointer]
+            - article [ref=e472]:
+              - button "Can I speed up the Nevada probate sale process?" [ref=e473] [cursor=pointer]:
+                - heading "Can I speed up the Nevada probate sale process?" [level=3] [ref=e474] [cursor=pointer]
+                - img [ref=e476] [cursor=pointer]
+            - article [ref=e478]:
+              - button "What are the most common delays in Nevada probate sales?" [ref=e479] [cursor=pointer]:
+                - heading "What are the most common delays in Nevada probate sales?" [level=3] [ref=e480] [cursor=pointer]
+                - img [ref=e482] [cursor=pointer]
+            - article [ref=e484]:
+              - button "Why does Nevada probate take longer than Colorado?" [ref=e485] [cursor=pointer]:
+                - heading "Why does Nevada probate take longer than Colorado?" [level=3] [ref=e486] [cursor=pointer]
+                - img [ref=e488] [cursor=pointer]
+          - generic [ref=e491]:
+            - heading "Need Nevada-Specific Help?" [level=3] [ref=e492]
+            - paragraph [ref=e493]: Our Nevada probate real estate experts are here to help. Get personalized answers about Clark County probate court procedures and Nevada probate law.
+            - generic [ref=e494]:
+              - 'link "Call Now: (702) 555-0123" [ref=e495]':
+                - /url: tel:+1-702-555-0123
+              - link "Send Message" [ref=e496]:
+                - /url: /contact
+      - generic [ref=e498]:
+        - generic [ref=e499]:
+          - heading "What Our Clients Say" [level=2] [ref=e500]
+          - paragraph [ref=e501]: Don't just take our word for it. Here's what families who have worked with us have to say about their experience.
+        - generic [ref=e502]:
+          - generic [ref=e503]:
+            - img [ref=e505]
+            - generic [ref=e508]:
+              - img [ref=e509]
+              - img [ref=e511]
+              - img [ref=e513]
+              - img [ref=e515]
+              - img [ref=e517]
+            - blockquote [ref=e519]: "\"Probate Real Estate Sales made an incredibly difficult time so much easier. They handled everything with compassion and professionalism, and we got above-market value for our family home.\""
+            - generic [ref=e520]:
+              - generic [ref=e521]: Family Home in Beverly Hills
+              - generic [ref=e522]:
+                - generic [ref=e523]: "Sale Price:"
+                - generic [ref=e524]: $2.1M
+              - generic [ref=e525]:
+                - generic [ref=e526]: "Market Value:"
+                - generic [ref=e527]: $1.9M
+            - generic [ref=e528]:
+              - generic [ref=e530]: S
+              - generic [ref=e531]:
+                - generic [ref=e532]: Sarah Johnson
+                - generic [ref=e533]: Family Member
+          - generic [ref=e534]:
+            - img [ref=e536]
+            - generic [ref=e539]:
+              - img [ref=e540]
+              - img [ref=e542]
+              - img [ref=e544]
+              - img [ref=e546]
+              - img [ref=e548]
+            - blockquote [ref=e550]: "\"As the executor of my father's estate, I was overwhelmed with the property sale process. The team guided me through every step and exceeded our expectations on the sale price.\""
+            - generic [ref=e551]:
+              - generic [ref=e552]: Downtown Condo
+              - generic [ref=e553]:
+                - generic [ref=e554]: "Sale Price:"
+                - generic [ref=e555]: $850K
+              - generic [ref=e556]:
+                - generic [ref=e557]: "Market Value:"
+                - generic [ref=e558]: $780K
+            - generic [ref=e559]:
+              - generic [ref=e561]: M
+              - generic [ref=e562]:
+                - generic [ref=e563]: Michael Chen
+                - generic [ref=e564]: Executor
+          - generic [ref=e565]:
+            - img [ref=e567]
+            - generic [ref=e570]:
+              - img [ref=e571]
+              - img [ref=e573]
+              - img [ref=e575]
+              - img [ref=e577]
+              - img [ref=e579]
+            - blockquote [ref=e581]: "\"They truly understand what families go through during probate. Their expertise in legal matters and real estate gave us peace of mind throughout the entire process.\""
+            - generic [ref=e582]:
+              - generic [ref=e583]: Suburban Family Home
+              - generic [ref=e584]:
+                - generic [ref=e585]: "Sale Price:"
+                - generic [ref=e586]: $1.2M
+              - generic [ref=e587]:
+                - generic [ref=e588]: "Market Value:"
+                - generic [ref=e589]: $1.1M
+            - generic [ref=e590]:
+              - generic [ref=e592]: J
+              - generic [ref=e593]:
+                - generic [ref=e594]: Jennifer Martinez
+                - generic [ref=e595]: Beneficiary
+        - generic [ref=e596]:
+          - generic [ref=e597]:
+            - heading "Proven Results" [level=3] [ref=e598]
+            - paragraph [ref=e599]: Our track record speaks for itself
+          - generic [ref=e600]:
+            - generic [ref=e601]:
+              - generic [ref=e602]: $50M+
+              - generic [ref=e603]: Total Sales Volume
+            - generic [ref=e604]:
+              - generic [ref=e605]: 12%
+              - generic [ref=e606]: Above Market Average
+            - generic [ref=e607]:
+              - generic [ref=e608]: 45 days
+              - generic [ref=e609]: Average Time to Close
+            - generic [ref=e610]:
+              - generic [ref=e611]: 98%
+              - generic [ref=e612]: Client Satisfaction
+      - generic [ref=e614]:
+        - generic [ref=e615]:
+          - heading "Get in Touch" [level=2] [ref=e616]
+          - paragraph [ref=e617]: Ready to discuss your probate real estate needs? Contact us for a free, no-obligation consultation.
+        - generic [ref=e618]:
+          - generic [ref=e619]:
+            - heading "Send us a Message" [level=3] [ref=e620]
+            - generic [ref=e621]:
+              - generic [ref=e622]:
+                - generic [ref=e623]:
+                  - generic [ref=e624]: First Name *
+                  - textbox "First Name *" [ref=e625]
+                - generic [ref=e626]:
+                  - generic [ref=e627]: Last Name *
+                  - textbox "Last Name *" [ref=e628]
+              - generic [ref=e629]:
+                - generic [ref=e630]: Email Address *
+                - textbox "Email Address *" [ref=e631]
+              - generic [ref=e632]:
+                - generic [ref=e633]: Phone Number
+                - textbox "Phone Number" [ref=e634]
+              - generic [ref=e635]:
+                - generic [ref=e636]: Property Address
+                - textbox "Property Address" [ref=e637]
+              - generic [ref=e638]:
+                - generic [ref=e639]: Message *
+                - textbox "Message *" [ref=e640]
+              - button "Send Message" [ref=e641] [cursor=pointer]:
+                - text: Send Message
+                - img [ref=e642] [cursor=pointer]
+          - generic [ref=e645]:
+            - generic [ref=e646]:
+              - heading "Contact Information" [level=3] [ref=e647]
+              - generic [ref=e648]:
+                - generic [ref=e649]:
+                  - img [ref=e651]
+                  - generic [ref=e653]:
+                    - heading "Phone" [level=4] [ref=e654]
+                    - paragraph [ref=e655]: (702) 555-0123
+                    - paragraph [ref=e656]: Available 24/7 for urgent matters
+                - generic [ref=e657]:
+                  - img [ref=e659]
+                  - generic [ref=e662]:
+                    - heading "Email" [level=4] [ref=e663]
+                    - paragraph [ref=e664]: info@nevadaprobate.com
+                    - paragraph [ref=e665]: We respond within 2 hours
+                - generic [ref=e666]:
+                  - img [ref=e668]
+                  - generic [ref=e671]:
+                    - heading "Office" [level=4] [ref=e672]
+                    - paragraph [ref=e673]: City Centre Place
+                    - paragraph [ref=e674]: 400 S 4th Street Suite 250 B
+                    - paragraph [ref=e675]: Las Vegas, NV 89101
+                - generic [ref=e676]:
+                  - img [ref=e678]
+                  - generic [ref=e681]:
+                    - heading "Business Hours" [level=4] [ref=e682]
+                    - paragraph [ref=e683]: "Monday - Friday: 8:00 AM - 6:00 PM"
+                    - paragraph [ref=e684]: "Saturday: 9:00 AM - 2:00 PM"
+                    - paragraph [ref=e685]: "Sunday: By appointment only"
+            - generic [ref=e686]:
+              - heading "Emergency After Hours" [level=4] [ref=e687]
+              - paragraph [ref=e688]: "For urgent probate matters outside business hours, call our emergency line:"
+              - generic [ref=e689]:
+                - generic [ref=e690]: (702) 999-8888
+                - paragraph [ref=e691]: Available 24/7 for urgent matters
+  - contentinfo [ref=e692]:
+    - generic [ref=e693]:
+      - generic [ref=e694]:
+        - generic [ref=e695]:
+          - generic [ref=e696]:
+            - img [ref=e697]
+            - generic [ref=e700]: Nevada Probate Real Estate
+          - paragraph [ref=e701]: "Expert probate real estate services across Nevada. Nevada's fastest probate process: 6-8 months vs California's 9-18 months."
+          - generic [ref=e702]:
+            - generic [ref=e703]:
+              - img [ref=e704]
+              - link "(702) 555-0123" [ref=e706]:
+                - /url: tel:+1-702-555-0123
+            - generic [ref=e707]:
+              - img [ref=e708]
+              - link "info@nevadaprobate.com" [ref=e711]:
+                - /url: mailto:info@nevadaprobate.com
+            - generic [ref=e712]:
+              - img [ref=e713]
+              - generic [ref=e716]: "Nevada Probate: 6-8 Months"
+        - generic [ref=e717]:
+          - heading "Services" [level=3] [ref=e718]
+          - list [ref=e719]:
+            - listitem [ref=e720]:
+              - link "Probate Real Estate" [ref=e721]:
+                - /url: /#services
+            - listitem [ref=e722]:
+              - link "Trust Administration" [ref=e723]:
+                - /url: /resources/nevada-probate-guide/#costs
+            - listitem [ref=e724]:
+              - link "Certificate of Incumbency" [ref=e725]:
+                - /url: /resources/nevada-probate-guide/#process
+            - listitem [ref=e726]:
+              - link "Property Valuation" [ref=e727]:
+                - /url: /locations/las-vegas/
+        - generic [ref=e728]:
+          - heading "Nevada Locations" [level=3] [ref=e729]
+          - list [ref=e730]:
+            - listitem [ref=e731]:
+              - link "Las Vegas" [ref=e732]:
+                - /url: /locations/las-vegas/
+            - listitem [ref=e733]:
+              - link "Henderson" [ref=e734]:
+                - /url: /locations/henderson/
+            - listitem [ref=e735]:
+              - link "Summerlin" [ref=e736]:
+                - /url: /locations/summerlin/
+            - listitem [ref=e737]:
+              - link "North Las Vegas" [ref=e738]:
+                - /url: /locations/north-las-vegas/
+            - listitem [ref=e739]:
+              - link "Boulder City" [ref=e740]:
+                - /url: /locations/boulder-city/
+            - listitem [ref=e741]:
+              - link "Mesquite" [ref=e742]:
+                - /url: /locations/mesquite/
+            - listitem [ref=e743]:
+              - link "Spring Valley" [ref=e744]:
+                - /url: /locations/spring-valley/
+            - listitem [ref=e745]:
+              - link "Enterprise" [ref=e746]:
+                - /url: /locations/enterprise/
+        - generic [ref=e747]:
+          - heading "Resources" [level=3] [ref=e748]
+          - list [ref=e749]:
+            - listitem [ref=e750]:
+              - link "Nevada Probate Guide" [ref=e751]:
+                - /url: /resources/nevada-probate-guide/
+            - listitem [ref=e752]:
+              - link "Timeline & Process" [ref=e753]:
+                - /url: /resources/nevada-probate-guide/#timeline
+            - listitem [ref=e754]:
+              - link "Costs & Fees" [ref=e755]:
+                - /url: /resources/nevada-probate-guide/#costs
+            - listitem [ref=e756]:
+              - link "FAQ" [ref=e757]:
+                - /url: /#faq
+          - heading "Legal" [level=3] [ref=e758]
+          - list [ref=e759]:
+            - listitem [ref=e760]:
+              - link "Nevada Probate Laws" [ref=e761]:
+                - /url: /resources/nevada-probate-guide/#advantages
+            - listitem [ref=e762]:
+              - link "Clark County Court" [ref=e763]:
+                - /url: /locations/las-vegas/
+            - listitem [ref=e764]:
+              - link "Small Estate Options" [ref=e765]:
+                - /url: /resources/nevada-probate-guide/#advantages
+            - listitem [ref=e766]:
+              - link "Trust vs Probate" [ref=e767]:
+                - /url: /resources/nevada-probate-guide/#costs
+      - generic [ref=e768]:
+        - generic [ref=e769]:
+          - generic [ref=e770]: © 2025 Nevada Probate Real Estate Sales. All rights reserved.
+          - generic [ref=e771]:
+            - link "Privacy Policy" [ref=e772]:
+              - /url: /privacy/
+            - link "Terms of Service" [ref=e773]:
+              - /url: /terms/
+            - link "Sitemap" [ref=e774]:
+              - /url: /sitemap.xml
+        - generic [ref=e776]:
+          - paragraph [ref=e777]:
+            - text: 🎯
+            - strong [ref=e778]: "Nevada Advantage:"
+            - text: 6-8 month probate timeline vs California's 9-18 months
+          - paragraph [ref=e779]: "Clark County court costs: $1,000 | Trust administration: $2,500"
+```
