@@ -1,5 +1,5 @@
-import { SEOMetaTags } from '@/components/SEOMetaTags';
-import { SchemaMarkup } from '@/components/SchemaMarkup';
+import SEOMetaTags from '@/components/SEOMetaTags';
+import SchemaMarkup from '@/components/SchemaMarkup';
 import { 
   Gavel, 
   Clock, 
