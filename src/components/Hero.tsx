@@ -186,10 +186,10 @@ export default function Hero() {
                        <Shield className="h-5 w-5 text-accent-600" />
                        <span className="text-sm text-secondary-700">Court Trusted</span>
                      </div>
-                    <div className="flex items-center gap-3">
-                      <Star className="h-5 w-5 text-green-600" />
-                      <span className="text-sm text-secondary-700">500+ Sales</span>
-                    </div>
+                                         <div className="flex items-center gap-3">
+                       <Star className="h-5 w-5 text-green-600" />
+                       <span className="text-sm text-secondary-700">Property Valuation Expert</span>
+                     </div>
                   </div>
                 </div>
               </div>
