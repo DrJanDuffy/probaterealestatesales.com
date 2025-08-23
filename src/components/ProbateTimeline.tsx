@@ -1,4 +1,4 @@
-import { Calendar, Clock, FileText, Gavel, Home, Users, DollarSign, CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+import { Calendar, Clock, FileText, Gavel, Home, Users, DollarSign, CheckCircle, AlertTriangle, ArrowRight, MapPin } from 'lucide-react';
 
 const timelineSteps = [
   {
