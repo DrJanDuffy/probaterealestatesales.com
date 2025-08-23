@@ -220,7 +220,7 @@ export default function NorthLasVegasPage() {
               North Las Vegas Growth & Development
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Understanding the area's development for better probate property valuation
+              Understanding the area's development for better inherited property valuation
             </p>
           </div>
           

@@ -61,7 +61,7 @@ export default function SEOMetaTags({
     'inheritance property',
     'estate planning',
     'real estate agent',
-    'property valuation'
+    'inherited property worth'
   ];
 
   const allKeywords = [...new Set([...defaultKeywords, ...keywords])];

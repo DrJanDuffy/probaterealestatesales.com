@@ -72,7 +72,7 @@ export default function ServicesPage() {
                 "itemListElement": [
                   {
                     "@type": "Offer",
-                    "name": "Probate Property Valuation",
+                    "name": "How Much Is My Inherited Property Worth?",
                     "price": "0",
                     "priceCurrency": "USD",
                     "description": "Free court-accepted property valuation"

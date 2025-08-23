@@ -1,41 +1,53 @@
-import { Home, Calculator, Users, FileText, Shield, TrendingUp } from 'lucide-react';
+import { Home, Calculator, Users, FileText, Shield, TrendingUp, Clock, DollarSign } from 'lucide-react';
 
 const services = [
   {
     icon: Home,
-    title: 'Property Valuation',
-    description: 'Accurate market analysis and property valuation to ensure maximum value for your estate.',
-    features: ['Market Analysis', 'Comparative Sales', 'Property Condition Assessment']
+    title: 'How Much Is My Inherited Property Worth?',
+    description: 'Get an accurate market analysis and property valuation to ensure maximum value for your inherited estate.',
+    features: ['Market Analysis', 'Comparative Sales', 'Property Condition Assessment'],
+    timeline: '45 days',
+    pricing: 'Free consultation'
   },
   {
     icon: Calculator,
     title: 'Financial Planning',
     description: 'Comprehensive financial planning including tax implications and estate distribution.',
-    features: ['Tax Planning', 'Estate Distribution', 'Financial Reporting']
+    features: ['Tax Planning', 'Estate Distribution', 'Financial Reporting'],
+    timeline: '2-4 weeks',
+    pricing: 'Included in service'
   },
   {
     icon: Users,
     title: 'Family Consultation',
     description: 'Sensitive guidance for families during difficult times with clear communication.',
-    features: ['Family Meetings', 'Legal Guidance', 'Emotional Support']
+    features: ['Family Meetings', 'Legal Guidance', 'Emotional Support'],
+    timeline: 'Ongoing support',
+    pricing: 'Included in service'
   },
   {
     icon: FileText,
     title: 'Legal Documentation',
     description: 'Complete handling of all legal documents and probate court requirements.',
-    features: ['Court Filings', 'Document Preparation', 'Legal Compliance']
+    features: ['Court Filings', 'Document Preparation', 'Legal Compliance'],
+    timeline: '1-2 weeks',
+    pricing: 'Court fees only'
   },
   {
     icon: Shield,
     title: 'Risk Management',
     description: 'Protect your interests with comprehensive risk assessment and mitigation.',
-    features: ['Risk Assessment', 'Insurance Review', 'Liability Protection']
+    features: ['Risk Assessment', 'Insurance Review', 'Liability Protection'],
+    timeline: '1-2 weeks',
+    pricing: 'Included in service'
   },
   {
     icon: TrendingUp,
     title: 'Market Optimization',
     description: 'Strategic marketing and sales approach to maximize property value.',
-    features: ['Marketing Strategy', 'Buyer Outreach', 'Negotiation Support']
+    features: ['Marketing Strategy', 'Buyer Outreach', 'Negotiation Support'],
+    timeline: '45 days',
+    pricing: 'Standard commission'
   }
 ];
 
@@ -75,7 +87,7 @@ export default function Services() {
                 {service.description}
               </p>
               
-              <ul className="space-y-2">
+              <ul className="space-y-2 mb-6">
                 {service.features.map((feature) => (
                   <li key={`${service.title}-${feature}`} className="flex items-center gap-3 text-sm text-secondary-600">
                     <div className="w-2 h-2 bg-primary-400 rounded-full" />
@@ -83,6 +95,32 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+
+              {/* Timeline and Pricing Indicators */}
+              <div className="space-y-3 pt-4 border-t border-gray-100">
+                <div className="flex items-center gap-2 text-sm text-secondary-600">
+                  <Clock className="h-4 w-4 text-primary-500" />
+                  <span className="font-medium">How Long Will This Take?</span>
+                  <span className="text-primary-600 font-semibold">{service.timeline}</span>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-secondary-600">
+                  <DollarSign className="h-4 w-4 text-primary-500" />
+                  <span className="font-medium">What Does This Cost?</span>
+                  <span className="text-primary-600 font-semibold">{service.pricing}</span>
+                </div>
+              </div>
+
+              {/* Special subheading for Legal Documentation */}
+              {service.title === 'Legal Documentation' && (
+                <div className="mt-4 p-3 bg-blue-50 rounded-lg">
+                  <h4 className="text-sm font-semibold text-blue-800 mb-2">
+                    What Documents Do I Need?
+                  </h4>
+                  <p className="text-xs text-blue-700">
+                    Death certificate, will, property deeds, and court letters. We'll guide you through the complete list.
+                  </p>
+                </div>
+              )}
             </div>
           ))}
         </div>

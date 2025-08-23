@@ -6,7 +6,7 @@ const footerNavigation = {
     { name: 'Probate Real Estate', href: '/#services' },
     { name: 'Trust Administration', href: '/resources/nevada-probate-guide#costs' },
     { name: 'Certificate of Incumbency', href: '/resources/nevada-probate-guide#process' },
-    { name: 'Property Valuation', href: '/locations/las-vegas' },
+    { name: 'How Much Is My Inherited Property Worth?', href: '/locations/las-vegas' },
   ],
   locations: [
     { name: 'Las Vegas', href: '/locations/las-vegas' },

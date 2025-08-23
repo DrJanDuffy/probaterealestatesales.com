@@ -169,7 +169,7 @@ export default function PropertyValuationCalculator() {
               <Calculator className="h-8 w-8" />
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Property Valuation Calculator
+              How Much Is My Inherited Property Worth?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get an instant estimate of your inherited property's value. 
@@ -393,9 +393,7 @@ export default function PropertyValuationCalculator() {
                   <div className="text-gray-400 mb-4">
                     <Calculator className="h-16 w-16 mx-auto" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    Get Your Property Valuation
-                  </h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Get Your Property Valuation</h3>
                   <p className="text-gray-600">
                     Fill out the form and click calculate to get an instant estimate 
                     of your inherited property's market value.

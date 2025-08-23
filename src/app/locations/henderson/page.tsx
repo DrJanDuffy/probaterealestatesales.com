@@ -301,7 +301,7 @@ export default function HendersonPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6 bg-white rounded-lg shadow-lg">
               <Home className="h-12 w-12 text-green-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Property Valuation</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How Much Is My Inherited Property Worth?</h3>
               <p className="text-gray-600">
                 Professional appraisal and market analysis for Henderson properties. 
                 Specialized knowledge of Green Valley, Anthem, and other neighborhoods.

@@ -240,7 +240,7 @@ export default function MesquitePage() {
                   <Home className="h-6 w-6 text-emerald-600" />
                   <div>
                     <p className="font-semibold text-gray-900">Luxury Home Market</p>
-                    <p className="text-gray-600">Expertise in high-end property valuation</p>
+                    <p className="text-gray-600">Expertise in high-end inherited property valuation</p>
                   </div>
                 </div>
                 

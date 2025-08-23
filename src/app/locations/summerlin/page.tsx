@@ -226,7 +226,7 @@ export default function SummerlinPage() {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-purple-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">High-End Property Valuation</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">How Much Is My Inherited Property Worth?</h3>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Home className="h-6 w-6 text-purple-600" />

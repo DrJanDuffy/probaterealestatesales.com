@@ -220,7 +220,7 @@ export default function BoulderCityPage() {
               Historic & Recreational Value
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Understanding Boulder City's unique characteristics for better probate property valuation
+              Understanding Boulder City's unique characteristics for better inherited property valuation
             </p>
           </div>
           

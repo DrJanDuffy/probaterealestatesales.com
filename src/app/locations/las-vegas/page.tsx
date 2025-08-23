@@ -207,7 +207,7 @@ export default function LasVegasPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center p-6 bg-blue-50 rounded-lg">
               <MapPin className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Property Valuation</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">How Much Is My Inherited Property Worth?</h3>
               <p className="text-gray-600">
                 Professional appraisal and market analysis for downtown and Strip area properties. 
                 Quick turnaround for probate court requirements.

@@ -69,7 +69,7 @@ export default function LasVegasProbateGuide() {
             },
             {
               "@type": "HowToStep",
-              "name": "Property Valuation & Marketing",
+              "name": "How Much Is My Inherited Property Worth? & Marketing",
               "text": "Professional real estate agent markets inherited property for maximum value"
             },
             {
