@@ -1,4 +1,5 @@
 import { Star, Quote, Home, Clock, DollarSign, Heart, Award } from 'lucide-react';
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -80,6 +81,48 @@ export default function Testimonials() {
             Real stories from real families who have experienced Dr. Duffy's compassionate, 
             expert guidance through the probate process.
           </p>
+        </div>
+
+        {/* Dr. Jan Duffy Photo & Trust Building */}
+        <div className="mb-16">
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-soft border border-secondary-100">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
+                  Trusted by Hundreds of Families
+                </h3>
+                <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
+                  Dr. Jan Duffy's compassionate approach and proven expertise have helped countless families 
+                  navigate the complex probate process with confidence. Her dedication to maximizing property 
+                  value while minimizing stress has earned her the trust of Las Vegas probate courts and families alike.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                  <a href="http://drjanduffy.realscout.com/onboarding" className="btn-primary inline-flex items-center justify-center">
+                    Get Your Free Consultation
+                  </a>
+                  <a href="tel:+1-702-830-9222" className="btn-outline inline-flex items-center justify-center">
+                    Call (702) 830-9222
+                  </a>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <div className="relative">
+                  <div className="w-56 h-56 overflow-hidden rounded-2xl border-4 border-primary-200 shadow-xl">
+                    <Image
+                      src="/images/dr-jan-duffy.jpg"
+                      alt="Dr. Jan Duffy - Trusted Probate Real Estate Expert"
+                      width={224}
+                      height={224}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 bg-white rounded-full p-2 shadow-lg border-2 border-accent-200">
+                    <Heart className="h-6 w-6 text-accent-600" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Testimonials Grid */}

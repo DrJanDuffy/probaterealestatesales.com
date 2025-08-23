@@ -158,12 +158,19 @@ export default function Hero() {
             
             {/* Image/Visual Section */}
             <div className="relative">
-              {/* Professional Photo Placeholder */}
+              {/* Professional Photo */}
               <div className="relative z-10 mb-8">
                 <div className="bg-white rounded-2xl shadow-2xl p-8 transform rotate-2 hover:rotate-0 transition-transform duration-500">
                   <div className="text-center">
-                    <div className="w-48 h-48 mx-auto bg-gradient-to-br from-primary-200 to-accent-200 rounded-full mb-4 flex items-center justify-center">
-                      <span className="text-4xl font-bold text-primary-600">Dr. Jan</span>
+                    <div className="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full border-4 border-primary-200 shadow-lg">
+                      <Image
+                        src="/images/dr-jan-duffy.jpg"
+                        alt="Dr. Jan Duffy - Certified Probate Real Estate Specialist"
+                        width={192}
+                        height={192}
+                        className="w-full h-full object-cover"
+                        priority
+                      />
                     </div>
                     <h3 className="text-xl font-bold text-secondary-900 mb-2">Dr. Jan Duffy</h3>
                     <p className="text-secondary-600">Certified Probate Real Estate Specialist</p>

@@ -1,4 +1,5 @@
 import { Award, Clock, Heart, Shield, Users, TrendingUp, GraduationCap, Gavel, Star, Building, CheckCircle, Trophy } from 'lucide-react';
+import Image from 'next/image';
 
 const reasons = [
   {
@@ -127,6 +128,48 @@ export default function WhyChooseUs() {
             Dr. Jan Duffy combines academic excellence, professional certification, and proven results 
             to deliver exceptional probate real estate services with compassion and expertise.
           </p>
+        </div>
+
+        {/* Dr. Jan Duffy Photo & Introduction */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl p-8 md:p-12 border border-primary-200">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
+                  Meet Dr. Jan Duffy
+                </h3>
+                <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
+                  With over 20 years of experience in Las Vegas real estate and specialized expertise in probate sales, 
+                  Dr. Duffy combines academic excellence with compassionate service to help families navigate complex 
+                  probate situations with confidence and care.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                  <a href="http://drjanduffy.realscout.com/onboarding" className="btn-primary inline-flex items-center justify-center">
+                    Schedule Free Consultation
+                  </a>
+                  <a href="tel:+1-702-830-9222" className="btn-outline inline-flex items-center justify-center">
+                    Call (702) 830-9222
+                  </a>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <div className="relative">
+                  <div className="w-64 h-64 overflow-hidden rounded-2xl border-4 border-primary-200 shadow-2xl">
+                    <Image
+                      src="/images/dr-jan-duffy.jpg"
+                      alt="Dr. Jan Duffy - Professional Portrait"
+                      width={256}
+                      height={256}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-3 shadow-lg border-2 border-primary-200">
+                    <Award className="h-8 w-8 text-primary-600" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Unique Qualifications */}

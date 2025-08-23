@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ContactSection() {
   return (
@@ -13,6 +14,48 @@ export default function ContactSection() {
             Ready to discuss your probate real estate needs? Contact us for a free, 
             no-obligation consultation.
           </p>
+        </div>
+
+        {/* Dr. Jan Duffy Photo & Personal Touch */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl p-8 md:p-12 border border-primary-200">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="text-center md:text-left">
+                <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
+                  Personal Attention to Every Client
+                </h3>
+                <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
+                  Dr. Jan Duffy personally handles every probate case, ensuring you receive the expert 
+                  guidance and compassionate support you deserve during this challenging time. 
+                  Her direct involvement means faster results and better outcomes for your family.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                  <a href="tel:+1-702-830-9222" className="btn-primary inline-flex items-center justify-center">
+                    Call Dr. Duffy Directly
+                  </a>
+                  <a href="http://drjanduffy.realscout.com/onboarding" className="btn-outline inline-flex items-center justify-center">
+                    Schedule Free Consultation
+                  </a>
+                </div>
+              </div>
+              <div className="flex justify-center">
+                <div className="relative">
+                  <div className="w-60 h-60 overflow-hidden rounded-2xl border-4 border-primary-200 shadow-2xl">
+                    <Image
+                      src="/images/dr-jan-duffy.jpg"
+                      alt="Dr. Jan Duffy - Personal Probate Real Estate Expert"
+                      width={240}
+                      height={240}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-3 -right-3 bg-white rounded-full p-2 shadow-lg border-2 border-primary-200">
+                    <Phone className="h-6 w-6 text-primary-600" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
