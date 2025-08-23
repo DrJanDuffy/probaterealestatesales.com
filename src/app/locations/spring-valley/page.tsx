@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Spring Valley Probate Real Estate Services | Residential & Established Community',
-  description: 'Expert probate real estate services in Spring Valley, Nevada. Residential probate management with established community focus and Nevada\'s fastest timeline: 6-8 months. Free consultation: (702) 555-0123',
+  description: 'Expert probate real estate services in Spring Valley, Nevada. Fast 45-day probate process vs 6-8 months. Free consultation: (702) 830-9222',
   keywords: 'Spring Valley probate real estate, residential probate, established community probate, Nevada probate timeline, Clark County probate court',
   openGraph: {
     title: 'Spring Valley Probate Real Estate Services | Residential & Established Community',
@@ -372,10 +372,10 @@ export default function SpringValleyPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+1-702-555-0123"
+              href="tel:+1-702-830-9222"
               className="bg-white text-teal-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
-              Call (702) 555-0123
+              Call (702) 830-9222
             </a>
             <Link
               href="/contact"

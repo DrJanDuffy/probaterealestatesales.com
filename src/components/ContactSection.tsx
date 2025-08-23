@@ -178,7 +178,7 @@ export default function ContactSection() {
                 For urgent probate matters outside business hours, call our emergency line:
               </p>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600 mb-2">(702) 999-8888</div>
+                <div className="text-2xl font-bold text-primary-600 mb-2">(702) 830-9222</div>
                 <p className="text-sm text-secondary-500">Available 24/7 for urgent matters</p>
               </div>
             </div>

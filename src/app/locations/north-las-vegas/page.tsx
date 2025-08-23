@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'North Las Vegas Probate Real Estate Services | Aliante & Centennial Hills',
-  description: 'Expert probate real estate services in North Las Vegas, Nevada. Aliante and Centennial Hills probate property expertise with Nevada\'s fastest timeline: 6-8 months. Free consultation: (702) 555-0123',
+  description: 'Expert probate real estate services in North Las Vegas, Nevada. Fast 45-day probate process vs 6-8 months. Free consultation: (702) 830-9222',
   keywords: 'North Las Vegas probate real estate, Aliante probate, Centennial Hills probate, Nevada probate timeline, Clark County probate court',
   openGraph: {
     title: 'North Las Vegas Probate Real Estate Services | Aliante & Centennial Hills',
@@ -372,10 +372,10 @@ export default function NorthLasVegasPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+1-702-555-0123"
+              href="tel:+1-702-830-9222"
               className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
-              Call (702) 555-0123
+              Call (702) 830-9222
             </a>
             <Link
               href="/contact"

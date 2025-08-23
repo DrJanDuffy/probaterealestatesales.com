@@ -307,7 +307,7 @@ export const defaultSchemas = {
     name: "Las Vegas Probate Real Estate Sales",
     description: "Expert probate real estate services in Las Vegas and Clark County. Specialized in inherited property sales with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
     url: "https://probaterealestatesales.com",
-    telephone: "+1-702-555-0123",
+    telephone: "+1-702-830-9222",
     email: "DrJanSells@ProbateRealEstateSales.com",
     address: {
       "@type": "PostalAddress",
@@ -372,7 +372,7 @@ export const defaultSchemas = {
     name: "Dr. Janet Duffy",
     description: "Licensed Nevada real estate agent specializing in probate sales and inherited property transactions. Expert in Clark County probate court procedures and Nevada probate law.",
     url: "https://probaterealestatesales.com",
-    telephone: "+1-702-555-0123",
+    telephone: "+1-702-830-9222",
     email: "DrJanSells@ProbateRealEstateSales.com",
     address: {
       "@type": "PostalAddress",
@@ -546,7 +546,7 @@ export const defaultSchemas = {
     logo: "https://probaterealestatesales.com/logo.png",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+1-702-555-0123",
+      telephone: "+1-702-830-9222",
       contactType: "customer service",
       areaServed: "US-NV",
       availableLanguage: "English"

@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Boulder City Probate Real Estate Services | Historic Area & Lake Mead',
-  description: 'Expert probate real estate services in Boulder City, Nevada. Historic area probate management with Lake Mead proximity and Nevada\'s fastest timeline: 6-8 months. Free consultation: (702) 555-0123',
+  description: 'Expert probate real estate services in Boulder City, Nevada. Fast 45-day probate process vs 6-8 months. Free consultation: (702) 830-9222',
   keywords: 'Boulder City probate real estate, historic area probate, Lake Mead probate, Nevada probate timeline, Clark County probate court',
   openGraph: {
     title: 'Boulder City Probate Real Estate Services | Historic Area & Lake Mead',
@@ -372,10 +372,10 @@ export default function BoulderCityPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+1-702-555-0123"
+              href="tel:+1-702-830-9222"
               className="bg-white text-amber-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
-              Call (702) 555-0123
+              Call (702) 830-9222
             </a>
             <Link
               href="/contact"

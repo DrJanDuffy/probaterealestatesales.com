@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Summerlin Probate Real Estate Services | Master-Planned Community',
-  description: 'Expert probate real estate services in Summerlin, Nevada. Master-planned community probate real estate with luxury homes and golf course properties. Nevada\'s fastest timeline: 6-8 months. Free consultation: (702) 555-0123',
+  description: 'Expert probate real estate services in Summerlin, Nevada. High-end luxury property probate management with Nevada\'s fastest timeline: 6-8 months. Free consultation: (702) 830-9222',
   keywords: 'Summerlin probate real estate, master-planned community probate, golf course properties, luxury homes, Nevada probate timeline, Clark County probate court',
   openGraph: {
     title: 'Summerlin Probate Real Estate Services | Master-Planned Community',
@@ -372,10 +372,10 @@ export default function SummerlinPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+1-702-555-0123"
+              href="tel:+1-702-830-9222"
               className="bg-white text-purple-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
-              Call (702) 555-0123
+              Call (702) 830-9222
             </a>
             <Link
               href="/contact"
