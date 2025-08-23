@@ -1,0 +1,48 @@
+# Test artifacts
+tests/
+test-results/
+test-results.json
+test-results.xml
+playwright-report/
+screenshots/
+lighthouse-reports/
+performance-log.json
+audit-report.html
+improvement-report.json
+
+# Development files
+*.md
+!README.md
+scripts/
+PLAYWRIGHT_README.md
+TEST_OPTIMIZATION.md
+SEO_IMPLEMENTATION_SUMMARY.md
+CONFIGURATION.md
+
+# Build artifacts
+.next/
+out/
+build/
+dist/
+
+# Environment and config
+.env*
+cloudflare-config.json
+secrets.json
+config.json
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+.parcel-cache/
