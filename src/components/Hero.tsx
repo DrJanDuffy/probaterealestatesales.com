@@ -54,7 +54,7 @@ export default function Hero() {
                     <Shield className="h-5 w-5 text-accent-600" />
                   </div>
                   <div>
-                    <p className="font-semibold text-secondary-900">Court-Approved Expert in 9 Exceptions to Probate</p>
+                                         <p className="font-semibold text-secondary-900">Expert in 9 Exceptions to Probate</p>
                     <p className="text-sm text-secondary-600">Inventory, Appraisal, Orders, Title, Sales, Authority, Documents, Taxes, Transfers, Marketing</p>
                   </div>
                 </div>

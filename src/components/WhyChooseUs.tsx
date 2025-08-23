@@ -73,7 +73,7 @@ const credentials = [
   },
   {
     icon: Building,
-    title: 'Court-Approved Expert in 9 Exceptions to Probate',
+    title: 'Expert in 9 Exceptions to Probate',
     subtitle: 'Approved Expert Witness',
     description: 'Specialized knowledge in inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques',
     color: 'text-purple-600',
