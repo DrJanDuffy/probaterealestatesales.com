@@ -1,3 +1,4 @@
+// Import components for SEO and schema markup
 import SEOMetaTags from '@/components/SEOMetaTags';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { 
