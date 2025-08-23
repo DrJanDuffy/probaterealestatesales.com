@@ -25,7 +25,7 @@ import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
   title: 'Las Vegas Probate Real Estate Services | Sell Inherited Property in 45 Days',
-  description: 'Expert probate real estate services in Las Vegas. We sell inherited properties in 45 days while you focus on family. Court confirmation sales, independent administration, and trust services. Free consultation: (702) 555-0123',
+  description: 'Expert probate real estate services in Las Vegas. We sell inherited properties in 45 days while you focus on family. Court confirmation sales, independent administration, and trust services. Free consultation: (702) 830-9222',
   keywords: 'Las Vegas probate real estate, sell inherited property, Clark County probate court, Nevada probate services, probate property sales, court confirmation sales',
   openGraph: {
     title: 'Las Vegas Probate Real Estate Services | 45-Day Sale Guarantee',
@@ -168,7 +168,7 @@ export default function ServicesPage() {
           <div className="cta-matrix space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
             <a href="http://drjanduffy.realscout.com/onboarding" className="primary-cta bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2">
               <Phone className="w-5 h-5" />
-              <span>Need Immediate Help? Call (702) 555-0123</span>
+                              <span>Need Immediate Help? Call (702) 830-9222</span>
               <span className="availability text-sm block opacity-90">Available 24/7 for urgent matters</span>
             </a>
             <a href="http://drjanduffy.realscout.com/onboarding" className="secondary-cta bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2">

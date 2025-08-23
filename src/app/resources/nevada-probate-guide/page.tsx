@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Complete Nevada Probate Guide 2025 | Timeline, Costs & Process',
-  description: 'Comprehensive guide to Nevada probate real estate. Learn about Nevada\'s 6-8 month timeline, $1,000 court costs, and advantages over California. Free consultation: (702) 555-0123',
+  description: 'Comprehensive guide to Nevada probate real estate. Learn about Nevada\'s 6-8 month timeline, $1,000 court costs, and advantages over California. Free consultation: (702) 830-9222',
   keywords: 'Nevada probate guide, Nevada probate timeline, Nevada probate costs, Clark County probate, Nevada vs California probate',
   openGraph: {
     title: 'Complete Nevada Probate Guide 2025 | Timeline, Costs & Process',
@@ -389,10 +389,10 @@ export default function NevadaProbateGuidePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+1-702-555-0123"
+              href="tel:+1-702-830-9222"
               className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
-              Call (702) 555-0123
+              Call (702) 830-9222
             </a>
             <Link
               href="/contact"

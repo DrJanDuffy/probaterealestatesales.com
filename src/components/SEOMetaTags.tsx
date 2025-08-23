@@ -132,7 +132,7 @@ export default function SEOMetaTags({
       <meta name="business:contact_data:region" content="NV" />
       <meta name="business:contact_data:postal_code" content="89101" />
       <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="+1-702-555-0123" />
+              <meta name="business:contact_data:phone_number" content="+1-702-830-9222" />
       <meta name="business:contact_data:email" content="DrJan@probaterealestatesales.com" />
       <meta name="business:contact_data:website" content="https://probaterealestatesales.com" />
 
@@ -181,7 +181,7 @@ export default function SEOMetaTags({
             "name": "Probate Real Estate Sales",
             "description": "Specialized probate real estate services helping families navigate inherited property sales with compassion and expertise.",
             "url": "https://probaterealestatesales.com",
-            "telephone": "+1-702-555-0123",
+            "telephone": "+1-702-830-9222",
             "email": "DrJan@probaterealestatesales.com",
             "address": {
               "@type": "PostalAddress",

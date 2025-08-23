@@ -263,9 +263,9 @@ export default function FAQ() {
               about Clark County probate court procedures and Nevada probate law.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+1-702-555-0123" className="text-blue-600 hover:text-blue-800 font-semibold">
-                Call Now: (702) 555-0123
-              </a>
+                              <a href="tel:+1-702-830-9222" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  Call Now: (702) 830-9222
+                </a>
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"

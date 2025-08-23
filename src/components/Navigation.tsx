@@ -125,10 +125,10 @@ export default function Navigation() {
 
             {/* CTA Button */}
             <Link
-              href="tel:+1-702-555-0123"
+              href="tel:+1-702-830-9222"
               className="bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition-colors"
             >
-              Call (702) 555-0123
+              Call (702) 830-9222
             </Link>
           </div>
 
@@ -202,11 +202,11 @@ export default function Navigation() {
             {/* Mobile CTA */}
             <div className="border-t border-gray-200 pt-4">
               <Link
-                href="tel:+1-702-555-0123"
+                href="tel:+1-702-830-9222"
                 className="block w-full text-center bg-blue-600 text-white px-4 py-3 rounded-md text-base font-medium hover:bg-blue-700 transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                Call (702) 555-0123
+                Call (702) 830-9222
               </Link>
             </div>
           </div>

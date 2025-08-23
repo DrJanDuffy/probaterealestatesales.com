@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Henderson Probate Real Estate Services | Green Valley & Anthem Area',
-  description: 'Expert probate real estate services in Henderson, Nevada. Green Valley and Anthem probate property expertise with Nevada\'s fastest timeline: 6-8 months. Free consultation: (702) 555-0123',
+  description: 'Expert probate real estate services in Henderson, Nevada. Green Valley and Anthem probate property expertise with Nevada\'s fastest timeline: 6-8 months. Free consultation: (702) 830-9222',
   keywords: 'Henderson probate real estate, Green Valley probate, Anthem probate, Nevada probate timeline, Clark County probate court',
   openGraph: {
     title: 'Henderson Probate Real Estate Services | Green Valley & Anthem Area',
@@ -341,10 +341,10 @@ export default function HendersonPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+1-702-555-0123"
+              href="tel:+1-702-830-9222"
               className="bg-white text-green-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
-              Call (702) 555-0123
+              Call (702) 830-9222
             </a>
             <Link
               href="/contact"

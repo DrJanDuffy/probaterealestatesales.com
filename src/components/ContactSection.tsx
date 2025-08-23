@@ -127,7 +127,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">Phone</h4>
-                    <p className="text-secondary-600">(702) 555-0123</p>
+                    <p className="text-secondary-600">(702) 830-9222</p>
                     <p className="text-sm text-secondary-500">Available 24/7 for urgent matters</p>
                   </div>
                 </div>

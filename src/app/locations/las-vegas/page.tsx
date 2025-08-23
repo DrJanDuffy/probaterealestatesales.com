@@ -5,7 +5,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Las Vegas Probate Real Estate Services | Downtown & Strip Area',
-  description: 'Expert probate real estate services in Las Vegas, Nevada. Downtown and Strip area probate property sales with Nevada\'s fastest timeline: 6-8 months. Free consultation: (702) 555-0123',
+  description: 'Expert probate real estate services in Las Vegas, Nevada. Downtown and Strip area probate property sales with Nevada\'s fastest timeline: 6-8 months. Free consultation: (702) 830-9222',
   keywords: 'Las Vegas probate real estate, downtown probate, strip area probate, Nevada probate timeline, Clark County probate court',
   openGraph: {
     title: 'Las Vegas Probate Real Estate Services | Downtown & Strip Area',
@@ -247,10 +247,10 @@ export default function LasVegasPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+1-702-555-0123"
+              href="tel:+1-702-830-9222"
               className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
-              Call (702) 555-0123
+              Call (702) 830-9222
             </a>
             <Link
               href="/contact"

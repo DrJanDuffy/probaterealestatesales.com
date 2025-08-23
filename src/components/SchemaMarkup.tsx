@@ -186,7 +186,7 @@ export default function SchemaMarkup({
               name: "Las Vegas Probate Real Estate Sales",
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+1-702-555-0123",
+                telephone: "+1-702-830-9222",
                 contactType: "customer service",
                 areaServed: "US-NV",
                 availableLanguage: "English"

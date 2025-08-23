@@ -41,7 +41,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="text-sm text-secondary-500">Call Us Today</p>
-                    <p className="font-semibold text-secondary-900">(702) 555-0123</p>
+                    <p className="font-semibold text-secondary-900">(702) 830-9222</p>
                   </div>
                 </div>
                 
