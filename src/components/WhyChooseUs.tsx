@@ -57,9 +57,9 @@ const credentials = [
   },
   {
     icon: Award,
-            title: 'Probate Real Estate Specialist',
-    subtitle: 'CPRES Designation',
-    description: 'Professional certification in probate real estate management',
+            title: '9 Exceptions to Probate Expert',
+    subtitle: 'Specialized Knowledge',
+    description: 'Expert in inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques',
     color: 'text-primary-600',
     bgColor: 'bg-primary-100'
   },

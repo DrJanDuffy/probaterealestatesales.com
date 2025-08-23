@@ -178,10 +178,10 @@ export default function Hero() {
                   
                   {/* Credentials */}
                   <div className="mt-6 pt-6 border-t border-secondary-200 space-y-3">
-                    <div className="flex items-center gap-3">
-                      <Award className="h-5 w-5 text-primary-600" />
-                      <span className="text-sm text-secondary-700">CPRES Certified</span>
-                    </div>
+                                         <div className="flex items-center gap-3">
+                       <Award className="h-5 w-5 text-primary-600" />
+                       <span className="text-sm text-secondary-700">9 Exceptions to Probate Expert</span>
+                     </div>
                     <div className="flex items-center gap-3">
                       <Shield className="h-5 w-5 text-accent-600" />
                       <span className="text-sm text-secondary-700">Court Approved</span>

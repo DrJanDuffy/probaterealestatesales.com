@@ -25,15 +25,15 @@ const schemaData = {
     "https://www.youtube.com/@drjanduffy"
   ],
   "hasCredential": [
-    {
-      "@type": "EducationalOccupationalCredential",
-      "credentialCategory": "certification",
-              "name": "Probate Real Estate Specialist (CPRES)",
-      "recognizedBy": {
-        "@type": "Organization",
-        "name": "National Association of Probate Professionals"
-      }
-    },
+         {
+       "@type": "EducationalOccupationalCredential",
+       "credentialCategory": "certification",
+               "name": "9 Exceptions to Probate Expert",
+       "recognizedBy": {
+         "@type": "Organization",
+         "name": "National Association of Probate Professionals"
+       }
+     },
     {
       "@type": "EducationalOccupationalCredential",
       "credentialCategory": "degree",
@@ -405,10 +405,10 @@ export default function SchemaMarkupExpert() {
             <div className="bg-white rounded-xl shadow-soft p-6 border border-gray-100">
               <h4 className="text-lg font-semibold text-secondary-900 mb-4">Professional Credentials</h4>
               <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <Award className="h-5 w-5 text-primary-600" />
-                  <span className="text-sm text-secondary-700">Probate Real Estate Specialist (CPRES)</span>
-                </div>
+                                 <div className="flex items-center gap-3">
+                   <Award className="h-5 w-5 text-primary-600" />
+                   <span className="text-sm text-secondary-700">9 Exceptions to Probate Expert</span>
+                 </div>
                                  <div className="flex items-center gap-3">
                    <GraduationCap className="h-5 w-5 text-blue-600" />
                    <span className="text-sm text-secondary-700">Doctor of Philosophy in Research</span>
