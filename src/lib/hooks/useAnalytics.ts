@@ -16,11 +16,16 @@ export const useAnalytics = () => {
 
   // Track contact form submissions
   const trackContactSubmission = (source: string, propertyInterest?: string) => {
-    track('contact_submission', {
+    const properties = {
       source: source,
-      property_interest: propertyInterest,
       category: 'lead_generation'
-    });
+    };
+    
+    if (propertyInterest) {
+      (properties as any).property_interest = propertyInterest;
+    }
+    
+    track('contact_submission', properties);
   };
 
   // Track phone calls
@@ -88,7 +93,7 @@ export const useAnalytics = () => {
   };
 
   // Track market research
-  const trackMarketResearch = (researchType, location) => {
+  const trackMarketResearch = (researchType: string, location: string) => {
     track('market_research', {
       research_type: researchType,
       location: location,
