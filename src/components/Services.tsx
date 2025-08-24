@@ -158,14 +158,38 @@ export default function Services() {
           ))}
         </div>
 
-        {/* RealScout Office Listings */}
+        {/* RealScout Office Listings - Lower Price Range */}
         <div className="mt-16 mb-16">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
-              Current Las Vegas Properties Available
+              Affordable Las Vegas Properties
             </h3>
             <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-              Browse our current inventory of properties in the Las Vegas area. 
+              Discover quality properties in the $500K-$750K range. Perfect for investors 
+              and families looking for value in the Las Vegas market.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+            <realscout-office-listings 
+              agent-encoded-id="QWdlbnQtMjI1MDUw" 
+              sort-order="PRICE_LOW" 
+              listing-status="For Sale,For Rent" 
+              property-types="MF,SFR,OTHER,LAL" 
+              price-min="500000" 
+              price-max="750000">
+            </realscout-office-listings>
+          </div>
+        </div>
+
+        {/* RealScout Office Listings - Higher Price Range */}
+        <div className="mt-16 mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
+              Premium Las Vegas Properties
+            </h3>
+            <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
+              Browse our current inventory of premium properties in the Las Vegas area. 
               These properties are available for immediate purchase with our expert guidance.
             </p>
           </div>
