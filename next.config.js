@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
+  output: 'export',
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
@@ -12,6 +13,10 @@ const nextConfig = {
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
+  // Cloudflare Pages optimization
+  compress: true,
+  poweredByHeader: false,
+  generateEtags: false,
 };
 
 module.exports = nextConfig;
