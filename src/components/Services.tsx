@@ -162,10 +162,10 @@ export default function Services() {
         <div className="mt-16 mb-16">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
-              Current Probate Properties Available
+              Current Las Vegas Properties Available
             </h3>
             <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-              Browse our current inventory of probate properties in the Las Vegas area. 
+              Browse our current inventory of properties in the Las Vegas area. 
               These properties are available for immediate purchase with our expert guidance.
             </p>
           </div>
