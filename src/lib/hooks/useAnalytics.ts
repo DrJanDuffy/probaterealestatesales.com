@@ -38,11 +38,16 @@ export const useAnalytics = () => {
 
   // Track consultation bookings
   const trackConsultationBooking = (source: string, preferredDate?: string) => {
-    track('consultation_booking', {
+    const properties = {
       source: source,
-      preferred_date: preferredDate,
       category: 'lead_generation'
-    });
+    };
+    
+    if (preferredDate) {
+      (properties as any).preferred_date = preferredDate;
+    }
+    
+    track('consultation_booking', properties);
   };
 
   // Track FAQ interactions
@@ -65,21 +70,31 @@ export const useAnalytics = () => {
 
   // Track page views with custom properties
   const trackPageView = (pageName: string, properties?: Record<string, any>) => {
-    track('page_view', {
+    const baseProperties = {
       page_name: pageName,
-      category: 'navigation',
-      ...properties
-    });
+      category: 'navigation'
+    };
+    
+    if (properties) {
+      Object.assign(baseProperties, properties);
+    }
+    
+    track('page_view', baseProperties);
   };
 
   // Track conversion events
   const trackConversion = (conversionType: string, value?: number, currency: string = 'USD') => {
-    track('conversion', {
+    const properties = {
       conversion_type: conversionType,
-      value: value,
       currency: currency,
       category: 'business_metrics'
-    });
+    };
+    
+    if (value !== undefined) {
+      (properties as any).value = value;
+    }
+    
+    track('conversion', properties);
   };
 
   // Track user engagement
