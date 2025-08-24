@@ -99,12 +99,17 @@ export const useAnalytics = () => {
 
   // Track user engagement
   const trackEngagement = (action: string, element: string, context?: string) => {
-    track('user_engagement', {
+    const properties = {
       action: action,
       element: element,
-      context: context,
       category: 'user_behavior'
-    });
+    };
+    
+    if (context) {
+      (properties as any).context = context;
+    }
+    
+    track('user_engagement', properties);
   };
 
   // Track market research
