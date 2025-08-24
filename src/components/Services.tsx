@@ -158,6 +158,30 @@ export default function Services() {
           ))}
         </div>
 
+        {/* RealScout Office Listings */}
+        <div className="mt-16 mb-16">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
+              Current Probate Properties Available
+            </h3>
+            <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
+              Browse our current inventory of probate properties in the Las Vegas area. 
+              These properties are available for immediate purchase with our expert guidance.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+            <realscout-office-listings 
+              agent-encoded-id="QWdlbnQtMjI1MDUw" 
+              sort-order="PRICE_HIGH" 
+              listing-status="For Sale" 
+              property-types="MF,SFR,OTHER,LAL" 
+              price-min="500000" 
+              price-max="850000">
+            </realscout-office-listings>
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div className="mt-16 text-center">
           <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl p-8 md:p-12 border border-primary-100">
