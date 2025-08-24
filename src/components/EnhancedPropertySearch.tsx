@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { usePropertySearch } from '@/lib/hooks/useProbateData';
+import { usePropertySearch, type ProbateProperty } from '@/lib/hooks/useProbateData';
 import { Search, MapPin, Home, DollarSign } from 'lucide-react';
 
 export default function EnhancedPropertySearch() {
@@ -47,7 +47,7 @@ export default function EnhancedPropertySearch() {
           <h4 className="font-medium text-secondary-900">
             Found {searchResults.length} properties
           </h4>
-          {searchResults.map((property) => (
+          {searchResults.map((property: ProbateProperty) => (
             <div
               key={property.id}
               className="border border-secondary-200 rounded-lg p-4 hover:shadow-md transition-shadow"
