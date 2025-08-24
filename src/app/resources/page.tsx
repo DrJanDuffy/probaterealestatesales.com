@@ -193,6 +193,32 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      {/* RealScout Property Listings */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
+              Current Las Vegas Properties Available
+            </h2>
+            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+              Browse our current inventory of properties in the Las Vegas area. 
+              These properties are available for immediate purchase with our expert guidance.
+            </p>
+          </div>
+          
+          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+            <realscout-office-listings 
+              agent-encoded-id="QWdlbnQtMjI1MDUw" 
+              sort-order="PRICE_LOW" 
+              listing-status="For Sale,For Rent" 
+              property-types="MF,SFR,OTHER,LAL" 
+              price-min="500000" 
+              price-max="750000">
+            </realscout-office-listings>
+          </div>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
         <div className="container-max text-center">

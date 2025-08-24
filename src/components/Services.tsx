@@ -1,5 +1,6 @@
-import { Home, Calculator, Users, FileText, Shield, TrendingUp, Clock, DollarSign, Award, Gavel, Heart, Target, Building, MapPin } from 'lucide-react';
+import { Home, Calculator, Users, FileText, Shield, TrendingUp, Clock, DollarSign, Award, Gavel, Heart, Target, Building, MapPin, Star, CheckCircle } from 'lucide-react';
 
+// Reorganized services by priority and user journey
 const services = [
   {
     icon: Home,
@@ -9,7 +10,8 @@ const services = [
     timeline: '3-5 days',
     pricing: 'Free consultation',
     question: 'How Much Is My Inherited Property Worth?',
-    specialNote: 'Includes neighborhood analysis and market trends'
+    specialNote: 'Includes neighborhood analysis and market trends',
+    priority: 1
   },
   {
     icon: Gavel,
@@ -19,27 +21,8 @@ const services = [
     timeline: 'Ongoing support',
     pricing: 'Included in service',
     question: 'How Long Will This Take?',
-    specialNote: 'We handle all court communications and deadlines'
-  },
-  {
-    icon: Building,
-    title: 'Property Preparation & Sale',
-    description: 'Complete property preparation including estate clean-out, repairs, staging, and strategic marketing.',
-    features: ['Estate Clean-out Coordination', 'Property Repairs Management', 'Professional Staging', 'Strategic Marketing'],
-    timeline: '45 days',
-    pricing: 'Standard commission',
-    question: 'How Long Will This Take?',
-    specialNote: 'Average 15% above initial estate valuations'
-  },
-  {
-    icon: Heart,
-    title: 'Family Support Services',
-    description: 'Sensitive guidance for families during difficult times with mediation between multiple heirs.',
-    features: ['Family Mediation', 'Emotional Support', 'Clear Communication', 'Heir Coordination'],
-    timeline: 'Ongoing support',
-    pricing: 'Included in service',
-    question: 'How Long Will This Take?',
-    specialNote: 'We handle sensitive family dynamics with care'
+    specialNote: 'We handle all court communications and deadlines',
+    priority: 2
   },
   {
     icon: FileText,
@@ -49,7 +32,8 @@ const services = [
     timeline: '1-2 weeks',
     pricing: 'Court fees only',
     question: 'What Documents Do I Need?',
-    specialNote: 'Death certificate, will, property deeds, court letters'
+    specialNote: 'Death certificate, will, property deeds, court letters',
+    priority: 3
   },
   {
     icon: Shield,
@@ -59,7 +43,19 @@ const services = [
     timeline: '1-2 weeks',
     pricing: 'Included in service',
     question: 'How Long Will This Take?',
-    specialNote: 'We ensure full compliance with all probate laws'
+    specialNote: 'We ensure full compliance with all probate laws',
+    priority: 4
+  },
+  {
+    icon: Building,
+    title: 'Property Preparation & Sale',
+    description: 'Complete property preparation including estate clean-out, repairs, staging, and strategic marketing.',
+    features: ['Estate Clean-out Coordination', 'Property Repairs Management', 'Professional Staging', 'Strategic Marketing'],
+    timeline: '45 days',
+    pricing: 'Standard commission',
+    question: 'How Long Will This Take?',
+    specialNote: 'Average 15% above initial estate valuations',
+    priority: 5
   },
   {
     icon: Target,
@@ -69,7 +65,8 @@ const services = [
     timeline: '30-45 days',
     pricing: 'Standard commission',
     question: 'How Long Will This Take?',
-    specialNote: '98% client satisfaction rate'
+    specialNote: '98% client satisfaction rate',
+    priority: 6
   },
   {
     icon: MapPin,
@@ -79,16 +76,31 @@ const services = [
     timeline: '2-3 days',
     pricing: 'Free analysis',
     question: 'How Much Is My Inherited Property Worth?',
-    specialNote: 'Includes Summerlin, Henderson, and all Clark County areas'
+    specialNote: 'Includes Summerlin, Henderson, and all Clark County areas',
+    priority: 7
+  },
+  {
+    icon: Heart,
+    title: 'Family Support Services',
+    description: 'Sensitive guidance for families during difficult times with mediation between multiple heirs.',
+    features: ['Family Mediation', 'Emotional Support', 'Clear Communication', 'Heir Coordination'],
+    timeline: 'Ongoing support',
+    pricing: 'Included in service',
+    question: 'How Long Will This Take?',
+    specialNote: 'We handle sensitive family dynamics with care',
+    priority: 8
   }
 ];
 
 export default function Services() {
+  // Sort services by priority
+  const sortedServices = [...services].sort((a, b) => a.priority - b.priority);
+
   return (
     <section className="section-padding bg-white">
       <div className="container-max">
-        {/* Header */}
-        <div className="text-center mb-16">
+        {/* Hero Header */}
+        <div className="text-center mb-20">
           <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Award className="h-4 w-4" />
             Dr. Jan Duffy's Probate Real Estate Services
@@ -102,112 +114,177 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <div 
-              key={service.title}
-              className="card p-8 hover:scale-105 transition-transform duration-300 group border-l-4 border-l-primary-500"
-            >
-              <div className="mb-6">
-                <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center group-hover:bg-primary-200 transition-colors duration-300">
-                  <service.icon className="h-8 w-8 text-primary-600" />
-                </div>
-              </div>
-              
-              <h3 className="text-xl font-semibold text-secondary-900 mb-4">
-                {service.title}
-              </h3>
-              
-              <p className="text-secondary-600 mb-6 leading-relaxed">
-                {service.description}
-              </p>
-              
-              <ul className="space-y-2 mb-6">
-                {service.features.map((feature) => (
-                  <li key={`${service.title}-${feature}`} className="flex items-center gap-3 text-sm text-secondary-600">
-                    <div className="w-2 h-2 bg-primary-400 rounded-full" />
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Question-based subheadings */}
-              <div className="space-y-3 pt-4 border-t border-gray-100">
-                <div className="flex items-center gap-2 text-sm text-secondary-600">
-                  <Clock className="h-4 w-4 text-primary-500" />
-                  <span className="font-medium">{service.question}</span>
-                  <span className="text-primary-600 font-semibold">{service.timeline}</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-secondary-600">
-                  <DollarSign className="h-4 w-4 text-primary-500" />
-                  <span className="font-medium">What Does This Cost?</span>
-                  <span className="text-primary-600 font-semibold">{service.pricing}</span>
-                </div>
-              </div>
-
-              {/* Special notes */}
-              {service.specialNote && (
-                <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
-                  <p className="text-xs text-blue-700 font-medium">
-                    {service.specialNote}
-                  </p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        {/* RealScout Office Listings - Lower Price Range */}
-        <div className="mt-16 mb-8">
-          <div className="text-center mb-8">
+        {/* Core Services Grid - Reorganized by Priority */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
-              Affordable Las Vegas Properties
+              Our Step-by-Step Process
             </h3>
-            <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-              Discover quality properties in the $500K-$750K range. Perfect for investors 
-              and families looking for value in the Las Vegas market.
+            <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
+              We guide you through every stage of the probate process with proven expertise and personalized care.
             </p>
           </div>
           
-          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-            <realscout-office-listings 
-              agent-encoded-id="QWdlbnQtMjI1MDUw" 
-              sort-order="PRICE_LOW" 
-              listing-status="For Sale,For Rent" 
-              property-types="MF,SFR,OTHER,LAL" 
-              price-min="500000" 
-              price-max="750000">
-            </realscout-office-listings>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {sortedServices.map((service, index) => (
+              <div 
+                key={service.title}
+                className="card p-8 hover:scale-105 transition-transform duration-300 group border-l-4 border-l-primary-500 relative"
+              >
+                {/* Priority Badge */}
+                <div className="absolute -top-3 -left-3 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
+                  {index + 1}
+                </div>
+                
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center group-hover:bg-primary-200 transition-colors duration-300">
+                    <service.icon className="h-8 w-8 text-primary-600" />
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-secondary-900 mb-4">
+                  {service.title}
+                </h3>
+                
+                <p className="text-secondary-600 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <ul className="space-y-2 mb-6">
+                  {service.features.map((feature) => (
+                    <li key={`${service.title}-${feature}`} className="flex items-center gap-3 text-sm text-secondary-600">
+                      <CheckCircle className="h-4 w-4 text-primary-500 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Question-based subheadings */}
+                <div className="space-y-3 pt-4 border-t border-gray-100">
+                  <div className="flex items-center gap-2 text-sm text-secondary-600">
+                    <Clock className="h-4 w-4 text-primary-500" />
+                    <span className="font-medium">{service.question}</span>
+                    <span className="text-primary-600 font-semibold">{service.timeline}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-secondary-600">
+                    <DollarSign className="h-4 w-4 text-primary-500" />
+                    <span className="font-medium">What Does This Cost?</span>
+                    <span className="text-primary-600 font-semibold">{service.pricing}</span>
+                  </div>
+                </div>
+
+                {/* Special notes */}
+                {service.specialNote && (
+                  <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                    <p className="text-xs text-blue-700 font-medium">
+                      {service.specialNote}
+                    </p>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* RealScout Office Listings - Higher Price Range */}
-        <div className="mb-16">
+        {/* Trust & Credibility Section */}
+        <div className="mb-20 bg-gradient-to-r from-gray-50 to-primary-50 rounded-2xl p-8 md:p-12">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
-              Premium Las Vegas Properties
+              Why Choose Dr. Jan Duffy?
+            </h3>
+            <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
+              With over 500 properties successfully sold and court-approved expertise, Dr. Duffy is your trusted partner in probate real estate.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Award className="h-8 w-8 text-primary-600" />
+              </div>
+              <h4 className="text-lg font-semibold text-secondary-900 mb-2">Court-Approved Expert</h4>
+              <p className="text-secondary-600 text-sm">Recognized by Nevada courts for probate expertise</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="h-8 w-8 text-accent-600" />
+              </div>
+              <h4 className="text-lg font-semibold text-secondary-900 mb-2">500+ Properties Sold</h4>
+              <p className="text-secondary-600 text-sm">Proven track record of successful transactions</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="h-8 w-8 text-green-600" />
+              </div>
+              <h4 className="text-lg font-semibold text-secondary-900 mb-2">5-Star Reviews</h4>
+              <p className="text-secondary-600 text-sm">Exceptional client satisfaction and results</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Property Listings Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
+              Current Las Vegas Properties
             </h3>
             <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-              Browse our current inventory of premium properties in the Las Vegas area. 
+              Browse our current inventory of properties available in the Las Vegas area. 
               These properties are available for immediate purchase with our expert guidance.
             </p>
           </div>
-          
-          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-            <realscout-office-listings 
-              agent-encoded-id="QWdlbnQtMjI1MDUw" 
-              sort-order="PRICE_HIGH" 
-              listing-status="For Sale" 
-              property-types="MF,SFR,OTHER,LAL" 
-              price-min="500000" 
-              price-max="850000">
-            </realscout-office-listings>
+
+          {/* Affordable Properties */}
+          <div className="mb-12">
+            <div className="text-center mb-8">
+              <h4 className="text-xl md:text-2xl font-bold text-secondary-900 mb-3">
+                Affordable Las Vegas Properties
+              </h4>
+              <p className="text-secondary-600 max-w-2xl mx-auto">
+                Discover quality properties in the $500K-$750K range. Perfect for investors 
+                and families looking for value in the Las Vegas market.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+              <realscout-office-listings 
+                agent-encoded-id="QWdlbnQtMjI1MDUw" 
+                sort-order="PRICE_LOW" 
+                listing-status="For Sale,For Rent" 
+                property-types="MF,SFR,OTHER,LAL" 
+                price-min="500000" 
+                price-max="750000">
+              </realscout-office-listings>
+            </div>
+          </div>
+
+          {/* Premium Properties */}
+          <div className="mb-8">
+            <div className="text-center mb-8">
+              <h4 className="text-xl md:text-2xl font-bold text-secondary-900 mb-3">
+                Premium Las Vegas Properties
+              </h4>
+              <p className="text-secondary-600 max-w-2xl mx-auto">
+                Browse our current inventory of premium properties in the Las Vegas area. 
+                These properties are available for immediate purchase with our expert guidance.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+              <realscout-office-listings 
+                agent-encoded-id="QWdlbnQtMjI1MDUw" 
+                sort-order="PRICE_HIGH" 
+                listing-status="For Sale" 
+                property-types="MF,SFR,OTHER,LAL" 
+                price-min="500000" 
+                price-max="850000">
+              </realscout-office-listings>
+            </div>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="mt-16 text-center">
+        {/* Final CTA Section */}
+        <div className="text-center">
           <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl p-8 md:p-12 border border-primary-100">
             <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
               Ready to Get Started with Dr. Jan Duffy?
