@@ -159,7 +159,7 @@ export default function Services() {
         </div>
 
         {/* RealScout Office Listings - Lower Price Range */}
-        <div className="mt-16 mb-16">
+        <div className="mt-16 mb-8">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
               Affordable Las Vegas Properties
@@ -183,7 +183,7 @@ export default function Services() {
         </div>
 
         {/* RealScout Office Listings - Higher Price Range */}
-        <div className="mt-16 mb-16">
+        <div className="mb-16">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
               Premium Las Vegas Properties
