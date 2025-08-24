@@ -1,6 +1,6 @@
 'use client';
 
-import { useAnalytics, trackProbateServiceInterest } from '@/lib/hooks/useAnalytics';
+import { useAnalytics, trackProbateServiceInterest, trackCostCalculatorUsage } from '@/lib/hooks/useAnalytics';
 import { Phone, Calendar, Search, Calculator } from 'lucide-react';
 
 export default function AnalyticsExample() {
@@ -24,7 +24,7 @@ export default function AnalyticsExample() {
   };
 
   const handleCostCalculator = (propertyValue: number) => {
-    analytics.trackCostCalculatorUsage(propertyValue, 'Las Vegas');
+    trackCostCalculatorUsage(propertyValue, 'Las Vegas');
     // Your existing calculator logic
   };
 
