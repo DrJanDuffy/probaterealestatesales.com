@@ -272,6 +272,17 @@ export default function FAQ() {
                 Free Consultation
               </a>
             </div>
+            <div className="mt-6 pt-6 border-t border-primary-200">
+              <p className="text-sm text-secondary-600 mb-3">
+                Looking for more detailed answers?
+              </p>
+              <a
+                href="/faq"
+                className="inline-flex items-center justify-center px-6 py-3 border border-primary-300 text-base font-medium rounded-md text-primary-700 bg-white hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+              >
+                View Complete FAQ Page →
+              </a>
+            </div>
           </div>
         </div>
       </div>

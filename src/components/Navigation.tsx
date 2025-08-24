@@ -10,6 +10,7 @@ const navigation = {
     { name: 'Services', href: '/services', icon: FileText },
     { name: 'Locations', href: '/locations', icon: MapPin },
     { name: 'Resources', href: '/resources', icon: BookOpen },
+    { name: 'FAQ', href: '/faq', icon: BookOpen },
     { name: 'About Dr. Duffy', href: '/#about', icon: Users },
   ],
   locations: [
@@ -26,6 +27,7 @@ const navigation = {
   resources: [
     { name: 'Nevada Probate Guide', href: '/resources/nevada-probate-guide', description: 'Complete guide to Nevada probate process' },
     { name: 'Las Vegas Guide', href: '/resources/las-vegas-probate-guide', description: 'Las Vegas & Clark County probate guide' },
+    { name: 'FAQ & Q&A', href: '/faq', description: 'Comprehensive probate real estate questions & answers' },
     { name: 'Probate Timeline', href: '/resources/nevada-probate-guide#timeline', description: '6-8 month Nevada probate timeline' },
     { name: 'Probate Costs', href: '/resources/nevada-probate-guide#costs', description: 'Nevada probate costs breakdown' },
     { name: 'Court Process', href: '/resources/nevada-probate-guide#process', description: 'Clark County court procedures' },
@@ -206,6 +208,13 @@ export default function Navigation() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Home
+            </Link>
+            <Link
+              href="/faq"
+              className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              FAQ
             </Link>
 
             {/* Services Section */}

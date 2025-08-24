@@ -34,6 +34,28 @@ export default function RootLayout({
           type="module"
           async
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LegalService",
+              "name": "Probate Real Estate Sales",
+              "description": "Nevada probate real estate specialists",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "400 S 4th Street Suite 250 B",
+                "addressLocality": "Las Vegas",
+                "addressRegion": "NV",
+                "postalCode": "89101"
+              },
+              "telephone": "(702) 830-9222",
+              "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-14:00",
+              "priceRange": "$$",
+              "areaServed": ["Las Vegas", "Henderson", "Summerlin", "North Las Vegas"]
+            })
+          }}
+        />
       </head>
       <body className={`${inter.className} antialiased text-secondary-900 bg-white`}>
         <Navigation />
