@@ -25,15 +25,15 @@ export default function Hero() {
                  </div>
                 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-gradient">Dr. Jan Duffy</span>
+                  <span className="text-gradient">Las Vegas Probate Realtor</span>
                   <br />
-                  <span className="text-secondary-900">Las Vegas's Trusted</span>
+                  <span className="text-secondary-900">Expert in Probate Homes</span>
                   <br />
-                  <span className="text-gradient">Probate Real Estate Expert</span>
+                  <span className="text-gradient">Sell in 45 Days</span>
                 </h1>
                 
                 <p className="text-xl text-secondary-600 max-w-2xl">
-                  Compassionate, Professional Guidance Through Every Step of Your Probate Property Sale
+                  Top-rated probate realtor specializing in probate homes and inherited property sales. Compassionate, professional guidance through every step of your probate property sale.
                 </p>
               </div>
               

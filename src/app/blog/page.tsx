@@ -3,15 +3,15 @@ import Link from 'next/link';
 import { Calendar, User, ArrowRight, Video, TrendingUp, BookOpen } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Probate Real Estate Blog & Resources | Market Updates & Videos',
-  description: 'Stay informed about probate real estate in Las Vegas. Read our blog posts, watch probate videos, and get the latest market updates from Dr. Jan Duffy.',
-  keywords: 'probate real estate blog, probate videos, Las Vegas real estate market updates, probate news, estate sales information',
+  title: 'Probate Properties Blog | Las Vegas Probate Real Estate News & Market Updates',
+  description: 'Stay informed about probate properties in Las Vegas. Read expert blog posts on probate homes, watch probate videos, and get the latest market updates from Dr. Jan Duffy. Free resources for probate property buyers and sellers.',
+  keywords: 'probate properties, probate homes, probate real estate blog, probate videos, Las Vegas probate properties, probate news, estate sales information, probate property listings',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/blog/',
   },
   openGraph: {
-    title: 'Probate Real Estate Blog & Resources',
-    description: 'Stay informed about probate real estate with blog posts, videos, and market updates.',
+    title: 'Probate Properties Blog | Las Vegas Probate Real Estate News & Market Updates',
+    description: 'Stay informed about probate properties in Las Vegas. Read expert blog posts on probate homes, watch probate videos, and get the latest market updates.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/blog/',
   },

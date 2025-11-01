@@ -3,15 +3,15 @@ import Link from 'next/link';
 import { Calculator, DollarSign, TrendingUp, Home, Phone, Info } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Mortgage Calculator | Probate Property Financing | Las Vegas',
-  description: 'Calculate your monthly mortgage payments for probate properties in Las Vegas. Free mortgage calculator to help you plan your purchase.',
-  keywords: 'mortgage calculator, probate property financing, Las Vegas mortgage, home loan calculator, monthly payment calculator',
+  title: 'Mortgage Calculator | Probate Property Financing | Free Calculator Las Vegas',
+  description: 'Free mortgage calculator for probate properties in Las Vegas. Calculate monthly payments for inherited property purchases. Plan your probate property financing with our free tool. Expert guidance available: (702) 830-9222',
+  keywords: 'mortgage calculator, probate property financing, Las Vegas mortgage, home loan calculator, monthly payment calculator, probate property mortgage, free mortgage calculator',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/mortgage-calculator/',
   },
   openGraph: {
-    title: 'Mortgage Calculator | Probate Property Financing',
-    description: 'Calculate your monthly mortgage payments for probate properties.',
+    title: 'Mortgage Calculator | Probate Property Financing | Free Calculator Las Vegas',
+    description: 'Free mortgage calculator for probate properties in Las Vegas. Calculate monthly payments for inherited property purchases.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/mortgage-calculator/',
   },

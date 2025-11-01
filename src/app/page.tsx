@@ -27,11 +27,11 @@ export default function Home() {
         <div className="container-max">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              Current Las Vegas Properties Available
+              Las Vegas Probate Homes for Sale
             </h2>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-              Browse our current inventory of properties in the Las Vegas area. 
-              These properties are available for immediate purchase with our expert guidance.
+              Browse our current inventory of probate homes in Las Vegas. 
+              These probate properties are available for immediate purchase with court-approved sales and expert guidance.
             </p>
           </div>
           

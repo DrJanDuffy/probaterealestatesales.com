@@ -3,15 +3,15 @@ import Link from 'next/link';
 import { FileText, ArrowLeft, CheckCircle, AlertCircle, Info } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Certificate of Incumbency Guide for Nevada Trusts | Complete Explanation',
-  description: 'Complete guide to Nevada certificate of incumbency for trusts. Learn when and how to obtain this essential document for probate and trust property transactions.',
-  keywords: 'certificate of incumbency, Nevada trusts, trust documentation, probate trusts, trustee certificate',
+  title: 'Certificate of Incumbency in Las Vegas | Complete Guide | Nevada Trusts 2025',
+  description: 'Complete guide to certificate of incumbency in Las Vegas, Nevada. Learn when and how to obtain this essential $750 document for trust property sales. Clark County requirements explained.',
+  keywords: 'certificate of incumbency in Las Vegas, certificate of incumbency Las Vegas, Nevada certificate of incumbency, Clark County certificate of incumbency, trust documentation, probate trusts, trustee certificate',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/blog/certificate-of-incumbency/',
   },
   openGraph: {
-    title: 'Certificate of Incumbency Guide for Nevada Trusts',
-    description: 'Complete guide to obtaining and using certificate of incumbency for Nevada trust property transactions.',
+    title: 'Certificate of Incumbency in Las Vegas | Complete Guide | Nevada Trusts 2025',
+    description: 'Complete guide to certificate of incumbency in Las Vegas, Nevada. Learn when and how to obtain this essential $750 document for trust property sales.',
     type: 'article',
     url: 'https://www.probaterealestatesales.com/blog/certificate-of-incumbency/',
   },

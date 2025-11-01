@@ -3,15 +3,15 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, Navigation } from 'lucide-re
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Probate Real Estate Sales | Las Vegas, NV',
-  description: 'Contact Dr. Jan Duffy for probate real estate services in Las Vegas, Nevada. Free consultation available. Call (702) 830-9222 or email DrJanSells@ProbateRealEstateSales.com',
-  keywords: 'contact probate real estate, Las Vegas probate realtor, probate real estate consultation, Nevada probate help',
+  title: 'Contact Las Vegas Probate Realtor | Free Consultation | (702) 830-9222',
+  description: 'Contact top Las Vegas probate realtor Dr. Jan Duffy. Free probate consultation available. Call (702) 830-9222 or email DrJanSells@ProbateRealEstateSales.com. Expert probate real estate services in Las Vegas, Nevada.',
+  keywords: 'contact probate realtor, contact Las Vegas probate realtor, probate real estate consultation, Nevada probate help, Las Vegas probate realtor contact',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/contact/',
   },
   openGraph: {
-    title: 'Contact Us | Probate Real Estate Sales',
-    description: 'Contact Dr. Jan Duffy for expert probate real estate services. Free consultation available.',
+    title: 'Contact Las Vegas Probate Realtor | Free Consultation | (702) 830-9222',
+    description: 'Contact top Las Vegas probate realtor Dr. Jan Duffy. Free probate consultation available. Call (702) 830-9222.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/contact/',
   },

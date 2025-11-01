@@ -4,15 +4,15 @@ import { Phone, Mail, Award, BookOpen, Users, Star, TrendingUp, Shield, Clock, M
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
-  title: 'About Dr. Jan Duffy | Probate Real Estate Expert | Las Vegas, NV',
-  description: 'Meet Dr. Jan Duffy, licensed Nevada real estate professional specializing in probate real estate sales. 20+ years experience, Ph.D. in Research, expert in Clark County probate procedures.',
-  keywords: 'Dr. Jan Duffy, probate real estate expert, Las Vegas real estate agent, Nevada probate specialist, probate real estate broker, licensed real estate professional',
+  title: 'About Dr. Jan Duffy | Top Las Vegas Probate Realtor | 20+ Years Experience',
+  description: 'Meet Dr. Jan Duffy, top Las Vegas probate realtor with 20+ years experience. Licensed Nevada real estate professional (S.0197614) specializing in probate real estate sales. Ph.D. in Research, expert in Clark County probate procedures. Free consultation: (702) 830-9222',
+  keywords: 'Dr. Jan Duffy, probate realtor, Las Vegas probate realtor, probate real estate expert, Las Vegas real estate agent, Nevada probate specialist, probate real estate broker, licensed real estate professional',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/about/',
   },
   openGraph: {
-    title: 'About Dr. Jan Duffy | Probate Real Estate Expert',
-    description: 'Meet Dr. Jan Duffy, licensed Nevada real estate professional specializing in probate real estate sales with 20+ years of experience.',
+    title: 'About Dr. Jan Duffy | Top Las Vegas Probate Realtor | 20+ Years Experience',
+    description: 'Meet Dr. Jan Duffy, top Las Vegas probate realtor with 20+ years experience. Licensed Nevada real estate professional specializing in probate real estate sales.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/about/',
   },

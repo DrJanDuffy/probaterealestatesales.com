@@ -8,13 +8,13 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Probate Real Estate Sales | Professional Property Solutions',
-  description: 'Expert probate real estate services. We help families navigate property sales during difficult times with compassion and professionalism.',
-  keywords: 'probate real estate, property sales, estate sales, real estate services, property management, grokipedia',
+  title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
+  description: 'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days. Free consultation: (702) 830-9222. Court-approved expert with 20+ years experience.',
+  keywords: 'probate realtor, probate homes, Las Vegas probate realtor, probate real estate agent, probate homes Las Vegas, sell probate property, inherited property sales, grokipedia',
   authors: [{ name: 'Probate Real Estate Sales' }],
   openGraph: {
-    title: 'Probate Real Estate Sales | Professional Property Solutions',
-    description: 'Expert probate real estate services. We help families navigate property sales during difficult times with compassion and professionalism.',
+    title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
+    description: 'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days. Free consultation: (702) 830-9222.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Probate Real Estate Sales',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Probate Real Estate Sales | Professional Property Solutions',
-    description: 'Expert probate real estate services. We help families navigate property sales during difficult times with compassion and professionalism.',
+    title: 'Las Vegas Probate Realtor | Probate Homes Expert',
+    description: 'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days. Free consultation.',
   },
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/',

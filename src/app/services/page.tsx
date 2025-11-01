@@ -24,15 +24,15 @@ import {
 import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
-  title: 'Las Vegas Probate Real Estate Services | Sell Inherited Property in 45 Days',
-  description: 'Expert probate real estate services in Las Vegas. We sell inherited properties in 45 days while you focus on family. Court confirmation sales, independent administration, and trust services. Free consultation: (702) 830-9222',
-  keywords: 'Las Vegas probate real estate, sell inherited property, Clark County probate court, Nevada probate services, probate property sales, court confirmation sales',
+  title: 'Las Vegas Probate Real Estate Agent | Expert Probate Services | 45-Day Guarantee',
+  description: 'Top-rated probate real estate agent in Las Vegas. Expert probate services: court-approved sales, inherited property valuation, 45-day sale guarantee. Companies that buy probate houses in Nevada trust our expertise. Free consultation: (702) 830-9222',
+  keywords: 'probate real estate agent, Las Vegas probate real estate agent, companies that buy probate houses in nevada, probate realtor, probate services Las Vegas, probate property sales, court-approved sales, inherited property, buy probate houses nevada',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/services/',
   },
   openGraph: {
-    title: 'Las Vegas Probate Real Estate Services | 45-Day Sale Guarantee',
-    description: 'Expert probate real estate services in Las Vegas. We sell inherited properties in 45 days while you focus on family.',
+    title: 'Las Vegas Probate Real Estate Agent | Expert Probate Services | 45-Day Guarantee',
+    description: 'Top-rated probate real estate agent in Las Vegas. Expert probate services: court-approved sales, inherited property valuation, 45-day sale guarantee.',
     type: 'website',
     locale: 'en_US',
     url: 'https://www.probaterealestatesales.com/services/',
@@ -562,6 +562,96 @@ export default function ServicesPage() {
             <a href="http://drjanduffy.realscout.com/onboarding" className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 inline-block">
               Download Probate Guide
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Companies That Buy Probate Houses Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-gray-900">
+              Companies That Buy Probate Houses in Nevada vs. Probate Realtor
+            </h2>
+            <p className="text-lg text-gray-700 text-center mb-12 max-w-3xl mx-auto">
+              While some companies buy probate houses directly, working with a probate real estate agent 
+              ensures you receive fair market value through court-approved sales processes.
+            </p>
+            
+            <div className="bg-white rounded-xl p-8 shadow-lg mb-8 border-l-4 border-green-600">
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="bg-green-50 rounded-lg p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Why Choose a Probate Realtor vs. Cash Buyers</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Fair market value through proper appraisal (vs. 30-50% below market from cash buyers)</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Court-approved sales process protects all beneficiaries</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Transparent pricing with full market analysis</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Professional guidance through legal requirements</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Average 15% above initial estate valuations</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-4">Our Probate Realtor Process</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Professional property valuation and market analysis</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Court-approved sales ensuring legal compliance</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Access to qualified buyers and investors</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>45-day sale guarantee or reduced commission</span>
+                    </li>
+                    <li className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-blue-600 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Complete court representation and documentation</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="mt-8 p-6 bg-yellow-50 border border-yellow-200 rounded-lg">
+                <p className="text-gray-800 leading-relaxed">
+                  <strong>Important:</strong> Companies that buy probate houses in Nevada typically offer 
+                  quick cash sales but pay 30-50% below market value. Working with a probate real estate 
+                  agent like Dr. Jan Duffy ensures you receive fair market value through a court-approved 
+                  process that protects all beneficiaries' interests. Contact us at (702) 830-9222 for a 
+                  free consultation and property valuation.
+                </p>
+              </div>
+              
+              <div className="mt-6 text-center">
+                <a 
+                  href="tel:+1-702-830-9222"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-md font-medium text-lg hover:bg-blue-700 transition-colors"
+                >
+                  <Phone className="h-5 w-5 mr-2" />
+                  Call (702) 830-9222 for Free Consultation
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

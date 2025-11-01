@@ -11,15 +11,15 @@ import CallToActionComponents from '@/components/CallToActionComponents';
 import ContentMarketingCalendar from '@/components/ContentMarketingCalendar';
 
 export const metadata: Metadata = {
-  title: 'Probate Real Estate Resources | Dr. Jan Duffy - Las Vegas Expert',
-  description: 'Comprehensive probate real estate resources including Nevada probate laws, timeline, checklist, cost calculator, and educational content by Dr. Jan Duffy.',
-  keywords: 'probate real estate resources, Nevada probate laws, probate timeline, probate checklist, probate cost calculator, Dr. Jan Duffy, Las Vegas probate expert',
+  title: 'Probate Real Estate Solutions | Complete Resources & Tools | Las Vegas Expert',
+  description: 'Comprehensive probate real estate solutions and resources. Nevada probate laws, timeline, checklist, cost calculator, and educational content. Complete probate real estate solutions by Dr. Jan Duffy. Free consultation: (702) 830-9222',
+  keywords: 'probate real estate solutions, probate real estate resources, Nevada probate laws, probate timeline, probate checklist, probate cost calculator, Dr. Jan Duffy, Las Vegas probate expert, probate solutions',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/resources/',
   },
   openGraph: {
-    title: 'Probate Real Estate Resources | Dr. Jan Duffy',
-    description: 'Comprehensive probate real estate resources including Nevada probate laws, timeline, checklist, cost calculator, and educational content.',
+    title: 'Probate Real Estate Solutions | Complete Resources & Tools | Las Vegas Expert',
+    description: 'Comprehensive probate real estate solutions and resources. Nevada probate laws, timeline, checklist, cost calculator, and educational content.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/resources/',
   },

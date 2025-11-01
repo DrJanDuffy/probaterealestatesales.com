@@ -4,12 +4,12 @@ import { MapPin, Clock, DollarSign, Users, Phone, Mail, Calendar } from 'lucide-
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
-  title: 'Las Vegas Probate Real Estate Services | Downtown & Strip Area',
-  description: 'Expert probate real estate services in Las Vegas, Nevada. Downtown and Strip area probate property sales with Nevada\'s fastest timeline: 6-8 months. Free consultation: (702) 830-9222',
-  keywords: 'Las Vegas probate real estate, downtown probate, strip area probate, Nevada probate timeline, Clark County probate court',
+  title: 'Probate Las Vegas | Expert Probate Realtor | Downtown & Strip Area Services',
+  description: 'Probate Las Vegas expert services. Top probate realtor serving Downtown and Strip areas. Nevada\'s fastest probate timeline: 6-8 months. Court-approved sales, inherited property expert. Free consultation: (702) 830-9222',
+  keywords: 'probate las vegas, Las Vegas probate, probate realtor Las Vegas, Las Vegas probate real estate, downtown probate, strip area probate, Nevada probate timeline, Clark County probate court, probate las vegas nevada',
   openGraph: {
-    title: 'Las Vegas Probate Real Estate Services | Downtown & Strip Area',
-    description: 'Expert probate real estate services in Las Vegas with 6-8 month timeline. Free consultation available.',
+    title: 'Probate Las Vegas | Expert Probate Realtor | Downtown & Strip Area Services',
+    description: 'Probate Las Vegas expert services. Top probate realtor serving Downtown and Strip areas. Nevada\'s fastest probate timeline: 6-8 months. Free consultation available.',
     type: 'website',
     locale: 'en_US',
   },

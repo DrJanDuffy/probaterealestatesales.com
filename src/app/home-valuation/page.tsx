@@ -3,15 +3,15 @@ import Link from 'next/link';
 import { Calculator, TrendingUp, DollarSign, Home, Phone, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Free Home Valuation | Probate Property Value Assessment | Las Vegas',
-  description: 'Get a free home valuation for your probate property in Las Vegas. Expert property value assessment to help you understand your inherited property worth.',
-  keywords: 'home valuation, property value assessment, probate property valuation, Las Vegas home appraisal, free home estimate',
+  title: 'Free Home Valuation & CMA | Probate Property Value Assessment | Las Vegas',
+  description: 'Get a free home valuation and comparative market analysis (CMA) for your probate property in Las Vegas. Expert property value assessment by probate realtor. Understand your inherited property worth today. Free consultation: (702) 830-9222',
+  keywords: 'comparative market analysis, CMA, home valuation, property value assessment, probate property valuation, Las Vegas home appraisal, free home estimate, probate property CMA',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/home-valuation/',
   },
   openGraph: {
-    title: 'Free Home Valuation | Probate Property Assessment',
-    description: 'Get a free home valuation for your probate property in Las Vegas.',
+    title: 'Free Home Valuation & CMA | Probate Property Value Assessment | Las Vegas',
+    description: 'Get a free home valuation and comparative market analysis (CMA) for your probate property in Las Vegas. Expert property value assessment by probate realtor.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/home-valuation/',
   },
@@ -38,10 +38,10 @@ export default function HomeValuationPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl shadow-lg p-8 md:p-12">
             <h2 className="text-3xl font-bold text-secondary-900 mb-6 text-center">
-              Request Your Free Property Valuation
+              Request Your Free Property Valuation & Comparative Market Analysis (CMA)
             </h2>
             <p className="text-secondary-600 text-center mb-8">
-              Fill out the form below and our probate real estate experts will provide you with a comprehensive property valuation.
+              Fill out the form below and our probate real estate experts will provide you with a comprehensive property valuation and comparative market analysis (CMA) to help you understand your probate property's fair market value.
             </p>
 
             <form className="space-y-6">
