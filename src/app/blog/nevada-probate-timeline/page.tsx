@@ -1,0 +1,268 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Clock, ArrowLeft, Calendar, CheckCircle, FileText } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Nevada Probate Timeline Guide | Complete 6-8 Month Process',
+  description: 'Complete guide to Nevada probate timeline. Understand each step of the 6-8 month probate process for real estate sales in Clark County.',
+  keywords: 'Nevada probate timeline, probate process timeline, Clark County probate timeline, probate real estate timeline',
+  alternates: {
+    canonical: 'https://www.probaterealestatesales.com/blog/nevada-probate-timeline/',
+  },
+  openGraph: {
+    title: 'Nevada Probate Timeline Guide | Complete 6-8 Month Process',
+    description: 'Complete guide to Nevada probate timeline with detailed breakdown of each phase.',
+    type: 'article',
+    url: 'https://www.probaterealestatesales.com/blog/nevada-probate-timeline/',
+  },
+};
+
+export default function NevadaProbateTimelinePage() {
+  return (
+    <main className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Link href="/blog" className="inline-flex items-center text-primary-100 hover:text-white mb-6">
+            <ArrowLeft className="h-5 w-5 mr-2" />
+            Back to Blog
+          </Link>
+          <div className="text-center">
+            <Clock className="h-16 w-16 mx-auto mb-6" />
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Nevada Probate Timeline Guide
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              Understanding the 6-8 month probate process for real estate sales in Nevada.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
+              Complete Probate Timeline Breakdown
+            </h2>
+            
+            <div className="space-y-8">
+              {/* Month 0-1 */}
+              <div className="border-l-4 border-primary-600 pl-6 py-4">
+                <div className="flex items-center mb-2">
+                  <Calendar className="h-5 w-5 text-primary-600 mr-2" />
+                  <span className="text-sm font-semibold text-primary-600 uppercase">Months 0-1</span>
+                </div>
+                <h3 className="text-2xl font-bold text-secondary-900 mb-3">
+                  Initial Filing & Petition
+                </h3>
+                <ul className="space-y-2 text-secondary-700">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>File petition with Clark County Probate Court</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Submit death certificate and will (if applicable)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Appoint executor or administrator</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Obtain Letters Testamentary or Letters of Administration</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Month 1-2 */}
+              <div className="border-l-4 border-blue-600 pl-6 py-4">
+                <div className="flex items-center mb-2">
+                  <Calendar className="h-5 w-5 text-blue-600 mr-2" />
+                  <span className="text-sm font-semibold text-blue-600 uppercase">Months 1-2</span>
+                </div>
+                <h3 className="text-2xl font-bold text-secondary-900 mb-3">
+                  Estate Inventory & Valuation
+                </h3>
+                <ul className="space-y-2 text-secondary-700">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Complete inventory of all estate assets</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Obtain property appraisals and valuations</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>File inventory with probate court</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Notify creditors and heirs</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Month 2-4 */}
+              <div className="border-l-4 border-green-600 pl-6 py-4">
+                <div className="flex items-center mb-2">
+                  <Calendar className="h-5 w-5 text-green-600 mr-2" />
+                  <span className="text-sm font-semibold text-green-600 uppercase">Months 2-4</span>
+                </div>
+                <h3 className="text-2xl font-bold text-secondary-900 mb-3">
+                  Creditor Claims Period
+                </h3>
+                <ul className="space-y-2 text-secondary-700">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>120-day creditor claim period begins</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Review and address creditor claims</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Prepare property for sale (if applicable)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Obtain court approval to sell real estate</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Month 4-6 */}
+              <div className="border-l-4 border-purple-600 pl-6 py-4">
+                <div className="flex items-center mb-2">
+                  <Calendar className="h-5 w-5 text-purple-600 mr-2" />
+                  <span className="text-sm font-semibold text-purple-600 uppercase">Months 4-6</span>
+                </div>
+                <h3 className="text-2xl font-bold text-secondary-900 mb-3">
+                  Property Sale & Closing
+                </h3>
+                <ul className="space-y-2 text-secondary-700">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>List property with probate real estate specialist</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Accept offer and obtain court confirmation</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Complete property sale and closing</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Distribute proceeds according to will or intestate laws</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Month 6-8 */}
+              <div className="border-l-4 border-orange-600 pl-6 py-4">
+                <div className="flex items-center mb-2">
+                  <Calendar className="h-5 w-5 text-orange-600 mr-2" />
+                  <span className="text-sm font-semibold text-orange-600 uppercase">Months 6-8</span>
+                </div>
+                <h3 className="text-2xl font-bold text-secondary-900 mb-3">
+                  Final Settlement & Distribution
+                </h3>
+                <ul className="space-y-2 text-secondary-700">
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Pay all debts and expenses</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Prepare final accounting for court</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Obtain court approval for final distribution</span>
+                  </li>
+                  <li className="flex items-start">
+                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
+                    <span>Close estate and discharge executor</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Points Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
+              Key Timeline Factors
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-lg p-6 shadow-md">
+                <FileText className="h-8 w-8 text-primary-600 mb-4" />
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                  Required Documents
+                </h3>
+                <p className="text-secondary-600">
+                  Having all documents ready at the start can significantly speed up the process. Missing documents can add weeks or months.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-md">
+                <CheckCircle className="h-8 w-8 text-green-600 mb-4" />
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                  Court Schedule
+                </h3>
+                <p className="text-secondary-600">
+                  Clark County has 2 probate commissioners, which helps keep the process moving efficiently compared to other jurisdictions.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-md">
+                <Clock className="h-8 w-8 text-blue-600 mb-4" />
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                  Creditor Period
+                </h3>
+                <p className="text-secondary-600">
+                  The 120-day creditor claim period is mandatory and cannot be shortened, but planning ahead can help minimize delays.
+                </p>
+              </div>
+              <div className="bg-white rounded-lg p-6 shadow-md">
+                <Calendar className="h-8 w-8 text-purple-600 mb-4" />
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                  Property Sales
+                </h3>
+                <p className="text-secondary-600">
+                  Working with a probate real estate specialist who understands the court approval process can expedite property sales.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-primary-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Need Help Navigating the Timeline?
+          </h2>
+          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            Dr. Jan Duffy specializes in probate real estate sales and can help guide you through each step of the Nevada probate timeline.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
+          >
+            Schedule Free Consultation
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}
