@@ -51,6 +51,28 @@ export default function robots(): MetadataRoute.Robots {
           '/private/*',
         ],
       },
+      {
+        userAgent: 'GrokipediaBot',
+        allow: '/',
+        disallow: [
+          '/api/*',
+          '/admin/*',
+          '/private/*',
+          '/_next/*',
+          '/node_modules/*',
+        ],
+      },
+      {
+        userAgent: 'Grokipedia',
+        allow: '/',
+        disallow: [
+          '/api/*',
+          '/admin/*',
+          '/private/*',
+          '/_next/*',
+          '/node_modules/*',
+        ],
+      },
     ],
     sitemap: 'https://probaterealestatesales.com/sitemap.xml',
     host: 'https://probaterealestatesales.com',

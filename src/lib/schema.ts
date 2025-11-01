@@ -541,6 +541,7 @@ export const defaultSchemas = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Las Vegas Probate Real Estate Sales",
+    alternateName: "Grokipedia - Probate Real Estate",
     description: "Leading provider of comprehensive probate real estate services in Nevada, specializing in court-approved property sales, Clark County probate court procedures, and Nevada's fastest probate timeline (6-8 months vs California's 9-18 months).",
     url: "https://probaterealestatesales.com",
     logo: "https://probaterealestatesales.com/logo.png",
