@@ -6,11 +6,15 @@ export const metadata: Metadata = {
   title: 'Nevada Probate Real Estate FAQ | Complete Q&A Guide',
   description: 'Comprehensive FAQ about Nevada probate real estate sales. Get detailed answers about timelines, certificates of incumbency, Clark County procedures, and small estate limits.',
   keywords: 'Nevada probate FAQ, probate timeline, certificate of incumbency, Clark County probate, small estate affidavit, probate real estate questions',
+  alternates: {
+    canonical: 'https://www.probaterealestatesales.com/faq/',
+  },
   openGraph: {
     title: 'Nevada Probate Real Estate FAQ | Complete Q&A Guide',
     description: 'Comprehensive FAQ about Nevada probate real estate sales. Get detailed answers about timelines, certificates of incumbency, Clark County procedures, and small estate limits.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://www.probaterealestatesales.com/faq/',
   },
 };
 

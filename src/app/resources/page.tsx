@@ -14,11 +14,14 @@ export const metadata: Metadata = {
   title: 'Probate Real Estate Resources | Dr. Jan Duffy - Las Vegas Expert',
   description: 'Comprehensive probate real estate resources including Nevada probate laws, timeline, checklist, cost calculator, and educational content by Dr. Jan Duffy.',
   keywords: 'probate real estate resources, Nevada probate laws, probate timeline, probate checklist, probate cost calculator, Dr. Jan Duffy, Las Vegas probate expert',
+  alternates: {
+    canonical: 'https://www.probaterealestatesales.com/resources/',
+  },
   openGraph: {
     title: 'Probate Real Estate Resources | Dr. Jan Duffy',
     description: 'Comprehensive probate real estate resources including Nevada probate laws, timeline, checklist, cost calculator, and educational content.',
     type: 'website',
-    url: 'https://probaterealestatesales.com/resources',
+    url: 'https://www.probaterealestatesales.com/resources/',
   },
 };
 

@@ -7,11 +7,15 @@ export const metadata: Metadata = {
   title: 'Complete Nevada Probate Guide 2025 | Timeline, Costs & Process',
   description: 'Comprehensive guide to Nevada probate real estate. Learn about Nevada\'s 6-8 month timeline, $1,000 court costs, and advantages over California. Free consultation: (702) 830-9222',
   keywords: 'Nevada probate guide, Nevada probate timeline, Nevada probate costs, Clark County probate, Nevada vs California probate',
+  alternates: {
+    canonical: 'https://www.probaterealestatesales.com/resources/nevada-probate-guide/',
+  },
   openGraph: {
     title: 'Complete Nevada Probate Guide 2025 | Timeline, Costs & Process',
     description: 'Comprehensive guide to Nevada probate real estate with 6-8 month timeline and cost advantages.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://www.probaterealestatesales.com/resources/nevada-probate-guide/',
   },
 };
 

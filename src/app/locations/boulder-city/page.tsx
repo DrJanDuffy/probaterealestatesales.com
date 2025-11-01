@@ -7,11 +7,15 @@ export const metadata: Metadata = {
   title: 'Boulder City Probate Real Estate Services | Historic Area & Lake Mead',
   description: 'Expert probate real estate services in Boulder City, Nevada. Fast 45-day probate process vs 6-8 months. Free consultation: (702) 830-9222',
   keywords: 'Boulder City probate real estate, historic area probate, Lake Mead probate, Nevada probate timeline, Clark County probate court',
+  alternates: {
+    canonical: 'https://www.probaterealestatesales.com/locations/boulder-city/',
+  },
   openGraph: {
     title: 'Boulder City Probate Real Estate Services | Historic Area & Lake Mead',
     description: 'Expert probate real estate services in Boulder City with 6-8 month timeline. Free consultation available.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://www.probaterealestatesales.com/locations/boulder-city/',
   },
 };
 

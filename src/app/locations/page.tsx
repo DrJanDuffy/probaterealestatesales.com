@@ -7,11 +7,15 @@ export const metadata: Metadata = {
   title: 'Nevada Probate Real Estate Services | Las Vegas Area Locations',
   description: 'Expert probate real estate services across Nevada. Serving Las Vegas, Henderson, Summerlin, North Las Vegas, Boulder City, Mesquite and all Clark County areas. Nevada\'s fastest probate process: 6-8 months.',
   keywords: 'Nevada probate real estate, Las Vegas probate, Henderson probate, Summerlin probate, Clark County probate, Nevada probate timeline',
+  alternates: {
+    canonical: 'https://www.probaterealestatesales.com/locations/',
+  },
   openGraph: {
     title: 'Nevada Probate Real Estate Services | All Locations',
     description: 'Expert probate real estate services across Nevada with 6-8 month timeline. Free consultation available.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://www.probaterealestatesales.com/locations/',
   },
 };
 

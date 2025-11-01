@@ -2,7 +2,7 @@
   "name": "probaterealestatesales",
   "version": "0.1.0",
   "private": true,
-  "description": "Probate Real Estate Sales website - Grokipedia ready",
+  "description": "Probate Real Estate Sales website - Optimized for Google Search & Grokipedia",
   "scripts": {
     "dev": "next dev",
     "dev:alt": "next dev -p 3001",

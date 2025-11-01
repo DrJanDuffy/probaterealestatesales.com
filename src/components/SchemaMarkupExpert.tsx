@@ -7,8 +7,8 @@ const schemaData = {
   "alternateName": "Dr. Janet Duffy",
           "jobTitle": "Probate Real Estate Specialist",
      "description": "Las Vegas probate real estate expert with 20+ years experience, specializing in inherited property sales, estate liquidation, and court-approved property sales with comprehensive probate real estate services.",
-  "url": "https://probaterealestatesales.com",
-  "image": "https://probaterealestatesales.com/images/dr-jan-duffy.jpg",
+  "url": "https://www.probaterealestatesales.com",
+  "image": "https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg",
   "telephone": "+1-702-830-9222",
   "email": "DrJanSells@ProbateRealEstateSales.com",
   "address": {
@@ -97,7 +97,7 @@ const schemaData = {
   "worksFor": {
     "@type": "Organization",
     "name": "Probate Real Estate Sales",
-    "url": "https://probaterealestatesales.com",
+    "url": "https://www.probaterealestatesales.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "400 S 4th Street Suite 250 B",
@@ -141,7 +141,7 @@ const businessSchema = {
   "@type": "RealEstateAgent",
   "name": "Dr. Jan Duffy - Probate Real Estate Specialist",
   "description": "Las Vegas's premier probate real estate expert providing comprehensive probate real estate services with court-approved property sales and legal compliance.",
-  "url": "https://probaterealestatesales.com",
+  "url": "https://www.probaterealestatesales.com",
   "telephone": "+1-702-830-9222",
   "email": "DrJanSells@ProbateRealEstateSales.com",
   "address": {
@@ -227,7 +227,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "name": "Probate Real Estate Sales",
   "description": "Las Vegas probate real estate services specializing in comprehensive probate real estate services, court-approved property sales, and estate liquidation",
-  "url": "https://probaterealestatesales.com",
+  "url": "https://www.probaterealestatesales.com",
   "telephone": "+1-702-830-9222",
   "email": "DrJanSells@ProbateRealEstateSales.com",
   "address": {

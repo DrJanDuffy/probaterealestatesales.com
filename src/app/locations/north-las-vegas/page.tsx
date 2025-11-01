@@ -7,11 +7,15 @@ export const metadata: Metadata = {
   title: 'North Las Vegas Probate Real Estate Services | Aliante & Centennial Hills',
   description: 'Expert probate real estate services in North Las Vegas, Nevada. Fast 45-day probate process vs 6-8 months. Free consultation: (702) 830-9222',
   keywords: 'North Las Vegas probate real estate, Aliante probate, Centennial Hills probate, Nevada probate timeline, Clark County probate court',
+  alternates: {
+    canonical: 'https://www.probaterealestatesales.com/locations/north-las-vegas/',
+  },
   openGraph: {
     title: 'North Las Vegas Probate Real Estate Services | Aliante & Centennial Hills',
     description: 'Expert probate real estate services in North Las Vegas with 6-8 month timeline. Free consultation available.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://www.probaterealestatesales.com/locations/north-las-vegas/',
   },
 };
 

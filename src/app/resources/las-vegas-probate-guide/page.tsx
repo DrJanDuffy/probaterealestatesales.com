@@ -32,7 +32,7 @@ export default function LasVegasProbateGuide() {
           'Clark County probate process',
           'Nevada probate costs'
         ]}
-        canonicalUrl="https://probaterealestatesales.com/resources/las-vegas-probate-guide"
+        canonicalUrl="https://www.probaterealestatesales.com/resources/las-vegas-probate-guide/"
         ogType="article"
         articleAuthor="Dr. Janet Duffy"
         articlePublishedTime="2025-01-01T00:00:00Z"
@@ -48,8 +48,8 @@ export default function LasVegasProbateGuide() {
           author: "Dr. Janet Duffy",
           datePublished: "2025-01-01T00:00:00Z",
           dateModified: new Date().toISOString(),
-          url: "https://probaterealestatesales.com/resources/las-vegas-probate-guide",
-          image: "https://probaterealestatesales.com/images/las-vegas-probate-guide.jpg"
+          url: "https://www.probaterealestatesales.com/resources/las-vegas-probate-guide",
+          image: "https://www.probaterealestatesales.com/images/las-vegas-probate-guide.jpg"
         }}
         customSchema={{
           "@context": "https://schema.org",

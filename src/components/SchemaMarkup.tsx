@@ -62,7 +62,7 @@ export default function SchemaMarkup({
             provider: {
               "@type": "Organization",
               name: "Las Vegas Probate Real Estate Sales",
-              url: "https://probaterealestatesales.com"
+              url: "https://www.probaterealestatesales.com"
             },
             areaServed: [
               "Las Vegas", "Henderson", "North Las Vegas", "Boulder City", "Mesquite",
@@ -93,7 +93,7 @@ export default function SchemaMarkup({
             provider: {
               "@type": "Organization",
               name: "Las Vegas Probate Real Estate Sales",
-              url: "https://probaterealestatesales.com"
+              url: "https://www.probaterealestatesales.com"
             },
             serviceType: "Probate Administration",
             areaServed: {

@@ -27,11 +27,15 @@ export const metadata: Metadata = {
   title: 'Las Vegas Probate Real Estate Services | Sell Inherited Property in 45 Days',
   description: 'Expert probate real estate services in Las Vegas. We sell inherited properties in 45 days while you focus on family. Court confirmation sales, independent administration, and trust services. Free consultation: (702) 830-9222',
   keywords: 'Las Vegas probate real estate, sell inherited property, Clark County probate court, Nevada probate services, probate property sales, court confirmation sales',
+  alternates: {
+    canonical: 'https://www.probaterealestatesales.com/services/',
+  },
   openGraph: {
     title: 'Las Vegas Probate Real Estate Services | 45-Day Sale Guarantee',
     description: 'Expert probate real estate services in Las Vegas. We sell inherited properties in 45 days while you focus on family.',
     type: 'website',
     locale: 'en_US',
+    url: 'https://www.probaterealestatesales.com/services/',
   },
 }
 
@@ -45,10 +49,10 @@ export default function ServicesPage() {
           "@graph": [
             {
               "@type": "RealEstateAgent",
-              "@id": "https://probaterealestatesales.com/#organization",
+              "@id": "https://www.probaterealestatesales.com/#organization",
               "name": "Las Vegas Probate Real Estate Services",
-              "url": "https://probaterealestatesales.com",
-              "logo": "https://probaterealestatesales.com/logo.png",
+              "url": "https://www.probaterealestatesales.com",
+              "logo": "https://www.probaterealestatesales.com/logo.png",
               "areaServed": {
                 "@type": "AdministrativeArea",
                 "name": "Clark County",

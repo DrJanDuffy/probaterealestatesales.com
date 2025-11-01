@@ -18,6 +18,33 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  async redirects() {
+    return [
+      // Redirect non-www to www
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'probaterealestatesales.com',
+          },
+        ],
+        destination: 'https://www.probaterealestatesales.com/:path*',
+        permanent: true,
+      },
+      // Redirect old /lander page to homepage
+      {
+        source: '/lander',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/lander/',
+        destination: '/',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

@@ -90,7 +90,7 @@ export default function SEOMetaTags({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={fullDescription} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl || 'https://probaterealestatesales.com'} />
+      <meta property="og:url" content={canonicalUrl || 'https://www.probaterealestatesales.com'} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
@@ -134,7 +134,7 @@ export default function SEOMetaTags({
       <meta name="business:contact_data:country_name" content="United States" />
               <meta name="business:contact_data:phone_number" content="+1-702-830-9222" />
       <meta name="business:contact_data:email" content="DrJanSells@ProbateRealEstateSales.com" />
-      <meta name="business:contact_data:website" content="https://probaterealestatesales.com" />
+      <meta name="business:contact_data:website" content="https://www.probaterealestatesales.com" />
 
       {/* Additional SEO Meta Tags */}
       <meta name="classification" content="Real Estate Services" />
@@ -180,7 +180,7 @@ export default function SEOMetaTags({
             "@type": "LocalBusiness",
             "name": "Probate Real Estate Sales",
             "description": "Specialized probate real estate services helping families navigate inherited property sales with compassion and expertise.",
-            "url": "https://probaterealestatesales.com",
+            "url": "https://www.probaterealestatesales.com",
             "telephone": "+1-702-830-9222",
             "email": "DrJanSells@ProbateRealEstateSales.com",
             "address": {

@@ -7,35 +7,17 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: [
-          '/',
-          '/services/*',
-          '/about',
-          '/contact',
-          '/faq',
-          '/locations/*',
-          '/resources/*',
-          '/blog/*',
-          '/legal/*',
-          '/tools/*',
-          '/testimonials',
-          '/case-studies',
-          '/support/*',
-        ],
         disallow: [
           '/api/*',
           '/admin/*',
           '/private/*',
           '/temp/*',
-          '/*.json',
-          '/*.xml',
           '/_next/*',
           '/node_modules/*',
         ],
       },
       {
         userAgent: 'Googlebot',
-        allow: '/',
         disallow: [
           '/api/*',
           '/admin/*',
@@ -44,7 +26,6 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: 'Bingbot',
-        allow: '/',
         disallow: [
           '/api/*',
           '/admin/*',
@@ -53,7 +34,6 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: 'GrokipediaBot',
-        allow: '/',
         disallow: [
           '/api/*',
           '/admin/*',
@@ -64,7 +44,6 @@ export default function robots(): MetadataRoute.Robots {
       },
       {
         userAgent: 'Grokipedia',
-        allow: '/',
         disallow: [
           '/api/*',
           '/admin/*',
@@ -74,7 +53,7 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
     ],
-    sitemap: 'https://probaterealestatesales.com/sitemap.xml',
-    host: 'https://probaterealestatesales.com',
+    sitemap: 'https://www.probaterealestatesales.com/sitemap.xml',
+    host: 'https://www.probaterealestatesales.com',
   };
 }

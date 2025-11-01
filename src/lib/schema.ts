@@ -306,7 +306,7 @@ export const defaultSchemas = {
     "@type": "LocalBusiness",
     name: "Las Vegas Probate Real Estate Sales",
     description: "Expert probate real estate services in Las Vegas and Clark County. Specialized in comprehensive probate real estate services, court-approved property sales, and estate liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
-    url: "https://probaterealestatesales.com",
+    url: "https://www.probaterealestatesales.com",
     telephone: "+1-702-830-9222",
     email: "DrJanSells@ProbateRealEstateSales.com",
     address: {
@@ -371,7 +371,7 @@ export const defaultSchemas = {
     "@type": "RealEstateAgent",
     name: "Dr. Janet Duffy",
     description: "Licensed Nevada real estate agent specializing in comprehensive probate real estate services, court-approved property sales, and inherited property transactions. Expert in Clark County probate court procedures and Nevada probate law.",
-    url: "https://probaterealestatesales.com",
+    url: "https://www.probaterealestatesales.com",
     telephone: "+1-702-830-9222",
     email: "DrJanSells@ProbateRealEstateSales.com",
     address: {
@@ -437,7 +437,7 @@ export const defaultSchemas = {
     provider: {
       "@type": "Organization",
       name: "Las Vegas Probate Real Estate Sales",
-      url: "https://probaterealestatesales.com"
+      url: "https://www.probaterealestatesales.com"
     },
     serviceType: "Probate Administration",
     areaServed: {
@@ -543,8 +543,8 @@ export const defaultSchemas = {
     name: "Las Vegas Probate Real Estate Sales",
     alternateName: "Grokipedia - Probate Real Estate",
     description: "Leading provider of comprehensive probate real estate services in Nevada, specializing in court-approved property sales, Clark County probate court procedures, and Nevada's fastest probate timeline (6-8 months vs California's 9-18 months).",
-    url: "https://probaterealestatesales.com",
-    logo: "https://probaterealestatesales.com/logo.png",
+    url: "https://www.probaterealestatesales.com",
+    logo: "https://www.probaterealestatesales.com/logo.png",
     contactPoint: {
       "@type": "ContactPoint",
       telephone: "+1-702-830-9222",
@@ -646,7 +646,7 @@ export function generateArticleSchema(article: {
       name: "Las Vegas Probate Real Estate Sales",
       logo: {
         "@type": "ImageObject",
-        url: "https://probaterealestatesales.com/logo.png"
+        url: "https://www.probaterealestatesales.com/logo.png"
       }
     },
     datePublished: article.datePublished,
@@ -672,7 +672,7 @@ export function generateLegalServiceSchema(service: {
     provider: {
       "@type": "Organization",
       name: "Las Vegas Probate Real Estate Sales",
-      url: "https://probaterealestatesales.com"
+      url: "https://www.probaterealestatesales.com"
     },
     serviceType: "Probate Administration",
     areaServed: {
