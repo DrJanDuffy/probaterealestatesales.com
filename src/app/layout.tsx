@@ -9,12 +9,12 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
-  description: 'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days. Free consultation: (702) 830-9222. Court-approved expert with 20+ years experience.',
+  description: 'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days - guaranteed! Free consultation: (702) 830-9222. Court-approved expert with 500+ sales. No upfront costs.',
   keywords: 'probate realtor, probate homes, Las Vegas probate realtor, probate real estate agent, probate homes Las Vegas, sell probate property, inherited property sales, grokipedia',
   authors: [{ name: 'Probate Real Estate Sales' }],
   openGraph: {
     title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
-    description: 'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days. Free consultation: (702) 830-9222.',
+    description: 'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days - guaranteed! Free consultation: (702) 830-9222. No upfront costs.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Probate Real Estate Sales',

@@ -4,14 +4,14 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'How Long Does Probate Take in Nevada? | FAQ | Las Vegas Probate Timeline',
-  description: 'How long does probate take in Nevada? Complete FAQ covering Nevada probate timeline (6-8 months), costs, Clark County court procedures, and selling inherited property. Expert answers: (702) 830-9222',
+  description: 'How long does probate take in Nevada? 6-8 months (vs 9-18 in California). Complete FAQ with expert answers on timeline, costs ($1,000 court fees), Clark County procedures. Free consultation: (702) 830-9222',
   keywords: 'how long does probate take in nevada, Nevada probate timeline, probate FAQ, Clark County probate, Nevada probate costs, probate timeline Las Vegas, certificate of incumbency',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/faq/',
   },
   openGraph: {
     title: 'How Long Does Probate Take in Nevada? | FAQ | Las Vegas Probate Timeline',
-    description: 'How long does probate take in Nevada? Complete FAQ covering Nevada probate timeline (6-8 months), costs, Clark County court procedures, and selling inherited property.',
+    description: 'How long does probate take in Nevada? 6-8 months (vs 9-18 in California). Complete FAQ with expert answers on timeline, costs, Clark County procedures.',
     type: 'website',
     locale: 'en_US',
     url: 'https://www.probaterealestatesales.com/faq/',
