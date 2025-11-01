@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageSquare, Navigation } from 'lucide-react';
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
@@ -57,11 +57,20 @@ export default function ContactPage() {
             <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-8 text-center">
               <MapPin className="h-12 w-12 text-purple-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">Visit</h3>
-              <p className="text-secondary-700 font-medium">
+              <p className="text-secondary-700 font-medium mb-4">
                 400 S 4th Street<br />
                 Suite 250 B<br />
                 Las Vegas, NV 89101
               </p>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=400+S+4th+Street+Suite+250+B,+Las+Vegas,+NV+89101"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors text-sm font-medium"
+              >
+                <MapPin className="h-4 w-4 mr-2" />
+                Get Directions
+              </a>
             </div>
           </div>
 
@@ -78,6 +87,37 @@ export default function ContactPage() {
                 <p className="font-medium text-secondary-900">Saturday</p>
                 <p className="text-secondary-600">9:00 AM - 2:00 PM</p>
               </div>
+            </div>
+          </div>
+
+          {/* Google Maps Section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-secondary-900 mb-6 text-center">
+              Find Us
+            </h2>
+            <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+              <iframe
+                src="https://www.google.com/maps?q=400+S+4th+Street+Suite+250+B,+Las+Vegas,+NV+89101&output=embed&hl=en&z=15"
+                width="100%"
+                height="450"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Probate Real Estate Sales Office Location - 400 S 4th Street Suite 250 B, Las Vegas, NV 89101"
+                className="w-full"
+              ></iframe>
+            </div>
+            <div className="mt-4 text-center">
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=400+S+4th+Street+Suite+250+B,+Las+Vegas,+NV+89101"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
+              >
+                <MapPin className="h-5 w-5 mr-2" />
+                Get Directions to Our Office
+              </a>
             </div>
           </div>
         </div>

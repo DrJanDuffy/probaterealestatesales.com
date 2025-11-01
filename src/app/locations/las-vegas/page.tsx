@@ -288,6 +288,39 @@ export default function LasVegasPage() {
         </div>
       </section>
 
+      {/* Map Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
+            Office Location in Las Vegas
+          </h2>
+          <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200 max-w-4xl mx-auto">
+            <iframe
+              src="https://www.google.com/maps?q=400+S+4th+Street+Suite+250+B,+Las+Vegas,+NV+89101&output=embed&hl=en&z=13"
+              width="100%"
+              height="400"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Las Vegas Probate Real Estate Office Location"
+              className="w-full"
+            ></iframe>
+          </div>
+          <div className="mt-6 text-center">
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=400+S+4th+Street+Suite+250+B,+Las+Vegas,+NV+89101"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
+            >
+              <MapPin className="h-5 w-5 mr-2" />
+              Get Directions to Our Office
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Related Resources Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

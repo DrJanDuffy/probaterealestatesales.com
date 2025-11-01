@@ -311,7 +311,7 @@ export const defaultSchemas = {
     email: "DrJanSells@ProbateRealEstateSales.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Las Vegas Blvd",
+      streetAddress: "400 S 4th Street Suite 250 B",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
       postalCode: "89101",
@@ -376,7 +376,7 @@ export const defaultSchemas = {
     email: "DrJanSells@ProbateRealEstateSales.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "123 Las Vegas Blvd",
+      streetAddress: "400 S 4th Street Suite 250 B",
       addressLocality: "Las Vegas",
       addressRegion: "NV",
       postalCode: "89101",

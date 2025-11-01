@@ -54,8 +54,10 @@ export default function RootLayout({
         {/* Google Search Console & Performance Optimizations */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="preconnect" href="https://maps.googleapis.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://maps.googleapis.com" />
         
         {/* Grokipedia Optimizations */}
         <link rel="preconnect" href="https://grokipedia.com" />
@@ -89,6 +91,11 @@ export default function RootLayout({
               "email": "DrJanSells@ProbateRealEstateSales.com",
               "openingHours": "Mo-Fr 08:00-18:00, Sa 09:00-14:00",
               "priceRange": "$$",
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 36.1699,
+                "longitude": -115.1398
+              },
               "areaServed": [
                 {"@type": "City", "name": "Las Vegas"},
                 {"@type": "City", "name": "Henderson"},
