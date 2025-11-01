@@ -54,6 +54,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://www.probaterealestatesales.com/sitemap.xml',
-    host: 'https://www.probaterealestatesales.com',
+    host: 'www.probaterealestatesales.com',
   };
 }
