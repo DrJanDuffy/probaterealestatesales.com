@@ -13,12 +13,12 @@ const faqData: FAQItem[] = [
   // Nevada-Specific Questions
   {
     question: "How long does probate take in Nevada?",
-    answer: "Nevada probate typically takes 6-8 months, which is significantly faster than California's 9-18 month process. Clark County has two probate commissioners: James Fontana (Fridays) and Russell Geis (Wednesdays at 9:30 AM). Court orders take about 3 weeks to release. This faster timeline makes Nevada an attractive option for probate property sales.",
+    answer: "Nevada probate typically takes 6-8 months, which is significantly faster than California's 9-18 month process. Clark County has two probate commissioners: James Fontana (Fridays) and Russell Geis (Wednesdays at 9:30 AM). Court orders take about 3 weeks to release. This faster timeline makes Nevada an attractive option for probate property sales. Learn more in our <a href='/blog/nevada-probate-timeline/' class='text-primary-600 hover:text-primary-800 underline'>Nevada Probate Timeline Guide</a> or <a href='/resources/nevada-probate-guide/' class='text-primary-600 hover:text-primary-800 underline'>Complete Nevada Probate Guide</a>.",
     category: "nevada-law"
   },
   {
     question: "What is a certificate of incumbency in Nevada?",
-    answer: "A certificate of incumbency in Nevada is a 5-7 page document (also known as affidavit of successor trustee) that's required after trustors die. It costs $750 from attorneys and must be recorded with Clark County. This document proves your authority as successor trustee and is essential for trust administration and property transfers. Title companies cannot create these documents - only attorneys can.",
+    answer: "A certificate of incumbency in Nevada is a 5-7 page document (also known as affidavit of successor trustee) that's required after trustors die. It costs $750 from attorneys and must be recorded with Clark County. This document proves your authority as successor trustee and is essential for trust administration and property transfers. Title companies cannot create these documents - only attorneys can. Read our complete guide on <a href='/blog/certificate-of-incumbency/' class='text-primary-600 hover:text-primary-800 underline'>Certificate of Incumbency</a> for detailed information.",
     category: "nevada-law"
   },
   {
@@ -62,7 +62,7 @@ const faqData: FAQItem[] = [
   // Process Questions
   {
     question: "What is the step-by-step process for a Nevada probate sale?",
-    answer: "The Nevada probate sale process involves: 1) Court appointment of executor/administrator, 2) Property appraisal and market analysis, 3) Court petition for sale authorization, 4) Court approval and order (3 weeks to release), 5) Property listing and marketing, 6) Offer acceptance and contract execution, 7) Court confirmation of sale (if required), 8) Closing and distribution of proceeds. Nevada requires approximately 30 documents throughout the process.",
+    answer: "The Nevada probate sale process involves: 1) Court appointment of executor/administrator, 2) Property appraisal and market analysis, 3) Court petition for sale authorization, 4) Court approval and order (3 weeks to release), 5) Property listing and marketing, 6) Offer acceptance and contract execution, 7) Court confirmation of sale (if required), 8) Closing and distribution of proceeds. Nevada requires approximately 30 documents throughout the process. Learn more about <a href='/blog/clark-county-probate/' class='text-primary-600 hover:text-primary-800 underline'>Clark County Probate Court Procedures</a> or view our <a href='/services/' class='text-primary-600 hover:text-primary-800 underline'>Probate Services</a>.",
     category: "process"
   },
   {
@@ -241,9 +241,10 @@ export default function FAQ() {
                     id={`faq-answer-${index}`}
                     className="px-6 pb-4"
                   >
-                    <p className="text-secondary-600 leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <p 
+                      className="text-secondary-600 leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
                   </div>
                 )}
               </article>
@@ -276,12 +277,26 @@ export default function FAQ() {
               <p className="text-sm text-secondary-600 mb-3">
                 Looking for more detailed answers?
               </p>
-              <a
-                href="/faq"
-                className="inline-flex items-center justify-center px-6 py-3 border border-primary-300 text-base font-medium rounded-md text-primary-700 bg-white hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
-              >
-                View Complete FAQ Page →
-              </a>
+              <div className="flex flex-wrap gap-4 justify-center">
+                <a
+                  href="/faq/"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-primary-300 text-base font-medium rounded-md text-primary-700 bg-white hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+                >
+                  View Complete FAQ Page →
+                </a>
+                <a
+                  href="/resources/nevada-probate-guide/"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-primary-300 text-base font-medium rounded-md text-primary-700 bg-white hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+                >
+                  Nevada Probate Guide →
+                </a>
+                <a
+                  href="/blog/"
+                  className="inline-flex items-center justify-center px-6 py-3 border border-primary-300 text-base font-medium rounded-md text-primary-700 bg-white hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
+                >
+                  Educational Blog →
+                </a>
+              </div>
             </div>
           </div>
         </div>

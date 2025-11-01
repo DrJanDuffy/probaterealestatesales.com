@@ -246,6 +246,29 @@ export default function NevadaProbateTimelinePage() {
         </div>
       </section>
 
+      {/* Related Pages Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
+            Related Resources
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link href="/blog/clark-county-probate/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Clark County Probate Court</h3>
+              <p className="text-secondary-600 text-sm">Step-by-step guide to navigating Clark County probate court procedures.</p>
+            </Link>
+            <Link href="/resources/nevada-probate-guide/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Complete Nevada Probate Guide</h3>
+              <p className="text-secondary-600 text-sm">Comprehensive guide to Nevada probate with costs, timeline, and process details.</p>
+            </Link>
+            <Link href="/services/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Our Probate Services</h3>
+              <p className="text-secondary-600 text-sm">Learn how we can help you navigate the probate process efficiently.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -256,7 +279,7 @@ export default function NevadaProbateTimelinePage() {
             Dr. Jan Duffy specializes in probate real estate sales and can help guide you through each step of the Nevada probate timeline.
           </p>
           <Link
-            href="/contact"
+            href="/contact/"
             className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             Schedule Free Consultation

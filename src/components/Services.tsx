@@ -297,9 +297,15 @@ export default function Services() {
               <a href="http://drjanduffy.realscout.com/onboarding" className="btn-primary inline-block">
                 Schedule Free Consultation
               </a>
-              <a href="/resources/nevada-probate-guide" className="btn-outline inline-block">
+              <a href="/resources/nevada-probate-guide/" className="btn-outline inline-block">
                 Download Free Probate Guide
               </a>
+            </div>
+            <div className="mt-6 flex flex-wrap gap-4 justify-center text-sm">
+              <a href="/locations/" className="text-primary-600 hover:text-primary-800 font-medium">Our Service Areas →</a>
+              <a href="/blog/" className="text-primary-600 hover:text-primary-800 font-medium">Educational Resources →</a>
+              <a href="/testimonials/" className="text-primary-600 hover:text-primary-800 font-medium">Client Success Stories →</a>
+              <a href="/contact/" className="text-primary-600 hover:text-primary-800 font-medium">Contact Us →</a>
             </div>
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">

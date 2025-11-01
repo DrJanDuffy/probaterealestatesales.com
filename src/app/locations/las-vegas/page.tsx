@@ -288,11 +288,34 @@ export default function LasVegasPage() {
         </div>
       </section>
 
+      {/* Related Resources Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
+            Related Resources
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link href="/services/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Our Probate Services</h3>
+              <p className="text-secondary-600 text-sm">Complete probate property services for Las Vegas estates.</p>
+            </Link>
+            <Link href="/resources/nevada-probate-guide/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Nevada Probate Guide</h3>
+              <p className="text-secondary-600 text-sm">Complete guide to Nevada probate process and requirements.</p>
+            </Link>
+            <Link href="/blog/las-vegas-market-jan-2025/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Las Vegas Market Update</h3>
+              <p className="text-secondary-600 text-sm">Latest Las Vegas probate property market trends and insights.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Back to Locations */}
       <section className="py-8 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Link
-            href="/locations"
+            href="/locations/"
             className="text-blue-600 hover:text-blue-800 font-semibold"
           >
             ← Back to All Nevada Locations

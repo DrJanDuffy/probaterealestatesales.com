@@ -113,12 +113,21 @@ export default function Hero() {
                 </a>
                 
                 <a 
-                  href="/resources/nevada-probate-guide" 
+                  href="/resources/nevada-probate-guide/" 
                   className="btn-outline inline-flex items-center justify-center text-lg px-8 py-4"
                 >
                   <Download className="mr-2 h-5 w-5" />
                   Download Free Probate Guide
                 </a>
+              </div>
+              
+              {/* Quick Links */}
+              <div className="flex flex-wrap gap-4 pt-4">
+                <a href="/services/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">Our Services →</a>
+                <a href="/locations/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">Service Areas →</a>
+                <a href="/blog/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">Learn More →</a>
+                <a href="/faq/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">Common Questions →</a>
+                <a href="/testimonials/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">Success Stories →</a>
               </div>
               
               {/* Contact Info */}

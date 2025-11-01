@@ -243,6 +243,29 @@ export default function LasVegasMarketJan2025Page() {
         </div>
       </section>
 
+      {/* Related Pages Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
+            Related Resources
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link href="/blog/market-updates/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">All Market Updates</h3>
+              <p className="text-secondary-600 text-sm">Stay informed with the latest Las Vegas probate property market trends.</p>
+            </Link>
+            <Link href="/home-valuation/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Free Home Valuation</h3>
+              <p className="text-secondary-600 text-sm">Get a free market analysis for your probate property.</p>
+            </Link>
+            <Link href="/locations/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Service Areas</h3>
+              <p className="text-secondary-600 text-sm">Learn about probate services in Las Vegas neighborhoods.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
