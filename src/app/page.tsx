@@ -8,7 +8,7 @@ import ContactSection from '@/components/ContactSection';
 import HomePageNavigation from '@/components/HomePageNavigation';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import Link from 'next/link';
-import { ArrowRight, Clock, FileText, Calculator, Home, HelpCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 // Lazy load heavy components for better performance
 const ProbateTimeline = dynamic(() => import('@/components/ProbateTimeline'), {
