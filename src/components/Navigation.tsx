@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown, MapPin, FileText, Phone, Home, Award, BookOpen, Users } from 'lucide-react';
+import { Menu, X, ChevronDown, MapPin, FileText, Phone, Home, Award, BookOpen, Users, MessageSquare, Video, TrendingUp } from 'lucide-react';
 
 const navigation = {
   main: [
@@ -10,8 +10,15 @@ const navigation = {
     { name: 'Services', href: '/services', icon: FileText },
     { name: 'Locations', href: '/locations', icon: MapPin },
     { name: 'Resources', href: '/resources', icon: BookOpen },
+    { name: 'Blog', href: '/blog', icon: BookOpen },
     { name: 'FAQ', href: '/faq', icon: BookOpen },
-    { name: 'About Dr. Duffy', href: '/#about', icon: Users },
+    { name: 'About', href: '/about', icon: Users },
+    { name: 'Contact', href: '/contact', icon: MessageSquare },
+  ],
+  blog: [
+    { name: 'All Posts', href: '/blog', description: 'Latest blog posts and articles' },
+    { name: 'Probate Videos', href: '/blog/probate-videos', description: 'Educational video content' },
+    { name: 'Market Updates', href: '/blog/market-updates', description: 'Real estate market trends' },
   ],
   locations: [
     { name: 'All Nevada Locations', href: '/locations', description: 'Complete coverage across Nevada' },
@@ -45,6 +52,7 @@ export default function Navigation() {
   const [locationsOpen, setLocationsOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [blogOpen, setBlogOpen] = useState(false);
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -163,12 +171,50 @@ export default function Navigation() {
               )}
             </div>
 
+            {/* Blog Dropdown */}
+            <div className="relative">
+              <button
+                type="button"
+                onClick={() => setBlogOpen(!blogOpen)}
+                className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
+              >
+                Blog
+                <ChevronDown className="ml-1 h-4 w-4" />
+              </button>
+              
+              {blogOpen && (
+                <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
+                  <div className="py-1">
+                    {navigation.blog.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="block px-4 py-3 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600"
+                        onClick={() => setBlogOpen(false)}
+                      >
+                        <div className="font-medium">{item.name}</div>
+                        <div className="text-secondary-500 text-xs">{item.description}</div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
             {/* About Link */}
             <Link
-              href="/#about"
+              href="/about"
               className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
             >
               About
+            </Link>
+
+            {/* Contact Link */}
+            <Link
+              href="/contact"
+              className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+            >
+              Contact
             </Link>
 
             {/* CTA Button */}
@@ -268,13 +314,39 @@ export default function Navigation() {
               ))}
             </div>
 
+            {/* Blog Section */}
+            <div className="border-t border-secondary-200 pt-4">
+              <div className="px-3 py-2 text-xs font-semibold text-secondary-500 uppercase tracking-wider">
+                Blog
+              </div>
+              {navigation.blog.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+
             {/* About Link */}
             <Link
-              href="/#about"
+              href="/about"
               className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md border-t border-secondary-200 pt-4"
               onClick={() => setMobileMenuOpen(false)}
             >
-              About Dr. Duffy
+              About
+            </Link>
+
+            {/* Contact Link */}
+            <Link
+              href="/contact"
+              className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
             </Link>
 
             {/* Mobile CTA */}

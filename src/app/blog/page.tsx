@@ -1,0 +1,182 @@
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Calendar, User, ArrowRight, Video, TrendingUp, BookOpen } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Probate Real Estate Blog & Resources | Market Updates & Videos',
+  description: 'Stay informed about probate real estate in Las Vegas. Read our blog posts, watch probate videos, and get the latest market updates from Dr. Jan Duffy.',
+  keywords: 'probate real estate blog, probate videos, Las Vegas real estate market updates, probate news, estate sales information',
+  alternates: {
+    canonical: 'https://www.probaterealestatesales.com/blog/',
+  },
+  openGraph: {
+    title: 'Probate Real Estate Blog & Resources',
+    description: 'Stay informed about probate real estate with blog posts, videos, and market updates.',
+    type: 'website',
+    url: 'https://www.probaterealestatesales.com/blog/',
+  },
+};
+
+export default function BlogPage() {
+  return (
+    <main className="min-h-screen bg-gray-50">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Probate Real Estate Blog & Resources
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+            Stay informed with the latest probate real estate news, market updates, and educational videos.
+          </p>
+        </div>
+      </section>
+
+      {/* Blog Categories */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Link href="/blog/probate-videos" className="group">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <Video className="h-12 w-12 text-blue-600 mb-4" />
+                <h3 className="text-2xl font-semibold text-secondary-900 mb-2 group-hover:text-primary-600">
+                  Probate Videos
+                </h3>
+                <p className="text-secondary-600">
+                  Watch educational videos about probate real estate processes, timelines, and best practices.
+                </p>
+                <div className="mt-4 flex items-center text-primary-600 font-medium">
+                  Watch Videos
+                  <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/blog/market-updates" className="group">
+              <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <TrendingUp className="h-12 w-12 text-green-600 mb-4" />
+                <h3 className="text-2xl font-semibold text-secondary-900 mb-2 group-hover:text-primary-600">
+                  Market Updates
+                </h3>
+                <p className="text-secondary-600">
+                  Get the latest Las Vegas real estate market trends and probate property insights.
+                </p>
+                <div className="mt-4 flex items-center text-primary-600 font-medium">
+                  Read Updates
+                  <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/resources" className="group">
+              <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-8 hover:shadow-lg transition-shadow">
+                <BookOpen className="h-12 w-12 text-purple-600 mb-4" />
+                <h3 className="text-2xl font-semibold text-secondary-900 mb-2 group-hover:text-primary-600">
+                  Resources & Guides
+                </h3>
+                <p className="text-secondary-600">
+                  Comprehensive guides on Nevada probate laws, timelines, costs, and procedures.
+                </p>
+                <div className="mt-4 flex items-center text-primary-600 font-medium">
+                  View Resources
+                  <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Latest Posts Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
+            Latest Articles
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Placeholder for blog posts - will be populated dynamically */}
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600"></div>
+              <div className="p-6">
+                <div className="flex items-center text-sm text-secondary-500 mb-2">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  <span>Coming Soon</span>
+                </div>
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                  Understanding Nevada Probate Timeline
+                </h3>
+                <p className="text-secondary-600 mb-4">
+                  Learn about Nevada's 6-8 month probate process and how it compares to other states.
+                </p>
+                <Link href="/blog/nevada-probate-timeline" className="text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                  Read More
+                  <ArrowRight className="h-4 w-4 ml-1" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-green-400 to-green-600"></div>
+              <div className="p-6">
+                <div className="flex items-center text-sm text-secondary-500 mb-2">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  <span>Coming Soon</span>
+                </div>
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                  Certificate of Incumbency Guide
+                </h3>
+                <p className="text-secondary-600 mb-4">
+                  Everything you need to know about Nevada's certificate of incumbency for trusts.
+                </p>
+                <Link href="/blog/certificate-of-incumbency" className="text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                  Read More
+                  <ArrowRight className="h-4 w-4 ml-1" />
+                </Link>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow">
+              <div className="h-48 bg-gradient-to-br from-purple-400 to-purple-600"></div>
+              <div className="p-6">
+                <div className="flex items-center text-sm text-secondary-500 mb-2">
+                  <Calendar className="h-4 w-4 mr-2" />
+                  <span>Coming Soon</span>
+                </div>
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                  Clark County Probate Court Procedures
+                </h3>
+                <p className="text-secondary-600 mb-4">
+                  Step-by-step guide to navigating Clark County probate court for property sales.
+                </p>
+                <Link href="/blog/clark-county-probate" className="text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                  Read More
+                  <ArrowRight className="h-4 w-4 ml-1" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-primary-600 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Have Questions About Probate Real Estate?
+          </h2>
+          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            Schedule a free consultation with our probate real estate experts today.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
+          >
+            Get Free Consultation
+            <ArrowRight className="h-5 w-5 ml-2" />
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}
+

@@ -156,7 +156,22 @@ export default function Footer() {
             <div className="text-secondary-400 text-sm mb-4 md:mb-0">
               © 2025 Nevada Probate Real Estate Sales. Comprehensive Real Estate Services by Dr. Jan Duffy S.0197614 All rights reserved.
             </div>
-            <div className="flex space-x-6 text-sm text-secondary-400">
+            <div className="flex flex-wrap gap-6 text-sm text-secondary-400">
+              <Link href="/about/" className="hover:text-white transition-colors">
+                About
+              </Link>
+              <Link href="/contact/" className="hover:text-white transition-colors">
+                Contact
+              </Link>
+              <Link href="/blog/" className="hover:text-white transition-colors">
+                Blog
+              </Link>
+              <Link href="/home-valuation/" className="hover:text-white transition-colors">
+                Home Valuation
+              </Link>
+              <Link href="/mortgage-calculator/" className="hover:text-white transition-colors">
+                Mortgage Calculator
+              </Link>
               <Link href="/privacy/" className="hover:text-white transition-colors">
                 Privacy Policy
               </Link>
