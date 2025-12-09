@@ -1,4 +1,4 @@
-import { Star, Quote, Home, Clock, DollarSign, Heart, Award } from 'lucide-react';
+import { Heart, Quote, Star } from 'lucide-react';
 import Image from 'next/image';
 
 const testimonials = [
@@ -6,62 +6,78 @@ const testimonials = [
     id: 1,
     name: 'The Anderson Family',
     role: 'Summerlin Estate',
-    emotionalSituation: 'After our mother passed, we were overwhelmed by the probate process and had three siblings with different opinions on what to do with Mom\'s house.',
-    specificAction: 'Dr. Duffy handled everything with compassion and professionalism, coordinating family meetings and mediating between all three siblings.',
-    specificResult: 'She sold Mom\'s house for $50,000 over asking price and completed the entire process in just 45 days.',
-    emotionalOutcome: 'Her expertise turned a difficult situation into a smooth process that brought our family closer together.',
+    emotionalSituation:
+      "After our mother passed, we were overwhelmed by the probate process and had three siblings with different opinions on what to do with Mom's house.",
+    specificAction:
+      'Dr. Duffy handled everything with compassion and professionalism, coordinating family meetings and mediating between all three siblings.',
+    specificResult:
+      "She sold Mom's house for $50,000 over asking price and completed the entire process in just 45 days.",
+    emotionalOutcome:
+      'Her expertise turned a difficult situation into a smooth process that brought our family closer together.',
     rating: 5,
     property: 'Summerlin Luxury Home',
     salePrice: '$750,000',
     marketValue: '$700,000',
     timeline: '45 days',
-    location: 'Summerlin, Las Vegas'
+    location: 'Summerlin, Las Vegas',
   },
   {
     id: 2,
     name: 'Robert Martinez',
     role: 'Executor, Henderson Property',
-    emotionalSituation: 'As executor of my uncle\'s estate, I needed someone who understood both the legal requirements and the real estate market.',
-    specificAction: 'Dr. Duffy\'s knowledge of probate law was invaluable. She coordinated with our attorney and handled all court requirements.',
-    specificResult: 'She sold the property in just 30 days for $425,000, which was $25,000 above the initial estate valuation.',
-    emotionalOutcome: 'I felt confident and supported throughout the entire process, knowing Dr. Duffy was handling everything professionally.',
+    emotionalSituation:
+      "As executor of my uncle's estate, I needed someone who understood both the legal requirements and the real estate market.",
+    specificAction:
+      "Dr. Duffy's knowledge of probate law was invaluable. She coordinated with our attorney and handled all court requirements.",
+    specificResult:
+      'She sold the property in just 30 days for $425,000, which was $25,000 above the initial estate valuation.',
+    emotionalOutcome:
+      'I felt confident and supported throughout the entire process, knowing Dr. Duffy was handling everything professionally.',
     rating: 5,
     property: 'Henderson Family Home',
     salePrice: '$425,000',
     marketValue: '$400,000',
     timeline: '30 days',
-    location: 'Henderson, NV'
+    location: 'Henderson, NV',
   },
   {
     id: 3,
     name: 'Jennifer & David Thompson',
     role: 'North Las Vegas Estate',
-    emotionalSituation: 'We inherited a property that needed significant repairs and were worried about the costs and timeline.',
-    specificAction: 'Dr. Duffy assessed the property, coordinated necessary repairs, and managed the entire renovation process.',
-    specificResult: 'The property sold for $380,000 after repairs, netting us $60,000 more than if we had sold it as-is.',
-    emotionalOutcome: 'Dr. Duffy\'s guidance gave us peace of mind during a stressful time, and the final result exceeded our expectations.',
+    emotionalSituation:
+      'We inherited a property that needed significant repairs and were worried about the costs and timeline.',
+    specificAction:
+      'Dr. Duffy assessed the property, coordinated necessary repairs, and managed the entire renovation process.',
+    specificResult:
+      'The property sold for $380,000 after repairs, netting us $60,000 more than if we had sold it as-is.',
+    emotionalOutcome:
+      "Dr. Duffy's guidance gave us peace of mind during a stressful time, and the final result exceeded our expectations.",
     rating: 5,
     property: 'North Las Vegas Family Home',
     salePrice: '$380,000',
     marketValue: '$320,000',
     timeline: '60 days',
-    location: 'North Las Vegas, NV'
+    location: 'North Las Vegas, NV',
   },
   {
     id: 4,
     name: 'The Williams Family',
     role: 'Boulder City Estate',
-    emotionalSituation: 'Our father\'s estate had multiple properties across different counties, and we were concerned about the complexity.',
-    specificAction: 'Dr. Duffy managed the sale of three properties simultaneously, coordinating with multiple courts and attorneys.',
-    specificResult: 'All three properties sold within 90 days, totaling $1.2M in sales with an average of 18% above initial valuations.',
-    emotionalOutcome: 'Dr. Duffy\'s expertise in multi-property estates saved us months of stress and maximized our inheritance.',
+    emotionalSituation:
+      "Our father's estate had multiple properties across different counties, and we were concerned about the complexity.",
+    specificAction:
+      'Dr. Duffy managed the sale of three properties simultaneously, coordinating with multiple courts and attorneys.',
+    specificResult:
+      'All three properties sold within 90 days, totaling $1.2M in sales with an average of 18% above initial valuations.',
+    emotionalOutcome:
+      "Dr. Duffy's expertise in multi-property estates saved us months of stress and maximized our inheritance.",
     rating: 5,
     property: 'Multi-Property Estate',
     salePrice: '$1.2M',
     marketValue: '$1.02M',
     timeline: '90 days',
-    location: 'Boulder City, Henderson, Las Vegas'
-  }
+    location: 'Boulder City, Henderson, Las Vegas',
+  },
 ];
 
 export default function Testimonials() {
@@ -78,8 +94,8 @@ export default function Testimonials() {
             Families Trust Dr. Jan Duffy During Difficult Times
           </h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Real stories from real families who have experienced Dr. Duffy's compassionate, 
-            expert guidance through the probate process.
+            Real stories from real families who have experienced Dr. Duffy's compassionate, expert
+            guidance through the probate process.
           </p>
         </div>
 
@@ -92,15 +108,22 @@ export default function Testimonials() {
                   Trusted by Hundreds of Families
                 </h3>
                 <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
-                  Dr. Jan Duffy's compassionate approach and proven expertise have helped countless families 
-                  navigate the complex probate process with confidence. Her dedication to maximizing property 
-                  value while minimizing stress has earned her the trust of Las Vegas probate courts and families alike.
+                  Dr. Jan Duffy's compassionate approach and proven expertise have helped countless
+                  families navigate the complex probate process with confidence. Her dedication to
+                  maximizing property value while minimizing stress has earned her the trust of Las
+                  Vegas probate courts and families alike.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                  <a href="http://drjanduffy.realscout.com/onboarding" className="btn-primary inline-flex items-center justify-center">
+                  <a
+                    href="http://drjanduffy.realscout.com/onboarding"
+                    className="btn-primary inline-flex items-center justify-center"
+                  >
                     Get Your Free Consultation
                   </a>
-                  <a href="tel:+1-702-830-9222" className="btn-outline inline-flex items-center justify-center">
+                  <a
+                    href="tel:+1-702-830-9222"
+                    className="btn-outline inline-flex items-center justify-center"
+                  >
                     Call (702) 830-9222
                   </a>
                 </div>
@@ -133,14 +156,14 @@ export default function Testimonials() {
               <div className="absolute top-6 right-6">
                 <Quote className="h-8 w-8 text-primary-200" />
               </div>
-              
+
               {/* Rating */}
               <div className="flex items-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star key={`star-${star}`} className="h-5 w-5 text-accent-500 fill-current" />
                 ))}
               </div>
-              
+
               {/* Testimonial Structure */}
               <div className="space-y-4 mb-6">
                 <div className="bg-red-50 p-4 rounded-lg border border-red-200">
@@ -149,21 +172,21 @@ export default function Testimonials() {
                     {testimonial.emotionalSituation}
                   </p>
                 </div>
-                
+
                 <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
                   <h4 className="font-semibold text-blue-800 mb-2">Dr. Duffy's Solution:</h4>
                   <p className="text-blue-700 text-sm leading-relaxed">
                     {testimonial.specificAction}
                   </p>
                 </div>
-                
+
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <h4 className="font-semibold text-green-800 mb-2">The Result:</h4>
                   <p className="text-green-700 text-sm leading-relaxed">
                     {testimonial.specificResult}
                   </p>
                 </div>
-                
+
                 <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
                   <h4 className="font-semibold text-purple-800 mb-2">The Outcome:</h4>
                   <p className="text-purple-700 text-sm leading-relaxed">
@@ -171,7 +194,7 @@ export default function Testimonials() {
                   </p>
                 </div>
               </div>
-              
+
               {/* Property Details */}
               <div className="bg-secondary-50 rounded-lg p-4 mb-6">
                 <div className="grid grid-cols-2 gap-4 text-sm">
@@ -193,7 +216,7 @@ export default function Testimonials() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Author */}
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
@@ -216,11 +239,9 @@ export default function Testimonials() {
             <h3 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
               Dr. Duffy's Proven Results
             </h3>
-            <p className="text-lg text-secondary-600">
-              Our track record speaks for itself
-            </p>
+            <p className="text-lg text-secondary-600">Our track record speaks for itself</p>
           </div>
-          
+
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">$150M+</div>
@@ -248,14 +269,17 @@ export default function Testimonials() {
               See More Success Stories
             </h3>
             <p className="text-lg text-secondary-600 mb-6 max-w-2xl mx-auto">
-              Watch video testimonials from families who have worked with Dr. Duffy 
-              and see the difference expert probate guidance makes.
+              Watch video testimonials from families who have worked with Dr. Duffy and see the
+              difference expert probate guidance makes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#video-testimonials" className="btn-primary inline-block">
                 Watch Video Testimonials
               </a>
-              <a href="http://drjanduffy.realscout.com/onboarding" className="btn-outline inline-block">
+              <a
+                href="http://drjanduffy.realscout.com/onboarding"
+                className="btn-outline inline-block"
+              >
                 Schedule Free Consultation
               </a>
             </div>

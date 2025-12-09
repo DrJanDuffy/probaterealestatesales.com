@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, Send } from 'lucide-react';
+import { Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 import Image from 'next/image';
 
 export default function ContactSection() {
@@ -7,12 +7,10 @@ export default function ContactSection() {
       <div className="container-max">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-            Get in Touch
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">Get in Touch</h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Ready to discuss your probate real estate needs? Contact us for a free, 
-            no-obligation consultation.
+            Ready to discuss your probate real estate needs? Contact us for a free, no-obligation
+            consultation.
           </p>
         </div>
 
@@ -25,15 +23,22 @@ export default function ContactSection() {
                   Personal Attention to Every Client
                 </h3>
                 <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
-                  Dr. Jan Duffy personally handles every probate case, ensuring you receive the expert 
-                  guidance and compassionate support you deserve during this challenging time. 
-                  Her direct involvement means faster results and better outcomes for your family.
+                  Dr. Jan Duffy personally handles every probate case, ensuring you receive the
+                  expert guidance and compassionate support you deserve during this challenging
+                  time. Her direct involvement means faster results and better outcomes for your
+                  family.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                  <a href="tel:+1-702-830-9222" className="btn-primary inline-flex items-center justify-center">
+                  <a
+                    href="tel:+1-702-830-9222"
+                    className="btn-primary inline-flex items-center justify-center"
+                  >
                     Call Dr. Duffy Directly
                   </a>
-                  <a href="http://drjanduffy.realscout.com/onboarding" className="btn-outline inline-flex items-center justify-center">
+                  <a
+                    href="http://drjanduffy.realscout.com/onboarding"
+                    className="btn-outline inline-flex items-center justify-center"
+                  >
                     Schedule Free Consultation
                   </a>
                 </div>
@@ -61,14 +66,15 @@ export default function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
           <div className="bg-secondary-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-semibold text-secondary-900 mb-6">
-              Send us a Message
-            </h3>
-            
+            <h3 className="text-2xl font-semibold text-secondary-900 mb-6">Send us a Message</h3>
+
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     First Name *
                   </label>
                   <input
@@ -81,7 +87,10 @@ export default function ContactSection() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     Last Name *
                   </label>
                   <input
@@ -94,9 +103,12 @@ export default function ContactSection() {
                   />
                 </div>
               </div>
-              
+
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Email Address *
                 </label>
                 <input
@@ -108,9 +120,12 @@ export default function ContactSection() {
                   placeholder="Enter your email address"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Phone Number
                 </label>
                 <input
@@ -121,9 +136,12 @@ export default function ContactSection() {
                   placeholder="Enter your phone number"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="propertyAddress" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="propertyAddress"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Property Address
                 </label>
                 <input
@@ -134,9 +152,12 @@ export default function ContactSection() {
                   placeholder="Enter the property address (if known)"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Message *
                 </label>
                 <textarea
@@ -148,7 +169,7 @@ export default function ContactSection() {
                   placeholder="Tell us about your situation and how we can help..."
                 />
               </div>
-              
+
               <button type="submit" className="btn-primary w-full group">
                 Send Message
                 <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -162,7 +183,7 @@ export default function ContactSection() {
               <h3 className="text-2xl font-semibold text-secondary-900 mb-6">
                 Contact Information
               </h3>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary-100 rounded-full">
@@ -174,7 +195,7 @@ export default function ContactSection() {
                     <p className="text-sm text-secondary-500">Available 24/7 for urgent matters</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-accent-100 rounded-full">
                     <Mail className="h-6 w-6 text-accent-600" />
@@ -185,7 +206,7 @@ export default function ContactSection() {
                     <p className="text-sm text-secondary-500">We respond within 2 hours</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-secondary-100 rounded-full">
                     <MapPin className="h-6 w-6 text-secondary-600" />
@@ -197,7 +218,7 @@ export default function ContactSection() {
                     <p className="text-secondary-600">Las Vegas, NV 89101</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary-100 rounded-full">
                     <Clock className="h-6 w-6 text-primary-600" />
@@ -211,7 +232,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            
+
             {/* Emergency Contact */}
             <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl p-6">
               <h4 className="text-lg font-semibold text-secondary-900 mb-3">

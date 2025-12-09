@@ -1,32 +1,46 @@
+import { ArrowRight, Calculator, DollarSign, Home, Phone, TrendingUp } from 'lucide-react';
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { Calculator, TrendingUp, DollarSign, Home, Phone, ArrowRight } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import SchemaMarkup from '@/components/SchemaMarkup';
+
+const FAQ = dynamic(() => import('@/components/FAQ'), {
+  loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
+});
 
 export const metadata: Metadata = {
   title: 'Free Home Valuation & CMA | Probate Property Value Assessment | Las Vegas',
-  description: 'Get a free home valuation and comparative market analysis (CMA) for your probate property in Las Vegas. Expert property value assessment by probate realtor. Understand your inherited property worth today. Free consultation: (702) 830-9222',
-  keywords: 'comparative market analysis, CMA, home valuation, property value assessment, probate property valuation, Las Vegas home appraisal, free home estimate, probate property CMA',
+  description:
+    'Get a free home valuation and comparative market analysis (CMA) for your probate property in Las Vegas. Expert property value assessment by probate realtor. Understand your inherited property worth today. Free consultation: (702) 830-9222',
+  keywords:
+    'comparative market analysis, CMA, home valuation, property value assessment, probate property valuation, Las Vegas home appraisal, free home estimate, probate property CMA',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/home-valuation/',
   },
   openGraph: {
     title: 'Free Home Valuation & CMA | Probate Property Value Assessment | Las Vegas',
-    description: 'Get a free home valuation and comparative market analysis (CMA) for your probate property in Las Vegas. Expert property value assessment by probate realtor.',
+    description:
+      'Get a free home valuation and comparative market analysis (CMA) for your probate property in Las Vegas. Expert property value assessment by probate realtor.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/home-valuation/',
   },
 };
 
 export default function HomeValuationPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Home Valuation', url: '/home-valuation/' },
+  ];
+
   return (
     <main className="min-h-screen bg-gray-50">
+      <Breadcrumb items={breadcrumbs.slice(1)} />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Calculator className="h-16 w-16 mx-auto mb-6" />
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Free Home Valuation
-          </h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Free Home Valuation</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Get an accurate estimate of your probate property's value in Las Vegas, Nevada.
           </p>
@@ -41,13 +55,18 @@ export default function HomeValuationPage() {
               Request Your Free Property Valuation & Comparative Market Analysis (CMA)
             </h2>
             <p className="text-secondary-600 text-center mb-8">
-              Fill out the form below and our probate real estate experts will provide you with a comprehensive property valuation and comparative market analysis (CMA) to help you understand your probate property's fair market value.
+              Fill out the form below and our probate real estate experts will provide you with a
+              comprehensive property valuation and comparative market analysis (CMA) to help you
+              understand your probate property's fair market value.
             </p>
 
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="propertyAddress" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="propertyAddress"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     Property Address *
                   </label>
                   <input
@@ -60,7 +79,10 @@ export default function HomeValuationPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="city" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="city"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     City *
                   </label>
                   <select
@@ -84,7 +106,10 @@ export default function HomeValuationPage() {
 
               <div className="grid md:grid-cols-3 gap-6">
                 <div>
-                  <label htmlFor="zipCode" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="zipCode"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     ZIP Code *
                   </label>
                   <input
@@ -97,7 +122,10 @@ export default function HomeValuationPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="propertyType" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="propertyType"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     Property Type *
                   </label>
                   <select
@@ -115,7 +143,10 @@ export default function HomeValuationPage() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="bedrooms" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="bedrooms"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     Bedrooms
                   </label>
                   <input
@@ -131,7 +162,10 @@ export default function HomeValuationPage() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="bathrooms" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="bathrooms"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     Bathrooms
                   </label>
                   <input
@@ -145,7 +179,10 @@ export default function HomeValuationPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="squareFeet" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="squareFeet"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     Square Feet
                   </label>
                   <input
@@ -160,7 +197,10 @@ export default function HomeValuationPage() {
               </div>
 
               <div>
-                <label htmlFor="yearBuilt" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="yearBuilt"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Year Built
                 </label>
                 <input
@@ -176,7 +216,10 @@ export default function HomeValuationPage() {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="ownerName" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="ownerName"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     Your Name *
                   </label>
                   <input
@@ -188,7 +231,10 @@ export default function HomeValuationPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     Phone Number *
                   </label>
                   <input
@@ -202,7 +248,10 @@ export default function HomeValuationPage() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Email Address *
                 </label>
                 <input
@@ -215,7 +264,10 @@ export default function HomeValuationPage() {
               </div>
 
               <div>
-                <label htmlFor="notes" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="notes"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Additional Information
                 </label>
                 <textarea
@@ -254,16 +306,16 @@ export default function HomeValuationPage() {
                 Accurate Market Value
               </h3>
               <p className="text-secondary-600">
-                Get an accurate estimate based on current Las Vegas real estate market conditions and comparable sales.
+                Get an accurate estimate based on current Las Vegas real estate market conditions
+                and comparable sales.
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-md">
               <DollarSign className="h-12 w-12 text-green-600 mb-4" />
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">
-                Maximize Sale Price
-              </h3>
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Maximize Sale Price</h3>
               <p className="text-secondary-600">
-                Understand your property's worth to price it competitively and maximize your sale proceeds.
+                Understand your property's worth to price it competitively and maximize your sale
+                proceeds.
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-md">
@@ -272,8 +324,35 @@ export default function HomeValuationPage() {
                 Probate-Specific Insights
               </h3>
               <p className="text-secondary-600">
-                Our valuations consider probate-specific factors and timelines that affect property value.
+                Our valuations consider probate-specific factors and timelines that affect property
+                value.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-secondary-900 mb-4">
+                Frequently Asked Questions About Property Valuation
+              </h2>
+              <p className="text-xl text-secondary-600">
+                Common questions about probate property valuation and CMA
+              </p>
+            </div>
+            <FAQ />
+            <div className="text-center mt-8">
+              <Link
+                href="/faq"
+                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold"
+              >
+                View All FAQs
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </div>
@@ -282,9 +361,7 @@ export default function HomeValuationPage() {
       {/* CTA Section */}
       <section className="py-16 bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Need Immediate Assistance?
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Need Immediate Assistance?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
             Call us directly at (702) 830-9222 for a free consultation and property valuation.
           </p>
@@ -297,7 +374,7 @@ export default function HomeValuationPage() {
           </a>
         </div>
       </section>
+      <SchemaMarkup type="faq" breadcrumbs={breadcrumbs} />
     </main>
   );
 }
-

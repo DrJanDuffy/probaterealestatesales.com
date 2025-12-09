@@ -1,18 +1,40 @@
+import {
+  ArrowRight,
+  Building,
+  Calendar,
+  Car,
+  Clock,
+  DollarSign,
+  Home,
+  MapPin,
+  Mountain,
+  Phone,
+  TreePine,
+  Users,
+} from 'lucide-react';
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { MapPin, Clock, DollarSign, Users, Phone, Mail, Calendar, Home, TreePine, Mountain, Car, Building } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
+
+const FAQ = dynamic(() => import('@/components/FAQ'), {
+  loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
+});
 
 export const metadata: Metadata = {
   title: 'North Las Vegas Probate Real Estate Services | Aliante & Centennial Hills',
-  description: 'Expert probate real estate services in North Las Vegas, Nevada. Fast 45-day probate process vs 6-8 months. Free consultation: (702) 830-9222',
-  keywords: 'North Las Vegas probate real estate, Aliante probate, Centennial Hills probate, Nevada probate timeline, Clark County probate court',
+  description:
+    'Expert probate real estate services in North Las Vegas, Nevada. Fast 45-day probate process vs 6-8 months. Free consultation: (702) 830-9222',
+  keywords:
+    'North Las Vegas probate real estate, Aliante probate, Centennial Hills probate, Nevada probate timeline, Clark County probate court',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/locations/north-las-vegas/',
   },
   openGraph: {
     title: 'North Las Vegas Probate Real Estate Services | Aliante & Centennial Hills',
-    description: 'Expert probate real estate services in North Las Vegas with 6-8 month timeline. Free consultation available.',
+    description:
+      'Expert probate real estate services in North Las Vegas with 6-8 month timeline. Free consultation available.',
     type: 'website',
     locale: 'en_US',
     url: 'https://www.probaterealestatesales.com/locations/north-las-vegas/',
@@ -20,10 +42,17 @@ export const metadata: Metadata = {
 };
 
 export default function NorthLasVegasPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Locations', url: '/locations/' },
+    { name: 'North Las Vegas', url: '/locations/north-las-vegas/' },
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <SchemaMarkup type="location" location="North Las Vegas" />
-      
+      <Breadcrumb items={breadcrumbs.slice(1)} />
+      <SchemaMarkup type="faq" location="North Las Vegas" breadcrumbs={breadcrumbs} />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -31,8 +60,8 @@ export default function NorthLasVegasPage() {
             North Las Vegas Probate Real Estate Services
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
-            Expert probate real estate services in North Las Vegas, Nevada. 
-            Aliante and Centennial Hills probate property expertise with Nevada's fastest timeline.
+            Expert probate real estate services in North Las Vegas, Nevada. Aliante and Centennial
+            Hills probate property expertise with Nevada's fastest timeline.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <div className="flex items-center gap-2">
@@ -60,38 +89,51 @@ export default function NorthLasVegasPage() {
                 North Las Vegas Probate Real Estate Expertise
               </h2>
               <p className="text-lg text-gray-600 mb-6">
-                North Las Vegas offers unique advantages for probate real estate sales. As one of Nevada's fastest-growing areas, it combines master-planned communities with excellent probate court access through Clark County's efficient system.
+                North Las Vegas offers unique advantages for probate real estate sales. As one of
+                Nevada's fastest-growing areas, it combines master-planned communities with
+                excellent probate court access through Clark County's efficient system.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <Home className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Master-Planned Communities</h3>
-                    <p className="text-gray-600">Aliante and Centennial Hills offer excellent probate property opportunities in well-designed, family-friendly neighborhoods.</p>
+                    <p className="text-gray-600">
+                      Aliante and Centennial Hills offer excellent probate property opportunities in
+                      well-designed, family-friendly neighborhoods.
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
                   <Mountain className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Mountain Views & Open Space</h3>
-                    <p className="text-gray-600">Properties with mountain views and access to open spaces provide unique probate real estate opportunities.</p>
+                    <p className="text-gray-600">
+                      Properties with mountain views and access to open spaces provide unique
+                      probate real estate opportunities.
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
                   <Car className="h-6 w-6 text-blue-600 mt-1" />
                   <div>
                     <h3 className="font-semibold text-gray-900">Convenient Access</h3>
-                    <p className="text-gray-600">Easy access to major highways and Las Vegas amenities while maintaining a suburban feel.</p>
+                    <p className="text-gray-600">
+                      Easy access to major highways and Las Vegas amenities while maintaining a
+                      suburban feel.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-gray-100 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">North Las Vegas Probate Timeline</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                North Las Vegas Probate Timeline
+              </h3>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">Court Filing</span>
@@ -110,11 +152,12 @@ export default function NorthLasVegasPage() {
                   <span className="font-semibold">Month 6-8</span>
                 </div>
               </div>
-              
+
               <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                 <p className="text-sm text-blue-800">
-                  <strong>Note:</strong> North Las Vegas probate timeline is 6-8 months vs California's 9-18 months. 
-                  Get your inheritance faster with Nevada's efficient process.
+                  <strong>Note:</strong> North Las Vegas probate timeline is 6-8 months vs
+                  California's 9-18 months. Get your inheritance faster with Nevada's efficient
+                  process.
                 </p>
               </div>
             </div>
@@ -130,15 +173,17 @@ export default function NorthLasVegasPage() {
               North Las Vegas Neighborhoods & Probate Real Estate
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Expert probate real estate services across North Las Vegas's most desirable neighborhoods
+              Expert probate real estate services across North Las Vegas's most desirable
+              neighborhoods
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Aliante</h3>
               <p className="text-gray-600 mb-4">
-                Master-planned community with golf course, parks, and family homes. Excellent probate property opportunities.
+                Master-planned community with golf course, parks, and family homes. Excellent
+                probate property opportunities.
               </p>
               <div className="space-y-2 text-sm text-gray-600">
                 <div>• Golf course community</div>
@@ -147,11 +192,12 @@ export default function NorthLasVegasPage() {
                 <div>• Shopping and dining</div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Centennial Hills</h3>
               <p className="text-gray-600 mb-4">
-                Upscale community with mountain views and luxury homes. High-end probate real estate opportunities.
+                Upscale community with mountain views and luxury homes. High-end probate real estate
+                opportunities.
               </p>
               <div className="space-y-2 text-sm text-gray-600">
                 <div>• Mountain views</div>
@@ -160,11 +206,12 @@ export default function NorthLasVegasPage() {
                 <div>• Privacy and views</div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Skye Canyon</h3>
               <p className="text-gray-600 mb-4">
-                Modern community with new construction and outdoor lifestyle focus. Newer probate properties available.
+                Modern community with new construction and outdoor lifestyle focus. Newer probate
+                properties available.
               </p>
               <div className="space-y-2 text-sm text-gray-600">
                 <div>• New construction</div>
@@ -173,11 +220,12 @@ export default function NorthLasVegasPage() {
                 <div>• Growing community</div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Tule Springs</h3>
               <p className="text-gray-600 mb-4">
-                Nature-focused community with hiking trails and open spaces. Unique probate property options.
+                Nature-focused community with hiking trails and open spaces. Unique probate property
+                options.
               </p>
               <div className="space-y-2 text-sm text-gray-600">
                 <div>• Hiking trails</div>
@@ -186,11 +234,12 @@ export default function NorthLasVegasPage() {
                 <div>• Active lifestyle</div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Craig Ranch</h3>
               <p className="text-gray-600 mb-4">
-                Established community with mature landscaping and family homes. Great probate property options.
+                Established community with mature landscaping and family homes. Great probate
+                property options.
               </p>
               <div className="space-y-2 text-sm text-gray-600">
                 <div>• Mature landscaping</div>
@@ -199,11 +248,12 @@ export default function NorthLasVegasPage() {
                 <div>• Convenient location</div>
               </div>
             </div>
-            
+
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold text-gray-900 mb-3">Eldorado</h3>
               <p className="text-gray-600 mb-4">
-                Historic area with established homes and convenient access. Established probate real estate market.
+                Historic area with established homes and convenient access. Established probate real
+                estate market.
               </p>
               <div className="space-y-2 text-sm text-gray-600">
                 <div>• Historic area</div>
@@ -227,7 +277,7 @@ export default function NorthLasVegasPage() {
               Understanding the area's development for better inherited property valuation
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-blue-50 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Development Trends</h3>
@@ -236,28 +286,34 @@ export default function NorthLasVegasPage() {
                   <Building className="h-6 w-6 text-blue-600" />
                   <div>
                     <p className="font-semibold text-gray-900">New Construction</p>
-                    <p className="text-gray-600">Ongoing development creating new probate opportunities</p>
+                    <p className="text-gray-600">
+                      Ongoing development creating new probate opportunities
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-3">
                   <Home className="h-6 w-6 text-blue-600" />
                   <div>
                     <p className="font-semibold text-gray-900">Property Values</p>
-                    <p className="text-gray-600">Understanding of how development affects property values</p>
+                    <p className="text-gray-600">
+                      Understanding of how development affects property values
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-3">
                   <TreePine className="h-6 w-6 text-blue-600" />
                   <div>
                     <p className="font-semibold text-gray-900">Future Planning</p>
-                    <p className="text-gray-600">Knowledge of planned developments and infrastructure</p>
+                    <p className="text-gray-600">
+                      Knowledge of planned developments and infrastructure
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-blue-50 p-8 rounded-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Market Advantages</h3>
               <div className="space-y-4">
@@ -268,7 +324,7 @@ export default function NorthLasVegasPage() {
                     <p className="text-gray-600">Increasing demand for properties in the area</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-3">
                   <Car className="h-6 w-6 text-blue-600" />
                   <div>
@@ -276,7 +332,7 @@ export default function NorthLasVegasPage() {
                     <p className="text-gray-600">Easy access to major highways and Las Vegas</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-3">
                   <Mountain className="h-6 w-6 text-blue-600" />
                   <div>
@@ -298,10 +354,11 @@ export default function NorthLasVegasPage() {
               Clark County Probate Court Access
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              North Las Vegas residents have convenient access to Clark County's efficient probate court system
+              North Las Vegas residents have convenient access to Clark County's efficient probate
+              court system
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Court Details</h3>
@@ -309,11 +366,13 @@ export default function NorthLasVegasPage() {
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-blue-600" />
                   <div>
-                    <p className="font-semibold text-gray-900">Clark County Regional Justice Center</p>
+                    <p className="font-semibold text-gray-900">
+                      Clark County Regional Justice Center
+                    </p>
                     <p className="text-gray-600">200 Lewis Ave, Las Vegas, NV 89101</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-blue-600" />
                   <div>
@@ -321,17 +380,19 @@ export default function NorthLasVegasPage() {
                     <p className="text-gray-600">(702) 671-4500</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center gap-3">
                   <Calendar className="h-5 w-5 text-blue-600" />
                   <div>
                     <p className="font-semibold text-gray-900">Probate Commissioners</p>
-                    <p className="text-gray-600">James Fontana (Fridays), Russell Geis (Wednesdays 9:30 AM)</p>
+                    <p className="text-gray-600">
+                      James Fontana (Fridays), Russell Geis (Wednesdays 9:30 AM)
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            
+
             <div className="bg-white p-8 rounded-lg shadow-lg">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Court Costs & Fees</h3>
               <div className="space-y-4">
@@ -352,11 +413,11 @@ export default function NorthLasVegasPage() {
                   <span className="font-semibold text-blue-600">$750</span>
                 </div>
               </div>
-              
+
               <div className="mt-6 p-4 bg-blue-50 rounded-lg">
                 <p className="text-sm text-blue-800">
-                  <strong>North Las Vegas Advantage:</strong> Same Clark County court system as Las Vegas, 
-                  with the same efficient 6-8 month timeline and $1,000 court costs.
+                  <strong>North Las Vegas Advantage:</strong> Same Clark County court system as Las
+                  Vegas, with the same efficient 6-8 month timeline and $1,000 court costs.
                 </p>
               </div>
             </div>
@@ -372,20 +433,20 @@ export default function NorthLasVegasPage() {
               Current Las Vegas Properties Available
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Browse our current inventory of properties in the Las Vegas area. 
-              These properties are available for immediate purchase with our expert guidance.
+              Browse our current inventory of properties in the Las Vegas area. These properties are
+              available for immediate purchase with our expert guidance.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-            <realscout-office-listings 
-              agent-encoded-id="QWdlbnQtMjI1MDUw" 
-              sort-order="PRICE_LOW" 
-              listing-status="For Sale,For Rent" 
-              property-types="MF,SFR,OTHER,LAL" 
-              price-min="500000" 
-              price-max="750000">
-            </realscout-office-listings>
+            <realscout-office-listings
+              agent-encoded-id="QWdlbnQtMjI1MDUw"
+              sort-order="PRICE_LOW"
+              listing-status="For Sale,For Rent"
+              property-types="MF,SFR,OTHER,LAL"
+              price-min="500000"
+              price-max="750000"
+            ></realscout-office-listings>
           </div>
         </div>
       </section>
@@ -397,8 +458,8 @@ export default function NorthLasVegasPage() {
             Ready to Start Your North Las Vegas Probate Process?
           </h2>
           <p className="text-xl mb-8">
-            Get a free consultation and learn how Nevada's faster probate timeline 
-            can help you sell inherited property in North Las Vegas quickly.
+            Get a free consultation and learn how Nevada's faster probate timeline can help you sell
+            inherited property in North Las Vegas quickly.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -417,13 +478,36 @@ export default function NorthLasVegasPage() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions About North Las Vegas Probate
+              </h2>
+              <p className="text-xl text-gray-600">
+                Common questions about probate real estate in North Las Vegas, Nevada
+              </p>
+            </div>
+            <FAQ />
+            <div className="text-center mt-8">
+              <Link
+                href="/faq"
+                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+              >
+                View All FAQs
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Back to Locations */}
       <section className="py-8 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Link
-            href="/locations"
-            className="text-blue-600 hover:text-blue-800 font-semibold"
-          >
+          <Link href="/locations" className="text-blue-600 hover:text-blue-800 font-semibold">
             ← Back to All Nevada Locations
           </Link>
         </div>

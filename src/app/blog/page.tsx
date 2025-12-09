@@ -1,25 +1,36 @@
+import { ArrowRight, BookOpen, Calendar, TrendingUp, Video } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, User, ArrowRight, Video, TrendingUp, BookOpen } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Probate Properties Blog | Las Vegas Probate Real Estate News & Market Updates',
-  description: 'Stay informed about probate properties in Las Vegas. Read expert blog posts on probate homes, watch probate videos, and get the latest market updates from Dr. Jan Duffy. Free resources for probate property buyers and sellers.',
-  keywords: 'probate properties, probate homes, probate real estate blog, probate videos, Las Vegas probate properties, probate news, estate sales information, probate property listings',
+  description:
+    'Stay informed about probate properties in Las Vegas. Read expert blog posts on probate homes, watch probate videos, and get the latest market updates from Dr. Jan Duffy. Free resources for probate property buyers and sellers.',
+  keywords:
+    'probate properties, probate homes, probate real estate blog, probate videos, Las Vegas probate properties, probate news, estate sales information, probate property listings',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/blog/',
   },
   openGraph: {
     title: 'Probate Properties Blog | Las Vegas Probate Real Estate News & Market Updates',
-    description: 'Stay informed about probate properties in Las Vegas. Read expert blog posts on probate homes, watch probate videos, and get the latest market updates.',
+    description:
+      'Stay informed about probate properties in Las Vegas. Read expert blog posts on probate homes, watch probate videos, and get the latest market updates.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/blog/',
   },
 };
 
 export default function BlogPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog/' },
+  ];
+
   return (
     <main className="min-h-screen bg-gray-50">
+      <Breadcrumb items={breadcrumbs.slice(1)} />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -27,7 +38,8 @@ export default function BlogPage() {
             Probate Real Estate Blog & Resources
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Stay informed with the latest probate real estate news, market updates, and educational videos.
+            Stay informed with the latest probate real estate news, market updates, and educational
+            videos.
           </p>
         </div>
       </section>
@@ -43,7 +55,8 @@ export default function BlogPage() {
                   Probate Videos
                 </h3>
                 <p className="text-secondary-600">
-                  Watch educational videos about probate real estate processes, timelines, and best practices.
+                  Watch educational videos about probate real estate processes, timelines, and best
+                  practices.
                 </p>
                 <div className="mt-4 flex items-center text-primary-600 font-medium">
                   Watch Videos
@@ -106,9 +119,13 @@ export default function BlogPage() {
                   Understanding Nevada Probate Timeline
                 </h3>
                 <p className="text-secondary-600 mb-4">
-                  Learn about Nevada's 6-8 month probate process and how it compares to other states.
+                  Learn about Nevada's 6-8 month probate process and how it compares to other
+                  states.
                 </p>
-                <Link href="/blog/nevada-probate-timeline" className="text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                <Link
+                  href="/blog/nevada-probate-timeline"
+                  className="text-primary-600 hover:text-primary-800 font-medium flex items-center"
+                >
                   Read More
                   <ArrowRight className="h-4 w-4 ml-1" />
                 </Link>
@@ -128,7 +145,10 @@ export default function BlogPage() {
                 <p className="text-secondary-600 mb-4">
                   Everything you need to know about Nevada's certificate of incumbency for trusts.
                 </p>
-                <Link href="/blog/certificate-of-incumbency" className="text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                <Link
+                  href="/blog/certificate-of-incumbency"
+                  className="text-primary-600 hover:text-primary-800 font-medium flex items-center"
+                >
                   Read More
                   <ArrowRight className="h-4 w-4 ml-1" />
                 </Link>
@@ -148,7 +168,10 @@ export default function BlogPage() {
                 <p className="text-secondary-600 mb-4">
                   Step-by-step guide to navigating Clark County probate court for property sales.
                 </p>
-                <Link href="/blog/clark-county-probate" className="text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                <Link
+                  href="/blog/clark-county-probate"
+                  className="text-primary-600 hover:text-primary-800 font-medium flex items-center"
+                >
                   Read More
                   <ArrowRight className="h-4 w-4 ml-1" />
                 </Link>
@@ -161,9 +184,7 @@ export default function BlogPage() {
       {/* CTA Section */}
       <section className="py-16 bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Have Questions About Probate Real Estate?
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Have Questions About Probate Real Estate?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
             Schedule a free consultation with our probate real estate experts today.
           </p>
@@ -179,4 +200,3 @@ export default function BlogPage() {
     </main>
   );
 }
-

@@ -1,24 +1,36 @@
 // Import components for SEO and schema markup
-import SEOMetaTags from '@/components/SEOMetaTags';
-import SchemaMarkup from '@/components/SchemaMarkup';
-import { 
-  Gavel, 
-  Clock, 
-  DollarSign, 
-  MapPin, 
-  Phone, 
-  CheckCircle, 
-  AlertTriangle,
-  FileText,
-  Calculator,
-  Calendar,
+
+import {
+  ArrowRight,
   Building,
-  Users
+  CheckCircle,
+  Clock,
+  DollarSign,
+  Gavel,
+  MapPin,
+  Phone,
+  Users,
 } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
+import SchemaMarkup from '@/components/SchemaMarkup';
+import SEOMetaTags from '@/components/SEOMetaTags';
+
+const FAQ = dynamic(() => import('@/components/FAQ'), {
+  loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
+});
 
 export default function LasVegasProbateGuide() {
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Resources', url: '/resources/' },
+    { name: 'Las Vegas Probate Guide', url: '/resources/las-vegas-probate-guide/' },
+  ];
+
   return (
     <>
+      <Breadcrumb items={breadcrumbs.slice(1)} />
       <SEOMetaTags
         title="Las Vegas Probate Real Estate Guide 2025"
         description="Complete guide to probate real estate in Las Vegas, Nevada. Learn about court procedures, timelines, costs, and how to sell inherited property in Clark County. Free consultation available."
@@ -30,7 +42,7 @@ export default function LasVegasProbateGuide() {
           'probate property sales',
           'Las Vegas estate liquidation',
           'Clark County probate process',
-          'Nevada probate costs'
+          'Nevada probate costs',
         ]}
         canonicalUrl="https://www.probaterealestatesales.com/resources/las-vegas-probate-guide/"
         ogType="article"
@@ -39,45 +51,47 @@ export default function LasVegasProbateGuide() {
         articleSection="Probate Guides"
         articleTags={['Las Vegas', 'Probate', 'Real Estate', 'Nevada', 'Clark County']}
       />
-      
-      <SchemaMarkup 
-        type="article"
+
+      <SchemaMarkup
+        type="faq"
+        breadcrumbs={breadcrumbs}
         article={{
-          headline: "Las Vegas Probate Real Estate Guide 2025",
-          description: "Complete guide to probate real estate in Las Vegas, Nevada including court procedures, timelines, and costs.",
-          author: "Dr. Janet Duffy",
-          datePublished: "2025-01-01T00:00:00Z",
+          headline: 'Las Vegas Probate Real Estate Guide 2025',
+          description:
+            'Complete guide to probate real estate in Las Vegas, Nevada including court procedures, timelines, and costs.',
+          author: 'Dr. Janet Duffy',
+          datePublished: '2025-01-01T00:00:00Z',
           dateModified: new Date().toISOString(),
-          url: "https://www.probaterealestatesales.com/resources/las-vegas-probate-guide",
-          image: "https://www.probaterealestatesales.com/images/las-vegas-probate-guide.jpg"
+          url: 'https://www.probaterealestatesales.com/resources/las-vegas-probate-guide',
+          image: 'https://www.probaterealestatesales.com/images/las-vegas-probate-guide.jpg',
         }}
         customSchema={{
-          "@context": "https://schema.org",
-          "@type": "HowTo",
-          "name": "How to Navigate Las Vegas Probate Real Estate",
-          "description": "Step-by-step guide to probate real estate in Las Vegas, Nevada",
-          "step": [
+          '@context': 'https://schema.org',
+          '@type': 'HowTo',
+          name: 'How to Navigate Las Vegas Probate Real Estate',
+          description: 'Step-by-step guide to probate real estate in Las Vegas, Nevada',
+          step: [
             {
-              "@type": "HowToStep",
-              "name": "File Petition with Clark County Court",
-              "text": "Submit probate petition to Clark County District Court within 30 days of death"
+              '@type': 'HowToStep',
+              name: 'File Petition with Clark County Court',
+              text: 'Submit probate petition to Clark County District Court within 30 days of death',
             },
             {
-              "@type": "HowToStep", 
-              "name": "Appoint Personal Representative",
-              "text": "Court appoints personal representative to manage estate assets"
+              '@type': 'HowToStep',
+              name: 'Appoint Personal Representative',
+              text: 'Court appoints personal representative to manage estate assets',
             },
             {
-              "@type": "HowToStep",
-              "name": "How Much Is My Inherited Property Worth? & Marketing",
-              "text": "Professional real estate agent markets inherited property for maximum value"
+              '@type': 'HowToStep',
+              name: 'How Much Is My Inherited Property Worth? & Marketing',
+              text: 'Professional real estate agent markets inherited property for maximum value',
             },
             {
-              "@type": "HowToStep",
-              "name": "Court Confirmation Sale",
-              "text": "Property sale approved by probate court commissioner"
-            }
-          ]
+              '@type': 'HowToStep',
+              name: 'Court Confirmation Sale',
+              text: 'Property sale approved by probate court commissioner',
+            },
+          ],
         }}
       />
 
@@ -90,18 +104,18 @@ export default function LasVegasProbateGuide() {
               <span className="block text-blue-600">Complete Guide 2025</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Everything you need to know about selling inherited property in Las Vegas, 
-              Clark County, and surrounding Nevada areas. Expert guidance from local probate specialists.
+              Everything you need to know about selling inherited property in Las Vegas, Clark
+              County, and surrounding Nevada areas. Expert guidance from local probate specialists.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+1-702-830-9222"
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Free Consultation: (702) 830-9222
               </a>
-              <a 
+              <a
                 href="/#contact"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors"
               >
@@ -147,7 +161,7 @@ export default function LasVegasProbateGuide() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900">
               Why Las Vegas Probate is Different
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -159,43 +173,39 @@ export default function LasVegasProbateGuide() {
                       Clark County Court System
                     </h3>
                     <p className="text-gray-600">
-                      Las Vegas probate cases are handled by Clark County District Court, 
-                      which has specialized probate commissioners and streamlined procedures.
+                      Las Vegas probate cases are handled by Clark County District Court, which has
+                      specialized probate commissioners and streamlined procedures.
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-green-100 rounded-full">
                     <Clock className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Faster Timeline
-                    </h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Faster Timeline</h3>
                     <p className="text-gray-600">
-                      Nevada's probate process is significantly faster than California, 
-                      typically completing in 6-8 months vs 9-18 months.
+                      Nevada's probate process is significantly faster than California, typically
+                      completing in 6-8 months vs 9-18 months.
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-purple-100 rounded-full">
                     <DollarSign className="h-6 w-6 text-purple-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Lower Costs
-                    </h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Lower Costs</h3>
                     <p className="text-gray-600">
-                      Reduced court fees, faster processing, and efficient procedures 
-                      result in lower overall probate costs.
+                      Reduced court fees, faster processing, and efficient procedures result in
+                      lower overall probate costs.
                     </p>
                   </div>
                 </div>
               </div>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-orange-100 rounded-full">
@@ -206,12 +216,12 @@ export default function LasVegasProbateGuide() {
                       Local Market Expertise
                     </h3>
                     <p className="text-gray-600">
-                      Our team knows the Las Vegas real estate market intimately, 
-                      including property values, buyer preferences, and market trends.
+                      Our team knows the Las Vegas real estate market intimately, including property
+                      values, buyer preferences, and market trends.
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-red-100 rounded-full">
                     <Gavel className="h-6 w-6 text-red-600" />
@@ -221,23 +231,21 @@ export default function LasVegasProbateGuide() {
                       Court Relationships
                     </h3>
                     <p className="text-gray-600">
-                      Established relationships with Clark County probate commissioners 
-                      and court staff for smoother proceedings.
+                      Established relationships with Clark County probate commissioners and court
+                      staff for smoother proceedings.
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-indigo-100 rounded-full">
                     <Users className="h-6 w-6 text-indigo-600" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      Local Network
-                    </h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Local Network</h3>
                     <p className="text-gray-600">
-                      Strong connections with local attorneys, title companies, 
-                      and real estate professionals.
+                      Strong connections with local attorneys, title companies, and real estate
+                      professionals.
                     </p>
                   </div>
                 </div>
@@ -254,7 +262,7 @@ export default function LasVegasProbateGuide() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-900">
               Las Vegas Probate Process: Step by Step
             </h2>
-            
+
             <div className="space-y-8">
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
@@ -265,8 +273,8 @@ export default function LasVegasProbateGuide() {
                     Initial Consultation & Assessment
                   </h3>
                   <p className="text-gray-600 mb-4">
-                    We meet with you to understand your situation, assess the property, 
-                    and explain the probate process. This includes:
+                    We meet with you to understand your situation, assess the property, and explain
+                    the probate process. This includes:
                   </p>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-center gap-2">
@@ -288,7 +296,7 @@ export default function LasVegasProbateGuide() {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0 w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
                   2
@@ -320,7 +328,7 @@ export default function LasVegasProbateGuide() {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0 w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
                   3
@@ -352,7 +360,7 @@ export default function LasVegasProbateGuide() {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="flex items-start gap-6">
                 <div className="flex-shrink-0 w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center text-xl font-bold">
                   4
@@ -361,9 +369,7 @@ export default function LasVegasProbateGuide() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     Court Confirmation & Closing
                   </h3>
-                  <p className="text-gray-600 mb-4">
-                    Final court approval and property transfer:
-                  </p>
+                  <p className="text-gray-600 mb-4">Final court approval and property transfer:</p>
                   <ul className="space-y-2 text-gray-600">
                     <li className="flex items-center gap-2">
                       <CheckCircle className="h-4 w-4 text-green-500" />
@@ -389,6 +395,32 @@ export default function LasVegasProbateGuide() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Frequently Asked Questions About Las Vegas Probate
+              </h2>
+              <p className="text-xl text-gray-600">
+                Common questions about probate real estate in Las Vegas and Clark County
+              </p>
+            </div>
+            <FAQ />
+            <div className="text-center mt-8">
+              <Link
+                href="/faq"
+                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
+              >
+                View All FAQs
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-blue-600">
         <div className="container mx-auto px-4 text-center">
@@ -397,18 +429,18 @@ export default function LasVegasProbateGuide() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Get your free consultation and learn how we can help you navigate 
-              the Las Vegas probate process efficiently and cost-effectively.
+              Get your free consultation and learn how we can help you navigate the Las Vegas
+              probate process efficiently and cost-effectively.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
+              <a
                 href="tel:+1-702-830-9222"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 <Phone className="mr-2 h-5 w-5" />
                 Call (702) 830-9222
               </a>
-              <a 
+              <a
                 href="/#contact"
                 className="bg-transparent text-white px-8 py-4 rounded-lg text-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-colors"
               >

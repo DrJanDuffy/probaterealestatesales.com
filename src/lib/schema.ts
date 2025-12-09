@@ -1,13 +1,13 @@
 export interface LocalBusinessSchema {
-  "@context": "https://schema.org";
-  "@type": "LocalBusiness";
+  '@context': 'https://schema.org';
+  '@type': 'LocalBusiness';
   name: string;
   description: string;
   url: string;
   telephone: string;
   email: string;
   address: {
-    "@type": "PostalAddress";
+    '@type': 'PostalAddress';
     streetAddress: string;
     addressLocality: string;
     addressRegion: string;
@@ -15,7 +15,7 @@ export interface LocalBusinessSchema {
     addressCountry: string;
   };
   geo: {
-    "@type": "GeoCoordinates";
+    '@type': 'GeoCoordinates';
     latitude: number;
     longitude: number;
   };
@@ -23,21 +23,21 @@ export interface LocalBusinessSchema {
   priceRange: string;
   paymentAccepted: string[];
   areaServed: {
-    "@type": "GeoCircle";
+    '@type': 'GeoCircle';
     geoMidpoint: {
-      "@type": "GeoCoordinates";
+      '@type': 'GeoCoordinates';
       latitude: number;
       longitude: number;
     };
     geoRadius: string;
   };
   hasOfferCatalog: {
-    "@type": "OfferCatalog";
+    '@type': 'OfferCatalog';
     name: string;
     itemListElement: Array<{
-      "@type": "Offer";
+      '@type': 'Offer';
       itemOffered: {
-        "@type": "Service";
+        '@type': 'Service';
         name: string;
         description: string;
       };
@@ -46,15 +46,15 @@ export interface LocalBusinessSchema {
 }
 
 export interface RealEstateAgentSchema {
-  "@context": "https://schema.org";
-  "@type": "RealEstateAgent";
+  '@context': 'https://schema.org';
+  '@type': 'RealEstateAgent';
   name: string;
   description: string;
   url: string;
   telephone: string;
   email: string;
   address: {
-    "@type": "PostalAddress";
+    '@type': 'PostalAddress';
     streetAddress: string;
     addressLocality: string;
     addressRegion: string;
@@ -63,25 +63,25 @@ export interface RealEstateAgentSchema {
   };
   areaServed: string[];
   serviceArea: {
-    "@type": "GeoCircle";
+    '@type': 'GeoCircle';
     geoMidpoint: {
-      "@type": "GeoCoordinates";
+      '@type': 'GeoCoordinates';
       latitude: number;
       longitude: number;
     };
     geoRadius: string;
   };
   hasOfferCatalog: {
-    "@type": "OfferCatalog";
+    '@type': 'OfferCatalog';
     name: string;
     itemListElement: Array<{
-      "@type": "Offer";
+      '@type': 'Offer';
       itemOffered: {
-        "@type": "Service";
+        '@type': 'Service';
         name: string;
         description: string;
         provider: {
-          "@type": "Organization";
+          '@type': 'Organization';
           name: string;
         };
       };
@@ -90,27 +90,27 @@ export interface RealEstateAgentSchema {
 }
 
 export interface LegalServiceSchema {
-  "@context": "https://schema.org";
-  "@type": "LegalService";
+  '@context': 'https://schema.org';
+  '@type': 'LegalService';
   name: string;
   description: string;
   provider: {
-    "@type": "Organization";
+    '@type': 'Organization';
     name: string;
     url: string;
   };
   serviceType: string;
   areaServed: {
-    "@type": "AdministrativeArea";
+    '@type': 'AdministrativeArea';
     name: string;
   };
   hasOfferCatalog: {
-    "@type": "OfferCatalog";
+    '@type': 'OfferCatalog';
     name: string;
     itemListElement: Array<{
-      "@type": "Offer";
+      '@type': 'Offer';
       itemOffered: {
-        "@type": "Service";
+        '@type': 'Service';
         name: string;
         description: string;
         price: string;
@@ -121,19 +121,19 @@ export interface LegalServiceSchema {
 }
 
 export interface ServiceSchema {
-  "@context": "https://schema.org";
-  "@type": "Service";
+  '@context': 'https://schema.org';
+  '@type': 'Service';
   name: string;
   description: string;
   provider: {
-    "@type": "Organization";
+    '@type': 'Organization';
     name: string;
     url: string;
   };
   areaServed: string[];
   serviceType: string;
   offers: {
-    "@type": "Offer";
+    '@type': 'Offer';
     description: string;
     price: string;
     priceCurrency: string;
@@ -141,32 +141,32 @@ export interface ServiceSchema {
 }
 
 export interface FAQPageSchema {
-  "@context": "https://schema.org";
-  "@type": "FAQPage";
+  '@context': 'https://schema.org';
+  '@type': 'FAQPage';
   mainEntity: Array<{
-    "@type": "Question";
+    '@type': 'Question';
     name: string;
     acceptedAnswer: {
-      "@type": "Answer";
+      '@type': 'Answer';
       text: string;
     };
   }>;
 }
 
 export interface ReviewSchema {
-  "@context": "https://schema.org";
-  "@type": "Review";
+  '@context': 'https://schema.org';
+  '@type': 'Review';
   itemReviewed: {
-    "@type": "Service";
+    '@type': 'Service';
     name: string;
   };
   reviewRating: {
-    "@type": "Rating";
+    '@type': 'Rating';
     ratingValue: number;
     bestRating: number;
   };
   author: {
-    "@type": "Person";
+    '@type': 'Person';
     name: string;
   };
   reviewBody: string;
@@ -174,10 +174,10 @@ export interface ReviewSchema {
 }
 
 export interface AggregateRatingSchema {
-  "@context": "https://schema.org";
-  "@type": "AggregateRating";
+  '@context': 'https://schema.org';
+  '@type': 'AggregateRating';
   itemReviewed: {
-    "@type": "Service";
+    '@type': 'Service';
     name: string;
   };
   ratingValue: number;
@@ -187,10 +187,10 @@ export interface AggregateRatingSchema {
 }
 
 export interface BreadcrumbListSchema {
-  "@context": "https://schema.org";
-  "@type": "BreadcrumbList";
+  '@context': 'https://schema.org';
+  '@type': 'BreadcrumbList';
   itemListElement: Array<{
-    "@type": "ListItem";
+    '@type': 'ListItem';
     position: number;
     name: string;
     item: string;
@@ -198,40 +198,40 @@ export interface BreadcrumbListSchema {
 }
 
 export interface ArticleSchema {
-  "@context": "https://schema.org";
-  "@type": "Article";
+  '@context': 'https://schema.org';
+  '@type': 'Article';
   headline: string;
   description: string;
   image: string;
   author: {
-    "@type": "Person";
+    '@type': 'Person';
     name: string;
   };
   publisher: {
-    "@type": "Organization";
+    '@type': 'Organization';
     name: string;
     logo: {
-      "@type": "ImageObject";
+      '@type': 'ImageObject';
       url: string;
     };
   };
   datePublished: string;
   dateModified: string;
   mainEntityOfPage: {
-    "@type": "WebPage";
-    "@id": string;
+    '@type': 'WebPage';
+    '@id': string;
   };
 }
 
 export interface OrganizationSchema {
-  "@context": "https://schema.org";
-  "@type": "Organization";
+  '@context': 'https://schema.org';
+  '@type': 'Organization';
   name: string;
   description: string;
   url: string;
   logo: string;
   contactPoint: {
-    "@type": "ContactPoint";
+    '@type': 'ContactPoint';
     telephone: string;
     contactType: string;
     areaServed: string;
@@ -239,13 +239,13 @@ export interface OrganizationSchema {
   };
   sameAs: string[];
   founder: {
-    "@type": "Person";
+    '@type': 'Person';
     name: string;
     jobTitle: string;
   };
   foundingDate: string;
   address: {
-    "@type": "PostalAddress";
+    '@type': 'PostalAddress';
     streetAddress: string;
     addressLocality: string;
     addressRegion: string;
@@ -255,30 +255,30 @@ export interface OrganizationSchema {
 }
 
 export interface HowToSchema {
-  "@context": "https://schema.org";
-  "@type": "HowTo";
+  '@context': 'https://schema.org';
+  '@type': 'HowTo';
   name: string;
   description: string;
   estimatedCost: {
-    "@type": "MonetaryAmount";
+    '@type': 'MonetaryAmount';
     currency: string;
     value: string;
   };
   totalTime: string;
   step: Array<{
-    "@type": "HowToStep";
+    '@type': 'HowToStep';
     name: string;
     text: string;
   }>;
 }
 
 export interface RealEstateListingSchema {
-  "@context": "https://schema.org";
-  "@type": "RealEstateListing";
+  '@context': 'https://schema.org';
+  '@type': 'RealEstateListing';
   name: string;
   description: string;
   address: {
-    "@type": "PostalAddress";
+    '@type': 'PostalAddress';
     streetAddress: string;
     addressLocality: string;
     addressRegion: string;
@@ -287,12 +287,12 @@ export interface RealEstateListingSchema {
   };
   numberOfRooms: number;
   floorSize: {
-    "@type": "QuantitativeValue";
+    '@type': 'QuantitativeValue';
     value: number;
     unitCode: string;
   };
   price: {
-    "@type": "MonetaryAmount";
+    '@type': 'MonetaryAmount';
     currency: string;
     value: string;
   };
@@ -302,323 +302,355 @@ export interface RealEstateListingSchema {
 // Default schema data for the Nevada probate real estate business
 export const defaultSchemas = {
   localBusiness: {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Las Vegas Probate Real Estate Sales",
-    description: "Expert probate real estate services in Las Vegas and Clark County. Specialized in comprehensive probate real estate services, court-approved property sales, and estate liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
-    url: "https://www.probaterealestatesales.com",
-    telephone: "+1-702-830-9222",
-    email: "DrJanSells@ProbateRealEstateSales.com",
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Berkshire Hathaway HomeServices Nevada Properties - Probate Real Estate Division',
+    alternateName: 'Las Vegas Probate Real Estate Sales',
+    description:
+      "Expert probate real estate services in Las Vegas and Clark County. Specialized in comprehensive probate real estate services, court-approved property sales, and estate liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
+    url: 'https://www.probaterealestatesales.com',
+    telephone: '+1-702-830-9222',
+    email: 'DrJanSells@ProbateRealEstateSales.com',
     address: {
-      "@type": "PostalAddress",
-      streetAddress: "400 S 4th Street Suite 250 B",
-      addressLocality: "Las Vegas",
-      addressRegion: "NV",
-      postalCode: "89101",
-      addressCountry: "US"
+      '@type': 'PostalAddress',
+      streetAddress: '400 S 4th Street Suite 250 B',
+      addressLocality: 'Las Vegas',
+      addressRegion: 'NV',
+      postalCode: '89101',
+      addressCountry: 'US',
     },
     geo: {
-      "@type": "GeoCoordinates",
+      '@type': 'GeoCoordinates',
       latitude: 36.1699,
-      longitude: -115.1398
+      longitude: -115.1398,
     },
-    openingHours: "Mo-Fr 09:00-17:00",
-    priceRange: "$$",
-    paymentAccepted: ["Cash", "Credit Card", "Check"],
+    openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-14:00'],
+    priceRange: '$$',
+    paymentAccepted: ['Cash', 'Credit Card', 'Check'],
+    currenciesAccepted: 'USD',
     areaServed: {
-      "@type": "GeoCircle",
+      '@type': 'GeoCircle',
       geoMidpoint: {
-        "@type": "GeoCoordinates",
+        '@type': 'GeoCoordinates',
         latitude: 36.1699,
-        longitude: -115.1398
+        longitude: -115.1398,
       },
-      geoRadius: "50 miles"
+      geoRadius: '50 miles',
     },
+    logo: 'https://www.probaterealestatesales.com/logo.png',
+    image: 'https://www.probaterealestatesales.com/logo.png',
+    sameAs: [
+      'https://www.facebook.com/probaterealestatesales',
+      'https://www.linkedin.com/company/probaterealestatesales',
+      'https://www.instagram.com/probaterealestatesales',
+    ],
     hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Nevada Probate Real Estate Services",
+      '@type': 'OfferCatalog',
+      name: 'Nevada Probate Real Estate Services',
       itemListElement: [
         {
-          "@type": "Offer",
+          '@type': 'Offer',
           itemOffered: {
-            "@type": "Service",
-            name: "Nevada Probate Property Valuation",
-            description: "Professional appraisal and market analysis for inherited properties in Las Vegas area"
-          }
+            '@type': 'Service',
+            name: 'Nevada Probate Property Valuation',
+            description:
+              'Professional appraisal and market analysis for inherited properties in Las Vegas area',
+          },
         },
         {
-          "@type": "Offer",
+          '@type': 'Offer',
           itemOffered: {
-            "@type": "Service",
-            name: "Clark County Probate Sale Management",
-            description: "Complete handling of probate property sales with Nevada's 6-8 month timeline"
-          }
+            '@type': 'Service',
+            name: 'Clark County Probate Sale Management',
+            description:
+              "Complete handling of probate property sales with Nevada's 6-8 month timeline",
+          },
         },
         {
-          "@type": "Offer",
+          '@type': 'Offer',
           itemOffered: {
-            "@type": "Service",
-            name: "Nevada Estate Liquidation",
-            description: "Comprehensive estate liquidation services following Nevada Revised Statutes"
-          }
-        }
-      ]
-    }
+            '@type': 'Service',
+            name: 'Nevada Estate Liquidation',
+            description:
+              'Comprehensive estate liquidation services following Nevada Revised Statutes',
+          },
+        },
+      ],
+    },
   },
 
   realEstateAgent: {
-    "@context": "https://schema.org",
-    "@type": "RealEstateAgent",
-    name: "Dr. Janet Duffy",
-    description: "Licensed Nevada real estate agent specializing in comprehensive probate real estate services, court-approved property sales, and inherited property transactions. Expert in Clark County probate court procedures and Nevada probate law.",
-    url: "https://www.probaterealestatesales.com",
-    telephone: "+1-702-830-9222",
-    email: "DrJanSells@ProbateRealEstateSales.com",
+    '@context': 'https://schema.org',
+    '@type': 'RealEstateAgent',
+    name: 'Dr. Janet Duffy',
+    description:
+      'Licensed Nevada real estate agent specializing in comprehensive probate real estate services, court-approved property sales, and inherited property transactions. Expert in Clark County probate court procedures and Nevada probate law.',
+    url: 'https://www.probaterealestatesales.com',
+    telephone: '+1-702-830-9222',
+    email: 'DrJanSells@ProbateRealEstateSales.com',
     address: {
-      "@type": "PostalAddress",
-      streetAddress: "400 S 4th Street Suite 250 B",
-      addressLocality: "Las Vegas",
-      addressRegion: "NV",
-      postalCode: "89101",
-      addressCountry: "US"
+      '@type': 'PostalAddress',
+      streetAddress: '400 S 4th Street Suite 250 B',
+      addressLocality: 'Las Vegas',
+      addressRegion: 'NV',
+      postalCode: '89101',
+      addressCountry: 'US',
     },
     areaServed: [
-      "Las Vegas", "Henderson", "North Las Vegas", "Boulder City", "Mesquite",
-      "Summerlin", "Spring Valley", "Enterprise", "Anthem", "Seven Hills",
-      "MacDonald Ranch", "Green Valley", "Centennial Hills", "Southern Highlands",
-      "Mountains Edge", "Clark County", "Washoe County", "Nevada"
+      'Las Vegas',
+      'Henderson',
+      'North Las Vegas',
+      'Boulder City',
+      'Mesquite',
+      'Summerlin',
+      'Spring Valley',
+      'Enterprise',
+      'Anthem',
+      'Seven Hills',
+      'MacDonald Ranch',
+      'Green Valley',
+      'Centennial Hills',
+      'Southern Highlands',
+      'Mountains Edge',
+      'Clark County',
+      'Washoe County',
+      'Nevada',
     ],
     serviceArea: {
-      "@type": "GeoCircle",
+      '@type': 'GeoCircle',
       geoMidpoint: {
-        "@type": "GeoCoordinates",
+        '@type': 'GeoCoordinates',
         latitude: 36.1699,
-        longitude: -115.1398
+        longitude: -115.1398,
       },
-      geoRadius: "50 miles"
+      geoRadius: '50 miles',
     },
     hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Nevada Probate Real Estate Services",
+      '@type': 'OfferCatalog',
+      name: 'Nevada Probate Real Estate Services',
       itemListElement: [
         {
-          "@type": "Offer",
+          '@type': 'Offer',
           itemOffered: {
-            "@type": "Service",
-            name: "Nevada Probate Property Sales",
+            '@type': 'Service',
+            name: 'Nevada Probate Property Sales',
             description: "Expert guidance through Nevada's 6-8 month probate process",
             provider: {
-              "@type": "Organization",
-              name: "Las Vegas Probate Real Estate Sales"
-            }
-          }
+              '@type': 'Organization',
+              name: 'Las Vegas Probate Real Estate Sales',
+            },
+          },
         },
         {
-          "@type": "Offer",
+          '@type': 'Offer',
           itemOffered: {
-            "@type": "Service",
-            name: "Nevada Estate Planning Consultation",
-            description: "Strategic advice for estate planning following Nevada Revised Statutes",
+            '@type': 'Service',
+            name: 'Nevada Estate Planning Consultation',
+            description: 'Strategic advice for estate planning following Nevada Revised Statutes',
             provider: {
-              "@type": "Organization",
-              name: "Las Vegas Probate Real Estate Sales"
-            }
-          }
-        }
-      ]
-    }
+              '@type': 'Organization',
+              name: 'Las Vegas Probate Real Estate Sales',
+            },
+          },
+        },
+      ],
+    },
   },
 
   legalService: {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
-    name: "Nevada Probate Legal Services",
-    description: "Comprehensive probate legal services in Nevada, including certificate of incumbency, trust administration, and probate court representation.",
+    '@context': 'https://schema.org',
+    '@type': 'LegalService',
+    name: 'Nevada Probate Legal Services',
+    description:
+      'Comprehensive probate legal services in Nevada, including certificate of incumbency, trust administration, and probate court representation.',
     provider: {
-      "@type": "Organization",
-      name: "Las Vegas Probate Real Estate Sales",
-      url: "https://www.probaterealestatesales.com"
+      '@type': 'Organization',
+      name: 'Las Vegas Probate Real Estate Sales',
+      url: 'https://www.probaterealestatesales.com',
     },
-    serviceType: "Probate Administration",
+    serviceType: 'Probate Administration',
     areaServed: {
-      "@type": "AdministrativeArea",
-      name: "Clark County, Nevada"
+      '@type': 'AdministrativeArea',
+      name: 'Clark County, Nevada',
     },
     hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Nevada Probate Legal Services",
+      '@type': 'OfferCatalog',
+      name: 'Nevada Probate Legal Services',
       itemListElement: [
         {
-          "@type": "Offer",
+          '@type': 'Offer',
           itemOffered: {
-            "@type": "Service",
-            name: "Certificate of Incumbency",
-            description: "Nevada certificate of incumbency (affidavit of successor trustee) - $750",
-            price: "750.00",
-            priceCurrency: "USD"
-          }
+            '@type': 'Service',
+            name: 'Certificate of Incumbency',
+            description: 'Nevada certificate of incumbency (affidavit of successor trustee) - $750',
+            price: '750.00',
+            priceCurrency: 'USD',
+          },
         },
         {
-          "@type": "Offer",
+          '@type': 'Offer',
           itemOffered: {
-            "@type": "Service",
-            name: "Probate Administration",
-            description: "Complete Nevada probate administration - $8,000-9,000",
-            price: "8000-9000",
-            priceCurrency: "USD"
-          }
+            '@type': 'Service',
+            name: 'Probate Administration',
+            description: 'Complete Nevada probate administration - $8,000-9,000',
+            price: '8000-9000',
+            priceCurrency: 'USD',
+          },
         },
         {
-          "@type": "Offer",
+          '@type': 'Offer',
           itemOffered: {
-            "@type": "Service",
-            name: "Trust Administration",
-            description: "Nevada trust administration - $2,500 (3 months vs 6-8 months for probate)",
-            price: "2500.00",
-            priceCurrency: "USD"
-          }
-        }
-      ]
-    }
+            '@type': 'Service',
+            name: 'Trust Administration',
+            description:
+              'Nevada trust administration - $2,500 (3 months vs 6-8 months for probate)',
+            price: '2500.00',
+            priceCurrency: 'USD',
+          },
+        },
+      ],
+    },
   },
 
   faqPage: {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
     mainEntity: [
       {
-        "@type": "Question",
-        name: "How long does probate take in Nevada?",
+        '@type': 'Question',
+        name: 'How long does probate take in Nevada?',
         acceptedAnswer: {
-          "@type": "Answer",
-          text: "Nevada probate typically takes 6-8 months, which is faster than California's 9-18 month process. Clark County has two probate commissioners: James Fontana (Fridays) and Russell Geis (Wednesdays at 9:30 AM). Court orders take about 3 weeks to release."
-        }
+          '@type': 'Answer',
+          text: "Nevada probate typically takes 6-8 months, which is faster than California's 9-18 month process. Clark County has two probate commissioners: James Fontana (Fridays) and Russell Geis (Wednesdays at 9:30 AM). Court orders take about 3 weeks to release.",
+        },
       },
       {
-        "@type": "Question",
-        name: "What is a certificate of incumbency in Nevada?",
+        '@type': 'Question',
+        name: 'What is a certificate of incumbency in Nevada?',
         acceptedAnswer: {
-          "@type": "Answer",
-          text: "A certificate of incumbency in Nevada is a 5-7 page document (also known as affidavit of successor trustee) that's required after trustors die. It costs $750 from attorneys and must be recorded with Clark County. This document is essential for trust administration and property transfers."
-        }
+          '@type': 'Answer',
+          text: "A certificate of incumbency in Nevada is a 5-7 page document (also known as affidavit of successor trustee) that's required after trustors die. It costs $750 from attorneys and must be recorded with Clark County. This document is essential for trust administration and property transfers.",
+        },
       },
       {
-        "@type": "Question",
-        name: "How much does probate cost in Las Vegas?",
+        '@type': 'Question',
+        name: 'How much does probate cost in Las Vegas?',
         acceptedAnswer: {
-          "@type": "Answer",
-          text: "Nevada probate costs average $8,000-9,000 in attorney fees. Court costs vary by county: Clark County $1,000, Washoe County $1,300, and rural counties like Esmeralda $850. Trust administration is more affordable at $2,500 and takes only 3 months."
-        }
+          '@type': 'Answer',
+          text: 'Nevada probate costs average $8,000-9,000 in attorney fees. Court costs vary by county: Clark County $1,000, Washoe County $1,300, and rural counties like Esmeralda $850. Trust administration is more affordable at $2,500 and takes only 3 months.',
+        },
       },
       {
-        "@type": "Question",
+        '@type': 'Question',
         name: "What is Nevada's small estate limit?",
         acceptedAnswer: {
-          "@type": "Answer",
-          text: "Nevada's small estate limit is $100,000 (vs California's $184,500). For estates under $25,000, Nevada offers a simplified 'set-aside' procedure that avoids formal probate entirely. This makes Nevada an attractive option for smaller estates."
-        }
+          '@type': 'Answer',
+          text: "Nevada's small estate limit is $100,000 (vs California's $184,500). For estates under $25,000, Nevada offers a simplified 'set-aside' procedure that avoids formal probate entirely. This makes Nevada an attractive option for smaller estates.",
+        },
       },
       {
-        "@type": "Question",
-        name: "Do I need a certificate of incumbency?",
+        '@type': 'Question',
+        name: 'Do I need a certificate of incumbency?',
         acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, if you're dealing with a trust after the trustors have passed away. The certificate of incumbency proves your authority as successor trustee and is required for property transfers, bank accounts, and other trust assets. Title companies cannot create these documents - only attorneys can."
-        }
+          '@type': 'Answer',
+          text: "Yes, if you're dealing with a trust after the trustors have passed away. The certificate of incumbency proves your authority as successor trustee and is required for property transfers, bank accounts, and other trust assets. Title companies cannot create these documents - only attorneys can.",
+        },
       },
       {
-        "@type": "Question",
-        name: "What are the two methods of selling property in Nevada probate?",
+        '@type': 'Question',
+        name: 'What are the two methods of selling property in Nevada probate?',
         acceptedAnswer: {
-          "@type": "Answer",
-          text: "Nevada offers two methods: 1) Court Confirmation - requires court approval for each step, and 2) Independent Administration - gives the personal representative more authority to act without court supervision. Independent administration is faster and more cost-effective but requires family cooperation."
-        }
-      }
-    ]
+          '@type': 'Answer',
+          text: 'Nevada offers two methods: 1) Court Confirmation - requires court approval for each step, and 2) Independent Administration - gives the personal representative more authority to act without court supervision. Independent administration is faster and more cost-effective but requires family cooperation.',
+        },
+      },
+    ],
   },
 
   organization: {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Las Vegas Probate Real Estate Sales",
-    alternateName: "Grokipedia - Probate Real Estate",
-    description: "Leading provider of comprehensive probate real estate services in Nevada, specializing in court-approved property sales, Clark County probate court procedures, and Nevada's fastest probate timeline (6-8 months vs California's 9-18 months).",
-    url: "https://www.probaterealestatesales.com",
-    logo: "https://www.probaterealestatesales.com/logo.png",
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Las Vegas Probate Real Estate Sales',
+    alternateName: 'Grokipedia - Probate Real Estate',
+    description:
+      "Leading provider of comprehensive probate real estate services in Nevada, specializing in court-approved property sales, Clark County probate court procedures, and Nevada's fastest probate timeline (6-8 months vs California's 9-18 months).",
+    url: 'https://www.probaterealestatesales.com',
+    logo: 'https://www.probaterealestatesales.com/logo.png',
     contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+1-702-830-9222",
-      contactType: "customer service",
-      areaServed: "US-NV",
-      availableLanguage: "English"
+      '@type': 'ContactPoint',
+      telephone: '+1-702-830-9222',
+      contactType: 'customer service',
+      areaServed: 'US-NV',
+      availableLanguage: 'English',
     },
     sameAs: [
-      "https://www.facebook.com/probaterealestatesales",
-      "https://www.linkedin.com/company/probaterealestatesales",
-      "https://www.instagram.com/probaterealestatesales"
+      'https://www.facebook.com/probaterealestatesales',
+      'https://www.linkedin.com/company/probaterealestatesales',
+      'https://www.instagram.com/probaterealestatesales',
     ],
     founder: {
-      "@type": "Person",
-      name: "Dr. Janet Duffy",
-      jobTitle: "Founder & Principal Broker"
+      '@type': 'Person',
+      name: 'Dr. Janet Duffy',
+      jobTitle: 'Founder & Principal Broker',
     },
-    foundingDate: "2020",
+    foundingDate: '2020',
     address: {
-      "@type": "PostalAddress",
-      streetAddress: "123 Las Vegas Blvd",
-      addressLocality: "Las Vegas",
-      addressRegion: "NV",
-      postalCode: "89101",
-      addressCountry: "US"
-    }
+      '@type': 'PostalAddress',
+      streetAddress: '123 Las Vegas Blvd',
+      addressLocality: 'Las Vegas',
+      addressRegion: 'NV',
+      postalCode: '89101',
+      addressCountry: 'US',
+    },
   },
 
   howTo: {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    name: "How to Sell Property in Nevada Probate",
-    description: "Complete guide to selling inherited property through Nevada's probate process, including timeline, costs, and required documents.",
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: 'How to Sell Property in Nevada Probate',
+    description:
+      "Complete guide to selling inherited property through Nevada's probate process, including timeline, costs, and required documents.",
     estimatedCost: {
-      "@type": "MonetaryAmount",
-      currency: "USD",
-      value: "9000"
+      '@type': 'MonetaryAmount',
+      currency: 'USD',
+      value: '9000',
     },
-    totalTime: "P6M",
+    totalTime: 'P6M',
     step: [
       {
-        "@type": "HowToStep",
-        name: "Obtain Letters Testamentary",
-        text: "File with Clark County District Court to obtain letters testamentary or letters of administration. This gives you legal authority to act on behalf of the estate."
+        '@type': 'HowToStep',
+        name: 'Obtain Letters Testamentary',
+        text: 'File with Clark County District Court to obtain letters testamentary or letters of administration. This gives you legal authority to act on behalf of the estate.',
       },
       {
-        "@type": "HowToStep",
-        name: "Sign Binding Listing Agreement",
-        text: "Once letters are issued with court stamp and signature, you can sign a binding listing agreement. This cannot be done before obtaining proper court authority."
+        '@type': 'HowToStep',
+        name: 'Sign Binding Listing Agreement',
+        text: 'Once letters are issued with court stamp and signature, you can sign a binding listing agreement. This cannot be done before obtaining proper court authority.',
       },
       {
-        "@type": "HowToStep",
-        name: "Choose Sale Method",
-        text: "Select between court confirmation (requires court approval for each step) or independent administration (more authority, faster process)."
+        '@type': 'HowToStep',
+        name: 'Choose Sale Method',
+        text: 'Select between court confirmation (requires court approval for each step) or independent administration (more authority, faster process).',
       },
       {
-        "@type": "HowToStep",
-        name: "Complete Property Transfer",
-        text: "Follow Nevada's 6-8 month timeline, ensuring all 30 required documents are properly filed with the court."
-      }
-    ]
-  }
+        '@type': 'HowToStep',
+        name: 'Complete Property Transfer',
+        text: "Follow Nevada's 6-8 month timeline, ensuring all 30 required documents are properly filed with the court.",
+      },
+    ],
+  },
 };
 
 export function generateBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
   return {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
     itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
+      '@type': 'ListItem',
       position: index + 1,
       name: item.name,
-      item: item.url
-    }))
+      item: item.url,
+    })),
   };
 }
 
@@ -632,29 +664,29 @@ export function generateArticleSchema(article: {
   url: string;
 }) {
   return {
-    "@context": "https://schema.org",
-    "@type": "Article",
+    '@context': 'https://schema.org',
+    '@type': 'Article',
     headline: article.headline,
     description: article.description,
     image: article.image,
     author: {
-      "@type": "Person",
-      name: article.author
+      '@type': 'Person',
+      name: article.author,
     },
     publisher: {
-      "@type": "Organization",
-      name: "Las Vegas Probate Real Estate Sales",
+      '@type': 'Organization',
+      name: 'Las Vegas Probate Real Estate Sales',
       logo: {
-        "@type": "ImageObject",
-        url: "https://www.probaterealestatesales.com/logo.png"
-      }
+        '@type': 'ImageObject',
+        url: 'https://www.probaterealestatesales.com/logo.png',
+      },
     },
     datePublished: article.datePublished,
     dateModified: article.dateModified,
     mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": article.url
-    }
+      '@type': 'WebPage',
+      '@id': article.url,
+    },
   };
 }
 
@@ -665,35 +697,251 @@ export function generateLegalServiceSchema(service: {
   area: string;
 }) {
   return {
-    "@context": "https://schema.org",
-    "@type": "LegalService",
+    '@context': 'https://schema.org',
+    '@type': 'LegalService',
     name: service.name,
     description: service.description,
     provider: {
-      "@type": "Organization",
-      name: "Las Vegas Probate Real Estate Sales",
-      url: "https://www.probaterealestatesales.com"
+      '@type': 'Organization',
+      name: 'Las Vegas Probate Real Estate Sales',
+      url: 'https://www.probaterealestatesales.com',
     },
-    serviceType: "Probate Administration",
+    serviceType: 'Probate Administration',
     areaServed: {
-      "@type": "AdministrativeArea",
-      name: service.area
+      '@type': 'AdministrativeArea',
+      name: service.area,
     },
     hasOfferCatalog: {
-      "@type": "OfferCatalog",
-      name: "Nevada Probate Services",
+      '@type': 'OfferCatalog',
+      name: 'Nevada Probate Services',
       itemListElement: [
         {
-          "@type": "Offer",
+          '@type': 'Offer',
           itemOffered: {
-            "@type": "Service",
+            '@type': 'Service',
             name: service.name,
             description: service.description,
             price: service.price,
-            priceCurrency: "USD"
-          }
+            priceCurrency: 'USD',
+          },
+        },
+      ],
+    },
+  };
+}
+
+export function generateReviewSchema(review: {
+  author: string;
+  reviewBody: string;
+  ratingValue: number;
+  bestRating?: number;
+  worstRating?: number;
+  datePublished: string;
+  itemReviewed?: {
+    name: string;
+    type?: string;
+  };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    author: {
+      '@type': 'Person',
+      name: review.author,
+    },
+    reviewBody: review.reviewBody,
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: review.ratingValue,
+      bestRating: review.bestRating || 5,
+      worstRating: review.worstRating || 1,
+    },
+    datePublished: review.datePublished,
+    itemReviewed: review.itemReviewed
+      ? {
+          '@type': review.itemReviewed.type || 'Service',
+          name: review.itemReviewed.name,
         }
-      ]
-    }
+      : {
+          '@type': 'Service',
+          name: 'Nevada Probate Real Estate Services',
+        },
+  };
+}
+
+export function generateAggregateRatingSchema(rating: {
+  ratingValue: number;
+  reviewCount: number;
+  bestRating?: number;
+  worstRating?: number;
+  itemReviewed?: {
+    name: string;
+    type?: string;
+  };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateRating',
+    ratingValue: rating.ratingValue,
+    reviewCount: rating.reviewCount,
+    bestRating: rating.bestRating || 5,
+    worstRating: rating.worstRating || 1,
+    itemReviewed: rating.itemReviewed
+      ? {
+          '@type': rating.itemReviewed.type || 'Service',
+          name: rating.itemReviewed.name,
+        }
+      : {
+          '@type': 'Service',
+          name: 'Nevada Probate Real Estate Services',
+        },
+  };
+}
+
+export function generatePersonSchema(person: {
+  name: string;
+  jobTitle: string;
+  description: string;
+  image?: string;
+  email?: string;
+  telephone?: string;
+  url?: string;
+  sameAs?: string[];
+  knowsAbout?: string[];
+  award?: string[];
+  alumniOf?: string;
+  worksFor?: {
+    name: string;
+    url?: string;
+  };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: person.name,
+    jobTitle: person.jobTitle,
+    description: person.description,
+    ...(person.image && { image: person.image }),
+    ...(person.email && { email: person.email }),
+    ...(person.telephone && { telephone: person.telephone }),
+    ...(person.url && { url: person.url }),
+    ...(person.sameAs && person.sameAs.length > 0 && { sameAs: person.sameAs }),
+    ...(person.knowsAbout && person.knowsAbout.length > 0 && { knowsAbout: person.knowsAbout }),
+    ...(person.award && person.award.length > 0 && { award: person.award }),
+    ...(person.alumniOf && { alumniOf: person.alumniOf }),
+    ...(person.worksFor && {
+      worksFor: {
+        '@type': 'Organization',
+        name: person.worksFor.name,
+        ...(person.worksFor.url && { url: person.worksFor.url }),
+      },
+    }),
+  };
+}
+
+export function generateWebSiteSchema(site: {
+  name: string;
+  url: string;
+  description?: string;
+  potentialAction?: {
+    target: string;
+    queryInput: string;
+  };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: site.name,
+    url: site.url,
+    ...(site.description && { description: site.description }),
+    ...(site.potentialAction && {
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: {
+          '@type': 'EntryPoint',
+          urlTemplate: site.potentialAction.target,
+        },
+        'query-input': site.potentialAction.queryInput,
+      },
+    }),
+  };
+}
+
+export function generateVideoObjectSchema(video: {
+  name: string;
+  description: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+  duration?: string;
+  contentUrl?: string;
+  embedUrl?: string;
+  publisher?: {
+    name: string;
+    logo?: string;
+  };
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: video.name,
+    description: video.description,
+    thumbnailUrl: video.thumbnailUrl,
+    uploadDate: video.uploadDate,
+    ...(video.duration && { duration: video.duration }),
+    ...(video.contentUrl && { contentUrl: video.contentUrl }),
+    ...(video.embedUrl && { embedUrl: video.embedUrl }),
+    ...(video.publisher && {
+      publisher: {
+        '@type': 'Organization',
+        name: video.publisher.name,
+        ...(video.publisher.logo && {
+          logo: {
+            '@type': 'ImageObject',
+            url: video.publisher.logo,
+          },
+        }),
+      },
+    }),
+  };
+}
+
+export function generateWebPageSchema(page: {
+  name: string;
+  description: string;
+  url: string;
+  isPartOf?: {
+    name: string;
+    url: string;
+  };
+  breadcrumb?: Array<{ name: string; url: string }>;
+  datePublished?: string;
+  dateModified?: string;
+  author?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: page.name,
+    description: page.description,
+    url: page.url,
+    ...(page.isPartOf && {
+      isPartOf: {
+        '@type': 'WebSite',
+        name: page.isPartOf.name,
+        url: page.isPartOf.url,
+      },
+    }),
+    ...(page.breadcrumb &&
+      page.breadcrumb.length > 0 && {
+        breadcrumb: generateBreadcrumbSchema(page.breadcrumb),
+      }),
+    ...(page.datePublished && { datePublished: page.datePublished }),
+    ...(page.dateModified && { dateModified: page.dateModified }),
+    ...(page.author && {
+      author: {
+        '@type': 'Person',
+        name: page.author,
+      },
+    }),
   };
 }

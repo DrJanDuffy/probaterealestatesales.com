@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.10.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.3.8/schema.json",
   "vcs": {
     "enabled": true,
     "clientKind": "git",
@@ -7,13 +7,17 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": [
-      "node_modules/**",
-      ".next/**",
-      "dist/**",
-      "build/**",
-      "*.min.js",
-      "*.min.css"
+    "includes": [
+      "**",
+      "!**/node_modules",
+      "!**/.next",
+      "!**/dist",
+      "!**/build",
+      "!**/*.min.js",
+      "!**/*.min.css",
+      "!**/*-log.json",
+      "!**/performance-log.json",
+      "!**/improvement-report.json"
     ]
   },
   "formatter": {
@@ -38,14 +42,39 @@
       }
     }
   },
-  "organizeImports": {
-    "enabled": true
-  },
+  "assist": { "actions": { "source": { "organizeImports": "on" } } },
   "javascript": {
     "formatter": {
       "quoteStyle": "single",
       "trailingCommas": "es5",
       "semicolons": "always"
     }
-  }
+  },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
+  "overrides": [
+    {
+      "includes": ["src/app/globals.css"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noUnknownAtRules": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["src/app/layout.tsx", "src/components/SEOMetaTags.tsx"],
+      "linter": {
+        "rules": {
+          "security": {
+            "noDangerouslySetInnerHtml": "off"
+          }
+        }
+      }
+    }
+  ]
 }

@@ -1,4 +1,15 @@
-import { Calendar, Clock, FileText, Gavel, Home, Users, DollarSign, CheckCircle, AlertTriangle, ArrowRight, MapPin } from 'lucide-react';
+import {
+  AlertTriangle,
+  Calendar,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  FileText,
+  Gavel,
+  Home,
+  MapPin,
+  Users,
+} from 'lucide-react';
 
 const timelineSteps = [
   {
@@ -11,11 +22,11 @@ const timelineSteps = [
       'Original will (if exists)',
       'Petition for probate',
       'Notice of hearing to interested parties',
-      'Filing fee ($435 for estates under $100,000)'
+      'Filing fee ($435 for estates under $100,000)',
     ],
     drDuffyRole: 'Dr. Duffy assists with document preparation and court filing coordination',
     icon: FileText,
-    color: 'blue'
+    color: 'blue',
   },
   {
     phase: 'Phase 2: Court Proceedings',
@@ -27,11 +38,12 @@ const timelineSteps = [
       'Provide proof of notice to heirs',
       'Receive Letters of Administration/Executorship',
       'Post bond if required by court',
-      'File inventory of estate assets'
+      'File inventory of estate assets',
     ],
-    drDuffyRole: 'Dr. Duffy prepares property inventory and coordinates with court-appointed appraisers',
+    drDuffyRole:
+      'Dr. Duffy prepares property inventory and coordinates with court-appointed appraisers',
     icon: Gavel,
-    color: 'purple'
+    color: 'purple',
   },
   {
     phase: 'Phase 3: Estate Administration',
@@ -43,11 +55,12 @@ const timelineSteps = [
       'Notify creditors (4-month claim period)',
       'Pay valid claims and expenses',
       'Maintain property insurance',
-      'File estate tax returns if applicable'
+      'File estate tax returns if applicable',
     ],
-    drDuffyRole: 'Dr. Duffy manages property maintenance, coordinates repairs, and prepares for sale',
+    drDuffyRole:
+      'Dr. Duffy manages property maintenance, coordinates repairs, and prepares for sale',
     icon: Home,
-    color: 'green'
+    color: 'green',
   },
   {
     phase: 'Phase 4: Property Sale',
@@ -59,11 +72,12 @@ const timelineSteps = [
       'Complete property appraisal',
       'List property with licensed real estate agent',
       'Accept offers and negotiate terms',
-      'Submit sale contract to court for approval'
+      'Submit sale contract to court for approval',
     ],
-    drDuffyRole: 'Dr. Duffy handles entire sales process, from listing to closing, ensuring maximum value',
+    drDuffyRole:
+      'Dr. Duffy handles entire sales process, from listing to closing, ensuring maximum value',
     icon: DollarSign,
-    color: 'yellow'
+    color: 'yellow',
   },
   {
     phase: 'Phase 5: Final Distribution',
@@ -75,35 +89,38 @@ const timelineSteps = [
       'Pay remaining expenses and taxes',
       'Distribute net proceeds to heirs',
       'File petition for final discharge',
-      'Close estate bank account'
+      'Close estate bank account',
     ],
     drDuffyRole: 'Dr. Duffy ensures smooth closing process and coordinates with title company',
     icon: CheckCircle,
-    color: 'green'
-  }
+    color: 'green',
+  },
 ];
 
 const nevadaSpecificNotes = [
   {
     title: 'Clark County Probate Court',
-    details: 'Located at 200 Lewis Ave, Las Vegas, NV 89101. All probate matters must be filed here.',
-    icon: MapPin
+    details:
+      'Located at 200 Lewis Ave, Las Vegas, NV 89101. All probate matters must be filed here.',
+    icon: MapPin,
   },
   {
     title: 'Nevada Probate Timeline',
-    details: 'Nevada allows for simplified probate for estates under $100,000. Standard probate typically takes 6-8 months.',
-    icon: Clock
+    details:
+      'Nevada allows for simplified probate for estates under $100,000. Standard probate typically takes 6-8 months.',
+    icon: Clock,
   },
   {
     title: 'Property Appraisal Requirements',
-    details: 'Nevada requires court-appointed appraisers for probate properties. Dr. Duffy coordinates with approved appraisers.',
-    icon: Home
+    details:
+      'Nevada requires court-appointed appraisers for probate properties. Dr. Duffy coordinates with approved appraisers.',
+    icon: Home,
   },
   {
     title: 'Creditor Claim Period',
     details: 'Creditors have 4 months from first publication to file claims against the estate.',
-    icon: AlertTriangle
-  }
+    icon: AlertTriangle,
+  },
 ];
 
 export default function ProbateTimeline() {
@@ -120,8 +137,8 @@ export default function ProbateTimeline() {
             Complete Nevada Probate Timeline
           </h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Dr. Jan Duffy guides you through every step of the Nevada probate process,
-            from initial filing to final distribution. Understand what to expect and when.
+            Dr. Jan Duffy guides you through every step of the Nevada probate process, from initial
+            filing to final distribution. Understand what to expect and when.
           </p>
         </div>
 
@@ -130,18 +147,20 @@ export default function ProbateTimeline() {
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-200 via-primary-400 to-primary-600 hidden md:block" />
-            
-                         <div className="space-y-12">
-               {timelineSteps.map((step) => (
-                 <div key={step.phase} className="relative">
+
+            <div className="space-y-12">
+              {timelineSteps.map((step) => (
+                <div key={step.phase} className="relative">
                   {/* Timeline Dot */}
                   <div className="absolute left-6 top-6 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg hidden md:block" />
-                  
+
                   <div className="md:ml-16">
                     <div className="bg-white rounded-xl shadow-soft p-8 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
                       {/* Phase Header */}
                       <div className="flex items-start gap-4 mb-6">
-                        <div className={`w-16 h-16 bg-${step.color}-100 rounded-xl flex items-center justify-center flex-shrink-0`}>
+                        <div
+                          className={`w-16 h-16 bg-${step.color}-100 rounded-xl flex items-center justify-center flex-shrink-0`}
+                        >
                           <step.icon className={`h-8 w-8 text-${step.color}-600`} />
                         </div>
                         <div className="flex-1">
@@ -156,9 +175,7 @@ export default function ProbateTimeline() {
                           <h3 className="text-2xl font-bold text-secondary-900 mb-2">
                             {step.title}
                           </h3>
-                          <p className="text-lg text-secondary-600">
-                            {step.description}
-                          </p>
+                          <p className="text-lg text-secondary-600">{step.description}</p>
                         </div>
                       </div>
 
@@ -169,14 +186,17 @@ export default function ProbateTimeline() {
                             <FileText className="h-5 w-5 text-primary-600" />
                             Court Requirements
                           </h4>
-                                                     <ul className="space-y-2">
-                             {step.requirements.map((requirement) => (
-                               <li key={`${step.phase}-${requirement.substring(0, 20).replace(/\s+/g, '-').toLowerCase()}`} className="text-sm text-secondary-600 flex items-start gap-2">
-                                 <div className="w-1.5 h-1.5 bg-primary-400 rounded-full mt-2 flex-shrink-0" />
-                                 {requirement}
-                               </li>
-                             ))}
-                           </ul>
+                          <ul className="space-y-2">
+                            {step.requirements.map((requirement) => (
+                              <li
+                                key={`${step.phase}-${requirement.substring(0, 20).replace(/\s+/g, '-').toLowerCase()}`}
+                                className="text-sm text-secondary-600 flex items-start gap-2"
+                              >
+                                <div className="w-1.5 h-1.5 bg-primary-400 rounded-full mt-2 flex-shrink-0" />
+                                {requirement}
+                              </li>
+                            ))}
+                          </ul>
                         </div>
 
                         <div>
@@ -204,21 +224,20 @@ export default function ProbateTimeline() {
           <h3 className="text-2xl font-bold text-secondary-900 mb-8 text-center">
             Nevada Probate Court Requirements
           </h3>
-          
+
           <div className="grid md:grid-cols-2 gap-6">
             {nevadaSpecificNotes.map((note) => (
-              <div key={note.title} className="bg-white rounded-xl shadow-soft p-6 border border-gray-100">
+              <div
+                key={note.title}
+                className="bg-white rounded-xl shadow-soft p-6 border border-gray-100"
+              >
                 <div className="flex items-start gap-3">
                   <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <note.icon className="h-6 w-6 text-primary-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary-900 mb-2">
-                      {note.title}
-                    </h4>
-                    <p className="text-sm text-secondary-600 leading-relaxed">
-                      {note.details}
-                    </p>
+                    <h4 className="font-semibold text-secondary-900 mb-2">{note.title}</h4>
+                    <p className="text-sm text-secondary-600 leading-relaxed">{note.details}</p>
                   </div>
                 </div>
               </div>
@@ -229,12 +248,10 @@ export default function ProbateTimeline() {
         {/* Timeline Summary */}
         <div className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 md:p-12 text-white mb-16">
           <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Total Timeline: 6-8 Months
-            </h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Total Timeline: 6-8 Months</h3>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto">
-              Dr. Jan Duffy's expertise can reduce this timeline by 30-40% through
-              efficient court coordination and professional property management.
+              Dr. Jan Duffy's expertise can reduce this timeline by 30-40% through efficient court
+              coordination and professional property management.
             </p>
           </div>
 
@@ -265,11 +282,14 @@ export default function ProbateTimeline() {
               Ready to Start Your Probate Process?
             </h3>
             <p className="text-lg text-secondary-600 mb-6 max-w-2xl mx-auto">
-              Dr. Jan Duffy will guide you through every step, ensuring compliance
-              with Nevada probate laws and maximizing your property's value.
+              Dr. Jan Duffy will guide you through every step, ensuring compliance with Nevada
+              probate laws and maximizing your property's value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="http://drjanduffy.realscout.com/onboarding" className="btn-primary inline-block">
+              <a
+                href="http://drjanduffy.realscout.com/onboarding"
+                className="btn-primary inline-block"
+              >
                 Schedule Free Consultation
               </a>
               <a href="/resources/nevada-probate-guide" className="btn-outline inline-block">

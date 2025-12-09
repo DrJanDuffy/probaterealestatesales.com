@@ -1,11 +1,15 @@
+import { ArrowLeft, Calendar, CheckCircle, Clock, FileText } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Clock, ArrowLeft, Calendar, CheckCircle, FileText } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Nevada Probate Timeline Guide | Complete 6-8 Month Process',
-  description: 'Complete guide to Nevada probate timeline. Understand each step of the 6-8 month probate process for real estate sales in Clark County.',
-  keywords: 'Nevada probate timeline, probate process timeline, Clark County probate timeline, probate real estate timeline',
+  description:
+    'Complete guide to Nevada probate timeline. Understand each step of the 6-8 month probate process for real estate sales in Clark County.',
+  keywords:
+    'Nevada probate timeline, probate process timeline, Clark County probate timeline, probate real estate timeline',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/blog/nevada-probate-timeline/',
   },
@@ -18,20 +22,28 @@ export const metadata: Metadata = {
 };
 
 export default function NevadaProbateTimelinePage() {
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog/' },
+    { name: 'Nevada Probate Timeline', url: '/blog/nevada-probate-timeline/' },
+  ];
+
   return (
     <main className="min-h-screen bg-gray-50">
+      <Breadcrumb items={breadcrumbs.slice(1)} />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/blog" className="inline-flex items-center text-primary-100 hover:text-white mb-6">
+          <Link
+            href="/blog"
+            className="inline-flex items-center text-primary-100 hover:text-white mb-6"
+          >
             <ArrowLeft className="h-5 w-5 mr-2" />
             Back to Blog
           </Link>
           <div className="text-center">
             <Clock className="h-16 w-16 mx-auto mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Nevada Probate Timeline Guide
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Nevada Probate Timeline Guide</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Understanding the 6-8 month probate process for real estate sales in Nevada.
             </p>
@@ -46,13 +58,15 @@ export default function NevadaProbateTimelinePage() {
             <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
               Complete Probate Timeline Breakdown
             </h2>
-            
+
             <div className="space-y-8">
               {/* Month 0-1 */}
               <div className="border-l-4 border-primary-600 pl-6 py-4">
                 <div className="flex items-center mb-2">
                   <Calendar className="h-5 w-5 text-primary-600 mr-2" />
-                  <span className="text-sm font-semibold text-primary-600 uppercase">Months 0-1</span>
+                  <span className="text-sm font-semibold text-primary-600 uppercase">
+                    Months 0-1
+                  </span>
                 </div>
                 <h3 className="text-2xl font-bold text-secondary-900 mb-3">
                   Initial Filing & Petition
@@ -139,7 +153,9 @@ export default function NevadaProbateTimelinePage() {
               <div className="border-l-4 border-purple-600 pl-6 py-4">
                 <div className="flex items-center mb-2">
                   <Calendar className="h-5 w-5 text-purple-600 mr-2" />
-                  <span className="text-sm font-semibold text-purple-600 uppercase">Months 4-6</span>
+                  <span className="text-sm font-semibold text-purple-600 uppercase">
+                    Months 4-6
+                  </span>
                 </div>
                 <h3 className="text-2xl font-bold text-secondary-900 mb-3">
                   Property Sale & Closing
@@ -168,7 +184,9 @@ export default function NevadaProbateTimelinePage() {
               <div className="border-l-4 border-orange-600 pl-6 py-4">
                 <div className="flex items-center mb-2">
                   <Calendar className="h-5 w-5 text-orange-600 mr-2" />
-                  <span className="text-sm font-semibold text-orange-600 uppercase">Months 6-8</span>
+                  <span className="text-sm font-semibold text-orange-600 uppercase">
+                    Months 6-8
+                  </span>
                 </div>
                 <h3 className="text-2xl font-bold text-secondary-900 mb-3">
                   Final Settlement & Distribution
@@ -211,34 +229,32 @@ export default function NevadaProbateTimelinePage() {
                   Required Documents
                 </h3>
                 <p className="text-secondary-600">
-                  Having all documents ready at the start can significantly speed up the process. Missing documents can add weeks or months.
+                  Having all documents ready at the start can significantly speed up the process.
+                  Missing documents can add weeks or months.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md">
                 <CheckCircle className="h-8 w-8 text-green-600 mb-4" />
-                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
-                  Court Schedule
-                </h3>
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Court Schedule</h3>
                 <p className="text-secondary-600">
-                  Clark County has 2 probate commissioners, which helps keep the process moving efficiently compared to other jurisdictions.
+                  Clark County has 2 probate commissioners, which helps keep the process moving
+                  efficiently compared to other jurisdictions.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md">
                 <Clock className="h-8 w-8 text-blue-600 mb-4" />
-                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
-                  Creditor Period
-                </h3>
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Creditor Period</h3>
                 <p className="text-secondary-600">
-                  The 120-day creditor claim period is mandatory and cannot be shortened, but planning ahead can help minimize delays.
+                  The 120-day creditor claim period is mandatory and cannot be shortened, but
+                  planning ahead can help minimize delays.
                 </p>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-md">
                 <Calendar className="h-8 w-8 text-purple-600 mb-4" />
-                <h3 className="text-xl font-semibold text-secondary-900 mb-2">
-                  Property Sales
-                </h3>
+                <h3 className="text-xl font-semibold text-secondary-900 mb-2">Property Sales</h3>
                 <p className="text-secondary-600">
-                  Working with a probate real estate specialist who understands the court approval process can expedite property sales.
+                  Working with a probate real estate specialist who understands the court approval
+                  process can expedite property sales.
                 </p>
               </div>
             </div>
@@ -253,17 +269,38 @@ export default function NevadaProbateTimelinePage() {
             Related Resources
           </h2>
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <Link href="/blog/clark-county-probate/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Clark County Probate Court</h3>
-              <p className="text-secondary-600 text-sm">Step-by-step guide to navigating Clark County probate court procedures.</p>
+            <Link
+              href="/blog/clark-county-probate/"
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+            >
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                Clark County Probate Court
+              </h3>
+              <p className="text-secondary-600 text-sm">
+                Step-by-step guide to navigating Clark County probate court procedures.
+              </p>
             </Link>
-            <Link href="/resources/nevada-probate-guide/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Complete Nevada Probate Guide</h3>
-              <p className="text-secondary-600 text-sm">Comprehensive guide to Nevada probate with costs, timeline, and process details.</p>
+            <Link
+              href="/resources/nevada-probate-guide/"
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+            >
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                Complete Nevada Probate Guide
+              </h3>
+              <p className="text-secondary-600 text-sm">
+                Comprehensive guide to Nevada probate with costs, timeline, and process details.
+              </p>
             </Link>
-            <Link href="/services/" className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Our Probate Services</h3>
-              <p className="text-secondary-600 text-sm">Learn how we can help you navigate the probate process efficiently.</p>
+            <Link
+              href="/services/"
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+            >
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                Our Probate Services
+              </h3>
+              <p className="text-secondary-600 text-sm">
+                Learn how we can help you navigate the probate process efficiently.
+              </p>
             </Link>
           </div>
         </div>
@@ -272,11 +309,10 @@ export default function NevadaProbateTimelinePage() {
       {/* CTA Section */}
       <section className="py-16 bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Need Help Navigating the Timeline?
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Need Help Navigating the Timeline?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Dr. Jan Duffy specializes in probate real estate sales and can help guide you through each step of the Nevada probate timeline.
+            Dr. Jan Duffy specializes in probate real estate sales and can help guide you through
+            each step of the Nevada probate timeline.
           </p>
           <Link
             href="/contact/"
@@ -286,6 +322,20 @@ export default function NevadaProbateTimelinePage() {
           </Link>
         </div>
       </section>
+      <SchemaMarkup
+        type="article"
+        breadcrumbs={breadcrumbs}
+        article={{
+          headline: 'Nevada Probate Timeline Guide | Complete 6-8 Month Process',
+          description:
+            'Complete guide to Nevada probate timeline. Understand each step of the 6-8 month probate process for real estate sales in Clark County.',
+          image: 'https://www.probaterealestatesales.com/images/nevada-probate-timeline.jpg',
+          author: 'Dr. Janet Duffy',
+          datePublished: '2025-01-01T00:00:00Z',
+          dateModified: new Date().toISOString(),
+          url: 'https://www.probaterealestatesales.com/blog/nevada-probate-timeline/',
+        }}
+      />
     </main>
   );
 }

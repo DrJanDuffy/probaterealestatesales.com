@@ -1,8 +1,20 @@
 'use client';
 
-import { useState } from 'react';
+import {
+  Award,
+  BookOpen,
+  ChevronDown,
+  FileText,
+  Home,
+  MapPin,
+  Menu,
+  MessageSquare,
+  Phone,
+  Users,
+  X,
+} from 'lucide-react';
 import Link from 'next/link';
-import { Menu, X, ChevronDown, MapPin, FileText, Phone, Home, Award, BookOpen, Users, MessageSquare, Video, TrendingUp } from 'lucide-react';
+import { useState } from 'react';
 
 const navigation = {
   main: [
@@ -17,33 +29,117 @@ const navigation = {
   ],
   blog: [
     { name: 'All Posts', href: '/blog', description: 'Latest blog posts and articles' },
-    { name: 'Probate Videos', href: '/blog/probate-videos', description: 'Educational video content' },
-    { name: 'Market Updates', href: '/blog/market-updates', description: 'Real estate market trends' },
+    {
+      name: 'Probate Videos',
+      href: '/blog/probate-videos',
+      description: 'Educational video content',
+    },
+    {
+      name: 'Market Updates',
+      href: '/blog/market-updates',
+      description: 'Real estate market trends',
+    },
   ],
   locations: [
-    { name: 'All Nevada Locations', href: '/locations', description: 'Complete coverage across Nevada' },
-    { name: 'Las Vegas', href: '/locations/las-vegas', description: 'Downtown & Strip area probate services' },
-    { name: 'Henderson', href: '/locations/henderson', description: 'Green Valley & Anthem probate expertise' },
-    { name: 'Summerlin', href: '/locations/summerlin', description: 'Master-planned community probate real estate' },
-    { name: 'North Las Vegas', href: '/locations/north-las-vegas', description: 'Aliante & Centennial Hills services' },
-    { name: 'Boulder City', href: '/locations/boulder-city', description: 'Historic area probate management' },
-    { name: 'Mesquite', href: '/locations/mesquite', description: 'Golf community probate real estate' },
-    { name: 'Spring Valley', href: '/locations/spring-valley', description: 'Residential area probate services' },
-    { name: 'Enterprise', href: '/locations/enterprise', description: 'Southwest Las Vegas probate expertise' },
+    {
+      name: 'All Nevada Locations',
+      href: '/locations',
+      description: 'Complete coverage across Nevada',
+    },
+    {
+      name: 'Las Vegas',
+      href: '/locations/las-vegas',
+      description: 'Downtown & Strip area probate services',
+    },
+    {
+      name: 'Henderson',
+      href: '/locations/henderson',
+      description: 'Green Valley & Anthem probate expertise',
+    },
+    {
+      name: 'Summerlin',
+      href: '/locations/summerlin',
+      description: 'Master-planned community probate real estate',
+    },
+    {
+      name: 'North Las Vegas',
+      href: '/locations/north-las-vegas',
+      description: 'Aliante & Centennial Hills services',
+    },
+    {
+      name: 'Boulder City',
+      href: '/locations/boulder-city',
+      description: 'Historic area probate management',
+    },
+    {
+      name: 'Mesquite',
+      href: '/locations/mesquite',
+      description: 'Golf community probate real estate',
+    },
+    {
+      name: 'Spring Valley',
+      href: '/locations/spring-valley',
+      description: 'Residential area probate services',
+    },
+    {
+      name: 'Enterprise',
+      href: '/locations/enterprise',
+      description: 'Southwest Las Vegas probate expertise',
+    },
   ],
   resources: [
-    { name: 'Nevada Probate Guide', href: '/resources/nevada-probate-guide', description: 'Complete guide to Nevada probate process' },
-    { name: 'Las Vegas Guide', href: '/resources/las-vegas-probate-guide', description: 'Las Vegas & Clark County probate guide' },
-    { name: 'FAQ & Q&A', href: '/faq', description: 'Comprehensive probate real estate questions & answers' },
-    { name: 'Probate Timeline', href: '/resources/nevada-probate-guide#timeline', description: '6-8 month Nevada probate timeline' },
-    { name: 'Probate Costs', href: '/resources/nevada-probate-guide#costs', description: 'Nevada probate costs breakdown' },
-    { name: 'Court Process', href: '/resources/nevada-probate-guide#process', description: 'Clark County court procedures' },
+    {
+      name: 'Nevada Probate Guide',
+      href: '/resources/nevada-probate-guide',
+      description: 'Complete guide to Nevada probate process',
+    },
+    {
+      name: 'Las Vegas Guide',
+      href: '/resources/las-vegas-probate-guide',
+      description: 'Las Vegas & Clark County probate guide',
+    },
+    {
+      name: 'FAQ & Q&A',
+      href: '/faq',
+      description: 'Comprehensive probate real estate questions & answers',
+    },
+    {
+      name: 'Probate Timeline',
+      href: '/resources/nevada-probate-guide#timeline',
+      description: '6-8 month Nevada probate timeline',
+    },
+    {
+      name: 'Probate Costs',
+      href: '/resources/nevada-probate-guide#costs',
+      description: 'Nevada probate costs breakdown',
+    },
+    {
+      name: 'Court Process',
+      href: '/resources/nevada-probate-guide#process',
+      description: 'Clark County court procedures',
+    },
   ],
   services: [
-    { name: 'Probate Sales', href: '/services#probate-sales', description: 'Court-approved property sales' },
-    { name: 'Estate Liquidation', href: '/services#estate-liquidation', description: 'Complete estate property management' },
-    { name: 'Property Valuation', href: '/services#property-valuation', description: 'Expert market analysis' },
-    { name: 'Court Representation', href: '/services#court-representation', description: 'Legal compliance support' },
+    {
+      name: 'Probate Sales',
+      href: '/services#probate-sales',
+      description: 'Court-approved property sales',
+    },
+    {
+      name: 'Estate Liquidation',
+      href: '/services#estate-liquidation',
+      description: 'Complete estate property management',
+    },
+    {
+      name: 'Property Valuation',
+      href: '/services#property-valuation',
+      description: 'Expert market analysis',
+    },
+    {
+      name: 'Court Representation',
+      href: '/services#court-representation',
+      description: 'Legal compliance support',
+    },
   ],
 };
 
@@ -62,9 +158,7 @@ export default function Navigation() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Award className="h-8 w-8 text-primary-600" />
-              <span className="ml-2 text-xl font-bold text-secondary-900">
-                Dr. Jan Duffy
-              </span>
+              <span className="ml-2 text-xl font-bold text-secondary-900">Dr. Jan Duffy</span>
               <span className="ml-2 text-sm text-secondary-600 hidden sm:block">
                 Probate Real Estate
               </span>
@@ -91,7 +185,7 @@ export default function Navigation() {
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              
+
               {servicesOpen && (
                 <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
                   <div className="py-1">
@@ -121,7 +215,7 @@ export default function Navigation() {
                 Locations
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              
+
               {locationsOpen && (
                 <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
                   <div className="py-1">
@@ -151,7 +245,7 @@ export default function Navigation() {
                 Resources
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              
+
               {resourcesOpen && (
                 <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
                   <div className="py-1">
@@ -181,7 +275,7 @@ export default function Navigation() {
                 Blog
                 <ChevronDown className="ml-1 h-4 w-4" />
               </button>
-              
+
               {blogOpen && (
                 <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
                   <div className="py-1">
@@ -233,11 +327,7 @@ export default function Navigation() {
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="text-secondary-700 hover:text-primary-600 p-2"
             >
-              {mobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>

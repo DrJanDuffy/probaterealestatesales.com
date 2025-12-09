@@ -12,19 +12,20 @@ export default function FeaturedProperties() {
             Featured Probate Homes
           </h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Discover our carefully curated selection of probate homes available through court-approved probate sales. 
-            Each probate property offers unique value and potential for buyers and investors in Las Vegas.
+            Discover our carefully curated selection of probate homes available through
+            court-approved probate sales. Each probate property offers unique value and potential
+            for buyers and investors in Las Vegas.
           </p>
         </div>
 
         {/* RealScout Widget */}
         <div className="w-full">
-          <realscout-office-listings 
-            agent-encoded-id="QWdlbnQtMjI1MDUw" 
-            sort-order="STATUS_AND_SIGNIFICANT_CHANGE" 
-            listing-status="For Sale" 
-            property-types="MF,SFR,OTHER,LAL" 
-            price-min="500000" 
+          <realscout-office-listings
+            agent-encoded-id="QWdlbnQtMjI1MDUw"
+            sort-order="STATUS_AND_SIGNIFICANT_CHANGE"
+            listing-status="For Sale"
+            property-types="MF,SFR,OTHER,LAL"
+            price-min="500000"
             price-max="750000"
           />
         </div>

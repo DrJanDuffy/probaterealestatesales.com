@@ -1,4 +1,14 @@
-import { CheckCircle, AlertTriangle, FileText, Home, Users, DollarSign, Clock, Shield, MapPin, Download, ArrowRight } from 'lucide-react';
+import {
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  Download,
+  FileText,
+  Home,
+  MapPin,
+  Shield,
+} from 'lucide-react';
 
 const checklistCategories = [
   {
@@ -12,15 +22,15 @@ const checklistCategories = [
         priority: 'Critical',
         deadline: 'Within 24 hours',
         drDuffyGuidance: 'Dr. Duffy coordinates with locksmiths and security services',
-        completed: false
+        completed: false,
       },
       {
         task: 'Notify insurance company of death',
-        description: 'Contact homeowner\'s insurance to maintain coverage',
+        description: "Contact homeowner's insurance to maintain coverage",
         priority: 'Critical',
         deadline: 'Within 48 hours',
         drDuffyGuidance: 'Dr. Duffy ensures continuous coverage during probate',
-        completed: false
+        completed: false,
       },
       {
         task: 'File petition for probate',
@@ -28,7 +38,7 @@ const checklistCategories = [
         priority: 'Critical',
         deadline: 'Within 30 days',
         drDuffyGuidance: 'Dr. Duffy assists with document preparation and filing',
-        completed: false
+        completed: false,
       },
       {
         task: 'Obtain death certificates',
@@ -36,9 +46,9 @@ const checklistCategories = [
         priority: 'High',
         deadline: 'Within 7 days',
         drDuffyGuidance: 'Dr. Duffy coordinates with vital records office',
-        completed: false
-      }
-    ]
+        completed: false,
+      },
+    ],
   },
   {
     category: 'Property Assessment & Documentation',
@@ -51,7 +61,7 @@ const checklistCategories = [
         priority: 'High',
         deadline: 'Within 60 days',
         drDuffyGuidance: 'Dr. Duffy conducts professional property assessment',
-        completed: false
+        completed: false,
       },
       {
         task: 'Obtain property appraisal',
@@ -59,7 +69,7 @@ const checklistCategories = [
         priority: 'High',
         deadline: 'Within 90 days',
         drDuffyGuidance: 'Dr. Duffy coordinates with approved Nevada appraisers',
-        completed: false
+        completed: false,
       },
       {
         task: 'Document property condition',
@@ -67,7 +77,7 @@ const checklistCategories = [
         priority: 'Medium',
         deadline: 'Within 45 days',
         drDuffyGuidance: 'Dr. Duffy creates comprehensive property documentation',
-        completed: false
+        completed: false,
       },
       {
         task: 'Assess property repairs needed',
@@ -75,9 +85,9 @@ const checklistCategories = [
         priority: 'Medium',
         deadline: 'Within 60 days',
         drDuffyGuidance: 'Dr. Duffy coordinates repair estimates and contractors',
-        completed: false
-      }
-    ]
+        completed: false,
+      },
+    ],
   },
   {
     category: 'Legal & Court Requirements',
@@ -90,7 +100,7 @@ const checklistCategories = [
         priority: 'Critical',
         deadline: 'As scheduled by court',
         drDuffyGuidance: 'Dr. Duffy prepares you for court appearance',
-        completed: false
+        completed: false,
       },
       {
         task: 'Obtain Letters of Administration',
@@ -98,7 +108,7 @@ const checklistCategories = [
         priority: 'Critical',
         deadline: 'After court hearing',
         drDuffyGuidance: 'Dr. Duffy ensures all court requirements are met',
-        completed: false
+        completed: false,
       },
       {
         task: 'File inventory with court',
@@ -106,7 +116,7 @@ const checklistCategories = [
         priority: 'High',
         deadline: 'Within 90 days of appointment',
         drDuffyGuidance: 'Dr. Duffy prepares court-compliant inventory',
-        completed: false
+        completed: false,
       },
       {
         task: 'Publish notice to creditors',
@@ -114,9 +124,9 @@ const checklistCategories = [
         priority: 'High',
         deadline: 'Within 30 days of appointment',
         drDuffyGuidance: 'Dr. Duffy coordinates with legal publication services',
-        completed: false
-      }
-    ]
+        completed: false,
+      },
+    ],
   },
   {
     category: 'Property Preparation & Sale',
@@ -129,7 +139,7 @@ const checklistCategories = [
         priority: 'High',
         deadline: 'Before listing property',
         drDuffyGuidance: 'Dr. Duffy prepares and files sale petition',
-        completed: false
+        completed: false,
       },
       {
         task: 'Coordinate property clean-out',
@@ -137,7 +147,7 @@ const checklistCategories = [
         priority: 'Medium',
         deadline: 'Before listing',
         drDuffyGuidance: 'Dr. Duffy coordinates estate sale and clean-out services',
-        completed: false
+        completed: false,
       },
       {
         task: 'Complete necessary repairs',
@@ -145,7 +155,7 @@ const checklistCategories = [
         priority: 'Medium',
         deadline: 'Before listing',
         drDuffyGuidance: 'Dr. Duffy manages repair process and quality control',
-        completed: false
+        completed: false,
       },
       {
         task: 'List property for sale',
@@ -153,9 +163,9 @@ const checklistCategories = [
         priority: 'High',
         deadline: 'After court approval',
         drDuffyGuidance: 'Dr. Duffy handles entire sales process professionally',
-        completed: false
-      }
-    ]
+        completed: false,
+      },
+    ],
   },
   {
     category: 'Financial Management',
@@ -168,7 +178,7 @@ const checklistCategories = [
         priority: 'High',
         deadline: 'Within 30 days of appointment',
         drDuffyGuidance: 'Dr. Duffy coordinates with estate attorneys',
-        completed: false
+        completed: false,
       },
       {
         task: 'Pay estate expenses',
@@ -176,7 +186,7 @@ const checklistCategories = [
         priority: 'High',
         deadline: 'Ongoing',
         drDuffyGuidance: 'Dr. Duffy tracks and documents all expenses',
-        completed: false
+        completed: false,
       },
       {
         task: 'Handle creditor claims',
@@ -184,7 +194,7 @@ const checklistCategories = [
         priority: 'High',
         deadline: 'Within 4 months of publication',
         drDuffyGuidance: 'Dr. Duffy coordinates with estate attorneys',
-        completed: false
+        completed: false,
       },
       {
         task: 'File estate tax returns',
@@ -192,33 +202,33 @@ const checklistCategories = [
         priority: 'Medium',
         deadline: 'As required by IRS',
         drDuffyGuidance: 'Dr. Duffy coordinates with tax professionals',
-        completed: false
-      }
-    ]
-  }
+        completed: false,
+      },
+    ],
+  },
 ];
 
 const nevadaSpecificRequirements = [
   {
     title: 'Clark County Probate Court',
     requirement: 'All probate matters must be filed at 200 Lewis Ave, Las Vegas, NV 89101',
-    icon: MapPin
+    icon: MapPin,
   },
   {
     title: 'Property Appraisal',
     requirement: 'Nevada requires court-appointed appraisers for probate properties',
-    icon: Home
+    icon: Home,
   },
   {
     title: 'Creditor Claims',
     requirement: '4-month claim period from first publication date',
-    icon: Clock
+    icon: Clock,
   },
   {
     title: 'Court Approval',
     requirement: 'Property sales require court order before listing',
-    icon: Shield
-  }
+    icon: Shield,
+  },
 ];
 
 export default function ProbatePropertyChecklist() {
@@ -235,8 +245,8 @@ export default function ProbatePropertyChecklist() {
             Complete Probate Property Checklist
           </h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Dr. Jan Duffy's comprehensive checklist ensures you complete every required step
-            of the Nevada probate process on time and in compliance with court requirements.
+            Dr. Jan Duffy's comprehensive checklist ensures you complete every required step of the
+            Nevada probate process on time and in compliance with court requirements.
           </p>
         </div>
 
@@ -244,16 +254,19 @@ export default function ProbatePropertyChecklist() {
         <div className="mb-16">
           <div className="space-y-8">
             {checklistCategories.map((category) => (
-              <div key={category.category} className="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 border border-gray-200">
+              <div
+                key={category.category}
+                className="bg-gradient-to-r from-gray-50 to-white rounded-2xl p-8 border border-gray-200"
+              >
                 {/* Category Header */}
                 <div className="flex items-center gap-4 mb-6">
-                  <div className={`w-16 h-16 bg-${category.color}-100 rounded-xl flex items-center justify-center flex-shrink-0`}>
+                  <div
+                    className={`w-16 h-16 bg-${category.color}-100 rounded-xl flex items-center justify-center flex-shrink-0`}
+                  >
                     <category.icon className={`h-8 w-8 text-${category.color}-600`} />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-secondary-900">
-                      {category.category}
-                    </h3>
+                    <h3 className="text-2xl font-bold text-secondary-900">{category.category}</h3>
                     <p className="text-secondary-600">
                       Complete these tasks within the specified timeframe
                     </p>
@@ -263,35 +276,36 @@ export default function ProbatePropertyChecklist() {
                 {/* Checklist Items */}
                 <div className="grid md:grid-cols-2 gap-6">
                   {category.items.map((item) => (
-                    <div key={`${category.category}-${item.task.substring(0, 20).replace(/\s+/g, '-').toLowerCase()}`} className="bg-white rounded-lg p-6 border border-gray-200 hover:shadow-md transition-shadow duration-200">
+                    <div
+                      key={`${category.category}-${item.task.substring(0, 20).replace(/\s+/g, '-').toLowerCase()}`}
+                      className="bg-white rounded-lg p-6 border border-gray-200 hover:shadow-md transition-shadow duration-200"
+                    >
                       {/* Task Header */}
                       <div className="flex items-start gap-3 mb-4">
                         <div className="w-6 h-6 rounded-full border-2 border-gray-300 flex-shrink-0 mt-1">
                           {/* Checkbox would go here in interactive version */}
                         </div>
                         <div className="flex-1">
-                          <h4 className="font-semibold text-secondary-900 mb-2">
-                            {item.task}
-                          </h4>
-                          <p className="text-sm text-secondary-600 mb-3">
-                            {item.description}
-                          </p>
+                          <h4 className="font-semibold text-secondary-900 mb-2">{item.task}</h4>
+                          <p className="text-sm text-secondary-600 mb-3">{item.description}</p>
                         </div>
                       </div>
 
                       {/* Task Details */}
                       <div className="space-y-3">
                         <div className="flex items-center gap-2">
-                          <span className={`inline-block px-2 py-1 rounded text-xs font-medium ${
-                            item.priority === 'Critical' ? 'bg-red-100 text-red-700' :
-                            item.priority === 'High' ? 'bg-orange-100 text-orange-700' :
-                            'bg-blue-100 text-blue-700'
-                          }`}>
+                          <span
+                            className={`inline-block px-2 py-1 rounded text-xs font-medium ${
+                              item.priority === 'Critical'
+                                ? 'bg-red-100 text-red-700'
+                                : item.priority === 'High'
+                                  ? 'bg-orange-100 text-orange-700'
+                                  : 'bg-blue-100 text-blue-700'
+                            }`}
+                          >
                             {item.priority} Priority
                           </span>
-                          <span className="text-xs text-secondary-500">
-                            Due: {item.deadline}
-                          </span>
+                          <span className="text-xs text-secondary-500">Due: {item.deadline}</span>
                         </div>
 
                         <div className="bg-accent-50 rounded-lg p-3 border border-accent-200">
@@ -313,18 +327,19 @@ export default function ProbatePropertyChecklist() {
           <h3 className="text-2xl font-bold text-secondary-900 mb-8 text-center">
             Nevada Probate Court Requirements
           </h3>
-          
+
           <div className="grid md:grid-cols-2 gap-6">
             {nevadaSpecificRequirements.map((requirement) => (
-              <div key={requirement.title} className="bg-white rounded-xl shadow-soft p-6 border border-gray-100">
+              <div
+                key={requirement.title}
+                className="bg-white rounded-xl shadow-soft p-6 border border-gray-100"
+              >
                 <div className="flex items-start gap-3">
                   <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
                     <requirement.icon className="h-6 w-6 text-primary-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary-900 mb-2">
-                      {requirement.title}
-                    </h4>
+                    <h4 className="font-semibold text-secondary-900 mb-2">{requirement.title}</h4>
                     <p className="text-sm text-secondary-600 leading-relaxed">
                       {requirement.requirement}
                     </p>
@@ -342,8 +357,8 @@ export default function ProbatePropertyChecklist() {
               Download Your Complete Checklist
             </h3>
             <p className="text-lg text-secondary-600 mb-6 max-w-2xl mx-auto">
-              Get a printable version of this checklist to track your progress
-              and ensure nothing is missed during the probate process.
+              Get a printable version of this checklist to track your progress and ensure nothing is
+              missed during the probate process.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button type="button" className="btn-primary inline-flex items-center gap-2">
@@ -374,19 +389,23 @@ export default function ProbatePropertyChecklist() {
         {/* CTA Section */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-accent-600 to-primary-600 rounded-2xl p-8 md:p-12 text-white">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Don't Navigate Probate Alone
-            </h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Don't Navigate Probate Alone</h3>
             <p className="text-xl text-accent-100 max-w-2xl mx-auto mb-6">
-              Dr. Jan Duffy guides you through every step, ensuring compliance
-              with Nevada probate laws and protecting your family's interests.
+              Dr. Jan Duffy guides you through every step, ensuring compliance with Nevada probate
+              laws and protecting your family's interests.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="http://drjanduffy.realscout.com/onboarding" className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2 group">
+              <a
+                href="http://drjanduffy.realscout.com/onboarding"
+                className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2 group"
+              >
                 Schedule Free Consultation
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="tel:+1-702-830-9222" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors inline-flex items-center justify-center gap-2">
+              <a
+                href="tel:+1-702-830-9222"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors inline-flex items-center justify-center gap-2"
+              >
                 Call (702) 830-9222
               </a>
             </div>

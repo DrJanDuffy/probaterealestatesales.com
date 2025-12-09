@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { Calculator, DollarSign, FileText, Gavel, Home, Users, Clock, AlertTriangle, CheckCircle, ArrowRight, Info } from 'lucide-react';
+import { ArrowRight, Calculator, CheckCircle, DollarSign, Info } from 'lucide-react';
 import { useState } from 'react';
 
 const courtFees = {
@@ -8,32 +8,32 @@ const courtFees = {
     under100k: 435,
     over100k: 1195,
     over500k: 1195,
-    over1m: 1195
+    over1m: 1195,
   },
   publicationFee: 150,
   certifiedCopies: 15,
-  additionalCopies: 5
+  additionalCopies: 5,
 };
 
 const attorneyFees = {
   simplified: {
     flat: 1500,
-    hourly: 250
+    hourly: 250,
   },
   standard: {
     flat: 3500,
-    hourly: 300
+    hourly: 300,
   },
   complex: {
     flat: 7500,
-    hourly: 350
-  }
+    hourly: 350,
+  },
 };
 
 const realEstateCommissions = {
   standard: 0.06, // 6%
-  luxury: 0.05,   // 5%
-  probate: 0.07   // 7% for probate properties
+  luxury: 0.05, // 5%
+  probate: 0.07, // 7% for probate properties
 };
 
 const additionalCosts = {
@@ -44,23 +44,51 @@ const additionalCosts = {
   cleaning: 500,
   repairs: 1000, // estimated
   titleInsurance: 0.005, // 0.5% of sale price
-  escrowFees: 0.002 // 0.2% of sale price
+  escrowFees: 0.002, // 0.2% of sale price
 };
 
 type EstateSize = 'under100k' | 'over100k' | 'over500k' | 'over1m';
 type ProbateComplexity = 'simple' | 'standard' | 'complex';
 
 const estateSizeCategories = [
-  { label: 'Under $100,000', value: 'under100k' as EstateSize, description: 'Simplified probate available' },
-  { label: '$100,000 - $500,000', value: 'over100k' as EstateSize, description: 'Standard probate process' },
-  { label: '$500,000 - $1,000,000', value: 'over500k' as EstateSize, description: 'Standard probate process' },
-  { label: 'Over $1,000,000', value: 'over1m' as EstateSize, description: 'Complex probate process' }
+  {
+    label: 'Under $100,000',
+    value: 'under100k' as EstateSize,
+    description: 'Simplified probate available',
+  },
+  {
+    label: '$100,000 - $500,000',
+    value: 'over100k' as EstateSize,
+    description: 'Standard probate process',
+  },
+  {
+    label: '$500,000 - $1,000,000',
+    value: 'over500k' as EstateSize,
+    description: 'Standard probate process',
+  },
+  {
+    label: 'Over $1,000,000',
+    value: 'over1m' as EstateSize,
+    description: 'Complex probate process',
+  },
 ];
 
 const probateComplexity = [
-  { label: 'Simple', value: 'simple' as ProbateComplexity, description: 'Single heir, no disputes, clear title' },
-  { label: 'Standard', value: 'standard' as ProbateComplexity, description: 'Multiple heirs, some complexity' },
-  { label: 'Complex', value: 'complex' as ProbateComplexity, description: 'Multiple heirs, disputes, unclear title' }
+  {
+    label: 'Simple',
+    value: 'simple' as ProbateComplexity,
+    description: 'Single heir, no disputes, clear title',
+  },
+  {
+    label: 'Standard',
+    value: 'standard' as ProbateComplexity,
+    description: 'Multiple heirs, some complexity',
+  },
+  {
+    label: 'Complex',
+    value: 'complex' as ProbateComplexity,
+    description: 'Multiple heirs, disputes, unclear title',
+  },
 ];
 
 export default function ProbateCostCalculator() {
@@ -80,11 +108,12 @@ export default function ProbateCostCalculator() {
       attorney: 0,
       realEstate: 0,
       additional: 0,
-      total: 0
+      total: 0,
     };
 
     // Court fees
-    costs.court = courtFees.filingFee[estateSize] + courtFees.publicationFee + (courtFees.certifiedCopies * 5);
+    costs.court =
+      courtFees.filingFee[estateSize] + courtFees.publicationFee + courtFees.certifiedCopies * 5;
 
     // Attorney fees
     if (estateSize === 'under100k') {
@@ -92,28 +121,30 @@ export default function ProbateCostCalculator() {
     } else if (complexity === 'simple') {
       costs.attorney = attorneyFees.standard.flat;
     } else if (complexity === 'complex') {
-      costs.attorney = attorneyFees.complex.flat + (attorneyFees.complex.hourly * 20); // Additional hours
+      costs.attorney = attorneyFees.complex.flat + attorneyFees.complex.hourly * 20; // Additional hours
     } else {
-      costs.attorney = attorneyFees.standard.flat + (attorneyFees.standard.hourly * 10); // Additional hours
+      costs.attorney = attorneyFees.standard.flat + attorneyFees.standard.hourly * 10; // Additional hours
     }
 
     // Real estate commissions
     if (hasRealEstate) {
-      const commissionRate = propertyValue > 1000000 ? realEstateCommissions.luxury : realEstateCommissions.probate;
+      const commissionRate =
+        propertyValue > 1000000 ? realEstateCommissions.luxury : realEstateCommissions.probate;
       costs.realEstate = propertyValue * commissionRate;
     }
 
     // Additional costs
-    costs.additional = additionalCosts.appraisal + 
-                      (additionalCosts.propertyInsurance / 12 * timeline) +
-                      (additionalCosts.utilities * timeline) +
-                      (additionalCosts.maintenance * timeline) +
-                      additionalCosts.cleaning +
-                      additionalCosts.repairs;
+    costs.additional =
+      additionalCosts.appraisal +
+      (additionalCosts.propertyInsurance / 12) * timeline +
+      additionalCosts.utilities * timeline +
+      additionalCosts.maintenance * timeline +
+      additionalCosts.cleaning +
+      additionalCosts.repairs;
 
     if (hasRealEstate) {
-      costs.additional += (propertyValue * additionalCosts.titleInsurance) + 
-                         (propertyValue * additionalCosts.escrowFees);
+      costs.additional +=
+        propertyValue * additionalCosts.titleInsurance + propertyValue * additionalCosts.escrowFees;
     }
 
     costs.total = costs.court + costs.attorney + costs.realEstate + costs.additional;
@@ -137,8 +168,8 @@ export default function ProbateCostCalculator() {
             Nevada Probate Cost Calculator
           </h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Estimate the total costs of probate in Nevada with Dr. Jan Duffy's
-            comprehensive cost calculator. Understand all fees and expenses upfront.
+            Estimate the total costs of probate in Nevada with Dr. Jan Duffy's comprehensive cost
+            calculator. Understand all fees and expenses upfront.
           </p>
         </div>
 
@@ -146,25 +177,26 @@ export default function ProbateCostCalculator() {
           {/* Calculator Inputs */}
           <div className="space-y-8">
             <div className="bg-white rounded-xl shadow-soft p-6 border border-gray-100">
-              <h3 className="text-xl font-semibold text-secondary-900 mb-6">
-                Estate Information
-              </h3>
+              <h3 className="text-xl font-semibold text-secondary-900 mb-6">Estate Information</h3>
 
               {/* Estate Value */}
               <div className="mb-6">
-                <label htmlFor="estateValue" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="estateValue"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Total Estate Value
                 </label>
                 <div className="relative">
                   <span className="absolute left-3 top-3 text-gray-500">$</span>
-                                     <input
-                     id="estateValue"
-                     type="number"
-                     value={estateValue}
-                     onChange={(e) => setEstateValue(Number(e.target.value))}
-                     className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                     placeholder="500000"
-                   />
+                  <input
+                    id="estateValue"
+                    type="number"
+                    value={estateValue}
+                    onChange={(e) => setEstateValue(Number(e.target.value))}
+                    className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    placeholder="500000"
+                  />
                 </div>
                 <p className="text-xs text-secondary-500 mt-1">
                   Include all assets: real estate, bank accounts, investments, personal property
@@ -173,17 +205,20 @@ export default function ProbateCostCalculator() {
 
               {/* Estate Size Category */}
               <div className="mb-6">
-                <label htmlFor="estateSize" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="estateSize"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Estate Size Category
                 </label>
-                                 <select
-                   id="estateSize"
-                   name="estateSize"
-                   value={estateSize}
-                                       onChange={(e) => setEstateSize(e.target.value as EstateSize)}
-                   aria-label="Estate size category"
-                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                 >
+                <select
+                  id="estateSize"
+                  name="estateSize"
+                  value={estateSize}
+                  onChange={(e) => setEstateSize(e.target.value as EstateSize)}
+                  aria-label="Estate size category"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                >
                   {estateSizeCategories.map((category) => (
                     <option key={category.value} value={category.value}>
                       {category.label} - {category.description}
@@ -194,17 +229,20 @@ export default function ProbateCostCalculator() {
 
               {/* Probate Complexity */}
               <div className="mb-6">
-                <label htmlFor="complexity" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="complexity"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Probate Complexity
                 </label>
-                                 <select
-                   id="complexity"
-                   name="complexity"
-                   value={complexity}
-                                       onChange={(e) => setComplexity(e.target.value as ProbateComplexity)}
-                   aria-label="Probate complexity level"
-                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                 >
+                <select
+                  id="complexity"
+                  name="complexity"
+                  value={complexity}
+                  onChange={(e) => setComplexity(e.target.value as ProbateComplexity)}
+                  aria-label="Probate complexity level"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                >
                   {probateComplexity.map((level) => (
                     <option key={level.value} value={level.value}>
                       {level.label} - {level.description}
@@ -216,36 +254,42 @@ export default function ProbateCostCalculator() {
               {/* Property Information */}
               {hasRealEstate && (
                 <>
-                                     <div className="mb-6">
-                     <label htmlFor="propertyValue" className="block text-sm font-medium text-secondary-700 mb-2">
-                       Real Estate Value
-                     </label>
-                     <div className="relative">
-                       <span className="absolute left-3 top-3 text-gray-500">$</span>
-                       <input
-                         id="propertyValue"
-                         type="number"
-                         value={propertyValue}
-                         onChange={(e) => setPropertyValue(Number(e.target.value))}
-                         className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                         placeholder="400000"
-                       />
-                     </div>
-                   </div>
+                  <div className="mb-6">
+                    <label
+                      htmlFor="propertyValue"
+                      className="block text-sm font-medium text-secondary-700 mb-2"
+                    >
+                      Real Estate Value
+                    </label>
+                    <div className="relative">
+                      <span className="absolute left-3 top-3 text-gray-500">$</span>
+                      <input
+                        id="propertyValue"
+                        type="number"
+                        value={propertyValue}
+                        onChange={(e) => setPropertyValue(Number(e.target.value))}
+                        className="w-full pl-8 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        placeholder="400000"
+                      />
+                    </div>
+                  </div>
 
-                                     <div className="mb-6">
-                     <label htmlFor="timeline" className="block text-sm font-medium text-secondary-700 mb-2">
-                       Expected Timeline (months)
-                     </label>
-                     <input
-                       id="timeline"
-                       type="number"
-                       value={timeline}
-                       onChange={(e) => setTimeline(Number(e.target.value))}
-                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                       placeholder="8"
-                     />
-                   </div>
+                  <div className="mb-6">
+                    <label
+                      htmlFor="timeline"
+                      className="block text-sm font-medium text-secondary-700 mb-2"
+                    >
+                      Expected Timeline (months)
+                    </label>
+                    <input
+                      id="timeline"
+                      type="number"
+                      value={timeline}
+                      onChange={(e) => setTimeline(Number(e.target.value))}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                      placeholder="8"
+                    />
+                  </div>
                 </>
               )}
 
@@ -301,19 +345,30 @@ export default function ProbateCostCalculator() {
               <ul className="space-y-2 text-sm text-secondary-600">
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span><strong>Simplified Probate:</strong> Estates under $100,000 qualify for faster, cheaper process</span>
+                  <span>
+                    <strong>Simplified Probate:</strong> Estates under $100,000 qualify for faster,
+                    cheaper process
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span><strong>Efficient Process:</strong> Dr. Duffy's expertise can reduce timeline by 30-40%</span>
+                  <span>
+                    <strong>Efficient Process:</strong> Dr. Duffy's expertise can reduce timeline by
+                    30-40%
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span><strong>Property Value:</strong> Professional management maximizes sale price, offsetting costs</span>
+                  <span>
+                    <strong>Property Value:</strong> Professional management maximizes sale price,
+                    offsetting costs
+                  </span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
-                  <span><strong>Court Compliance:</strong> Avoid costly mistakes and delays</span>
+                  <span>
+                    <strong>Court Compliance:</strong> Avoid costly mistakes and delays
+                  </span>
                 </li>
               </ul>
             </div>
@@ -343,11 +398,15 @@ export default function ProbateCostCalculator() {
                   <div className="text-primary-100 text-sm">Legal Fees</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold mb-1">${costs.realEstate.toLocaleString()}</div>
+                  <div className="text-2xl font-bold mb-1">
+                    ${costs.realEstate.toLocaleString()}
+                  </div>
                   <div className="text-primary-100 text-sm">Real Estate</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold mb-1">${costs.additional.toLocaleString()}</div>
+                  <div className="text-2xl font-bold mb-1">
+                    ${costs.additional.toLocaleString()}
+                  </div>
                   <div className="text-primary-100 text-sm">Additional</div>
                 </div>
               </div>
@@ -356,16 +415,19 @@ export default function ProbateCostCalculator() {
             {/* Detailed Cost Breakdown */}
             <div className="bg-white rounded-xl shadow-soft p-6 border border-gray-100">
               <h4 className="font-semibold text-secondary-900 mb-4">Detailed Cost Breakdown</h4>
-              
+
               <div className="space-y-4">
                 {/* Court Fees */}
                 <div className="border-b border-gray-200 pb-3">
                   <div className="flex justify-between items-center mb-2">
                     <span className="font-medium text-secondary-700">Court Fees</span>
-                    <span className="font-semibold text-secondary-900">${costs.court.toLocaleString()}</span>
+                    <span className="font-semibold text-secondary-900">
+                      ${costs.court.toLocaleString()}
+                    </span>
                   </div>
                   <div className="text-sm text-secondary-500">
-                    Filing: ${courtFees.filingFee[estateSize]}, Publication: ${courtFees.publicationFee}, Copies: ${courtFees.certifiedCopies * 5}
+                    Filing: ${courtFees.filingFee[estateSize]}, Publication: $
+                    {courtFees.publicationFee}, Copies: ${courtFees.certifiedCopies * 5}
                   </div>
                 </div>
 
@@ -373,11 +435,16 @@ export default function ProbateCostCalculator() {
                 <div className="border-b border-gray-200 pb-3">
                   <div className="flex justify-between items-center mb-2">
                     <span className="font-medium text-secondary-700">Legal Fees</span>
-                    <span className="font-semibold text-secondary-900">${costs.attorney.toLocaleString()}</span>
+                    <span className="font-semibold text-secondary-900">
+                      ${costs.attorney.toLocaleString()}
+                    </span>
                   </div>
                   <div className="text-sm text-secondary-500">
-                    {complexity === 'simple' ? 'Standard probate process' : 
-                     complexity === 'complex' ? 'Complex probate with additional hours' : 'Standard probate with additional hours'}
+                    {complexity === 'simple'
+                      ? 'Standard probate process'
+                      : complexity === 'complex'
+                        ? 'Complex probate with additional hours'
+                        : 'Standard probate with additional hours'}
                   </div>
                 </div>
 
@@ -386,10 +453,13 @@ export default function ProbateCostCalculator() {
                   <div className="border-b border-gray-200 pb-3">
                     <div className="flex justify-between items-center mb-2">
                       <span className="font-medium text-secondary-700">Real Estate Commission</span>
-                      <span className="font-semibold text-secondary-900">${costs.realEstate.toLocaleString()}</span>
+                      <span className="font-semibold text-secondary-900">
+                        ${costs.realEstate.toLocaleString()}
+                      </span>
                     </div>
                     <div className="text-sm text-secondary-500">
-                      {propertyValue > 1000000 ? '5% luxury rate' : '7% probate rate'} on ${propertyValue.toLocaleString()}
+                      {propertyValue > 1000000 ? '5% luxury rate' : '7% probate rate'} on $
+                      {propertyValue.toLocaleString()}
                     </div>
                   </div>
                 )}
@@ -398,7 +468,9 @@ export default function ProbateCostCalculator() {
                 <div className="border-b border-gray-200 pb-3">
                   <div className="flex justify-between items-center mb-2">
                     <span className="font-medium text-secondary-700">Additional Costs</span>
-                    <span className="font-semibold text-secondary-900">${costs.additional.toLocaleString()}</span>
+                    <span className="font-semibold text-secondary-900">
+                      ${costs.additional.toLocaleString()}
+                    </span>
                   </div>
                   <div className="text-sm text-secondary-500">
                     Appraisal, insurance, utilities, maintenance, repairs, title insurance
@@ -408,8 +480,12 @@ export default function ProbateCostCalculator() {
                 {/* Total */}
                 <div className="pt-3">
                   <div className="flex justify-between items-center">
-                    <span className="font-bold text-lg text-secondary-900">Total Estimated Cost</span>
-                    <span className="font-bold text-2xl text-primary-600">${costs.total.toLocaleString()}</span>
+                    <span className="font-bold text-lg text-secondary-900">
+                      Total Estimated Cost
+                    </span>
+                    <span className="font-bold text-2xl text-primary-600">
+                      ${costs.total.toLocaleString()}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -418,20 +494,26 @@ export default function ProbateCostCalculator() {
             {/* Cost Comparison */}
             <div className="bg-white rounded-xl shadow-soft p-6 border border-gray-100">
               <h4 className="font-semibold text-secondary-900 mb-4">Cost Comparison</h4>
-              
+
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-secondary-600">Without Dr. Duffy's expertise:</span>
-                  <span className="font-semibold text-red-600">${(costs.total * 1.4).toLocaleString()}</span>
+                  <span className="font-semibold text-red-600">
+                    ${(costs.total * 1.4).toLocaleString()}
+                  </span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-secondary-600">With Dr. Duffy's expertise:</span>
-                  <span className="font-semibold text-green-600">${costs.total.toLocaleString()}</span>
+                  <span className="font-semibold text-green-600">
+                    ${costs.total.toLocaleString()}
+                  </span>
                 </div>
                 <div className="border-t border-gray-200 pt-3">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-secondary-600">Potential savings:</span>
-                    <span className="font-semibold text-green-600">${(costs.total * 0.4).toLocaleString()}</span>
+                    <span className="font-semibold text-green-600">
+                      ${(costs.total * 0.4).toLocaleString()}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -446,11 +528,14 @@ export default function ProbateCostCalculator() {
               Ready to Get an Accurate Cost Estimate?
             </h3>
             <p className="text-lg text-secondary-600 mb-6 max-w-2xl mx-auto">
-              Dr. Jan Duffy provides personalized cost estimates and helps you
-              minimize probate expenses while maximizing your property's value.
+              Dr. Jan Duffy provides personalized cost estimates and helps you minimize probate
+              expenses while maximizing your property's value.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="http://drjanduffy.realscout.com/onboarding" className="btn-primary inline-flex items-center gap-2">
+              <a
+                href="http://drjanduffy.realscout.com/onboarding"
+                className="btn-primary inline-flex items-center gap-2"
+              >
                 Get Free Cost Estimate
                 <ArrowRight className="h-5 w-5" />
               </a>

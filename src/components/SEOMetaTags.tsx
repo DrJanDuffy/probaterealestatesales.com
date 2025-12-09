@@ -41,15 +41,14 @@ export default function SEOMetaTags({
   noIndex = false,
   noFollow = false,
   language = 'en-US',
-  region = 'US-NV'
+  region = 'US-NV',
 }: SEOMetaTagsProps) {
-  const fullTitle = title.includes('Probate Real Estate') 
-    ? title 
+  const fullTitle = title.includes('Probate Real Estate')
+    ? title
     : `${title} | Probate Real Estate Sales - Las Vegas, NV`;
 
-  const fullDescription = description.length > 160 
-    ? `${description.substring(0, 157)}...` 
-    : description;
+  const fullDescription =
+    description.length > 160 ? `${description.substring(0, 157)}...` : description;
 
   const defaultKeywords = [
     'probate real estate',
@@ -61,7 +60,7 @@ export default function SEOMetaTags({
     'inheritance property',
     'estate planning',
     'real estate agent',
-    'inherited property worth'
+    'inherited property worth',
   ];
 
   const allKeywords = [...new Set([...defaultKeywords, ...keywords])];
@@ -75,7 +74,7 @@ export default function SEOMetaTags({
       <meta name="author" content="Dr. Janet Duffy" />
       <meta name="robots" content={noIndex ? 'noindex' : 'index'} />
       {noFollow && <meta name="robots" content="nofollow" />}
-      
+
       {/* Language and Region */}
       <meta httpEquiv="content-language" content={language} />
       <meta name="geo.region" content={region} />
@@ -111,11 +110,9 @@ export default function SEOMetaTags({
       {ogType === 'article' && articleSection && (
         <meta property="article:section" content={articleSection} />
       )}
-      {ogType === 'article' && articleTags.length > 0 && (
-        articleTags.map((tag) => (
-          <meta key={tag} property="article:tag" content={tag} />
-        ))
-      )}
+      {ogType === 'article' &&
+        articleTags.length > 0 &&
+        articleTags.map((tag) => <meta key={tag} property="article:tag" content={tag} />)}
 
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
@@ -127,12 +124,15 @@ export default function SEOMetaTags({
       <meta name="twitter:image:alt" content={fullTitle} />
 
       {/* Business-specific Meta Tags */}
-      <meta name="business:contact_data:street_address" content="City Centre Place, 400 S 4th Street Suite 250 B" />
+      <meta
+        name="business:contact_data:street_address"
+        content="City Centre Place, 400 S 4th Street Suite 250 B"
+      />
       <meta name="business:contact_data:locality" content="Las Vegas" />
       <meta name="business:contact_data:region" content="NV" />
       <meta name="business:contact_data:postal_code" content="89101" />
       <meta name="business:contact_data:country_name" content="United States" />
-              <meta name="business:contact_data:phone_number" content="+1-702-830-9222" />
+      <meta name="business:contact_data:phone_number" content="+1-702-830-9222" />
       <meta name="business:contact_data:email" content="DrJanSells@ProbateRealEstateSales.com" />
       <meta name="business:contact_data:website" content="https://www.probaterealestatesales.com" />
 
@@ -176,39 +176,40 @@ export default function SEOMetaTags({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Probate Real Estate Sales",
-            "description": "Specialized probate real estate services helping families navigate inherited property sales with compassion and expertise.",
-            "url": "https://www.probaterealestatesales.com",
-            "telephone": "+1-702-830-9222",
-            "email": "DrJanSells@ProbateRealEstateSales.com",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "City Centre Place, 400 S 4th Street Suite 250 B",
-              "addressLocality": "Las Vegas",
-              "addressRegion": "NV",
-              "postalCode": "89101",
-              "addressCountry": "US"
+            '@context': 'https://schema.org',
+            '@type': 'LocalBusiness',
+            name: 'Probate Real Estate Sales',
+            description:
+              'Specialized probate real estate services helping families navigate inherited property sales with compassion and expertise.',
+            url: 'https://www.probaterealestatesales.com',
+            telephone: '+1-702-830-9222',
+            email: 'DrJanSells@ProbateRealEstateSales.com',
+            address: {
+              '@type': 'PostalAddress',
+              streetAddress: 'City Centre Place, 400 S 4th Street Suite 250 B',
+              addressLocality: 'Las Vegas',
+              addressRegion: 'NV',
+              postalCode: '89101',
+              addressCountry: 'US',
             },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 36.1699,
-              "longitude": -115.1398
+            geo: {
+              '@type': 'GeoCoordinates',
+              latitude: 36.1699,
+              longitude: -115.1398,
             },
-            "openingHours": "Mo-Fr 09:00-17:00",
-            "priceRange": "$$",
-            "paymentAccepted": ["Cash", "Credit Card", "Check"],
-            "areaServed": {
-              "@type": "GeoCircle",
-              "geoMidpoint": {
-                "@type": "GeoCoordinates",
-                "latitude": 36.1699,
-                "longitude": -115.1398
+            openingHours: 'Mo-Fr 09:00-17:00',
+            priceRange: '$$',
+            paymentAccepted: ['Cash', 'Credit Card', 'Check'],
+            areaServed: {
+              '@type': 'GeoCircle',
+              geoMidpoint: {
+                '@type': 'GeoCoordinates',
+                latitude: 36.1699,
+                longitude: -115.1398,
               },
-              "geoRadius": "50 miles"
-            }
-          })
+              geoRadius: '50 miles',
+            },
+          }),
         }}
       />
     </Head>

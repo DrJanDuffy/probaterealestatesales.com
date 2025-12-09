@@ -2,7 +2,7 @@ import { chromium, type FullConfig } from '@playwright/test';
 
 async function globalSetup(config: FullConfig) {
   const { baseURL } = config.projects[0].use;
-  
+
   console.log('🚀 Starting global setup...');
   console.log(`📍 Base URL: ${baseURL}`);
 

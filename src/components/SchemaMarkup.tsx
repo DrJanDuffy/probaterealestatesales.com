@@ -1,7 +1,18 @@
 'use client';
 
 import { useEffect } from 'react';
-import { defaultSchemas, generateBreadcrumbSchema, generateArticleSchema, generateLegalServiceSchema } from '@/lib/schema';
+import {
+  defaultSchemas,
+  generateAggregateRatingSchema,
+  generateArticleSchema,
+  generateBreadcrumbSchema,
+  generateLegalServiceSchema,
+  generatePersonSchema,
+  generateReviewSchema,
+  generateVideoObjectSchema,
+  generateWebPageSchema,
+  generateWebSiteSchema,
+} from '@/lib/schema';
 
 interface SchemaMarkupProps {
   type: 'home' | 'service' | 'faq' | 'article' | 'contact' | 'legal' | 'location' | 'property';
@@ -18,15 +29,63 @@ interface SchemaMarkupProps {
   customSchema?: any;
   location?: string;
   serviceType?: string;
+  reviews?: Array<{
+    author: string;
+    reviewBody: string;
+    ratingValue: number;
+    datePublished: string;
+    itemReviewed?: { name: string; type?: string };
+  }>;
+  aggregateRating?: {
+    ratingValue: number;
+    reviewCount: number;
+    itemReviewed?: { name: string; type?: string };
+  };
+  person?: {
+    name: string;
+    jobTitle: string;
+    description: string;
+    image?: string;
+    email?: string;
+    telephone?: string;
+    url?: string;
+    sameAs?: string[];
+    knowsAbout?: string[];
+    award?: string[];
+  };
+  video?: {
+    name: string;
+    description: string;
+    thumbnailUrl: string;
+    uploadDate: string;
+    duration?: string;
+    contentUrl?: string;
+    embedUrl?: string;
+    publisher?: { name: string; logo?: string };
+  };
+  webPage?: {
+    name: string;
+    description: string;
+    url: string;
+    isPartOf?: { name: string; url: string };
+    datePublished?: string;
+    dateModified?: string;
+    author?: string;
+  };
 }
 
-export default function SchemaMarkup({ 
-  type, 
-  breadcrumbs, 
-  article, 
+export default function SchemaMarkup({
+  type,
+  breadcrumbs,
+  article,
   customSchema,
   location,
-  serviceType
+  serviceType,
+  reviews,
+  aggregateRating,
+  person,
+  video,
+  webPage,
 }: SchemaMarkupProps) {
   useEffect(() => {
     // Remove any existing schema markup
@@ -46,153 +105,173 @@ export default function SchemaMarkup({
           defaultSchemas.organization,
           defaultSchemas.faqPage,
           defaultSchemas.howTo,
-          defaultSchemas.legalService
+          defaultSchemas.legalService,
+          generateWebSiteSchema({
+            name: 'Las Vegas Probate Real Estate Sales',
+            url: 'https://www.probaterealestatesales.com',
+            description:
+              'Expert probate real estate services in Las Vegas and Clark County, Nevada',
+            potentialAction: {
+              target: 'https://www.probaterealestatesales.com/search?q={search_term_string}',
+              queryInput: 'required name=search_term_string',
+            },
+          }),
         ];
         break;
-      
+
       case 'service':
         schemas = [
           defaultSchemas.localBusiness,
           defaultSchemas.realEstateAgent,
           {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "Nevada Probate Real Estate Services",
-            description: "Comprehensive probate real estate services in Las Vegas and Clark County, including court-approved property sales, inherited property worth assessment, sale management, and estate liquidation following Nevada Revised Statutes.",
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            name: 'Nevada Probate Real Estate Services',
+            description:
+              'Comprehensive probate real estate services in Las Vegas and Clark County, including court-approved property sales, inherited property worth assessment, sale management, and estate liquidation following Nevada Revised Statutes.',
             provider: {
-              "@type": "Organization",
-              name: "Las Vegas Probate Real Estate Sales",
-              url: "https://www.probaterealestatesales.com"
+              '@type': 'Organization',
+              name: 'Las Vegas Probate Real Estate Sales',
+              url: 'https://www.probaterealestatesales.com',
             },
             areaServed: [
-              "Las Vegas", "Henderson", "North Las Vegas", "Boulder City", "Mesquite",
-              "Summerlin", "Spring Valley", "Enterprise", "Anthem", "Seven Hills",
-              "MacDonald Ranch", "Green Valley", "Centennial Hills", "Southern Highlands",
-              "Mountains Edge", "Clark County", "Nevada"
+              'Las Vegas',
+              'Henderson',
+              'North Las Vegas',
+              'Boulder City',
+              'Mesquite',
+              'Summerlin',
+              'Spring Valley',
+              'Enterprise',
+              'Anthem',
+              'Seven Hills',
+              'MacDonald Ranch',
+              'Green Valley',
+              'Centennial Hills',
+              'Southern Highlands',
+              'Mountains Edge',
+              'Clark County',
+              'Nevada',
             ],
-            serviceType: "Probate Real Estate Services",
+            serviceType: 'Probate Real Estate Services',
             offers: {
-              "@type": "Offer",
-              description: "Professional Nevada probate real estate services with 6-8 month timeline",
-              price: "Variable",
-              priceCurrency: "USD"
-            }
-          }
+              '@type': 'Offer',
+              description:
+                'Professional Nevada probate real estate services with 6-8 month timeline',
+              price: 'Variable',
+              priceCurrency: 'USD',
+            },
+          },
         ];
         break;
-      
+
       case 'legal':
         schemas = [
           defaultSchemas.legalService,
           defaultSchemas.organization,
           {
-            "@context": "https://schema.org",
-            "@type": "LegalService",
-            name: "Nevada Probate Legal Services",
-            description: "Expert legal services for Nevada probate administration, including certificate of incumbency, trust administration, and court representation.",
+            '@context': 'https://schema.org',
+            '@type': 'LegalService',
+            name: 'Nevada Probate Legal Services',
+            description:
+              'Expert legal services for Nevada probate administration, including certificate of incumbency, trust administration, and court representation.',
             provider: {
-              "@type": "Organization",
-              name: "Las Vegas Probate Real Estate Sales",
-              url: "https://www.probaterealestatesales.com"
+              '@type': 'Organization',
+              name: 'Las Vegas Probate Real Estate Sales',
+              url: 'https://www.probaterealestatesales.com',
             },
-            serviceType: "Probate Administration",
+            serviceType: 'Probate Administration',
             areaServed: {
-              "@type": "AdministrativeArea",
-              name: "Clark County, Nevada"
-            }
-          }
+              '@type': 'AdministrativeArea',
+              name: 'Clark County, Nevada',
+            },
+          },
         ];
         break;
-      
+
       case 'location':
         if (location) {
           schemas = [
             defaultSchemas.localBusiness,
             {
-              "@context": "https://schema.org",
-              "@type": "Place",
+              '@context': 'https://schema.org',
+              '@type': 'Place',
               name: `${location} Probate Real Estate Services`,
               description: `Expert probate real estate services in ${location}, Nevada. Specialized in inherited property sales with Nevada's fastest probate process.`,
               address: {
-                "@type": "PostalAddress",
+                '@type': 'PostalAddress',
                 addressLocality: location,
-                addressRegion: "NV",
-                addressCountry: "US"
+                addressRegion: 'NV',
+                addressCountry: 'US',
               },
               geo: {
-                "@type": "GeoCoordinates",
+                '@type': 'GeoCoordinates',
                 latitude: 36.1699,
-                longitude: -115.1398
+                longitude: -115.1398,
               },
               containedInPlace: {
-                "@type": "AdministrativeArea",
-                name: "Clark County, Nevada"
-              }
-            }
+                '@type': 'AdministrativeArea',
+                name: 'Clark County, Nevada',
+              },
+            },
           ];
         }
         break;
-      
+
       case 'property':
         schemas = [
           defaultSchemas.realEstateAgent,
           {
-            "@context": "https://schema.org",
-            "@type": "RealEstateListing",
-            name: "Nevada Probate Property",
-            description: "Inherited property available for sale through Nevada probate process",
+            '@context': 'https://schema.org',
+            '@type': 'RealEstateListing',
+            name: 'Nevada Probate Property',
+            description: 'Inherited property available for sale through Nevada probate process',
             address: {
-              "@type": "PostalAddress",
-              addressRegion: "NV",
-              addressCountry: "US"
+              '@type': 'PostalAddress',
+              addressRegion: 'NV',
+              addressCountry: 'US',
             },
-            listingStatus: "For Sale",
+            listingStatus: 'For Sale',
             provider: {
-              "@type": "Organization",
-              name: "Las Vegas Probate Real Estate Sales"
-            }
-          }
+              '@type': 'Organization',
+              name: 'Las Vegas Probate Real Estate Sales',
+            },
+          },
         ];
         break;
-      
+
       case 'faq':
-        schemas = [
-          defaultSchemas.faqPage,
-          defaultSchemas.organization,
-          defaultSchemas.howTo
-        ];
+        schemas = [defaultSchemas.faqPage, defaultSchemas.organization, defaultSchemas.howTo];
         break;
-      
+
       case 'article':
         if (article) {
-          schemas = [
-            generateArticleSchema(article),
-            defaultSchemas.organization
-          ];
+          schemas = [generateArticleSchema(article), defaultSchemas.organization];
         }
         break;
-      
+
       case 'contact':
         schemas = [
           defaultSchemas.localBusiness,
           defaultSchemas.organization,
           {
-            "@context": "https://schema.org",
-            "@type": "ContactPage",
-            name: "Contact Las Vegas Probate Real Estate Experts",
-            description: "Get in touch with our Nevada probate real estate experts for free consultation",
+            '@context': 'https://schema.org',
+            '@type': 'ContactPage',
+            name: 'Contact Las Vegas Probate Real Estate Experts',
+            description:
+              'Get in touch with our Nevada probate real estate experts for free consultation',
             mainEntity: {
-              "@type": "Organization",
-              name: "Las Vegas Probate Real Estate Sales",
+              '@type': 'Organization',
+              name: 'Las Vegas Probate Real Estate Sales',
               contactPoint: {
-                "@type": "ContactPoint",
-                telephone: "+1-702-830-9222",
-                contactType: "customer service",
-                areaServed: "US-NV",
-                availableLanguage: "English"
-              }
-            }
-          }
+                '@type': 'ContactPoint',
+                telephone: '+1-702-830-9222',
+                contactType: 'customer service',
+                areaServed: 'US-NV',
+                availableLanguage: 'English',
+              },
+            },
+          },
         ];
         break;
     }
@@ -202,6 +281,33 @@ export default function SchemaMarkup({
       schemas.push(generateBreadcrumbSchema(breadcrumbs));
     }
 
+    // Add reviews if provided
+    if (reviews && reviews.length > 0) {
+      reviews.forEach((review) => {
+        schemas.push(generateReviewSchema(review));
+      });
+    }
+
+    // Add aggregate rating if provided
+    if (aggregateRating) {
+      schemas.push(generateAggregateRatingSchema(aggregateRating));
+    }
+
+    // Add person schema if provided
+    if (person) {
+      schemas.push(generatePersonSchema(person));
+    }
+
+    // Add video schema if provided
+    if (video) {
+      schemas.push(generateVideoObjectSchema(video));
+    }
+
+    // Add web page schema if provided
+    if (webPage) {
+      schemas.push(generateWebPageSchema(webPage));
+    }
+
     // Add custom schema if provided
     if (customSchema) {
       schemas.push(customSchema);
@@ -209,12 +315,14 @@ export default function SchemaMarkup({
 
     // Add location-specific legal service schema if applicable
     if (location && serviceType) {
-      schemas.push(generateLegalServiceSchema({
-        name: `${location} ${serviceType}`,
-        description: `${serviceType} services in ${location}, Nevada`,
-        price: "Variable",
-        area: location
-      }));
+      schemas.push(
+        generateLegalServiceSchema({
+          name: `${location} ${serviceType}`,
+          description: `${serviceType} services in ${location}, Nevada`,
+          price: 'Variable',
+          area: location,
+        })
+      );
     }
 
     // Inject schemas into head
@@ -234,7 +342,19 @@ export default function SchemaMarkup({
         script.remove();
       }
     };
-  }, [type, breadcrumbs, article, customSchema, location, serviceType]);
+  }, [
+    type,
+    breadcrumbs,
+    article,
+    customSchema,
+    location,
+    serviceType,
+    reviews,
+    aggregateRating,
+    person,
+    video,
+    webPage,
+  ]);
 
   return null; // This component doesn't render anything visible
 }

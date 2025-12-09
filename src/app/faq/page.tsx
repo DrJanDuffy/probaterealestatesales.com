@@ -1,17 +1,21 @@
 import type { Metadata } from 'next';
+import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'How Long Does Probate Take in Nevada? | FAQ | Las Vegas Probate Timeline',
-  description: 'How long does probate take in Nevada? 6-8 months (vs 9-18 in California). Complete FAQ with expert answers on timeline, costs ($1,000 court fees), Clark County procedures. Free consultation: (702) 830-9222',
-  keywords: 'how long does probate take in nevada, Nevada probate timeline, probate FAQ, Clark County probate, Nevada probate costs, probate timeline Las Vegas, certificate of incumbency',
+  description:
+    'How long does probate take in Nevada? 6-8 months (vs 9-18 in California). Complete FAQ with expert answers on timeline, costs ($1,000 court fees), Clark County procedures. Free consultation: (702) 830-9222',
+  keywords:
+    'how long does probate take in nevada, Nevada probate timeline, probate FAQ, Clark County probate, Nevada probate costs, probate timeline Las Vegas, certificate of incumbency',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/faq/',
   },
   openGraph: {
     title: 'How Long Does Probate Take in Nevada? | FAQ | Las Vegas Probate Timeline',
-    description: 'How long does probate take in Nevada? 6-8 months (vs 9-18 in California). Complete FAQ with expert answers on timeline, costs, Clark County procedures.',
+    description:
+      'How long does probate take in Nevada? 6-8 months (vs 9-18 in California). Complete FAQ with expert answers on timeline, costs, Clark County procedures.',
     type: 'website',
     locale: 'en_US',
     url: 'https://www.probaterealestatesales.com/faq/',
@@ -19,17 +23,21 @@ export const metadata: Metadata = {
 };
 
 export default function FAQPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'FAQ', url: '/faq/' },
+  ];
+
   return (
     <main className="min-h-screen">
+      <Breadcrumb items={breadcrumbs.slice(1)} />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Nevada Probate Real Estate FAQ
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Nevada Probate Real Estate FAQ</h1>
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto leading-relaxed">
-            Get comprehensive answers to all your questions about probate real estate sales in Nevada. 
-            From timelines to legal requirements, we cover everything you need to know.
+            Get comprehensive answers to all your questions about probate real estate sales in
+            Nevada. From timelines to legal requirements, we cover everything you need to know.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -59,18 +67,19 @@ export default function FAQPage() {
               Additional Nevada Probate Resources
             </h2>
             <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-              Explore our comprehensive guides and resources to better understand Nevada probate real estate.
+              Explore our comprehensive guides and resources to better understand Nevada probate
+              real estate.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 border border-blue-200">
               <h3 className="text-xl font-semibold text-secondary-900 mb-4">
                 Nevada Probate Timeline Guide
               </h3>
               <p className="text-secondary-600 mb-6">
-                Detailed breakdown of the 6-8 month Nevada probate process, including court schedules, 
-                document requirements, and how to expedite your case.
+                Detailed breakdown of the 6-8 month Nevada probate process, including court
+                schedules, document requirements, and how to expedite your case.
               </p>
               <a
                 href="/resources/nevada-probate-guide"
@@ -85,8 +94,8 @@ export default function FAQPage() {
                 Clark County Probate Procedures
               </h3>
               <p className="text-secondary-600 mb-6">
-                Specific information about Clark County probate court, commissioners, filing procedures, 
-                and local requirements for probate real estate sales.
+                Specific information about Clark County probate court, commissioners, filing
+                procedures, and local requirements for probate real estate sales.
               </p>
               <a
                 href="/services"
@@ -101,8 +110,8 @@ export default function FAQPage() {
                 Small Estate Affidavit Guide
               </h3>
               <p className="text-secondary-600 mb-6">
-                Complete guide to Nevada's $100,000 small estate limit, including simplified procedures 
-                for estates under $25,000 and how to avoid formal probate.
+                Complete guide to Nevada's $100,000 small estate limit, including simplified
+                procedures for estates under $25,000 and how to avoid formal probate.
               </p>
               <a
                 href="/resources/nevada-probate-guide#small-estates"
@@ -123,20 +132,20 @@ export default function FAQPage() {
               Current Las Vegas Properties Available
             </h2>
             <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-              Browse our current inventory of properties in the Las Vegas area. 
-              These properties are available for immediate purchase with our expert guidance.
+              Browse our current inventory of properties in the Las Vegas area. These properties are
+              available for immediate purchase with our expert guidance.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-            <realscout-office-listings 
-              agent-encoded-id="QWdlbnQtMjI1MDUw" 
-              sort-order="PRICE_LOW" 
-              listing-status="For Sale,For Rent" 
-              property-types="MF,SFR,OTHER,LAL" 
-              price-min="500000" 
-              price-max="750000">
-            </realscout-office-listings>
+            <realscout-office-listings
+              agent-encoded-id="QWdlbnQtMjI1MDUw"
+              sort-order="PRICE_LOW"
+              listing-status="For Sale,For Rent"
+              property-types="MF,SFR,OTHER,LAL"
+              price-min="500000"
+              price-max="750000"
+            ></realscout-office-listings>
           </div>
         </div>
       </section>
@@ -144,11 +153,9 @@ export default function FAQPage() {
       {/* Contact CTA Section */}
       <section className="py-16 bg-primary-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-secondary-900 mb-6">
-            Still Have Questions?
-          </h2>
+          <h2 className="text-3xl font-bold text-secondary-900 mb-6">Still Have Questions?</h2>
           <p className="text-lg text-secondary-600 mb-8">
-            Our Nevada probate real estate experts are here to help. Get personalized answers about 
+            Our Nevada probate real estate experts are here to help. Get personalized answers about
             your specific situation and learn how we can help you navigate the probate process.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -169,7 +176,7 @@ export default function FAQPage() {
       </section>
 
       {/* Schema Markup */}
-      <SchemaMarkup type="faq" />
+      <SchemaMarkup type="faq" breadcrumbs={breadcrumbs} />
     </main>
   );
 }

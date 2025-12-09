@@ -1,95 +1,152 @@
-import { Home, Calculator, Users, FileText, Shield, TrendingUp, Clock, DollarSign, Award, Gavel, Heart, Target, Building, MapPin, Star, CheckCircle } from 'lucide-react';
+import {
+  Award,
+  Building,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  FileText,
+  Gavel,
+  Heart,
+  Home,
+  MapPin,
+  Shield,
+  Star,
+  Target,
+} from 'lucide-react';
 
 // Reorganized services by priority and user journey
 const services = [
   {
     icon: Home,
     title: 'Estate Property Valuation',
-    description: 'Get a comprehensive market analysis and court-compliant property appraisal to ensure maximum value for your inherited estate.',
-    features: ['Free Market Analysis', 'Court-Compliant Appraisals', 'Detailed Comparative Reports', 'Property Condition Assessment'],
+    description:
+      'Get a comprehensive market analysis and court-compliant property appraisal to ensure maximum value for your inherited estate.',
+    features: [
+      'Free Market Analysis',
+      'Court-Compliant Appraisals',
+      'Detailed Comparative Reports',
+      'Property Condition Assessment',
+    ],
     timeline: '3-5 days',
     pricing: 'Free consultation',
     question: 'How Much Is My Inherited Property Worth?',
     specialNote: 'Includes neighborhood analysis and market trends',
-    priority: 1
+    priority: 1,
   },
   {
     icon: Gavel,
     title: 'Probate Process Navigation',
-    description: 'Step-by-step guidance through court requirements with coordination of attorneys and executors.',
-    features: ['Court Requirement Guidance', 'Attorney Coordination', 'Executor Support', 'Timeline Management'],
+    description:
+      'Step-by-step guidance through court requirements with coordination of attorneys and executors.',
+    features: [
+      'Court Requirement Guidance',
+      'Attorney Coordination',
+      'Executor Support',
+      'Timeline Management',
+    ],
     timeline: 'Ongoing support',
     pricing: 'Included in service',
     question: 'How Long Will This Take?',
     specialNote: 'We handle all court communications and deadlines',
-    priority: 2
+    priority: 2,
   },
   {
     icon: FileText,
     title: 'Legal Documentation',
-    description: 'Complete handling of all legal documents and probate court requirements with expert guidance.',
-    features: ['Court Petition Preparation', 'Required Disclosures', 'Nevada Law Compliance', 'Document Filing'],
+    description:
+      'Complete handling of all legal documents and probate court requirements with expert guidance.',
+    features: [
+      'Court Petition Preparation',
+      'Required Disclosures',
+      'Nevada Law Compliance',
+      'Document Filing',
+    ],
     timeline: '1-2 weeks',
     pricing: 'Court fees only',
     question: 'What Documents Do I Need?',
     specialNote: 'Death certificate, will, property deeds, court letters',
-    priority: 3
+    priority: 3,
   },
   {
     icon: Shield,
     title: 'Legal Compliance & Risk Management',
-    description: 'Protect your interests with comprehensive compliance and risk assessment throughout the process.',
-    features: ['Nevada Law Compliance', 'Risk Assessment', 'Insurance Review', 'Liability Protection'],
+    description:
+      'Protect your interests with comprehensive compliance and risk assessment throughout the process.',
+    features: [
+      'Nevada Law Compliance',
+      'Risk Assessment',
+      'Insurance Review',
+      'Liability Protection',
+    ],
     timeline: '1-2 weeks',
     pricing: 'Included in service',
     question: 'How Long Will This Take?',
     specialNote: 'We ensure full compliance with all probate laws',
-    priority: 4
+    priority: 4,
   },
   {
     icon: Building,
     title: 'Property Preparation & Sale',
-    description: 'Complete property preparation including estate clean-out, repairs, staging, and strategic marketing.',
-    features: ['Estate Clean-out Coordination', 'Property Repairs Management', 'Professional Staging', 'Strategic Marketing'],
+    description:
+      'Complete property preparation including estate clean-out, repairs, staging, and strategic marketing.',
+    features: [
+      'Estate Clean-out Coordination',
+      'Property Repairs Management',
+      'Professional Staging',
+      'Strategic Marketing',
+    ],
     timeline: '45 days',
     pricing: 'Standard commission',
     question: 'How Long Will This Take?',
     specialNote: 'Average 15% above initial estate valuations',
-    priority: 5
+    priority: 5,
   },
   {
     icon: Target,
     title: 'Market Optimization & Buyer Outreach',
-    description: 'Strategic marketing approach to qualified buyers with proven negotiation support.',
-    features: ['Qualified Buyer Outreach', 'Marketing Strategy', 'Negotiation Support', 'Closing Coordination'],
+    description:
+      'Strategic marketing approach to qualified buyers with proven negotiation support.',
+    features: [
+      'Qualified Buyer Outreach',
+      'Marketing Strategy',
+      'Negotiation Support',
+      'Closing Coordination',
+    ],
     timeline: '30-45 days',
     pricing: 'Standard commission',
     question: 'How Long Will This Take?',
     specialNote: '98% client satisfaction rate',
-    priority: 6
+    priority: 6,
   },
   {
     icon: MapPin,
     title: 'Neighborhood & Market Analysis',
-    description: 'Comprehensive analysis of local market conditions and neighborhood trends for optimal pricing.',
-    features: ['Local Market Trends', 'Neighborhood Analysis', 'Comparable Sales', 'Price Optimization'],
+    description:
+      'Comprehensive analysis of local market conditions and neighborhood trends for optimal pricing.',
+    features: [
+      'Local Market Trends',
+      'Neighborhood Analysis',
+      'Comparable Sales',
+      'Price Optimization',
+    ],
     timeline: '2-3 days',
     pricing: 'Free analysis',
     question: 'How Much Is My Inherited Property Worth?',
     specialNote: 'Includes Summerlin, Henderson, and all Clark County areas',
-    priority: 7
+    priority: 7,
   },
   {
     icon: Heart,
     title: 'Family Support Services',
-    description: 'Sensitive guidance for families during difficult times with mediation between multiple heirs.',
+    description:
+      'Sensitive guidance for families during difficult times with mediation between multiple heirs.',
     features: ['Family Mediation', 'Emotional Support', 'Clear Communication', 'Heir Coordination'],
     timeline: 'Ongoing support',
     pricing: 'Included in service',
     question: 'How Long Will This Take?',
     specialNote: 'We handle sensitive family dynamics with care',
-    priority: 8
-  }
+    priority: 8,
+  },
 ];
 
 export default function Services() {
@@ -109,8 +166,9 @@ export default function Services() {
             Comprehensive Probate Services
           </h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Dr. Jan Duffy provides end-to-end solutions to help families navigate the complex process 
-            of probate real estate with compassion, expertise, and maximum value for your estate.
+            Dr. Jan Duffy provides end-to-end solutions to help families navigate the complex
+            process of probate real estate with compassion, expertise, and maximum value for your
+            estate.
           </p>
         </div>
 
@@ -121,13 +179,14 @@ export default function Services() {
               Our Step-by-Step Process
             </h3>
             <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-              We guide you through every stage of the probate process with proven expertise and personalized care.
+              We guide you through every stage of the probate process with proven expertise and
+              personalized care.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sortedServices.map((service, index) => (
-              <div 
+              <div
                 key={service.title}
                 className="card p-8 hover:scale-105 transition-transform duration-300 group border-l-4 border-l-primary-500 relative"
               >
@@ -135,24 +194,23 @@ export default function Services() {
                 <div className="absolute -top-3 -left-3 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-bold">
                   {index + 1}
                 </div>
-                
+
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center group-hover:bg-primary-200 transition-colors duration-300">
                     <service.icon className="h-8 w-8 text-primary-600" />
                   </div>
                 </div>
-                
-                <h3 className="text-xl font-semibold text-secondary-900 mb-4">
-                  {service.title}
-                </h3>
-                
-                <p className="text-secondary-600 mb-6 leading-relaxed">
-                  {service.description}
-                </p>
-                
+
+                <h3 className="text-xl font-semibold text-secondary-900 mb-4">{service.title}</h3>
+
+                <p className="text-secondary-600 mb-6 leading-relaxed">{service.description}</p>
+
                 <ul className="space-y-2 mb-6">
                   {service.features.map((feature) => (
-                    <li key={`${service.title}-${feature}`} className="flex items-center gap-3 text-sm text-secondary-600">
+                    <li
+                      key={`${service.title}-${feature}`}
+                      className="flex items-center gap-3 text-sm text-secondary-600"
+                    >
                       <CheckCircle className="h-4 w-4 text-primary-500 flex-shrink-0" />
                       {feature}
                     </li>
@@ -176,9 +234,7 @@ export default function Services() {
                 {/* Special notes */}
                 {service.specialNote && (
                   <div className="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
-                    <p className="text-xs text-blue-700 font-medium">
-                      {service.specialNote}
-                    </p>
+                    <p className="text-xs text-blue-700 font-medium">{service.specialNote}</p>
                   </div>
                 )}
               </div>
@@ -193,31 +249,42 @@ export default function Services() {
               Why Choose Dr. Jan Duffy?
             </h3>
             <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-              With over 500 properties successfully sold and court-approved expertise, Dr. Duffy is your trusted partner in probate real estate.
+              With over 500 properties successfully sold and court-approved expertise, Dr. Duffy is
+              your trusted partner in probate real estate.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Award className="h-8 w-8 text-primary-600" />
               </div>
-              <h4 className="text-lg font-semibold text-secondary-900 mb-2">Court-Approved Expert</h4>
-              <p className="text-secondary-600 text-sm">Recognized by Nevada courts for probate expertise</p>
+              <h4 className="text-lg font-semibold text-secondary-900 mb-2">
+                Court-Approved Expert
+              </h4>
+              <p className="text-secondary-600 text-sm">
+                Recognized by Nevada courts for probate expertise
+              </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="h-8 w-8 text-accent-600" />
               </div>
-              <h4 className="text-lg font-semibold text-secondary-900 mb-2">500+ Properties Sold</h4>
-              <p className="text-secondary-600 text-sm">Proven track record of successful transactions</p>
+              <h4 className="text-lg font-semibold text-secondary-900 mb-2">
+                500+ Properties Sold
+              </h4>
+              <p className="text-secondary-600 text-sm">
+                Proven track record of successful transactions
+              </p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="h-8 w-8 text-green-600" />
               </div>
               <h4 className="text-lg font-semibold text-secondary-900 mb-2">5-Star Reviews</h4>
-              <p className="text-secondary-600 text-sm">Exceptional client satisfaction and results</p>
+              <p className="text-secondary-600 text-sm">
+                Exceptional client satisfaction and results
+              </p>
             </div>
           </div>
         </div>
@@ -229,8 +296,8 @@ export default function Services() {
               Current Las Vegas Properties
             </h3>
             <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-              Browse our current inventory of properties available in the Las Vegas area. 
-              These properties are available for immediate purchase with our expert guidance.
+              Browse our current inventory of properties available in the Las Vegas area. These
+              properties are available for immediate purchase with our expert guidance.
             </p>
           </div>
 
@@ -241,20 +308,20 @@ export default function Services() {
                 Affordable Las Vegas Properties
               </h4>
               <p className="text-secondary-600 max-w-2xl mx-auto">
-                Discover quality properties in the $500K-$750K range. Perfect for investors 
-                and families looking for value in the Las Vegas market.
+                Discover quality properties in the $500K-$750K range. Perfect for investors and
+                families looking for value in the Las Vegas market.
               </p>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <realscout-office-listings 
-                agent-encoded-id="QWdlbnQtMjI1MDUw" 
-                sort-order="PRICE_LOW" 
-                listing-status="For Sale,For Rent" 
-                property-types="MF,SFR,OTHER,LAL" 
-                price-min="500000" 
-                price-max="750000">
-              </realscout-office-listings>
+              <realscout-office-listings
+                agent-encoded-id="QWdlbnQtMjI1MDUw"
+                sort-order="PRICE_LOW"
+                listing-status="For Sale,For Rent"
+                property-types="MF,SFR,OTHER,LAL"
+                price-min="500000"
+                price-max="750000"
+              ></realscout-office-listings>
             </div>
           </div>
 
@@ -265,20 +332,20 @@ export default function Services() {
                 Premium Las Vegas Properties
               </h4>
               <p className="text-secondary-600 max-w-2xl mx-auto">
-                Browse our current inventory of premium properties in the Las Vegas area. 
-                These properties are available for immediate purchase with our expert guidance.
+                Browse our current inventory of premium properties in the Las Vegas area. These
+                properties are available for immediate purchase with our expert guidance.
               </p>
             </div>
-            
+
             <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <realscout-office-listings 
-                agent-encoded-id="QWdlbnQtMjI1MDUw" 
-                sort-order="PRICE_HIGH" 
-                listing-status="For Sale" 
-                property-types="MF,SFR,OTHER,LAL" 
-                price-min="500000" 
-                price-max="850000">
-              </realscout-office-listings>
+              <realscout-office-listings
+                agent-encoded-id="QWdlbnQtMjI1MDUw"
+                sort-order="PRICE_HIGH"
+                listing-status="For Sale"
+                property-types="MF,SFR,OTHER,LAL"
+                price-min="500000"
+                price-max="850000"
+              ></realscout-office-listings>
             </div>
           </div>
         </div>
@@ -290,11 +357,14 @@ export default function Services() {
               Ready to Get Started with Dr. Jan Duffy?
             </h3>
             <p className="text-lg text-secondary-600 mb-6 max-w-2xl mx-auto">
-              Schedule a free consultation to discuss your specific probate situation and learn 
-              how Dr. Duffy can help maximize the value of your inherited property.
+              Schedule a free consultation to discuss your specific probate situation and learn how
+              Dr. Duffy can help maximize the value of your inherited property.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="http://drjanduffy.realscout.com/onboarding" className="btn-primary inline-block">
+              <a
+                href="http://drjanduffy.realscout.com/onboarding"
+                className="btn-primary inline-block"
+              >
                 Schedule Free Consultation
               </a>
               <a href="/resources/nevada-probate-guide/" className="btn-outline inline-block">
@@ -302,10 +372,21 @@ export default function Services() {
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-4 justify-center text-sm">
-              <a href="/locations/" className="text-primary-600 hover:text-primary-800 font-medium">Our Service Areas →</a>
-              <a href="/blog/" className="text-primary-600 hover:text-primary-800 font-medium">Educational Resources →</a>
-              <a href="/testimonials/" className="text-primary-600 hover:text-primary-800 font-medium">Client Success Stories →</a>
-              <a href="/contact/" className="text-primary-600 hover:text-primary-800 font-medium">Contact Us →</a>
+              <a href="/locations/" className="text-primary-600 hover:text-primary-800 font-medium">
+                Our Service Areas →
+              </a>
+              <a href="/blog/" className="text-primary-600 hover:text-primary-800 font-medium">
+                Educational Resources →
+              </a>
+              <a
+                href="/testimonials/"
+                className="text-primary-600 hover:text-primary-800 font-medium"
+              >
+                Client Success Stories →
+              </a>
+              <a href="/contact/" className="text-primary-600 hover:text-primary-800 font-medium">
+                Contact Us →
+              </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">

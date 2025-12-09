@@ -7,50 +7,23 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        disallow: [
-          '/api/*',
-          '/admin/*',
-          '/private/*',
-          '/temp/*',
-          '/_next/*',
-          '/node_modules/*',
-        ],
+        disallow: ['/api/*', '/admin/*', '/private/*', '/temp/*', '/_next/*', '/node_modules/*'],
       },
       {
         userAgent: 'Googlebot',
-        disallow: [
-          '/api/*',
-          '/admin/*',
-          '/private/*',
-        ],
+        disallow: ['/api/*', '/admin/*', '/private/*'],
       },
       {
         userAgent: 'Bingbot',
-        disallow: [
-          '/api/*',
-          '/admin/*',
-          '/private/*',
-        ],
+        disallow: ['/api/*', '/admin/*', '/private/*'],
       },
       {
         userAgent: 'GrokipediaBot',
-        disallow: [
-          '/api/*',
-          '/admin/*',
-          '/private/*',
-          '/_next/*',
-          '/node_modules/*',
-        ],
+        disallow: ['/api/*', '/admin/*', '/private/*', '/_next/*', '/node_modules/*'],
       },
       {
         userAgent: 'Grokipedia',
-        disallow: [
-          '/api/*',
-          '/admin/*',
-          '/private/*',
-          '/_next/*',
-          '/node_modules/*',
-        ],
+        disallow: ['/api/*', '/admin/*', '/private/*', '/_next/*', '/node_modules/*'],
       },
     ],
     sitemap: 'https://www.probaterealestatesales.com/sitemap.xml',

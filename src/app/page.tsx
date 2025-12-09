@@ -1,57 +1,62 @@
+import { ArrowRight } from 'lucide-react';
 import dynamic from 'next/dynamic';
-import Hero from '@/components/Hero';
-import Services from '@/components/Services';
-import FeaturedProperties from '@/components/FeaturedProperties';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import Testimonials from '@/components/Testimonials';
+import Link from 'next/link';
 import ContactSection from '@/components/ContactSection';
+import FeaturedProperties from '@/components/FeaturedProperties';
+import Hero from '@/components/Hero';
 import HomePageNavigation from '@/components/HomePageNavigation';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import Services from '@/components/Services';
+import Testimonials from '@/components/Testimonials';
+import WhyChooseUs from '@/components/WhyChooseUs';
 
 // Lazy load heavy components for better performance
 const ProbateTimeline = dynamic(() => import('@/components/ProbateTimeline'), {
-  loading: () => <div className="py-16 text-center text-gray-500">Loading timeline...</div>
+  loading: () => <div className="py-16 text-center text-gray-500">Loading timeline...</div>,
 });
 
 const ProbatePropertyChecklist = dynamic(() => import('@/components/ProbatePropertyChecklist'), {
-  loading: () => <div className="py-16 text-center text-gray-500">Loading checklist...</div>
+  loading: () => <div className="py-16 text-center text-gray-500">Loading checklist...</div>,
 });
 
 const ProbateCostCalculator = dynamic(() => import('@/components/ProbateCostCalculator'), {
-  loading: () => <div className="py-16 text-center text-gray-500">Loading calculator...</div>
+  loading: () => <div className="py-16 text-center text-gray-500">Loading calculator...</div>,
 });
 
-const PropertyValuationCalculator = dynamic(() => import('@/components/PropertyValuationCalculator'), {
-  loading: () => <div className="py-16 text-center text-gray-500">Loading valuation tool...</div>
-});
+const PropertyValuationCalculator = dynamic(
+  () => import('@/components/PropertyValuationCalculator'),
+  {
+    loading: () => <div className="py-16 text-center text-gray-500">Loading valuation tool...</div>,
+  }
+);
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
-  loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>
+  loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
 });
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
-      
+
       {/* Quick Navigation */}
       <HomePageNavigation />
-      
+
       {/* Services Overview */}
       <Services />
-      
+
       {/* Probate Timeline Section */}
       <section id="timeline" className="scroll-mt-20">
         <div className="container-max py-8 border-b border-gray-200">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-2">Nevada Probate Timeline</h2>
+              <h2 className="text-3xl font-bold text-secondary-900 mb-2">
+                Nevada Probate Timeline
+              </h2>
               <p className="text-secondary-600">Complete 6-8 month process breakdown</p>
             </div>
-            <Link 
-              href="/resources/#probate-timeline" 
+            <Link
+              href="/resources/#probate-timeline"
               className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
             >
               View Full Timeline
@@ -60,8 +65,8 @@ export default function Home() {
           </div>
           <ProbateTimeline />
           <div className="text-center mt-6 md:hidden">
-            <Link 
-              href="/resources/#probate-timeline" 
+            <Link
+              href="/resources/#probate-timeline"
               className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
             >
               View Full Timeline
@@ -70,17 +75,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Property Checklist Section */}
       <section id="checklist" className="scroll-mt-20 bg-gray-50">
         <div className="container-max py-8 border-b border-gray-200">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-2">Probate Property Checklist</h2>
+              <h2 className="text-3xl font-bold text-secondary-900 mb-2">
+                Probate Property Checklist
+              </h2>
               <p className="text-secondary-600">Essential steps for selling inherited property</p>
             </div>
-            <Link 
-              href="/resources/#property-checklist" 
+            <Link
+              href="/resources/#property-checklist"
               className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
             >
               View Full Checklist
@@ -89,8 +96,8 @@ export default function Home() {
           </div>
           <ProbatePropertyChecklist />
           <div className="text-center mt-6 md:hidden">
-            <Link 
-              href="/resources/#property-checklist" 
+            <Link
+              href="/resources/#property-checklist"
               className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
             >
               View Full Checklist
@@ -99,17 +106,19 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Cost Calculator Section */}
       <section id="cost-calculator" className="scroll-mt-20">
         <div className="container-max py-8 border-b border-gray-200">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-2">Probate Cost Calculator</h2>
+              <h2 className="text-3xl font-bold text-secondary-900 mb-2">
+                Probate Cost Calculator
+              </h2>
               <p className="text-secondary-600">Estimate total probate costs and fees</p>
             </div>
-            <Link 
-              href="/resources/#cost-calculator" 
+            <Link
+              href="/resources/#cost-calculator"
               className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
             >
               View Full Calculator
@@ -118,8 +127,8 @@ export default function Home() {
           </div>
           <ProbateCostCalculator />
           <div className="text-center mt-6 md:hidden">
-            <Link 
-              href="/resources/#cost-calculator" 
+            <Link
+              href="/resources/#cost-calculator"
               className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
             >
               View Full Calculator
@@ -128,22 +137,24 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Featured Properties */}
       <section id="properties" className="scroll-mt-20">
         <FeaturedProperties />
       </section>
-      
+
       {/* Property Valuation Calculator Section */}
       <section id="valuation" className="scroll-mt-20 bg-gray-50">
         <div className="container-max py-8 border-b border-gray-200">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-2">Free Property Valuation</h2>
+              <h2 className="text-3xl font-bold text-secondary-900 mb-2">
+                Free Property Valuation
+              </h2>
               <p className="text-secondary-600">Get an instant estimate of your property value</p>
             </div>
-            <Link 
-              href="/home-valuation/" 
+            <Link
+              href="/home-valuation/"
               className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
             >
               Full Valuation Tool
@@ -152,8 +163,8 @@ export default function Home() {
           </div>
           <PropertyValuationCalculator />
           <div className="text-center mt-6 md:hidden">
-            <Link 
-              href="/home-valuation/" 
+            <Link
+              href="/home-valuation/"
               className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
             >
               Full Valuation Tool
@@ -162,7 +173,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* RealScout Property Listings */}
       <section className="py-16 bg-white">
         <div className="container-max">
@@ -171,39 +182,41 @@ export default function Home() {
               Las Vegas Probate Homes for Sale
             </h2>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-              Browse our current inventory of probate homes in Las Vegas. 
-              These probate properties are available for immediate purchase with court-approved sales and expert guidance.
+              Browse our current inventory of probate homes in Las Vegas. These probate properties
+              are available for immediate purchase with court-approved sales and expert guidance.
             </p>
           </div>
-          
+
           <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-            <realscout-office-listings 
-              agent-encoded-id="QWdlbnQtMjI1MDUw" 
-              sort-order="PRICE_LOW" 
-              listing-status="For Sale,For Rent" 
-              property-types="MF,SFR,OTHER,LAL" 
-              price-min="500000" 
-              price-max="750000">
-            </realscout-office-listings>
+            <realscout-office-listings
+              agent-encoded-id="QWdlbnQtMjI1MDUw"
+              sort-order="PRICE_LOW"
+              listing-status="For Sale,For Rent"
+              property-types="MF,SFR,OTHER,LAL"
+              price-min="500000"
+              price-max="750000"
+            ></realscout-office-listings>
           </div>
         </div>
       </section>
-      
+
       {/* Why Choose Us */}
       <section id="why-choose-us" className="scroll-mt-20">
         <WhyChooseUs />
       </section>
-      
+
       {/* FAQ Section */}
       <section id="faq" className="scroll-mt-20 bg-gray-50">
         <div className="container-max py-8 border-b border-gray-200">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-2">Frequently Asked Questions</h2>
+              <h2 className="text-3xl font-bold text-secondary-900 mb-2">
+                Frequently Asked Questions
+              </h2>
               <p className="text-secondary-600">Common questions about probate real estate</p>
             </div>
-            <Link 
-              href="/faq/" 
+            <Link
+              href="/faq/"
               className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
             >
               View All FAQs
@@ -212,8 +225,8 @@ export default function Home() {
           </div>
           <FAQ />
           <div className="text-center mt-6 md:hidden">
-            <Link 
-              href="/faq/" 
+            <Link
+              href="/faq/"
               className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
             >
               View All FAQs
@@ -222,18 +235,28 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Testimonials */}
       <section id="testimonials" className="scroll-mt-20">
         <Testimonials />
       </section>
-      
+
       {/* Contact Section */}
       <section id="contact" className="scroll-mt-20">
         <ContactSection />
       </section>
-      
-      <SchemaMarkup type="home" />
+
+      <SchemaMarkup
+        type="home"
+        aggregateRating={{
+          ratingValue: 5.0,
+          reviewCount: 6,
+          itemReviewed: {
+            name: 'Nevada Probate Real Estate Services',
+            type: 'Service',
+          },
+        }}
+      />
     </main>
   );
 }

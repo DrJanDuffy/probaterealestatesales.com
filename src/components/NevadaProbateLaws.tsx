@@ -1,4 +1,4 @@
-import { Gavel, FileText, Clock, DollarSign, Users, Shield, MapPin, AlertTriangle, CheckCircle, BookOpen, ArrowRight } from 'lucide-react';
+import { AlertTriangle, ArrowRight, CheckCircle, Clock, Gavel, Shield } from 'lucide-react';
 
 const nevadaStatutes = [
   {
@@ -9,9 +9,9 @@ const nevadaStatutes = [
       'Clark County District Court has exclusive probate jurisdiction',
       'All probate matters must be filed in the county where decedent resided',
       'Court appoints executors and administrators',
-      'Court supervises estate administration process'
+      'Court supervises estate administration process',
     ],
-    drDuffyGuidance: 'Dr. Duffy ensures all filings are made in the correct jurisdiction and court'
+    drDuffyGuidance: 'Dr. Duffy ensures all filings are made in the correct jurisdiction and court',
   },
   {
     statute: 'NRS 136.020',
@@ -21,9 +21,9 @@ const nevadaStatutes = [
       'Executor must be 18+ years old and mentally competent',
       'Non-resident executors must appoint local agent',
       'Court may require bond for non-resident executors',
-      'Letters issued after court hearing and approval'
+      'Letters issued after court hearing and approval',
     ],
-    drDuffyGuidance: 'Dr. Duffy assists with executor qualification and bond requirements'
+    drDuffyGuidance: 'Dr. Duffy assists with executor qualification and bond requirements',
   },
   {
     statute: 'NRS 136.050',
@@ -33,9 +33,9 @@ const nevadaStatutes = [
       'Must be filed within 90 days of appointment',
       'Include all real and personal property',
       'List property values and locations',
-      'Submit to court with supporting documentation'
+      'Submit to court with supporting documentation',
     ],
-    drDuffyGuidance: 'Dr. Duffy prepares comprehensive property inventory for court submission'
+    drDuffyGuidance: 'Dr. Duffy prepares comprehensive property inventory for court submission',
   },
   {
     statute: 'NRS 136.060',
@@ -45,9 +45,9 @@ const nevadaStatutes = [
       '4-month claim period from first publication',
       'Creditors must file claims in writing',
       'Executor must review and pay valid claims',
-      'Claims barred after statutory period expires'
+      'Claims barred after statutory period expires',
     ],
-    drDuffyGuidance: 'Dr. Duffy coordinates creditor notification and claim processing'
+    drDuffyGuidance: 'Dr. Duffy coordinates creditor notification and claim processing',
   },
   {
     statute: 'NRS 136.070',
@@ -57,9 +57,9 @@ const nevadaStatutes = [
       'Court order required before property sale',
       'Property must be appraised by court-appointed appraiser',
       'Sale proceeds become estate assets',
-      'Court approval required for sale contract'
+      'Court approval required for sale contract',
     ],
-    drDuffyGuidance: 'Dr. Duffy handles entire sales process with court compliance'
+    drDuffyGuidance: 'Dr. Duffy handles entire sales process with court compliance',
   },
   {
     statute: 'NRS 136.080',
@@ -69,10 +69,10 @@ const nevadaStatutes = [
       'Must account for all income and expenses',
       'Include property sales and distributions',
       'File with court for approval',
-      'Required before final distribution to heirs'
+      'Required before final distribution to heirs',
     ],
-    drDuffyGuidance: 'Dr. Duffy ensures accurate accounting and court approval'
-  }
+    drDuffyGuidance: 'Dr. Duffy ensures accurate accounting and court approval',
+  },
 ];
 
 const simplifiedProbate = {
@@ -84,9 +84,10 @@ const simplifiedProbate = {
     'Filing fee: $435 (vs. $1,195 for standard probate)',
     'Timeline: 30-60 days (vs. 6-8 months)',
     'No court hearing required',
-    'Affidavit-based process'
+    'Affidavit-based process',
   ],
-  drDuffyGuidance: 'Dr. Duffy determines if your estate qualifies for simplified probate and guides you through the process'
+  drDuffyGuidance:
+    'Dr. Duffy determines if your estate qualifies for simplified probate and guides you through the process',
 };
 
 const probateTimeline = [
@@ -97,9 +98,9 @@ const probateTimeline = [
       'File petition for probate',
       'Pay filing fees',
       'Publish notice to creditors',
-      'Serve notice to heirs'
+      'Serve notice to heirs',
     ],
-    nevadaSpecific: 'Clark County filing fee: $1,195 for estates over $100,000'
+    nevadaSpecific: 'Clark County filing fee: $1,195 for estates over $100,000',
   },
   {
     phase: 'Court Proceedings',
@@ -108,9 +109,9 @@ const probateTimeline = [
       'Attend probate hearing',
       'Receive letters of administration',
       'File inventory with court',
-      'Post bond if required'
+      'Post bond if required',
     ],
-    nevadaSpecific: 'Court hearings typically scheduled 4-6 weeks after filing'
+    nevadaSpecific: 'Court hearings typically scheduled 4-6 weeks after filing',
   },
   {
     phase: 'Administration',
@@ -119,9 +120,9 @@ const probateTimeline = [
       'Manage estate assets',
       'Handle creditor claims',
       'Prepare property for sale',
-      'Obtain court order to sell'
+      'Obtain court order to sell',
     ],
-    nevadaSpecific: 'Creditor claim period: 4 months from first publication'
+    nevadaSpecific: 'Creditor claim period: 4 months from first publication',
   },
   {
     phase: 'Property Sale',
@@ -130,9 +131,9 @@ const probateTimeline = [
       'List and market property',
       'Accept and negotiate offers',
       'Submit sale contract to court',
-      'Close property sale'
+      'Close property sale',
     ],
-    nevadaSpecific: 'Property must be appraised by court-appointed appraiser'
+    nevadaSpecific: 'Property must be appraised by court-appointed appraiser',
   },
   {
     phase: 'Final Distribution',
@@ -141,10 +142,10 @@ const probateTimeline = [
       'File final accounting',
       'Pay remaining expenses',
       'Distribute to heirs',
-      'Close estate'
+      'Close estate',
     ],
-    nevadaSpecific: 'Final accounting must be approved by court before distribution'
-  }
+    nevadaSpecific: 'Final accounting must be approved by court before distribution',
+  },
 ];
 
 const commonMistakes = [
@@ -152,32 +153,32 @@ const commonMistakes = [
     mistake: 'Missing filing deadlines',
     consequence: 'Court may dismiss case or impose penalties',
     prevention: 'Dr. Duffy tracks all deadlines and ensures timely compliance',
-    statute: 'NRS 136.050'
+    statute: 'NRS 136.050',
   },
   {
     mistake: 'Incomplete inventory',
     consequence: 'Court may require additional filings or hearings',
     prevention: 'Dr. Duffy conducts thorough property assessment and documentation',
-    statute: 'NRS 136.050'
+    statute: 'NRS 136.050',
   },
   {
     mistake: 'Selling property without court order',
     consequence: 'Sale may be voided and executor held liable',
     prevention: 'Dr. Duffy secures court approval before any property transactions',
-    statute: 'NRS 136.070'
+    statute: 'NRS 136.070',
   },
   {
     mistake: 'Ignoring creditor claims',
     consequence: 'Executor may be personally liable for valid claims',
     prevention: 'Dr. Duffy properly notifies creditors and processes all claims',
-    statute: 'NRS 136.060'
+    statute: 'NRS 136.060',
   },
   {
     mistake: 'Inadequate record keeping',
     consequence: 'Court may require additional accounting or delay closing',
     prevention: 'Dr. Duffy maintains comprehensive records throughout the process',
-    statute: 'NRS 136.080'
-  }
+    statute: 'NRS 136.080',
+  },
 ];
 
 export default function NevadaProbateLaws() {
@@ -194,8 +195,8 @@ export default function NevadaProbateLaws() {
             Understanding Nevada Probate Laws
           </h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Dr. Jan Duffy explains the key Nevada Revised Statutes (NRS) that govern
-            probate proceedings and how they affect your estate administration.
+            Dr. Jan Duffy explains the key Nevada Revised Statutes (NRS) that govern probate
+            proceedings and how they affect your estate administration.
           </p>
         </div>
 
@@ -204,10 +205,13 @@ export default function NevadaProbateLaws() {
           <h3 className="text-2xl font-bold text-secondary-900 mb-8 text-center">
             Key Nevada Probate Statutes
           </h3>
-          
+
           <div className="grid md:grid-cols-2 gap-6">
             {nevadaStatutes.map((statute) => (
-              <div key={statute.statute} className="bg-white rounded-xl shadow-soft p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+              <div
+                key={statute.statute}
+                className="bg-white rounded-xl shadow-soft p-6 border border-gray-100 hover:shadow-lg transition-shadow duration-300"
+              >
                 {/* Statute Header */}
                 <div className="mb-4">
                   <div className="flex items-center gap-3 mb-2">
@@ -216,12 +220,8 @@ export default function NevadaProbateLaws() {
                     </span>
                     <span className="text-sm text-secondary-500">Nevada Revised Statute</span>
                   </div>
-                  <h4 className="text-lg font-semibold text-secondary-900 mb-2">
-                    {statute.title}
-                  </h4>
-                  <p className="text-sm text-secondary-600">
-                    {statute.description}
-                  </p>
+                  <h4 className="text-lg font-semibold text-secondary-900 mb-2">{statute.title}</h4>
+                  <p className="text-sm text-secondary-600">{statute.description}</p>
                 </div>
 
                 {/* Key Points */}
@@ -265,7 +265,10 @@ export default function NevadaProbateLaws() {
                 <h4 className="font-semibold text-secondary-900 mb-4">Requirements:</h4>
                 <ul className="space-y-2">
                   {simplifiedProbate.requirements.map((requirement) => (
-                    <li key={requirement} className="text-sm text-secondary-600 flex items-start gap-2">
+                    <li
+                      key={requirement}
+                      className="text-sm text-secondary-600 flex items-start gap-2"
+                    >
                       <CheckCircle className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
                       {requirement}
                     </li>
@@ -288,37 +291,43 @@ export default function NevadaProbateLaws() {
           <h3 className="text-2xl font-bold text-secondary-900 mb-8 text-center">
             Nevada Probate Timeline & Requirements
           </h3>
-          
+
           <div className="space-y-6">
             {probateTimeline.map((phase) => (
-              <div key={phase.phase} className="bg-white rounded-xl shadow-soft p-6 border border-gray-100">
+              <div
+                key={phase.phase}
+                className="bg-white rounded-xl shadow-soft p-6 border border-gray-100"
+              >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
                     <Clock className="h-8 w-8 text-primary-600" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h4 className="text-lg font-semibold text-secondary-900">
-                        {phase.phase}
-                      </h4>
+                      <h4 className="text-lg font-semibold text-secondary-900">{phase.phase}</h4>
                       <span className="inline-block bg-accent-100 text-accent-700 px-3 py-1 rounded-full text-sm font-medium">
                         {phase.duration}
                       </span>
                     </div>
-                    
+
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
-                        <h5 className="font-medium text-secondary-800 mb-2">General Requirements:</h5>
+                        <h5 className="font-medium text-secondary-800 mb-2">
+                          General Requirements:
+                        </h5>
                         <ul className="space-y-1">
                           {phase.requirements.map((requirement) => (
-                            <li key={requirement} className="text-sm text-secondary-600 flex items-start gap-2">
+                            <li
+                              key={requirement}
+                              className="text-sm text-secondary-600 flex items-start gap-2"
+                            >
                               <div className="w-1.5 h-1.5 bg-primary-400 rounded-full mt-2 flex-shrink-0" />
                               {requirement}
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div>
                         <h5 className="font-medium text-secondary-800 mb-2">Nevada-Specific:</h5>
                         <div className="bg-yellow-50 rounded-lg p-3 border border-yellow-200">
@@ -340,10 +349,13 @@ export default function NevadaProbateLaws() {
           <h3 className="text-2xl font-bold text-secondary-900 mb-8 text-center">
             Common Probate Mistakes & How to Avoid Them
           </h3>
-          
+
           <div className="grid md:grid-cols-2 gap-6">
             {commonMistakes.map((mistake) => (
-              <div key={mistake.mistake} className="bg-white rounded-xl shadow-soft p-6 border border-gray-100">
+              <div
+                key={mistake.mistake}
+                className="bg-white rounded-xl shadow-soft p-6 border border-gray-100"
+              >
                 <div className="mb-4">
                   <h4 className="text-lg font-semibold text-secondary-900 mb-2">
                     {mistake.mistake}
@@ -360,7 +372,7 @@ export default function NevadaProbateLaws() {
                     <h5 className="font-medium text-red-800 mb-1">Consequence:</h5>
                     <p className="text-sm text-red-700">{mistake.consequence}</p>
                   </div>
-                  
+
                   <div className="bg-green-50 rounded-lg p-3 border border-green-200">
                     <h5 className="font-medium text-green-800 mb-1">Prevention:</h5>
                     <p className="text-sm text-green-700">{mistake.prevention}</p>
@@ -379,10 +391,11 @@ export default function NevadaProbateLaws() {
               <div>
                 <h4 className="font-semibold text-yellow-800 mb-2">Legal Disclaimer</h4>
                 <p className="text-sm text-yellow-700 leading-relaxed">
-                  This information is for educational purposes only and does not constitute legal advice. 
-                  Probate laws can be complex and may change. Dr. Jan Duffy works with qualified estate 
-                  attorneys to ensure compliance with all Nevada probate requirements. Always consult with 
-                  a qualified attorney for specific legal advice regarding your situation.
+                  This information is for educational purposes only and does not constitute legal
+                  advice. Probate laws can be complex and may change. Dr. Jan Duffy works with
+                  qualified estate attorneys to ensure compliance with all Nevada probate
+                  requirements. Always consult with a qualified attorney for specific legal advice
+                  regarding your situation.
                 </p>
               </div>
             </div>
@@ -396,15 +409,21 @@ export default function NevadaProbateLaws() {
               Need Help Understanding Nevada Probate Laws?
             </h3>
             <p className="text-xl text-primary-100 max-w-2xl mx-auto mb-6">
-              Dr. Jan Duffy explains complex legal requirements in simple terms and
-              ensures your probate process complies with all Nevada statutes.
+              Dr. Jan Duffy explains complex legal requirements in simple terms and ensures your
+              probate process complies with all Nevada statutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="http://drjanduffy.realscout.com/onboarding" className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2 group">
+              <a
+                href="http://drjanduffy.realscout.com/onboarding"
+                className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2 group"
+              >
                 Schedule Free Consultation
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="/resources/nevada-probate-guide" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors inline-block">
+              <a
+                href="/resources/nevada-probate-guide"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors inline-block"
+              >
                 Download Complete Guide
               </a>
             </div>

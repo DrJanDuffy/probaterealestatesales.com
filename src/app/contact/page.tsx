@@ -1,35 +1,50 @@
+import { ArrowRight, Clock, Mail, MapPin, MessageSquare, Phone } from 'lucide-react';
 import type { Metadata } from 'next';
-import { Phone, Mail, MapPin, Clock, MessageSquare, Navigation } from 'lucide-react';
+import dynamic from 'next/dynamic';
+import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
+
+const FAQ = dynamic(() => import('@/components/FAQ'), {
+  loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
+});
 
 export const metadata: Metadata = {
   title: 'Contact Las Vegas Probate Realtor | Free Consultation | (702) 830-9222',
-  description: 'Contact top Las Vegas probate realtor Dr. Jan Duffy. Free probate consultation available. Call (702) 830-9222 or email DrJanSells@ProbateRealEstateSales.com. Expert probate real estate services in Las Vegas, Nevada.',
-  keywords: 'contact probate realtor, contact Las Vegas probate realtor, probate real estate consultation, Nevada probate help, Las Vegas probate realtor contact',
+  description:
+    'Contact top Las Vegas probate realtor Dr. Jan Duffy. Free probate consultation available. Call (702) 830-9222 or email DrJanSells@ProbateRealEstateSales.com. Expert probate real estate services in Las Vegas, Nevada.',
+  keywords:
+    'contact probate realtor, contact Las Vegas probate realtor, probate real estate consultation, Nevada probate help, Las Vegas probate realtor contact',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/contact/',
   },
   openGraph: {
     title: 'Contact Las Vegas Probate Realtor | Free Consultation | (702) 830-9222',
-    description: 'Contact top Las Vegas probate realtor Dr. Jan Duffy. Free probate consultation available. Call (702) 830-9222.',
+    description:
+      'Contact top Las Vegas probate realtor Dr. Jan Duffy. Free probate consultation available. Call (702) 830-9222.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/contact/',
   },
 };
 
 export default function ContactPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Contact', url: '/contact/' },
+  ];
+
   return (
     <main className="min-h-screen bg-gray-50">
-      <SchemaMarkup type="contact" />
-      
+      <Breadcrumb items={breadcrumbs.slice(1)} />
+      <SchemaMarkup type="faq" breadcrumbs={breadcrumbs} />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Let's Talk
-          </h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Let's Talk</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Get in touch with our probate real estate experts. We're here to help you navigate the probate process with confidence.
+            Get in touch with our probate real estate experts. We're here to help you navigate the
+            probate process with confidence.
           </p>
         </div>
       </section>
@@ -41,7 +56,10 @@ export default function ContactPage() {
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 text-center">
               <Phone className="h-12 w-12 text-primary-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">Phone</h3>
-              <a href="tel:+1-702-830-9222" className="text-primary-600 hover:text-primary-800 font-medium text-lg">
+              <a
+                href="tel:+1-702-830-9222"
+                className="text-primary-600 hover:text-primary-800 font-medium text-lg"
+              >
                 (702) 830-9222
               </a>
               <p className="text-sm text-secondary-600 mt-2">Call us anytime</p>
@@ -49,7 +67,10 @@ export default function ContactPage() {
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-8 text-center">
               <Mail className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">Email</h3>
-              <a href="mailto:DrJanSells@ProbateRealEstateSales.com" className="text-green-600 hover:text-green-800 font-medium text-lg break-all">
+              <a
+                href="mailto:DrJanSells@ProbateRealEstateSales.com"
+                className="text-green-600 hover:text-green-800 font-medium text-lg break-all"
+              >
                 DrJanSells@ProbateRealEstateSales.com
               </a>
               <p className="text-sm text-secondary-600 mt-2">Email us today</p>
@@ -58,7 +79,8 @@ export default function ContactPage() {
               <MapPin className="h-12 w-12 text-purple-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">Visit</h3>
               <p className="text-secondary-700 font-medium mb-4">
-                400 S 4th Street<br />
+                400 S 4th Street
+                <br />
                 Suite 250 B<br />
                 Las Vegas, NV 89101
               </p>
@@ -92,9 +114,7 @@ export default function ContactPage() {
 
           {/* Google Maps Section */}
           <div className="mb-12">
-            <h2 className="text-2xl font-bold text-secondary-900 mb-6 text-center">
-              Find Us
-            </h2>
+            <h2 className="text-2xl font-bold text-secondary-900 mb-6 text-center">Find Us</h2>
             <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
               <iframe
                 src="https://www.google.com/maps?q=400+S+4th+Street+Suite+250+B,+Las+Vegas,+NV+89101&output=embed&hl=en&z=15"
@@ -137,7 +157,10 @@ export default function ContactPage() {
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     First Name *
                   </label>
                   <input
@@ -149,7 +172,10 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium text-secondary-700 mb-2"
+                  >
                     Last Name
                   </label>
                   <input
@@ -162,7 +188,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Email Address *
                 </label>
                 <input
@@ -175,7 +204,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="phone"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Phone Number *
                 </label>
                 <input
@@ -188,7 +220,10 @@ export default function ContactPage() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-secondary-700 mb-2"
+                >
                   Message *
                 </label>
                 <textarea
@@ -210,9 +245,10 @@ export default function ContactPage() {
                   className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded mt-1"
                 />
                 <label htmlFor="consent" className="ml-3 text-sm text-secondary-600">
-                  I agree to receive marketing communications via voice call, text message, or email from Probate Real Estate Sales. 
-                  Text HELP to (702) 830-9222 for assistance. Consent is not a condition of purchase. Msg/data rates may apply. 
-                  Reply STOP to unsubscribe.
+                  I agree to receive marketing communications via voice call, text message, or email
+                  from Probate Real Estate Sales. Text HELP to (702) 830-9222 for assistance.
+                  Consent is not a condition of purchase. Msg/data rates may apply. Reply STOP to
+                  unsubscribe.
                 </label>
               </div>
 
@@ -233,11 +269,10 @@ export default function ContactPage() {
       {/* CTA Section */}
       <section className="py-16 bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Need Immediate Assistance?
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Need Immediate Assistance?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-            Call us directly for a free probate consultation. We're here to help you navigate the process.
+            Call us directly for a free probate consultation. We're here to help you navigate the
+            process.
           </p>
           <a
             href="tel:+1-702-830-9222"
@@ -248,7 +283,32 @@ export default function ContactPage() {
           </a>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-secondary-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xl text-secondary-600">
+                Get answers to common questions before contacting us
+              </p>
+            </div>
+            <FAQ />
+            <div className="text-center mt-8">
+              <Link
+                href="/faq"
+                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold"
+              >
+                View All FAQs
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
-

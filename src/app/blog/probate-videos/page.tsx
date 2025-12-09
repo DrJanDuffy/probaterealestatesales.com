@@ -1,11 +1,15 @@
+import { ArrowLeft, Clock, Play, Video } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { Video, ArrowLeft, Play, Clock } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
+import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Videos | Educational Content | Las Vegas',
-  description: 'Watch educational videos about probate real estate processes, timelines, and best practices. Learn from Dr. Jan Duffy\'s expertise in Nevada probate.',
-  keywords: 'probate videos, probate real estate videos, Nevada probate education, probate process videos, estate sales videos',
+  description:
+    "Watch educational videos about probate real estate processes, timelines, and best practices. Learn from Dr. Jan Duffy's expertise in Nevada probate.",
+  keywords:
+    'probate videos, probate real estate videos, Nevada probate education, probate process videos, estate sales videos',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/blog/probate-videos/',
   },
@@ -18,20 +22,28 @@ export const metadata: Metadata = {
 };
 
 export default function ProbateVideosPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Blog', url: '/blog/' },
+    { name: 'Probate Videos', url: '/blog/probate-videos/' },
+  ];
+
   return (
     <main className="min-h-screen bg-gray-50">
+      <Breadcrumb items={breadcrumbs.slice(1)} />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Link href="/blog" className="inline-flex items-center text-primary-100 hover:text-white mb-6">
+          <Link
+            href="/blog"
+            className="inline-flex items-center text-primary-100 hover:text-white mb-6"
+          >
             <ArrowLeft className="h-5 w-5 mr-2" />
             Back to Blog
           </Link>
           <div className="text-center">
             <Video className="h-16 w-16 mx-auto mb-6" />
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Probate Real Estate Videos
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">Probate Real Estate Videos</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
               Learn about probate real estate processes through our educational video content.
             </p>
@@ -170,9 +182,7 @@ export default function ProbateVideosPage() {
       {/* CTA Section */}
       <section className="py-16 bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Have Questions After Watching?
-          </h2>
+          <h2 className="text-3xl font-bold mb-4">Have Questions After Watching?</h2>
           <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
             Schedule a free consultation to discuss your specific probate real estate situation.
           </p>
@@ -184,7 +194,22 @@ export default function ProbateVideosPage() {
           </Link>
         </div>
       </section>
+      <SchemaMarkup
+        type="article"
+        breadcrumbs={breadcrumbs}
+        video={{
+          name: 'Probate Real Estate Educational Videos',
+          description:
+            'Educational videos about probate real estate processes, timelines, and best practices in Nevada.',
+          thumbnailUrl:
+            'https://www.probaterealestatesales.com/images/probate-videos-thumbnail.jpg',
+          uploadDate: new Date().toISOString(),
+          publisher: {
+            name: 'Las Vegas Probate Real Estate Sales',
+            logo: 'https://www.probaterealestatesales.com/logo.png',
+          },
+        }}
+      />
     </main>
   );
 }
-

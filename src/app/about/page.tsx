@@ -1,35 +1,88 @@
+import {
+  Award,
+  ArrowRight,
+  Clock,
+  Mail,
+  MapPin,
+  Phone,
+  Shield,
+  Star,
+  TrendingUp,
+  Users,
+} from 'lucide-react';
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { Phone, Mail, Award, BookOpen, Users, Star, TrendingUp, Shield, Clock, MapPin } from 'lucide-react';
+import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
+
+const FAQ = dynamic(() => import('@/components/FAQ'), {
+  loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
+});
 
 export const metadata: Metadata = {
   title: 'About Dr. Jan Duffy | Top Las Vegas Probate Realtor | 20+ Years Experience',
-  description: 'Meet Dr. Jan Duffy, top Las Vegas probate realtor with 20+ years experience. Licensed Nevada real estate professional (S.0197614) specializing in probate real estate sales. Ph.D. in Research, expert in Clark County probate procedures. Free consultation: (702) 830-9222',
-  keywords: 'Dr. Jan Duffy, probate realtor, Las Vegas probate realtor, probate real estate expert, Las Vegas real estate agent, Nevada probate specialist, probate real estate broker, licensed real estate professional',
+  description:
+    'Meet Dr. Jan Duffy, top Las Vegas probate realtor with 20+ years experience. Licensed Nevada real estate professional (S.0197614) specializing in probate real estate sales. Ph.D. in Research, expert in Clark County probate procedures. Free consultation: (702) 830-9222',
+  keywords:
+    'Dr. Jan Duffy, probate realtor, Las Vegas probate realtor, probate real estate expert, Las Vegas real estate agent, Nevada probate specialist, probate real estate broker, licensed real estate professional',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/about/',
   },
   openGraph: {
     title: 'About Dr. Jan Duffy | Top Las Vegas Probate Realtor | 20+ Years Experience',
-    description: 'Meet Dr. Jan Duffy, top Las Vegas probate realtor with 20+ years experience. Licensed Nevada real estate professional specializing in probate real estate sales.',
+    description:
+      'Meet Dr. Jan Duffy, top Las Vegas probate realtor with 20+ years experience. Licensed Nevada real estate professional specializing in probate real estate sales.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/about/',
   },
 };
 
 export default function AboutPage() {
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'About', url: '/about/' },
+  ];
+
+  const personSchema = {
+    name: 'Dr. Janet Duffy',
+    jobTitle: 'Licensed Nevada Real Estate Agent | Probate Real Estate Specialist',
+    description:
+      'Dr. Janet Duffy is a top Las Vegas probate realtor with 20+ years of experience. Licensed Nevada real estate professional (S.0197614) specializing in probate real estate sales. Ph.D. in Research, expert in Clark County probate procedures.',
+    email: 'DrJanSells@ProbateRealEstateSales.com',
+    telephone: '+1-702-830-9222',
+    url: 'https://www.probaterealestatesales.com/about/',
+    knowsAbout: [
+      'Nevada Probate Law',
+      'Clark County Probate Court',
+      'Probate Real Estate Sales',
+      'Trust Administration',
+      'Certificate of Incumbency',
+      'Estate Liquidation',
+      'Nevada Revised Statutes',
+      'Real Estate Market Analysis',
+    ],
+    award: [
+      'Top Las Vegas Probate Realtor',
+      '20+ Years Experience',
+      'Licensed Nevada Real Estate Professional (S.0197614)',
+    ],
+    worksFor: {
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
+      url: 'https://www.probaterealestatesales.com',
+    },
+  };
+
   return (
     <main className="min-h-screen bg-gray-50">
-      <SchemaMarkup type="home" />
-      
+      <Breadcrumb items={breadcrumbs.slice(1)} />
+      <SchemaMarkup type="faq" breadcrumbs={breadcrumbs} person={personSchema} />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              About Dr. Jan Duffy
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">About Dr. Jan Duffy</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
               Licensed Nevada Real Estate Professional | Probate Real Estate Specialist
             </p>
@@ -66,7 +119,7 @@ export default function AboutPage() {
                   />
                 </div>
               </div>
-              
+
               {/* Credentials */}
               <div className="space-y-4">
                 <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
@@ -77,19 +130,27 @@ export default function AboutPage() {
                   <ul className="space-y-2 text-secondary-700">
                     <li className="flex items-start">
                       <span className="text-primary-600 mr-2">•</span>
-                      <span><strong>License:</strong> Nevada Real Estate License #S.0197614</span>
+                      <span>
+                        <strong>License:</strong> Nevada Real Estate License #S.0197614
+                      </span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary-600 mr-2">•</span>
-                      <span><strong>Education:</strong> Ph.D. in Research</span>
+                      <span>
+                        <strong>Education:</strong> Ph.D. in Research
+                      </span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary-600 mr-2">•</span>
-                      <span><strong>Specialization:</strong> Probate Real Estate</span>
+                      <span>
+                        <strong>Specialization:</strong> Probate Real Estate
+                      </span>
                     </li>
                     <li className="flex items-start">
                       <span className="text-primary-600 mr-2">•</span>
-                      <span><strong>Experience:</strong> 20+ Years in Las Vegas Real Estate</span>
+                      <span>
+                        <strong>Experience:</strong> 20+ Years in Las Vegas Real Estate
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -136,20 +197,22 @@ export default function AboutPage() {
                   Helping You Move Forward—The Professional Way
                 </h2>
                 <p className="text-lg text-secondary-700 leading-relaxed mb-4">
-                  As a highly-trained, professional, and skilled real estate specialist with extensive probate expertise, 
-                  you can be confident with me helping you move into the next season of life with convenience while 
-                  maximizing your sale proceeds.
+                  As a highly-trained, professional, and skilled real estate specialist with
+                  extensive probate expertise, you can be confident with me helping you move into
+                  the next season of life with convenience while maximizing your sale proceeds.
                 </p>
                 <p className="text-lg text-secondary-700 leading-relaxed mb-4">
-                  I've supported hundreds of people and families with real property including Single Family Homes, 
-                  High-Rise Units, Multi-Family Properties, Condos, and Land in the Las Vegas valley since 2004. 
-                  My background includes specialized knowledge in probate real estate, estate liquidation, and 
-                  Clark County probate court procedures.
+                  I've supported hundreds of people and families with real property including Single
+                  Family Homes, High-Rise Units, Multi-Family Properties, Condos, and Land in the
+                  Las Vegas valley since 2004. My background includes specialized knowledge in
+                  probate real estate, estate liquidation, and Clark County probate court
+                  procedures.
                 </p>
                 <p className="text-lg text-secondary-700 leading-relaxed mb-4">
-                  With a Ph.D. in Research, I bring analytical rigor and attention to detail to every probate 
-                  transaction. I understand the complexities of Nevada probate law and work diligently to ensure 
-                  smooth, efficient property sales during what can be a difficult time for families.
+                  With a Ph.D. in Research, I bring analytical rigor and attention to detail to
+                  every probate transaction. I understand the complexities of Nevada probate law and
+                  work diligently to ensure smooth, efficient property sales during what can be a
+                  difficult time for families.
                 </p>
               </div>
 
@@ -185,32 +248,50 @@ export default function AboutPage() {
                 <ul className="space-y-3 text-secondary-700">
                   <li className="flex items-start">
                     <span className="text-primary-600 mr-2">✓</span>
-                    <span><strong>Nevada Probate Expertise:</strong> Deep understanding of Nevada's 6-8 month probate timeline vs California's 9-18 months</span>
+                    <span>
+                      <strong>Nevada Probate Expertise:</strong> Deep understanding of Nevada's 6-8
+                      month probate timeline vs California's 9-18 months
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-600 mr-2">✓</span>
-                    <span><strong>Court Experience:</strong> Familiar with Clark County probate commissioners and procedures</span>
+                    <span>
+                      <strong>Court Experience:</strong> Familiar with Clark County probate
+                      commissioners and procedures
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-600 mr-2">✓</span>
-                    <span><strong>Compassionate Service:</strong> Understanding that probate sales happen during difficult times</span>
+                    <span>
+                      <strong>Compassionate Service:</strong> Understanding that probate sales
+                      happen during difficult times
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-600 mr-2">✓</span>
-                    <span><strong>Comprehensive Knowledge:</strong> From certificates of incumbency to trust administration</span>
+                    <span>
+                      <strong>Comprehensive Knowledge:</strong> From certificates of incumbency to
+                      trust administration
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-600 mr-2">✓</span>
-                    <span><strong>Local Expertise:</strong> Serving all of Clark County including Las Vegas, Henderson, Summerlin, and more</span>
+                    <span>
+                      <strong>Local Expertise:</strong> Serving all of Clark County including Las
+                      Vegas, Henderson, Summerlin, and more
+                    </span>
                   </li>
                 </ul>
               </div>
 
               {/* CTA Section */}
               <div className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl p-8 text-white text-center">
-                <h3 className="text-2xl font-bold mb-4">Let's Discuss Your Probate Real Estate Needs</h3>
+                <h3 className="text-2xl font-bold mb-4">
+                  Let's Discuss Your Probate Real Estate Needs
+                </h3>
                 <p className="text-primary-100 mb-6">
-                  Schedule a free consultation to discuss your probate property situation and learn how we can help.
+                  Schedule a free consultation to discuss your probate property situation and learn
+                  how we can help.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -238,21 +319,25 @@ export default function AboutPage() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl shadow-lg p-8">
-            <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">
-              Get In Touch
-            </h2>
+            <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">Get In Touch</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <Phone className="h-8 w-8 text-primary-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-secondary-900 mb-2">Phone</h3>
-                <a href="tel:+1-702-830-9222" className="text-primary-600 hover:text-primary-800 font-medium">
+                <a
+                  href="tel:+1-702-830-9222"
+                  className="text-primary-600 hover:text-primary-800 font-medium"
+                >
                   (702) 830-9222
                 </a>
               </div>
               <div className="text-center">
                 <Mail className="h-8 w-8 text-primary-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-secondary-900 mb-2">Email</h3>
-                <a href="mailto:DrJanSells@ProbateRealEstateSales.com" className="text-primary-600 hover:text-primary-800 font-medium">
+                <a
+                  href="mailto:DrJanSells@ProbateRealEstateSales.com"
+                  className="text-primary-600 hover:text-primary-800 font-medium"
+                >
                   DrJanSells@ProbateRealEstateSales.com
                 </a>
               </div>
@@ -268,7 +353,32 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-secondary-900 mb-4">
+                Frequently Asked Questions About Dr. Jan Duffy
+              </h2>
+              <p className="text-xl text-secondary-600">
+                Common questions about our probate real estate expertise and services
+              </p>
+            </div>
+            <FAQ />
+            <div className="text-center mt-8">
+              <Link
+                href="/faq"
+                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold"
+              >
+                View All FAQs
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
-

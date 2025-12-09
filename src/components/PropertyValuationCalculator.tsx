@@ -1,7 +1,7 @@
 'use client';
 
+import { Calculator, DollarSign, Home, Phone, TrendingUp } from 'lucide-react';
 import { useState } from 'react';
-import { Calculator, Home, TrendingUp, DollarSign, MapPin, Phone } from 'lucide-react';
 
 interface ValuationForm {
   propertyType: 'SFR' | 'MF' | 'CONDO' | 'TOWNHOUSE' | 'OTHER';
@@ -42,7 +42,7 @@ export default function PropertyValuationCalculator() {
     lotSize: 6000,
     hasPool: false,
     hasGarage: true,
-    recentSales: 450000
+    recentSales: 450000,
   });
 
   const [result, setResult] = useState<ValuationResult | null>(null);
@@ -50,104 +50,104 @@ export default function PropertyValuationCalculator() {
 
   const calculateValuation = () => {
     setIsCalculating(true);
-    
+
     // Simulate calculation delay
     setTimeout(() => {
       const baseValue = form.recentSales;
       let multiplier = 1.0;
-      
+
       // Property type adjustments
       const typeMultipliers = {
-        'SFR': 1.0,
-        'MF': 0.85,
-        'CONDO': 0.9,
-        'TOWNHOUSE': 0.95,
-        'OTHER': 0.8
+        SFR: 1.0,
+        MF: 0.85,
+        CONDO: 0.9,
+        TOWNHOUSE: 0.95,
+        OTHER: 0.8,
       };
       multiplier *= typeMultipliers[form.propertyType];
-      
+
       // Size adjustments
-      const sizeMultiplier = Math.pow(form.squareFootage / 2000, 0.8);
+      const sizeMultiplier = (form.squareFootage / 2000) ** 0.8;
       multiplier *= sizeMultiplier;
-      
+
       // Bedroom/bathroom adjustments
       const bedBathMultiplier = 1 + (form.bedrooms - 3) * 0.05 + (form.bathrooms - 2) * 0.03;
       multiplier *= bedBathMultiplier;
-      
+
       // Age adjustments
       const ageMultiplier = 1 - (2025 - form.yearBuilt) * 0.005;
       multiplier *= Math.max(ageMultiplier, 0.7);
-      
+
       // Condition adjustments
       const conditionMultipliers = {
-        'EXCELLENT': 1.15,
-        'GOOD': 1.0,
-        'FAIR': 0.9,
-        'POOR': 0.75
+        EXCELLENT: 1.15,
+        GOOD: 1.0,
+        FAIR: 0.9,
+        POOR: 0.75,
       };
       multiplier *= conditionMultipliers[form.condition];
-      
+
       // Location adjustments
       const locationMultipliers = {
-        'PREMIUM': 1.2,
-        'GOOD': 1.0,
-        'AVERAGE': 0.9,
-        'BELOW_AVERAGE': 0.8
+        PREMIUM: 1.2,
+        GOOD: 1.0,
+        AVERAGE: 0.9,
+        BELOW_AVERAGE: 0.8,
       };
       multiplier *= locationMultipliers[form.location];
-      
+
       // Lot size adjustments
-      const lotMultiplier = 1 + (form.lotSize - 6000) / 6000 * 0.1;
+      const lotMultiplier = 1 + ((form.lotSize - 6000) / 6000) * 0.1;
       multiplier *= lotMultiplier;
-      
+
       // Amenity adjustments
       if (form.hasPool) multiplier *= 1.05;
       if (form.hasGarage) multiplier *= 1.03;
-      
+
       const estimatedValue = Math.round(baseValue * multiplier);
       const marketRange = {
         low: Math.round(estimatedValue * 0.9),
-        high: Math.round(estimatedValue * 1.1)
+        high: Math.round(estimatedValue * 1.1),
       };
-      
+
       const factors: {
         positive: string[];
         negative: string[];
       } = {
         positive: [],
-        negative: []
+        negative: [],
       };
-      
+
       if (form.condition === 'EXCELLENT') factors.positive.push('Excellent property condition');
       if (form.location === 'PREMIUM') factors.positive.push('Premium location');
       if (form.hasPool) factors.positive.push('Swimming pool');
       if (form.hasGarage) factors.positive.push('Garage included');
       if (form.yearBuilt > 2010) factors.positive.push('Recent construction');
-      
+
       if (form.condition === 'POOR') factors.negative.push('Property needs significant repairs');
       if (form.location === 'BELOW_AVERAGE') factors.negative.push('Less desirable location');
       if (form.yearBuilt < 1980) factors.negative.push('Older property');
       if (form.squareFootage < 1500) factors.negative.push('Smaller than average size');
-      
+
       const recommendations = [
         'Consider professional appraisal for accurate valuation',
         'Review recent comparable sales in the area',
         'Factor in any needed repairs or improvements',
-        'Consult with local real estate professionals'
+        'Consult with local real estate professionals',
       ];
-      
+
       setResult({
         estimatedValue,
         marketRange,
         factors,
-        recommendations
+        recommendations,
       });
       setIsCalculating(false);
     }, 1500);
   };
 
   const handleInputChange = (field: keyof ValuationForm, value: any) => {
-    setForm(prev => ({ ...prev, [field]: value }));
+    setForm((prev) => ({ ...prev, [field]: value }));
   };
 
   const formatCurrency = (amount: number) => {
@@ -155,7 +155,7 @@ export default function PropertyValuationCalculator() {
       style: 'currency',
       currency: 'USD',
       minimumFractionDigits: 0,
-      maximumFractionDigits: 0
+      maximumFractionDigits: 0,
     }).format(amount);
   };
 
@@ -172,8 +172,8 @@ export default function PropertyValuationCalculator() {
               How Much Is My Inherited Property Worth?
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get an instant estimate of your inherited property's value. 
-              Our advanced algorithm considers location, condition, and market factors.
+              Get an instant estimate of your inherited property's value. Our advanced algorithm
+              considers location, condition, and market factors.
             </p>
           </div>
 
@@ -184,11 +184,14 @@ export default function PropertyValuationCalculator() {
                 <Home className="mr-2 h-6 w-6 text-blue-600" />
                 Property Details
               </h3>
-              
+
               <form className="space-y-6">
                 {/* Property Type */}
                 <div>
-                  <label htmlFor="propertyType" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="propertyType"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Property Type
                   </label>
                   <select
@@ -209,27 +212,35 @@ export default function PropertyValuationCalculator() {
                 {/* Basic Details */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="squareFootage" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="squareFootage"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Square Footage
                     </label>
                     <input
                       type="number"
                       id="squareFootage"
                       value={form.squareFootage}
-                      onChange={(e) => handleInputChange('squareFootage', parseInt(e.target.value))}
+                      onChange={(e) =>
+                        handleInputChange('squareFootage', parseInt(e.target.value, 10))
+                      }
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="2000"
                     />
                   </div>
                   <div>
-                    <label htmlFor="lotSize" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="lotSize"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Lot Size (sq ft)
                     </label>
                     <input
                       type="number"
                       id="lotSize"
                       value={form.lotSize}
-                      onChange={(e) => handleInputChange('lotSize', parseInt(e.target.value))}
+                      onChange={(e) => handleInputChange('lotSize', parseInt(e.target.value, 10))}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       placeholder="6000"
                     />
@@ -238,28 +249,34 @@ export default function PropertyValuationCalculator() {
 
                 <div className="grid md:grid-cols-3 gap-4">
                   <div>
-                    <label htmlFor="bedrooms" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="bedrooms"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Bedrooms
                     </label>
                     <input
                       type="number"
                       id="bedrooms"
                       value={form.bedrooms}
-                      onChange={(e) => handleInputChange('bedrooms', parseInt(e.target.value))}
+                      onChange={(e) => handleInputChange('bedrooms', parseInt(e.target.value, 10))}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       min="1"
                       max="10"
                     />
                   </div>
                   <div>
-                    <label htmlFor="bathrooms" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="bathrooms"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Bathrooms
                     </label>
                     <input
                       type="number"
                       id="bathrooms"
                       value={form.bathrooms}
-                      onChange={(e) => handleInputChange('bathrooms', parseInt(e.target.value))}
+                      onChange={(e) => handleInputChange('bathrooms', parseInt(e.target.value, 10))}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       min="1"
                       max="10"
@@ -267,14 +284,17 @@ export default function PropertyValuationCalculator() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="yearBuilt" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="yearBuilt"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Year Built
                     </label>
                     <input
                       type="number"
                       id="yearBuilt"
                       value={form.yearBuilt}
-                      onChange={(e) => handleInputChange('yearBuilt', parseInt(e.target.value))}
+                      onChange={(e) => handleInputChange('yearBuilt', parseInt(e.target.value, 10))}
                       className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                       min="1900"
                       max="2025"
@@ -285,7 +305,10 @@ export default function PropertyValuationCalculator() {
                 {/* Property Condition & Location */}
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="condition" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="condition"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Property Condition
                     </label>
                     <select
@@ -301,7 +324,10 @@ export default function PropertyValuationCalculator() {
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="location"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Location Quality
                     </label>
                     <select
@@ -348,14 +374,17 @@ export default function PropertyValuationCalculator() {
 
                 {/* Recent Sales */}
                 <div>
-                  <label htmlFor="recentSales" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="recentSales"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Recent Comparable Sales in Area
                   </label>
                   <input
                     type="number"
                     id="recentSales"
                     value={form.recentSales}
-                    onChange={(e) => handleInputChange('recentSales', parseInt(e.target.value))}
+                    onChange={(e) => handleInputChange('recentSales', parseInt(e.target.value, 10))}
                     className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     placeholder="450000"
                   />
@@ -393,10 +422,12 @@ export default function PropertyValuationCalculator() {
                   <div className="text-gray-400 mb-4">
                     <Calculator className="h-16 w-16 mx-auto" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Get Your Property Valuation</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    Get Your Property Valuation
+                  </h3>
                   <p className="text-gray-600">
-                    Fill out the form and click calculate to get an instant estimate 
-                    of your inherited property's market value.
+                    Fill out the form and click calculate to get an instant estimate of your
+                    inherited property's market value.
                   </p>
                 </div>
               ) : (
@@ -412,16 +443,15 @@ export default function PropertyValuationCalculator() {
                         {formatCurrency(result.estimatedValue)}
                       </div>
                       <div className="text-gray-600">
-                        Market Range: {formatCurrency(result.marketRange.low)} - {formatCurrency(result.marketRange.high)}
+                        Market Range: {formatCurrency(result.marketRange.low)} -{' '}
+                        {formatCurrency(result.marketRange.high)}
                       </div>
                     </div>
                   </div>
 
                   {/* Factors */}
                   <div className="bg-white rounded-2xl shadow-xl p-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                      Value Factors
-                    </h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Value Factors</h3>
                     <div className="grid md:grid-cols-2 gap-6">
                       {result.factors.positive.length > 0 && (
                         <div>
@@ -454,9 +484,7 @@ export default function PropertyValuationCalculator() {
 
                   {/* Recommendations */}
                   <div className="bg-white rounded-2xl shadow-xl p-8">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                      Recommendations
-                    </h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">Recommendations</h3>
                     <ul className="space-y-2">
                       {result.recommendations.map((rec, index) => (
                         <li key={index} className="text-sm text-gray-600 flex items-start">
@@ -469,19 +497,17 @@ export default function PropertyValuationCalculator() {
 
                   {/* CTA */}
                   <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-6 text-center text-white">
-                    <h3 className="text-xl font-semibold mb-2">
-                      Need Professional Valuation?
-                    </h3>
+                    <h3 className="text-xl font-semibold mb-2">Need Professional Valuation?</h3>
                     <p className="text-blue-100 mb-4">
                       Get a detailed appraisal and market analysis from our experts
                     </p>
-                                           <a
-                         href="tel:+1-702-830-9222"
-                         className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
-                       >
-                         <Phone className="mr-2 h-4 w-4" />
-                         Call (702) 830-9222
-                       </a>
+                    <a
+                      href="tel:+1-702-830-9222"
+                      className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+                    >
+                      <Phone className="mr-2 h-4 w-4" />
+                      Call (702) 830-9222
+                    </a>
                   </div>
                 </>
               )}

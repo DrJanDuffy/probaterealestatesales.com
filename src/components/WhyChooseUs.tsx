@@ -1,49 +1,63 @@
-import { Award, Clock, Heart, Shield, Users, TrendingUp, GraduationCap, Gavel, Star, Building, CheckCircle, Trophy } from 'lucide-react';
+import {
+  Award,
+  Building,
+  CheckCircle,
+  Clock,
+  Gavel,
+  GraduationCap,
+  Heart,
+  Shield,
+  Star,
+  TrendingUp,
+  Trophy,
+  Users,
+} from 'lucide-react';
 import Image from 'next/image';
 
 const reasons = [
   {
     icon: Award,
     title: 'Proven Track Record',
-    description: 'Over 20 years of experience in probate real estate with hundreds of successful transactions.',
+    description:
+      'Over 20 years of experience in probate real estate with hundreds of successful transactions.',
     stat: '500+',
-    detail: 'Properties Sold'
+    detail: 'Properties Sold',
   },
   {
     icon: Clock,
     title: 'Fast Turnaround',
     description: 'Average time from listing to closing is 45 days, well below market average.',
     stat: '45 days',
-    detail: 'Average Sale Time'
+    detail: 'Average Sale Time',
   },
   {
     icon: Heart,
     title: 'Compassionate Service',
     description: 'We understand this is a difficult time and provide caring, sensitive support.',
     stat: '100%',
-    detail: 'Family Focused'
+    detail: 'Family Focused',
   },
   {
     icon: Shield,
     title: 'Legal Expertise',
     description: 'Full legal compliance and documentation handling to protect your interests.',
     stat: '20+ years',
-    detail: 'Legal Experience'
+    detail: 'Legal Experience',
   },
   {
     icon: Users,
     title: 'Family Focused',
     description: 'Dedicated to helping families navigate complex situations with clarity.',
     stat: '200+',
-    detail: 'Families Helped'
+    detail: 'Families Helped',
   },
   {
     icon: TrendingUp,
     title: 'Maximum Value',
     description: 'Our properties consistently sell above market value through strategic marketing.',
     stat: '+15%',
-    detail: 'Above Initial Value'
-  }
+    detail: 'Above Initial Value',
+  },
 ];
 
 const credentials = [
@@ -53,15 +67,16 @@ const credentials = [
     subtitle: 'Research',
     description: 'Academic expertise in research methodology and analysis',
     color: 'text-blue-600',
-    bgColor: 'bg-blue-100'
+    bgColor: 'bg-blue-100',
   },
   {
     icon: Award,
-            title: '9 Exceptions to Probate Expert',
+    title: '9 Exceptions to Probate Expert',
     subtitle: 'Specialized Knowledge',
-    description: 'Expert in inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques',
+    description:
+      'Expert in inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques',
     color: 'text-primary-600',
-    bgColor: 'bg-primary-100'
+    bgColor: 'bg-primary-100',
   },
   {
     icon: Gavel,
@@ -69,16 +84,17 @@ const credentials = [
     subtitle: 'Active since 2003',
     description: 'Licensed real estate professional in Nevada for over 20 years',
     color: 'text-green-600',
-    bgColor: 'bg-green-100'
+    bgColor: 'bg-green-100',
   },
   {
     icon: Building,
     title: 'Expert in 9 Exceptions to Probate',
     subtitle: 'Approved Expert Witness',
-    description: 'Specialized knowledge in inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques',
+    description:
+      'Specialized knowledge in inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques',
     color: 'text-purple-600',
-    bgColor: 'bg-purple-100'
-  }
+    bgColor: 'bg-purple-100',
+  },
 ];
 
 const professionalAffiliations = [
@@ -87,7 +103,7 @@ const professionalAffiliations = [
   'Estate Planning Council of Southern Nevada',
   'National Academy of Elder Law Attorneys - Allied Professional',
   'National Association of Realtors (NAR)',
-  'Greater Las Vegas Association of Realtors (GLVAR)'
+  'Greater Las Vegas Association of Realtors (GLVAR)',
 ];
 
 const awards = [
@@ -95,20 +111,20 @@ const awards = [
     title: 'Probate Realtor of the Year',
     organization: 'Las Vegas Real Estate Awards 2024',
     icon: Trophy,
-    color: 'text-yellow-600'
+    color: 'text-yellow-600',
   },
   {
     title: 'Top 1% of Probate Specialists',
     organization: 'National Probate Network',
     icon: Star,
-    color: 'text-accent-600'
+    color: 'text-accent-600',
   },
   {
     title: 'Excellence in Estate Services',
     organization: 'Nevada Association of Realtors',
     icon: Award,
-    color: 'text-primary-600'
-  }
+    color: 'text-primary-600',
+  },
 ];
 
 export default function WhyChooseUs() {
@@ -125,8 +141,9 @@ export default function WhyChooseUs() {
             Las Vegas's Premier Probate Real Estate Expert
           </h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Dr. Jan Duffy combines academic excellence, professional certification, and proven results 
-            to deliver exceptional probate real estate services with compassion and expertise.
+            Dr. Jan Duffy combines academic excellence, professional certification, and proven
+            results to deliver exceptional probate real estate services with compassion and
+            expertise.
           </p>
         </div>
 
@@ -139,15 +156,22 @@ export default function WhyChooseUs() {
                   Meet Dr. Jan Duffy
                 </h3>
                 <p className="text-lg text-secondary-600 mb-6 leading-relaxed">
-                  With over 20 years of experience in Las Vegas real estate and specialized expertise in probate sales, 
-                  Dr. Duffy combines academic excellence with compassionate service to help families navigate complex 
-                  probate situations with confidence and care.
+                  With over 20 years of experience in Las Vegas real estate and specialized
+                  expertise in probate sales, Dr. Duffy combines academic excellence with
+                  compassionate service to help families navigate complex probate situations with
+                  confidence and care.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                  <a href="http://drjanduffy.realscout.com/onboarding" className="btn-primary inline-flex items-center justify-center">
+                  <a
+                    href="http://drjanduffy.realscout.com/onboarding"
+                    className="btn-primary inline-flex items-center justify-center"
+                  >
                     Schedule Free Consultation
                   </a>
-                  <a href="tel:+1-702-830-9222" className="btn-outline inline-flex items-center justify-center">
+                  <a
+                    href="tel:+1-702-830-9222"
+                    className="btn-outline inline-flex items-center justify-center"
+                  >
                     Call (702) 830-9222
                   </a>
                 </div>
@@ -181,19 +205,19 @@ export default function WhyChooseUs() {
             {credentials.map((credential) => (
               <div key={credential.title} className="text-center group">
                 <div className="mb-4">
-                  <div className={`w-20 h-20 ${credential.bgColor} rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                  <div
+                    className={`w-20 h-20 ${credential.bgColor} rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  >
                     <credential.icon className={`h-10 w-10 ${credential.color}`} />
                   </div>
                 </div>
-                
+
                 <h4 className="text-lg font-semibold text-secondary-900 mb-2">
                   {credential.title}
                 </h4>
-                
-                <p className="text-sm font-medium text-primary-600 mb-3">
-                  {credential.subtitle}
-                </p>
-                
+
+                <p className="text-sm font-medium text-primary-600 mb-3">{credential.subtitle}</p>
+
                 <p className="text-secondary-600 text-sm leading-relaxed">
                   {credential.description}
                 </p>
@@ -209,25 +233,24 @@ export default function WhyChooseUs() {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {reasons.map((reason) => (
-              <div key={`reason-${reason.title.replace(/\s+/g, '-').toLowerCase()}`} className="text-center group">
+              <div
+                key={`reason-${reason.title.replace(/\s+/g, '-').toLowerCase()}`}
+                className="text-center group"
+              >
                 <div className="mb-6">
                   <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-200 transition-colors duration-300">
                     <reason.icon className="h-10 w-10 text-primary-600" />
                   </div>
                 </div>
-                
+
                 <div className="mb-4">
                   <span className="text-3xl font-bold text-primary-600 block">{reason.stat}</span>
                   <span className="text-sm text-secondary-500">{reason.detail}</span>
                 </div>
-                
-                <h3 className="text-xl font-semibold text-secondary-900 mb-3">
-                  {reason.title}
-                </h3>
-                
-                <p className="text-secondary-600 leading-relaxed">
-                  {reason.description}
-                </p>
+
+                <h3 className="text-xl font-semibold text-secondary-900 mb-3">{reason.title}</h3>
+
+                <p className="text-secondary-600 leading-relaxed">{reason.description}</p>
               </div>
             ))}
           </div>
@@ -262,7 +285,10 @@ export default function WhyChooseUs() {
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {professionalAffiliations.map((affiliation) => (
-              <div key={`affiliation-${affiliation.substring(0, 20).replace(/\s+/g, '-').toLowerCase()}`} className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg">
+              <div
+                key={`affiliation-${affiliation.substring(0, 20).replace(/\s+/g, '-').toLowerCase()}`}
+                className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg"
+              >
                 <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
                 <span className="text-secondary-700 text-sm">{affiliation}</span>
               </div>
@@ -277,16 +303,15 @@ export default function WhyChooseUs() {
           </h3>
           <div className="grid md:grid-cols-3 gap-6">
             {awards.map((award) => (
-              <div key={award.title} className="text-center p-6 bg-gradient-to-br from-accent-50 to-white rounded-xl border border-accent-200">
+              <div
+                key={award.title}
+                className="text-center p-6 bg-gradient-to-br from-accent-50 to-white rounded-xl border border-accent-200"
+              >
                 <div className="mb-4">
                   <award.icon className={`h-12 w-12 ${award.color} mx-auto`} />
                 </div>
-                <h4 className="text-lg font-semibold text-secondary-900 mb-2">
-                  {award.title}
-                </h4>
-                <p className="text-secondary-600 text-sm">
-                  {award.organization}
-                </p>
+                <h4 className="text-lg font-semibold text-secondary-900 mb-2">{award.title}</h4>
+                <p className="text-secondary-600 text-sm">{award.organization}</p>
               </div>
             ))}
           </div>
