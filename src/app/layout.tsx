@@ -142,8 +142,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="grokipedia:business-type" content="Legal Services, Real Estate Services" />
         <meta name="grokipedia:license" content="Nevada Real Estate License S.0197614" />
 
-        {/* Google Search Console Verification (add when available) */}
-        {/* <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE" /> */}
+        {/* Google Search Console Verification */}
+        {process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && (
+          <meta
+            name="google-site-verification"
+            content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
+          />
+        )}
       </head>
       <body className={`${inter.className} antialiased text-secondary-900 bg-white`}>
         {/* Google tag (gtag.js) */}
