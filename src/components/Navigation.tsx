@@ -151,12 +151,16 @@ export default function Navigation() {
   const [blogOpen, setBlogOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center">
+            <Link
+              href="/"
+              className="flex items-center hover:opacity-80 transition-opacity focus-ring rounded-md p-1"
+              aria-label="Dr. Jan Duffy - Probate Real Estate Home"
+            >
               <Award className="h-8 w-8 text-primary-600" />
               <span className="ml-2 text-xl font-bold text-secondary-900">Dr. Jan Duffy</span>
               <span className="ml-2 text-sm text-secondary-600 hidden sm:block">
@@ -166,11 +170,24 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-6">
+          <div className="hidden lg:flex lg:items-center lg:space-x-4">
+            {/* Phone Number - Prominent */}
+            <div className="flex items-center gap-2 px-3 py-2 bg-primary-50 rounded-lg">
+              <Phone className="h-4 w-4 text-primary-600" />
+              <a
+                href="tel:+1-702-830-9222"
+                className="text-primary-600 font-semibold text-sm hover:text-primary-700 transition-colors focus-ring rounded-md px-1"
+                aria-label="Call Dr. Jan Duffy at (702) 830-9222"
+              >
+                (702) 830-9222
+              </a>
+            </div>
+
             {/* Main Navigation */}
             <Link
               href="/"
-              className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+              className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors focus-ring rounded-md"
+              aria-label="Home page"
             >
               Home
             </Link>
@@ -189,14 +206,15 @@ export default function Navigation() {
               </button>
 
               {servicesOpen && (
-                <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
-                  <div className="py-1">
+                <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 z-50 border border-gray-100">
+                  <div className="py-2">
                     {navigation.services.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="block px-4 py-3 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600"
+                        className="block px-4 py-3 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600 transition-colors focus-ring rounded-md mx-1"
                         onClick={() => setServicesOpen(false)}
+                        aria-label={`${item.name} - ${item.description}`}
                       >
                         <div className="font-medium">{item.name}</div>
                         <div className="text-secondary-500 text-xs">{item.description}</div>
@@ -221,14 +239,15 @@ export default function Navigation() {
               </button>
 
               {locationsOpen && (
-                <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
-                  <div className="py-1">
+                <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 z-50 border border-gray-100">
+                  <div className="py-2">
                     {navigation.locations.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="block px-4 py-3 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600"
+                        className="block px-4 py-3 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600 transition-colors focus-ring rounded-md mx-1"
                         onClick={() => setLocationsOpen(false)}
+                        aria-label={`${item.name} - ${item.description}`}
                       >
                         <div className="font-medium">{item.name}</div>
                         <div className="text-secondary-500 text-xs">{item.description}</div>
@@ -253,14 +272,15 @@ export default function Navigation() {
               </button>
 
               {resourcesOpen && (
-                <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
-                  <div className="py-1">
+                <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 z-50 border border-gray-100">
+                  <div className="py-2">
                     {navigation.resources.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="block px-4 py-3 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600"
+                        className="block px-4 py-3 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600 transition-colors focus-ring rounded-md mx-1"
                         onClick={() => setResourcesOpen(false)}
+                        aria-label={`${item.name} - ${item.description}`}
                       >
                         <div className="font-medium">{item.name}</div>
                         <div className="text-secondary-500 text-xs">{item.description}</div>
@@ -285,14 +305,15 @@ export default function Navigation() {
               </button>
 
               {blogOpen && (
-                <div className="absolute right-0 mt-2 w-80 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-50">
-                  <div className="py-1">
+                <div className="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-xl ring-1 ring-black ring-opacity-5 z-50 border border-gray-100">
+                  <div className="py-2">
                     {navigation.blog.map((item) => (
                       <Link
                         key={item.name}
                         href={item.href}
-                        className="block px-4 py-3 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600"
+                        className="block px-4 py-3 text-sm text-secondary-700 hover:bg-primary-50 hover:text-primary-600 transition-colors focus-ring rounded-md mx-1"
                         onClick={() => setBlogOpen(false)}
+                        aria-label={`${item.name} - ${item.description}`}
                       >
                         <div className="font-medium">{item.name}</div>
                         <div className="text-secondary-500 text-xs">{item.description}</div>
@@ -306,7 +327,8 @@ export default function Navigation() {
             {/* About Link */}
             <Link
               href="/about"
-              className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+              className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors focus-ring rounded-md"
+              aria-label="About Dr. Jan Duffy"
             >
               About
             </Link>
@@ -314,7 +336,8 @@ export default function Navigation() {
             {/* Contact Link */}
             <Link
               href="/contact"
-              className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors"
+              className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors focus-ring rounded-md"
+              aria-label="Contact us"
             >
               Contact
             </Link>
@@ -322,18 +345,31 @@ export default function Navigation() {
             {/* CTA Button */}
             <Link
               href="http://drjanduffy.realscout.com/onboarding"
-              className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 transition-colors"
+              className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 hover-lift transition-all duration-200 focus-ring"
+              aria-label="Get your free probate consultation"
+              rel="noopener noreferrer"
             >
               Free Consultation
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="lg:hidden flex items-center gap-3">
+            {/* Mobile Phone Link */}
+            <a
+              href="tel:+1-702-830-9222"
+              className="flex items-center gap-1 px-3 py-1.5 bg-primary-50 rounded-md text-primary-600 font-semibold text-sm hover:bg-primary-100 transition-colors focus-ring"
+              aria-label="Call (702) 830-9222"
+            >
+              <Phone className="h-4 w-4" />
+              <span className="hidden sm:inline">(702) 830-9222</span>
+            </a>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-secondary-700 hover:text-primary-600 p-2"
+              className="text-secondary-700 hover:text-primary-600 p-2 focus-ring rounded-md transition-colors"
+              aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={mobileMenuOpen}
             >
               {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -343,20 +379,22 @@ export default function Navigation() {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-secondary-200">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="lg:hidden bg-white border-t border-secondary-200 animate-slide-up">
+          <div className="px-2 pt-2 pb-3 space-y-1 max-h-[calc(100vh-4rem)] overflow-y-auto">
             {/* Main Navigation */}
             <Link
               href="/"
-              className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors focus-ring"
               onClick={() => setMobileMenuOpen(false)}
+              aria-label="Home page"
             >
               Home
             </Link>
             <Link
               href="/faq"
-              className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors focus-ring"
               onClick={() => setMobileMenuOpen(false)}
+              aria-label="Frequently asked questions"
             >
               FAQ
             </Link>
@@ -370,8 +408,9 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+                  className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors focus-ring"
                   onClick={() => setMobileMenuOpen(false)}
+                  aria-label={`${item.name} - ${item.description}`}
                 >
                   {item.name}
                 </Link>
@@ -387,8 +426,9 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+                  className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors focus-ring"
                   onClick={() => setMobileMenuOpen(false)}
+                  aria-label={`${item.name} - ${item.description}`}
                 >
                   {item.name}
                 </Link>
@@ -404,8 +444,9 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+                  className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors focus-ring"
                   onClick={() => setMobileMenuOpen(false)}
+                  aria-label={`${item.name} - ${item.description}`}
                 >
                   {item.name}
                 </Link>
@@ -421,8 +462,9 @@ export default function Navigation() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+                  className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors focus-ring"
                   onClick={() => setMobileMenuOpen(false)}
+                  aria-label={`${item.name} - ${item.description}`}
                 >
                   {item.name}
                 </Link>
@@ -432,8 +474,9 @@ export default function Navigation() {
             {/* About Link */}
             <Link
               href="/about"
-              className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md border-t border-secondary-200 pt-4"
+              className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md border-t border-secondary-200 pt-4 transition-colors focus-ring"
               onClick={() => setMobileMenuOpen(false)}
+              aria-label="About Dr. Jan Duffy"
             >
               About
             </Link>
@@ -441,8 +484,9 @@ export default function Navigation() {
             {/* Contact Link */}
             <Link
               href="/contact"
-              className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md"
+              className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors focus-ring"
               onClick={() => setMobileMenuOpen(false)}
+              aria-label="Contact us"
             >
               Contact
             </Link>
@@ -451,8 +495,10 @@ export default function Navigation() {
             <div className="border-t border-secondary-200 pt-4">
               <Link
                 href="http://drjanduffy.realscout.com/onboarding"
-                className="block w-full text-center bg-primary-600 text-white px-4 py-3 rounded-md text-base font-medium hover:bg-primary-700 transition-colors"
+                className="block w-full text-center bg-primary-600 text-white px-4 py-3 rounded-md text-base font-medium hover:bg-primary-700 hover-lift transition-all duration-200 focus-ring"
                 onClick={() => setMobileMenuOpen(false)}
+                aria-label="Get your free probate consultation"
+                rel="noopener noreferrer"
               >
                 Free Consultation
               </Link>
