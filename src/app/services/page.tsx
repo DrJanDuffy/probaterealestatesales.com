@@ -42,6 +42,17 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.probaterealestatesales.com/services/',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function ServicesPage() {
@@ -246,7 +257,21 @@ export default function ServicesPage() {
               </p>
               <p className="solution text-gray-700 mb-6">
                 Our team attends all hearings, prepares all documents, and has a 98% first-approval
-                rate with Clark County Probate Court.
+                rate with{' '}
+                <Link
+                  href="/locations/las-vegas/"
+                  className="text-blue-600 hover:text-blue-800 font-semibold underline"
+                >
+                  Clark County Probate Court
+                </Link>
+                . Learn more about{' '}
+                <Link
+                  href="/resources/nevada-probate-guide/"
+                  className="text-blue-600 hover:text-blue-800 font-semibold underline"
+                >
+                  Nevada probate court procedures
+                </Link>
+                .
               </p>
 
               <ul className="deliverables space-y-3 mb-6">
@@ -305,7 +330,21 @@ export default function ServicesPage() {
               </p>
               <p className="solution text-gray-700 mb-6">
                 Independent administration allows you to sell property without court confirmation,
-                reducing timeline by 3-4 months.
+                reducing timeline by 3-4 months. This is ideal for{' '}
+                <Link
+                  href="/trust-property-sales/"
+                  className="text-green-600 hover:text-green-800 font-semibold underline"
+                >
+                  trust property sales
+                </Link>{' '}
+                and estates that qualify. See our{' '}
+                <Link
+                  href="/resources/nevada-probate-guide#timeline"
+                  className="text-green-600 hover:text-green-800 font-semibold underline"
+                >
+                  probate timeline guide
+                </Link>{' '}
+                for details.
               </p>
 
               <ul className="deliverables space-y-3 mb-6">
@@ -364,7 +403,21 @@ export default function ServicesPage() {
               </p>
               <p className="solution text-gray-700 mb-6">
                 We help obtain certificates of incumbency and navigate trust administration for
-                faster property access and sales.
+                faster property access and sales. Learn more about{' '}
+                <Link
+                  href="/blog/certificate-of-incumbency/"
+                  className="text-purple-600 hover:text-purple-800 font-semibold underline"
+                >
+                  certificates of incumbency
+                </Link>{' '}
+                and our{' '}
+                <Link
+                  href="/trust-property-sales/"
+                  className="text-purple-600 hover:text-purple-800 font-semibold underline"
+                >
+                  trust property sales
+                </Link>{' '}
+                services.
               </p>
 
               <ul className="deliverables space-y-3 mb-6">

@@ -106,8 +106,14 @@ export default function ClarkCountyProbatePage() {
               </div>
               <div className="ml-14">
                 <p className="text-secondary-700 mb-4">
-                  File a petition with the Clark County Probate Court to open the probate case.
-                  Required documents include:
+                  File a petition with the{' '}
+                  <Link
+                    href="/locations/las-vegas/"
+                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                  >
+                    Clark County Probate Court
+                  </Link>{' '}
+                  to open the probate case. Required documents include:
                 </p>
                 <ul className="space-y-2 text-secondary-700">
                   <li className="flex items-start">
@@ -161,8 +167,21 @@ export default function ClarkCountyProbatePage() {
               <div className="ml-14">
                 <p className="text-secondary-700 mb-4">
                   Within 60 days of appointment, the executor/administrator must file an inventory
-                  of all estate assets, including real estate. Real property requires a professional
-                  appraisal.
+                  of all estate assets, including real estate. Real property requires a professional{' '}
+                  <Link
+                    href="/probate-property-valuation/"
+                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                  >
+                    appraisal
+                  </Link>
+                  . Learn about our{' '}
+                  <Link
+                    href="/services/#property-valuation"
+                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                  >
+                    property valuation services
+                  </Link>
+                  .
                 </p>
               </div>
             </div>
@@ -196,7 +215,21 @@ export default function ClarkCountyProbatePage() {
               </div>
               <div className="ml-14">
                 <p className="text-secondary-700 mb-4">
-                  To sell real estate, the executor/administrator must file a petition requesting
+                  To sell real estate, the executor/administrator must file a petition requesting{' '}
+                  <Link
+                    href="/services/#probate-sales"
+                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                  >
+                    probate property sale
+                  </Link>
+                  . Our{' '}
+                  <Link
+                    href="/services/#court-representation"
+                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                  >
+                    court representation services
+                  </Link>{' '}
+                  handle this process.
                   court approval. The petition must include:
                 </p>
                 <ul className="space-y-2 text-secondary-700">

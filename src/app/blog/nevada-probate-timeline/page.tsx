@@ -74,7 +74,15 @@ export default function NevadaProbateTimelinePage() {
                 <ul className="space-y-2 text-secondary-700">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>File petition with Clark County Probate Court</span>
+                    <span>
+                      File petition with{' '}
+                      <Link
+                        href="/blog/clark-county-probate/"
+                        className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                      >
+                        Clark County Probate Court
+                      </Link>
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
@@ -107,7 +115,15 @@ export default function NevadaProbateTimelinePage() {
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>Obtain property appraisals and valuations</span>
+                    <span>
+                      Obtain{' '}
+                      <Link
+                        href="/probate-property-valuation/"
+                        className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                      >
+                        property appraisals and valuations
+                      </Link>
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
@@ -163,7 +179,15 @@ export default function NevadaProbateTimelinePage() {
                 <ul className="space-y-2 text-secondary-700">
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                    <span>List property with probate real estate specialist</span>
+                    <span>
+                      List property with{' '}
+                      <Link
+                        href="/services/"
+                        className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                      >
+                        probate real estate specialist
+                      </Link>
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <CheckCircle className="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" />

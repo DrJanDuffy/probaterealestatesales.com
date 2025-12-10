@@ -39,6 +39,17 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://www.probaterealestatesales.com/locations/north-las-vegas/',
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function NorthLasVegasPage() {

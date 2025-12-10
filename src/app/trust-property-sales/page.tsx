@@ -120,9 +120,22 @@ export default function TrustPropertySalesPage() {
                 Trust property sales represent a specialized segment of real estate transactions in
                 Las Vegas and throughout Nevada. When real property is held in a trust, whether
                 revocable or irrevocable, the sale process involves specific legal requirements,
-                documentation, and procedures that differ from standard real estate transactions.
-                Understanding these requirements is essential for trustees, beneficiaries, and their
-                legal advisors.
+                documentation, and procedures that differ from standard{' '}
+                <Link
+                  href="/services/#probate-sales"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  probate real estate transactions
+                </Link>
+                . Understanding these requirements is essential for trustees, beneficiaries, and their
+                legal advisors. Learn about{' '}
+                <Link
+                  href="/blog/certificate-of-incumbency/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  certificates of incumbency
+                </Link>{' '}
+                required for trust sales.
               </p>
               <p className="text-lg text-secondary-700 mb-6">
                 A trust is a legal arrangement where a trustee holds and manages property for the
@@ -148,7 +161,13 @@ export default function TrustPropertySalesPage() {
                   The trustee must have authority under the trust document to sell the property
                 </li>
                 <li>
-                  Nevada law requires specific documentation, including a certificate of incumbency
+                  Nevada law requires specific documentation, including a{' '}
+                  <Link
+                    href="/blog/certificate-of-incumbency/"
+                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                  >
+                    certificate of incumbency
+                  </Link>{' '}
                   in many cases
                 </li>
                 <li>The sale must comply with the trustee's fiduciary duties to beneficiaries</li>

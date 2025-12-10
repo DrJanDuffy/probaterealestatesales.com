@@ -125,20 +125,53 @@ export default function ProbatePropertyValuationPage() {
                 Understanding Probate Property Valuation
               </h2>
               <p className="text-lg text-secondary-700 mb-6">
-                Probate property valuation is a critical component of the probate real estate
-                process in Las Vegas and throughout Nevada. When real property is part of an estate
-                going through probate, accurate valuation is essential for multiple purposes,
-                including determining sale prices, calculating estate taxes, distributing assets to
-                beneficiaries, and obtaining court approval for sales. Understanding how probate
-                property valuation works helps executors, trustees, beneficiaries, and buyers
-                navigate the probate process effectively.
+                Probate property valuation is a critical component of the{' '}
+                <Link
+                  href="/services/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  probate real estate process
+                </Link>{' '}
+                in Las Vegas and throughout Nevada. When real property is part of an estate going
+                through{' '}
+                <Link
+                  href="/resources/nevada-probate-guide/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  probate
+                </Link>
+                , accurate valuation is essential for multiple purposes, including determining sale
+                prices, calculating estate taxes, distributing assets to beneficiaries, and
+                obtaining court approval for sales. Understanding how probate property valuation
+                works helps executors, trustees, beneficiaries, and buyers navigate the probate
+                process effectively. Get a free{' '}
+                <Link
+                  href="/home-valuation/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  property valuation
+                </Link>
+                .
               </p>
               <p className="text-lg text-secondary-700 mb-6">
                 Probate property valuation differs from standard real estate appraisals in several
                 ways. These valuations must meet specific legal requirements, often need to be
-                conducted by licensed appraisers, and must be defensible in court if challenged. The
-                valuation process considers market conditions, property condition, comparable sales,
-                and other factors that affect fair market value.
+                conducted by licensed appraisers, and must be defensible in{' '}
+                <Link
+                  href="/locations/las-vegas/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  court
+                </Link>{' '}
+                if challenged. The valuation process considers market conditions, property condition,
+                comparable sales, and other factors that affect fair market value. Our{' '}
+                <Link
+                  href="/services/#property-valuation"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  property valuation services
+                </Link>{' '}
+                ensure court compliance.
               </p>
 
               <h3 className="text-2xl font-semibold text-secondary-900 mt-8 mb-4">

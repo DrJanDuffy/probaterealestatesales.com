@@ -231,7 +231,28 @@ export default function LasVegasPage() {
               Probate Real Estate Services in Las Vegas
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive probate real estate services tailored to Las Vegas properties
+              Comprehensive{' '}
+              <Link
+                href="/services/"
+                className="text-blue-600 hover:text-blue-800 font-semibold underline"
+              >
+                probate real estate services
+              </Link>{' '}
+              tailored to Las Vegas properties. Our{' '}
+              <Link
+                href="/probate-property-valuation/"
+                className="text-blue-600 hover:text-blue-800 font-semibold underline"
+              >
+                probate property valuation
+              </Link>{' '}
+              and{' '}
+              <Link
+                href="/probate-homes-for-sale/"
+                className="text-blue-600 hover:text-blue-800 font-semibold underline"
+              >
+                probate homes for sale
+              </Link>{' '}
+              services cover all Las Vegas neighborhoods.
             </p>
           </div>
 
@@ -242,8 +263,21 @@ export default function LasVegasPage() {
                 How Much Is My Inherited Property Worth?
               </h3>
               <p className="text-gray-600">
-                Professional appraisal and market analysis for downtown and Strip area properties.
-                Quick turnaround for probate court requirements.
+                Professional{' '}
+                <Link
+                  href="/probate-property-valuation/"
+                  className="text-blue-600 hover:text-blue-800 font-semibold underline"
+                >
+                  appraisal and market analysis
+                </Link>{' '}
+                for downtown and Strip area properties. Quick turnaround for{' '}
+                <Link
+                  href="/resources/nevada-probate-guide/"
+                  className="text-blue-600 hover:text-blue-800 font-semibold underline"
+                >
+                  probate court requirements
+                </Link>
+                .
               </p>
             </div>
 
@@ -251,8 +285,21 @@ export default function LasVegasPage() {
               <Clock className="h-12 w-12 text-green-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Sale Management</h3>
               <p className="text-gray-600">
-                Complete probate sale management from listing to closing. Expert handling of court
-                requirements and documentation.
+                Complete{' '}
+                <Link
+                  href="/probate-estate-sales/"
+                  className="text-green-600 hover:text-green-800 font-semibold underline"
+                >
+                  probate sale management
+                </Link>{' '}
+                from listing to closing. Expert handling of{' '}
+                <Link
+                  href="/services/#court-representation"
+                  className="text-green-600 hover:text-green-800 font-semibold underline"
+                >
+                  court requirements
+                </Link>{' '}
+                and documentation.
               </p>
             </div>
 
@@ -260,8 +307,21 @@ export default function LasVegasPage() {
               <Users className="h-12 w-12 text-purple-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Court Representation</h3>
               <p className="text-gray-600">
-                Direct access to Clark County probate court. Established relationships with
-                commissioners and court staff.
+                Direct access to{' '}
+                <Link
+                  href="/blog/clark-county-probate/"
+                  className="text-purple-600 hover:text-purple-800 font-semibold underline"
+                >
+                  Clark County probate court
+                </Link>
+                . Established relationships with commissioners and court staff. Learn about our{' '}
+                <Link
+                  href="/services/#court-representation"
+                  className="text-purple-600 hover:text-purple-800 font-semibold underline"
+                >
+                  court representation services
+                </Link>
+                .
               </p>
             </div>
           </div>

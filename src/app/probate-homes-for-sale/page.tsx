@@ -157,17 +157,56 @@ export default function ProbateHomesForSalePage() {
               <p className="text-lg text-secondary-700 mb-6">
                 Probate homes for sale represent a unique segment of the real estate market in Las
                 Vegas and throughout Nevada. These properties become available when someone passes
-                away and their estate must go through the probate process to legally transfer
-                ownership and settle debts. Understanding how probate sales work can help you
-                identify opportunities and make informed purchasing decisions.
+                away and their estate must go through the{' '}
+                <Link
+                  href="/resources/nevada-probate-guide/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  probate process
+                </Link>{' '}
+                to legally transfer ownership and settle debts. Understanding how{' '}
+                <Link
+                  href="/services/#probate-sales"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  probate sales
+                </Link>{' '}
+                work can help you identify opportunities and make informed purchasing decisions. Learn
+                more about{' '}
+                <Link
+                  href="/probate-property-buyers/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  buying probate properties
+                </Link>
+                .
               </p>
               <p className="text-lg text-secondary-700 mb-6">
-                When a property owner dies without a living trust or other estate planning
-                mechanism, their real estate typically enters probate court. The court oversees the
-                process of identifying assets, paying debts, and distributing remaining property to
-                heirs or beneficiaries. As part of this process, real estate may need to be sold to
-                generate cash for estate expenses, pay creditors, or divide assets among multiple
-                beneficiaries.
+                When a property owner dies without a{' '}
+                <Link
+                  href="/trust-property-sales/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  living trust
+                </Link>{' '}
+                or other estate planning mechanism, their real estate typically enters{' '}
+                <Link
+                  href="/blog/clark-county-probate/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  probate court
+                </Link>
+                . The court oversees the process of identifying assets, paying debts, and
+                distributing remaining property to heirs or beneficiaries. As part of this process,
+                real estate may need to be sold to generate cash for estate expenses, pay creditors,
+                or divide assets among multiple beneficiaries. Explore our{' '}
+                <Link
+                  href="/probate-estate-sales/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  probate estate sales
+                </Link>{' '}
+                services.
               </p>
 
               <h3 className="text-2xl font-semibold text-secondary-900 mt-8 mb-4">

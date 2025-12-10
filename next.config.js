@@ -20,19 +20,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Redirect non-www to www
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'probaterealestatesales.com',
-          },
-        ],
-        destination: 'https://www.probaterealestatesales.com/:path*',
-        permanent: true,
-      },
-      // Redirect old /lander page to homepage
+      // Redirect old /lander page to homepage (middleware handles www/https)
       {
         source: '/lander',
         destination: '/',

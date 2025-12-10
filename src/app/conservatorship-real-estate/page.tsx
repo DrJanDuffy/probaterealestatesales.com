@@ -119,16 +119,49 @@ export default function ConservatorshipRealEstatePage() {
                 Conservatorship real estate sales represent one of the most sensitive and legally
                 complex types of property transactions in Las Vegas and throughout Nevada. When an
                 individual (called a conservatee) is unable to manage their own affairs due to
-                incapacity, the court may appoint a conservator to manage their property and
-                financial affairs. Selling real estate in this context requires strict adherence to
-                court procedures and fiduciary responsibilities.
+                incapacity, the{' '}
+                <Link
+                  href="/blog/clark-county-probate/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  court
+                </Link>{' '}
+                may appoint a conservator to manage their property and financial affairs. Selling
+                real estate in this context requires strict adherence to{' '}
+                <Link
+                  href="/services/#court-representation"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  court procedures
+                </Link>{' '}
+                and fiduciary responsibilities. Our{' '}
+                <Link
+                  href="/services/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  conservatorship real estate services
+                </Link>{' '}
+                ensure compliance.
               </p>
               <p className="text-lg text-secondary-700 mb-6">
-                Conservatorship property sales are fundamentally different from standard real estate
-                transactions. Every aspect of the sale, from listing price to buyer selection,
-                requires court approval. The conservator must demonstrate that the sale serves the
-                conservatee's best interests and complies with all legal requirements. This process
-                demands expertise in both real estate and conservatorship law.
+                Conservatorship property sales are fundamentally different from standard{' '}
+                <Link
+                  href="/probate-homes-for-sale/"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  real estate transactions
+                </Link>
+                . Every aspect of the sale, from listing price to buyer selection, requires court
+                approval. The conservator must demonstrate that the sale serves the conservatee's
+                best interests and complies with all legal requirements. This process demands
+                expertise in both real estate and conservatorship law. Learn about our{' '}
+                <Link
+                  href="/services/#court-representation"
+                  className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                >
+                  court representation
+                </Link>{' '}
+                services.
               </p>
 
               <h3 className="text-2xl font-semibold text-secondary-900 mt-8 mb-4">

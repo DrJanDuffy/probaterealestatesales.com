@@ -170,7 +170,21 @@ export default function NevadaProbateGuidePage() {
               Nevada Probate Timeline: 6-8 Months
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Step-by-step breakdown of Nevada's efficient probate process
+              Step-by-step breakdown of Nevada's efficient probate process. Learn about our{' '}
+              <Link
+                href="/services/#probate-sales"
+                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+              >
+                probate services
+              </Link>{' '}
+              and{' '}
+              <Link
+                href="/blog/nevada-probate-timeline/"
+                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+              >
+                detailed probate timeline
+              </Link>
+              .
             </p>
           </div>
 

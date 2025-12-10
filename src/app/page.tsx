@@ -157,8 +157,28 @@ export default function Home() {
             </h2>
             <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
               Dr. Jan Duffy provides end-to-end solutions to help families navigate the complex
-              process of probate real estate with compassion, expertise, and maximum value for your
-              estate.
+              process of{' '}
+              <Link
+                href="/services/"
+                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+              >
+                probate real estate
+              </Link>{' '}
+              with compassion, expertise, and maximum value for your estate. Our{' '}
+              <Link
+                href="/probate-property-valuation/"
+                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+              >
+                probate property valuation
+              </Link>{' '}
+              services ensure you get fair market value for inherited properties across{' '}
+              <Link
+                href="/locations/"
+                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+              >
+                all Nevada locations
+              </Link>
+              .
             </p>
           </div>
 
@@ -167,41 +187,84 @@ export default function Home() {
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                 <HomeIcon className="h-6 w-6 text-primary-600" />
               </div>
-              <h3 className="text-lg font-semibold text-secondary-900 mb-2">
-                Estate Property Valuation
-              </h3>
-              <p className="text-secondary-600 text-sm">
-                Comprehensive market analysis and court-compliant property appraisal
-              </p>
+              <Link href="/probate-property-valuation/" className="block">
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-600 transition-colors">
+                  Estate Property Valuation
+                </h3>
+                <p className="text-secondary-600 text-sm">
+                  Comprehensive market analysis and court-compliant property appraisal. Learn more
+                  about our{' '}
+                  <span className="text-primary-600 font-medium">probate property valuation</span>{' '}
+                  services.
+                </p>
+              </Link>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                 <Gavel className="h-6 w-6 text-primary-600" />
               </div>
-              <h3 className="text-lg font-semibold text-secondary-900 mb-2">
-                Probate Process Navigation
-              </h3>
-              <p className="text-secondary-600 text-sm">
-                Step-by-step guidance through court requirements with attorney coordination
-              </p>
+              <Link href="/services/#probate-sales" className="block">
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-600 transition-colors">
+                  Probate Process Navigation
+                </h3>
+                <p className="text-secondary-600 text-sm">
+                  Step-by-step guidance through court requirements with attorney coordination. View
+                  our complete{' '}
+                  <span className="text-primary-600 font-medium">probate services</span> and{' '}
+                  <Link
+                    href="/resources/nevada-probate-guide/"
+                    className="text-primary-600 font-medium underline"
+                  >
+                    Nevada probate guide
+                  </Link>
+                  .
+                </p>
+              </Link>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                 <Shield className="h-6 w-6 text-primary-600" />
               </div>
-              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Legal Compliance</h3>
-              <p className="text-secondary-600 text-sm">
-                Complete handling of all legal documents and probate court requirements
-              </p>
+              <Link href="/services/#court-representation" className="block">
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-600 transition-colors">
+                  Legal Compliance
+                </h3>
+                <p className="text-secondary-600 text-sm">
+                  Complete handling of all legal documents and probate court requirements. Explore
+                  our{' '}
+                  <span className="text-primary-600 font-medium">court representation</span> services
+                  and{' '}
+                  <Link
+                    href="/probate-division/"
+                    className="text-primary-600 font-medium underline"
+                  >
+                    probate division
+                  </Link>{' '}
+                  expertise.
+                </p>
+              </Link>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
                 <FileText className="h-6 w-6 text-primary-600" />
               </div>
-              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Market Optimization</h3>
-              <p className="text-secondary-600 text-sm">
-                Strategic marketing to qualified buyers with proven negotiation support
-              </p>
+              <Link href="/probate-homes-for-sale/" className="block">
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-600 transition-colors">
+                  Market Optimization
+                </h3>
+                <p className="text-secondary-600 text-sm">
+                  Strategic marketing to qualified buyers with proven negotiation support. Browse{' '}
+                  <span className="text-primary-600 font-medium">probate homes for sale</span> and
+                  learn about{' '}
+                  <Link
+                    href="/probate-property-buyers/"
+                    className="text-primary-600 font-medium underline"
+                  >
+                    probate property buyers
+                  </Link>
+                  .
+                </p>
+              </Link>
             </div>
           </div>
 
@@ -329,7 +392,28 @@ export default function Home() {
             </h2>
             <p className="text-lg text-secondary-600 mb-6">
               With 20+ years of experience, 500+ properties sold, and a Ph.D. in Research, Dr. Jan
-              Duffy brings unparalleled expertise to every probate transaction.
+              Duffy brings unparalleled expertise to every probate transaction. Learn more about{' '}
+              <Link
+                href="/about/"
+                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+              >
+                Dr. Jan Duffy's background
+              </Link>{' '}
+              and read{' '}
+              <Link
+                href="/testimonials/"
+                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+              >
+                client testimonials
+              </Link>{' '}
+              from families we've helped with{' '}
+              <Link
+                href="/probate-estate-sales/"
+                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+              >
+                probate estate sales
+              </Link>
+              .
             </p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-gray-50 rounded-lg p-6">
