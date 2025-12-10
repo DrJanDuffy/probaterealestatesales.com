@@ -16,9 +16,13 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Force HTTPS (only in production)
+  // Skip redirects for Vercel preview deployments (they have their own SSL)
+  const isVercelPreview = hostname.includes('vercel.app') || hostname.includes('vercel-dev');
+  const isProductionDomain = hostname === 'www.probaterealestatesales.com' || hostname === 'probaterealestatesales.com';
+
+  // Force HTTPS (only for production domain, not preview URLs)
   if (
-    process.env.NODE_ENV === 'production' &&
+    isProductionDomain &&
     url.protocol === 'http:' &&
     !hostname.includes('localhost')
   ) {
@@ -26,12 +30,13 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 301);
   }
 
-  // Force www subdomain (only in production, skip localhost)
+  // Force www subdomain (only for production domain, skip preview URLs and localhost)
   if (
-    process.env.NODE_ENV === 'production' &&
+    isProductionDomain &&
     !hostname.startsWith('www.') &&
     !hostname.includes('localhost') &&
-    !hostname.includes('127.0.0.1')
+    !hostname.includes('127.0.0.1') &&
+    !isVercelPreview
   ) {
     url.host = `www.${hostname}`;
     return NextResponse.redirect(url, 301);
