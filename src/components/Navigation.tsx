@@ -180,7 +180,9 @@ export default function Navigation() {
               <button
                 type="button"
                 onClick={() => setServicesOpen(!servicesOpen)}
-                className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
+                className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors flex items-center focus-ring rounded-md"
+                aria-label="Services menu"
+                aria-expanded={servicesOpen}
               >
                 Services
                 <ChevronDown className="ml-1 h-4 w-4" />
@@ -210,7 +212,9 @@ export default function Navigation() {
               <button
                 type="button"
                 onClick={() => setLocationsOpen(!locationsOpen)}
-                className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
+                className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors flex items-center focus-ring rounded-md"
+                aria-label="Locations menu"
+                aria-expanded={locationsOpen}
               >
                 Locations
                 <ChevronDown className="ml-1 h-4 w-4" />
@@ -240,7 +244,9 @@ export default function Navigation() {
               <button
                 type="button"
                 onClick={() => setResourcesOpen(!resourcesOpen)}
-                className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
+                className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors flex items-center focus-ring rounded-md"
+                aria-label="Resources menu"
+                aria-expanded={resourcesOpen}
               >
                 Resources
                 <ChevronDown className="ml-1 h-4 w-4" />
@@ -270,7 +276,9 @@ export default function Navigation() {
               <button
                 type="button"
                 onClick={() => setBlogOpen(!blogOpen)}
-                className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors flex items-center"
+                className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors flex items-center focus-ring rounded-md"
+                aria-label="Blog menu"
+                aria-expanded={blogOpen}
               >
                 Blog
                 <ChevronDown className="ml-1 h-4 w-4" />

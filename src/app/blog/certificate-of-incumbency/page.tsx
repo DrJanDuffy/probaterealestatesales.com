@@ -267,7 +267,8 @@ export default function CertificateOfIncumbencyPage() {
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <Link
               href="/faq/"
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg hover-lift transition-all duration-300 focus-ring"
+              aria-label="View Trust Administration FAQ"
             >
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">
                 Trust Administration FAQ
@@ -278,7 +279,8 @@ export default function CertificateOfIncumbencyPage() {
             </Link>
             <Link
               href="/resources/nevada-probate-guide/"
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg hover-lift transition-all duration-300 focus-ring"
+              aria-label="View Nevada Probate Guide"
             >
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">
                 Nevada Probate Guide
@@ -289,7 +291,8 @@ export default function CertificateOfIncumbencyPage() {
             </Link>
             <Link
               href="/services/"
-              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow"
+              className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg hover-lift transition-all duration-300 focus-ring"
+              aria-label="View Trust Property Services"
             >
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">
                 Trust Property Services

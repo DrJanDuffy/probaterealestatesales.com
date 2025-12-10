@@ -108,7 +108,9 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="http://drjanduffy.realscout.com/onboarding"
-                  className="btn-primary group inline-flex items-center justify-center text-lg px-8 py-4"
+                  className="btn-primary group inline-flex items-center justify-center text-lg px-8 py-4 focus-ring"
+                  aria-label="Get your free probate property consultation"
+                  rel="noopener noreferrer"
                 >
                   Get Your Free Probate Property Consultation
                   <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
@@ -116,7 +118,8 @@ export default function Hero() {
 
                 <a
                   href="/resources/nevada-probate-guide/"
-                  className="btn-outline inline-flex items-center justify-center text-lg px-8 py-4"
+                  className="btn-outline inline-flex items-center justify-center text-lg px-8 py-4 focus-ring"
+                  aria-label="Download free Nevada probate guide"
                 >
                   <Download className="mr-2 h-5 w-5" />
                   Download Free Probate Guide
@@ -127,31 +130,36 @@ export default function Hero() {
               <div className="flex flex-wrap gap-4 pt-4">
                 <a
                   href="/services/"
-                  className="text-primary-600 hover:text-primary-800 font-medium text-sm"
+                  className="text-primary-600 hover:text-primary-800 font-medium text-sm focus-ring rounded-md px-2 py-1"
+                  aria-label="View our probate services"
                 >
                   Our Services →
                 </a>
                 <a
                   href="/locations/"
-                  className="text-primary-600 hover:text-primary-800 font-medium text-sm"
+                  className="text-primary-600 hover:text-primary-800 font-medium text-sm focus-ring rounded-md px-2 py-1"
+                  aria-label="View service areas"
                 >
                   Service Areas →
                 </a>
                 <a
                   href="/blog/"
-                  className="text-primary-600 hover:text-primary-800 font-medium text-sm"
+                  className="text-primary-600 hover:text-primary-800 font-medium text-sm focus-ring rounded-md px-2 py-1"
+                  aria-label="Read our blog and learn more"
                 >
                   Learn More →
                 </a>
                 <a
                   href="/faq/"
-                  className="text-primary-600 hover:text-primary-800 font-medium text-sm"
+                  className="text-primary-600 hover:text-primary-800 font-medium text-sm focus-ring rounded-md px-2 py-1"
+                  aria-label="View frequently asked questions"
                 >
                   Common Questions →
                 </a>
                 <a
                   href="/testimonials/"
-                  className="text-primary-600 hover:text-primary-800 font-medium text-sm"
+                  className="text-primary-600 hover:text-primary-800 font-medium text-sm focus-ring rounded-md px-2 py-1"
+                  aria-label="Read client success stories"
                 >
                   Success Stories →
                 </a>
@@ -208,6 +216,9 @@ export default function Hero() {
                         height={192}
                         className="w-full h-full object-cover"
                         priority
+                        fetchPriority="high"
+                        loading="eager"
+                        sizes="(max-width: 768px) 192px, 192px"
                       />
                     </div>
                     <h3 className="text-xl font-bold text-secondary-900 mb-2">Dr. Jan Duffy</h3>

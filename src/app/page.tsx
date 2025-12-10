@@ -1,38 +1,65 @@
-import { ArrowRight } from 'lucide-react';
-import dynamic from 'next/dynamic';
+import {
+  ArrowRight,
+  Calculator,
+  Clock,
+  FileText,
+  Gavel,
+  Home as HomeIcon,
+  Phone,
+  Shield,
+} from 'lucide-react';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import ContactSection from '@/components/ContactSection';
-import FeaturedProperties from '@/components/FeaturedProperties';
 import Hero from '@/components/Hero';
-import HomePageNavigation from '@/components/HomePageNavigation';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import Services from '@/components/Services';
-import Testimonials from '@/components/Testimonials';
-import WhyChooseUs from '@/components/WhyChooseUs';
 
-// Lazy load heavy components for better performance
-const ProbateTimeline = dynamic(() => import('@/components/ProbateTimeline'), {
-  loading: () => <div className="py-16 text-center text-gray-500">Loading timeline...</div>,
-});
+// Removed heavy components - moved to dedicated pages for better performance
 
-const ProbatePropertyChecklist = dynamic(() => import('@/components/ProbatePropertyChecklist'), {
-  loading: () => <div className="py-16 text-center text-gray-500">Loading checklist...</div>,
-});
-
-const ProbateCostCalculator = dynamic(() => import('@/components/ProbateCostCalculator'), {
-  loading: () => <div className="py-16 text-center text-gray-500">Loading calculator...</div>,
-});
-
-const PropertyValuationCalculator = dynamic(
-  () => import('@/components/PropertyValuationCalculator'),
-  {
-    loading: () => <div className="py-16 text-center text-gray-500">Loading valuation tool...</div>,
-  }
-);
-
-const FAQ = dynamic(() => import('@/components/FAQ'), {
-  loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
-});
+export const metadata: Metadata = {
+  title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
+  description:
+    'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days - guaranteed! Free consultation: (702) 830-9222. Court-approved expert with 500+ sales. No upfront costs.',
+  keywords:
+    'probate realtor, probate homes, Las Vegas probate realtor, probate real estate agent, probate homes Las Vegas, sell probate property, inherited property sales, Nevada probate real estate',
+  openGraph: {
+    title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
+    description:
+      'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days - guaranteed! Free consultation: (702) 830-9222.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'Probate Real Estate Sales',
+    url: 'https://www.probaterealestatesales.com/',
+    images: [
+      {
+        url: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Dr. Jan Duffy - Probate Real Estate Specialist',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Las Vegas Probate Realtor | Probate Homes Expert',
+    description:
+      'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days. Free consultation.',
+    images: ['https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg'],
+  },
+  alternates: {
+    canonical: 'https://www.probaterealestatesales.com/',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
 
 export default function Home() {
   return (
@@ -40,210 +67,354 @@ export default function Home() {
       <Hero />
 
       {/* Quick Navigation */}
-      <HomePageNavigation />
-
-      {/* Services Overview */}
-      <Services />
-
-      {/* Probate Timeline Section */}
-      <section id="timeline" className="scroll-mt-20">
-        <div className="container-max py-8 border-b border-gray-200">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-2">
-                Nevada Probate Timeline
-              </h2>
-              <p className="text-secondary-600">Complete 6-8 month process breakdown</p>
-            </div>
-            <Link
-              href="/resources/#probate-timeline"
-              className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
-            >
-              View Full Timeline
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
-          </div>
-          <ProbateTimeline />
-          <div className="text-center mt-6 md:hidden">
-            <Link
-              href="/resources/#probate-timeline"
-              className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
-            >
-              View Full Timeline
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Property Checklist Section */}
-      <section id="checklist" className="scroll-mt-20 bg-gray-50">
-        <div className="container-max py-8 border-b border-gray-200">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-2">
-                Probate Property Checklist
-              </h2>
-              <p className="text-secondary-600">Essential steps for selling inherited property</p>
-            </div>
-            <Link
-              href="/resources/#property-checklist"
-              className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
-            >
-              View Full Checklist
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
-          </div>
-          <ProbatePropertyChecklist />
-          <div className="text-center mt-6 md:hidden">
-            <Link
-              href="/resources/#property-checklist"
-              className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
-            >
-              View Full Checklist
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Cost Calculator Section */}
-      <section id="cost-calculator" className="scroll-mt-20">
-        <div className="container-max py-8 border-b border-gray-200">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-2">
-                Probate Cost Calculator
-              </h2>
-              <p className="text-secondary-600">Estimate total probate costs and fees</p>
-            </div>
-            <Link
-              href="/resources/#cost-calculator"
-              className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
-            >
-              View Full Calculator
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
-          </div>
-          <ProbateCostCalculator />
-          <div className="text-center mt-6 md:hidden">
-            <Link
-              href="/resources/#cost-calculator"
-              className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
-            >
-              View Full Calculator
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Properties */}
-      <section id="properties" className="scroll-mt-20">
-        <FeaturedProperties />
-      </section>
-
-      {/* Property Valuation Calculator Section */}
-      <section id="valuation" className="scroll-mt-20 bg-gray-50">
-        <div className="container-max py-8 border-b border-gray-200">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-2">
-                Free Property Valuation
-              </h2>
-              <p className="text-secondary-600">Get an instant estimate of your property value</p>
-            </div>
-            <Link
-              href="/home-valuation/"
-              className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
-            >
-              Full Valuation Tool
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
-          </div>
-          <PropertyValuationCalculator />
-          <div className="text-center mt-6 md:hidden">
-            <Link
-              href="/home-valuation/"
-              className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
-            >
-              Full Valuation Tool
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* RealScout Property Listings */}
-      <section className="py-16 bg-white">
+      <section className="py-12 bg-gradient-to-br from-gray-50 to-blue-50 border-b border-gray-200">
         <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-              Las Vegas Probate Homes for Sale
+          <div className="text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-3">
+              Quick Navigation
             </h2>
-            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-              Browse our current inventory of probate homes in Las Vegas. These probate properties
-              are available for immediate purchase with court-approved sales and expert guidance.
+            <p className="text-secondary-600 max-w-2xl mx-auto">
+              Jump to the information you need most. All tools and resources are available on
+              dedicated pages.
             </p>
           </div>
 
-          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-            <realscout-office-listings
-              agent-encoded-id="QWdlbnQtMjI1MDUw"
-              sort-order="PRICE_LOW"
-              listing-status="For Sale,For Rent"
-              property-types="MF,SFR,OTHER,LAL"
-              price-min="500000"
-              price-max="750000"
-            ></realscout-office-listings>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <Link
+              href="/resources/#probate-timeline"
+              className="bg-blue-100 text-blue-600 hover:bg-blue-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              aria-label="View Probate Timeline - 6-8 month process"
+            >
+              <Clock className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+              <h3 className="font-semibold text-sm mb-1">Probate Timeline</h3>
+              <p className="text-xs opacity-80">6-8 month process</p>
+            </Link>
+            <Link
+              href="/resources/#property-checklist"
+              className="bg-green-100 text-green-600 hover:bg-green-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              aria-label="View Probate Property Checklist - Step-by-step guide"
+            >
+              <FileText className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+              <h3 className="font-semibold text-sm mb-1">Property Checklist</h3>
+              <p className="text-xs opacity-80">Step-by-step guide</p>
+            </Link>
+            <Link
+              href="/resources/#cost-calculator"
+              className="bg-purple-100 text-purple-600 hover:bg-purple-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              aria-label="Use Probate Cost Calculator - Estimate costs"
+            >
+              <Calculator className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+              <h3 className="font-semibold text-sm mb-1">Cost Calculator</h3>
+              <p className="text-xs opacity-80">Estimate costs</p>
+            </Link>
+            <Link
+              href="/home-valuation/"
+              className="bg-orange-100 text-orange-600 hover:bg-orange-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              aria-label="Get Free Property Valuation - Free estimate"
+            >
+              <HomeIcon className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+              <h3 className="font-semibold text-sm mb-1">Property Valuation</h3>
+              <p className="text-xs opacity-80">Free estimate</p>
+            </Link>
+            <Link
+              href="/faq/"
+              className="bg-red-100 text-red-600 hover:bg-red-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              aria-label="View Frequently Asked Questions - Common questions"
+            >
+              <FileText className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+              <h3 className="font-semibold text-sm mb-1">FAQ</h3>
+              <p className="text-xs opacity-80">Common questions</p>
+            </Link>
+            <Link
+              href="/contact/"
+              className="bg-teal-100 text-teal-600 hover:bg-teal-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              aria-label="Contact Us - Free consultation with Dr. Duffy"
+            >
+              <Phone className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
+              <h3 className="font-semibold text-sm mb-1">Free Consultation</h3>
+              <p className="text-xs opacity-80">Speak with Dr. Duffy</p>
+            </Link>
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/services/"
+              className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium text-sm"
+            >
+              View All Services
+              <ArrowRight className="h-4 w-4 ml-1" />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section id="why-choose-us" className="scroll-mt-20">
-        <WhyChooseUs />
+      {/* Services Summary */}
+      <section id="services" className="scroll-mt-20 bg-white">
+        <div className="container-max py-12">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
+              Comprehensive Probate Services
+            </h2>
+            <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
+              Dr. Jan Duffy provides end-to-end solutions to help families navigate the complex
+              process of probate real estate with compassion, expertise, and maximum value for your
+              estate.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-8">
+            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
+              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                <HomeIcon className="h-6 w-6 text-primary-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">
+                Estate Property Valuation
+              </h3>
+              <p className="text-secondary-600 text-sm">
+                Comprehensive market analysis and court-compliant property appraisal
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
+              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                <Gavel className="h-6 w-6 text-primary-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">
+                Probate Process Navigation
+              </h3>
+              <p className="text-secondary-600 text-sm">
+                Step-by-step guidance through court requirements with attorney coordination
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
+              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                <Shield className="h-6 w-6 text-primary-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Legal Compliance</h3>
+              <p className="text-secondary-600 text-sm">
+                Complete handling of all legal documents and probate court requirements
+              </p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
+              <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                <FileText className="h-6 w-6 text-primary-600" />
+              </div>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">Market Optimization</h3>
+              <p className="text-secondary-600 text-sm">
+                Strategic marketing to qualified buyers with proven negotiation support
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/services/"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold text-lg hover:bg-primary-700 hover-lift transition-all duration-200 focus-ring"
+              aria-label="View all probate services"
+            >
+              View All Services
+              <ArrowRight className="h-5 w-5 ml-2" />
+            </Link>
+          </div>
+        </div>
       </section>
 
-      {/* FAQ Section */}
-      <section id="faq" className="scroll-mt-20 bg-gray-50">
-        <div className="container-max py-8 border-b border-gray-200">
-          <div className="flex items-center justify-between mb-6">
-            <div>
-              <h2 className="text-3xl font-bold text-secondary-900 mb-2">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-secondary-600">Common questions about probate real estate</p>
+      {/* Resources Quick Links */}
+      <section id="resources" className="scroll-mt-20 bg-gray-50">
+        <div className="container-max py-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-secondary-900 mb-4">
+              Probate Resources & Tools
+            </h2>
+            <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
+              Access our comprehensive probate guides, calculators, and checklists to help you
+              navigate the process
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link
+              href="/resources/#probate-timeline"
+              className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md hover-lift transition-all duration-300 border border-gray-200 focus-ring"
+              aria-label="View Nevada Probate Timeline - Complete 6-8 month process breakdown"
+            >
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                Nevada Probate Timeline
+              </h3>
+              <p className="text-secondary-600 mb-4">Complete 6-8 month process breakdown</p>
+              <span className="text-primary-600 font-medium inline-flex items-center">
+                View Timeline <ArrowRight className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+            <Link
+              href="/resources/#property-checklist"
+              className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md hover-lift transition-all duration-300 border border-gray-200 focus-ring"
+              aria-label="View Probate Property Checklist - Essential steps for selling inherited property"
+            >
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                Probate Property Checklist
+              </h3>
+              <p className="text-secondary-600 mb-4">
+                Essential steps for selling inherited property
+              </p>
+              <span className="text-primary-600 font-medium inline-flex items-center">
+                View Checklist <ArrowRight className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+            <Link
+              href="/resources/#cost-calculator"
+              className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md hover-lift transition-all duration-300 border border-gray-200 focus-ring"
+              aria-label="Use Probate Cost Calculator - Estimate total probate costs and fees"
+            >
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">
+                Probate Cost Calculator
+              </h3>
+              <p className="text-secondary-600 mb-4">Estimate total probate costs and fees</p>
+              <span className="text-primary-600 font-medium inline-flex items-center">
+                Use Calculator <ArrowRight className="h-4 w-4 ml-1" />
+              </span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Property Valuation CTA */}
+      <section
+        id="valuation"
+        className="scroll-mt-20 bg-gradient-to-r from-primary-600 to-primary-700 text-white"
+      >
+        <div className="container-max py-12">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">Get Your Free Property Valuation</h2>
+            <p className="text-xl text-primary-100 mb-6">
+              Get an instant estimate of your property value with our professional valuation tool
+            </p>
+            <Link
+              href="/home-valuation/"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold text-lg hover:bg-gray-100 hover-lift transition-all duration-200 focus-ring"
+              aria-label="Start free property valuation"
+            >
+              Start Free Valuation
+              <ArrowRight className="h-5 w-5 ml-2" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Properties CTA */}
+      <section className="py-16 bg-white">
+        <div className="container-max text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
+            Browse Probate Homes for Sale
+          </h2>
+          <p className="text-xl text-secondary-600 max-w-3xl mx-auto mb-8">
+            Explore our current inventory of probate homes in Las Vegas. These probate properties
+            are available for immediate purchase with court-approved sales and expert guidance.
+          </p>
+          <Link
+            href="/probate-homes-for-sale/"
+            className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold text-lg hover:bg-primary-700 hover-lift transition-all duration-200 focus-ring"
+            aria-label="View all probate properties for sale"
+          >
+            View All Probate Properties
+            <ArrowRight className="h-5 w-5 ml-2" />
+          </Link>
+        </div>
+      </section>
+
+      {/* Why Choose Us CTA */}
+      <section id="why-choose-us" className="scroll-mt-20 bg-white">
+        <div className="container-max py-12">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold text-secondary-900 mb-4">
+              Why Choose Dr. Jan Duffy?
+            </h2>
+            <p className="text-lg text-secondary-600 mb-6">
+              With 20+ years of experience, 500+ properties sold, and a Ph.D. in Research, Dr. Jan
+              Duffy brings unparalleled expertise to every probate transaction.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="text-3xl font-bold text-primary-600 mb-2">500+</div>
+                <div className="text-secondary-700 font-medium">Properties Sold</div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="text-3xl font-bold text-primary-600 mb-2">20+</div>
+                <div className="text-secondary-700 font-medium">Years Experience</div>
+              </div>
+              <div className="bg-gray-50 rounded-lg p-6">
+                <div className="text-3xl font-bold text-primary-600 mb-2">98%</div>
+                <div className="text-secondary-700 font-medium">Client Satisfaction</div>
+              </div>
             </div>
             <Link
-              href="/faq/"
-              className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
+              href="/about/"
+              className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium focus-ring rounded-md px-2 py-1"
+              aria-label="Learn more about Dr. Jan Duffy"
             >
-              View All FAQs
-              <ArrowRight className="h-4 w-4 ml-1" />
-            </Link>
-          </div>
-          <FAQ />
-          <div className="text-center mt-6 md:hidden">
-            <Link
-              href="/faq/"
-              className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
-            >
-              View All FAQs
+              Learn More About Dr. Duffy
               <ArrowRight className="h-4 w-4 ml-1" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section id="testimonials" className="scroll-mt-20">
-        <Testimonials />
+      {/* FAQ & Testimonials CTA */}
+      <section id="faq-testimonials" className="scroll-mt-20 bg-gray-50">
+        <div className="container-max py-12">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+              <h2 className="text-2xl font-bold text-secondary-900 mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-secondary-600 mb-6">
+                Get comprehensive answers to all your questions about probate real estate sales in
+                Nevada.
+              </p>
+              <Link
+                href="/faq/"
+                className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium focus-ring rounded-md px-2 py-1"
+                aria-label="View all frequently asked questions"
+              >
+                View All FAQs
+                <ArrowRight className="h-4 w-4 ml-1" />
+              </Link>
+            </div>
+            <div className="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+              <h2 className="text-2xl font-bold text-secondary-900 mb-4">Client Testimonials</h2>
+              <p className="text-secondary-600 mb-6">
+                Read what our clients say about working with Dr. Jan Duffy on their probate property
+                sales.
+              </p>
+              <Link
+                href="/testimonials/"
+                className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium focus-ring rounded-md px-2 py-1"
+                aria-label="Read client testimonials"
+              >
+                Read Testimonials
+                <ArrowRight className="h-4 w-4 ml-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="scroll-mt-20">
-        <ContactSection />
+      {/* Contact CTA */}
+      <section id="contact" className="scroll-mt-20 bg-primary-600 text-white">
+        <div className="container-max py-12">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+            <p className="text-xl text-primary-100 mb-6">
+              Contact us today for a free consultation about your probate real estate needs
+            </p>
+            <Link
+              href="/contact/"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold text-lg hover:bg-gray-100 hover-lift transition-all duration-200 focus-ring-dark"
+              aria-label="Contact us for free consultation"
+            >
+              Contact Us
+              <ArrowRight className="h-5 w-5 ml-2" />
+            </Link>
+          </div>
+        </div>
       </section>
 
       <SchemaMarkup
