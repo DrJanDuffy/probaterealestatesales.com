@@ -54,3 +54,16 @@ curl -X POST "https://www.probaterealestatesales.com/api/indexnow?secret=XXX&url
 ```
 
 Or extend the revalidate API to optionally trigger IndexNow.
+
+## Cloudflare Domains
+
+For domains on Cloudflare (DNS or proxy), enable **Crawler Hints** in the dashboard (Caching → Configuration). Crawler Hints has no public API.
+
+To get direct dashboard links for all zones:
+
+```bash
+export CLOUDFLARE_API_TOKEN=your_token_here
+npm run cloudflare:crawler-hints -- --links
+```
+
+See [CLOUDFLARE-INDEXNOW.md](CLOUDFLARE-INDEXNOW.md).

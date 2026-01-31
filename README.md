@@ -127,6 +127,11 @@ The website is built with a mobile-first approach and includes:
 - Code splitting and lazy loading
 - Optimized bundle size
 
+## 🔍 SEO & Indexing
+
+- **IndexNow** (Vercel): `npm run indexnow` – submit URLs to Bing/Yandex. See [docs/INDEXNOW.md](docs/INDEXNOW.md).
+- **Cloudflare Crawler Hints** (dashboard only): `npm run cloudflare:crawler-hints -- --links` – print dashboard URLs to enable IndexNow per zone. See [docs/CLOUDFLARE-INDEXNOW.md](docs/CLOUDFLARE-INDEXNOW.md).
+
 ## 🚀 Deployment
 
 ### Vercel (Recommended)

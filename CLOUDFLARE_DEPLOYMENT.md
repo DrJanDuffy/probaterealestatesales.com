@@ -52,6 +52,24 @@ npm run build:cf
 wrangler pages deploy out
 ```
 
+## 🔍 Crawler Hints (IndexNow) – All Domains
+
+Enable Crawler Hints to automatically notify Bing and Yandex when content changes. **Crawler Hints has no public API**; enable via the dashboard only.
+
+### Get dashboard links for all zones
+
+```bash
+export CLOUDFLARE_API_TOKEN=your_token_here
+npm run cloudflare:crawler-hints -- --links
+```
+
+### Manual (per domain)
+
+1. **Caching** → **Configuration**
+2. Enable **Crawler Hints**
+
+See [docs/CLOUDFLARE-INDEXNOW.md](docs/CLOUDFLARE-INDEXNOW.md) for details.
+
 ## 📊 Performance Optimizations
 
 ### 1. Edge Caching

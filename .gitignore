@@ -110,3 +110,6 @@ blob-report/
 # Build artifacts
 *.local
 .env.*.local
+
+# Cloudflare Crawler Hints output (generated)
+crawler-hints-links.txt

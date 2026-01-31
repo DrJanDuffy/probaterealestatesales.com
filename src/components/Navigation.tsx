@@ -121,24 +121,39 @@ const navigation = {
   ],
   services: [
     {
-      name: 'Probate Sales',
-      href: '/services#probate-sales',
-      description: 'Court-approved property sales',
+      name: 'Probate Division',
+      href: '/probate-division/',
+      description: 'Dedicated probate & trust division',
     },
     {
-      name: 'Estate Liquidation',
-      href: '/services#estate-liquidation',
-      description: 'Complete estate property management',
+      name: 'Probate Homes for Sale',
+      href: '/probate-homes-for-sale/',
+      description: 'Browse probate listings',
     },
     {
-      name: 'Property Valuation',
-      href: '/services#property-valuation',
-      description: 'Expert market analysis',
+      name: 'Trust Property Sales',
+      href: '/trust-property-sales/',
+      description: 'Trust & estate property sales',
     },
     {
-      name: 'Court Representation',
-      href: '/services#court-representation',
-      description: 'Legal compliance support',
+      name: 'Conservatorship Real Estate',
+      href: '/conservatorship-real-estate/',
+      description: 'Court-approved conservatorship sales',
+    },
+    {
+      name: 'Probate Property Buyers',
+      href: '/probate-property-buyers/',
+      description: 'Sell probate property quickly',
+    },
+    {
+      name: 'Probate Estate Sales',
+      href: '/probate-estate-sales/',
+      description: 'Complete estate liquidation',
+    },
+    {
+      name: 'All Services',
+      href: '/services/',
+      description: 'Full service overview',
     },
   ],
 };
