@@ -1,9 +1,7 @@
 /**
- * Locations layout - enables PPR for community pages.
- * Static neighborhood info renders at build; RealScout widgets stream in.
+ * Locations layout - static neighborhood info + RealScout widgets (streaming via Suspense).
+ * PPR requires Next.js canary; Suspense boundaries still stream dynamic content.
  */
-export const experimental_ppr = true;
-
 export default function LocationsLayout({
   children,
 }: {

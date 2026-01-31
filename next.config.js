@@ -3,7 +3,6 @@ const nextConfig = {
   trailingSlash: true,
   experimental: {
     optimizePackageImports: ['lucide-react'],
-    ppr: 'incremental',
   },
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com'],

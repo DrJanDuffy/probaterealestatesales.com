@@ -47,8 +47,6 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.probaterealestatesales.com'),
 };
 
-export const experimental_ppr = true;
-
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
