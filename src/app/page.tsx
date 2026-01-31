@@ -28,10 +28,10 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Probate Real Estate Sales',
-    url: 'https://www.probaterealestatesales.com/',
+    url: '/',
     images: [
       {
-        url: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
+        url: '/images/dr-jan-duffy.jpg',
         width: 1200,
         height: 630,
         alt: 'Dr. Jan Duffy - Probate Real Estate Specialist',
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     title: 'Las Vegas Probate Realtor | Probate Homes Expert',
     description:
       'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days. Free consultation.',
-    images: ['https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg'],
+    images: ['/images/dr-jan-duffy.jpg'],
   },
   alternates: {
-    canonical: 'https://www.probaterealestatesales.com/',
+    canonical: '/',
   },
   robots: {
     index: true,
