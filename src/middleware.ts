@@ -8,12 +8,14 @@ export function middleware(request: NextRequest) {
   const hostname = request.headers.get('host') || '';
   const pathname = url.pathname;
 
-  // Skip middleware for API routes, static files, and Next.js internals
+  // Skip middleware for API routes, static files, sitemap, robots, and Next.js internals
   if (
     pathname.startsWith('/api/') ||
     pathname.startsWith('/_next/') ||
     pathname.startsWith('/favicon.ico') ||
-    pathname.match(/\.(svg|png|jpg|jpeg|gif|webp|ico|css|js|woff|woff2|ttf|eot)$/)
+    pathname === '/sitemap.xml' ||
+    pathname === '/robots.txt' ||
+    pathname.match(/\.(svg|png|jpg|jpeg|gif|webp|ico|css|js|woff|woff2|ttf|eot|xml|txt)$/)
   ) {
     return NextResponse.next();
   }
