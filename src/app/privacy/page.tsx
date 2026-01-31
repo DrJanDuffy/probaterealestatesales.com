@@ -233,7 +233,7 @@ export default function PrivacyPage() {
                   <strong>Probate Real Estate Sales</strong>
                 </p>
                 <p className="text-secondary-700 mb-2">
-                  Dr. Janet Duffy, Licensed Real Estate Professional
+                  Dr. Jan Duffy, Licensed Real Estate Professional
                 </p>
                 <p className="text-secondary-700 mb-2">License: S.0197614</p>
                 <p className="text-secondary-700 mb-2">

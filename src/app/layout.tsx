@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import { defaultSchemas } from '@/lib/schema';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -46,6 +47,8 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.probaterealestatesales.com'),
 };
 
+export const experimental_ppr = true;
+
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
@@ -70,6 +73,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
           type="module"
           async
+        />
+        {/* LocalBusiness + RealEstateAgent - on every page */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(defaultSchemas.localBusiness),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(defaultSchemas.realEstateAgent),
+          }}
         />
         <script
           type="application/ld+json"

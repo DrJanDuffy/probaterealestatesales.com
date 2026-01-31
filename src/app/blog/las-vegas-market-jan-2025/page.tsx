@@ -322,7 +322,7 @@ export default function LasVegasMarketJan2025Page() {
           description:
             'Comprehensive Las Vegas probate real estate market update for January 2025. Analysis of sale prices, days on market, inventory levels, and probate property trends.',
           image: 'https://www.probaterealestatesales.com/images/las-vegas-market-jan-2025.jpg',
-          author: 'Dr. Janet Duffy',
+          author: 'Dr. Jan Duffy',
           datePublished: '2025-01-15T00:00:00Z',
           dateModified: new Date().toISOString(),
           url: 'https://www.probaterealestatesales.com/blog/las-vegas-market-jan-2025/',

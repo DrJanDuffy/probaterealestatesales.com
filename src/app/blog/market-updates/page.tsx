@@ -193,7 +193,7 @@ export default function MarketUpdatesPage() {
           description:
             'Stay informed with the latest Las Vegas real estate market trends, probate property insights, and market analysis from Dr. Jan Duffy.',
           image: 'https://www.probaterealestatesales.com/images/market-updates.jpg',
-          author: 'Dr. Janet Duffy',
+          author: 'Dr. Jan Duffy',
           datePublished: new Date().toISOString(),
           dateModified: new Date().toISOString(),
           url: 'https://www.probaterealestatesales.com/blog/market-updates/',

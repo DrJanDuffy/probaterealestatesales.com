@@ -74,7 +74,7 @@ export default function ProbatePropertyBuyersPage() {
                 'Complete guide and services for probate property buyers in Las Vegas, Nevada. Expert guidance on finding, evaluating, and purchasing probate homes.',
               provider: {
                 '@type': 'RealEstateAgent',
-                name: 'Dr. Janet Duffy',
+                name: 'Dr. Jan Duffy',
                 telephone: '+1-702-830-9222',
               },
               areaServed: {

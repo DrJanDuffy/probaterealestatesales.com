@@ -46,10 +46,10 @@ export default function AboutPage() {
   ];
 
   const personSchema = {
-    name: 'Dr. Janet Duffy',
+    name: 'Dr. Jan Duffy',
     jobTitle: 'Licensed Nevada Real Estate Agent | Probate Real Estate Specialist',
     description:
-      'Dr. Janet Duffy is a top Las Vegas probate realtor with 20+ years of experience. Licensed Nevada real estate professional (S.0197614) specializing in probate real estate sales. Ph.D. in Research, expert in Clark County probate procedures.',
+      'Dr. Jan Duffy is a top Las Vegas probate realtor with 20+ years of experience. Licensed Nevada real estate professional (S.0197614) specializing in probate real estate sales. Ph.D. in Research, expert in Clark County probate procedures.',
     email: 'DrJanSells@ProbateRealEstateSales.com',
     telephone: '+1-702-830-9222',
     url: 'https://www.probaterealestatesales.com/about/',

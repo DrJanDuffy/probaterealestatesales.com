@@ -1,0 +1,38 @@
+# Auto detect text files and normalize line endings to LF
+* text=auto eol=lf
+
+# Explicitly declare text files
+*.ts text
+*.tsx text
+*.js text
+*.jsx text
+*.json text
+*.md text
+*.css text
+*.html text
+*.yml text
+*.yaml text
+*.sh text
+*.xml text
+
+# Denote binary files
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+
+# Merge strategy for lock files (prefer ours)
+package-lock.json merge=ours
+pnpm-lock.yaml merge=ours
+
+# GitHub linguist overrides (exclude from language stats)
+*.min.js linguist-generated=true
+*.min.css linguist-generated=true
+.next/** linguist-generated=true
+out/** linguist-generated=true

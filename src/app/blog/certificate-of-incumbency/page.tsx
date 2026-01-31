@@ -329,7 +329,7 @@ export default function CertificateOfIncumbencyPage() {
           description:
             'Complete guide to certificate of incumbency in Las Vegas, Nevada. Learn when and how to obtain this essential $750 document for trust property sales. Clark County requirements explained.',
           image: 'https://www.probaterealestatesales.com/images/certificate-of-incumbency.jpg',
-          author: 'Dr. Janet Duffy',
+          author: 'Dr. Jan Duffy',
           datePublished: '2025-01-01T00:00:00Z',
           dateModified: new Date().toISOString(),
           url: 'https://www.probaterealestatesales.com/blog/certificate-of-incumbency/',

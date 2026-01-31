@@ -46,7 +46,7 @@ export default function LasVegasProbateGuide() {
         ]}
         canonicalUrl="https://www.probaterealestatesales.com/resources/las-vegas-probate-guide/"
         ogType="article"
-        articleAuthor="Dr. Janet Duffy"
+        articleAuthor="Dr. Jan Duffy"
         articlePublishedTime="2025-01-01T00:00:00Z"
         articleSection="Probate Guides"
         articleTags={['Las Vegas', 'Probate', 'Real Estate', 'Nevada', 'Clark County']}
@@ -59,7 +59,7 @@ export default function LasVegasProbateGuide() {
           headline: 'Las Vegas Probate Real Estate Guide 2025',
           description:
             'Complete guide to probate real estate in Las Vegas, Nevada including court procedures, timelines, and costs.',
-          author: 'Dr. Janet Duffy',
+          author: 'Dr. Jan Duffy',
           datePublished: '2025-01-01T00:00:00Z',
           dateModified: new Date().toISOString(),
           url: 'https://www.probaterealestatesales.com/resources/las-vegas-probate-guide',

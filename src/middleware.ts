@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
+const CANONICAL_HOST = 'https://www.probaterealestatesales.com';
+
 export function middleware(request: NextRequest) {
   const url = request.nextUrl.clone();
   const hostname = request.headers.get('host') || '';
@@ -16,34 +18,33 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Skip redirects for Vercel preview deployments (they have their own SSL)
+  // Skip redirects for Vercel preview deployments and localhost
   const isVercelPreview = hostname.includes('vercel.app') || hostname.includes('vercel-dev');
-  const isProductionDomain = hostname === 'www.probaterealestatesales.com' || hostname === 'probaterealestatesales.com';
+  const isLocalhost = hostname.includes('localhost') || hostname.includes('127.0.0.1');
+  const isProductionDomain =
+    hostname === 'www.probaterealestatesales.com' || hostname === 'probaterealestatesales.com';
 
-  // Force HTTPS (only for production domain, not preview URLs)
-  if (
-    isProductionDomain &&
-    url.protocol === 'http:' &&
-    !hostname.includes('localhost')
-  ) {
-    url.protocol = 'https:';
-    return NextResponse.redirect(url, 301);
+  if (isLocalhost || isVercelPreview) {
+    return NextResponse.next();
   }
 
-  // Force www subdomain (only for production domain, skip preview URLs and localhost)
-  if (
-    isProductionDomain &&
-    !hostname.startsWith('www.') &&
-    !hostname.includes('localhost') &&
-    !hostname.includes('127.0.0.1') &&
-    !isVercelPreview
-  ) {
-    url.host = `www.${hostname}`;
-    return NextResponse.redirect(url, 301);
+  if (!isProductionDomain) {
+    return NextResponse.next();
   }
 
-  // Next.js trailingSlash: true handles trailing slashes automatically
-  // We just need to ensure www and https redirects
+  // Build canonical path: add trailing slash for non-root paths (matches next.config trailingSlash: true)
+  const needsTrailingSlash = pathname !== '/' && !pathname.endsWith('/');
+  const canonicalPath = needsTrailingSlash ? `${pathname}/` : pathname;
+  const search = url.search;
+
+  // Single-hop redirect: consolidate http, non-www, and missing trailing slash into ONE 301
+  const needsHttps = url.protocol === 'http:';
+  const needsWww = !hostname.startsWith('www.');
+
+  if (needsHttps || needsWww || needsTrailingSlash) {
+    const canonicalUrl = `${CANONICAL_HOST}${canonicalPath}${search}`;
+    return NextResponse.redirect(canonicalUrl, 301);
+  }
 
   return NextResponse.next();
 }

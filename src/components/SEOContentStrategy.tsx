@@ -118,7 +118,7 @@ const keywordDensity = [
   {
     keyword: 'Dr. Jan Duffy',
     targetDensity: '1-2%',
-    variations: ['Dr. Duffy', 'Dr. Janet Duffy', 'Dr. Jan Duffy probate specialist'],
+    variations: ['Dr. Duffy', 'Dr. Jan Duffy', 'Dr. Jan Duffy probate specialist'],
   },
   {
     keyword: 'probate realtor',

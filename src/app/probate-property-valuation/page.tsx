@@ -73,7 +73,7 @@ export default function ProbatePropertyValuationPage() {
                 'Expert probate property valuation services in Las Vegas, Nevada. Accurate home appraisals for probate sales and court-required valuations.',
               provider: {
                 '@type': 'RealEstateAgent',
-                name: 'Dr. Janet Duffy',
+                name: 'Dr. Jan Duffy',
                 telephone: '+1-702-830-9222',
               },
               areaServed: {

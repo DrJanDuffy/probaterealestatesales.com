@@ -65,7 +65,7 @@ export default function TrustPropertySalesPage() {
                 'Expert trust property sales services in Las Vegas, Nevada. Complete guidance for trustees, beneficiaries, and attorneys on selling trust-owned real estate.',
               provider: {
                 '@type': 'RealEstateAgent',
-                name: 'Dr. Janet Duffy',
+                name: 'Dr. Jan Duffy',
                 telephone: '+1-702-830-9222',
               },
               areaServed: {

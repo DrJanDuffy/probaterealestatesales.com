@@ -14,7 +14,7 @@ const schemaData = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Dr. Jan Duffy',
-  alternateName: 'Dr. Janet Duffy',
+  alternateName: 'Dr. Jan Duffy',
   jobTitle: 'Probate Real Estate Specialist',
   description:
     'Las Vegas probate real estate expert with 20+ years experience, specializing in inherited property sales, estate liquidation, and court-approved property sales with comprehensive probate real estate services.',

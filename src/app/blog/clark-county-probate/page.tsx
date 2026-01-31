@@ -437,7 +437,7 @@ export default function ClarkCountyProbatePage() {
           description:
             'Complete step-by-step guide to navigating Clark County probate court for property sales. Learn about filing procedures, court approval, and required documentation.',
           image: 'https://www.probaterealestatesales.com/images/clark-county-probate.jpg',
-          author: 'Dr. Janet Duffy',
+          author: 'Dr. Jan Duffy',
           datePublished: '2025-01-01T00:00:00Z',
           dateModified: new Date().toISOString(),
           url: 'https://www.probaterealestatesales.com/blog/clark-county-probate/',

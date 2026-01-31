@@ -71,7 +71,7 @@ export default function SEOMetaTags({
       <title>{fullTitle}</title>
       <meta name="description" content={fullDescription} />
       <meta name="keywords" content={allKeywords.join(', ')} />
-      <meta name="author" content="Dr. Janet Duffy" />
+      <meta name="author" content="Dr. Jan Duffy" />
       <meta name="robots" content={noIndex ? 'noindex' : 'index'} />
       {noFollow && <meta name="robots" content="nofollow" />}
 

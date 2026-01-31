@@ -73,7 +73,7 @@ export default function ProbateEstateSalesPage() {
                 'Complete probate estate sales services in Las Vegas, Nevada. Expert guidance on selling estate property through probate court with court-approved sales.',
               provider: {
                 '@type': 'RealEstateAgent',
-                name: 'Dr. Janet Duffy',
+                name: 'Dr. Jan Duffy',
                 telephone: '+1-702-830-9222',
               },
               areaServed: {

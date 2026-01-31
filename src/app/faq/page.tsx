@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
+import RealScoutOfficeListings from '@/components/RealScoutOfficeListings';
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
@@ -21,6 +22,8 @@ export const metadata: Metadata = {
     url: 'https://www.probaterealestatesales.com/faq/',
   },
 };
+
+export const revalidate = 3600;
 
 export default function FAQPage() {
   const breadcrumbs = [
@@ -124,31 +127,11 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* RealScout Property Listings */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-secondary-900 mb-4">
-              Current Las Vegas Properties Available
-            </h2>
-            <p className="text-lg text-secondary-600 max-w-3xl mx-auto">
-              Browse our current inventory of properties in the Las Vegas area. These properties are
-              available for immediate purchase with our expert guidance.
-            </p>
-          </div>
-
-          <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-            <realscout-office-listings
-              agent-encoded-id="QWdlbnQtMjI1MDUw"
-              sort-order="PRICE_LOW"
-              listing-status="For Sale,For Rent"
-              property-types="MF,SFR,OTHER,LAL"
-              price-min="500000"
-              price-max="750000"
-            ></realscout-office-listings>
-          </div>
-        </div>
-      </section>
+      <RealScoutOfficeListings
+        title="Current Las Vegas Properties Available"
+        subtitle="Browse our current inventory of properties in the Las Vegas area. These properties are available for immediate purchase with our expert guidance."
+        themeColor="blue"
+      />
 
       {/* Contact CTA Section */}
       <section className="py-16 bg-primary-50">

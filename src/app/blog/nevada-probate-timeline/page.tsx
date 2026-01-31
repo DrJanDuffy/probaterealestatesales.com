@@ -354,7 +354,7 @@ export default function NevadaProbateTimelinePage() {
           description:
             'Complete guide to Nevada probate timeline. Understand each step of the 6-8 month probate process for real estate sales in Clark County.',
           image: 'https://www.probaterealestatesales.com/images/nevada-probate-timeline.jpg',
-          author: 'Dr. Janet Duffy',
+          author: 'Dr. Jan Duffy',
           datePublished: '2025-01-01T00:00:00Z',
           dateModified: new Date().toISOString(),
           url: 'https://www.probaterealestatesales.com/blog/nevada-probate-timeline/',

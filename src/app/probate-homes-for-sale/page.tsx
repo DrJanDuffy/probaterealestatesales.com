@@ -12,6 +12,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Breadcrumb from '@/components/Breadcrumb';
+import RealScoutOfficeListings from '@/components/RealScoutOfficeListings';
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
@@ -53,6 +54,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const revalidate = 3600;
+
 export default function ProbateHomesForSalePage() {
   const breadcrumbs = [
     { name: 'Home', url: '/' },
@@ -74,7 +77,7 @@ export default function ProbateHomesForSalePage() {
                 'Expert guidance and listings for probate homes for sale in Las Vegas, Nevada. Complete resources for buyers interested in probate properties.',
               provider: {
                 '@type': 'RealEstateAgent',
-                name: 'Dr. Janet Duffy',
+                name: 'Dr. Jan Duffy',
                 telephone: '+1-702-830-9222',
               },
               areaServed: {
@@ -564,31 +567,11 @@ export default function ProbateHomesForSalePage() {
           </div>
         </section>
 
-        {/* RealScout Property Listings */}
-        <section className="py-16 bg-white">
-          <div className="container-max px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-                Las Vegas Probate Homes for Sale
-              </h2>
-              <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-                Browse our current inventory of probate homes in Las Vegas. These probate properties
-                are available for immediate purchase with court-approved sales and expert guidance.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <realscout-office-listings
-                agent-encoded-id="QWdlbnQtMjI1MDUw"
-                sort-order="PRICE_LOW"
-                listing-status="For Sale,For Rent"
-                property-types="MF,SFR,OTHER,LAL"
-                price-min="500000"
-                price-max="750000"
-              ></realscout-office-listings>
-            </div>
-          </div>
-        </section>
+        <RealScoutOfficeListings
+          title="Las Vegas Probate Homes for Sale"
+          subtitle="Browse our current inventory of probate homes in Las Vegas. These probate properties are available for immediate purchase with court-approved sales and expert guidance."
+          themeColor="blue"
+        />
 
         {/* CTA Section */}
         <section className="py-16 bg-primary-600 text-white">

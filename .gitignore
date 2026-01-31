@@ -96,3 +96,17 @@ jspm_packages/
 # Temporary folders
 tmp/
 temp/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+blob-report/
+*.blob
+
+# Biome
+.biome-cache/
+
+# Build artifacts
+*.local
+.env.*.local

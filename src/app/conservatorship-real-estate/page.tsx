@@ -64,7 +64,7 @@ export default function ConservatorshipRealEstatePage() {
                 'Expert conservatorship real estate sales services in Las Vegas, Nevada. Complete guidance for conservators, attorneys, and families on selling property for conservatees.',
               provider: {
                 '@type': 'RealEstateAgent',
-                name: 'Dr. Janet Duffy',
+                name: 'Dr. Jan Duffy',
                 telephone: '+1-702-830-9222',
               },
               areaServed: {

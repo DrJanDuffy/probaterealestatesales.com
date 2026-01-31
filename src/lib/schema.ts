@@ -382,7 +382,7 @@ export const defaultSchemas = {
   realEstateAgent: {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
-    name: 'Dr. Janet Duffy',
+    name: 'Dr. Jan Duffy',
     description:
       'Licensed Nevada real estate agent specializing in comprehensive probate real estate services, court-approved property sales, and inherited property transactions. Expert in Clark County probate court procedures and Nevada probate law.',
     url: 'https://www.probaterealestatesales.com',
@@ -590,13 +590,13 @@ export const defaultSchemas = {
     ],
     founder: {
       '@type': 'Person',
-      name: 'Dr. Janet Duffy',
+      name: 'Dr. Jan Duffy',
       jobTitle: 'Founder & Principal Broker',
     },
     foundingDate: '2020',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '123 Las Vegas Blvd',
+      streetAddress: '400 S 4th Street Suite 250 B',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89101',

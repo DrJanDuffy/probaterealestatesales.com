@@ -75,7 +75,7 @@ export default function TermsPage() {
                 3. Real Estate License
               </h2>
               <p className="text-secondary-700 mb-4">
-                Dr. Janet Duffy is a licensed real estate professional in the State of Nevada.
+                Dr. Jan Duffy is a licensed real estate professional in the State of Nevada.
                 License number: S.0197614
               </p>
             </section>
@@ -186,7 +186,7 @@ export default function TermsPage() {
                   <strong>Probate Real Estate Sales</strong>
                 </p>
                 <p className="text-secondary-700 mb-2">
-                  Dr. Janet Duffy, Licensed Real Estate Professional
+                  Dr. Jan Duffy, Licensed Real Estate Professional
                 </p>
                 <p className="text-secondary-700 mb-2">License: S.0197614</p>
                 <p className="text-secondary-700 mb-2">
