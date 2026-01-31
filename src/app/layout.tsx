@@ -14,7 +14,10 @@ export const metadata: Metadata = {
     'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days - guaranteed! Free consultation: (702) 830-9222. Court-approved expert with 500+ sales. No upfront costs.',
   keywords:
     'probate realtor, probate homes, Las Vegas probate realtor, probate real estate agent, probate homes Las Vegas, sell probate property, inherited property sales, grokipedia',
-  authors: [{ name: 'Probate Real Estate Sales' }],
+  authors: [
+    { name: 'Dr. Jan Duffy', url: 'https://www.probaterealestatesales.com/about/' },
+    { name: 'Probate Real Estate Sales' },
+  ],
   openGraph: {
     title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
     description:
@@ -78,12 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Grokipedia Optimizations */}
         <link rel="preconnect" href="https://grokipedia.com" />
 
-        <script
-          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-          type="module"
-          async
-        />
-        {/* LocalBusiness + RealEstateAgent - on every page */}
+        {/* LocalBusiness + RealEstateAgent + Person (E-E-A-T) - on every page */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -94,6 +92,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(defaultSchemas.realEstateAgent),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(defaultSchemas.person),
           }}
         />
         <script

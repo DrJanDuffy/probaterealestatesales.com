@@ -2,6 +2,19 @@
 
 Use this checklist to prepare and maintain the site for optimal Google indexing.
 
+## Google 2025/2026 SEO Focus: E-E-A-T
+
+Post-December 2025 Core Update, **E-E-A-T** (Experience, Expertise, Authoritativeness, Trustworthiness) is the primary ranking factor. The site implements:
+
+| Pillar | Implementation |
+|--------|----------------|
+| **Experience (E)** | Person schema with 20+ years, 500+ sales, case-specific credentials |
+| **Expertise (E)** | hasCredential (license S.0197614, Ph.D.), knowsAbout, comprehensive topic coverage |
+| **Authoritativeness (A)** | worksFor (Berkshire Hathaway), award, sameAs (LinkedIn, About page) |
+| **Trustworthiness (T)** | NAP consistency, aggregateRating, LegalService schema, privacy/terms |
+
+**People-first content:** Authors metadata, author bylines on About, unique titles/descriptions per page, no keyword stuffing.
+
 ## Technical Setup (Already Implemented)
 
 | Item | Status |
@@ -11,7 +24,7 @@ Use this checklist to prepare and maintain the site for optimal Google indexing.
 | **Canonical URLs** | Every page has canonical; www + trailing slash enforced |
 | **Metadata** | Unique title, description, keywords on each page |
 | **robots meta** | `index, follow` on key pages; `googleBot` hints (max-snippet, max-image-preview) |
-| **JSON-LD** | LocalBusiness, RealEstateAgent, LegalService on every page |
+| **JSON-LD** | LocalBusiness, RealEstateAgent, Person (E-E-A-T), LegalService on every page |
 | **Viewport** | Mobile-friendly viewport meta |
 | **Internal links** | Homepage Quick Nav + Services dropdown link to key pages |
 

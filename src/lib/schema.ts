@@ -299,8 +299,68 @@ export interface RealEstateListingSchema {
   listingStatus: string;
 }
 
+/** Person schema for E-E-A-T (Experience, Expertise, Authoritativeness, Trust) - Google 2025/2026 */
+export const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': 'https://www.probaterealestatesales.com/about/#dr-jan-duffy',
+  name: 'Dr. Jan Duffy',
+  jobTitle: 'Licensed Nevada Real Estate Agent | Probate Real Estate Specialist',
+  description:
+    'Dr. Jan Duffy is a top Las Vegas probate realtor with 20+ years of experience. Licensed Nevada real estate professional (S.0197614) specializing in probate, trust, and conservatorship real estate sales. Ph.D. in Research, expert in Clark County probate court procedures. 500+ probate properties sold.',
+  url: 'https://www.probaterealestatesales.com/about/',
+  image: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
+  telephone: '+1-702-830-9222',
+  email: 'DrJanSells@ProbateRealEstateSales.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '400 S 4th Street Suite 250 B',
+    addressLocality: 'Las Vegas',
+    addressRegion: 'NV',
+    postalCode: '89101',
+    addressCountry: 'US',
+  },
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'license',
+      name: 'Nevada Real Estate License S.0197614',
+      recognizedBy: { '@type': 'Organization', name: 'Nevada Real Estate Division' },
+    },
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'degree',
+      name: 'Ph.D. in Research',
+    },
+  ],
+  knowsAbout: [
+    'Nevada Probate Law',
+    'Clark County Probate Court',
+    'Probate Real Estate Sales',
+    'Trust Administration',
+    'Conservatorship Property Sales',
+    'Certificate of Incumbency',
+    'Estate Liquidation',
+    'Nevada Revised Statutes',
+    'Real Estate Market Analysis',
+  ],
+  award: [
+    'Top Las Vegas Probate Realtor',
+    '20+ Years Experience',
+    '500+ Probate Properties Sold',
+  ],
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Berkshire Hathaway HomeServices Nevada Properties',
+    url: 'https://www.berkshirehathawayhs.com',
+  },
+  sameAs: ['https://www.probaterealestatesales.com/about/'],
+};
+
 // Default schema data for the Nevada probate real estate business
 export const defaultSchemas = {
+  person: personSchema,
+
   localBusiness: {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -340,6 +400,7 @@ export const defaultSchemas = {
     logo: 'https://www.probaterealestatesales.com/logo.png',
     image: 'https://www.probaterealestatesales.com/logo.png',
     sameAs: [
+      'https://www.probaterealestatesales.com',
       'https://www.facebook.com/probaterealestatesales',
       'https://www.linkedin.com/company/probaterealestatesales',
       'https://www.instagram.com/probaterealestatesales',
@@ -382,7 +443,9 @@ export const defaultSchemas = {
   realEstateAgent: {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
+    '@id': 'https://www.probaterealestatesales.com/#agent',
     name: 'Dr. Jan Duffy',
+    image: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
     description:
       'Licensed Nevada real estate agent specializing in comprehensive probate real estate services, court-approved property sales, and inherited property transactions. Expert in Clark County probate court procedures and Nevada probate law.',
     url: 'https://www.probaterealestatesales.com',
@@ -424,6 +487,11 @@ export const defaultSchemas = {
         longitude: -115.1398,
       },
       geoRadius: '50 miles',
+    },
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Berkshire Hathaway HomeServices Nevada Properties',
+      url: 'https://www.berkshirehathawayhs.com',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
