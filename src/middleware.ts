@@ -32,6 +32,11 @@ export function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
+  // Redirect malformed URLs (e.g. /$ from broken links) to homepage
+  if (pathname === '/$' || pathname === '/%24' || pathname === '/$$') {
+    return NextResponse.redirect(`${CANONICAL_HOST}/`, 301);
+  }
+
   // Build canonical path: add trailing slash for non-root paths (matches next.config trailingSlash: true)
   const needsTrailingSlash = pathname !== '/' && !pathname.endsWith('/');
   const canonicalPath = needsTrailingSlash ? `${pathname}/` : pathname;

@@ -20,7 +20,7 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Redirect old /lander page to homepage (middleware handles www/https)
+      // Redirect old /lander page to homepage (middleware handles www/https and /$)
       {
         source: '/lander',
         destination: '/',
