@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import { reviewSchemas } from '@/lib/schema';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -177,6 +178,12 @@ export default function TestimonialsPage() {
 
   return (
     <main className="min-h-screen bg-gray-50">
+      {/* Review schema for rich results */}
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD schema injection is safe
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchemas) }}
+      />
       <Breadcrumb items={breadcrumbs.slice(1)} />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-primary-900 to-primary-700 text-white py-20">

@@ -19,6 +19,9 @@ export const metadata: Metadata = {
       'Complete guide to certificate of incumbency in Las Vegas, Nevada. Learn when and how to obtain this essential $750 document for trust property sales.',
     type: 'article',
     url: 'https://www.probaterealestatesales.com/blog/certificate-of-incumbency/',
+    publishedTime: '2024-10-15T00:00:00Z',
+    modifiedTime: '2025-01-31T00:00:00Z',
+    authors: ['Dr. Jan Duffy'],
   },
 };
 

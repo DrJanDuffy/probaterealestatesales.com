@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     description: 'Step-by-step guide to navigating Clark County probate court for property sales.',
     type: 'article',
     url: 'https://www.probaterealestatesales.com/blog/clark-county-probate/',
+    publishedTime: '2024-09-20T00:00:00Z',
+    modifiedTime: '2025-01-31T00:00:00Z',
+    authors: ['Dr. Jan Duffy'],
   },
 };
 

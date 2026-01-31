@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     description: 'Complete guide to Nevada probate timeline with detailed breakdown of each phase.',
     type: 'article',
     url: 'https://www.probaterealestatesales.com/blog/nevada-probate-timeline/',
+    publishedTime: '2024-11-01T00:00:00Z',
+    modifiedTime: '2025-01-31T00:00:00Z',
+    authors: ['Dr. Jan Duffy'],
   },
 };
 

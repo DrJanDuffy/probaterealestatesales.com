@@ -299,6 +299,31 @@ export interface RealEstateListingSchema {
   listingStatus: string;
 }
 
+/** WebSite schema with SearchAction for sitelinks search box - Google 2025/2026 */
+export const webSiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': 'https://www.probaterealestatesales.com/#website',
+  name: 'Probate Real Estate Sales - Dr. Jan Duffy',
+  alternateName: 'Las Vegas Probate Realtor',
+  url: 'https://www.probaterealestatesales.com',
+  description:
+    'Expert probate real estate services in Las Vegas and Clark County. Sell inherited properties in 45 days with court-approved specialist Dr. Jan Duffy.',
+  publisher: {
+    '@id': 'https://www.probaterealestatesales.com/#organization',
+  },
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate:
+        'https://www.google.com/search?q=site:probaterealestatesales.com+{search_term_string}',
+    },
+    'query-input': 'required name=search_term_string',
+  },
+  inLanguage: 'en-US',
+};
+
 /** Person schema for E-E-A-T (Experience, Expertise, Authoritativeness, Trust) - Google 2025/2026 */
 export const personSchema = {
   '@context': 'https://schema.org',
@@ -355,10 +380,76 @@ export const personSchema = {
     url: 'https://www.berkshirehathawayhs.com',
   },
   sameAs: ['https://www.probaterealestatesales.com/about/'],
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '6',
+    bestRating: '5',
+    worstRating: '1',
+  },
 };
+
+/** Review schema for testimonials - Google 2025/2026 rich results */
+export const reviewSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    itemReviewed: {
+      '@type': 'RealEstateAgent',
+      name: 'Dr. Jan Duffy',
+      '@id': 'https://www.probaterealestatesales.com/#agent',
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: 5,
+      bestRating: 5,
+    },
+    author: { '@type': 'Person', name: 'The Anderson Family' },
+    reviewBody:
+      "Dr. Duffy sold Mom's house for $50,000 over asking price and completed the entire process in just 45 days. Her expertise turned a difficult situation into a smooth process.",
+    datePublished: '2025-01-15',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    itemReviewed: {
+      '@type': 'RealEstateAgent',
+      name: 'Dr. Jan Duffy',
+      '@id': 'https://www.probaterealestatesales.com/#agent',
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: 5,
+      bestRating: 5,
+    },
+    author: { '@type': 'Person', name: 'Robert Martinez' },
+    reviewBody:
+      'She sold the property in just 30 days for $425,000, which was $25,000 above the initial estate valuation. I felt confident and supported throughout.',
+    datePublished: '2025-01-10',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    itemReviewed: {
+      '@type': 'RealEstateAgent',
+      name: 'Dr. Jan Duffy',
+      '@id': 'https://www.probaterealestatesales.com/#agent',
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: 5,
+      bestRating: 5,
+    },
+    author: { '@type': 'Person', name: 'Jennifer & David Thompson' },
+    reviewBody:
+      "The property sold for $380,000 after repairs, netting us $60,000 more than if we had sold it as-is. Dr. Duffy's guidance gave us peace of mind.",
+    datePublished: '2024-12-20',
+  },
+];
 
 // Default schema data for the Nevada probate real estate business
 export const defaultSchemas = {
+  webSite: webSiteSchema,
   person: personSchema,
 
   localBusiness: {

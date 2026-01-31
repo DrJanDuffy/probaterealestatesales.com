@@ -42,10 +42,12 @@ This document tracks implementation of Google's evolving SEO guidelines for E-E-
 
 | Schema | Purpose |
 |--------|---------|
-| **Person** | Dr. Jan Duffy - identity, credentials, expertise |
+| **WebSite** | Site identity, SearchAction for sitelinks search box |
+| **Person** | Dr. Jan Duffy - identity, credentials, expertise, aggregateRating |
 | **LocalBusiness** | Organization, NAP, services |
-| **RealEstateAgent** | Real estate specialty, worksFor |
+| **RealEstateAgent** | Real estate specialty, worksFor, @id |
 | **LegalService** | Probate/legal service type |
+| **Review** | Client testimonials (rich results) |
 | **FAQPage** | Common questions |
 | **BreadcrumbList** | Navigation context |
 
@@ -56,7 +58,8 @@ This document tracks implementation of Google's evolving SEO guidelines for E-E-
 - [x] Author byline on About page
 - [x] No keyword stuffing
 - [x] Helpful, reliable content
-- [ ] Last updated dates on key pages (optional)
+- [x] publishedTime, modifiedTime on blog articles
+- [x] Review schema with datePublished
 - [ ] First-hand experience callouts in content
 
 ## References

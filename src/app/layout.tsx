@@ -81,7 +81,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Grokipedia Optimizations */}
         <link rel="preconnect" href="https://grokipedia.com" />
 
-        {/* LocalBusiness + RealEstateAgent + Person (E-E-A-T) - on every page */}
+        {/* WebSite + LocalBusiness + RealEstateAgent + Person (E-E-A-T) - on every page */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(defaultSchemas.webSite),
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

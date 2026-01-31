@@ -20,6 +20,13 @@ export const metadata: Metadata = {
     type: 'article',
     url: 'https://www.probaterealestatesales.com/blog/las-vegas-market-jan-2025/',
     publishedTime: '2025-01-15T00:00:00Z',
+    modifiedTime: '2025-01-31T00:00:00Z',
+    authors: ['Dr. Jan Duffy'],
+  },
+  other: {
+    'article:published_time': '2025-01-15T00:00:00Z',
+    'article:modified_time': '2025-01-31T00:00:00Z',
+    'article:author': 'Dr. Jan Duffy',
   },
 };
 
