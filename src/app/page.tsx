@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     url: '/',
     images: [
       {
-        url: '/images/dr-jan-duffy.jpg',
+        url: '/images/og-dr-jan-duffy.jpg',
         width: 1200,
         height: 630,
         alt: 'Dr. Jan Duffy - Probate Real Estate Specialist',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     title: 'Las Vegas Probate Realtor | Probate Homes Expert',
     description:
       'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days. Free consultation.',
-    images: ['/images/dr-jan-duffy.jpg'],
+    images: ['/images/og-dr-jan-duffy.jpg'],
   },
   alternates: {
     canonical: '/',
