@@ -136,13 +136,37 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="mt-8 text-center">
+          <div className="mt-8 flex flex-wrap justify-center gap-x-4 gap-y-2 text-center">
             <Link
               href="/services/"
               className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium text-sm"
             >
               View All Services
               <ArrowRight className="h-4 w-4 ml-1" />
+            </Link>
+            <Link href="/probate-division/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+              Probate Division
+            </Link>
+            <Link href="/probate-homes-for-sale/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+              Probate Homes
+            </Link>
+            <Link href="/trust-property-sales/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+              Trust Sales
+            </Link>
+            <Link href="/conservatorship-real-estate/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+              Conservatorship
+            </Link>
+            <Link href="/probate-property-buyers/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+              Probate Buyers
+            </Link>
+            <Link href="/probate-estate-sales/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+              Estate Sales
+            </Link>
+            <Link href="/contact/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+              Contact
+            </Link>
+            <Link href="/locations/enterprise/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+              Enterprise
             </Link>
           </div>
         </div>

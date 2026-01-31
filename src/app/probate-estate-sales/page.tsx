@@ -42,6 +42,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/probate-estate-sales/',
   },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Probate Estate Sales | Complete Guide to Selling Estate Property | Las Vegas, Nevada',
     description:

@@ -44,6 +44,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/probate-homes-for-sale/',
   },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Probate Homes for Sale in Las Vegas, Nevada | Find Probate Properties',
     description:

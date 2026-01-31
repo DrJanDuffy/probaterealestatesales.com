@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/contact/',
   },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Contact Las Vegas Probate Realtor | Free Consultation | (702) 830-9222',
     description:

@@ -46,6 +46,7 @@ export async function generateMetadata({
     title: `${loc.name} Probate Real Estate Services | Nevada Probate | Dr. Jan Duffy`,
     description: `Expert probate real estate services in ${loc.name}, Nevada. ${loc.description} Nevada's fastest probate: 6-8 months. Free consultation: ${SITE_CONFIG.phone}`,
     alternates: { canonical: `https://www.probaterealestatesales.com/locations/${slug}/` },
+    robots: { index: true, follow: true },
   };
 }
 

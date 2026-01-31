@@ -34,6 +34,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/trust-property-sales/',
   },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Trust Property Sales in Las Vegas, Nevada | Trust Real Estate Expert',
     description:

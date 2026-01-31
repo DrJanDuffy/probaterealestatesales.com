@@ -43,6 +43,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/probate-property-buyers/',
   },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Probate Property Buyers Guide | How to Buy Probate Homes in Las Vegas, Nevada',
     description:

@@ -33,6 +33,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/conservatorship-real-estate/',
   },
+  robots: { index: true, follow: true },
   openGraph: {
     title: 'Conservatorship Real Estate Sales in Las Vegas, Nevada | Court-Appointed Sales Expert',
     description:
