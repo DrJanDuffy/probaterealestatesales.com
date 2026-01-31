@@ -13,6 +13,7 @@ On-demand revalidation when new listings hit your feed.
 | `secret` | Required. Must match `REVALIDATION_SECRET` env var |
 | `path` | Path to revalidate (e.g. `/locations/henderson/`) |
 | `tag` | Or use tag for tagged fetches |
+| `indexnow=1` | Also notify IndexNow (Bing/Yandex) of the change |
 
 ### Example
 
