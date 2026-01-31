@@ -56,6 +56,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        {/* Sitemap for crawlers */}
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         {/* Google Search Console & Performance Optimizations */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
@@ -165,6 +167,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       </head>
       <body className={`${inter.className} antialiased text-secondary-900 bg-white`}>
+        {/* RealScout: lazy load after page interactive (avoids render block, 206 KiB) */}
+        <Script
+          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
+          strategy="lazyOnload"
+        />
         {/* Google tag (gtag.js) */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-P0TH2525DP"

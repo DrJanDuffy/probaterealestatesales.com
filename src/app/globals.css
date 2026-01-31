@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-
+/* Inter font loaded via next/font in layout.tsx (self-hosted, no render block) */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
