@@ -1,32 +1,69 @@
 import type { MetadataRoute } from 'next';
+import { headers } from 'next/headers';
 
-export const dynamic = 'force-static';
+export default async function robots(): Promise<MetadataRoute.Robots> {
+  const headersList = await headers();
+  const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost';
+  const baseUrl = `https://${host.split(':')[0]}`;
 
-export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
+      // Default: allow all crawlers
       {
         userAgent: '*',
-        disallow: ['/api/*', '/admin/*', '/private/*', '/temp/*', '/_next/*', '/node_modules/*'],
+        allow: '/',
+      },
+      // ── AI Retrieval Bots (power AI search results) ──
+      {
+        userAgent: 'GPTBot',
+        allow: '/',
       },
       {
-        userAgent: 'Googlebot',
-        disallow: ['/api/*', '/admin/*', '/private/*'],
+        userAgent: 'ChatGPT-User',
+        allow: '/',
       },
       {
-        userAgent: 'Bingbot',
-        disallow: ['/api/*', '/admin/*', '/private/*'],
+        userAgent: 'OAI-SearchBot',
+        allow: '/',
       },
       {
-        userAgent: 'GrokipediaBot',
-        disallow: ['/api/*', '/admin/*', '/private/*', '/_next/*', '/node_modules/*'],
+        userAgent: 'ClaudeBot',
+        allow: '/',
       },
       {
-        userAgent: 'Grokipedia',
-        disallow: ['/api/*', '/admin/*', '/private/*', '/_next/*', '/node_modules/*'],
+        userAgent: 'Claude-Web',
+        allow: '/',
+      },
+      {
+        userAgent: 'PerplexityBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Applebot-Extended',
+        allow: '/',
+      },
+      {
+        userAgent: 'Bytespider',
+        allow: '/',
+      },
+      // ── AI Training Bots (maximizes visibility in AI models) ──
+      {
+        userAgent: 'Google-Extended',
+        allow: '/',
+      },
+      {
+        userAgent: 'CCBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'cohere-ai',
+        allow: '/',
+      },
+      {
+        userAgent: 'Meta-ExternalAgent',
+        allow: '/',
       },
     ],
-    sitemap: 'https://www.probaterealestatesales.com/sitemap.xml',
-    host: 'www.probaterealestatesales.com',
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }
