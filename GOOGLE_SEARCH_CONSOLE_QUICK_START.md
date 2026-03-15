@@ -41,14 +41,16 @@
 
 ## ✅ Already Configured
 
+**Primary site:** `https://www.probaterealestatesales.com` (www is canonical; bare domain redirects here.)
+
 Your site is already optimized for Google Search Console:
 
 - ✅ **Robots.txt** - `/robots.txt` (allows all search engines)
 - ✅ **XML Sitemap** - `/sitemap.xml` (41 pages included)
-- ✅ **Canonical URLs** - All pages have proper canonical tags
+- ✅ **Canonical URLs** - All pages have proper canonical tags (www + trailing slash)
 - ✅ **Structured Data** - Complete schema.org markup
 - ✅ **Meta Tags** - Title, description, Open Graph on all pages
-- ✅ **HTTPS & WWW** - Proper redirects configured
+- ✅ **HTTPS & WWW** - www is primary; non-www and HTTP 301 to www
 - ✅ **Mobile-Friendly** - Responsive design
 - ✅ **Fast Loading** - Optimized performance
 
@@ -58,6 +60,8 @@ If GSC shows **"Not found (404)"** for URLs like:
 
 - **`https://www.probaterealestatesales.com/$`** – Fixed in code: `/$` and `/%24` now 301-redirect to `/` (see `next.config.js` and `vercel.json`). Deploy and re-validate.
 - **`http://probaterealestatesales.com/`** or **`https://probaterealestatesales.com/terms`** – The bare domain must reach your app so middleware can 301 to `https://www...`. In **Vercel → Project → Settings → Domains**, add `probaterealestatesales.com` (in addition to `www.probaterealestatesales.com`). Point both to the same project; middleware will redirect non-www and HTTP to the canonical URL.
+
+**"Unable to resolve https://probaterealestatesales.com/"** – This means DNS does not resolve the bare domain (apex). Fix it in your DNS provider (e.g. Cloudflare, your registrar): add the **apex** record Vercel shows when you add `probaterealestatesales.com` (usually an A record to Vercel’s IP or a CNAME flattening setup). Until the apex resolves, only `https://www.probaterealestatesales.com` will work; the site and canonicals use `www`, so the live site is fine.
 
 ## Crawled - currently not indexed (non-www URLs)
 

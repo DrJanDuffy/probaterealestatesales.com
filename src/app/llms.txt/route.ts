@@ -52,13 +52,13 @@ Las Vegas, Henderson, North Las Vegas, Boulder City, Mesquite, Summerlin, Spring
 ## Key Pages
 
 - [Home](${baseUrl}/)
-- [About Dr. Jan Duffy](${baseUrl}/about)
-- [Probate Services](${baseUrl}/services)
-- [Nevada Probate Guide](${baseUrl}/probate-guide)
-- [Contact](${baseUrl}/contact)
-- [Probate FAQs](${baseUrl}/faq)
-- [Testimonials](${baseUrl}/testimonials)
-- [Communities Served](${baseUrl}/communities)
+- [About Dr. Jan Duffy](${baseUrl}/about/)
+- [Probate Services](${baseUrl}/services/)
+- [Nevada Probate Guide](${baseUrl}/resources/nevada-probate-guide/)
+- [Contact](${baseUrl}/contact/)
+- [Probate FAQs](${baseUrl}/faq/)
+- [Testimonials](${baseUrl}/testimonials/)
+- [Locations / Communities Served](${baseUrl}/locations/)
 
 ## Contact
 

@@ -14,6 +14,15 @@ import {
   generateWebSiteSchema,
 } from '@/lib/schema';
 
+/** Returns true if customSchema contains an FAQPage (root or inside @graph). Used to avoid duplicate FAQPage when page passes its own. */
+function customSchemaHasFAQPage(schema: any): boolean {
+  if (!schema) return false;
+  if (schema['@type'] === 'FAQPage') return true;
+  const graph = schema['@graph'];
+  if (Array.isArray(graph)) return graph.some((item: any) => item && item['@type'] === 'FAQPage');
+  return false;
+}
+
 interface SchemaMarkupProps {
   type: 'home' | 'service' | 'faq' | 'article' | 'contact' | 'legal' | 'location' | 'property';
   breadcrumbs?: Array<{ name: string; url: string }>;
@@ -241,7 +250,10 @@ export default function SchemaMarkup({
         break;
 
       case 'faq':
-        schemas = [defaultSchemas.faqPage, defaultSchemas.organization, defaultSchemas.howTo];
+        schemas = [defaultSchemas.organization, defaultSchemas.howTo];
+        if (!customSchemaHasFAQPage(customSchema)) {
+          schemas.unshift(defaultSchemas.faqPage);
+        }
         break;
 
       case 'article':
