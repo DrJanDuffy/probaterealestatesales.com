@@ -2,6 +2,8 @@
 
 /// <reference path="../types/realscout.d.ts" />
 
+import RealScoutScriptLoader from '@/components/RealScoutScriptLoader';
+
 export default function FeaturedProperties() {
   return (
     <section className="section-padding bg-secondary-50">
@@ -19,16 +21,18 @@ export default function FeaturedProperties() {
         </div>
 
         {/* RealScout Widget */}
-        <div className="w-full">
-          <realscout-office-listings
-            agent-encoded-id="QWdlbnQtMjI1MDUw"
-            sort-order="STATUS_AND_SIGNIFICANT_CHANGE"
-            listing-status="For Sale"
-            property-types="MF,SFR,OTHER,LAL"
-            price-min="500000"
-            price-max="750000"
-          />
-        </div>
+        <RealScoutScriptLoader>
+          <div className="w-full">
+            <realscout-office-listings
+              agent-encoded-id="QWdlbnQtMjI1MDUw"
+              sort-order="STATUS_AND_SIGNIFICANT_CHANGE"
+              listing-status="For Sale"
+              property-types="MF,SFR,OTHER,LAL"
+              price-min="500000"
+              price-max="750000"
+            />
+          </div>
+        </RealScoutScriptLoader>
 
         {/* View All Properties CTA */}
         <div className="text-center mt-12">

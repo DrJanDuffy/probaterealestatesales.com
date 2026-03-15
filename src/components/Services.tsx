@@ -13,6 +13,7 @@ import {
   Star,
   Target,
 } from 'lucide-react';
+import RealScoutScriptLoader from '@/components/RealScoutScriptLoader';
 
 // Reorganized services by priority and user journey
 const services = [
@@ -301,53 +302,55 @@ export default function Services() {
             </p>
           </div>
 
-          {/* Affordable Properties */}
-          <div className="mb-12">
-            <div className="text-center mb-8">
-              <h4 className="text-xl md:text-2xl font-bold text-secondary-900 mb-3">
-                Affordable Las Vegas Properties
-              </h4>
-              <p className="text-secondary-600 max-w-2xl mx-auto">
-                Discover quality properties in the $500K-$750K range. Perfect for investors and
-                families looking for value in the Las Vegas market.
-              </p>
+          <RealScoutScriptLoader>
+            {/* Affordable Properties */}
+            <div className="mb-12">
+              <div className="text-center mb-8">
+                <h4 className="text-xl md:text-2xl font-bold text-secondary-900 mb-3">
+                  Affordable Las Vegas Properties
+                </h4>
+                <p className="text-secondary-600 max-w-2xl mx-auto">
+                  Discover quality properties in the $500K-$750K range. Perfect for investors and
+                  families looking for value in the Las Vegas market.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                <realscout-office-listings
+                  agent-encoded-id="QWdlbnQtMjI1MDUw"
+                  sort-order="PRICE_LOW"
+                  listing-status="For Sale,For Rent"
+                  property-types="MF,SFR,OTHER,LAL"
+                  price-min="500000"
+                  price-max="750000"
+                ></realscout-office-listings>
+              </div>
             </div>
 
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <realscout-office-listings
-                agent-encoded-id="QWdlbnQtMjI1MDUw"
-                sort-order="PRICE_LOW"
-                listing-status="For Sale,For Rent"
-                property-types="MF,SFR,OTHER,LAL"
-                price-min="500000"
-                price-max="750000"
-              ></realscout-office-listings>
-            </div>
-          </div>
+            {/* Premium Properties */}
+            <div className="mb-8">
+              <div className="text-center mb-8">
+                <h4 className="text-xl md:text-2xl font-bold text-secondary-900 mb-3">
+                  Premium Las Vegas Properties
+                </h4>
+                <p className="text-secondary-600 max-w-2xl mx-auto">
+                  Browse our current inventory of premium properties in the Las Vegas area. These
+                  properties are available for immediate purchase with our expert guidance.
+                </p>
+              </div>
 
-          {/* Premium Properties */}
-          <div className="mb-8">
-            <div className="text-center mb-8">
-              <h4 className="text-xl md:text-2xl font-bold text-secondary-900 mb-3">
-                Premium Las Vegas Properties
-              </h4>
-              <p className="text-secondary-600 max-w-2xl mx-auto">
-                Browse our current inventory of premium properties in the Las Vegas area. These
-                properties are available for immediate purchase with our expert guidance.
-              </p>
+              <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                <realscout-office-listings
+                  agent-encoded-id="QWdlbnQtMjI1MDUw"
+                  sort-order="PRICE_HIGH"
+                  listing-status="For Sale"
+                  property-types="MF,SFR,OTHER,LAL"
+                  price-min="500000"
+                  price-max="850000"
+                ></realscout-office-listings>
+              </div>
             </div>
-
-            <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-              <realscout-office-listings
-                agent-encoded-id="QWdlbnQtMjI1MDUw"
-                sort-order="PRICE_HIGH"
-                listing-status="For Sale"
-                property-types="MF,SFR,OTHER,LAL"
-                price-min="500000"
-                price-max="850000"
-              ></realscout-office-listings>
-            </div>
-          </div>
+          </RealScoutScriptLoader>
         </div>
 
         {/* Final CTA Section */}

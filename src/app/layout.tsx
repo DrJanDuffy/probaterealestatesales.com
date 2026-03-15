@@ -182,11 +182,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         )}
       </head>
       <body className={`${inter.className} antialiased text-secondary-900 bg-white`}>
-        {/* RealScout: lazy load after page interactive (avoids render block, 206 KiB) */}
-        <Script
-          src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-          strategy="lazyOnload"
-        />
+        {/* RealScout script loaded only on widget pages via useRealScoutScript (see RealScoutOfficeListings, Services). */}
         {/* Google tag (gtag.js): lazyOnload to avoid competing with LCP (Lighthouse). */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-P0TH2525DP"

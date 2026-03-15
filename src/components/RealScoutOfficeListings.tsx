@@ -2,7 +2,7 @@
 
 /// <reference path="../types/realscout.d.ts" */
 
-import { Suspense } from 'react';
+import { useRealScoutScript } from '@/hooks/useRealScoutScript';
 
 export interface RealScoutOfficeListingsProps {
   /** RealScout agent encoded ID */
@@ -21,8 +21,7 @@ export interface RealScoutOfficeListingsProps {
 }
 
 /**
- * RealScout Office Listings - PPR streaming boundary.
- * Static section shell renders immediately; widget streams in via Suspense.
+ * RealScout Office Listings. Loads the RealScout script only when this component mounts (widget pages only).
  */
 export default function RealScoutOfficeListings({
   agentEncodedId = 'QWdlbnQtMjI1MDUw',
@@ -32,13 +31,11 @@ export default function RealScoutOfficeListings({
   priceMin = '500000',
   priceMax = '750000',
   title = 'Current Las Vegas Properties Available',
-  subtitle = "Browse our current inventory of properties in the Las Vegas area. These properties are available for immediate purchase with our expert guidance.",
+  subtitle =
+    "Browse our current inventory of properties in the Las Vegas area. These properties are available for immediate purchase with our expert guidance.",
   themeColor = 'blue',
 }: RealScoutOfficeListingsProps) {
-  const ctaClasses =
-    themeColor === 'green'
-      ? 'bg-green-600 hover:bg-green-700'
-      : 'bg-blue-600 hover:bg-blue-700';
+  const scriptLoaded = useRealScoutScript();
 
   return (
     <section className="py-16 bg-white">
@@ -48,15 +45,13 @@ export default function RealScoutOfficeListings({
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">{subtitle}</p>
         </div>
 
-        <Suspense
-          fallback={
-            <div className="bg-gray-100 rounded-xl p-12 border border-gray-200 animate-pulse">
-              <div className="h-64 flex items-center justify-center text-gray-500">
-                Loading property listings...
-              </div>
+        {!scriptLoaded ? (
+          <div className="bg-gray-100 rounded-xl p-12 border border-gray-200 animate-pulse">
+            <div className="h-64 flex items-center justify-center text-gray-500">
+              Loading property listings...
             </div>
-          }
-        >
+          </div>
+        ) : (
           <div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
             <realscout-office-listings
               agent-encoded-id={agentEncodedId}
@@ -67,7 +62,7 @@ export default function RealScoutOfficeListings({
               price-max={priceMax}
             />
           </div>
-        </Suspense>
+        )}
       </div>
     </section>
   );
