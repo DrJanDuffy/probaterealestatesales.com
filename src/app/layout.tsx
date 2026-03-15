@@ -70,12 +70,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Sitemap for crawlers */}
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        {/* Preconnect: max 4 for Lighthouse; only origins used early or for LCP (RealScout). */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://em.realscout.com" />
+        {/* DNS prefetch only (no preconnect): GTM/GA/RealScout load afterInteractive/lazyOnload so preconnect was unused per Lighthouse. */}
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://em.realscout.com" />
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
         <link rel="dns-prefetch" href="https://grokipedia.com" />
 
@@ -189,12 +187,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
           strategy="lazyOnload"
         />
-        {/* Google tag (gtag.js) */}
+        {/* Google tag (gtag.js): lazyOnload to avoid competing with LCP (Lighthouse). */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-P0TH2525DP"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
