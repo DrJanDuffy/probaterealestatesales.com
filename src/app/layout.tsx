@@ -70,16 +70,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Sitemap for crawlers */}
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-        {/* Google Search Console & Performance Optimizations */}
+        {/* Preconnect: max 4 for Lighthouse; only origins used early or for LCP (RealScout). */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="preconnect" href="https://maps.googleapis.com" />
+        <link rel="preconnect" href="https://em.realscout.com" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
-
-        {/* Grokipedia Optimizations */}
-        <link rel="preconnect" href="https://grokipedia.com" />
+        <link rel="dns-prefetch" href="https://grokipedia.com" />
 
         {/* WebSite + LocalBusiness + RealEstateAgent + Person (E-E-A-T) - on every page */}
         <script
