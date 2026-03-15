@@ -72,7 +72,7 @@ export default function ServicesPage() {
           reviewCount: 6,
           itemReviewed: {
             name: 'Nevada Probate Real Estate Services',
-            type: 'Service',
+            type: 'LocalBusiness',
           },
         }}
         customSchema={{

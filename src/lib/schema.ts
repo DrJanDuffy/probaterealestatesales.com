@@ -157,7 +157,7 @@ export interface ReviewSchema {
   '@context': 'https://schema.org';
   '@type': 'Review';
   itemReviewed: {
-    '@type': 'Service';
+    '@type': 'LocalBusiness';
     name: string;
   };
   reviewRating: {
@@ -177,7 +177,7 @@ export interface AggregateRatingSchema {
   '@context': 'https://schema.org';
   '@type': 'AggregateRating';
   itemReviewed: {
-    '@type': 'Service';
+    '@type': 'LocalBusiness';
     name: string;
   };
   ratingValue: number;
@@ -918,11 +918,11 @@ export function generateReviewSchema(review: {
     datePublished: review.datePublished,
     itemReviewed: review.itemReviewed
       ? {
-          '@type': review.itemReviewed.type || 'Service',
+          '@type': review.itemReviewed.type === 'Organization' ? 'Organization' : 'LocalBusiness',
           name: review.itemReviewed.name,
         }
       : {
-          '@type': 'Service',
+          '@type': 'LocalBusiness',
           name: 'Nevada Probate Real Estate Services',
         },
   };
@@ -947,11 +947,11 @@ export function generateAggregateRatingSchema(rating: {
     worstRating: rating.worstRating || 1,
     itemReviewed: rating.itemReviewed
       ? {
-          '@type': rating.itemReviewed.type || 'Service',
+          '@type': rating.itemReviewed.type === 'Organization' ? 'Organization' : 'LocalBusiness',
           name: rating.itemReviewed.name,
         }
       : {
-          '@type': 'Service',
+          '@type': 'LocalBusiness',
           name: 'Nevada Probate Real Estate Services',
         },
   };

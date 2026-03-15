@@ -532,7 +532,7 @@ export default function Home() {
           reviewCount: 6,
           itemReviewed: {
             name: 'Nevada Probate Real Estate Services',
-            type: 'Service',
+            type: 'LocalBusiness',
           },
         }}
       />

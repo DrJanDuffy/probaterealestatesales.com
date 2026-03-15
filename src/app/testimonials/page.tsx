@@ -160,7 +160,7 @@ export default function TestimonialsPage() {
     datePublished: new Date().toISOString(), // You may want to add actual dates
     itemReviewed: {
       name: 'Nevada Probate Real Estate Services',
-      type: 'Service',
+      type: 'LocalBusiness',
     },
   }));
 
@@ -172,7 +172,7 @@ export default function TestimonialsPage() {
     reviewCount: testimonials.length,
     itemReviewed: {
       name: 'Nevada Probate Real Estate Services',
-      type: 'Service',
+      type: 'LocalBusiness',
     },
   };
 
