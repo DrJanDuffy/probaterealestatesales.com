@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "biome check --write .",
+    "lint:internal-links": "node scripts/check-internal-links.js",
     "format": "biome format --write .",
     "type-check": "tsc --noEmit",
     "build:vercel": "next build",

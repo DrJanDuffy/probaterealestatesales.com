@@ -53,6 +53,7 @@ chore: update dependencies
 
 - [ ] `npm run lint:fix` passes
 - [ ] `npm run type-check` passes
+- [ ] `npm run lint:internal-links` passes (trailing slash on internal links; avoids GSC "Page with redirect")
 - [ ] No sensitive data (keys, secrets) in commits
 - [ ] `.env` and `.env.local` remain in `.gitignore`
 
@@ -62,3 +63,4 @@ chore: update dependencies
 - **Phone:** (702) 830-9222 – verify for this site
 - **IDX/MLS:** Do not modify `/components/idx/*` without approval
 - **NAP:** Keep consistent with Google Business Profile
+- **Internal links:** Use trailing slashes for non-root paths (e.g. `/faq/`, `/contact/`) to match the sitemap and `trailingSlash: true` in Next.js config. Root stays `/`. This avoids GSC "Page with redirect" issues.

@@ -44,7 +44,7 @@ export default function LasVegasMarketJan2025Page() {
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
-            href="/blog/market-updates"
+            href="/blog/market-updates/"
             className="inline-flex items-center text-primary-100 hover:text-white mb-6"
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
@@ -314,7 +314,7 @@ export default function LasVegasMarketJan2025Page() {
             location and condition.
           </p>
           <Link
-            href="/contact"
+            href="/contact/"
             className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             Schedule Free Property Valuation

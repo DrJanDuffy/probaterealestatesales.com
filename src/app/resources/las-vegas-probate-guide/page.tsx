@@ -410,7 +410,7 @@ export default function LasVegasProbateGuide() {
             <FAQ />
             <div className="text-center mt-8">
               <Link
-                href="/faq"
+                href="/faq/"
                 className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
               >
                 View All FAQs

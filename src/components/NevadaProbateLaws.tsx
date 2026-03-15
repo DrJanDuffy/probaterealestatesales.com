@@ -421,7 +421,7 @@ export default function NevadaProbateLaws() {
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="/resources/nevada-probate-guide"
+                href="/resources/nevada-probate-guide/"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors inline-block"
               >
                 Download Complete Guide

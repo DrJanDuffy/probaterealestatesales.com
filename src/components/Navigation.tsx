@@ -341,7 +341,7 @@ export default function Navigation() {
 
             {/* About Link */}
             <Link
-              href="/about"
+              href="/about/"
               className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors focus-ring rounded-md"
               aria-label="About Dr. Jan Duffy"
             >
@@ -350,7 +350,7 @@ export default function Navigation() {
 
             {/* Contact Link */}
             <Link
-              href="/contact"
+              href="/contact/"
               className="text-secondary-700 hover:text-primary-600 px-3 py-2 text-sm font-medium transition-colors focus-ring rounded-md"
               aria-label="Contact us"
             >
@@ -406,7 +406,7 @@ export default function Navigation() {
               Home
             </Link>
             <Link
-              href="/faq"
+              href="/faq/"
               className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors focus-ring"
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Frequently asked questions"
@@ -488,7 +488,7 @@ export default function Navigation() {
 
             {/* About Link */}
             <Link
-              href="/about"
+              href="/about/"
               className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md border-t border-secondary-200 pt-4 transition-colors focus-ring"
               onClick={() => setMobileMenuOpen(false)}
               aria-label="About Dr. Jan Duffy"
@@ -498,7 +498,7 @@ export default function Navigation() {
 
             {/* Contact Link */}
             <Link
-              href="/contact"
+              href="/contact/"
               className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors focus-ring"
               onClick={() => setMobileMenuOpen(false)}
               aria-label="Contact us"

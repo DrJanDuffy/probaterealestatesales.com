@@ -20,7 +20,11 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Redirect old /lander page to homepage (middleware handles www/https and /$)
+      // Malformed URLs (GSC "Not found (404)" – ensure 301 so crawlers don't see 404)
+      { source: '/$', destination: '/', permanent: true },
+      { source: '/%24', destination: '/', permanent: true },
+      { source: '/$$', destination: '/', permanent: true },
+      // Redirect old /lander page to homepage
       {
         source: '/lander',
         destination: '/',

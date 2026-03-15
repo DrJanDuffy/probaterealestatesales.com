@@ -35,7 +35,7 @@ export default function ProbateVideosPage() {
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
-            href="/blog"
+            href="/blog/"
             className="inline-flex items-center text-primary-100 hover:text-white mb-6"
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
@@ -170,7 +170,7 @@ export default function ProbateVideosPage() {
               More videos coming soon! Check back regularly for new educational content.
             </p>
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-md font-medium hover:bg-primary-700 transition-colors"
             >
               Request Specific Topics
@@ -187,7 +187,7 @@ export default function ProbateVideosPage() {
             Schedule a free consultation to discuss your specific probate real estate situation.
           </p>
           <Link
-            href="/contact"
+            href="/contact/"
             className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             Schedule Free Consultation

@@ -365,7 +365,7 @@ export default function ProbatePropertyChecklist() {
                 <Download className="h-5 w-5" />
                 Download PDF Checklist
               </button>
-              <a href="/resources/nevada-probate-guide" className="btn-outline inline-block">
+              <a href="/resources/nevada-probate-guide/" className="btn-outline inline-block">
                 View Complete Guide
               </a>
             </div>

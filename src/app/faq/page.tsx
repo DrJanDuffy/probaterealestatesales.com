@@ -85,7 +85,7 @@ export default function FAQPage() {
                 schedules, document requirements, and how to expedite your case.
               </p>
               <a
-                href="/resources/nevada-probate-guide"
+                href="/resources/nevada-probate-guide/"
                 className="inline-flex items-center text-primary-600 hover:text-primary-800 font-semibold"
               >
                 Read Guide →
@@ -101,7 +101,7 @@ export default function FAQPage() {
                 procedures, and local requirements for probate real estate sales.
               </p>
               <a
-                href="/services"
+                href="/services/"
                 className="inline-flex items-center text-primary-600 hover:text-primary-800 font-semibold"
               >
                 Learn More →
@@ -117,7 +117,7 @@ export default function FAQPage() {
                 procedures for estates under $25,000 and how to avoid formal probate.
               </p>
               <a
-                href="/resources/nevada-probate-guide#small-estates"
+                href="/resources/nevada-probate-guide/#small-estates"
                 className="inline-flex items-center text-primary-600 hover:text-primary-800 font-semibold"
               >
                 View Guide →

@@ -299,7 +299,7 @@ export default async function LocationSlugPage({
               Call {SITE_CONFIG.phone}
             </a>
             <Link
-              href="/contact"
+              href="/contact/"
               className="border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-gray-900 transition-colors"
             >
               Free {loc.name} Consultation
@@ -322,7 +322,7 @@ export default async function LocationSlugPage({
             <FAQ />
             <div className="text-center mt-8">
               <Link
-                href="/faq"
+                href="/faq/"
                 className={`inline-flex items-center gap-2 ${accentClass} hover:opacity-80 font-semibold`}
               >
                 View All FAQs
@@ -336,7 +336,7 @@ export default async function LocationSlugPage({
       <section className="py-8 bg-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Link
-            href="/locations"
+            href="/locations/"
             className={`${accentClass} hover:opacity-80 font-semibold`}
           >
             ← Back to All Nevada Locations

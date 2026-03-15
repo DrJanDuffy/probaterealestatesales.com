@@ -48,7 +48,7 @@ export default function BlogPage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <Link href="/blog/probate-videos" className="group">
+            <Link href="/blog/probate-videos/" className="group">
               <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 hover:shadow-lg transition-shadow">
                 <Video className="h-12 w-12 text-blue-600 mb-4" />
                 <h3 className="text-2xl font-semibold text-secondary-900 mb-2 group-hover:text-primary-600">
@@ -65,7 +65,7 @@ export default function BlogPage() {
               </div>
             </Link>
 
-            <Link href="/blog/market-updates" className="group">
+            <Link href="/blog/market-updates/" className="group">
               <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-8 hover:shadow-lg transition-shadow">
                 <TrendingUp className="h-12 w-12 text-green-600 mb-4" />
                 <h3 className="text-2xl font-semibold text-secondary-900 mb-2 group-hover:text-primary-600">
@@ -81,7 +81,7 @@ export default function BlogPage() {
               </div>
             </Link>
 
-            <Link href="/resources" className="group">
+            <Link href="/resources/" className="group">
               <div className="bg-gradient-to-br from-purple-50 to-violet-100 rounded-xl p-8 hover:shadow-lg transition-shadow">
                 <BookOpen className="h-12 w-12 text-purple-600 mb-4" />
                 <h3 className="text-2xl font-semibold text-secondary-900 mb-2 group-hover:text-primary-600">
@@ -123,7 +123,7 @@ export default function BlogPage() {
                   states.
                 </p>
                 <Link
-                  href="/blog/nevada-probate-timeline"
+                  href="/blog/nevada-probate-timeline/"
                   className="text-primary-600 hover:text-primary-800 font-medium flex items-center"
                 >
                   Read More
@@ -146,7 +146,7 @@ export default function BlogPage() {
                   Everything you need to know about Nevada's certificate of incumbency for trusts.
                 </p>
                 <Link
-                  href="/blog/certificate-of-incumbency"
+                  href="/blog/certificate-of-incumbency/"
                   className="text-primary-600 hover:text-primary-800 font-medium flex items-center"
                 >
                   Read More
@@ -169,7 +169,7 @@ export default function BlogPage() {
                   Step-by-step guide to navigating Clark County probate court for property sales.
                 </p>
                 <Link
-                  href="/blog/clark-county-probate"
+                  href="/blog/clark-county-probate/"
                   className="text-primary-600 hover:text-primary-800 font-medium flex items-center"
                 >
                   Read More
@@ -189,7 +189,7 @@ export default function BlogPage() {
             Schedule a free consultation with our probate real estate experts today.
           </p>
           <Link
-            href="/contact"
+            href="/contact/"
             className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             Get Free Consultation

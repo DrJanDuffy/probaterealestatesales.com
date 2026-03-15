@@ -304,7 +304,7 @@ export default function ProbateDivisionPage() {
 
               <div className="mt-6">
                 <Link
-                  href="/services"
+                  href="/services/"
                   className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-sm"
                 >
                   Learn More About Trust Sales
@@ -331,7 +331,7 @@ export default function ProbateDivisionPage() {
                 Probate, a legal process overseeing the distribution of assets, including real
                 property, to heirs, can be intricate and highly regulated according to{' '}
                 <Link
-                  href="/resources/nevada-probate-guide"
+                  href="/resources/nevada-probate-guide/"
                   className="text-green-600 hover:underline"
                 >
                   Nevada probate law
@@ -345,7 +345,7 @@ export default function ProbateDivisionPage() {
 
               <div className="mt-6">
                 <Link
-                  href="/services"
+                  href="/services/"
                   className="inline-flex items-center gap-2 text-green-600 hover:text-green-800 font-semibold text-sm"
                 >
                   Learn More About Probate Sales
@@ -382,7 +382,7 @@ export default function ProbateDivisionPage() {
 
               <div className="mt-6">
                 <Link
-                  href="/services"
+                  href="/services/"
                   className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 font-semibold text-sm"
                 >
                   Learn More About Conservatorship Sales
@@ -432,11 +432,11 @@ export default function ProbateDivisionPage() {
                   <div className="space-y-4 text-gray-700 leading-relaxed" itemProp="description">
                     <p>
                       In the fiercely competitive{' '}
-                      <Link href="/locations/las-vegas" className="text-blue-600 hover:underline">
+                      <Link href="/locations/las-vegas/" className="text-blue-600 hover:underline">
                         Las Vegas
                       </Link>{' '}
                       and{' '}
-                      <Link href="/locations" className="text-blue-600 hover:underline">
+                      <Link href="/locations/" className="text-blue-600 hover:underline">
                         Nevada real estate market
                       </Link>
                       , <span className="font-semibold text-gray-900">Nancy Sanborn</span> stands as
@@ -450,7 +450,7 @@ export default function ProbateDivisionPage() {
                       cultivated an extensive network and built a team that delivers informed
                       representation to an impressive roster of repeat and referral clients
                       throughout{' '}
-                      <Link href="/locations" className="text-blue-600 hover:underline">
+                      <Link href="/locations/" className="text-blue-600 hover:underline">
                         Clark County
                       </Link>{' '}
                       and all of Nevada.
@@ -464,12 +464,12 @@ export default function ProbateDivisionPage() {
                       has made her the trusted choice for some of Nevada's most prestigious
                       attorneys, accountants, trustees, administrators, and distinguished property
                       owners. She specializes in{' '}
-                      <Link href="/services" className="text-blue-600 hover:underline">
+                      <Link href="/services/" className="text-blue-600 hover:underline">
                         probate real estate services
                       </Link>{' '}
                       and{' '}
                       <Link
-                        href="/resources/nevada-probate-guide"
+                        href="/resources/nevada-probate-guide/"
                         className="text-blue-600 hover:underline"
                       >
                         Nevada probate law compliance
@@ -516,7 +516,7 @@ export default function ProbateDivisionPage() {
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               <Link
-                href="/services"
+                href="/services/"
                 className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-primary-600"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Our Services</h3>
@@ -526,7 +526,7 @@ export default function ProbateDivisionPage() {
                 </p>
               </Link>
               <Link
-                href="/resources/nevada-probate-guide"
+                href="/resources/nevada-probate-guide/"
                 className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-green-600"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Nevada Probate Guide</h3>
@@ -536,7 +536,7 @@ export default function ProbateDivisionPage() {
                 </p>
               </Link>
               <Link
-                href="/faq"
+                href="/faq/"
                 className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-blue-600"
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-2">Frequently Asked Questions</h3>
@@ -572,7 +572,7 @@ export default function ProbateDivisionPage() {
                 Call (702) 830-9222
               </a>
               <a
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center gap-3 bg-transparent border-2 border-white hover:bg-white hover:text-gray-900 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105"
               >
                 <MapPin className="w-5 h-5" />

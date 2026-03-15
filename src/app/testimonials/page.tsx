@@ -221,7 +221,7 @@ export default function TestimonialsPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <Link
-                    href="/contact"
+                    href="/contact/"
                     className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-md font-medium hover:bg-primary-700 transition-colors"
                   >
                     Get Your Free Consultation
@@ -393,7 +393,7 @@ export default function TestimonialsPage() {
             <FAQ />
             <div className="text-center mt-8">
               <Link
-                href="/faq"
+                href="/faq/"
                 className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold"
               >
                 View All FAQs
@@ -414,7 +414,7 @@ export default function TestimonialsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
             >
               Schedule Free Consultation

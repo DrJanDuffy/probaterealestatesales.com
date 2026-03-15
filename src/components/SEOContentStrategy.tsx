@@ -350,7 +350,7 @@ export default function SEOContentStrategy() {
               estate expert in Las Vegas search results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/resources/nevada-probate-guide" className="btn-primary inline-block">
+              <a href="/resources/nevada-probate-guide/" className="btn-primary inline-block">
                 Read Optimized Probate Guide
               </a>
               <a

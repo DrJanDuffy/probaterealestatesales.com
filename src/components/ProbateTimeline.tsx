@@ -292,7 +292,7 @@ export default function ProbateTimeline() {
               >
                 Schedule Free Consultation
               </a>
-              <a href="/resources/nevada-probate-guide" className="btn-outline inline-block">
+              <a href="/resources/nevada-probate-guide/" className="btn-outline inline-block">
                 Download Complete Guide
               </a>
             </div>

@@ -461,7 +461,7 @@ export default function ContentMarketingCalendar() {
               >
                 Start Content Creation
               </a>
-              <a href="/resources/nevada-probate-guide" className="btn-outline inline-block">
+              <a href="/resources/nevada-probate-guide/" className="btn-outline inline-block">
                 View Sample Content
               </a>
             </div>

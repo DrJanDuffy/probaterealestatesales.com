@@ -52,6 +52,29 @@ Your site is already optimized for Google Search Console:
 - ✅ **Mobile-Friendly** - Responsive design
 - ✅ **Fast Loading** - Optimized performance
 
+## Not found (404) in GSC
+
+If GSC shows **"Not found (404)"** for URLs like:
+
+- **`https://www.probaterealestatesales.com/$`** – Fixed in code: `/$` and `/%24` now 301-redirect to `/` (see `next.config.js` and `vercel.json`). Deploy and re-validate.
+- **`http://probaterealestatesales.com/`** or **`https://probaterealestatesales.com/terms`** – The bare domain must reach your app so middleware can 301 to `https://www...`. In **Vercel → Project → Settings → Domains**, add `probaterealestatesales.com` (in addition to `www.probaterealestatesales.com`). Point both to the same project; middleware will redirect non-www and HTTP to the canonical URL.
+
+## Crawled - currently not indexed (non-www URLs)
+
+If GSC shows **"Crawled - currently not indexed"** for URLs like:
+
+- `https://probaterealestatesales.com/`
+- `https://probaterealestatesales.com/faq`
+- `https://probaterealestatesales.com/locations/boulder-city`
+
+this usually means Google is crawling the **non-www** variant. Those URLs are not supposed to be indexed; the **canonical** version is `https://www.probaterealestatesales.com/...`. The app’s middleware 301-redirects non-www → www, so once the request hits your app, Google gets a redirect and indexes the www URL instead.
+
+**What to do:**
+
+1. **Ensure the bare domain reaches the app** – In **Vercel → Project → Settings → Domains**, add `probaterealestatesales.com` (same project as `www.probaterealestatesales.com`). Then every request to the bare domain hits your app and gets a 301 to www.
+2. **No code change needed** – Middleware already redirects `probaterealestatesales.com` → `https://www.probaterealestatesales.com/...` with a trailing slash.
+3. **Optional** – In GSC, use **URL Inspection** on the **www** URL (e.g. `https://www.probaterealestatesales.com/faq/`) and request indexing so Google reinforces the canonical. The non-www “Crawled - currently not indexed” count may stay for a while; it’s expected and not an error.
+
 ## 📊 What to Monitor
 
 ### Week 1-2

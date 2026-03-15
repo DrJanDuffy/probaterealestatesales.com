@@ -300,7 +300,7 @@ export default function ContactPage() {
             <FAQ />
             <div className="text-center mt-8">
               <Link
-                href="/faq"
+                href="/faq/"
                 className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold"
               >
                 View All FAQs

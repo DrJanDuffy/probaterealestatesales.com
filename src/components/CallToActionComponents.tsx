@@ -356,7 +356,7 @@ export default function CallToActionComponents() {
               >
                 Start Converting Visitors
               </a>
-              <a href="/resources/nevada-probate-guide" className="btn-outline inline-block">
+              <a href="/resources/nevada-probate-guide/" className="btn-outline inline-block">
                 Download Free Guide
               </a>
             </div>

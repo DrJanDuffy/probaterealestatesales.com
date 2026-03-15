@@ -339,7 +339,7 @@ export default function ServicesPage() {
                 </Link>{' '}
                 and estates that qualify. See our{' '}
                 <Link
-                  href="/resources/nevada-probate-guide#timeline"
+                  href="/resources/nevada-probate-guide/#timeline"
                   className="text-green-600 hover:text-green-800 font-semibold underline"
                 >
                   probate timeline guide
@@ -848,7 +848,7 @@ export default function ServicesPage() {
             <FAQ />
             <div className="text-center mt-8">
               <Link
-                href="/faq"
+                href="/faq/"
                 className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold"
               >
                 View All FAQs

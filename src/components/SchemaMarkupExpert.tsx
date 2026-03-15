@@ -514,7 +514,7 @@ export default function SchemaMarkupExpert() {
               estate expert in Las Vegas search results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/resources/nevada-probate-guide" className="btn-primary inline-block">
+              <a href="/resources/nevada-probate-guide/" className="btn-primary inline-block">
                 View Optimized Content
               </a>
               <a

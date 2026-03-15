@@ -100,7 +100,7 @@ export default function ProbateEstateSalesPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/contact"
+                  href="/contact/"
                   className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white rounded-lg font-semibold text-lg hover:bg-primary-700 transition-colors"
                 >
                   <Gavel className="h-5 w-5 mr-2" />
@@ -513,7 +513,7 @@ export default function ProbateEstateSalesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                href="/contact/"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
               >
                 Get Estate Sale Help
