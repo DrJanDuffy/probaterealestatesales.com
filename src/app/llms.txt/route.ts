@@ -20,7 +20,7 @@ Dr. Jan Duffy is a licensed Nevada real estate agent (S.0197614) specializing in
 
 - **Brokerage:** Berkshire Hathaway HomeServices Nevada Properties
 - **License:** Nevada S.0197614.LLC
-- **Office:** 400 S 4th Street Suite 250 B, Las Vegas, NV 89101
+- **Office:** 400 S 4th St suite 250 b, Las Vegas, NV 89101
 - **Phone:** (702) 830-9222
 - **Email:** DrJanSells@ProbateRealEstateSales.com
 

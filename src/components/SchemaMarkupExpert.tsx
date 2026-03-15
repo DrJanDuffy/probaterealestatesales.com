@@ -24,7 +24,7 @@ const schemaData = {
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '400 S 4th Street Suite 250 B',
+    streetAddress: '400 S 4th St suite 250 b',
     addressLocality: 'Las Vegas',
     addressRegion: 'NV',
     postalCode: '89101',
@@ -111,7 +111,7 @@ const schemaData = {
     url: 'https://www.probaterealestatesales.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '400 S 4th Street Suite 250 B',
+      streetAddress: '400 S 4th St suite 250 b',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89101',
@@ -160,7 +160,7 @@ const businessSchema = {
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '400 S 4th Street Suite 250 B',
+    streetAddress: '400 S 4th St suite 250 b',
     addressLocality: 'Las Vegas',
     addressRegion: 'NV',
     postalCode: '89101',
@@ -247,7 +247,7 @@ const localBusinessSchema = {
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '400 S 4th Street Suite 250 B',
+    streetAddress: '400 S 4th St suite 250 b',
     addressLocality: 'Las Vegas',
     addressRegion: 'NV',
     postalCode: '89101',

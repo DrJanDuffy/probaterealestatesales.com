@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     images: ['/images/og-dr-jan-duffy.jpg'],
   },
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.probaterealestatesales.com/',
   },
   robots: {
     index: true,

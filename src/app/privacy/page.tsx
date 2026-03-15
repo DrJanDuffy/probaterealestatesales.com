@@ -252,7 +252,7 @@ export default function PrivacyPage() {
                   </a>
                 </p>
                 <p className="text-secondary-700 mt-4">
-                  Address: 400 S 4th Street Suite 250 B, Las Vegas, NV 89101
+                  Address: 400 S 4th St suite 250 b, Las Vegas, NV 89101
                 </p>
               </div>
             </section>

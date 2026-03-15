@@ -126,7 +126,7 @@ export default function SEOMetaTags({
       {/* Business-specific Meta Tags */}
       <meta
         name="business:contact_data:street_address"
-        content="City Centre Place, 400 S 4th Street Suite 250 B"
+        content="400 S 4th St suite 250 b"
       />
       <meta name="business:contact_data:locality" content="Las Vegas" />
       <meta name="business:contact_data:region" content="NV" />
@@ -182,7 +182,7 @@ export default function SEOMetaTags({
             email: 'DrJanSells@ProbateRealEstateSales.com',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: 'City Centre Place, 400 S 4th Street Suite 250 B',
+              streetAddress: '400 S 4th St suite 250 b',
               addressLocality: 'Las Vegas',
               addressRegion: 'NV',
               postalCode: '89101',

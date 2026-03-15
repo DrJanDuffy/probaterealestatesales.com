@@ -151,13 +151,13 @@ export default function Footer() {
               <div className="flex items-start text-secondary-300 group">
                 <MapPin className="h-5 w-5 mr-3 text-primary-400 mt-0.5 group-hover:text-primary-300 transition-colors flex-shrink-0" />
                 <a
-                  href="https://maps.google.com/?q=400+S+4th+Street+Suite+250+B+Las+Vegas+NV+89101"
+                  href="https://maps.google.com/?q=400+S+4th+St+suite+250+b+Las+Vegas+NV+89101"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors focus-ring-dark rounded-md px-1"
                   aria-label="View office location on Google Maps"
                 >
-                  400 S 4th Street Suite 250 B, Las Vegas, NV 89101
+                  400 S 4th St suite 250 b, Las Vegas, NV 89101
                 </a>
               </div>
               <div className="flex items-center text-secondary-300">

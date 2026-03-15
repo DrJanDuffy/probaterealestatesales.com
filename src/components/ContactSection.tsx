@@ -213,8 +213,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">Office</h4>
-                    <p className="text-secondary-600">City Centre Place</p>
-                    <p className="text-secondary-600">400 S 4th Street Suite 250 B</p>
+                    <p className="text-secondary-600">400 S 4th St suite 250 b</p>
                     <p className="text-secondary-600">Las Vegas, NV 89101</p>
                   </div>
                 </div>

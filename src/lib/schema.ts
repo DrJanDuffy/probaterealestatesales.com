@@ -339,7 +339,7 @@ export const personSchema = {
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '400 S 4th Street Suite 250 B',
+    streetAddress: '400 S 4th St suite 250 b',
     addressLocality: 'Las Vegas',
     addressRegion: 'NV',
     postalCode: '89101',
@@ -455,8 +455,11 @@ export const defaultSchemas = {
   localBusiness: {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Berkshire Hathaway HomeServices Nevada Properties - Probate Real Estate Division',
-    alternateName: 'Las Vegas Probate Real Estate Sales',
+    name: 'Probate Real Estate Sales - Dr. Jan Duffy',
+    alternateName: [
+      'Las Vegas Probate Real Estate Sales',
+      'Berkshire Hathaway HomeServices Nevada Properties - Probate Real Estate Division',
+    ],
     description:
       "Expert probate real estate services in Las Vegas and Clark County. Specialized in comprehensive probate real estate services, court-approved property sales, and estate liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
     url: 'https://www.probaterealestatesales.com',
@@ -464,7 +467,7 @@ export const defaultSchemas = {
     email: 'DrJanSells@ProbateRealEstateSales.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '400 S 4th Street Suite 250 B',
+      streetAddress: '400 S 4th St suite 250 b',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89101',
@@ -544,7 +547,7 @@ export const defaultSchemas = {
     email: 'DrJanSells@ProbateRealEstateSales.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '400 S 4th Street Suite 250 B',
+      streetAddress: '400 S 4th St suite 250 b',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89101',
@@ -755,7 +758,7 @@ export const defaultSchemas = {
     foundingDate: '2020',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '400 S 4th Street Suite 250 B',
+      streetAddress: '400 S 4th St suite 250 b',
       addressLocality: 'Las Vegas',
       addressRegion: 'NV',
       postalCode: '89101',

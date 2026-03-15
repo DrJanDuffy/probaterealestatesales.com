@@ -80,13 +80,11 @@ export default function ContactPage() {
               <MapPin className="h-12 w-12 text-purple-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">Visit</h3>
               <p className="text-secondary-700 font-medium mb-4">
-                400 S 4th Street
-                <br />
-                Suite 250 B<br />
+                400 S 4th St suite 250 b<br />
                 Las Vegas, NV 89101
               </p>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=400+S+4th+Street+Suite+250+B,+Las+Vegas,+NV+89101"
+                href="https://www.google.com/maps/dir/?api=1&destination=400+S+4th+St+suite+250+b,+Las+Vegas,+NV+89101"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors text-sm font-medium"
@@ -118,20 +116,20 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-secondary-900 mb-6 text-center">Find Us</h2>
             <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
               <iframe
-                src="https://www.google.com/maps?q=400+S+4th+Street+Suite+250+B,+Las+Vegas,+NV+89101&output=embed&hl=en&z=15"
+                src="https://www.google.com/maps?q=400+S+4th+St+suite+250+b,+Las+Vegas,+NV+89101&output=embed&hl=en&z=15"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Probate Real Estate Sales Office Location - 400 S 4th Street Suite 250 B, Las Vegas, NV 89101"
+                title="Probate Real Estate Sales Office Location - 400 S 4th St suite 250 b, Las Vegas, NV 89101"
                 className="w-full"
               ></iframe>
             </div>
             <div className="mt-4 text-center">
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=400+S+4th+Street+Suite+250+B,+Las+Vegas,+NV+89101"
+                href="https://www.google.com/maps/dir/?api=1&destination=400+S+4th+St+suite+250+b,+Las+Vegas,+NV+89101"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"

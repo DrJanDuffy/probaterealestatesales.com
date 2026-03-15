@@ -13,7 +13,7 @@ export const SITE_CONFIG = {
   license: 'S.0197614.LLC',
   brokerage: 'Berkshire Hathaway HomeServices Nevada Properties',
   address: {
-    streetAddress: '400 S 4th Street Suite 250 B',
+    streetAddress: '400 S 4th St suite 250 b',
     addressLocality: 'Las Vegas',
     addressRegion: 'NV',
     postalCode: '89101',

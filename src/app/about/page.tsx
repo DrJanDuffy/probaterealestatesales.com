@@ -351,7 +351,7 @@ export default function AboutPage() {
                 <MapPin className="h-8 w-8 text-primary-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-secondary-900 mb-2">Office</h3>
                 <p className="text-secondary-600">
-                  400 S 4th Street Suite 250 B<br />
+                  400 S 4th St suite 250 b<br />
                   Las Vegas, NV 89101
                 </p>
               </div>
