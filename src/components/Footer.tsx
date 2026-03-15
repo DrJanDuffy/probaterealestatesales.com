@@ -375,7 +375,7 @@ export default function Footer() {
           {/* Nevada Advantage Highlight */}
           <div className="mt-8 p-5 bg-gradient-to-r from-primary-900 to-primary-800 rounded-lg border border-primary-700">
             <div className="text-center">
-              <p className="text-primary-100 font-semibold text-lg mb-2">
+              <p className="text-white font-semibold text-lg mb-2">
                 🎯 <strong>Nevada Advantage:</strong> 6-8 month probate timeline vs California's
                 9-18 months
               </p>

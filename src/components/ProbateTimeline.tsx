@@ -249,7 +249,7 @@ export default function ProbateTimeline() {
         <div className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 md:p-12 text-white mb-16">
           <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Total Timeline: 6-8 Months</h3>
-            <p className="text-xl text-primary-100 max-w-2xl mx-auto">
+            <p className="text-xl text-white max-w-2xl mx-auto">
               Dr. Jan Duffy's expertise can reduce this timeline by 30-40% through efficient court
               coordination and professional property management.
             </p>
@@ -258,19 +258,19 @@ export default function ProbateTimeline() {
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">30 days</div>
-              <div className="text-primary-100">Initial Filing</div>
+              <div className="text-white">Initial Filing</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">60 days</div>
-              <div className="text-primary-100">Court Proceedings</div>
+              <div className="text-white">Court Proceedings</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">120 days</div>
-              <div className="text-primary-100">Property Sale</div>
+              <div className="text-white">Property Sale</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">210 days</div>
-              <div className="text-primary-100">Final Distribution</div>
+              <div className="text-white">Final Distribution</div>
             </div>
           </div>
         </div>

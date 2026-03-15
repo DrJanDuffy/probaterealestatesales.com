@@ -532,7 +532,7 @@ export default function ProbatePropertyBuyersPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Start Buying Probate Properties?
             </h2>
-            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
               Work with Dr. Jan Duffy, Las Vegas's leading probate real estate specialist, to find
               and purchase probate properties with confidence.
             </p>

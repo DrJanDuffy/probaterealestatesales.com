@@ -43,7 +43,7 @@ export default function Hero() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-soft border-l-4 border-primary-500">
                   <div className="p-2 bg-primary-100 rounded-full">
-                    <Award className="h-5 w-5 text-primary-600" />
+                    <Award className="h-5 w-5 text-primary-700" />
                   </div>
                   <div>
                     <p className="font-semibold text-secondary-900">20+ Years Experience</p>
@@ -53,7 +53,7 @@ export default function Hero() {
 
                 <div className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-soft border-l-4 border-accent-500">
                   <div className="p-2 bg-accent-100 rounded-full">
-                    <Shield className="h-5 w-5 text-accent-600" />
+                    <Shield className="h-5 w-5 text-accent-700" />
                   </div>
                   <div>
                     <p className="font-semibold text-secondary-900">Court-Approved Property Sale</p>
@@ -63,7 +63,7 @@ export default function Hero() {
 
                 <div className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-soft border-l-4 border-green-500">
                   <div className="p-2 bg-green-100 rounded-full">
-                    <Star className="h-5 w-5 text-green-600" />
+                    <Star className="h-5 w-5 text-green-700" />
                   </div>
                   <div>
                     <p className="font-semibold text-secondary-900">Ph.D. in Research</p>
@@ -73,7 +73,7 @@ export default function Hero() {
 
                 <div className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-soft border-l-4 border-purple-500">
                   <div className="p-2 bg-purple-100 rounded-full">
-                    <Calendar className="h-5 w-5 text-purple-600" />
+                    <Calendar className="h-5 w-5 text-purple-700" />
                   </div>
                   <div>
                     <p className="font-semibold text-secondary-900">45-Day Timeline</p>
@@ -94,12 +94,12 @@ export default function Hero() {
                 </div>
 
                 <div className="flex items-center gap-2 text-secondary-700">
-                  <Shield className="h-5 w-5 text-primary-600" />
+                  <Shield className="h-5 w-5 text-primary-700" />
                   <span className="font-medium">Comprehensive Probate Real Estate Services</span>
                 </div>
 
                 <div className="flex items-center gap-2 text-secondary-700">
-                  <Award className="h-5 w-5 text-accent-600" />
+                  <Award className="h-5 w-5 text-accent-700" />
                   <span className="font-medium">Court Trusted</span>
                 </div>
               </div>
@@ -221,24 +221,24 @@ export default function Hero() {
                         sizes="(max-width: 768px) 192px, 192px"
                       />
                     </div>
-                    <h3 className="text-xl font-bold text-secondary-900 mb-2">Dr. Jan Duffy</h3>
+                    <h2 className="text-xl font-bold text-secondary-900 mb-2">Dr. Jan Duffy</h2>
                     <p className="text-secondary-600">Probate Real Estate Specialist</p>
                   </div>
 
                   {/* Credentials */}
                   <div className="mt-6 pt-6 border-t border-secondary-200 space-y-3">
                     <div className="flex items-center gap-3">
-                      <Award className="h-5 w-5 text-primary-600" />
+                      <Award className="h-5 w-5 text-primary-700" />
                       <span className="text-sm text-secondary-700">
                         9 Exceptions to Probate Expert
                       </span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Shield className="h-5 w-5 text-accent-600" />
+                      <Shield className="h-5 w-5 text-accent-700" />
                       <span className="text-sm text-secondary-700">Court Trusted</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Star className="h-5 w-5 text-green-600" />
+                      <Star className="h-5 w-5 text-green-700" />
                       <span className="text-sm text-secondary-700">Property Valuation Expert</span>
                     </div>
                   </div>

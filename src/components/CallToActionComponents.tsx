@@ -142,7 +142,7 @@ export default function CallToActionComponents() {
           <div className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 md:p-12 text-white">
             <div className="text-center mb-8">
               <h3 className="text-3xl md:text-4xl font-bold mb-4">{primaryCTA.headline}</h3>
-              <p className="text-xl text-primary-100 max-w-2xl mx-auto">{primaryCTA.subheadline}</p>
+              <p className="text-xl text-white max-w-2xl mx-auto">{primaryCTA.subheadline}</p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -166,7 +166,7 @@ export default function CallToActionComponents() {
 
             <div className="flex flex-wrap gap-6 justify-center mb-6">
               {primaryCTA.trustIndicators.map((indicator) => (
-                <span key={indicator.text} className="flex items-center gap-2 text-primary-100">
+                <span key={indicator.text} className="flex items-center gap-2 text-white">
                   <indicator.icon className="h-5 w-5" />
                   {indicator.text}
                 </span>
@@ -178,7 +178,7 @@ export default function CallToActionComponents() {
                 <span className="text-2xl">{primaryCTA.urgency.icon}</span>
                 <div>
                   <p className="font-semibold text-white">{primaryCTA.urgency.title}</p>
-                  <p className="text-primary-100 text-sm">{primaryCTA.urgency.message}</p>
+                  <p className="text-white text-sm">{primaryCTA.urgency.message}</p>
                 </div>
               </div>
             </div>

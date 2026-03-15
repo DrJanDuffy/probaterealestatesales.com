@@ -66,7 +66,7 @@ const credentials = [
     title: 'Doctor of Philosophy',
     subtitle: 'Research',
     description: 'Academic expertise in research methodology and analysis',
-    color: 'text-blue-600',
+    color: 'text-blue-700',
     bgColor: 'bg-blue-100',
   },
   {
@@ -75,7 +75,7 @@ const credentials = [
     subtitle: 'Specialized Knowledge',
     description:
       'Expert in inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques',
-    color: 'text-primary-600',
+    color: 'text-primary-700',
     bgColor: 'bg-primary-100',
   },
   {
@@ -83,7 +83,7 @@ const credentials = [
     title: 'Nevada Real Estate License',
     subtitle: 'Active since 2003',
     description: 'Licensed real estate professional in Nevada for over 20 years',
-    color: 'text-green-600',
+    color: 'text-green-700',
     bgColor: 'bg-green-100',
   },
   {
@@ -92,7 +92,7 @@ const credentials = [
     subtitle: 'Approved Expert Witness',
     description:
       'Specialized knowledge in inventory, appraisal, orders, title, sales, authority, documents, taxes, transfers, and marketing techniques',
-    color: 'text-purple-600',
+    color: 'text-purple-700',
     bgColor: 'bg-purple-100',
   },
 ];
@@ -261,19 +261,19 @@ export default function WhyChooseUs() {
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">$150M+</div>
-              <div className="text-primary-100">Total Estate Transactions</div>
+              <div className="text-white">Total Estate Transactions</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">500+</div>
-              <div className="text-primary-100">Probate Properties Sold</div>
+              <div className="text-white">Probate Properties Sold</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">20+</div>
-              <div className="text-primary-100">Years of Experience</div>
+              <div className="text-white">Years of Experience</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">98%</div>
-              <div className="text-primary-100">Client Satisfaction Rate</div>
+              <div className="text-white">Client Satisfaction Rate</div>
             </div>
           </div>
         </div>
@@ -289,7 +289,7 @@ export default function WhyChooseUs() {
                 key={`affiliation-${affiliation.substring(0, 20).replace(/\s+/g, '-').toLowerCase()}`}
                 className="flex items-center gap-3 p-4 bg-gray-50 rounded-lg"
               >
-                <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-green-700 flex-shrink-0" />
                 <span className="text-secondary-700 text-sm">{affiliation}</span>
               </div>
             ))}

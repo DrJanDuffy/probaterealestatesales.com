@@ -279,7 +279,7 @@ export default function Services() {
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="h-8 w-8 text-green-600" />
+                <Star className="h-8 w-8 text-green-700" />
               </div>
               <h4 className="text-lg font-semibold text-secondary-900 mb-2">5-Star Reviews</h4>
               <p className="text-secondary-600 text-sm">
@@ -398,7 +398,7 @@ export default function Services() {
                 500+ Properties Sold
               </span>
               <span className="flex items-center gap-2">
-                <Heart className="h-4 w-4 text-green-600" />
+                <Heart className="h-4 w-4 text-green-700" />
                 5-Star Reviews
               </span>
             </div>

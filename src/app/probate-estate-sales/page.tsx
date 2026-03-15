@@ -507,7 +507,7 @@ export default function ProbateEstateSalesPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Need Expert Help with Your Probate Estate Sale?
             </h2>
-            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
               Work with Dr. Jan Duffy, Las Vegas's leading probate real estate specialist, to
               navigate your estate sale with confidence and compliance.
             </p>

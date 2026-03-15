@@ -82,57 +82,57 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             <Link
               href="/resources/#probate-timeline"
-              className="bg-blue-100 text-blue-600 hover:bg-blue-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              className="bg-blue-100 text-blue-800 hover:bg-blue-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
               aria-label="View Probate Timeline - 6-8 month process"
             >
               <Clock className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
               <h3 className="font-semibold text-sm mb-1">Probate Timeline</h3>
-              <p className="text-xs opacity-80">6-8 month process</p>
+              <p className="text-xs text-secondary-600">6-8 month process</p>
             </Link>
             <Link
               href="/resources/#property-checklist"
-              className="bg-green-100 text-green-600 hover:bg-green-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              className="bg-green-100 text-green-800 hover:bg-green-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
               aria-label="View Probate Property Checklist - Step-by-step guide"
             >
               <FileText className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
               <h3 className="font-semibold text-sm mb-1">Property Checklist</h3>
-              <p className="text-xs opacity-80">Step-by-step guide</p>
+              <p className="text-xs text-secondary-600">Step-by-step guide</p>
             </Link>
             <Link
               href="/resources/#cost-calculator"
-              className="bg-purple-100 text-purple-600 hover:bg-purple-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              className="bg-purple-100 text-purple-800 hover:bg-purple-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
               aria-label="Use Probate Cost Calculator - Estimate costs"
             >
               <Calculator className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
               <h3 className="font-semibold text-sm mb-1">Cost Calculator</h3>
-              <p className="text-xs opacity-80">Estimate costs</p>
+              <p className="text-xs text-secondary-600">Estimate costs</p>
             </Link>
             <Link
               href="/home-valuation/"
-              className="bg-orange-100 text-orange-600 hover:bg-orange-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              className="bg-orange-100 text-orange-800 hover:bg-orange-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
               aria-label="Get Free Property Valuation - Free estimate"
             >
               <HomeIcon className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
               <h3 className="font-semibold text-sm mb-1">Property Valuation</h3>
-              <p className="text-xs opacity-80">Free estimate</p>
+              <p className="text-xs text-secondary-600">Free estimate</p>
             </Link>
             <Link
               href="/faq/"
-              className="bg-red-100 text-red-600 hover:bg-red-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              className="bg-red-100 text-red-800 hover:bg-red-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
               aria-label="View Frequently Asked Questions - Common questions"
             >
               <FileText className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
               <h3 className="font-semibold text-sm mb-1">FAQ</h3>
-              <p className="text-xs opacity-80">Common questions</p>
+              <p className="text-xs text-secondary-600">Common questions</p>
             </Link>
             <Link
               href="/contact/"
-              className="bg-teal-100 text-teal-600 hover:bg-teal-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
+              className="bg-teal-100 text-teal-800 hover:bg-teal-200 rounded-lg p-4 text-center transition-all duration-200 hover:shadow-md hover-lift group focus-ring"
               aria-label="Contact Us - Free consultation with Dr. Duffy"
             >
               <Phone className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
               <h3 className="font-semibold text-sm mb-1">Free Consultation</h3>
-              <p className="text-xs opacity-80">Speak with Dr. Duffy</p>
+              <p className="text-xs text-secondary-600">Speak with Dr. Duffy</p>
             </Link>
           </div>
 
@@ -371,7 +371,7 @@ export default function Home() {
         <div className="container-max py-12">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Get Your Free Property Valuation</h2>
-            <p className="text-xl text-primary-100 mb-6">
+            <p className="text-xl text-white mb-6">
               Get an instant estimate of your property value with our professional valuation tool
             </p>
             <Link
@@ -510,7 +510,7 @@ export default function Home() {
         <div className="container-max py-12">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-            <p className="text-xl text-primary-100 mb-6">
+            <p className="text-xl text-white mb-6">
               Contact us today for a free consultation about your probate real estate needs
             </p>
             <Link

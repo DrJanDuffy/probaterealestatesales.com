@@ -45,7 +45,7 @@ export default function LasVegasMarketJan2025Page() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/blog/market-updates/"
-            className="inline-flex items-center text-primary-100 hover:text-white mb-6"
+            className="inline-flex items-center text-white hover:text-white mb-6"
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
             Back to Market Updates
@@ -309,7 +309,7 @@ export default function LasVegasMarketJan2025Page() {
           <h2 className="text-3xl font-bold mb-4">
             Need Market-Specific Pricing for Your Property?
           </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Get a free market analysis and pricing strategy tailored to your probate property's
             location and condition.
           </p>

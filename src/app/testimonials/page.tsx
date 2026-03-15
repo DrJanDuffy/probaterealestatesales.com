@@ -196,7 +196,7 @@ export default function TestimonialsPage() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               Families Trust Dr. Jan Duffy During Difficult Times
             </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-primary-100">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-white">
               Real stories from real families who have experienced Dr. Duffy's compassionate, expert
               guidance through the probate process.
             </p>
@@ -408,7 +408,7 @@ export default function TestimonialsPage() {
       <section className="py-16 bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Experience the Same Success?</h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Join hundreds of families who have trusted Dr. Jan Duffy with their probate property
             sales. Get a free consultation to discuss your unique situation.
           </p>

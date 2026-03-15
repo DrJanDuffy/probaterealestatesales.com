@@ -306,7 +306,7 @@ export default function MortgageCalculatorPage() {
       <section className="py-16 bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Buy a Probate Property?</h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Let our probate real estate experts help you find and finance the perfect property.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

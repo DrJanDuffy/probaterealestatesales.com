@@ -53,7 +53,7 @@ export default function ResourcesPage() {
       <section className="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20">
         <div className="container-max text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Probate Real Estate Resources</h1>
-          <p className="text-xl md:text-2xl text-primary-100 max-w-3xl mx-auto mb-8">
+          <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto mb-8">
             Dr. Jan Duffy's comprehensive collection of educational content, tools, and guides to
             help you navigate the Nevada probate process with confidence.
           </p>
@@ -354,7 +354,7 @@ export default function ResourcesPage() {
       <section className="py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
         <div className="container-max text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Access All Resources?</h2>
-          <p className="text-xl text-primary-100 max-w-2xl mx-auto mb-8">
+          <p className="text-xl text-white max-w-2xl mx-auto mb-8">
             Get personalized guidance from Dr. Jan Duffy and access to all educational resources
             with your free probate consultation.
           </p>

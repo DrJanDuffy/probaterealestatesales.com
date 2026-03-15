@@ -383,7 +383,7 @@ export default function ProbateCostCalculator() {
                 <div className="text-4xl md:text-5xl font-bold mb-2">
                   ${costs.total.toLocaleString()}
                 </div>
-                <p className="text-primary-100">
+                <p className="text-white">
                   {percentageOfEstate.toFixed(1)}% of total estate value
                 </p>
               </div>
@@ -391,23 +391,23 @@ export default function ProbateCostCalculator() {
               <div className="grid grid-cols-2 gap-4 text-center">
                 <div>
                   <div className="text-2xl font-bold mb-1">${costs.court.toLocaleString()}</div>
-                  <div className="text-primary-100 text-sm">Court Fees</div>
+                  <div className="text-white text-sm">Court Fees</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold mb-1">${costs.attorney.toLocaleString()}</div>
-                  <div className="text-primary-100 text-sm">Legal Fees</div>
+                  <div className="text-white text-sm">Legal Fees</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold mb-1">
                     ${costs.realEstate.toLocaleString()}
                   </div>
-                  <div className="text-primary-100 text-sm">Real Estate</div>
+                  <div className="text-white text-sm">Real Estate</div>
                 </div>
                 <div>
                   <div className="text-2xl font-bold mb-1">
                     ${costs.additional.toLocaleString()}
                   </div>
-                  <div className="text-primary-100 text-sm">Additional</div>
+                  <div className="text-white text-sm">Additional</div>
                 </div>
               </div>
             </div>

@@ -97,9 +97,9 @@ export default function SchemaMarkup({
   webPage,
 }: SchemaMarkupProps) {
   useEffect(() => {
-    // Remove any existing schema markup
-    const existingScripts = document.querySelectorAll('script[type="application/ld+json"]');
-    for (const script of existingScripts) {
+    // Remove only scripts we previously added (avoid touching layout's JSON-LD to prevent React 418 hydration mismatch)
+    const ourScripts = document.querySelectorAll('script[type="application/ld+json"][data-schema-markup="page"]');
+    for (const script of ourScripts) {
       script.remove();
     }
 
@@ -337,19 +337,20 @@ export default function SchemaMarkup({
       );
     }
 
-    // Inject schemas into head
+    // Inject schemas into head (mark so we only remove these, not layout's scripts)
     for (let index = 0; index < schemas.length; index++) {
       const schema = schemas[index];
       const script = document.createElement('script');
       script.type = 'application/ld+json';
+      script.setAttribute('data-schema-markup', 'page');
       script.text = JSON.stringify(schema);
       script.id = `schema-${index}`;
       document.head.appendChild(script);
     }
 
-    // Cleanup function
+    // Cleanup: remove only our page-injected scripts
     return () => {
-      const scripts = document.querySelectorAll('script[type="application/ld+json"]');
+      const scripts = document.querySelectorAll('script[type="application/ld+json"][data-schema-markup="page"]');
       for (const script of scripts) {
         script.remove();
       }

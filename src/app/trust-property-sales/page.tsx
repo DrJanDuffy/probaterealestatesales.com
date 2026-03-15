@@ -489,7 +489,7 @@ export default function TrustPropertySalesPage() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Need Expert Help with Your Trust Property Sale?
             </h2>
-            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
               Work with Dr. Jan Duffy, Las Vegas's leading trust property sales specialist, to
               navigate your trust sale with confidence and compliance.
             </p>

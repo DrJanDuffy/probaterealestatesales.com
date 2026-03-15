@@ -408,7 +408,7 @@ export default function NevadaProbateLaws() {
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
               Need Help Understanding Nevada Probate Laws?
             </h3>
-            <p className="text-xl text-primary-100 max-w-2xl mx-auto mb-6">
+            <p className="text-xl text-white max-w-2xl mx-auto mb-6">
               Dr. Jan Duffy explains complex legal requirements in simple terms and ensures your
               probate process complies with all Nevada statutes.
             </p>
@@ -427,7 +427,7 @@ export default function NevadaProbateLaws() {
                 Download Complete Guide
               </a>
             </div>
-            <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-primary-100">
+            <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-white">
               <span className="flex items-center gap-2">
                 <Gavel className="h-4 w-4" />
                 Legal Compliance

@@ -37,7 +37,7 @@ export default function MarketUpdatesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/blog/"
-            className="inline-flex items-center text-primary-100 hover:text-white mb-6"
+            className="inline-flex items-center text-white hover:text-white mb-6"
           >
             <ArrowLeft className="h-5 w-5 mr-2" />
             Back to Blog
@@ -174,7 +174,7 @@ export default function MarketUpdatesPage() {
       <section className="py-16 bg-primary-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Need Market-Specific Advice?</h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Get personalized market analysis and pricing strategy for your probate property.
           </p>
           <Link

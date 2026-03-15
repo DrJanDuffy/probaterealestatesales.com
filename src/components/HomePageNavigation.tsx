@@ -66,12 +66,12 @@ export default function HomePageNavigation() {
           {quickLinks.map((link, index) => {
             const Icon = link.icon;
             const colorClasses = {
-              blue: 'bg-blue-100 text-blue-600 hover:bg-blue-200',
-              green: 'bg-green-100 text-green-600 hover:bg-green-200',
-              purple: 'bg-purple-100 text-purple-600 hover:bg-purple-200',
-              orange: 'bg-orange-100 text-orange-600 hover:bg-orange-200',
-              red: 'bg-red-100 text-red-600 hover:bg-red-200',
-              teal: 'bg-teal-100 text-teal-600 hover:bg-teal-200',
+              blue: 'bg-blue-100 text-blue-800 hover:bg-blue-200',
+              green: 'bg-green-100 text-green-800 hover:bg-green-200',
+              purple: 'bg-purple-100 text-purple-800 hover:bg-purple-200',
+              orange: 'bg-orange-100 text-orange-800 hover:bg-orange-200',
+              red: 'bg-red-100 text-red-800 hover:bg-red-200',
+              teal: 'bg-teal-100 text-teal-800 hover:bg-teal-200',
             };
 
             return (
@@ -82,7 +82,7 @@ export default function HomePageNavigation() {
               >
                 <Icon className="h-6 w-6 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                 <h3 className="font-semibold text-sm mb-1">{link.title}</h3>
-                <p className="text-xs opacity-80">{link.description}</p>
+                <p className="text-xs text-secondary-600">{link.description}</p>
               </a>
             );
           })}

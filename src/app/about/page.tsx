@@ -290,7 +290,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold mb-4">
                   Let's Discuss Your Probate Real Estate Needs
                 </h3>
-                <p className="text-primary-100 mb-6">
+                <p className="text-white mb-6">
                   Schedule a free consultation to discuss your probate property situation and learn
                   how we can help.
                 </p>
