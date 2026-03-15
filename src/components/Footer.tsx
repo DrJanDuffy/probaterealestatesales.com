@@ -122,8 +122,10 @@ export default function Footer() {
               <span className="ml-2 text-sm text-secondary-400">Probate Real Estate</span>
             </Link>
             <p className="text-secondary-300 mb-6 max-w-md leading-relaxed">
-              Expert probate real estate services across Nevada. Nevada's fastest probate process:
-              6-8 months vs California's 9-18 months.
+              Expert probate real estate services in Las Vegas and Clark County. Specialized in
+              comprehensive probate real estate services, court-approved property sales, and estate
+              liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18
+              months).
             </p>
             <div className="space-y-3">
               <div className="flex items-center text-secondary-300 group">
@@ -161,6 +163,15 @@ export default function Footer() {
               <div className="flex items-center text-secondary-300">
                 <Clock className="h-5 w-5 mr-3 text-primary-400" />
                 <span className="font-medium">Nevada Probate: 6-8 Months</span>
+              </div>
+              <div className="flex items-start text-secondary-300">
+                <Clock className="h-5 w-5 mr-3 text-primary-400 mt-0.5 flex-shrink-0" aria-hidden />
+                <div>
+                  <span className="font-medium block">Business hours</span>
+                  <span className="text-sm text-secondary-400">Mon–Fri 8:00 AM – 6:00 PM</span>
+                  <span className="text-sm text-secondary-400 block">Sat 9:00 AM – 2:00 PM</span>
+                  <span className="text-sm text-secondary-400 block">Sun Closed</span>
+                </div>
               </div>
             </div>
           </div>
