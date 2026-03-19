@@ -14,13 +14,20 @@ import {
   generateWebSiteSchema,
 } from '@/lib/schema';
 
-/** Returns true if customSchema contains an FAQPage (root or inside @graph). Used to avoid duplicate FAQPage when page passes its own. */
-function customSchemaHasFAQPage(schema: any): boolean {
+/** Returns true if schema is or contains an FAQPage (root, inside @graph, or in array). Used to avoid duplicate FAQPage. */
+function schemaIsOrContainsFAQPage(schema: any): boolean {
   if (!schema) return false;
+  if (typeof schema !== 'object') return false;
   if (schema['@type'] === 'FAQPage') return true;
+  if (Array.isArray(schema)) return schema.some((item: any) => schemaIsOrContainsFAQPage(item));
   const graph = schema['@graph'];
-  if (Array.isArray(graph)) return graph.some((item: any) => item && item['@type'] === 'FAQPage');
+  if (Array.isArray(graph)) return graph.some((item: any) => item && schemaIsOrContainsFAQPage(item));
   return false;
+}
+
+/** Alias for clarity when checking customSchema. */
+function customSchemaHasFAQPage(schema: any): boolean {
+  return schemaIsOrContainsFAQPage(schema);
 }
 
 interface SchemaMarkupProps {
@@ -251,7 +258,7 @@ export default function SchemaMarkup({
 
       case 'faq':
         schemas = [defaultSchemas.organization, defaultSchemas.howTo];
-        if (!customSchemaHasFAQPage(customSchema)) {
+        if (!customSchema || !customSchemaHasFAQPage(customSchema)) {
           schemas.unshift(defaultSchemas.faqPage);
         }
         break;
@@ -336,6 +343,16 @@ export default function SchemaMarkup({
         })
       );
     }
+
+    // Ensure at most one FAQPage per page (Google: "There must be one FAQPage type definition per page")
+    let seenFAQPage = false;
+    schemas = schemas.filter((s) => {
+      if (schemaIsOrContainsFAQPage(s)) {
+        if (seenFAQPage) return false;
+        seenFAQPage = true;
+      }
+      return true;
+    });
 
     // Inject schemas into head (mark so we only remove these, not layout's scripts)
     for (let index = 0; index < schemas.length; index++) {
