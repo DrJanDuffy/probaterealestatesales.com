@@ -803,16 +803,28 @@ export const defaultSchemas = {
   },
 };
 
+const SITE_BASE_URL = 'https://www.probaterealestatesales.com';
+
 export function generateBreadcrumbSchema(items: Array<{ name: string; url: string }>) {
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.name,
-      item: item.url,
-    })),
+    itemListElement: items.map((item, index) => {
+      let absoluteUrl: string;
+      if (item.url.startsWith('http://') || item.url.startsWith('https://')) {
+        absoluteUrl = item.url;
+      } else {
+        const path = item.url.startsWith('/') ? item.url : '/' + item.url;
+        const pathWithSlash = path.length > 1 && !path.endsWith('/') ? path + '/' : path;
+        absoluteUrl = SITE_BASE_URL + pathWithSlash;
+      }
+      return {
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        item: absoluteUrl,
+      };
+    }),
   };
 }
 
