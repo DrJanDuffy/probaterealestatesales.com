@@ -216,7 +216,7 @@ export default function TestimonialsPage() {
                   </Link>
                   <a
                     href="tel:+1-702-830-9222"
-                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-600 text-primary-600 rounded-md font-medium hover:bg-primary-50 transition-colors"
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-700 text-primary-700 rounded-md font-medium hover:bg-primary-50 transition-colors"
                   >
                     <Phone className="h-5 w-5 mr-2" />
                     Call (702) 830-9222
@@ -235,7 +235,7 @@ export default function TestimonialsPage() {
                     />
                   </div>
                   <div className="absolute -bottom-3 -right-3 bg-white rounded-full p-3 shadow-lg border-2 border-primary-200">
-                    <Award className="h-8 w-8 text-primary-600" />
+                    <Award className="h-8 w-8 text-primary-700" />
                   </div>
                 </div>
               </div>
@@ -306,7 +306,7 @@ export default function TestimonialsPage() {
                     </div>
                     <div>
                       <span className="text-secondary-500">Sale Price:</span>
-                      <div className="font-semibold text-primary-600">{testimonial.salePrice}</div>
+                      <div className="font-semibold text-primary-700">{testimonial.salePrice}</div>
                     </div>
                     <div>
                       <span className="text-secondary-500">Timeline:</span>
@@ -318,7 +318,7 @@ export default function TestimonialsPage() {
                 {/* Author */}
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                    <span className="text-primary-600 font-semibold text-lg">
+                    <span className="text-primary-700 font-semibold text-lg">
                       {testimonial.name.charAt(0)}
                     </span>
                   </div>
@@ -346,19 +346,19 @@ export default function TestimonialsPage() {
 
             <div className="grid md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">$150M+</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">$150M+</div>
                 <div className="text-secondary-600">Total Estate Transactions</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">15%</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">15%</div>
                 <div className="text-secondary-600">Above Initial Valuations</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">45 days</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">45 days</div>
                 <div className="text-secondary-600">Average Time to Close</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">98%</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">98%</div>
                 <div className="text-secondary-600">Client Satisfaction</div>
               </div>
             </div>
@@ -382,7 +382,7 @@ export default function TestimonialsPage() {
             <div className="text-center mt-8">
               <Link
                 href="/faq/"
-                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold"
+                className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-900 font-semibold"
               >
                 View All FAQs
                 <ArrowRight className="w-4 h-4" />
@@ -403,7 +403,7 @@ export default function TestimonialsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact/"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
             >
               Schedule Free Consultation
             </Link>

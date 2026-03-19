@@ -45,13 +45,13 @@ export default function FAQPage() {
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+1-702-830-9222"
-              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-primary-600 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-primary-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
             >
               Call Now: (702) 830-9222
             </a>
             <a
               href="http://drjanduffy.realscout.com/onboarding"
-              className="inline-flex items-center justify-center px-8 py-4 border border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 border border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
             >
               Free Consultation
             </a>
@@ -86,7 +86,7 @@ export default function FAQPage() {
               </p>
               <a
                 href="/resources/nevada-probate-guide/"
-                className="inline-flex items-center text-primary-600 hover:text-primary-800 font-semibold"
+                className="inline-flex items-center text-primary-700 hover:text-primary-900 font-semibold"
               >
                 Read Guide →
               </a>
@@ -102,7 +102,7 @@ export default function FAQPage() {
               </p>
               <a
                 href="/services/"
-                className="inline-flex items-center text-primary-600 hover:text-primary-800 font-semibold"
+                className="inline-flex items-center text-primary-700 hover:text-primary-900 font-semibold"
               >
                 Learn More →
               </a>
@@ -118,7 +118,7 @@ export default function FAQPage() {
               </p>
               <a
                 href="/resources/nevada-probate-guide/#small-estates"
-                className="inline-flex items-center text-primary-600 hover:text-primary-800 font-semibold"
+                className="inline-flex items-center text-primary-700 hover:text-primary-900 font-semibold"
               >
                 View Guide →
               </a>

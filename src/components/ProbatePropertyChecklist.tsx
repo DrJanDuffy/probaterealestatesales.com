@@ -336,7 +336,7 @@ export default function ProbatePropertyChecklist() {
               >
                 <div className="flex items-start gap-3">
                   <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <requirement.icon className="h-6 w-6 text-primary-600" />
+                    <requirement.icon className="h-6 w-6 text-primary-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900 mb-2">{requirement.title}</h4>
@@ -371,7 +371,7 @@ export default function ProbatePropertyChecklist() {
             </div>
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary-600" />
+                <CheckCircle className="h-4 w-4 text-primary-700" />
                 Court-Compliant
               </span>
               <span className="flex items-center gap-2">
@@ -397,14 +397,14 @@ export default function ProbatePropertyChecklist() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="http://drjanduffy.realscout.com/onboarding"
-                className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2 group"
+                className="bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2 group"
               >
                 Schedule Free Consultation
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="tel:+1-702-830-9222"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors inline-flex items-center justify-center gap-2"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-700 transition-colors inline-flex items-center justify-center gap-2"
               >
                 Call (702) 830-9222
               </a>

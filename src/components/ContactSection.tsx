@@ -55,7 +55,7 @@ export default function ContactSection() {
                     />
                   </div>
                   <div className="absolute -bottom-3 -right-3 bg-white rounded-full p-2 shadow-lg border-2 border-primary-200">
-                    <Phone className="h-6 w-6 text-primary-600" />
+                    <Phone className="h-6 w-6 text-primary-700" />
                   </div>
                 </div>
               </div>
@@ -187,7 +187,7 @@ export default function ContactSection() {
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary-100 rounded-full">
-                    <Phone className="h-6 w-6 text-primary-600" />
+                    <Phone className="h-6 w-6 text-primary-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">Phone</h4>
@@ -220,7 +220,7 @@ export default function ContactSection() {
 
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary-100 rounded-full">
-                    <Clock className="h-6 w-6 text-primary-600" />
+                    <Clock className="h-6 w-6 text-primary-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">Business Hours</h4>
@@ -241,7 +241,7 @@ export default function ContactSection() {
                 For urgent probate matters outside business hours, call our emergency line:
               </p>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-600 mb-2">(702) 830-9222</div>
+                <div className="text-2xl font-bold text-primary-700 mb-2">(702) 830-9222</div>
                 <p className="text-sm text-secondary-500">Available 24/7 for urgent matters</p>
               </div>
             </div>

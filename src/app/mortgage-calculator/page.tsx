@@ -206,7 +206,7 @@ export default function MortgageCalculatorPage() {
                   </div>
                   <div className="pt-4">
                     <div className="text-sm text-secondary-600 mb-1">Total Monthly Payment</div>
-                    <div className="text-4xl font-bold text-primary-600" id="totalPayment">
+                    <div className="text-4xl font-bold text-primary-700" id="totalPayment">
                       $3,070
                     </div>
                   </div>
@@ -249,7 +249,7 @@ export default function MortgageCalculatorPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-md">
-              <DollarSign className="h-12 w-12 text-primary-600 mb-4" />
+              <DollarSign className="h-12 w-12 text-primary-700 mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">Down Payment</h3>
               <p className="text-secondary-600">
                 A 20% down payment is typically recommended to avoid Private Mortgage Insurance
@@ -292,7 +292,7 @@ export default function MortgageCalculatorPage() {
             <div className="text-center mt-8">
               <Link
                 href="/faq/"
-                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold"
+                className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-900 font-semibold"
               >
                 View All FAQs
                 <ArrowRight className="w-4 h-4" />
@@ -312,13 +312,13 @@ export default function MortgageCalculatorPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact/"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
             >
               Get Started Today
             </Link>
             <a
               href="tel:+1-702-830-9222"
-              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-md font-medium text-lg hover:bg-white hover:text-primary-600 transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-md font-medium text-lg hover:bg-white hover:text-primary-700 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
               Call (702) 830-9222

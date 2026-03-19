@@ -36,7 +36,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
                 ) : (
                   <Link
                     href={item.url}
-                    className="text-gray-600 hover:text-primary-600 transition-colors flex items-center"
+                    className="text-gray-600 hover:text-primary-700 transition-colors flex items-center"
                   >
                     {index === 0 && <Home className="h-4 w-4 mr-1" />}
                     {item.name}

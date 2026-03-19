@@ -108,7 +108,7 @@ export default function ProbateEstateSalesPage() {
                 </Link>
                 <Link
                   href="tel:+1-702-830-9222"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
                 >
                   <Phone className="h-5 w-5 mr-2" />
                   Call (702) 830-9222
@@ -482,7 +482,7 @@ export default function ProbateEstateSalesPage() {
               </div>
               <Link
                 href="/faq/"
-                className="hidden md:flex items-center text-primary-600 hover:text-primary-800 font-medium"
+                className="hidden md:flex items-center text-primary-700 hover:text-primary-900 font-medium"
               >
                 View All FAQs
                 <ArrowRight className="h-4 w-4 ml-1" />
@@ -492,7 +492,7 @@ export default function ProbateEstateSalesPage() {
             <div className="text-center mt-6 md:hidden">
               <Link
                 href="/faq/"
-                className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
+                className="inline-flex items-center text-primary-700 hover:text-primary-900 font-medium"
               >
                 View All FAQs
                 <ArrowRight className="h-4 w-4 ml-1" />
@@ -514,14 +514,14 @@ export default function ProbateEstateSalesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact/"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
               >
                 Get Estate Sale Help
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Link>
               <Link
                 href="tel:+1-702-830-9222"
-                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-600 transition-colors"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-700 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
                 Call (702) 830-9222

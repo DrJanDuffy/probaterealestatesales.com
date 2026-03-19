@@ -139,33 +139,33 @@ export default function Home() {
           <div className="mt-8 flex flex-wrap justify-center gap-x-4 gap-y-2 text-center">
             <Link
               href="/services/"
-              className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium text-sm"
+              className="inline-flex items-center text-primary-700 hover:text-primary-900 font-medium text-sm"
             >
               View All Services
               <ArrowRight className="h-4 w-4 ml-1" />
             </Link>
-            <Link href="/probate-division/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+            <Link href="/probate-division/" className="text-primary-700 hover:text-primary-900 font-medium text-sm">
               Probate Division
             </Link>
-            <Link href="/probate-homes-for-sale/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+            <Link href="/probate-homes-for-sale/" className="text-primary-700 hover:text-primary-900 font-medium text-sm">
               Probate Homes
             </Link>
-            <Link href="/trust-property-sales/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+            <Link href="/trust-property-sales/" className="text-primary-700 hover:text-primary-900 font-medium text-sm">
               Trust Sales
             </Link>
-            <Link href="/conservatorship-real-estate/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+            <Link href="/conservatorship-real-estate/" className="text-primary-700 hover:text-primary-900 font-medium text-sm">
               Conservatorship
             </Link>
-            <Link href="/probate-property-buyers/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+            <Link href="/probate-property-buyers/" className="text-primary-700 hover:text-primary-900 font-medium text-sm">
               Probate Buyers
             </Link>
-            <Link href="/probate-estate-sales/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+            <Link href="/probate-estate-sales/" className="text-primary-700 hover:text-primary-900 font-medium text-sm">
               Estate Sales
             </Link>
-            <Link href="/contact/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+            <Link href="/contact/" className="text-primary-700 hover:text-primary-900 font-medium text-sm">
               Contact
             </Link>
-            <Link href="/locations/enterprise/" className="text-primary-600 hover:text-primary-800 font-medium text-sm">
+            <Link href="/locations/enterprise/" className="text-primary-700 hover:text-primary-900 font-medium text-sm">
               Enterprise
             </Link>
           </div>
@@ -184,21 +184,21 @@ export default function Home() {
               process of{' '}
               <Link
                 href="/services/"
-                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                className="text-primary-700 hover:text-primary-900 font-semibold underline"
               >
                 probate real estate
               </Link>{' '}
               with compassion, expertise, and maximum value for your estate. Our{' '}
               <Link
                 href="/probate-property-valuation/"
-                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                className="text-primary-700 hover:text-primary-900 font-semibold underline"
               >
                 probate property valuation
               </Link>{' '}
               services ensure you get fair market value for inherited properties across{' '}
               <Link
                 href="/locations/"
-                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                className="text-primary-700 hover:text-primary-900 font-semibold underline"
               >
                 all Nevada locations
               </Link>
@@ -209,35 +209,35 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-8">
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <HomeIcon className="h-6 w-6 text-primary-600" />
+                <HomeIcon className="h-6 w-6 text-primary-700" />
               </div>
               <Link href="/probate-property-valuation/" className="block">
-                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-600 transition-colors">
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-700 transition-colors">
                   Estate Property Valuation
                 </h3>
                 <p className="text-secondary-600 text-sm">
                   Comprehensive market analysis and court-compliant property appraisal. Learn more
                   about our{' '}
-                  <span className="text-primary-600 font-medium">probate property valuation</span>{' '}
+                  <span className="text-primary-700 font-medium">probate property valuation</span>{' '}
                   services.
                 </p>
               </Link>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <Gavel className="h-6 w-6 text-primary-600" />
+                <Gavel className="h-6 w-6 text-primary-700" />
               </div>
               <Link href="/services/#probate-sales" className="block">
-                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-600 transition-colors">
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-700 transition-colors">
                   Probate Process Navigation
                 </h3>
                 <p className="text-secondary-600 text-sm">
                   Step-by-step guidance through court requirements with attorney coordination. View
                   our complete{' '}
-                  <span className="text-primary-600 font-medium">probate services</span> and{' '}
+                  <span className="text-primary-700 font-medium">probate services</span> and{' '}
                   <Link
                     href="/resources/nevada-probate-guide/"
-                    className="text-primary-600 font-medium underline"
+                    className="text-primary-700 font-medium underline"
                   >
                     Nevada probate guide
                   </Link>
@@ -247,20 +247,20 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <Shield className="h-6 w-6 text-primary-600" />
+                <Shield className="h-6 w-6 text-primary-700" />
               </div>
               <Link href="/services/#court-representation" className="block">
-                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-600 transition-colors">
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-700 transition-colors">
                   Legal Compliance
                 </h3>
                 <p className="text-secondary-600 text-sm">
                   Complete handling of all legal documents and probate court requirements. Explore
                   our{' '}
-                  <span className="text-primary-600 font-medium">court representation</span> services
+                  <span className="text-primary-700 font-medium">court representation</span> services
                   and{' '}
                   <Link
                     href="/probate-division/"
-                    className="text-primary-600 font-medium underline"
+                    className="text-primary-700 font-medium underline"
                   >
                     probate division
                   </Link>{' '}
@@ -270,19 +270,19 @@ export default function Home() {
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover-lift transition-all duration-300">
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
-                <FileText className="h-6 w-6 text-primary-600" />
+                <FileText className="h-6 w-6 text-primary-700" />
               </div>
               <Link href="/probate-homes-for-sale/" className="block">
-                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-600 transition-colors">
+                <h3 className="text-lg font-semibold text-secondary-900 mb-2 hover:text-primary-700 transition-colors">
                   Market Optimization
                 </h3>
                 <p className="text-secondary-600 text-sm">
                   Strategic marketing to qualified buyers with proven negotiation support. Browse{' '}
-                  <span className="text-primary-600 font-medium">probate homes for sale</span> and
+                  <span className="text-primary-700 font-medium">probate homes for sale</span> and
                   learn about{' '}
                   <Link
                     href="/probate-property-buyers/"
-                    className="text-primary-600 font-medium underline"
+                    className="text-primary-700 font-medium underline"
                   >
                     probate property buyers
                   </Link>
@@ -327,7 +327,7 @@ export default function Home() {
                 Nevada Probate Timeline
               </h3>
               <p className="text-secondary-600 mb-4">Complete 6-8 month process breakdown</p>
-              <span className="text-primary-600 font-medium inline-flex items-center">
+              <span className="text-primary-700 font-medium inline-flex items-center">
                 View Timeline <ArrowRight className="h-4 w-4 ml-1" />
               </span>
             </Link>
@@ -342,7 +342,7 @@ export default function Home() {
               <p className="text-secondary-600 mb-4">
                 Essential steps for selling inherited property
               </p>
-              <span className="text-primary-600 font-medium inline-flex items-center">
+              <span className="text-primary-700 font-medium inline-flex items-center">
                 View Checklist <ArrowRight className="h-4 w-4 ml-1" />
               </span>
             </Link>
@@ -355,7 +355,7 @@ export default function Home() {
                 Probate Cost Calculator
               </h3>
               <p className="text-secondary-600 mb-4">Estimate total probate costs and fees</p>
-              <span className="text-primary-600 font-medium inline-flex items-center">
+              <span className="text-primary-700 font-medium inline-flex items-center">
                 Use Calculator <ArrowRight className="h-4 w-4 ml-1" />
               </span>
             </Link>
@@ -376,7 +376,7 @@ export default function Home() {
             </p>
             <Link
               href="/home-valuation/"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold text-lg hover:bg-gray-100 hover-lift transition-all duration-200 focus-ring"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-lg font-semibold text-lg hover:bg-gray-100 hover-lift transition-all duration-200 focus-ring"
               aria-label="Start free property valuation"
             >
               Start Free Valuation
@@ -419,21 +419,21 @@ export default function Home() {
               Duffy brings unparalleled expertise to every probate transaction. Learn more about{' '}
               <Link
                 href="/about/"
-                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                className="text-primary-700 hover:text-primary-900 font-semibold underline"
               >
                 Dr. Jan Duffy's background
               </Link>{' '}
               and read{' '}
               <Link
                 href="/testimonials/"
-                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                className="text-primary-700 hover:text-primary-900 font-semibold underline"
               >
                 client testimonials
               </Link>{' '}
               from families we've helped with{' '}
               <Link
                 href="/probate-estate-sales/"
-                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                className="text-primary-700 hover:text-primary-900 font-semibold underline"
               >
                 probate estate sales
               </Link>
@@ -441,21 +441,21 @@ export default function Home() {
             </p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-3xl font-bold text-primary-600 mb-2">500+</div>
+                <div className="text-3xl font-bold text-primary-700 mb-2">500+</div>
                 <div className="text-secondary-700 font-medium">Properties Sold</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-3xl font-bold text-primary-600 mb-2">20+</div>
+                <div className="text-3xl font-bold text-primary-700 mb-2">20+</div>
                 <div className="text-secondary-700 font-medium">Years Experience</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-3xl font-bold text-primary-600 mb-2">98%</div>
+                <div className="text-3xl font-bold text-primary-700 mb-2">98%</div>
                 <div className="text-secondary-700 font-medium">Client Satisfaction</div>
               </div>
             </div>
             <Link
               href="/about/"
-              className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium focus-ring rounded-md px-2 py-1"
+              className="inline-flex items-center text-primary-700 hover:text-primary-900 font-medium focus-ring rounded-md px-2 py-1"
               aria-label="Learn more about Dr. Jan Duffy"
             >
               Learn More About Dr. Duffy
@@ -479,7 +479,7 @@ export default function Home() {
               </p>
               <Link
                 href="/faq/"
-                className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium focus-ring rounded-md px-2 py-1"
+                className="inline-flex items-center text-primary-700 hover:text-primary-900 font-medium focus-ring rounded-md px-2 py-1"
                 aria-label="View all frequently asked questions"
               >
                 View All FAQs
@@ -494,7 +494,7 @@ export default function Home() {
               </p>
               <Link
                 href="/testimonials/"
-                className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium focus-ring rounded-md px-2 py-1"
+                className="inline-flex items-center text-primary-700 hover:text-primary-900 font-medium focus-ring rounded-md px-2 py-1"
                 aria-label="Read client testimonials"
               >
                 Read Testimonials
@@ -515,7 +515,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact/"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-lg font-semibold text-lg hover:bg-gray-100 hover-lift transition-all duration-200 focus-ring-dark"
+              className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-lg font-semibold text-lg hover:bg-gray-100 hover-lift transition-all duration-200 focus-ring-dark"
               aria-label="Contact us for free consultation"
             >
               Contact Us

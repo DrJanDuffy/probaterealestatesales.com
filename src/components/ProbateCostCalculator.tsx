@@ -301,7 +301,7 @@ export default function ProbateCostCalculator() {
                     id="hasRealEstate"
                     checked={hasRealEstate}
                     onChange={(e) => setHasRealEstate(e.target.checked)}
-                    className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
+                    className="w-4 h-4 text-primary-700 border-gray-300 rounded focus:ring-primary-500"
                   />
                   <label htmlFor="hasRealEstate" className="text-sm text-secondary-700">
                     Includes real estate
@@ -314,7 +314,7 @@ export default function ProbateCostCalculator() {
                     id="multipleHeirs"
                     checked={multipleHeirs}
                     onChange={(e) => setMultipleHeirs(e.target.checked)}
-                    className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
+                    className="w-4 h-4 text-primary-700 border-gray-300 rounded focus:ring-primary-500"
                   />
                   <label htmlFor="multipleHeirs" className="text-sm text-secondary-700">
                     Multiple heirs involved
@@ -327,7 +327,7 @@ export default function ProbateCostCalculator() {
                     id="hasDisputes"
                     checked={hasDisputes}
                     onChange={(e) => setHasDisputes(e.target.checked)}
-                    className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
+                    className="w-4 h-4 text-primary-700 border-gray-300 rounded focus:ring-primary-500"
                   />
                   <label htmlFor="hasDisputes" className="text-sm text-secondary-700">
                     Potential disputes or challenges
@@ -483,7 +483,7 @@ export default function ProbateCostCalculator() {
                     <span className="font-bold text-lg text-secondary-900">
                       Total Estimated Cost
                     </span>
-                    <span className="font-bold text-2xl text-primary-600">
+                    <span className="font-bold text-2xl text-primary-700">
                       ${costs.total.toLocaleString()}
                     </span>
                   </div>
@@ -545,7 +545,7 @@ export default function ProbateCostCalculator() {
             </div>
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">
-                <Calculator className="h-4 w-4 text-primary-600" />
+                <Calculator className="h-4 w-4 text-primary-700" />
                 Accurate Estimates
               </span>
               <span className="flex items-center gap-2">

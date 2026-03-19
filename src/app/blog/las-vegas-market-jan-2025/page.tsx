@@ -193,7 +193,7 @@ export default function LasVegasMarketJan2025Page() {
                 Premium properties in Summerlin continue to command strong prices, with average sale
                 prices above market average. Days on market: 38-50 days.
               </p>
-              <div className="text-primary-600 font-semibold">↑ Strong Demand</div>
+              <div className="text-primary-700 font-semibold">↑ Strong Demand</div>
             </div>
 
             <div className="bg-white rounded-lg p-6 shadow-md">
@@ -315,7 +315,7 @@ export default function LasVegasMarketJan2025Page() {
           </p>
           <Link
             href="/contact/"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             Schedule Free Property Valuation
           </Link>

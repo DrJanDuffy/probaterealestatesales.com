@@ -148,7 +148,7 @@ export default function CallToActionComponents() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <a
                 href={primaryCTA.primaryButton.href}
-                className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2 group"
+                className="bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2 group"
               >
                 <primaryCTA.primaryButton.icon className="h-5 w-5" />
                 {primaryCTA.primaryButton.text}
@@ -157,7 +157,7 @@ export default function CallToActionComponents() {
 
               <a
                 href={primaryCTA.secondaryButton.href}
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors inline-flex items-center justify-center gap-2 group"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-900 transition-colors inline-flex items-center justify-center gap-2 group"
               >
                 <primaryCTA.secondaryButton.icon className="h-5 w-5" />
                 {primaryCTA.secondaryButton.text}
@@ -288,7 +288,7 @@ export default function CallToActionComponents() {
 
                 <a
                   href={testimonial.href}
-                  className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center gap-2 group"
+                  className="text-primary-700 hover:text-primary-900 font-medium inline-flex items-center gap-2 group"
                 >
                   {testimonial.buttonText}
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -307,7 +307,7 @@ export default function CallToActionComponents() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ArrowRight className="h-8 w-8 text-primary-600" />
+                <ArrowRight className="h-8 w-8 text-primary-700" />
               </div>
               <h4 className="font-semibold text-secondary-900 mb-2">Clear Action</h4>
               <p className="text-sm text-secondary-600">Use specific, action-oriented language</p>
@@ -363,7 +363,7 @@ export default function CallToActionComponents() {
 
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">
-                <ArrowRight className="h-4 w-4 text-primary-600" />
+                <ArrowRight className="h-4 w-4 text-primary-700" />
                 Action-Oriented
               </span>
               <span className="flex items-center gap-2">

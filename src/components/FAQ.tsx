@@ -14,13 +14,13 @@ const faqData: FAQItem[] = [
   {
     question: 'How long does probate take in Nevada?',
     answer:
-      "Nevada probate typically takes 6-8 months, which is significantly faster than California's 9-18 month process. Clark County has two probate commissioners: James Fontana (Fridays) and Russell Geis (Wednesdays at 9:30 AM). Court orders take about 3 weeks to release. This faster timeline makes Nevada an attractive option for probate property sales. Learn more in our <a href='/blog/nevada-probate-timeline/' class='text-primary-600 hover:text-primary-800 underline'>Nevada Probate Timeline Guide</a> or <a href='/resources/nevada-probate-guide/' class='text-primary-600 hover:text-primary-800 underline'>Complete Nevada Probate Guide</a>.",
+      "Nevada probate typically takes 6-8 months, which is significantly faster than California's 9-18 month process. Clark County has two probate commissioners: James Fontana (Fridays) and Russell Geis (Wednesdays at 9:30 AM). Court orders take about 3 weeks to release. This faster timeline makes Nevada an attractive option for probate property sales. Learn more in our <a href='/blog/nevada-probate-timeline/' class='text-primary-700 hover:text-primary-900 underline'>Nevada Probate Timeline Guide</a> or <a href='/resources/nevada-probate-guide/' class='text-primary-700 hover:text-primary-900 underline'>Complete Nevada Probate Guide</a>.",
     category: 'nevada-law',
   },
   {
     question: 'What is a certificate of incumbency in Nevada?',
     answer:
-      "A certificate of incumbency in Nevada is a 5-7 page document (also known as affidavit of successor trustee) that's required after trustors die. It costs $750 from attorneys and must be recorded with Clark County. This document proves your authority as successor trustee and is essential for trust administration and property transfers. Title companies cannot create these documents - only attorneys can. Read our complete guide on <a href='/blog/certificate-of-incumbency/' class='text-primary-600 hover:text-primary-800 underline'>Certificate of Incumbency</a> for detailed information.",
+      "A certificate of incumbency in Nevada is a 5-7 page document (also known as affidavit of successor trustee) that's required after trustors die. It costs $750 from attorneys and must be recorded with Clark County. This document proves your authority as successor trustee and is essential for trust administration and property transfers. Title companies cannot create these documents - only attorneys can. Read our complete guide on <a href='/blog/certificate-of-incumbency/' class='text-primary-700 hover:text-primary-900 underline'>Certificate of Incumbency</a> for detailed information.",
     category: 'nevada-law',
   },
   {
@@ -72,7 +72,7 @@ const faqData: FAQItem[] = [
   {
     question: 'What is the step-by-step process for a Nevada probate sale?',
     answer:
-      "The Nevada probate sale process involves: 1) Court appointment of executor/administrator, 2) Property appraisal and market analysis, 3) Court petition for sale authorization, 4) Court approval and order (3 weeks to release), 5) Property listing and marketing, 6) Offer acceptance and contract execution, 7) Court confirmation of sale (if required), 8) Closing and distribution of proceeds. Nevada requires approximately 30 documents throughout the process. Learn more about <a href='/blog/clark-county-probate/' class='text-primary-600 hover:text-primary-800 underline'>Clark County Probate Court Procedures</a> or view our <a href='/services/' class='text-primary-600 hover:text-primary-800 underline'>Probate Services</a>.",
+      "The Nevada probate sale process involves: 1) Court appointment of executor/administrator, 2) Property appraisal and market analysis, 3) Court petition for sale authorization, 4) Court approval and order (3 weeks to release), 5) Property listing and marketing, 6) Offer acceptance and contract execution, 7) Court confirmation of sale (if required), 8) Closing and distribution of proceeds. Nevada requires approximately 30 documents throughout the process. Learn more about <a href='/blog/clark-county-probate/' class='text-primary-700 hover:text-primary-900 underline'>Clark County Probate Court Procedures</a> or view our <a href='/services/' class='text-primary-700 hover:text-primary-900 underline'>Probate Services</a>.",
     category: 'process',
   },
   {
@@ -281,7 +281,7 @@ export default function FAQ() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="tel:+1-702-830-9222"
-                className="text-primary-600 hover:text-primary-800 font-semibold"
+                className="text-primary-700 hover:text-primary-900 font-semibold"
               >
                 Call Now: (702) 830-9222
               </a>

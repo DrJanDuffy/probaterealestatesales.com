@@ -66,8 +66,8 @@ export default function NevadaProbateTimelinePage() {
               {/* Month 0-1 */}
               <div className="border-l-4 border-primary-600 pl-6 py-4">
                 <div className="flex items-center mb-2">
-                  <Calendar className="h-5 w-5 text-primary-600 mr-2" />
-                  <span className="text-sm font-semibold text-primary-600 uppercase">
+                  <Calendar className="h-5 w-5 text-primary-700 mr-2" />
+                  <span className="text-sm font-semibold text-primary-700 uppercase">
                     Months 0-1
                   </span>
                 </div>
@@ -81,7 +81,7 @@ export default function NevadaProbateTimelinePage() {
                       File petition with{' '}
                       <Link
                         href="/blog/clark-county-probate/"
-                        className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                        className="text-primary-700 hover:text-primary-900 font-semibold underline"
                       >
                         Clark County Probate Court
                       </Link>
@@ -122,7 +122,7 @@ export default function NevadaProbateTimelinePage() {
                       Obtain{' '}
                       <Link
                         href="/probate-property-valuation/"
-                        className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                        className="text-primary-700 hover:text-primary-900 font-semibold underline"
                       >
                         property appraisals and valuations
                       </Link>
@@ -186,7 +186,7 @@ export default function NevadaProbateTimelinePage() {
                       List property with{' '}
                       <Link
                         href="/services/"
-                        className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                        className="text-primary-700 hover:text-primary-900 font-semibold underline"
                       >
                         probate real estate specialist
                       </Link>
@@ -251,7 +251,7 @@ export default function NevadaProbateTimelinePage() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white rounded-lg p-6 shadow-md">
-                <FileText className="h-8 w-8 text-primary-600 mb-4" />
+                <FileText className="h-8 w-8 text-primary-700 mb-4" />
                 <h3 className="text-xl font-semibold text-secondary-900 mb-2">
                   Required Documents
                 </h3>
@@ -343,7 +343,7 @@ export default function NevadaProbateTimelinePage() {
           </p>
           <Link
             href="/contact/"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             Schedule Free Consultation
           </Link>

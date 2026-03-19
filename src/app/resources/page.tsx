@@ -60,13 +60,13 @@ export default function ResourcesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="http://drjanduffy.realscout.com/onboarding"
-              className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+              className="bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
             >
               Schedule Free Consultation
             </a>
             <a
               href="tel:+1-702-830-9222"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors inline-block"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-900 transition-colors inline-block"
             >
               Call (702) 830-9222
             </a>
@@ -88,7 +88,7 @@ export default function ResourcesPage() {
             >
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <svg
-                  className="h-8 w-8 text-primary-600"
+                  className="h-8 w-8 text-primary-700"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -169,7 +169,7 @@ export default function ResourcesPage() {
             >
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                 <svg
-                  className="h-8 w-8 text-primary-600"
+                  className="h-8 w-8 text-primary-700"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -340,7 +340,7 @@ export default function ResourcesPage() {
             <div className="text-center mt-8">
               <Link
                 href="/faq/"
-                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold"
+                className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-900 font-semibold"
               >
                 View All FAQs
                 <ArrowRight className="w-4 h-4" />
@@ -361,13 +361,13 @@ export default function ResourcesPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="http://drjanduffy.realscout.com/onboarding"
-              className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
+              className="bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-block"
             >
               Schedule Free Consultation
             </a>
             <a
               href="tel:+1-702-830-9222"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors inline-block"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-900 transition-colors inline-block"
             >
               Call (702) 830-9222
             </a>

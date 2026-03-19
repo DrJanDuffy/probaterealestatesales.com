@@ -125,30 +125,30 @@ export default function AboutPage() {
               <div className="space-y-4">
                 <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
                   <h3 className="text-xl font-semibold text-secondary-900 mb-4 flex items-center">
-                    <Award className="h-6 w-6 text-primary-600 mr-2" />
+                    <Award className="h-6 w-6 text-primary-700 mr-2" />
                     Professional Credentials
                   </h3>
                   <ul className="space-y-2 text-secondary-700">
                     <li className="flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
+                      <span className="text-primary-700 mr-2">•</span>
                       <span>
                         <strong>License:</strong> Nevada Real Estate License #S.0197614
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
+                      <span className="text-primary-700 mr-2">•</span>
                       <span>
                         <strong>Education:</strong> Ph.D. in Research
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
+                      <span className="text-primary-700 mr-2">•</span>
                       <span>
                         <strong>Specialization:</strong> Probate Real Estate
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
+                      <span className="text-primary-700 mr-2">•</span>
                       <span>
                         <strong>Experience:</strong> 20+ Years in Las Vegas Real Estate
                       </span>
@@ -158,32 +158,32 @@ export default function AboutPage() {
 
                 <div className="bg-white rounded-lg shadow-md p-6 border border-gray-200">
                   <h3 className="text-xl font-semibold text-secondary-900 mb-4 flex items-center">
-                    <Star className="h-6 w-6 text-primary-600 mr-2" />
+                    <Star className="h-6 w-6 text-primary-700 mr-2" />
                     Expertise Areas
                   </h3>
                   <ul className="space-y-2 text-secondary-700">
                     <li className="flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
+                      <span className="text-primary-700 mr-2">•</span>
                       <span>Probate Property Sales</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
+                      <span className="text-primary-700 mr-2">•</span>
                       <span>Estate Liquidation</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
+                      <span className="text-primary-700 mr-2">•</span>
                       <span>Clark County Probate Court Procedures</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
+                      <span className="text-primary-700 mr-2">•</span>
                       <span>Trust Administration</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
+                      <span className="text-primary-700 mr-2">•</span>
                       <span>Property Valuation</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="text-primary-600 mr-2">•</span>
+                      <span className="text-primary-700 mr-2">•</span>
                       <span>Court-Approved Sales</span>
                     </li>
                   </ul>
@@ -220,7 +220,7 @@ export default function AboutPage() {
               {/* Stats Section */}
               <div className="grid grid-cols-2 gap-4 my-8">
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg p-6 text-center">
-                  <TrendingUp className="h-8 w-8 text-primary-600 mx-auto mb-2" />
+                  <TrendingUp className="h-8 w-8 text-primary-700 mx-auto mb-2" />
                   <div className="text-3xl font-bold text-secondary-900">20+</div>
                   <div className="text-sm text-secondary-600">Years Experience</div>
                 </div>
@@ -248,35 +248,35 @@ export default function AboutPage() {
                 </h3>
                 <ul className="space-y-3 text-secondary-700">
                   <li className="flex items-start">
-                    <span className="text-primary-600 mr-2">✓</span>
+                    <span className="text-primary-700 mr-2">✓</span>
                     <span>
                       <strong>Nevada Probate Expertise:</strong> Deep understanding of Nevada's 6-8
                       month probate timeline vs California's 9-18 months
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary-600 mr-2">✓</span>
+                    <span className="text-primary-700 mr-2">✓</span>
                     <span>
                       <strong>Court Experience:</strong> Familiar with Clark County probate
                       commissioners and procedures
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary-600 mr-2">✓</span>
+                    <span className="text-primary-700 mr-2">✓</span>
                     <span>
                       <strong>Compassionate Service:</strong> Understanding that probate sales
                       happen during difficult times
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary-600 mr-2">✓</span>
+                    <span className="text-primary-700 mr-2">✓</span>
                     <span>
                       <strong>Comprehensive Knowledge:</strong> From certificates of incumbency to
                       trust administration
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-primary-600 mr-2">✓</span>
+                    <span className="text-primary-700 mr-2">✓</span>
                     <span>
                       <strong>Local Expertise:</strong> Serving all of Clark County including Las
                       Vegas, Henderson, Summerlin, and more
@@ -297,14 +297,14 @@ export default function AboutPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
                     href="tel:+1-702-830-9222"
-                    className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-600 rounded-md font-medium hover:bg-blue-50 transition-colors"
+                    className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-700 rounded-md font-medium hover:bg-blue-50 transition-colors"
                   >
                     <Phone className="h-5 w-5 mr-2" />
                     Call (702) 830-9222
                   </a>
                   <a
                     href="mailto:DrJanSells@ProbateRealEstateSales.com"
-                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white rounded-md font-medium hover:bg-white hover:text-primary-600 transition-colors"
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white rounded-md font-medium hover:bg-white hover:text-primary-900 transition-colors"
                   >
                     <Mail className="h-5 w-5 mr-2" />
                     Email Us
@@ -328,27 +328,27 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold text-secondary-900 mb-8 text-center">Get In Touch</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
-                <Phone className="h-8 w-8 text-primary-600 mx-auto mb-4" />
+                <Phone className="h-8 w-8 text-primary-700 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-secondary-900 mb-2">Phone</h3>
                 <a
                   href="tel:+1-702-830-9222"
-                  className="text-primary-600 hover:text-primary-800 font-medium"
+                  className="text-primary-700 hover:text-primary-900 font-medium"
                 >
                   (702) 830-9222
                 </a>
               </div>
               <div className="text-center">
-                <Mail className="h-8 w-8 text-primary-600 mx-auto mb-4" />
+                <Mail className="h-8 w-8 text-primary-700 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-secondary-900 mb-2">Email</h3>
                 <a
                   href="mailto:DrJanSells@ProbateRealEstateSales.com"
-                  className="text-primary-600 hover:text-primary-800 font-medium"
+                  className="text-primary-700 hover:text-primary-900 font-medium"
                 >
                   DrJanSells@ProbateRealEstateSales.com
                 </a>
               </div>
               <div className="text-center">
-                <MapPin className="h-8 w-8 text-primary-600 mx-auto mb-4" />
+                <MapPin className="h-8 w-8 text-primary-700 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-secondary-900 mb-2">Office</h3>
                 <p className="text-secondary-600">
                   400 S 4th St suite 250 b<br />
@@ -376,7 +376,7 @@ export default function AboutPage() {
             <div className="text-center mt-8">
               <Link
                 href="/faq/"
-                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold"
+                className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-900 font-semibold"
               >
                 View All FAQs
                 <ArrowRight className="w-4 h-4" />

@@ -71,22 +71,22 @@ export default function NevadaProbateGuidePage() {
       <section className="py-8 bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex flex-wrap gap-4 justify-center">
-            <a href="#timeline" className="text-primary-600 hover:text-primary-800 font-medium">
+            <a href="#timeline" className="text-primary-700 hover:text-primary-900 font-medium">
               Timeline
             </a>
-            <a href="#costs" className="text-primary-600 hover:text-primary-800 font-medium">
+            <a href="#costs" className="text-primary-700 hover:text-primary-900 font-medium">
               Costs
             </a>
-            <a href="#process" className="text-primary-600 hover:text-primary-800 font-medium">
+            <a href="#process" className="text-primary-700 hover:text-primary-900 font-medium">
               Process
             </a>
-            <a href="#advantages" className="text-primary-600 hover:text-primary-800 font-medium">
+            <a href="#advantages" className="text-primary-700 hover:text-primary-900 font-medium">
               Nevada Advantages
             </a>
-            <a href="#documents" className="text-primary-600 hover:text-primary-800 font-medium">
+            <a href="#documents" className="text-primary-700 hover:text-primary-900 font-medium">
               Required Documents
             </a>
-            <a href="#faq" className="text-primary-600 hover:text-primary-800 font-medium">
+            <a href="#faq" className="text-primary-700 hover:text-primary-900 font-medium">
               FAQ
             </a>
           </nav>
@@ -173,14 +173,14 @@ export default function NevadaProbateGuidePage() {
               Step-by-step breakdown of Nevada's efficient probate process. Learn about our{' '}
               <Link
                 href="/services/#probate-sales"
-                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                className="text-primary-700 hover:text-primary-900 font-semibold underline"
               >
                 probate services
               </Link>{' '}
               and{' '}
               <Link
                 href="/blog/nevada-probate-timeline/"
-                className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                className="text-primary-700 hover:text-primary-900 font-semibold underline"
               >
                 detailed probate timeline
               </Link>

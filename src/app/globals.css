@@ -106,7 +106,7 @@
   }
 
   .btn-outline {
-    @apply border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    @apply border-2 border-primary-700 text-primary-700 hover:bg-primary-700 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
   }
 
   .card {
@@ -127,6 +127,11 @@
 }
 
 @layer utilities {
+  /* Accessible link color on white/light backgrounds (WCAG AA) */
+  .link-primary-on-light {
+    @apply text-primary-700 hover:text-primary-900;
+  }
+
   .text-gradient {
     @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
   }

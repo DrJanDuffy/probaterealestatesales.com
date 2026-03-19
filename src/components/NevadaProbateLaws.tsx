@@ -300,7 +300,7 @@ export default function NevadaProbateLaws() {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-16 h-16 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Clock className="h-8 w-8 text-primary-600" />
+                    <Clock className="h-8 w-8 text-primary-700" />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
@@ -415,14 +415,14 @@ export default function NevadaProbateLaws() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="http://drjanduffy.realscout.com/onboarding"
-                className="bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2 group"
+                className="bg-white text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center justify-center gap-2 group"
               >
                 Schedule Free Consultation
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
                 href="/resources/nevada-probate-guide/"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-600 transition-colors inline-block"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-900 transition-colors inline-block"
               >
                 Download Complete Guide
               </a>

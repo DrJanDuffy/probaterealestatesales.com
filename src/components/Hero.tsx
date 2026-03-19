@@ -130,35 +130,35 @@ export default function Hero() {
               <div className="flex flex-wrap gap-4 pt-4">
                 <a
                   href="/services/"
-                  className="text-primary-600 hover:text-primary-800 font-medium text-sm focus-ring rounded-md px-2 py-1"
+                  className="text-primary-700 hover:text-primary-900 font-medium text-sm focus-ring rounded-md px-2 py-1"
                   aria-label="View our probate services"
                 >
                   Our Services →
                 </a>
                 <a
                   href="/locations/"
-                  className="text-primary-600 hover:text-primary-800 font-medium text-sm focus-ring rounded-md px-2 py-1"
+                  className="text-primary-700 hover:text-primary-900 font-medium text-sm focus-ring rounded-md px-2 py-1"
                   aria-label="View service areas"
                 >
                   Service Areas →
                 </a>
                 <a
                   href="/blog/"
-                  className="text-primary-600 hover:text-primary-800 font-medium text-sm focus-ring rounded-md px-2 py-1"
+                  className="text-primary-700 hover:text-primary-900 font-medium text-sm focus-ring rounded-md px-2 py-1"
                   aria-label="Read our blog and learn more"
                 >
                   Learn More →
                 </a>
                 <a
                   href="/faq/"
-                  className="text-primary-600 hover:text-primary-800 font-medium text-sm focus-ring rounded-md px-2 py-1"
+                  className="text-primary-700 hover:text-primary-900 font-medium text-sm focus-ring rounded-md px-2 py-1"
                   aria-label="View frequently asked questions"
                 >
                   Common Questions →
                 </a>
                 <a
                   href="/testimonials/"
-                  className="text-primary-600 hover:text-primary-800 font-medium text-sm focus-ring rounded-md px-2 py-1"
+                  className="text-primary-700 hover:text-primary-900 font-medium text-sm focus-ring rounded-md px-2 py-1"
                   aria-label="Read client success stories"
                 >
                   Success Stories →
@@ -169,7 +169,7 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-6 pt-4">
                 <div className="flex items-center gap-3">
                   <div className="p-3 bg-primary-100 rounded-full">
-                    <Phone className="h-6 w-6 text-primary-600" />
+                    <Phone className="h-6 w-6 text-primary-700" />
                   </div>
                   <div>
                     <p className="text-sm text-secondary-500">Call Us Today</p>
@@ -247,9 +247,9 @@ export default function Hero() {
               <div className="relative z-10">
                 <div className="bg-white rounded-2xl shadow-2xl p-6 transform -rotate-1 hover:rotate-0 transition-transform duration-500">
                   <div className="space-y-4">
-                    <h4 className="text-lg font-bold text-secondary-900 text-center">
+                    <h3 className="text-lg font-bold text-secondary-900 text-center">
                       Overwhelmed by Nevada Probate?
-                    </h4>
+                    </h3>
                     <p className="text-sm text-secondary-600 text-center font-medium">
                       We Sell Inherited Properties in 45 Days While You Focus on Family
                     </p>

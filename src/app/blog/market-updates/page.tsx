@@ -106,7 +106,7 @@ export default function MarketUpdatesPage() {
               </div>
               <Link
                 href="/blog/las-vegas-market-jan-2025/"
-                className="text-primary-600 hover:text-primary-800 font-medium"
+                className="text-primary-700 hover:text-primary-900 font-medium"
               >
                 Read Full Report →
               </Link>
@@ -141,7 +141,7 @@ export default function MarketUpdatesPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-md">
-              <TrendingUp className="h-12 w-12 text-primary-600 mb-4" />
+              <TrendingUp className="h-12 w-12 text-primary-700 mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">
                 Probate Timeline Advantage
               </h3>
@@ -179,7 +179,7 @@ export default function MarketUpdatesPage() {
           </p>
           <Link
             href="/contact/"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             Schedule Consultation
           </Link>

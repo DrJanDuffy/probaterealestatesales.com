@@ -268,7 +268,7 @@ export default function ContentMarketingCalendar() {
               >
                 <div className="mb-6">
                   <div className="flex items-center gap-3 mb-3">
-                    <Calendar className="h-6 w-6 text-primary-600" />
+                    <Calendar className="h-6 w-6 text-primary-700" />
                     <h4 className="text-xl font-bold text-secondary-900">{month.month}</h4>
                     <span className="inline-block bg-primary-100 text-primary-700 px-3 py-1 rounded-full text-sm font-medium">
                       {month.theme}
@@ -287,7 +287,7 @@ export default function ContentMarketingCalendar() {
                         <h5 className="font-semibold text-secondary-900 text-sm mb-2">
                           {week.title}
                         </h5>
-                        <span className="text-xs text-primary-600 bg-primary-50 px-2 py-1 rounded">
+                        <span className="text-xs text-primary-700 bg-primary-50 px-2 py-1 rounded">
                           {week.type}
                         </span>
                       </div>
@@ -343,11 +343,11 @@ export default function ContentMarketingCalendar() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
-                    <content.icon className="h-6 w-6 text-primary-600" />
+                    <content.icon className="h-6 w-6 text-primary-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">{content.type}</h4>
-                    <span className="text-sm text-primary-600 font-medium">
+                    <span className="text-sm text-primary-700 font-medium">
                       {content.frequency}
                     </span>
                   </div>
@@ -468,7 +468,7 @@ export default function ContentMarketingCalendar() {
 
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">
-                <Calendar className="h-4 w-4 text-primary-600" />
+                <Calendar className="h-4 w-4 text-primary-700" />
                 Strategic Planning
               </span>
               <span className="flex items-center gap-2">

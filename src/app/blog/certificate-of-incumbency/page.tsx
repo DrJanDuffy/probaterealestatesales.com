@@ -318,7 +318,7 @@ export default function CertificateOfIncumbencyPage() {
           </p>
           <Link
             href="/contact/"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             Schedule Free Consultation
           </Link>

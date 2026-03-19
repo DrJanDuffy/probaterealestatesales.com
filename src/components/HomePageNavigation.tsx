@@ -91,7 +91,7 @@ export default function HomePageNavigation() {
         <div className="mt-8 text-center">
           <Link
             href="/resources/"
-            className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium text-sm"
+            className="inline-flex items-center text-primary-700 hover:text-primary-900 font-medium text-sm"
           >
             View All Resources
             <ArrowRight className="h-4 w-4 ml-1" />

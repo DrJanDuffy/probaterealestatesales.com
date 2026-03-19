@@ -191,7 +191,7 @@ export default function LeadGenerationSystem() {
               <div className="bg-white rounded-lg p-4 border border-gray-200">
                 <div className="flex flex-wrap gap-4 text-sm text-secondary-600">
                   <span className="flex items-center gap-2">
-                    <Award className="h-4 w-4 text-primary-600" />
+                    <Award className="h-4 w-4 text-primary-700" />
                     Court-Approved Expert
                   </span>
                   <span className="flex items-center gap-2">
@@ -288,7 +288,7 @@ export default function LeadGenerationSystem() {
                 <div className="bg-white rounded-xl shadow-soft p-6 border border-gray-100">
                   <div className="mb-4">
                     <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto">
-                      <step.icon className="h-8 w-8 text-primary-600" />
+                      <step.icon className="h-8 w-8 text-primary-700" />
                     </div>
                   </div>
 
@@ -372,7 +372,7 @@ export default function LeadGenerationSystem() {
 
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">
-                <Mail className="h-4 w-4 text-primary-600" />
+                <Mail className="h-4 w-4 text-primary-700" />
                 Automated Follow-up
               </span>
               <span className="flex items-center gap-2">

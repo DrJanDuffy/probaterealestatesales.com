@@ -198,7 +198,7 @@ export default function Services() {
 
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center group-hover:bg-primary-200 transition-colors duration-300">
-                    <service.icon className="h-8 w-8 text-primary-600" />
+                    <service.icon className="h-8 w-8 text-primary-700" />
                   </div>
                 </div>
 
@@ -223,12 +223,12 @@ export default function Services() {
                   <div className="flex items-center gap-2 text-sm text-secondary-600">
                     <Clock className="h-4 w-4 text-primary-500" />
                     <span className="font-medium">{service.question}</span>
-                    <span className="text-primary-600 font-semibold">{service.timeline}</span>
+                    <span className="text-primary-700 font-semibold">{service.timeline}</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-secondary-600">
                     <DollarSign className="h-4 w-4 text-primary-500" />
                     <span className="font-medium">What Does This Cost?</span>
-                    <span className="text-primary-600 font-semibold">{service.pricing}</span>
+                    <span className="text-primary-700 font-semibold">{service.pricing}</span>
                   </div>
                 </div>
 
@@ -258,7 +258,7 @@ export default function Services() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-8 w-8 text-primary-600" />
+                <Award className="h-8 w-8 text-primary-700" />
               </div>
               <h4 className="text-lg font-semibold text-secondary-900 mb-2">
                 Court-Approved Expert
@@ -375,25 +375,25 @@ export default function Services() {
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-4 justify-center text-sm">
-              <a href="/locations/" className="text-primary-600 hover:text-primary-800 font-medium">
+              <a href="/locations/" className="text-primary-700 hover:text-primary-900 font-medium">
                 Our Service Areas →
               </a>
-              <a href="/blog/" className="text-primary-600 hover:text-primary-800 font-medium">
+              <a href="/blog/" className="text-primary-700 hover:text-primary-900 font-medium">
                 Educational Resources →
               </a>
               <a
                 href="/testimonials/"
-                className="text-primary-600 hover:text-primary-800 font-medium"
+                className="text-primary-700 hover:text-primary-900 font-medium"
               >
                 Client Success Stories →
               </a>
-              <a href="/contact/" className="text-primary-600 hover:text-primary-800 font-medium">
+              <a href="/contact/" className="text-primary-700 hover:text-primary-900 font-medium">
                 Contact Us →
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">
-                <Award className="h-4 w-4 text-primary-600" />
+                <Award className="h-4 w-4 text-primary-700" />
                 Court-Approved Expert
               </span>
               <span className="flex items-center gap-2">

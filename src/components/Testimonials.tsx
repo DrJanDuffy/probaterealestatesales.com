@@ -208,7 +208,7 @@ export default function Testimonials() {
                   </div>
                   <div>
                     <span className="text-secondary-500">Sale Price:</span>
-                    <div className="font-semibold text-primary-600">{testimonial.salePrice}</div>
+                    <div className="font-semibold text-primary-700">{testimonial.salePrice}</div>
                   </div>
                   <div>
                     <span className="text-secondary-500">Timeline:</span>
@@ -220,7 +220,7 @@ export default function Testimonials() {
               {/* Author */}
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
-                  <span className="text-primary-600 font-semibold text-lg">
+                  <span className="text-primary-700 font-semibold text-lg">
                     {testimonial.name.charAt(0)}
                   </span>
                 </div>
@@ -244,19 +244,19 @@ export default function Testimonials() {
 
           <div className="grid md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">$150M+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">$150M+</div>
               <div className="text-secondary-600">Total Estate Transactions</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">15%</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">15%</div>
               <div className="text-secondary-600">Above Initial Valuations</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">45 days</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">45 days</div>
               <div className="text-secondary-600">Average Time to Close</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">98%</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">98%</div>
               <div className="text-secondary-600">Client Satisfaction</div>
             </div>
           </div>

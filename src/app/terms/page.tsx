@@ -34,7 +34,7 @@ export default function TermsPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white rounded-lg shadow-lg p-8 md:p-12">
           <h1 className="text-4xl font-bold text-secondary-900 mb-6">Terms of Service</h1>
-          <p className="text-sm text-secondary-500 mb-8">
+          <p className="text-sm text-secondary-500 mb-8" suppressHydrationWarning>
             Last updated:{' '}
             {new Date().toLocaleDateString('en-US', {
               year: 'numeric',
@@ -191,7 +191,7 @@ export default function TermsPage() {
                 <p className="text-secondary-700 mb-2">License: S.0197614</p>
                 <p className="text-secondary-700 mb-2">
                   Phone:{' '}
-                  <a href="tel:+1-702-830-9222" className="text-primary-600 hover:text-primary-800">
+                  <a href="tel:+1-702-830-9222" className="text-primary-700 hover:text-primary-900">
                     (702) 830-9222
                   </a>
                 </p>
@@ -199,7 +199,7 @@ export default function TermsPage() {
                   Email:{' '}
                   <a
                     href="mailto:DrJanSells@ProbateRealEstateSales.com"
-                    className="text-primary-600 hover:text-primary-800"
+                    className="text-primary-700 hover:text-primary-900"
                   >
                     DrJanSells@ProbateRealEstateSales.com
                   </a>
@@ -209,7 +209,7 @@ export default function TermsPage() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-200">
-            <Link href="/" className="text-primary-600 hover:text-primary-800 font-medium">
+            <Link href="/" className="text-primary-700 hover:text-primary-900 font-medium">
               ← Back to Home
             </Link>
           </div>

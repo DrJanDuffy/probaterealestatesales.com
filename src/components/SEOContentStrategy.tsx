@@ -161,7 +161,7 @@ export default function SEOContentStrategy() {
             {/* Primary Keywords */}
             <div className="bg-white rounded-xl shadow-soft p-6 border border-primary-200">
               <div className="flex items-center gap-3 mb-4">
-                <Target className="h-6 w-6 text-primary-600" />
+                <Target className="h-6 w-6 text-primary-700" />
                 <h4 className="text-lg font-semibold text-secondary-900">Primary Keywords</h4>
               </div>
               <p className="text-secondary-600 text-sm mb-4">
@@ -318,7 +318,7 @@ export default function SEOContentStrategy() {
                   <h4 className="font-semibold text-secondary-900 mb-2">{keyword.keyword}</h4>
                   <p className="text-sm text-secondary-600 mb-2">
                     Target Density:{' '}
-                    <span className="font-medium text-primary-600">{keyword.targetDensity}</span>
+                    <span className="font-medium text-primary-700">{keyword.targetDensity}</span>
                   </p>
                   <div>
                     <p className="text-xs text-secondary-500 mb-2">Variations:</p>
@@ -363,7 +363,7 @@ export default function SEOContentStrategy() {
 
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">
-                <Search className="h-4 w-4 text-primary-600" />
+                <Search className="h-4 w-4 text-primary-700" />
                 Keyword Optimized
               </span>
               <span className="flex items-center gap-2">

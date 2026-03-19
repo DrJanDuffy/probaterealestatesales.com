@@ -60,7 +60,7 @@ export default function ClarkCountyProbatePage() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <MapPin className="h-12 w-12 text-primary-600 mx-auto mb-4" />
+            <MapPin className="h-12 w-12 text-primary-700 mx-auto mb-4" />
             <h2 className="text-3xl font-bold text-secondary-900 mb-4">
               Clark County Probate Court Overview
             </h2>
@@ -112,7 +112,7 @@ export default function ClarkCountyProbatePage() {
                   File a petition with the{' '}
                   <Link
                     href="/locations/las-vegas/"
-                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                    className="text-primary-700 hover:text-primary-900 font-semibold underline"
                   >
                     Clark County Probate Court
                   </Link>{' '}
@@ -173,14 +173,14 @@ export default function ClarkCountyProbatePage() {
                   of all estate assets, including real estate. Real property requires a professional{' '}
                   <Link
                     href="/probate-property-valuation/"
-                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                    className="text-primary-700 hover:text-primary-900 font-semibold underline"
                   >
                     appraisal
                   </Link>
                   . Learn about our{' '}
                   <Link
                     href="/services/#property-valuation"
-                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                    className="text-primary-700 hover:text-primary-900 font-semibold underline"
                   >
                     property valuation services
                   </Link>
@@ -221,14 +221,14 @@ export default function ClarkCountyProbatePage() {
                   To sell real estate, the executor/administrator must file a petition requesting{' '}
                   <Link
                     href="/services/#probate-sales"
-                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                    className="text-primary-700 hover:text-primary-900 font-semibold underline"
                   >
                     probate property sale
                   </Link>
                   . Our{' '}
                   <Link
                     href="/services/#court-representation"
-                    className="text-primary-600 hover:text-primary-800 font-semibold underline"
+                    className="text-primary-700 hover:text-primary-900 font-semibold underline"
                   >
                     court representation services
                   </Link>{' '}
@@ -314,7 +314,7 @@ export default function ClarkCountyProbatePage() {
                     href="https://www.clarkcountycourts.us"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-800"
+                    className="text-primary-700 hover:text-primary-900"
                   >
                     www.clarkcountycourts.us
                   </a>
@@ -333,7 +333,7 @@ export default function ClarkCountyProbatePage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white rounded-lg p-6 shadow-md">
-              <FileText className="h-8 w-8 text-primary-600 mb-4" />
+              <FileText className="h-8 w-8 text-primary-700 mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">
                 Organize Documents Early
               </h3>
@@ -426,7 +426,7 @@ export default function ClarkCountyProbatePage() {
           </p>
           <Link
             href="/contact/"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             Schedule Free Consultation
           </Link>

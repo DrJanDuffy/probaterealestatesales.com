@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
+  // Enable source maps in production for Lighthouse and debugging (optional; increases deploy size)
+  productionBrowserSourceMaps: true,
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },

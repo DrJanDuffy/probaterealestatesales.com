@@ -183,7 +183,7 @@ export default function ProbateTimeline() {
                       <div className="grid md:grid-cols-2 gap-6">
                         <div>
                           <h4 className="font-semibold text-secondary-900 mb-4 flex items-center gap-2">
-                            <FileText className="h-5 w-5 text-primary-600" />
+                            <FileText className="h-5 w-5 text-primary-700" />
                             Court Requirements
                           </h4>
                           <ul className="space-y-2">
@@ -233,7 +233,7 @@ export default function ProbateTimeline() {
               >
                 <div className="flex items-start gap-3">
                   <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <note.icon className="h-6 w-6 text-primary-600" />
+                    <note.icon className="h-6 w-6 text-primary-700" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900 mb-2">{note.title}</h4>
@@ -298,7 +298,7 @@ export default function ProbateTimeline() {
             </div>
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">
-                <Gavel className="h-4 w-4 text-primary-600" />
+                <Gavel className="h-4 w-4 text-primary-700" />
                 Court-Approved Process
               </span>
               <span className="flex items-center gap-2">

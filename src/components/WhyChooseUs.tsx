@@ -123,7 +123,7 @@ const awards = [
     title: 'Excellence in Estate Services',
     organization: 'Nevada Association of Realtors',
     icon: Award,
-    color: 'text-primary-600',
+    color: 'text-primary-700',
   },
 ];
 
@@ -188,7 +188,7 @@ export default function WhyChooseUs() {
                     />
                   </div>
                   <div className="absolute -bottom-4 -right-4 bg-white rounded-full p-3 shadow-lg border-2 border-primary-200">
-                    <Award className="h-8 w-8 text-primary-600" />
+                    <Award className="h-8 w-8 text-primary-700" />
                   </div>
                 </div>
               </div>
@@ -216,7 +216,7 @@ export default function WhyChooseUs() {
                   {credential.title}
                 </h4>
 
-                <p className="text-sm font-medium text-primary-600 mb-3">{credential.subtitle}</p>
+                <p className="text-sm font-medium text-primary-700 mb-3">{credential.subtitle}</p>
 
                 <p className="text-secondary-600 text-sm leading-relaxed">
                   {credential.description}
@@ -239,12 +239,12 @@ export default function WhyChooseUs() {
               >
                 <div className="mb-6">
                   <div className="w-20 h-20 bg-primary-100 rounded-full flex items-center justify-center mx-auto group-hover:bg-primary-200 transition-colors duration-300">
-                    <reason.icon className="h-10 w-10 text-primary-600" />
+                    <reason.icon className="h-10 w-10 text-primary-700" />
                   </div>
                 </div>
 
                 <div className="mb-4">
-                  <span className="text-3xl font-bold text-primary-600 block">{reason.stat}</span>
+                  <span className="text-3xl font-bold text-primary-700 block">{reason.stat}</span>
                   <span className="text-sm text-secondary-500">{reason.detail}</span>
                 </div>
 

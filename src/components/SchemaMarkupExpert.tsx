@@ -338,7 +338,7 @@ export default function SchemaMarkupExpert() {
             {/* Person Schema */}
             <div className="bg-white rounded-xl shadow-soft p-6 border border-primary-200">
               <div className="flex items-center gap-3 mb-4">
-                <Users className="h-6 w-6 text-primary-600" />
+                <Users className="h-6 w-6 text-primary-700" />
                 <h4 className="text-lg font-semibold text-secondary-900">Person Schema</h4>
               </div>
               <p className="text-secondary-600 text-sm mb-4">
@@ -405,7 +405,7 @@ export default function SchemaMarkupExpert() {
               </h4>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <Award className="h-5 w-5 text-primary-600" />
+                  <Award className="h-5 w-5 text-primary-700" />
                   <span className="text-sm text-secondary-700">Court-Approved Property Sale</span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -426,7 +426,7 @@ export default function SchemaMarkupExpert() {
               <h4 className="text-lg font-semibold text-secondary-900 mb-4">Contact Information</h4>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-primary-600" />
+                  <Phone className="h-5 w-5 text-primary-700" />
                   <span className="text-sm text-secondary-700">+1-702-830-9222</span>
                 </div>
                 <div className="flex items-center gap-3">
@@ -453,7 +453,7 @@ export default function SchemaMarkupExpert() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Star className="h-8 w-8 text-primary-600" />
+                <Star className="h-8 w-8 text-primary-700" />
               </div>
               <h4 className="font-semibold text-secondary-900 mb-2">Rich Snippets</h4>
               <p className="text-sm text-secondary-600">
@@ -513,7 +513,7 @@ export default function SchemaMarkupExpert() {
 
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">
-                <Star className="h-4 w-4 text-primary-600" />
+                <Star className="h-4 w-4 text-primary-700" />
                 Rich Snippets
               </span>
               <span className="flex items-center gap-2">

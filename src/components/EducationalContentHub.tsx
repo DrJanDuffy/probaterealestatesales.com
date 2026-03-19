@@ -167,9 +167,9 @@ export default function EducationalContentHub() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-primary-100 rounded-lg">
-                    <guide.icon className="h-5 w-5 text-primary-600" />
+                    <guide.icon className="h-5 w-5 text-primary-700" />
                   </div>
-                  <span className="text-xs font-medium text-primary-600 bg-primary-50 px-2 py-1 rounded-full">
+                  <span className="text-xs font-medium text-primary-700 bg-primary-50 px-2 py-1 rounded-full">
                     {guide.category}
                   </span>
                 </div>
@@ -188,7 +188,7 @@ export default function EducationalContentHub() {
 
                   <Link
                     href={guide.link}
-                    className="text-primary-600 hover:text-primary-700 text-sm font-medium flex items-center gap-1 group"
+                    className="text-primary-700 hover:text-primary-900 text-sm font-medium flex items-center gap-1 group"
                   >
                     Read Guide
                     <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
@@ -217,7 +217,7 @@ export default function EducationalContentHub() {
                   <div className="flex-1">
                     <h4 className="font-semibold text-secondary-900 mb-3">{item.question}</h4>
                     <p className="text-secondary-600 text-sm leading-relaxed">{item.answer}</p>
-                    <span className="inline-block mt-3 text-xs text-primary-600 bg-primary-50 px-2 py-1 rounded-full">
+                    <span className="inline-block mt-3 text-xs text-primary-700 bg-primary-50 px-2 py-1 rounded-full">
                       {item.category}
                     </span>
                   </div>
@@ -251,7 +251,7 @@ export default function EducationalContentHub() {
 
                   <a
                     href={video.link}
-                    className="text-primary-600 hover:text-primary-700 text-sm font-medium flex items-center gap-1 group"
+                    className="text-primary-700 hover:text-primary-900 text-sm font-medium flex items-center gap-1 group"
                   >
                     Watch Video
                     <ArrowRight className="h-3 w-3 group-hover:translate-x-1 transition-transform" />
@@ -324,7 +324,7 @@ export default function EducationalContentHub() {
 
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">
               <span className="flex items-center gap-2">
-                <Award className="h-4 w-4 text-primary-600" />
+                <Award className="h-4 w-4 text-primary-700" />
                 Expert Authored Content
               </span>
               <span className="flex items-center gap-2">

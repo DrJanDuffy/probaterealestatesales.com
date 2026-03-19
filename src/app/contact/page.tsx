@@ -55,11 +55,11 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 text-center">
-              <Phone className="h-12 w-12 text-primary-600 mx-auto mb-4" />
+              <Phone className="h-12 w-12 text-primary-700 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">Phone</h3>
               <a
                 href="tel:+1-702-830-9222"
-                className="text-primary-600 hover:text-primary-800 font-medium text-lg"
+                className="text-primary-700 hover:text-primary-900 font-medium text-lg"
               >
                 (702) 830-9222
               </a>
@@ -97,7 +97,7 @@ export default function ContactPage() {
 
           {/* Office Hours */}
           <div className="bg-gray-50 rounded-xl p-8 text-center mb-12">
-            <Clock className="h-8 w-8 text-primary-600 mx-auto mb-4" />
+            <Clock className="h-8 w-8 text-primary-700 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-secondary-900 mb-4">Office Hours</h3>
             <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
               <div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                 href="https://www.google.com/maps/dir/?api=1&destination=400+S+4th+St+suite+250+b,+Las+Vegas,+NV+89101"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center text-primary-600 hover:text-primary-800 font-medium"
+                className="inline-flex items-center text-primary-700 hover:text-primary-900 font-medium"
               >
                 <MapPin className="h-5 w-5 mr-2" />
                 Get Directions to Our Office
@@ -241,7 +241,7 @@ export default function ContactPage() {
                   name="consent"
                   type="checkbox"
                   required
-                  className="h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded mt-1"
+                  className="h-4 w-4 text-primary-700 focus:ring-primary-500 border-gray-300 rounded mt-1"
                 />
                 <label htmlFor="consent" className="ml-3 text-sm text-secondary-600">
                   I agree to receive marketing communications via voice call, text message, or email
@@ -275,7 +275,7 @@ export default function ContactPage() {
           </p>
           <a
             href="tel:+1-702-830-9222"
-            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-600 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             <Phone className="h-5 w-5 mr-2" />
             Call (702) 830-9222
@@ -299,7 +299,7 @@ export default function ContactPage() {
             <div className="text-center mt-8">
               <Link
                 href="/faq/"
-                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 font-semibold"
+                className="inline-flex items-center gap-2 text-primary-700 hover:text-primary-900 font-semibold"
               >
                 View All FAQs
                 <ArrowRight className="w-4 h-4" />
