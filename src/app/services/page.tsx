@@ -67,14 +67,6 @@ export default function ServicesPage() {
       <SchemaMarkup
         type="faq"
         breadcrumbs={breadcrumbs}
-        aggregateRating={{
-          ratingValue: 5.0,
-          reviewCount: 6,
-          itemReviewed: {
-            name: 'Nevada Probate Real Estate Services',
-            type: 'LocalBusiness',
-          },
-        }}
         customSchema={{
           '@context': 'https://schema.org',
           '@graph': [

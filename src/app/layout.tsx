@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
 import { defaultSchemas } from '@/lib/schema';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
@@ -62,6 +62,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
+  themeColor: '#0369a1',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -152,11 +153,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 'Nevada Probate Timeline',
                 'Estate Liquidation',
               ],
-              aggregateRating: {
-                '@type': 'AggregateRating',
-                ratingValue: '5',
-                reviewCount: '25',
-              },
             }),
           }}
         />

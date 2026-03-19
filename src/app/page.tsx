@@ -525,17 +525,7 @@ export default function Home() {
         </div>
       </section>
 
-      <SchemaMarkup
-        type="home"
-        aggregateRating={{
-          ratingValue: 5.0,
-          reviewCount: 6,
-          itemReviewed: {
-            name: 'Nevada Probate Real Estate Services',
-            type: 'LocalBusiness',
-          },
-        }}
-      />
+      <SchemaMarkup type="home" />
     </main>
   );
 }

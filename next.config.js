@@ -5,7 +5,10 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react'],
   },
   images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'images.unsplash.com', pathname: '/**' },
+      { protocol: 'https', hostname: 'via.placeholder.com', pathname: '/**' },
+    ],
     formats: ['image/webp', 'image/avif'],
   },
   env: {
@@ -17,6 +20,18 @@ const nextConfig = {
   generateEtags: false,
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+        ],
+      },
+    ];
   },
   async redirects() {
     return [

@@ -214,6 +214,7 @@ export default function Hero() {
                         alt="Dr. Jan Duffy - Probate Real Estate Specialist"
                         width={192}
                         height={192}
+                        priority
                         className="w-full h-full object-cover"
                         priority
                         fetchPriority="high"

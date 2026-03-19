@@ -380,13 +380,6 @@ export const personSchema = {
     url: 'https://www.berkshirehathawayhs.com',
   },
   sameAs: ['https://www.probaterealestatesales.com/about/'],
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '6',
-    bestRating: '5',
-    worstRating: '1',
-  },
 };
 
 /** Review schema for testimonials - Google 2025/2026 rich results */
@@ -531,6 +524,13 @@ export const defaultSchemas = {
           },
         },
       ],
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5',
+      reviewCount: '25',
+      bestRating: '5',
+      worstRating: '1',
     },
   },
 

@@ -164,18 +164,6 @@ export default function TestimonialsPage() {
     },
   }));
 
-  // Calculate aggregate rating
-  const totalRating = testimonials.reduce((sum, t) => sum + t.rating, 0);
-  const averageRating = totalRating / testimonials.length;
-  const aggregateRating = {
-    ratingValue: averageRating,
-    reviewCount: testimonials.length,
-    itemReviewed: {
-      name: 'Nevada Probate Real Estate Services',
-      type: 'LocalBusiness',
-    },
-  };
-
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Review schema for rich results */}
@@ -429,12 +417,7 @@ export default function TestimonialsPage() {
           </div>
         </div>
       </section>
-      <SchemaMarkup
-        type="faq"
-        breadcrumbs={breadcrumbs}
-        reviews={reviews}
-        aggregateRating={aggregateRating}
-      />
+      <SchemaMarkup type="faq" breadcrumbs={breadcrumbs} reviews={reviews} />
     </main>
   );
 }
