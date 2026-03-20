@@ -19,6 +19,7 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import { SITE_LOGO_ABSOLUTE_URL } from '@/config/site-google';
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
@@ -75,7 +76,7 @@ export default function ServicesPage() {
               '@id': 'https://www.probaterealestatesales.com/#organization',
               name: 'Las Vegas Probate Real Estate Services',
               url: 'https://www.probaterealestatesales.com',
-              logo: 'https://www.probaterealestatesales.com/logo.png',
+              logo: SITE_LOGO_ABSOLUTE_URL,
               areaServed: {
                 '@type': 'AdministrativeArea',
                 name: 'Clark County',

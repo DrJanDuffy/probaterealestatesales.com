@@ -1,0 +1,20 @@
+{
+  "name": "Probate Real Estate Sales - Dr. Jan Duffy",
+  "short_name": "Probate RE Sales",
+  "description": "Las Vegas probate real estate specialist. Court-approved property sales and inherited property expertise.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0369a1",
+  "lang": "en-US",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/images/dr-jan-duffy.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}

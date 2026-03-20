@@ -1,10 +1,21 @@
 import type { MetadataRoute } from 'next';
 import { headers } from 'next/headers';
 
+function sitemapBaseUrl(hostHeader: string): string {
+  const host = (hostHeader.split(':')[0] || 'localhost').toLowerCase();
+  if (host === 'localhost' || host === '127.0.0.1' || host.endsWith('.vercel.app')) {
+    return `https://${host}`;
+  }
+  if (host.includes('probaterealestatesales.com')) {
+    return 'https://www.probaterealestatesales.com';
+  }
+  return `https://${host}`;
+}
+
 export default async function robots(): Promise<MetadataRoute.Robots> {
   const headersList = await headers();
   const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost';
-  const baseUrl = `https://${host.split(':')[0]}`;
+  const baseUrl = sitemapBaseUrl(host);
 
   return {
     rules: [

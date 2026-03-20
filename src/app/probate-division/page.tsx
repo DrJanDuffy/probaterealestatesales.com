@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Breadcrumb from '@/components/Breadcrumb';
+import { SITE_LOGO_ABSOLUTE_URL } from '@/config/site-google';
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
@@ -92,7 +93,7 @@ export default function ProbateDivisionPage() {
               '@id': 'https://www.probaterealestatesales.com/probate-division/#organization',
               name: 'Berkshire Hathaway HomeServices Nevada Properties - Probate Real Estate Division',
               url: 'https://www.probaterealestatesales.com/probate-division/',
-              logo: 'https://www.probaterealestatesales.com/logo.png',
+              logo: SITE_LOGO_ABSOLUTE_URL,
               description:
                 'Dedicated Probate Real Estate Division offering expertise in probate, trust, and conservatorship real estate sales throughout Nevada.',
               address: {

@@ -1,5 +1,9 @@
-import { Award, BookOpen, Clock, FileText, Mail, MapPin, Phone, Shield, Users } from 'lucide-react';
+import { Award, BookOpen, Clock, ExternalLink, FileText, Mail, MapPin, Phone, Shield, Users } from 'lucide-react';
 import Link from 'next/link';
+import {
+  OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
+  OFFICE_GOOGLE_MAPS_LISTING_URL,
+} from '@/config/site-google';
 
 const footerNavigation = {
   services: [
@@ -151,7 +155,7 @@ export default function Footer() {
               <div className="flex items-start text-secondary-300 group">
                 <MapPin className="h-5 w-5 mr-3 text-primary-400 mt-0.5 group-hover:text-primary-300 transition-colors flex-shrink-0" />
                 <a
-                  href="https://maps.google.com/?q=400+S+4th+St+suite+250+b+Las+Vegas+NV+89101"
+                  href={OFFICE_GOOGLE_MAPS_LISTING_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-white transition-colors focus-ring-dark rounded-md px-1"
@@ -159,6 +163,40 @@ export default function Footer() {
                 >
                   400 S 4th St suite 250 b, Las Vegas, NV 89101
                 </a>
+              </div>
+              <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm text-secondary-400">
+                <a
+                  href={OFFICE_GOOGLE_MAPS_DIRECTIONS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 hover:text-white transition-colors focus-ring-dark rounded-md"
+                  aria-label="Get directions to office on Google Maps"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                  Directions
+                </a>
+                <a
+                  href={OFFICE_GOOGLE_MAPS_LISTING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 hover:text-white transition-colors focus-ring-dark rounded-md"
+                  aria-label="Open Google Maps listing for this address"
+                >
+                  <MapPin className="h-3.5 w-3.5" aria-hidden />
+                  Google Maps
+                </a>
+                {process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL ? (
+                  <a
+                    href={process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 hover:text-white transition-colors focus-ring-dark rounded-md"
+                    aria-label="View Google Business Profile and reviews"
+                  >
+                    <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                    Google reviews
+                  </a>
+                ) : null}
               </div>
               <div className="flex items-center text-secondary-300">
                 <Clock className="h-5 w-5 mr-3 text-primary-400" />
@@ -298,9 +336,9 @@ export default function Footer() {
         <div className="border-t border-secondary-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-secondary-400 text-sm mb-4 md:mb-0">
-              © 2025 Berkshire Hathaway HomeServices Nevada Properties - Probate Real Estate
-              Division. Comprehensive Real Estate Services by Dr. Jan Duffy S.0197614. All rights
-              reserved.
+              © {new Date().getFullYear()} Berkshire Hathaway HomeServices Nevada Properties -
+              Probate Real Estate Division. Comprehensive Real Estate Services by Dr. Jan Duffy
+              S.0197614. All rights reserved.
             </div>
             <div className="flex flex-wrap gap-4 text-sm text-secondary-400">
               <Link

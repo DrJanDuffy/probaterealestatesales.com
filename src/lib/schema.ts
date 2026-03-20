@@ -1,3 +1,9 @@
+import {
+  getLocalBusinessSameAsUrls,
+  OFFICE_GOOGLE_MAPS_LISTING_URL,
+  SITE_LOGO_ABSOLUTE_URL,
+} from '@/config/site-google';
+
 export interface LocalBusinessSchema {
   '@context': 'https://schema.org';
   '@type': 'LocalBusiness';
@@ -486,12 +492,9 @@ export const defaultSchemas = {
     },
     logo: 'https://www.probaterealestatesales.com/logo.png',
     image: 'https://www.probaterealestatesales.com/logo.png',
-    sameAs: [
-      'https://www.probaterealestatesales.com',
-      'https://www.facebook.com/probaterealestatesales',
-      'https://www.linkedin.com/company/probaterealestatesales',
-      'https://www.instagram.com/probaterealestatesales',
-    ],
+    /** Maps listing URL helps Google connect site ↔ Maps ↔ GBP */
+    hasMap: OFFICE_GOOGLE_MAPS_LISTING_URL,
+    sameAs: getLocalBusinessSameAsUrls(),
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Nevada Probate Real Estate Services',
@@ -737,7 +740,7 @@ export const defaultSchemas = {
     description:
       "Leading provider of comprehensive probate real estate services in Nevada, specializing in court-approved property sales, Clark County probate court procedures, and Nevada's fastest probate timeline (6-8 months vs California's 9-18 months).",
     url: 'https://www.probaterealestatesales.com',
-    logo: 'https://www.probaterealestatesales.com/logo.png',
+    logo: SITE_LOGO_ABSOLUTE_URL,
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-702-830-9222',
@@ -852,7 +855,7 @@ export function generateArticleSchema(article: {
       name: 'Las Vegas Probate Real Estate Sales',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.probaterealestatesales.com/logo.png',
+        url: SITE_LOGO_ABSOLUTE_URL,
       },
     },
     datePublished: article.datePublished,

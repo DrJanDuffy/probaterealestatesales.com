@@ -4,6 +4,10 @@ import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import {
+  OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
+  OFFICE_GOOGLE_MAPS_EMBED_SRC,
+} from '@/config/site-google';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -116,7 +120,7 @@ export default function ContactPage() {
             <h2 className="text-2xl font-bold text-secondary-900 mb-6 text-center">Find Us</h2>
             <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
               <iframe
-                src="https://www.google.com/maps?q=400+S+4th+St+suite+250+b,+Las+Vegas,+NV+89101&output=embed&hl=en&z=15"
+                src={OFFICE_GOOGLE_MAPS_EMBED_SRC}
                 width="100%"
                 height="450"
                 style={{ border: 0 }}
@@ -129,7 +133,7 @@ export default function ContactPage() {
             </div>
             <div className="mt-4 text-center">
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=400+S+4th+St+suite+250+b,+Las+Vegas,+NV+89101"
+                href={OFFICE_GOOGLE_MAPS_DIRECTIONS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-primary-700 hover:text-primary-900 font-medium"

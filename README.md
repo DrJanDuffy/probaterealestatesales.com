@@ -76,6 +76,16 @@ pnpm start
 - **Format**: `npm run format` - Format code with Biome
 - **Type Check**: `npm run type-check` - Run TypeScript compiler
 
+## Google Search Console, Maps & Business Profile
+
+1. **Search Console** ([GSC](https://search.google.com/search-console)): Add the `www` property `https://www.probaterealestatesales.com/`, verify with the HTML tag method, and set `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` in Vercel (see `.env.example`). Submit `https://www.probaterealestatesales.com/sitemap.xml`.
+2. **Canonical URLs**: Production `robots.txt` always points the sitemap to `https://www.probaterealestatesales.com/sitemap.xml` (avoids duplicate host confusion).
+3. **Maps & NAP**: Office address, hours, phone, and Maps URLs are centralized in [`src/config/site-google.ts`](src/config/site-google.ts). Keep them identical to your **Google Business Profile** (NAP + hours).
+4. **Structured data**: `LocalBusiness` and `LegalService` JSON-LD include `hasMap` and `sameAs` (site, social, Maps listing, optional GBP URL).
+5. **Business Profile URL**: Set `NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL` to your public Maps/CID or GBP link so it appears in `sameAs` and the footer “Google reviews” link.
+
+See **[docs/SITE-AUDIT.md](docs/SITE-AUDIT.md)** for an ongoing technical SEO / performance checklist.
+
 ## 📁 Project Structure
 
 ```

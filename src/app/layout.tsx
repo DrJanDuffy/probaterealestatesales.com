@@ -4,6 +4,7 @@ import Script from 'next/script';
 import './globals.css';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
+import { getLocalBusinessSameAsUrls, OFFICE_GOOGLE_MAPS_LISTING_URL } from '@/config/site-google';
 import { defaultSchemas } from '@/lib/schema';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
@@ -45,6 +46,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/',
   },
+  manifest: '/site.webmanifest',
   robots: {
     index: true,
     follow: true,
@@ -142,7 +144,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 { '@type': 'City', name: 'Mesquite' },
                 { '@type': 'AdministrativeArea', name: 'Clark County' },
               ],
-              sameAs: ['https://www.probaterealestatesales.com'],
+              hasMap: OFFICE_GOOGLE_MAPS_LISTING_URL,
+              sameAs: getLocalBusinessSameAsUrls(),
               knowsAbout: [
                 'Probate Real Estate',
                 'Estate Administration',

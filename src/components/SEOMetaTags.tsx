@@ -1,6 +1,7 @@
 'use client';
 
 import Head from 'next/head';
+import { getLocalBusinessSameAsUrls, OFFICE_GOOGLE_MAPS_LISTING_URL } from '@/config/site-google';
 
 interface SEOMetaTagsProps {
   title: string;
@@ -193,7 +194,9 @@ export default function SEOMetaTags({
               latitude: 36.1699,
               longitude: -115.1398,
             },
-            openingHours: 'Mo-Fr 09:00-17:00',
+            openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-14:00'],
+            hasMap: OFFICE_GOOGLE_MAPS_LISTING_URL,
+            sameAs: getLocalBusinessSameAsUrls(),
             priceRange: '$$',
             paymentAccepted: ['Cash', 'Credit Card', 'Check'],
             areaServed: {

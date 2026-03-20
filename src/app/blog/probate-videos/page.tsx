@@ -2,6 +2,7 @@ import { ArrowLeft, Clock, Play, Video } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import { SITE_LOGO_ABSOLUTE_URL } from '@/config/site-google';
 import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
@@ -206,7 +207,7 @@ export default function ProbateVideosPage() {
           uploadDate: new Date().toISOString(),
           publisher: {
             name: 'Las Vegas Probate Real Estate Sales',
-            logo: 'https://www.probaterealestatesales.com/logo.png',
+            logo: SITE_LOGO_ABSOLUTE_URL,
           },
         }}
       />
