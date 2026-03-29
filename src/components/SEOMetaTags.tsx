@@ -2,6 +2,13 @@
 
 import Head from 'next/head';
 import { getLocalBusinessSameAsUrls, OFFICE_GOOGLE_MAPS_LISTING_URL } from '@/config/site-google';
+import {
+  GBP_BUSINESS_NAME,
+  GBP_DESCRIPTION,
+  GBP_OPENING_HOURS_ARRAY,
+  SITE_PHONE_TEL,
+  SITE_WEBSITE_GBP,
+} from '@/lib/site-contact';
 
 interface SEOMetaTagsProps {
   title: string;
@@ -95,7 +102,7 @@ export default function SEOMetaTags({
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:alt" content={fullTitle} />
-      <meta property="og:site_name" content="Probate Real Estate Sales" />
+      <meta property="og:site_name" content={GBP_BUSINESS_NAME} />
       <meta property="og:locale" content={language} />
 
       {/* Article-specific Open Graph tags */}
@@ -133,12 +140,12 @@ export default function SEOMetaTags({
       <meta name="business:contact_data:region" content="NV" />
       <meta name="business:contact_data:postal_code" content="89101" />
       <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content="+1-702-830-9222" />
+      <meta name="business:contact_data:phone_number" content={SITE_PHONE_TEL} />
       <meta name="business:contact_data:email" content="DrJanSells@ProbateRealEstateSales.com" />
-      <meta name="business:contact_data:website" content="https://www.probaterealestatesales.com" />
+      <meta name="business:contact_data:website" content={SITE_WEBSITE_GBP} />
 
       {/* Additional SEO Meta Tags */}
-      <meta name="classification" content="Real Estate Services" />
+      <meta name="classification" content="Real estate agent" />
       <meta name="category" content="Business" />
       <meta name="coverage" content="Worldwide" />
       <meta name="distribution" content="Global" />
@@ -175,11 +182,10 @@ export default function SEOMetaTags({
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'LocalBusiness',
-            name: 'Probate Real Estate Sales',
-            description:
-              'Specialized probate real estate services helping families navigate inherited property sales with compassion and expertise.',
+            name: GBP_BUSINESS_NAME,
+            description: GBP_DESCRIPTION,
             url: 'https://www.probaterealestatesales.com',
-            telephone: '+1-702-830-9222',
+            telephone: SITE_PHONE_TEL,
             email: 'DrJanSells@ProbateRealEstateSales.com',
             address: {
               '@type': 'PostalAddress',
@@ -194,7 +200,7 @@ export default function SEOMetaTags({
               latitude: 36.1699,
               longitude: -115.1398,
             },
-            openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-14:00'],
+            openingHours: [...GBP_OPENING_HOURS_ARRAY],
             hasMap: OFFICE_GOOGLE_MAPS_LISTING_URL,
             sameAs: getLocalBusinessSameAsUrls(),
             priceRange: '$$',

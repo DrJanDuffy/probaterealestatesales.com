@@ -3,6 +3,14 @@ import {
   OFFICE_GOOGLE_MAPS_LISTING_URL,
   SITE_LOGO_ABSOLUTE_URL,
 } from '@/config/site-google';
+import { YOUTUBE_CHANNEL_URL } from '@/config/youtube';
+import {
+  GBP_BUSINESS_NAME,
+  GBP_DESCRIPTION,
+  GBP_OPENING_HOURS_ARRAY,
+  SITE_BRAND_PRIMARY,
+  SITE_PHONE_TEL,
+} from '@/lib/site-contact';
 
 export interface LocalBusinessSchema {
   '@context': 'https://schema.org';
@@ -310,11 +318,10 @@ export const webSiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': 'https://www.probaterealestatesales.com/#website',
-  name: 'Probate Real Estate Sales - Dr. Jan Duffy',
-  alternateName: 'Las Vegas Probate Realtor',
+  name: SITE_BRAND_PRIMARY,
+  alternateName: [GBP_BUSINESS_NAME, 'Las Vegas Probate Realtor'],
   url: 'https://www.probaterealestatesales.com',
-  description:
-    'Expert probate real estate services in Las Vegas and Clark County. Sell inherited properties in 45 days with court-approved specialist Dr. Jan Duffy.',
+  description: GBP_DESCRIPTION,
   publisher: {
     '@id': 'https://www.probaterealestatesales.com/#organization',
   },
@@ -341,7 +348,7 @@ export const personSchema = {
     'Dr. Jan Duffy is a top Las Vegas probate realtor with 20+ years of experience. Licensed Nevada real estate professional (S.0197614) specializing in probate, trust, and conservatorship real estate sales. Ph.D. in Research, expert in Clark County probate court procedures. 500+ probate properties sold.',
   url: 'https://www.probaterealestatesales.com/about/',
   image: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
-  telephone: '+1-702-830-9222',
+  telephone: SITE_PHONE_TEL,
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
@@ -454,15 +461,14 @@ export const defaultSchemas = {
   localBusiness: {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    name: 'Probate Real Estate Sales - Dr. Jan Duffy',
+    name: GBP_BUSINESS_NAME,
     alternateName: [
       'Las Vegas Probate Real Estate Sales',
       'Berkshire Hathaway HomeServices Nevada Properties - Probate Real Estate Division',
     ],
-    description:
-      "Expert probate real estate services in Las Vegas and Clark County. Specialized in comprehensive probate real estate services, court-approved property sales, and estate liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
+    description: GBP_DESCRIPTION,
     url: 'https://www.probaterealestatesales.com',
-    telephone: '+1-702-830-9222',
+    telephone: SITE_PHONE_TEL,
     email: 'DrJanSells@ProbateRealEstateSales.com',
     address: {
       '@type': 'PostalAddress',
@@ -477,7 +483,7 @@ export const defaultSchemas = {
       latitude: 36.1699,
       longitude: -115.1398,
     },
-    openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-14:00'],
+    openingHours: [...GBP_OPENING_HOURS_ARRAY],
     priceRange: '$$',
     paymentAccepted: ['Cash', 'Credit Card', 'Check'],
     currenciesAccepted: 'USD',
@@ -546,7 +552,7 @@ export const defaultSchemas = {
     description:
       'Licensed Nevada real estate agent specializing in comprehensive probate real estate services, court-approved property sales, and inherited property transactions. Expert in Clark County probate court procedures and Nevada probate law.',
     url: 'https://www.probaterealestatesales.com',
-    telephone: '+1-702-830-9222',
+    telephone: SITE_PHONE_TEL,
     email: 'DrJanSells@ProbateRealEstateSales.com',
     address: {
       '@type': 'PostalAddress',
@@ -735,15 +741,14 @@ export const defaultSchemas = {
   organization: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Las Vegas Probate Real Estate Sales',
+    name: GBP_BUSINESS_NAME,
     alternateName: 'Grokipedia - Probate Real Estate',
-    description:
-      "Leading provider of comprehensive probate real estate services in Nevada, specializing in court-approved property sales, Clark County probate court procedures, and Nevada's fastest probate timeline (6-8 months vs California's 9-18 months).",
+    description: GBP_DESCRIPTION,
     url: 'https://www.probaterealestatesales.com',
     logo: SITE_LOGO_ABSOLUTE_URL,
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-702-830-9222',
+      telephone: SITE_PHONE_TEL,
       contactType: 'customer service',
       areaServed: 'US-NV',
       availableLanguage: 'English',
@@ -752,6 +757,7 @@ export const defaultSchemas = {
       'https://www.facebook.com/probaterealestatesales',
       'https://www.linkedin.com/company/probaterealestatesales',
       'https://www.instagram.com/probaterealestatesales',
+      YOUTUBE_CHANNEL_URL,
     ],
     founder: {
       '@type': 'Person',

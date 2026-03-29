@@ -13,6 +13,7 @@ import {
   generateWebPageSchema,
   generateWebSiteSchema,
 } from '@/lib/schema';
+import { GBP_BUSINESS_NAME } from '@/lib/site-contact';
 
 /** Returns true if schema is or contains an FAQPage (root, inside @graph, or in array). Used to avoid duplicate FAQPage. */
 function schemaIsOrContainsFAQPage(schema: any): boolean {
@@ -281,7 +282,7 @@ export default function SchemaMarkup({
               'Get in touch with our Nevada probate real estate experts for free consultation',
             mainEntity: {
               '@type': 'Organization',
-              name: 'Las Vegas Probate Real Estate Sales',
+              name: GBP_BUSINESS_NAME,
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: '+1-702-830-9222',

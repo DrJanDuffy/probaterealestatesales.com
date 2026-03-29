@@ -2,12 +2,18 @@
  * Hyperlocal probate data for Nevada / Clark County
  * Use for schema, metadata, and content generation.
  */
+import {
+  GBP_OPENING_HOURS_ARRAY,
+  SITE_BRAND_PRIMARY,
+  SITE_PHONE_DISPLAY,
+  SITE_PHONE_TEL,
+} from '@/lib/site-contact';
 
 export const SITE_CONFIG = {
-  name: 'Probate Real Estate Sales',
+  name: SITE_BRAND_PRIMARY,
   agent: 'Dr. Jan Duffy',
-  phone: '(702) 830-9222',
-  phoneTel: '+1-702-830-9222',
+  phone: SITE_PHONE_DISPLAY,
+  phoneTel: SITE_PHONE_TEL,
   email: 'DrJanSells@ProbateRealEstateSales.com',
   url: 'https://www.probaterealestatesales.com',
   license: 'S.0197614.LLC',
@@ -23,7 +29,7 @@ export const SITE_CONFIG = {
     latitude: 36.1699,
     longitude: -115.1398,
   },
-  openingHours: ['Mo-Fr 08:00-18:00', 'Sa 09:00-14:00'],
+  openingHours: [...GBP_OPENING_HOURS_ARRAY],
 };
 
 /** Theme colors for location heroes */

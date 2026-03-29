@@ -1,6 +1,7 @@
 /**
  * Canonical URLs for Google Search Console, Maps, and Business Profile alignment.
  * NAP must match Google Business Profile everywhere (visible text + JSON-LD).
+ * Lead flow is primarily GBP-driven; keep `src/lib/site-contact.ts` in sync with the live profile.
  */
 
 export const SITE_ORIGIN = 'https://www.probaterealestatesales.com';

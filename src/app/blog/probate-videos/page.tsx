@@ -1,9 +1,10 @@
-import { ArrowLeft, Clock, Play, Video } from 'lucide-react';
+import { ArrowLeft, ExternalLink, ListVideo, Video } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
-import { SITE_LOGO_ABSOLUTE_URL } from '@/config/site-google';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import { YouTubeChannelEmbed } from '@/components/YouTubeChannelEmbed';
+import { YOUTUBE_CHANNEL_HANDLE_URL } from '@/config/youtube';
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Videos | Educational Content | Las Vegas',
@@ -18,7 +19,24 @@ export const metadata: Metadata = {
     title: 'Probate Real Estate Videos | Educational Content',
     description: 'Watch educational videos about probate real estate processes and best practices.',
     type: 'website',
+    locale: 'en_US',
+    siteName: 'Probate Real Estate Sales',
     url: 'https://www.probaterealestatesales.com/blog/probate-videos/',
+    images: [
+      {
+        url: '/images/og-dr-jan-duffy.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Dr. Jan Duffy — probate real estate education and videos',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Probate Real Estate Videos | Las Vegas',
+    description:
+      'Educational probate real estate videos and topics from Dr. Jan Duffy, Las Vegas.',
+    images: ['/images/og-dr-jan-duffy.jpg'],
   },
 };
 
@@ -46,24 +64,46 @@ export default function ProbateVideosPage() {
             <Video className="h-16 w-16 mx-auto mb-6" />
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Probate Real Estate Videos</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Learn about probate real estate processes through our educational video content.
+              Learn about probate real estate through our YouTube channel and the topics we cover below.
             </p>
+            <a
+              href={YOUTUBE_CHANNEL_HANDLE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-900 rounded-md font-semibold hover:bg-blue-50 transition-colors"
+              aria-label="Open Dr. Jan Duffy's YouTube channel in a new tab"
+            >
+              Watch on YouTube
+              <ExternalLink className="h-5 w-5 shrink-0" aria-hidden />
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Videos Section */}
+      <YouTubeChannelEmbed />
+
+      {/* Topic outlines — add per-video pages with iframe + VideoObject when you want video rich results */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-gray-600 max-w-3xl mx-auto mb-10">
+            Episodes are published on{' '}
+            <a
+              href={YOUTUBE_CHANNEL_HANDLE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary-700 font-medium underline hover:text-primary-900"
+            >
+              Dr. Jan Duffy&apos;s YouTube channel
+            </a>
+            . The cards below are topic outlines; full episodes are on YouTube.
+          </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Video Placeholders */}
-            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-800">
               <div className="aspect-video bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center relative">
-                <Play className="h-16 w-16 text-white group-hover:scale-110 transition-transform" />
-                <div className="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-3 py-1 rounded flex items-center">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>10:30</span>
-                </div>
+                <ListVideo className="h-14 w-14 text-white opacity-90" aria-hidden />
+                <span className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  Topic
+                </span>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -75,13 +115,12 @@ export default function ProbateVideosPage() {
               </div>
             </div>
 
-            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-800">
               <div className="aspect-video bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center relative">
-                <Play className="h-16 w-16 text-white group-hover:scale-110 transition-transform" />
-                <div className="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-3 py-1 rounded flex items-center">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>8:15</span>
-                </div>
+                <ListVideo className="h-14 w-14 text-white opacity-90" aria-hidden />
+                <span className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  Topic
+                </span>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -93,13 +132,12 @@ export default function ProbateVideosPage() {
               </div>
             </div>
 
-            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-800">
               <div className="aspect-video bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center relative">
-                <Play className="h-16 w-16 text-white group-hover:scale-110 transition-transform" />
-                <div className="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-3 py-1 rounded flex items-center">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>12:45</span>
-                </div>
+                <ListVideo className="h-14 w-14 text-white opacity-90" aria-hidden />
+                <span className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  Topic
+                </span>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -111,13 +149,12 @@ export default function ProbateVideosPage() {
               </div>
             </div>
 
-            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-800">
               <div className="aspect-video bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center relative">
-                <Play className="h-16 w-16 text-white group-hover:scale-110 transition-transform" />
-                <div className="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-3 py-1 rounded flex items-center">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>15:20</span>
-                </div>
+                <ListVideo className="h-14 w-14 text-white opacity-90" aria-hidden />
+                <span className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  Topic
+                </span>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -129,13 +166,12 @@ export default function ProbateVideosPage() {
               </div>
             </div>
 
-            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-800">
               <div className="aspect-video bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center relative">
-                <Play className="h-16 w-16 text-white group-hover:scale-110 transition-transform" />
-                <div className="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-3 py-1 rounded flex items-center">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>9:30</span>
-                </div>
+                <ListVideo className="h-14 w-14 text-white opacity-90" aria-hidden />
+                <span className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  Topic
+                </span>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -147,13 +183,12 @@ export default function ProbateVideosPage() {
               </div>
             </div>
 
-            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg group cursor-pointer">
+            <div className="bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-800">
               <div className="aspect-video bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center relative">
-                <Play className="h-16 w-16 text-white group-hover:scale-110 transition-transform" />
-                <div className="absolute bottom-4 right-4 bg-black bg-opacity-75 text-white px-3 py-1 rounded flex items-center">
-                  <Clock className="h-4 w-4 mr-1" />
-                  <span>7:45</span>
-                </div>
+                <ListVideo className="h-14 w-14 text-white opacity-90" aria-hidden />
+                <span className="absolute bottom-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded">
+                  Topic
+                </span>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -168,7 +203,7 @@ export default function ProbateVideosPage() {
 
           <div className="mt-12 text-center">
             <p className="text-secondary-600 mb-4">
-              More videos coming soon! Check back regularly for new educational content.
+              New episodes on YouTube as they publish—subscribe on the channel for updates.
             </p>
             <Link
               href="/contact/"
@@ -198,16 +233,14 @@ export default function ProbateVideosPage() {
       <SchemaMarkup
         type="article"
         breadcrumbs={breadcrumbs}
-        video={{
-          name: 'Probate Real Estate Educational Videos',
+        webPage={{
+          name: 'Probate Real Estate Videos',
           description:
-            'Educational videos about probate real estate processes, timelines, and best practices in Nevada.',
-          thumbnailUrl:
-            'https://www.probaterealestatesales.com/images/probate-videos-thumbnail.jpg',
-          uploadDate: new Date().toISOString(),
-          publisher: {
+            'Topic index and links to Nevada probate real estate education on the Dr. Jan Duffy YouTube channel.',
+          url: 'https://www.probaterealestatesales.com/blog/probate-videos/',
+          isPartOf: {
             name: 'Las Vegas Probate Real Estate Sales',
-            logo: SITE_LOGO_ABSOLUTE_URL,
+            url: 'https://www.probaterealestatesales.com',
           },
         }}
       />

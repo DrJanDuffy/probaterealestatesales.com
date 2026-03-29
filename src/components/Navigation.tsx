@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { GBP_BUSINESS_NAME } from '@/lib/site-contact';
 
 const navigation = {
   main: [
@@ -173,13 +174,16 @@ export default function Navigation() {
           <div className="flex-shrink-0">
             <Link
               href="/"
-              className="flex items-center hover:opacity-80 transition-opacity focus-ring rounded-md p-1"
-              aria-label="Dr. Jan Duffy - Probate Real Estate Home"
+              title={GBP_BUSINESS_NAME}
+              className="flex items-center hover:opacity-80 transition-opacity focus-ring rounded-md p-1 max-w-[min(100%,14rem)] sm:max-w-none"
+              aria-label={`${GBP_BUSINESS_NAME} — home`}
             >
-              <Award className="h-8 w-8 text-primary-700" />
-              <span className="ml-2 text-xl font-bold text-secondary-900">Dr. Jan Duffy</span>
-              <span className="ml-2 text-sm text-secondary-600 hidden sm:block">
-                Probate Real Estate
+              <Award className="h-8 w-8 text-primary-700 shrink-0" />
+              <span className="ml-2 text-lg sm:text-xl font-bold text-secondary-900 leading-tight">
+                Probate Real Estate Sales
+              </span>
+              <span className="ml-2 text-xs font-semibold text-secondary-500 uppercase tracking-wide hidden sm:block">
+                Las Vegas
               </span>
             </Link>
           </div>
@@ -192,7 +196,7 @@ export default function Navigation() {
               <a
                 href="tel:+1-702-830-9222"
                 className="text-primary-700 font-semibold text-sm hover:text-primary-900 transition-colors focus-ring rounded-md px-1"
-                aria-label="Call Dr. Jan Duffy at (702) 830-9222"
+                aria-label="Call Probate Real Estate Sales at (702) 830-9222"
               >
                 (702) 830-9222
               </a>
@@ -343,7 +347,7 @@ export default function Navigation() {
             <Link
               href="/about/"
               className="text-secondary-700 hover:text-primary-900 px-3 py-2 text-sm font-medium transition-colors focus-ring rounded-md"
-              aria-label="About Dr. Jan Duffy"
+              aria-label="About Dr. Jan Duffy and our team"
             >
               About
             </Link>
@@ -491,7 +495,7 @@ export default function Navigation() {
               href="/about/"
               className="block px-3 py-2 text-base font-medium text-secondary-700 hover:text-primary-900 hover:bg-primary-50 rounded-md border-t border-secondary-200 pt-4 transition-colors focus-ring"
               onClick={() => setMobileMenuOpen(false)}
-              aria-label="About Dr. Jan Duffy"
+              aria-label="About Dr. Jan Duffy and our team"
             >
               About
             </Link>

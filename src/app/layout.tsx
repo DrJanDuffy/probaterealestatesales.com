@@ -5,24 +5,30 @@ import './globals.css';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
 import { getLocalBusinessSameAsUrls, OFFICE_GOOGLE_MAPS_LISTING_URL } from '@/config/site-google';
+import {
+  GBP_BUSINESS_NAME,
+  GBP_DESCRIPTION,
+  GBP_OPENING_HOURS_STRING,
+  SITE_PHONE_TEL,
+} from '@/lib/site-contact';
 import { defaultSchemas } from '@/lib/schema';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
+  title: 'Probate Real Estate Sales | Las Vegas & Clark County Probate Real Estate',
   description:
-    'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days - guaranteed! Free consultation: (702) 830-9222. Court-approved expert with 500+ sales. No upfront costs.',
+    'Probate Real Estate Sales: expert probate real estate in Las Vegas and Clark County—court-approved property sales, estate liquidation, and Nevada’s 6–8 month timeline. Free consultation: (702) 830-9222.',
   keywords:
-    'probate realtor, probate homes, Las Vegas probate realtor, probate real estate agent, probate homes Las Vegas, sell probate property, inherited property sales, grokipedia',
+    'probate real estate sales, probate homes Las Vegas, Clark County probate, probate property sales, inherited property sales, Nevada probate real estate, grokipedia',
   authors: [
-    { name: 'Dr. Jan Duffy', url: 'https://www.probaterealestatesales.com/about/' },
     { name: 'Probate Real Estate Sales' },
+    { name: 'Dr. Jan Duffy', url: 'https://www.probaterealestatesales.com/about/' },
   ],
   openGraph: {
-    title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
+    title: 'Probate Real Estate Sales | Las Vegas & Clark County Probate Real Estate',
     description:
-      'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days - guaranteed! Free consultation: (702) 830-9222. No upfront costs.',
+      'Probate Real Estate Sales: Las Vegas and Clark County probate real estate—court-approved sales and inherited property guidance. Free consultation: (702) 830-9222.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Probate Real Estate Sales',
@@ -32,15 +38,15 @@ export const metadata: Metadata = {
         url: '/images/og-dr-jan-duffy.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dr. Jan Duffy - Probate Real Estate Specialist',
+        alt: 'Probate Real Estate Sales — Las Vegas probate real estate services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Las Vegas Probate Realtor | Probate Homes Expert',
+    title: 'Probate Real Estate Sales | Las Vegas Probate Real Estate',
     description:
-      'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days. Free consultation.',
+      'Probate Real Estate Sales: Las Vegas and Clark County probate real estate services. Free consultation: (702) 830-9222.',
     images: ['/images/og-dr-jan-duffy.jpg'],
   },
   alternates: {
@@ -79,6 +85,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="dns-prefetch" href="https://em.realscout.com" />
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
         <link rel="dns-prefetch" href="https://grokipedia.com" />
+        <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
+        <link rel="dns-prefetch" href="https://i.ytimg.com" />
 
         {/* WebSite + LocalBusiness + RealEstateAgent + Person (E-E-A-T) - on every page */}
         <script
@@ -111,10 +119,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'LegalService',
-              name: 'Probate Real Estate Sales',
+              name: GBP_BUSINESS_NAME,
               alternateName: 'Grokipedia - Probate Real Estate',
-              description:
-                'Nevada probate real estate specialists. Expert services for court-approved property sales, estate liquidation, and probate administration.',
+              description: GBP_DESCRIPTION,
               url: 'https://www.probaterealestatesales.com',
               logo: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
               image: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
@@ -126,9 +133,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 postalCode: '89101',
                 addressCountry: 'US',
               },
-              telephone: '+1-702-830-9222',
+              telephone: SITE_PHONE_TEL,
               email: 'DrJanSells@ProbateRealEstateSales.com',
-              openingHours: 'Mo-Fr 08:00-18:00, Sa 09:00-14:00',
+              openingHours: GBP_OPENING_HOURS_STRING,
               priceRange: '$$',
               geo: {
                 '@type': 'GeoCoordinates',
@@ -169,7 +176,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="grokipedia:region" content="Nevada, United States" />
         <meta name="grokipedia:city" content="Las Vegas, Henderson, Summerlin, North Las Vegas" />
         <meta name="grokipedia:verified" content="true" />
-        <meta name="grokipedia:business-type" content="Legal Services, Real Estate Services" />
+        <meta name="grokipedia:business-type" content="Real estate agent" />
         <meta name="grokipedia:license" content="Nevada Real Estate License S.0197614" />
 
         {/* Google Search Console Verification */}

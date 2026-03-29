@@ -1,9 +1,29 @@
-import { Award, BookOpen, Clock, ExternalLink, FileText, Mail, MapPin, Phone, Shield, Users } from 'lucide-react';
+import {
+  Award,
+  BookOpen,
+  Clock,
+  ExternalLink,
+  FileText,
+  Mail,
+  MapPin,
+  MessageSquare,
+  Phone,
+  Shield,
+  Users,
+} from 'lucide-react';
 import Link from 'next/link';
 import {
   OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
   OFFICE_GOOGLE_MAPS_LISTING_URL,
 } from '@/config/site-google';
+import {
+  GBP_BUSINESS_CATEGORY,
+  GBP_BUSINESS_NAME,
+  GBP_DESCRIPTION,
+  GBP_SERVICE_AREA_PRIMARY,
+  GBP_SPECIAL_HOURS,
+  SITE_SMS_HREF,
+} from '@/lib/site-contact';
 
 const footerNavigation = {
   services: [
@@ -118,29 +138,54 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <Link
               href="/"
-              className="flex items-center mb-4 hover:opacity-80 transition-opacity focus-ring-dark rounded-md p-1 inline-flex"
-              aria-label="Dr. Jan Duffy - Probate Real Estate Home"
+              className="flex flex-col sm:flex-row sm:items-start gap-1 mb-4 hover:opacity-80 transition-opacity focus-ring-dark rounded-md p-1"
+              aria-label={`${GBP_BUSINESS_NAME} — home`}
             >
-              <Award className="h-8 w-8 text-primary-400" />
-              <span className="ml-2 text-xl font-bold">Dr. Jan Duffy</span>
-              <span className="ml-2 text-sm text-secondary-400">Probate Real Estate</span>
+              <Award className="h-8 w-8 text-primary-400 shrink-0" />
+              <span>
+                <span className="block text-xl font-bold text-white leading-tight">
+                  {GBP_BUSINESS_NAME}
+                </span>
+                <span className="block text-sm font-medium text-secondary-400 mt-1">
+                  {GBP_BUSINESS_CATEGORY} · Las Vegas, NV
+                </span>
+              </span>
             </Link>
-            <p className="text-secondary-300 mb-6 max-w-md leading-relaxed">
-              Expert probate real estate services in Las Vegas and Clark County. Specialized in
-              comprehensive probate real estate services, court-approved property sales, and estate
-              liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18
-              months).
+            <p className="text-secondary-300 mb-2 text-sm">
+              <span className="text-secondary-400">Service area:</span> {GBP_SERVICE_AREA_PRIMARY}
             </p>
+            <p className="text-secondary-300 mb-6 max-w-md leading-relaxed">{GBP_DESCRIPTION}</p>
             <div className="space-y-3">
               <div className="flex items-center text-secondary-300 group">
                 <Phone className="h-5 w-5 mr-3 text-primary-400 group-hover:text-primary-300 transition-colors" />
                 <a
                   href="tel:+1-702-830-9222"
                   className="hover:text-white transition-colors font-medium focus-ring-dark rounded-md px-1"
-                  aria-label="Call Dr. Jan Duffy at (702) 830-9222"
+                  aria-label={`Call ${GBP_BUSINESS_NAME} at (702) 830-9222`}
                 >
                   (702) 830-9222
                 </a>
+              </div>
+              <div className="flex items-center text-secondary-300 group">
+                <MessageSquare className="h-5 w-5 mr-3 text-primary-400 group-hover:text-primary-300 transition-colors" />
+                <a
+                  href={SITE_SMS_HREF}
+                  className="hover:text-white transition-colors font-medium focus-ring-dark rounded-md px-1"
+                  aria-label="Text us (same mobile number)"
+                >
+                  Text (SMS)
+                </a>
+              </div>
+              <div className="flex items-start text-secondary-300 group">
+                <Clock className="h-5 w-5 mr-3 text-primary-400 mt-0.5 flex-shrink-0" />
+                <div className="text-sm">
+                  <p>Mon–Fri 8:00 AM–6:00 PM · Sat 9:00 AM–2:00 PM · Sun closed</p>
+                  {GBP_SPECIAL_HOURS.map((row) => (
+                    <p key={row.dateLabel} className="text-secondary-400 mt-1">
+                      {row.dateLabel} ({row.label}): {row.note}
+                    </p>
+                  ))}
+                </div>
               </div>
               <div className="flex items-center text-secondary-300 group">
                 <Mail className="h-5 w-5 mr-3 text-primary-400 group-hover:text-primary-300 transition-colors" />

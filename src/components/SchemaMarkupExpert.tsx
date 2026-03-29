@@ -9,6 +9,13 @@ import {
   Star,
   Users,
 } from 'lucide-react';
+import { YOUTUBE_CHANNEL_URL } from '@/config/youtube';
+import {
+  GBP_BUSINESS_NAME,
+  GBP_DESCRIPTION,
+  GBP_OPENING_HOURS_STRING,
+  SITE_PHONE_TEL,
+} from '@/lib/site-contact';
 
 const schemaData = {
   '@context': 'https://schema.org',
@@ -20,7 +27,7 @@ const schemaData = {
     'Las Vegas probate real estate expert with 20+ years experience, specializing in inherited property sales, estate liquidation, and court-approved property sales with comprehensive probate real estate services.',
   url: 'https://www.probaterealestatesales.com',
   image: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
-  telephone: '+1-702-830-9222',
+  telephone: SITE_PHONE_TEL,
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
@@ -33,7 +40,7 @@ const schemaData = {
   sameAs: [
     'https://www.linkedin.com/in/drjanduffy',
     'https://www.facebook.com/drjanduffyrealtor',
-    'https://www.youtube.com/@drjanduffy',
+    YOUTUBE_CHANNEL_URL,
   ],
   hasCredential: [
     {
@@ -107,7 +114,7 @@ const schemaData = {
   ],
   worksFor: {
     '@type': 'Organization',
-    name: 'Probate Real Estate Sales',
+    name: GBP_BUSINESS_NAME,
     url: 'https://www.probaterealestatesales.com',
     address: {
       '@type': 'PostalAddress',
@@ -153,10 +160,9 @@ const businessSchema = {
   '@context': 'https://schema.org',
   '@type': 'RealEstateAgent',
   name: 'Dr. Jan Duffy - Probate Real Estate Specialist',
-  description:
-    "Las Vegas's premier probate real estate expert providing comprehensive probate real estate services with court-approved property sales and legal compliance.",
+  description: GBP_DESCRIPTION,
   url: 'https://www.probaterealestatesales.com',
-  telephone: '+1-702-830-9222',
+  telephone: SITE_PHONE_TEL,
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
@@ -171,7 +177,7 @@ const businessSchema = {
     latitude: '36.1699',
     longitude: '-115.1398',
   },
-  openingHours: 'Mo-Su 00:00-23:59',
+  openingHours: GBP_OPENING_HOURS_STRING,
   priceRange: '$$',
   paymentAccepted: ['Cash', 'Check', 'Credit Card', 'Bank Transfer'],
   currenciesAccepted: 'USD',
@@ -232,11 +238,10 @@ const businessSchema = {
 const localBusinessSchema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'Probate Real Estate Sales',
-  description:
-    'Las Vegas probate real estate services specializing in comprehensive probate real estate services, court-approved property sales, and estate liquidation',
+  name: GBP_BUSINESS_NAME,
+  description: GBP_DESCRIPTION,
   url: 'https://www.probaterealestatesales.com',
-  telephone: '+1-702-830-9222',
+  telephone: SITE_PHONE_TEL,
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
@@ -251,7 +256,7 @@ const localBusinessSchema = {
     latitude: '36.1699',
     longitude: '-115.1398',
   },
-  openingHours: 'Mo-Su 00:00-23:59',
+  openingHours: GBP_OPENING_HOURS_STRING,
   priceRange: '$$',
   paymentAccepted: ['Cash', 'Check', 'Credit Card', 'Bank Transfer'],
   currenciesAccepted: 'USD',

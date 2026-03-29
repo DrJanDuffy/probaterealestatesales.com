@@ -9,19 +9,21 @@ export const dynamic = 'force-dynamic';
 export async function GET() {
   const baseUrl = 'https://www.probaterealestatesales.com';
 
-  const content = `# Probate Real Estate Sales — Dr. Jan Duffy
+  const content = `# Probate Real Estate Sales - Dr. Jan Duffy
 
-> Expert probate real estate services in Las Vegas and Clark County, Nevada.
-> Sell inherited properties in 45 days with court-approved specialist Dr. Jan Duffy.
+> Expert probate real estate services in Las Vegas and Clark County. Specialized in comprehensive probate real estate services, court-approved property sales, and estate liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18 months).
 
 ## About
 
 Dr. Jan Duffy is a licensed Nevada real estate agent (S.0197614) specializing in probate, trust, and conservatorship property sales. With 20+ years of experience and 500+ probate properties sold, she is the leading probate real estate specialist in the Las Vegas Valley.
 
+- **Google Business category:** Real estate agent
+- **Service area (GBP):** Las Vegas, NV, USA
 - **Brokerage:** Berkshire Hathaway HomeServices Nevada Properties
 - **License:** Nevada S.0197614.LLC
 - **Office:** 400 S 4th St suite 250 b, Las Vegas, NV 89101
 - **Phone:** (702) 830-9222
+- **Text (SMS):** sms:+17028309222
 - **Email:** DrJanSells@ProbateRealEstateSales.com
 
 ## Services
@@ -63,9 +65,10 @@ Las Vegas, Henderson, North Las Vegas, Boulder City, Mesquite, Summerlin, Spring
 ## Contact
 
 For probate real estate questions or to sell an inherited property:
-- **Call/Text:** (702) 830-9222
+- **Call:** (702) 830-9222
+- **Text (SMS):** sms:+17028309222
 - **Email:** DrJanSells@ProbateRealEstateSales.com
-- **Website:** ${baseUrl}
+- **Website:** ${baseUrl}/
 `;
 
   return new Response(content, {

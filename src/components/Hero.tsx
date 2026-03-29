@@ -21,21 +21,21 @@ export default function Hero() {
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 bg-primary-100 text-primary-700 px-4 py-2 rounded-full text-sm font-medium">
                   <Award className="h-4 w-4" />
-                  Probate Real Estate Specialist
+                  Probate Real Estate Sales
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-gradient">Las Vegas Probate Realtor</span>
+                  <span className="text-gradient">Probate Real Estate Sales</span>
                   <br />
-                  <span className="text-secondary-900">Expert in Probate Homes</span>
+                  <span className="text-secondary-900">Las Vegas &amp; Clark County probate homes</span>
                   <br />
-                  <span className="text-gradient">Sell in 45 Days</span>
+                  <span className="text-gradient">Sell in 45 days</span>
                 </h1>
 
                 <p className="text-xl text-secondary-600 max-w-2xl">
-                  Top-rated probate realtor specializing in probate homes and inherited property
-                  sales. Compassionate, professional guidance through every step of your probate
-                  property sale.
+                  Court-approved probate property sales and inherited property guidance. Compassionate,
+                  professional service through every step of your probate sale—led by Dr. Jan Duffy,
+                  Nevada probate real estate specialist.
                 </p>
               </div>
 
@@ -211,7 +211,7 @@ export default function Hero() {
                     <div className="w-48 h-48 mx-auto mb-4 overflow-hidden rounded-full border-4 border-primary-200 shadow-lg">
                       <Image
                         src="/images/dr-jan-duffy.jpg"
-                        alt="Dr. Jan Duffy - Probate Real Estate Specialist"
+                        alt="Dr. Jan Duffy, lead specialist — Probate Real Estate Sales"
                         width={192}
                         height={192}
                         priority

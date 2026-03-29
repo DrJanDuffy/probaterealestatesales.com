@@ -16,15 +16,15 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 // Removed heavy components - moved to dedicated pages for better performance
 
 export const metadata: Metadata = {
-  title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
+  title: 'Probate Real Estate Sales | Las Vegas & Clark County Probate Real Estate',
   description:
-    'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days - guaranteed! Free consultation: (702) 830-9222. Court-approved expert with 500+ sales. No upfront costs.',
+    'Probate Real Estate Sales: expert probate real estate in Las Vegas and Clark County—court-approved property sales, estate liquidation, and Nevada’s 6–8 month timeline. Free consultation: (702) 830-9222.',
   keywords:
-    'probate realtor, probate homes, Las Vegas probate realtor, probate real estate agent, probate homes Las Vegas, sell probate property, inherited property sales, Nevada probate real estate',
+    'probate real estate sales, probate homes Las Vegas, Clark County probate, probate property sales, inherited property sales, Nevada probate real estate',
   openGraph: {
-    title: 'Las Vegas Probate Realtor | Probate Homes Expert | Dr. Jan Duffy',
+    title: 'Probate Real Estate Sales | Las Vegas & Clark County Probate Real Estate',
     description:
-      'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days - guaranteed! Free consultation: (702) 830-9222.',
+      'Probate Real Estate Sales: Las Vegas and Clark County probate real estate—court-approved sales and inherited property guidance. Free consultation: (702) 830-9222.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Probate Real Estate Sales',
@@ -34,15 +34,15 @@ export const metadata: Metadata = {
         url: '/images/og-dr-jan-duffy.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dr. Jan Duffy - Probate Real Estate Specialist',
+        alt: 'Probate Real Estate Sales — Las Vegas probate real estate services',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Las Vegas Probate Realtor | Probate Homes Expert',
+    title: 'Probate Real Estate Sales | Las Vegas Probate Real Estate',
     description:
-      'Top Las Vegas probate realtor specializing in probate homes. Sell inherited properties in 45 days. Free consultation.',
+      'Probate Real Estate Sales: Las Vegas and Clark County probate real estate services. Free consultation: (702) 830-9222.',
     images: ['/images/og-dr-jan-duffy.jpg'],
   },
   alternates: {

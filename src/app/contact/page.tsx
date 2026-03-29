@@ -8,25 +8,34 @@ import {
   OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
   OFFICE_GOOGLE_MAPS_EMBED_SRC,
 } from '@/config/site-google';
+import {
+  GBP_BUSINESS_CATEGORY,
+  GBP_BUSINESS_NAME,
+  GBP_DESCRIPTION,
+  GBP_SERVICE_AREA_PRIMARY,
+  GBP_SPECIAL_HOURS,
+  SITE_SMS_HREF,
+  SITE_WEBSITE_GBP,
+} from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
 });
 
 export const metadata: Metadata = {
-  title: 'Contact Las Vegas Probate Realtor | Free Consultation | (702) 830-9222',
+  title: 'Contact Probate Real Estate Sales - Dr. Jan Duffy | (702) 830-9222',
   description:
-    'Contact top Las Vegas probate realtor Dr. Jan Duffy. Free probate consultation available. Call (702) 830-9222 or email DrJanSells@ProbateRealEstateSales.com. Expert probate real estate services in Las Vegas, Nevada.',
+    'Contact matches our Google Business Profile: probate real estate in Las Vegas and Clark County. Call (702) 830-9222, text via SMS, or email DrJanSells@ProbateRealEstateSales.com.',
   keywords:
-    'contact probate realtor, contact Las Vegas probate realtor, probate real estate consultation, Nevada probate help, Las Vegas probate realtor contact',
+    'contact probate real estate Las Vegas, probate real estate Clark County, Google Business Profile, probate consultation Nevada',
   alternates: {
     canonical: 'https://www.probaterealestatesales.com/contact/',
   },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'Contact Las Vegas Probate Realtor | Free Consultation | (702) 830-9222',
+    title: 'Contact Probate Real Estate Sales - Dr. Jan Duffy | (702) 830-9222',
     description:
-      'Contact top Las Vegas probate realtor Dr. Jan Duffy. Free probate consultation available. Call (702) 830-9222.',
+      'Same business name, phone, and hours as our Google Business Profile. Las Vegas probate real estate.',
     type: 'website',
     url: 'https://www.probaterealestatesales.com/contact/',
   },
@@ -46,10 +55,11 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Let's Talk</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact us</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Get in touch with our probate real estate experts. We're here to help you navigate the
-            probate process with confidence.
+            Reach the same team and phone number as our{' '}
+            <span className="font-semibold text-white">Google Business Profile</span>—most clients find
+            us there first.
           </p>
         </div>
       </section>
@@ -57,7 +67,26 @@ export default function ContactPage() {
       {/* Contact Information */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="text-center text-secondary-600 mb-10 max-w-3xl mx-auto space-y-3">
+            <p>
+              <span className="font-semibold text-secondary-900 text-lg block">{GBP_BUSINESS_NAME}</span>
+              <span className="text-sm text-secondary-500">{GBP_BUSINESS_CATEGORY}</span>
+            </p>
+            <p className="text-secondary-700 leading-relaxed">{GBP_DESCRIPTION}</p>
+            <p className="text-sm">
+              <span className="font-medium text-secondary-800">Website: </span>
+              <a
+                href={SITE_WEBSITE_GBP}
+                className="text-primary-700 underline hover:text-primary-900"
+              >
+                {SITE_WEBSITE_GBP}
+              </a>
+              <span className="block text-secondary-600 mt-2">
+                Service area: {GBP_SERVICE_AREA_PRIMARY}
+              </span>
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl p-8 text-center">
               <Phone className="h-12 w-12 text-primary-700 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">Phone</h3>
@@ -67,7 +96,18 @@ export default function ContactPage() {
               >
                 (702) 830-9222
               </a>
-              <p className="text-sm text-secondary-600 mt-2">Call us anytime</p>
+              <p className="text-sm text-secondary-600 mt-2">Call during business hours</p>
+            </div>
+            <div className="bg-gradient-to-br from-sky-50 to-cyan-100 rounded-xl p-8 text-center">
+              <MessageSquare className="h-12 w-12 text-sky-600 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-secondary-900 mb-2">Text (SMS)</h3>
+              <a
+                href={SITE_SMS_HREF}
+                className="text-sky-700 hover:text-sky-900 font-medium text-lg"
+              >
+                (702) 830-9222
+              </a>
+              <p className="text-sm text-secondary-600 mt-2">Same number as phone</p>
             </div>
             <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-xl p-8 text-center">
               <Mail className="h-12 w-12 text-green-600 mx-auto mb-4" />
@@ -88,7 +128,7 @@ export default function ContactPage() {
                 Las Vegas, NV 89101
               </p>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=400+S+4th+St+suite+250+b,+Las+Vegas,+NV+89101"
+                href={OFFICE_GOOGLE_MAPS_DIRECTIONS_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors text-sm font-medium"
@@ -103,15 +143,27 @@ export default function ContactPage() {
           <div className="bg-gray-50 rounded-xl p-8 text-center mb-12">
             <Clock className="h-8 w-8 text-primary-700 mx-auto mb-4" />
             <h3 className="text-xl font-semibold text-secondary-900 mb-4">Office Hours</h3>
-            <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto text-sm">
               <div>
-                <p className="font-medium text-secondary-900">Monday - Friday</p>
-                <p className="text-secondary-600">8:00 AM - 6:00 PM</p>
+                <p className="font-medium text-secondary-900">Monday – Friday</p>
+                <p className="text-secondary-600">8:00 AM – 6:00 PM</p>
               </div>
               <div>
                 <p className="font-medium text-secondary-900">Saturday</p>
-                <p className="text-secondary-600">9:00 AM - 2:00 PM</p>
+                <p className="text-secondary-600">9:00 AM – 2:00 PM</p>
               </div>
+              <div>
+                <p className="font-medium text-secondary-900">Sunday</p>
+                <p className="text-secondary-600">Closed</p>
+              </div>
+              {GBP_SPECIAL_HOURS.map((row) => (
+                <div key={row.dateLabel}>
+                  <p className="font-medium text-secondary-900">
+                    {row.dateLabel} ({row.label})
+                  </p>
+                  <p className="text-secondary-600">{row.note}</p>
+                </div>
+              ))}
             </div>
           </div>
 
