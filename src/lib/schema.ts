@@ -190,10 +190,6 @@ export interface ReviewSchema {
 export interface AggregateRatingSchema {
   '@context': 'https://schema.org';
   '@type': 'AggregateRating';
-  itemReviewed: {
-    '@type': 'LocalBusiness';
-    name: string;
-  };
   ratingValue: number;
   reviewCount: number;
   bestRating: number;
@@ -395,64 +391,6 @@ export const personSchema = {
   sameAs: ['https://www.probaterealestatesales.com/about/'],
 };
 
-/** Review schema for testimonials - Google 2025/2026 rich results */
-export const reviewSchemas = [
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Review',
-    itemReviewed: {
-      '@type': 'RealEstateAgent',
-      name: 'Dr. Jan Duffy',
-      '@id': 'https://www.probaterealestatesales.com/#agent',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: 5,
-      bestRating: 5,
-    },
-    author: { '@type': 'Person', name: 'The Anderson Family' },
-    reviewBody:
-      "Dr. Duffy sold Mom's house for $50,000 over asking price and completed the entire process in just 45 days. Her expertise turned a difficult situation into a smooth process.",
-    datePublished: '2025-01-15',
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Review',
-    itemReviewed: {
-      '@type': 'RealEstateAgent',
-      name: 'Dr. Jan Duffy',
-      '@id': 'https://www.probaterealestatesales.com/#agent',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: 5,
-      bestRating: 5,
-    },
-    author: { '@type': 'Person', name: 'Robert Martinez' },
-    reviewBody:
-      'She sold the property in just 30 days for $425,000, which was $25,000 above the initial estate valuation. I felt confident and supported throughout.',
-    datePublished: '2025-01-10',
-  },
-  {
-    '@context': 'https://schema.org',
-    '@type': 'Review',
-    itemReviewed: {
-      '@type': 'RealEstateAgent',
-      name: 'Dr. Jan Duffy',
-      '@id': 'https://www.probaterealestatesales.com/#agent',
-    },
-    reviewRating: {
-      '@type': 'Rating',
-      ratingValue: 5,
-      bestRating: 5,
-    },
-    author: { '@type': 'Person', name: 'Jennifer & David Thompson' },
-    reviewBody:
-      "The property sold for $380,000 after repairs, netting us $60,000 more than if we had sold it as-is. Dr. Duffy's guidance gave us peace of mind.",
-    datePublished: '2024-12-20',
-  },
-];
-
 // Default schema data for the Nevada probate real estate business
 export const defaultSchemas = {
   webSite: webSiteSchema,
@@ -461,6 +399,8 @@ export const defaultSchemas = {
   localBusiness: {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
+    /** Stable id so Review.itemReviewed can reference the same entity */
+    '@id': 'https://www.probaterealestatesales.com/#localbusiness',
     name: GBP_BUSINESS_NAME,
     alternateName: [
       'Las Vegas Probate Real Estate Sales',
@@ -536,10 +476,10 @@ export const defaultSchemas = {
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '25',
-      bestRating: '5',
-      worstRating: '1',
+      ratingValue: 5,
+      reviewCount: 25,
+      bestRating: 5,
+      worstRating: 1,
     },
   },
 
@@ -823,9 +763,9 @@ export function generateBreadcrumbSchema(items: Array<{ name: string; url: strin
       if (item.url.startsWith('http://') || item.url.startsWith('https://')) {
         absoluteUrl = item.url;
       } else {
-        const path = item.url.startsWith('/') ? item.url : '/' + item.url;
-        const pathWithSlash = path.length > 1 && !path.endsWith('/') ? path + '/' : path;
-        absoluteUrl = SITE_BASE_URL + pathWithSlash;
+        const path = item.url.startsWith('/') ? item.url : `/${item.url}`;
+        const pathWithSlash = path.length > 1 && !path.endsWith('/') ? `${path}/` : path;
+        absoluteUrl = `${SITE_BASE_URL}${pathWithSlash}`;
       }
       return {
         '@type': 'ListItem',
@@ -913,6 +853,27 @@ export function generateLegalServiceSchema(service: {
   };
 }
 
+const LOCAL_BUSINESS_REVIEW_TARGET_ID = 'https://www.probaterealestatesales.com/#localbusiness';
+
+function resolveItemReviewed(item?: { name: string; type?: string }) {
+  const name = item?.name ?? GBP_BUSINESS_NAME;
+  if (item?.type === 'Organization') {
+    return {
+      '@type': 'Organization' as const,
+      '@id': `${LOCAL_BUSINESS_REVIEW_TARGET_ID}-org`,
+      name,
+      url: 'https://www.probaterealestatesales.com/',
+    };
+  }
+  /** Google review snippets: itemReviewed must be a supported type (e.g. LocalBusiness). */
+  return {
+    '@type': 'LocalBusiness' as const,
+    '@id': LOCAL_BUSINESS_REVIEW_TARGET_ID,
+    name,
+    url: 'https://www.probaterealestatesales.com/',
+  };
+}
+
 export function generateReviewSchema(review: {
   author: string;
   reviewBody: string;
@@ -940,27 +901,16 @@ export function generateReviewSchema(review: {
       worstRating: review.worstRating || 1,
     },
     datePublished: review.datePublished,
-    itemReviewed: review.itemReviewed
-      ? {
-          '@type': review.itemReviewed.type === 'Organization' ? 'Organization' : 'LocalBusiness',
-          name: review.itemReviewed.name,
-        }
-      : {
-          '@type': 'LocalBusiness',
-          name: 'Nevada Probate Real Estate Services',
-        },
+    itemReviewed: resolveItemReviewed(review.itemReviewed),
   };
 }
 
+/** Use nested on LocalBusiness/Product; AggregateRating has no itemReviewed in schema.org. */
 export function generateAggregateRatingSchema(rating: {
   ratingValue: number;
   reviewCount: number;
   bestRating?: number;
   worstRating?: number;
-  itemReviewed?: {
-    name: string;
-    type?: string;
-  };
 }) {
   return {
     '@context': 'https://schema.org',
@@ -969,15 +919,6 @@ export function generateAggregateRatingSchema(rating: {
     reviewCount: rating.reviewCount,
     bestRating: rating.bestRating || 5,
     worstRating: rating.worstRating || 1,
-    itemReviewed: rating.itemReviewed
-      ? {
-          '@type': rating.itemReviewed.type === 'Organization' ? 'Organization' : 'LocalBusiness',
-          name: rating.itemReviewed.name,
-        }
-      : {
-          '@type': 'LocalBusiness',
-          name: 'Nevada Probate Real Estate Services',
-        },
   };
 }
 

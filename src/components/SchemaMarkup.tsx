@@ -56,7 +56,6 @@ interface SchemaMarkupProps {
   aggregateRating?: {
     ratingValue: number;
     reviewCount: number;
-    itemReviewed?: { name: string; type?: string };
   };
   person?: {
     name: string;

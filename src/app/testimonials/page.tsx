@@ -5,7 +5,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import { reviewSchemas } from '@/lib/schema';
+import { generateReviewSchema } from '@/lib/schema';
+import { GBP_BUSINESS_NAME } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
 const testimonials = [
   {
     id: 1,
+    datePublished: '2025-01-15',
     name: 'The Anderson Family',
     role: 'Summerlin Estate',
     emotionalSituation:
@@ -51,6 +53,7 @@ const testimonials = [
   },
   {
     id: 2,
+    datePublished: '2025-01-10',
     name: 'Robert Martinez',
     role: 'Executor, Henderson Property',
     emotionalSituation:
@@ -70,6 +73,7 @@ const testimonials = [
   },
   {
     id: 3,
+    datePublished: '2024-12-20',
     name: 'Jennifer & David Thompson',
     role: 'North Las Vegas Estate',
     emotionalSituation:
@@ -89,6 +93,7 @@ const testimonials = [
   },
   {
     id: 4,
+    datePublished: '2024-11-08',
     name: 'The Williams Family',
     role: 'Boulder City Estate',
     emotionalSituation:
@@ -108,6 +113,7 @@ const testimonials = [
   },
   {
     id: 5,
+    datePublished: '2024-10-22',
     name: 'Sarah Mitchell',
     role: 'Las Vegas Downtown Property',
     emotionalSituation:
@@ -127,6 +133,7 @@ const testimonials = [
   },
   {
     id: 6,
+    datePublished: '2024-09-12',
     name: 'Michael Chen',
     role: 'Enterprise Area Estate',
     emotionalSituation:
@@ -152,25 +159,30 @@ export default function TestimonialsPage() {
     { name: 'Testimonials', url: '/testimonials/' },
   ];
 
-  // Generate reviews for schema
-  const reviews = testimonials.map((testimonial) => ({
-    author: testimonial.name,
-    reviewBody: `${testimonial.emotionalSituation} ${testimonial.specificAction} ${testimonial.specificResult} ${testimonial.emotionalOutcome}`,
-    ratingValue: testimonial.rating,
-    datePublished: new Date().toISOString(), // You may want to add actual dates
-    itemReviewed: {
-      name: 'Nevada Probate Real Estate Services',
-      type: 'LocalBusiness',
-    },
-  }));
+  const reviewGraph = {
+    '@context': 'https://schema.org',
+    '@graph': testimonials.map((testimonial) => {
+      const node = generateReviewSchema({
+        author: testimonial.name,
+        reviewBody: `${testimonial.emotionalSituation} ${testimonial.specificAction} ${testimonial.specificResult} ${testimonial.emotionalOutcome}`,
+        ratingValue: testimonial.rating,
+        datePublished: testimonial.datePublished,
+        itemReviewed: {
+          name: GBP_BUSINESS_NAME,
+          type: 'LocalBusiness',
+        },
+      });
+      const { '@context': _c, ...rest } = node;
+      return rest;
+    }),
+  };
 
   return (
     <main className="min-h-screen bg-gray-50">
-      {/* Review schema for rich results */}
       <script
         type="application/ld+json"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD schema injection is safe
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchemas) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewGraph) }}
       />
       <Breadcrumb items={breadcrumbs.slice(1)} />
       {/* Hero Section */}
@@ -417,7 +429,7 @@ export default function TestimonialsPage() {
           </div>
         </div>
       </section>
-      <SchemaMarkup type="faq" breadcrumbs={breadcrumbs} reviews={reviews} />
+      <SchemaMarkup type="faq" breadcrumbs={breadcrumbs} />
     </main>
   );
 }
