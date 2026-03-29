@@ -2,14 +2,25 @@ import { ArrowLeft, ExternalLink, ListVideo, Video } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import { FeaturedYouTubeVideo } from '@/components/FeaturedYouTubeVideo';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { YouTubeChannelEmbed } from '@/components/YouTubeChannelEmbed';
-import { YOUTUBE_CHANNEL_HANDLE_URL } from '@/config/youtube';
+import { SITE_LOGO_ABSOLUTE_URL } from '@/config/site-google';
+import {
+  YOUTUBE_CHANNEL_HANDLE_URL,
+  YOUTUBE_FEATURED_DESCRIPTION,
+  YOUTUBE_FEATURED_EMBED_SRC,
+  YOUTUBE_FEATURED_THUMB,
+  YOUTUBE_FEATURED_TITLE,
+  YOUTUBE_FEATURED_UPLOAD_DATE,
+  YOUTUBE_FEATURED_WATCH_URL,
+} from '@/config/youtube';
+import { GBP_BUSINESS_NAME } from '@/lib/site-contact';
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Videos | Educational Content | Las Vegas',
   description:
-    "Watch educational videos about probate real estate processes, timelines, and best practices. Learn from Dr. Jan Duffy's expertise in Nevada probate.",
+    'Watch a featured probate real estate video on this page, plus more uploads from the YouTube channel and topic outlines for Nevada probate.',
   keywords:
     'probate videos, probate real estate videos, Nevada probate education, probate process videos, estate sales videos',
   alternates: {
@@ -47,8 +58,34 @@ export default function ProbateVideosPage() {
     { name: 'Probate Videos', url: '/blog/probate-videos/' },
   ];
 
+  const pageUrl = 'https://www.probaterealestatesales.com/blog/probate-videos/';
+  const videoObjectLd = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    '@id': `${pageUrl}#featured-video`,
+    name: YOUTUBE_FEATURED_TITLE,
+    description: YOUTUBE_FEATURED_DESCRIPTION,
+    thumbnailUrl: YOUTUBE_FEATURED_THUMB,
+    uploadDate: YOUTUBE_FEATURED_UPLOAD_DATE,
+    contentUrl: YOUTUBE_FEATURED_WATCH_URL,
+    embedUrl: YOUTUBE_FEATURED_EMBED_SRC,
+    publisher: {
+      '@type': 'Organization',
+      name: GBP_BUSINESS_NAME,
+      logo: {
+        '@type': 'ImageObject',
+        url: SITE_LOGO_ABSOLUTE_URL,
+      },
+    },
+  };
+
   return (
     <main className="min-h-screen bg-gray-50">
+      <script
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD schema injection is safe
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoObjectLd) }}
+      />
       <Breadcrumb items={breadcrumbs.slice(1)} />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
@@ -64,7 +101,7 @@ export default function ProbateVideosPage() {
             <Video className="h-16 w-16 mx-auto mb-6" />
             <h1 className="text-4xl md:text-6xl font-bold mb-6">Probate Real Estate Videos</h1>
             <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-              Learn about probate real estate through our YouTube channel and the topics we cover below.
+              Watch the featured video on this page, then browse more uploads and topic outlines below.
             </p>
             <a
               href={YOUTUBE_CHANNEL_HANDLE_URL}
@@ -79,6 +116,8 @@ export default function ProbateVideosPage() {
           </div>
         </div>
       </section>
+
+      <FeaturedYouTubeVideo />
 
       <YouTubeChannelEmbed />
 
@@ -236,7 +275,7 @@ export default function ProbateVideosPage() {
         webPage={{
           name: 'Probate Real Estate Videos',
           description:
-            'Topic index and links to Nevada probate real estate education on the Dr. Jan Duffy YouTube channel.',
+            'Watch page with an embedded featured video, channel uploads playlist, and probate topic outlines.',
           url: 'https://www.probaterealestatesales.com/blog/probate-videos/',
           isPartOf: {
             name: 'Las Vegas Probate Real Estate Sales',

@@ -20,7 +20,7 @@ export function YouTubeChannelEmbed({
           id={sectionHeadingId}
           className="text-2xl font-bold text-gray-900 text-center mb-6 scroll-mt-24"
         >
-          Latest from the channel
+          More uploads from the channel
         </h2>
         <div className="relative rounded-xl overflow-hidden shadow-xl bg-black aspect-video">
           <iframe
