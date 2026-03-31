@@ -2,6 +2,7 @@ import {
   FACEBOOK_PAGE_URL,
   getLocalBusinessSameAsUrls,
   INSTAGRAM_PAGE_URL,
+  LINKEDIN_COMPANY_URL,
   THREADS_PROFILE_URL,
   OFFICE_GOOGLE_MAPS_LISTING_URL,
   SITE_LOGO_ABSOLUTE_URL,
@@ -390,6 +391,7 @@ export const personSchema = {
   /** Profile URLs (not site pages) — aligned with Organization sameAs in this file */
   sameAs: [
     FACEBOOK_PAGE_URL,
+    LINKEDIN_COMPANY_URL,
     INSTAGRAM_PAGE_URL,
     THREADS_PROFILE_URL,
     YOUTUBE_CHANNEL_URL,
@@ -689,6 +691,7 @@ export const defaultSchemas = {
     },
     sameAs: [
       FACEBOOK_PAGE_URL,
+      LINKEDIN_COMPANY_URL,
       INSTAGRAM_PAGE_URL,
       THREADS_PROFILE_URL,
       YOUTUBE_CHANNEL_URL,

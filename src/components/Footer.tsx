@@ -16,6 +16,7 @@ import {
   FACEBOOK_PAGE_URL,
   GOOGLE_BUSINESS_REVIEW_URL,
   INSTAGRAM_PAGE_URL,
+  LINKEDIN_COMPANY_URL,
   THREADS_PROFILE_URL,
   OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
   OFFICE_GOOGLE_MAPS_LISTING_URL,
@@ -255,6 +256,16 @@ export default function Footer() {
                 >
                   <ExternalLink className="h-3.5 w-3.5" aria-hidden />
                   Facebook
+                </a>
+                <a
+                  href={LINKEDIN_COMPANY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 hover:text-white transition-colors focus-ring-dark rounded-md"
+                  aria-label="Probate Real Estate Sales on LinkedIn"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                  LinkedIn
                 </a>
                 <a
                   href={INSTAGRAM_PAGE_URL}
