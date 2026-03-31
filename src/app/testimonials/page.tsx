@@ -356,33 +356,42 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Success Metrics */}
+      {/* Credentials & focus (no fabricated volume/satisfaction metrics) */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-primary-50 rounded-2xl p-8 md:p-12">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-secondary-900 mb-4">
-                Dr. Duffy's Proven Results
+                Professional credentials &amp; local focus
               </h2>
-              <p className="text-lg text-secondary-600">Our track record speaks for itself</p>
+              <p className="text-lg text-secondary-600">
+                Licensed Nevada probate real estate guidance for Las Vegas and Clark County families.
+              </p>
             </div>
 
-            <div className="grid md:grid-cols-4 gap-8 text-center">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">$150M+</div>
-                <div className="text-secondary-600">Total Estate Transactions</div>
+                <div className="text-2xl font-bold text-primary-700 mb-2">Licensed Nevada</div>
+                <div className="text-secondary-600 text-sm">Real estate professional (S.0197614)</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">15%</div>
-                <div className="text-secondary-600">Above Initial Valuations</div>
+                <div className="text-2xl font-bold text-primary-700 mb-2">Clark County</div>
+                <div className="text-secondary-600 text-sm">Probate &amp; trust property sales</div>
               </div>
               <div>
-                <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">45 days</div>
-                <div className="text-secondary-600">Average Time to Close</div>
+                <div className="text-3xl font-bold text-primary-700 mb-2">20+</div>
+                <div className="text-secondary-600 text-sm">Years of experience</div>
               </div>
-              <div>
-                <div className="text-3xl md:text-4xl font-bold text-primary-700 mb-2">98%</div>
-                <div className="text-secondary-600">Client Satisfaction</div>
+              <div className="flex flex-col items-center justify-center">
+                <a
+                  href={GOOGLE_BUSINESS_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-lg font-semibold text-primary-700 hover:text-primary-900 underline"
+                >
+                  Google reviews
+                </a>
+                <div className="text-secondary-600 text-sm mt-1">See feedback on Google</div>
               </div>
             </div>
           </div>

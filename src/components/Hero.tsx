@@ -1,3 +1,4 @@
+import { GOOGLE_BUSINESS_REVIEW_URL } from '@/config/site-google';
 import { SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { ArrowRight, Award, Calendar, Download, Mail, Phone, Shield, Star } from 'lucide-react';
 import Image from 'next/image';
@@ -85,14 +86,16 @@ export default function Hero() {
 
               {/* Trust Indicators */}
               <div className="flex flex-wrap gap-6 py-4">
-                <div className="flex items-center gap-2 text-secondary-700">
-                  <div className="flex text-accent-500">
-                    {[1, 2, 3, 4, 5].map((star) => (
-                      <Star key={`star-${star}`} className="h-5 w-5 fill-current" />
-                    ))}
-                  </div>
-                  <span className="font-medium">5-Star Reviews</span>
-                </div>
+                <a
+                  href={GOOGLE_BUSINESS_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-secondary-700 hover:text-primary-800 focus-ring rounded-md"
+                  aria-label="Read Google reviews for Probate Real Estate Sales"
+                >
+                  <Star className="h-5 w-5 text-accent-500" aria-hidden />
+                  <span className="font-medium">Google reviews</span>
+                </a>
 
                 <div className="flex items-center gap-2 text-secondary-700">
                   <Shield className="h-5 w-5 text-primary-700" />

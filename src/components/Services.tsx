@@ -14,6 +14,7 @@ import {
   Target,
 } from 'lucide-react';
 import RealScoutScriptLoader from '@/components/RealScoutScriptLoader';
+import { GOOGLE_BUSINESS_REVIEW_URL } from '@/config/site-google';
 
 // Reorganized services by priority and user journey
 const services = [
@@ -99,7 +100,7 @@ const services = [
     timeline: '45 days',
     pricing: 'Standard commission',
     question: 'How Long Will This Take?',
-    specialNote: 'Average 15% above initial estate valuations',
+    specialNote: 'Pricing strategy aligned with current market conditions',
     priority: 5,
   },
   {
@@ -116,7 +117,7 @@ const services = [
     timeline: '30-45 days',
     pricing: 'Standard commission',
     question: 'How Long Will This Take?',
-    specialNote: '98% client satisfaction rate',
+    specialNote: 'Ongoing communication through listing and closing',
     priority: 6,
   },
   {
@@ -250,8 +251,8 @@ export default function Services() {
               Why Choose Dr. Jan Duffy?
             </h3>
             <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-              With over 500 properties successfully sold and court-approved expertise, Dr. Duffy is
-              your trusted partner in probate real estate.
+              Court-focused probate real estate guidance in Las Vegas and Clark County—Dr. Duffy is
+              your partner for inherited-property sales.
             </p>
           </div>
 
@@ -278,15 +279,19 @@ export default function Services() {
                 Focused guidance through court-approved and inherited-property sales
               </p>
             </div>
-            <div className="text-center">
+            <a
+              href={GOOGLE_BUSINESS_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center block rounded-lg p-2 -m-2 hover:bg-primary-50/80 transition-colors focus-ring"
+              aria-label="Read Google reviews for Probate Real Estate Sales"
+            >
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="h-8 w-8 text-green-700" />
               </div>
-              <h4 className="text-lg font-semibold text-secondary-900 mb-2">5-Star Reviews</h4>
-              <p className="text-secondary-600 text-sm">
-                Exceptional client satisfaction and results
-              </p>
-            </div>
+              <h4 className="text-lg font-semibold text-secondary-900 mb-2">Google reviews</h4>
+              <p className="text-secondary-600 text-sm">See feedback on Google</p>
+            </a>
           </div>
         </div>
 
@@ -400,10 +405,15 @@ export default function Services() {
                 <Shield className="h-4 w-4 text-accent-600" />
                 Probate sales experience
               </span>
-              <span className="flex items-center gap-2">
+              <a
+                href={GOOGLE_BUSINESS_REVIEW_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-primary-700 hover:text-primary-900 font-medium"
+              >
                 <Heart className="h-4 w-4 text-green-700" />
-                5-Star Reviews
-              </span>
+                Google reviews
+              </a>
             </div>
           </div>
         </div>

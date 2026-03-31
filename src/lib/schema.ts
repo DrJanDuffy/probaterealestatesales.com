@@ -318,11 +318,8 @@ export const webSiteSchema = {
   '@type': 'WebSite',
   '@id': 'https://www.probaterealestatesales.com/#website',
   name: GBP_BUSINESS_NAME,
-  alternateName: [
-    SITE_BRAND_PRIMARY,
-    'Las Vegas Probate Realtor',
-    'Las Vegas Probate Real Estate Sales',
-  ],
+  /** Short brand + one descriptive alias aligned with GBP-focused positioning */
+  alternateName: [SITE_BRAND_PRIMARY, 'Las Vegas Probate Real Estate Sales'],
   url: 'https://www.probaterealestatesales.com',
   description: GBP_DESCRIPTION,
   publisher: {
@@ -410,10 +407,7 @@ export const defaultSchemas = {
     /** Stable id for @graph references (e.g. testimonials Review.itemReviewed) */
     '@id': 'https://www.probaterealestatesales.com/#localbusiness',
     name: GBP_BUSINESS_NAME,
-    alternateName: [
-      'Las Vegas Probate Real Estate Sales',
-      'Berkshire Hathaway HomeServices Nevada Properties - Probate Real Estate Division',
-    ],
+    alternateName: [SITE_BRAND_PRIMARY],
     description: GBP_DESCRIPTION,
     url: 'https://www.probaterealestatesales.com',
     telephone: SITE_PHONE_E164,
@@ -683,7 +677,6 @@ export const defaultSchemas = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: GBP_BUSINESS_NAME,
-    alternateName: 'Grokipedia - Probate Real Estate',
     description: GBP_DESCRIPTION,
     url: 'https://www.probaterealestatesales.com',
     logo: SITE_LOGO_ABSOLUTE_URL,

@@ -27,14 +27,14 @@ export const GBP_SERVICE_AREA_PRIMARY = 'Las Vegas, NV, USA';
 
 export const SITE_PHONE_DISPLAY = '(702) 830-9222';
 
-/** Use in tel: links and JSON-LD telephone */
-export const SITE_PHONE_TEL = '+1-702-830-9222';
+/** E.164 (no separators) — single format for JSON-LD `telephone` and `tel:` links */
+export const SITE_PHONE_E164 = '+17028309222';
+
+/** Same digits as E.164 for any API expecting a “tel string” without `tel:` prefix */
+export const SITE_PHONE_TEL = SITE_PHONE_E164;
 
 /** Single import for `<a href={SITE_PHONE_TEL_HREF}>` across the site */
-export const SITE_PHONE_TEL_HREF = `tel:${SITE_PHONE_TEL}` as const;
-
-/** E.164 (no separators) */
-export const SITE_PHONE_E164 = '+17028309222';
+export const SITE_PHONE_TEL_HREF = `tel:${SITE_PHONE_E164}` as const;
 
 /** GBP “Chat” / SMS */
 export const SITE_SMS_HREF = 'sms:+17028309222';

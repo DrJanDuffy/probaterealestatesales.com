@@ -181,7 +181,7 @@ export default function ServicesPage() {
                 📍 Henderson estate: $15K over asking price
               </span>
               <span className="update text-lg whitespace-nowrap">
-                ⚖️ Court approval achieved: 98% first attempt
+                ⚖️ Court-ready filings aligned with Clark County probate procedures
               </span>
               <span className="update text-lg whitespace-nowrap">
                 🏠 Probate property in Summerlin: Sold in 38 days
@@ -190,7 +190,7 @@ export default function ServicesPage() {
                 📍 Henderson estate: $15K over asking price
               </span>
               <span className="update text-lg whitespace-nowrap">
-                ⚖️ Court approval achieved: 98% first attempt
+                ⚖️ Court-ready filings aligned with Clark County probate procedures
               </span>
             </div>
           </div>
@@ -249,15 +249,15 @@ export default function ServicesPage() {
                 Worried about court appearances and legal procedures?
               </p>
               <p className="solution text-gray-700 mb-6">
-                Our team attends all hearings, prepares all documents, and has a 98% first-approval
-                rate with{' '}
+                Our team attends hearings, prepares court-focused documentation, and works within
+                procedures used at{' '}
                 <Link
                   href="/locations/las-vegas/"
                   className="text-blue-600 hover:text-blue-800 font-semibold underline"
                 >
                   Clark County Probate Court
-                </Link>
-                . Learn more about{' '}
+                </Link>{' '}
+                (outcomes vary by judge and case). Learn more about{' '}
                 <Link
                   href="/resources/nevada-probate-guide/"
                   className="text-blue-600 hover:text-blue-800 font-semibold underline"
@@ -769,7 +769,7 @@ export default function ServicesPage() {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-5 w-5 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Average 15% above initial estate valuations</span>
+                      <span>Pricing strategy aligned with current market data</span>
                     </li>
                   </ul>
                 </div>

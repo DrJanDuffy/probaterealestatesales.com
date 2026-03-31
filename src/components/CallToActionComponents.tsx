@@ -91,7 +91,7 @@ const urgencyCTAs = [
   {
     type: 'Value',
     title: 'Maximize Your Estate Value',
-    message: 'Average 15% above initial estate valuations',
+    message: 'Market analysis and pricing strategy for inherited property',
     urgency: 'Medium',
     buttonText: 'Value Assessment',
     href: 'https://drjanduffy.realscout.com/onboarding',

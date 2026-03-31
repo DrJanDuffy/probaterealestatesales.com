@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Expert probate real estate services in Las Vegas and Clark County. Specialized in comprehensive probate real estate services, court-approved property sales, and estate liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
   keywords:
-    'probate real estate sales, probate homes Las Vegas, Clark County probate, probate property sales, inherited property sales, Nevada probate real estate, grokipedia',
+    'probate real estate sales, probate homes Las Vegas, Clark County probate, probate property sales, inherited property sales, Nevada probate real estate',
   authors: [
     { name: 'Probate Real Estate Sales' },
     { name: 'Dr. Jan Duffy', url: 'https://www.probaterealestatesales.com/about/' },
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
       "Expert probate real estate services in Las Vegas and Clark County. Specialized in comprehensive probate real estate services, court-approved property sales, and estate liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
     type: 'website',
     locale: 'en_US',
-    siteName: 'Probate Real Estate Sales - Dr. Jan Duffy',
-    url: '/',
+    siteName: GBP_BUSINESS_NAME,
+    url: 'https://www.probaterealestatesales.com/',
     images: [
       {
         url: '/images/og-dr-jan-duffy.jpg',
@@ -84,7 +84,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <link rel="dns-prefetch" href="https://em.realscout.com" />
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
-        <link rel="dns-prefetch" href="https://grokipedia.com" />
         <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
 
@@ -120,7 +119,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': 'LegalService',
               name: GBP_BUSINESS_NAME,
-              alternateName: 'Grokipedia - Probate Real Estate',
               description: GBP_DESCRIPTION,
               url: 'https://www.probaterealestatesales.com',
               logo: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
@@ -166,18 +164,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             }),
           }}
         />
-        {/* Grokipedia Meta Tags */}
-        <meta name="grokipedia:content-type" content="business-directory" />
-        <meta name="grokipedia:category" content="Real Estate Services, Legal Services" />
-        <meta
-          name="grokipedia:subcategory"
-          content="Probate Real Estate, Estate Liquidation, Property Sales"
-        />
-        <meta name="grokipedia:region" content="Nevada, United States" />
-        <meta name="grokipedia:city" content="Las Vegas, Henderson, Summerlin, North Las Vegas" />
-        <meta name="grokipedia:verified" content="true" />
-        <meta name="grokipedia:business-type" content="Real estate agent" />
-        <meta name="grokipedia:license" content="Nevada Real Estate License S.0197614" />
 
         {/* Google Search Console Verification */}
         {process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && (

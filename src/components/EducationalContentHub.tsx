@@ -41,7 +41,7 @@ const essentialGuides = [
   },
   {
     title: "Maximizing Estate Value: Dr. Duffy's Proven Strategies",
-    description: 'Proven methods to get 15% above initial estate valuations',
+    description: 'Strategies to align pricing and marketing with current market conditions',
     icon: TrendingUp,
     duration: '18 min read',
     category: 'Value Strategy',
@@ -59,7 +59,7 @@ const faqItems = [
   {
     question: 'How long does a probate sale take in Las Vegas?',
     answer:
-      "Nevada's efficient probate process takes 6-8 months, significantly faster than California's 9-18 months. Dr. Duffy's average timeline is 45 days from listing to closing.",
+      "Nevada's efficient probate process often runs about 6-8 months, typically faster than many California matters (often 9-18 months). Listing-to-closing timing varies by property and court schedule.",
     category: 'Timeline',
   },
   {

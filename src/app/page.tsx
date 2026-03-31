@@ -12,7 +12,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import { SITE_PHONE_DISPLAY } from '@/lib/site-contact';
+import { GBP_BUSINESS_NAME, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 
 // Removed heavy components - moved to dedicated pages for better performance
 
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     description: `Probate Real Estate Sales: Las Vegas and Clark County probate real estate—court-approved sales and inherited property guidance. Free consultation: ${SITE_PHONE_DISPLAY}.`,
     type: 'website',
     locale: 'en_US',
-    siteName: 'Probate Real Estate Sales',
-    url: '/',
+    siteName: GBP_BUSINESS_NAME,
+    url: 'https://www.probaterealestatesales.com/',
     images: [
       {
         url: '/images/og-dr-jan-duffy.jpg',

@@ -9,6 +9,7 @@ import {
   Mail,
   Users,
 } from 'lucide-react';
+import { GOOGLE_BUSINESS_REVIEW_URL } from '@/config/site-google';
 
 const formFields = [
   {
@@ -198,10 +199,15 @@ export default function LeadGenerationSystem() {
                     <Users className="h-4 w-4 text-accent-600" />
                     Probate sales experience
                   </span>
-                  <span className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
-                    5-Star Reviews
-                  </span>
+                  <a
+                    href={GOOGLE_BUSINESS_REVIEW_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-primary-700 hover:text-primary-900"
+                  >
+                    <CheckCircle className="h-4 w-4 text-green-600" aria-hidden />
+                    Google reviews
+                  </a>
                 </div>
               </div>
             </div>
