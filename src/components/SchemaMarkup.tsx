@@ -11,7 +11,6 @@ import {
   generateReviewSchema,
   generateVideoObjectSchema,
   generateWebPageSchema,
-  generateWebSiteSchema,
 } from '@/lib/schema';
 import { GBP_BUSINESS_NAME, SITE_PHONE_E164 } from '@/lib/site-contact';
 
@@ -123,25 +122,9 @@ export default function SchemaMarkup({
     let schemas: any[] = [];
 
     switch (type) {
+      /** Homepage: FAQ + HowTo only — layout already emits WebSite, Organization, LocalBusiness, agent, Person, LegalService (Search Essentials: avoid duplicate entity JSON-LD). */
       case 'home':
-        schemas = [
-          defaultSchemas.localBusiness,
-          defaultSchemas.realEstateAgent,
-          defaultSchemas.organization,
-          defaultSchemas.faqPage,
-          defaultSchemas.howTo,
-          defaultSchemas.legalService,
-          generateWebSiteSchema({
-            name: GBP_BUSINESS_NAME,
-            url: 'https://www.probaterealestatesales.com',
-            description:
-              'Expert probate real estate services in Las Vegas and Clark County, Nevada',
-            potentialAction: {
-              target: 'https://www.probaterealestatesales.com/search?q={search_term_string}',
-              queryInput: 'required name=search_term_string',
-            },
-          }),
-        ];
+        schemas = [defaultSchemas.faqPage, defaultSchemas.howTo];
         break;
 
       case 'service':
@@ -192,8 +175,6 @@ export default function SchemaMarkup({
 
       case 'legal':
         schemas = [
-          defaultSchemas.legalService,
-          defaultSchemas.organization,
           {
             '@context': 'https://schema.org',
             '@type': 'LegalService',
@@ -217,7 +198,6 @@ export default function SchemaMarkup({
       case 'location':
         if (location) {
           schemas = [
-            defaultSchemas.localBusiness,
             {
               '@context': 'https://schema.org',
               '@type': 'Place',
@@ -245,7 +225,6 @@ export default function SchemaMarkup({
 
       case 'property':
         schemas = [
-          defaultSchemas.realEstateAgent,
           {
             '@context': 'https://schema.org',
             '@type': 'RealEstateListing',
@@ -266,7 +245,7 @@ export default function SchemaMarkup({
         break;
 
       case 'faq':
-        schemas = [defaultSchemas.organization, defaultSchemas.howTo];
+        schemas = [defaultSchemas.howTo];
         if (!customSchema || !customSchemaHasFAQPage(customSchema)) {
           schemas.unshift(defaultSchemas.faqPage);
         }
@@ -279,14 +258,12 @@ export default function SchemaMarkup({
 
       case 'article':
         if (article) {
-          schemas = [generateArticleSchema(article), defaultSchemas.organization];
+          schemas = [generateArticleSchema(article)];
         }
         break;
 
       case 'contact':
         schemas = [
-          defaultSchemas.localBusiness,
-          defaultSchemas.organization,
           {
             '@context': 'https://schema.org',
             '@type': 'ContactPage',

@@ -678,6 +678,8 @@ export const defaultSchemas = {
   organization: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    /** Must match `webSiteSchema.publisher.@id` (Search Central: stable entity IDs in JSON-LD). */
+    '@id': 'https://www.probaterealestatesales.com/#organization',
     name: GBP_BUSINESS_NAME,
     description: GBP_DESCRIPTION,
     url: 'https://www.probaterealestatesales.com',
@@ -793,14 +795,8 @@ export function generateArticleSchema(article: {
       '@type': 'Person',
       name: article.author,
     },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Las Vegas Probate Real Estate Sales',
-      logo: {
-        '@type': 'ImageObject',
-        url: SITE_LOGO_ABSOLUTE_URL,
-      },
-    },
+    /** Reference global Organization in layout JSON-LD (avoid duplicate publisher blobs). */
+    publisher: { '@id': 'https://www.probaterealestatesales.com/#organization' },
     datePublished: article.datePublished,
     dateModified: article.dateModified,
     mainEntityOfPage: {
