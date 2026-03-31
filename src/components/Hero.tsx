@@ -1,3 +1,4 @@
+import { SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { ArrowRight, Award, Calendar, Download, Mail, Phone, Shield, Star } from 'lucide-react';
 import Image from 'next/image';
 
@@ -173,7 +174,7 @@ export default function Hero() {
                   </div>
                   <div>
                     <p className="text-sm text-secondary-500">Call Us Today</p>
-                    <p className="font-semibold text-secondary-900 text-lg">(702) 830-9222</p>
+                    <p className="font-semibold text-secondary-900 text-lg">{SITE_PHONE_DISPLAY}</p>
                   </div>
                 </div>
 

@@ -16,7 +16,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import { SITE_PHONE_E164 } from '@/lib/site-contact';
+import { SITE_PHONE_E164, SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -24,8 +24,7 @@ const FAQ = dynamic(() => import('@/components/FAQ'), {
 
 export const metadata: Metadata = {
   title: 'About Dr. Jan Duffy | Top Las Vegas Probate Realtor | 20+ Years Experience',
-  description:
-    'Meet Dr. Jan Duffy, top Las Vegas probate realtor with 20+ years experience. Licensed Nevada real estate professional (S.0197614) specializing in probate real estate sales. Ph.D. in Research, expert in Clark County probate procedures. Free consultation: (702) 830-9222',
+  description: `Meet Dr. Jan Duffy, Las Vegas probate real estate agent with 20+ years of experience. Licensed Nevada real estate professional (S.0197614) specializing in probate real estate sales. Ph.D. in Research, expert in Clark County probate procedures. Free consultation: ${SITE_PHONE_DISPLAY}`,
   keywords:
     'Dr. Jan Duffy, probate realtor, Las Vegas probate realtor, probate real estate expert, Las Vegas real estate agent, Nevada probate specialist, probate real estate broker, licensed real estate professional',
   alternates: {
@@ -297,11 +296,11 @@ export default function AboutPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="tel:+1-702-830-9222"
+                    href={SITE_PHONE_TEL_HREF}
                     className="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-700 rounded-md font-medium hover:bg-blue-50 transition-colors"
                   >
                     <Phone className="h-5 w-5 mr-2" />
-                    Call (702) 830-9222
+                    Call {SITE_PHONE_DISPLAY}
                   </a>
                   <a
                     href="mailto:DrJanSells@ProbateRealEstateSales.com"
@@ -332,10 +331,10 @@ export default function AboutPage() {
                 <Phone className="h-8 w-8 text-primary-700 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-secondary-900 mb-2">Phone</h3>
                 <a
-                  href="tel:+1-702-830-9222"
+                  href={SITE_PHONE_TEL_HREF}
                   className="text-primary-700 hover:text-primary-900 font-medium"
                 >
-                  (702) 830-9222
+                  {SITE_PHONE_DISPLAY}
                 </a>
               </div>
               <div className="text-center">

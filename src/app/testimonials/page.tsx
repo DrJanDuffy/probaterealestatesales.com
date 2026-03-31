@@ -1,12 +1,13 @@
-import { ArrowRight, Award, Heart, Phone, Quote, Star } from 'lucide-react';
+import { ArrowRight, Award, ExternalLink, Heart, Phone, Quote, Star } from 'lucide-react';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import { GOOGLE_BUSINESS_REVIEW_URL } from '@/config/site-google';
 import { generateReviewSchema } from '@/lib/schema';
-import { GBP_BUSINESS_NAME } from '@/lib/site-contact';
+import { GBP_BUSINESS_NAME, SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -219,7 +220,7 @@ export default function TestimonialsPage() {
                   maximizing property value while minimizing stress has earned her the trust of Las
                   Vegas probate courts and families alike.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center md:justify-start">
                   <Link
                     href="/contact/"
                     className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white rounded-md font-medium hover:bg-primary-700 transition-colors"
@@ -227,11 +228,21 @@ export default function TestimonialsPage() {
                     Get Your Free Consultation
                   </Link>
                   <a
-                    href="tel:+1-702-830-9222"
+                    href={SITE_PHONE_TEL_HREF}
                     className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-700 text-primary-700 rounded-md font-medium hover:bg-primary-50 transition-colors"
                   >
                     <Phone className="h-5 w-5 mr-2" />
-                    Call (702) 830-9222
+                    Call {SITE_PHONE_DISPLAY}
+                  </a>
+                  <a
+                    href={GOOGLE_BUSINESS_REVIEW_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-6 py-3 border-2 border-amber-600 text-amber-800 bg-amber-50 rounded-md font-medium hover:bg-amber-100 transition-colors"
+                  >
+                    <Star className="h-5 w-5 mr-2 fill-amber-500 text-amber-500" aria-hidden />
+                    Leave a Google review
+                    <ExternalLink className="h-4 w-4 ml-2 opacity-70" aria-hidden />
                   </a>
                 </div>
               </div>
@@ -420,11 +431,11 @@ export default function TestimonialsPage() {
               Schedule Free Consultation
             </Link>
             <a
-              href="tel:+1-702-830-9222"
+              href={SITE_PHONE_TEL_HREF}
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-md font-medium text-lg hover:bg-primary-700 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 830-9222
+              Call {SITE_PHONE_DISPLAY}
             </a>
           </div>
         </div>

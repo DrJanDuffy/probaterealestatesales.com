@@ -272,10 +272,10 @@ export default function Services() {
                 <Shield className="h-8 w-8 text-accent-600" />
               </div>
               <h4 className="text-lg font-semibold text-secondary-900 mb-2">
-                500+ Properties Sold
+                Probate sales experience
               </h4>
               <p className="text-secondary-600 text-sm">
-                Proven track record of successful transactions
+                Focused guidance through court-approved and inherited-property sales
               </p>
             </div>
             <div className="text-center">
@@ -398,7 +398,7 @@ export default function Services() {
               </span>
               <span className="flex items-center gap-2">
                 <Shield className="h-4 w-4 text-accent-600" />
-                500+ Properties Sold
+                Probate sales experience
               </span>
               <span className="flex items-center gap-2">
                 <Heart className="h-4 w-4 text-green-700" />

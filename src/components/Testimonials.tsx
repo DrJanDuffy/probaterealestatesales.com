@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { Heart, Quote, Star } from 'lucide-react';
 import Image from 'next/image';
 
@@ -121,10 +122,10 @@ export default function Testimonials() {
                     Get Your Free Consultation
                   </a>
                   <a
-                    href="tel:+1-702-830-9222"
+                    href={SITE_PHONE_TEL_HREF}
                     className="btn-outline inline-flex items-center justify-center"
                   >
-                    Call (702) 830-9222
+                    Call {SITE_PHONE_DISPLAY}
                   </a>
                 </div>
               </div>

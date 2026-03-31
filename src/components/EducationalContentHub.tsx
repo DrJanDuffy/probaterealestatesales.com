@@ -24,7 +24,8 @@ const essentialGuides = [
   },
   {
     title: 'Timeline: What to Expect When Selling Probate Property',
-    description: "Step-by-step timeline from filing to closing, based on Dr. Duffy's 500+ sales",
+    description:
+      'Step-by-step timeline from filing to closing, based on field experience with Nevada probate sales',
     icon: Clock,
     duration: '10 min read',
     category: 'Timeline',
@@ -329,7 +330,7 @@ export default function EducationalContentHub() {
               </span>
               <span className="flex items-center gap-2">
                 <Star className="h-4 w-4 text-accent-600" />
-                Based on 500+ Sales
+                Based on probate field experience
               </span>
               <span className="flex items-center gap-2">
                 <Users className="h-4 w-4 text-green-600" />

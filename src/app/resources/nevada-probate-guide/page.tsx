@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { ArrowRight, CheckCircle, Clock, DollarSign, FileText, Scale, Users } from 'lucide-react';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
@@ -11,8 +12,7 @@ const FAQ = dynamic(() => import('@/components/FAQ'), {
 
 export const metadata: Metadata = {
   title: 'Complete Nevada Probate Guide 2025 | Timeline, Costs & Process',
-  description:
-    "Comprehensive guide to Nevada probate real estate. Learn about Nevada's 6-8 month timeline, $1,000 court costs, and advantages over California. Free consultation: (702) 830-9222",
+  description: `Comprehensive guide to Nevada probate real estate. Learn about Nevada's 6-8 month timeline, $1,000 court costs, and advantages over California. Free consultation: ${SITE_PHONE_DISPLAY}`,
   keywords:
     'Nevada probate guide, Nevada probate timeline, Nevada probate costs, Clark County probate, Nevada vs California probate',
   alternates: {
@@ -477,10 +477,10 @@ export default function NevadaProbateGuidePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+1-702-830-9222"
+              href={SITE_PHONE_TEL_HREF}
               className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
             >
-              Call (702) 830-9222
+              Call {SITE_PHONE_DISPLAY}
             </a>
             <Link
               href="/contact/"

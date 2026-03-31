@@ -14,7 +14,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
-import { SITE_PHONE_E164 } from '@/lib/site-contact';
+import { SITE_PHONE_E164, SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -109,11 +109,11 @@ export default function ProbatePropertyBuyersPage() {
                   Find Probate Properties
                 </Link>
                 <Link
-                  href="tel:+1-702-830-9222"
+                  href={SITE_PHONE_TEL_HREF}
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
                 >
                   <Phone className="h-5 w-5 mr-2" />
-                  Call (702) 830-9222
+                  Call {SITE_PHONE_DISPLAY}
                 </Link>
               </div>
             </div>
@@ -546,11 +546,11 @@ export default function ProbatePropertyBuyersPage() {
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Link>
               <Link
-                href="tel:+1-702-830-9222"
+                href={SITE_PHONE_TEL_HREF}
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-lg font-semibold text-lg hover:bg-white hover:text-primary-900 transition-colors"
               >
                 <Phone className="h-5 w-5 mr-2" />
-                Call (702) 830-9222
+                Call {SITE_PHONE_DISPLAY}
               </Link>
             </div>
           </div>

@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 import {
   ArrowRight,
   Calendar,
@@ -29,8 +30,8 @@ const primaryCTA = {
   },
   trustIndicators: [
     { icon: Shield, text: 'Court-Approved Expert' },
-    { icon: Star, text: '500+ Probate Sales' },
-    { icon: CheckCircle, text: '5-Star Reviews' },
+    { icon: Star, text: 'Las Vegas probate focus' },
+    { icon: CheckCircle, text: 'Client-centered service' },
   ],
   urgency: {
     icon: '⚡',
@@ -73,7 +74,7 @@ const urgencyCTAs = [
     message: 'Court deadlines are strict and cannot be extended',
     urgency: 'High',
     buttonText: 'Emergency Consultation',
-    href: 'tel:+1-702-830-9222',
+    href: SITE_PHONE_TEL_HREF,
     icon: Clock,
     color: 'red',
   },

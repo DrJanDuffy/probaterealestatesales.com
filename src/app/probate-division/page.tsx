@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { Award, FileText, Gavel, MapPin, Phone, Shield, Users, ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -566,11 +567,11 @@ export default function ProbateDivisionPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
               <a
-                href="tel:+1-702-830-9222"
+                href={SITE_PHONE_TEL_HREF}
                 className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
               >
                 <Phone className="w-5 h-5" />
-                Call (702) 830-9222
+                Call {SITE_PHONE_DISPLAY}
               </a>
               <a
                 href="/contact/"

@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 // Import components for SEO and schema markup
 
 import {
@@ -109,11 +110,11 @@ export default function LasVegasProbateGuide() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+1-702-830-9222"
+                href={SITE_PHONE_TEL_HREF}
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors inline-flex items-center"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Free Consultation: (702) 830-9222
+                Free Consultation: {SITE_PHONE_DISPLAY}
               </a>
               <a
                 href="/#contact"
@@ -129,26 +130,26 @@ export default function LasVegasProbateGuide() {
       {/* Key Statistics */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div className="space-y-2">
               <div className="text-4xl font-bold text-blue-600">6-8</div>
-              <div className="text-gray-600">Months Average Timeline</div>
-              <div className="text-sm text-gray-500">vs 9-18 months in California</div>
+              <div className="text-gray-600">Months (typical Nevada range)</div>
+              <div className="text-sm text-gray-500">Often faster than many California matters</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-green-600">98%</div>
-              <div className="text-gray-600">Court Approval Rate</div>
-              <div className="text-sm text-gray-500">First-time approval</div>
+              <div className="text-2xl font-bold text-green-600">Clark County</div>
+              <div className="text-gray-600">Local probate procedures</div>
+              <div className="text-sm text-gray-500">Outcomes depend on the court and the case</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-purple-600">$2,500</div>
-              <div className="text-gray-600">Average Savings</div>
-              <div className="text-sm text-gray-500">vs traditional attorney fees</div>
+              <div className="text-2xl font-bold text-purple-600">Licensed</div>
+              <div className="text-gray-600">Nevada real estate</div>
+              <div className="text-sm text-gray-500">S.0197614 — verify with your legal counsel on fees</div>
             </div>
             <div className="space-y-2">
-              <div className="text-4xl font-bold text-orange-600">500+</div>
-              <div className="text-gray-600">Properties Sold</div>
-              <div className="text-sm text-gray-500">Successfully closed</div>
+              <div className="text-4xl font-bold text-orange-600">20+</div>
+              <div className="text-gray-600">Years of experience</div>
+              <div className="text-sm text-gray-500">Probate &amp; trust property focus</div>
             </div>
           </div>
         </div>
@@ -434,11 +435,11 @@ export default function LasVegasProbateGuide() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+1-702-830-9222"
+                href={SITE_PHONE_TEL_HREF}
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 <Phone className="mr-2 h-5 w-5" />
-                Call (702) 830-9222
+                Call {SITE_PHONE_DISPLAY}
               </a>
               <a
                 href="/#contact"

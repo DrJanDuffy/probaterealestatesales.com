@@ -11,24 +11,15 @@ import {
   OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
   OFFICE_GOOGLE_MAPS_EMBED_SRC,
 } from '@/config/site-google';
-import {
-  GBP_BUSINESS_CATEGORY,
-  GBP_BUSINESS_NAME,
-  GBP_DESCRIPTION,
-  GBP_SERVICE_AREA_PRIMARY,
-  GBP_SPECIAL_HOURS,
-  SITE_SMS_HREF,
-  SITE_WEBSITE_GBP,
-} from '@/lib/site-contact';
+import { GBP_BUSINESS_CATEGORY, GBP_BUSINESS_NAME, GBP_DESCRIPTION, GBP_SERVICE_AREA_PRIMARY, GBP_SPECIAL_HOURS, SITE_SMS_HREF, SITE_WEBSITE_GBP, SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
 });
 
 export const metadata: Metadata = {
-  title: 'Contact Probate Real Estate Sales - Dr. Jan Duffy | (702) 830-9222',
-  description:
-    'Contact matches our Google Business Profile: probate real estate in Las Vegas and Clark County. Call (702) 830-9222, text via SMS, or email DrJanSells@ProbateRealEstateSales.com.',
+  title: `Contact Probate Real Estate Sales - Dr. Jan Duffy | ${SITE_PHONE_DISPLAY}`,
+  description: `Contact matches our Google Business Profile: probate real estate in Las Vegas and Clark County. Call ${SITE_PHONE_DISPLAY}, text via SMS, or email DrJanSells@ProbateRealEstateSales.com.`,
   keywords:
     'contact probate real estate Las Vegas, probate real estate Clark County, Google Business Profile, probate consultation Nevada',
   alternates: {
@@ -36,7 +27,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   openGraph: {
-    title: 'Contact Probate Real Estate Sales - Dr. Jan Duffy | (702) 830-9222',
+    title: `Contact Probate Real Estate Sales - Dr. Jan Duffy | ${SITE_PHONE_DISPLAY}`,
     description:
       'Same business name, phone, and hours as our Google Business Profile. Las Vegas probate real estate.',
     type: 'website',
@@ -127,10 +118,10 @@ export default function ContactPage() {
               <Phone className="h-12 w-12 text-primary-700 mx-auto mb-4" />
               <h3 className="text-xl font-semibold text-secondary-900 mb-2">Phone</h3>
               <a
-                href="tel:+1-702-830-9222"
+                href={SITE_PHONE_TEL_HREF}
                 className="text-primary-700 hover:text-primary-900 font-medium text-lg"
               >
-                (702) 830-9222
+                {SITE_PHONE_DISPLAY}
               </a>
               <p className="text-sm text-secondary-600 mt-2">Call during business hours</p>
             </div>
@@ -141,7 +132,7 @@ export default function ContactPage() {
                 href={SITE_SMS_HREF}
                 className="text-sky-700 hover:text-sky-900 font-medium text-lg"
               >
-                (702) 830-9222
+                {SITE_PHONE_DISPLAY}
               </a>
               <p className="text-sm text-secondary-600 mt-2">Same number as phone</p>
             </div>
@@ -337,7 +328,7 @@ export default function ContactPage() {
                 />
                 <label htmlFor="consent" className="ml-3 text-sm text-secondary-600">
                   I agree to receive marketing communications via voice call, text message, or email
-                  from Probate Real Estate Sales. Text HELP to (702) 830-9222 for assistance.
+                  from Probate Real Estate Sales. Text HELP to {SITE_PHONE_DISPLAY} for assistance.
                   Consent is not a condition of purchase. Msg/data rates may apply. Reply STOP to
                   unsubscribe.
                 </label>
@@ -366,11 +357,11 @@ export default function ContactPage() {
             process.
           </p>
           <a
-            href="tel:+1-702-830-9222"
+            href={SITE_PHONE_TEL_HREF}
             className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             <Phone className="h-5 w-5 mr-2" />
-            Call (702) 830-9222
+            Call {SITE_PHONE_DISPLAY}
           </a>
         </div>
       </section>

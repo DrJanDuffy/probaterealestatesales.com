@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { ArrowRight, Calculator, DollarSign, Home, Phone, TrendingUp } from 'lucide-react';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
@@ -11,8 +12,7 @@ const FAQ = dynamic(() => import('@/components/FAQ'), {
 
 export const metadata: Metadata = {
   title: 'Free Home Valuation & CMA | Probate Property Value Assessment | Las Vegas',
-  description:
-    'Get a free home valuation and comparative market analysis (CMA) for your probate property in Las Vegas. Expert property value assessment by probate realtor. Understand your inherited property worth today. Free consultation: (702) 830-9222',
+  description: `Get a free home valuation and comparative market analysis (CMA) for your probate property in Las Vegas. Expert property value assessment by probate realtor. Understand your inherited property worth today. Free consultation: ${SITE_PHONE_DISPLAY}`,
   keywords:
     'comparative market analysis, CMA, home valuation, property value assessment, probate property valuation, Las Vegas home appraisal, free home estimate, probate property CMA',
   alternates: {
@@ -363,14 +363,14 @@ export default function HomeValuationPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Need Immediate Assistance?</h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Call us directly at (702) 830-9222 for a free consultation and property valuation.
+            Call us directly at {SITE_PHONE_DISPLAY} for a free consultation and property valuation.
           </p>
           <a
-            href="tel:+1-702-830-9222"
+            href={SITE_PHONE_TEL_HREF}
             className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 rounded-md font-medium text-lg hover:bg-blue-50 transition-colors"
           >
             <Phone className="h-5 w-5 mr-2" />
-            Call (702) 830-9222
+            Call {SITE_PHONE_DISPLAY}
           </a>
         </div>
       </section>

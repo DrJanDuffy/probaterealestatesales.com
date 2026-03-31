@@ -1,5 +1,7 @@
 'use client';
 
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
+
 import { Calculator, DollarSign, Home, Phone, TrendingUp } from 'lucide-react';
 import { useState } from 'react';
 
@@ -502,11 +504,11 @@ export default function PropertyValuationCalculator() {
                       Get a detailed appraisal and market analysis from our experts
                     </p>
                     <a
-                      href="tel:+1-702-830-9222"
+                      href={SITE_PHONE_TEL_HREF}
                       className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
                     >
                       <Phone className="mr-2 h-4 w-4" />
-                      Call (702) 830-9222
+                      Call {SITE_PHONE_DISPLAY}
                     </a>
                   </div>
                 </>

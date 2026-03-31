@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import {
   ArrowRight,
   CheckCircle,
@@ -403,10 +404,10 @@ export default function ProbatePropertyChecklist() {
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </a>
               <a
-                href="tel:+1-702-830-9222"
+                href={SITE_PHONE_TEL_HREF}
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-700 transition-colors inline-flex items-center justify-center gap-2"
               >
-                Call (702) 830-9222
+                Call {SITE_PHONE_DISPLAY}
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-accent-100">

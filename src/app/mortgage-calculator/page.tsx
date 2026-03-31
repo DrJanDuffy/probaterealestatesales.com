@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { ArrowRight, Calculator, DollarSign, Home, Info, Phone, TrendingUp } from 'lucide-react';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
@@ -11,8 +12,7 @@ const FAQ = dynamic(() => import('@/components/FAQ'), {
 
 export const metadata: Metadata = {
   title: 'Mortgage Calculator | Probate Property Financing | Free Calculator Las Vegas',
-  description:
-    'Free mortgage calculator for probate properties in Las Vegas. Calculate monthly payments for inherited property purchases. Plan your probate property financing with our free tool. Expert guidance available: (702) 830-9222',
+  description: `Free mortgage calculator for probate properties in Las Vegas. Calculate monthly payments for inherited property purchases. Plan your probate property financing with our free tool. Expert guidance available: ${SITE_PHONE_DISPLAY}`,
   keywords:
     'mortgage calculator, probate property financing, Las Vegas mortgage, home loan calculator, monthly payment calculator, probate property mortgage, free mortgage calculator',
   alternates: {
@@ -317,11 +317,11 @@ export default function MortgageCalculatorPage() {
               Get Started Today
             </Link>
             <a
-              href="tel:+1-702-830-9222"
+              href={SITE_PHONE_TEL_HREF}
               className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white rounded-md font-medium text-lg hover:bg-white hover:text-primary-700 transition-colors"
             >
               <Phone className="h-5 w-5 mr-2" />
-              Call (702) 830-9222
+              Call {SITE_PHONE_DISPLAY}
             </a>
           </div>
         </div>

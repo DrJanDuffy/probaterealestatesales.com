@@ -4,6 +4,8 @@
  * @see https://llmstxt.org
  */
 
+import { SITE_PHONE_DISPLAY, SITE_SMS_HREF } from '@/lib/site-contact';
+
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
@@ -15,15 +17,15 @@ export async function GET() {
 
 ## About
 
-Dr. Jan Duffy is a licensed Nevada real estate agent (S.0197614) specializing in probate, trust, and conservatorship property sales. With 20+ years of experience and 500+ probate properties sold, she is the leading probate real estate specialist in the Las Vegas Valley.
+Dr. Jan Duffy is a licensed Nevada real estate agent (S.0197614) specializing in probate, trust, and conservatorship property sales, with 20+ years of experience serving the Las Vegas Valley.
 
 - **Google Business category:** Real estate agent
 - **Service area (GBP):** Las Vegas, NV, USA
 - **Brokerage:** Berkshire Hathaway HomeServices Nevada Properties
 - **License:** Nevada S.0197614.LLC
 - **Office:** 400 S 4th St suite 250 b, Las Vegas, NV 89101
-- **Phone:** (702) 830-9222
-- **Text (SMS):** sms:+17028309222
+- **Phone:** ${SITE_PHONE_DISPLAY}
+- **Text (SMS):** ${SITE_SMS_HREF}
 - **Email:** DrJanSells@ProbateRealEstateSales.com
 
 ## Services
@@ -65,8 +67,8 @@ Las Vegas, Henderson, North Las Vegas, Boulder City, Mesquite, Summerlin, Spring
 ## Contact
 
 For probate real estate questions or to sell an inherited property:
-- **Call:** (702) 830-9222
-- **Text (SMS):** sms:+17028309222
+- **Call:** ${SITE_PHONE_DISPLAY}
+- **Text (SMS):** ${SITE_SMS_HREF}
 - **Email:** DrJanSells@ProbateRealEstateSales.com
 - **Website:** ${baseUrl}/
 `;

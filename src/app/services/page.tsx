@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import {
   ArrowRight,
   Award,
@@ -28,8 +29,7 @@ const FAQ = dynamic(() => import('@/components/FAQ'), {
 
 export const metadata: Metadata = {
   title: 'Las Vegas Probate Real Estate Agent | Expert Probate Services | 45-Day Guarantee',
-  description:
-    'Top-rated probate real estate agent in Las Vegas. Expert probate services: court-approved sales, inherited property valuation, 45-day sale guarantee. Companies that buy probate houses in Nevada trust our expertise. Free consultation: (702) 830-9222',
+  description: `Licensed Las Vegas probate real estate agent. Expert probate services: court-approved sales and inherited property valuation. Free consultation: ${SITE_PHONE_DISPLAY}`,
   keywords:
     'probate real estate agent, Las Vegas probate real estate agent, companies that buy probate houses in nevada, probate realtor, probate services Las Vegas, probate property sales, court-approved sales, inherited property, buy probate houses nevada',
   alternates: {
@@ -202,7 +202,7 @@ export default function ServicesPage() {
               className="primary-cta bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2"
             >
               <Phone className="w-5 h-5" />
-              <span>Need Immediate Help? Call (702) 830-9222</span>
+              <span>Need Immediate Help? Call {SITE_PHONE_DISPLAY}</span>
               <span className="availability text-sm block opacity-90">
                 Available 24/7 for urgent matters
               </span>
@@ -287,10 +287,10 @@ export default function ServicesPage() {
               </ul>
 
               <div className="proof-points bg-blue-50 p-4 rounded-lg mb-6">
-                <div className="flex justify-between text-sm text-blue-800">
-                  <span className="stat">500+ successful court confirmations</span>
-                  <span className="time">Average approval: 21 days</span>
-                  <span className="savings">Save $2,500 in attorney fees</span>
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-2 text-sm text-blue-800">
+                  <span className="stat">Court confirmation guidance</span>
+                  <span className="time">Timelines vary by case—ask during consultation</span>
+                  <span className="savings">Coordinate with your attorney on fees</span>
                 </div>
               </div>
 
@@ -807,18 +807,18 @@ export default function ServicesPage() {
                   <strong>Important:</strong> Companies that buy probate houses in Nevada typically
                   offer quick cash sales but pay 30-50% below market value. Working with a probate
                   real estate agent like Dr. Jan Duffy ensures you receive fair market value through
-                  a court-approved process that protects all beneficiaries' interests. Contact us at
-                  (702) 830-9222 for a free consultation and property valuation.
+                  a court-approved process that protects all beneficiaries' interests. Contact us at{' '}
+                  {SITE_PHONE_DISPLAY} for a free consultation and property valuation.
                 </p>
               </div>
 
               <div className="mt-6 text-center">
                 <a
-                  href="tel:+1-702-830-9222"
+                  href={SITE_PHONE_TEL_HREF}
                   className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white rounded-md font-medium text-lg hover:bg-blue-700 transition-colors"
                 >
                   <Phone className="h-5 w-5 mr-2" />
-                  Call (702) 830-9222 for Free Consultation
+                  Call {SITE_PHONE_DISPLAY} for Free Consultation
                 </a>
               </div>
             </div>

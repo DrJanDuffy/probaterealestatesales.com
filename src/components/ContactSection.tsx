@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 import Image from 'next/image';
 
@@ -30,7 +31,7 @@ export default function ContactSection() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <a
-                    href="tel:+1-702-830-9222"
+                    href={SITE_PHONE_TEL_HREF}
                     className="btn-primary inline-flex items-center justify-center"
                   >
                     Call Dr. Duffy Directly
@@ -191,7 +192,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">Phone</h4>
-                    <p className="text-secondary-600">(702) 830-9222</p>
+                    <p className="text-secondary-600">{SITE_PHONE_DISPLAY}</p>
                     <p className="text-sm text-secondary-500">Available 24/7 for urgent matters</p>
                   </div>
                 </div>
@@ -241,7 +242,7 @@ export default function ContactSection() {
                 For urgent probate matters outside business hours, call our emergency line:
               </p>
               <div className="text-center">
-                <div className="text-2xl font-bold text-primary-700 mb-2">(702) 830-9222</div>
+                <div className="text-2xl font-bold text-primary-700 mb-2">{SITE_PHONE_DISPLAY}</div>
                 <p className="text-sm text-secondary-500">Available 24/7 for urgent matters</p>
               </div>
             </div>

@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
@@ -22,8 +23,7 @@ const FAQ = dynamic(() => import('@/components/FAQ'), {
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Solutions | Complete Resources & Tools | Las Vegas Expert',
-  description:
-    'Comprehensive probate real estate solutions and resources. Nevada probate laws, timeline, checklist, cost calculator, and educational content. Complete probate real estate solutions by Dr. Jan Duffy. Free consultation: (702) 830-9222',
+  description: `Comprehensive probate real estate solutions and resources. Nevada probate laws, timeline, checklist, cost calculator, and educational content. Complete probate real estate solutions by Dr. Jan Duffy. Free consultation: ${SITE_PHONE_DISPLAY}`,
   keywords:
     'probate real estate solutions, probate real estate resources, Nevada probate laws, probate timeline, probate checklist, probate cost calculator, Dr. Jan Duffy, Las Vegas probate expert, probate solutions',
   alternates: {
@@ -65,10 +65,10 @@ export default function ResourcesPage() {
               Schedule Free Consultation
             </a>
             <a
-              href="tel:+1-702-830-9222"
+              href={SITE_PHONE_TEL_HREF}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-900 transition-colors inline-block"
             >
-              Call (702) 830-9222
+              Call {SITE_PHONE_DISPLAY}
             </a>
           </div>
         </div>
@@ -366,10 +366,10 @@ export default function ResourcesPage() {
               Schedule Free Consultation
             </a>
             <a
-              href="tel:+1-702-830-9222"
+              href={SITE_PHONE_TEL_HREF}
               className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-900 transition-colors inline-block"
             >
-              Call (702) 830-9222
+              Call {SITE_PHONE_DISPLAY}
             </a>
           </div>
         </div>

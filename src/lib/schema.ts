@@ -348,7 +348,7 @@ export const personSchema = {
   name: 'Dr. Jan Duffy',
   jobTitle: 'Licensed Nevada Real Estate Agent | Probate Real Estate Specialist',
   description:
-    'Dr. Jan Duffy is a top Las Vegas probate realtor with 20+ years of experience. Licensed Nevada real estate professional (S.0197614) specializing in probate, trust, and conservatorship real estate sales. Ph.D. in Research, expert in Clark County probate court procedures. 500+ probate properties sold.',
+    'Licensed Nevada real estate professional (S.0197614) specializing in probate, trust, and conservatorship property sales in Las Vegas and Clark County. Ph.D. in Research; experience with Clark County probate procedures and Nevada Revised Statutes.',
   url: 'https://www.probaterealestatesales.com/about/',
   image: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
   telephone: SITE_PHONE_E164,
@@ -384,11 +384,6 @@ export const personSchema = {
     'Estate Liquidation',
     'Nevada Revised Statutes',
     'Real Estate Market Analysis',
-  ],
-  award: [
-    'Top Las Vegas Probate Realtor',
-    '20+ Years Experience',
-    '500+ Probate Properties Sold',
   ],
   worksFor: {
     '@type': 'Organization',
@@ -449,8 +444,8 @@ export const defaultSchemas = {
       },
       geoRadius: '50 miles',
     },
-    logo: 'https://www.probaterealestatesales.com/logo.png',
-    image: 'https://www.probaterealestatesales.com/logo.png',
+    logo: SITE_LOGO_ABSOLUTE_URL,
+    image: SITE_LOGO_ABSOLUTE_URL,
     /** Maps listing URL helps Google connect site ↔ Maps ↔ GBP */
     hasMap: OFFICE_GOOGLE_MAPS_LISTING_URL,
     sameAs: getLocalBusinessSameAsUrls(),

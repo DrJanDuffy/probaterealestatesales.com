@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import {
   Award,
   Building,
@@ -19,9 +20,9 @@ const reasons = [
     icon: Award,
     title: 'Proven Track Record',
     description:
-      'Over 20 years of experience in probate real estate with hundreds of successful transactions.',
-    stat: '500+',
-    detail: 'Properties Sold',
+      'Over 20 years of experience in probate real estate with a strong focus on successful closings.',
+    stat: '20+',
+    detail: 'Years in real estate',
   },
   {
     icon: Clock,
@@ -169,10 +170,10 @@ export default function WhyChooseUs() {
                     Schedule Free Consultation
                   </a>
                   <a
-                    href="tel:+1-702-830-9222"
+                    href={SITE_PHONE_TEL_HREF}
                     className="btn-outline inline-flex items-center justify-center"
                   >
-                    Call (702) 830-9222
+                    Call {SITE_PHONE_DISPLAY}
                   </a>
                 </div>
               </div>
@@ -258,22 +259,22 @@ export default function WhyChooseUs() {
 
         {/* Stats Section */}
         <div className="bg-gradient-to-r from-primary-600 to-primary-800 rounded-2xl p-8 md:p-12 text-white mb-16">
-          <div className="grid md:grid-cols-4 gap-8 text-center">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">$150M+</div>
-              <div className="text-white">Total Estate Transactions</div>
-            </div>
-            <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">500+</div>
-              <div className="text-white">Probate Properties Sold</div>
+              <div className="text-2xl md:text-3xl font-bold mb-2">Licensed Nevada</div>
+              <div className="text-white/95 text-sm md:text-base">Real estate professional (S.0197614)</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">20+</div>
               <div className="text-white">Years of Experience</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">98%</div>
-              <div className="text-white">Client Satisfaction Rate</div>
+              <div className="text-2xl md:text-3xl font-bold mb-2">Clark County</div>
+              <div className="text-white/95 text-sm md:text-base">Probate &amp; trust property focus</div>
+            </div>
+            <div>
+              <div className="text-2xl md:text-3xl font-bold mb-2">Ph.D.</div>
+              <div className="text-white/95 text-sm md:text-base">Research-backed guidance</div>
             </div>
           </div>
         </div>

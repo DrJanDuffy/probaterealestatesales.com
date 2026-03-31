@@ -6,6 +6,14 @@
 
 export const SITE_ORIGIN = 'https://www.probaterealestatesales.com';
 
+/**
+ * Google Business Profile — leave a review (GBP “Ask for reviews” link).
+ * Override with NEXT_PUBLIC_GOOGLE_BUSINESS_REVIEW_URL if Google regenerates the link.
+ */
+export const GOOGLE_BUSINESS_REVIEW_URL =
+  process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_REVIEW_URL?.trim() ||
+  'https://g.page/r/Ca2QWcDSV2PKEAE/review';
+
 /** Use in JSON-LD logo / image when a dedicated /logo.png is not deployed (matches OG + Person schema). */
 export const SITE_LOGO_ABSOLUTE_URL = `${SITE_ORIGIN}/images/dr-jan-duffy.jpg`;
 

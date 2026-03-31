@@ -14,6 +14,7 @@ import {
 import Link from 'next/link';
 import {
   FACEBOOK_PAGE_URL,
+  GOOGLE_BUSINESS_REVIEW_URL,
   INSTAGRAM_PAGE_URL,
   THREADS_PROFILE_URL,
   OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
@@ -25,6 +26,8 @@ import {
   GBP_DESCRIPTION,
   GBP_SERVICE_AREA_PRIMARY,
   GBP_SPECIAL_HOURS,
+  SITE_PHONE_DISPLAY,
+  SITE_PHONE_TEL_HREF,
   SITE_SMS_HREF,
 } from '@/lib/site-contact';
 
@@ -162,11 +165,11 @@ export default function Footer() {
               <div className="flex items-center text-secondary-300 group">
                 <Phone className="h-5 w-5 mr-3 text-primary-400 group-hover:text-primary-300 transition-colors" />
                 <a
-                  href="tel:+1-702-830-9222"
+                  href={SITE_PHONE_TEL_HREF}
                   className="hover:text-white transition-colors font-medium focus-ring-dark rounded-md px-1"
-                  aria-label={`Call ${GBP_BUSINESS_NAME} at (702) 830-9222`}
+                  aria-label={`Call ${GBP_BUSINESS_NAME} at ${SITE_PHONE_DISPLAY}`}
                 >
-                  (702) 830-9222
+                  {SITE_PHONE_DISPLAY}
                 </a>
               </div>
               <div className="flex items-center text-secondary-300 group">
@@ -233,18 +236,16 @@ export default function Footer() {
                   <MapPin className="h-3.5 w-3.5" aria-hidden />
                   Google Maps
                 </a>
-                {process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL ? (
-                  <a
-                    href={process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 hover:text-white transition-colors focus-ring-dark rounded-md"
-                    aria-label="View Google Business Profile and reviews"
-                  >
-                    <ExternalLink className="h-3.5 w-3.5" aria-hidden />
-                    Google reviews
-                  </a>
-                ) : null}
+                <a
+                  href={GOOGLE_BUSINESS_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 hover:text-white transition-colors focus-ring-dark rounded-md"
+                  aria-label="Leave a Google review for Probate Real Estate Sales"
+                >
+                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
+                  Leave a Google review
+                </a>
                 <a
                   href={FACEBOOK_PAGE_URL}
                   target="_blank"

@@ -30,6 +30,9 @@ export const SITE_PHONE_DISPLAY = '(702) 830-9222';
 /** Use in tel: links and JSON-LD telephone */
 export const SITE_PHONE_TEL = '+1-702-830-9222';
 
+/** Single import for `<a href={SITE_PHONE_TEL_HREF}>` across the site */
+export const SITE_PHONE_TEL_HREF = `tel:${SITE_PHONE_TEL}` as const;
+
 /** E.164 (no separators) */
 export const SITE_PHONE_E164 = '+17028309222';
 

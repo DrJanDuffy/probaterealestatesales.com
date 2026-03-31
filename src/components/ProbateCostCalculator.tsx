@@ -1,5 +1,7 @@
 'use client';
 
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
+
 import { ArrowRight, Calculator, CheckCircle, DollarSign, Info } from 'lucide-react';
 import { useState } from 'react';
 
@@ -539,8 +541,8 @@ export default function ProbateCostCalculator() {
                 Get Free Cost Estimate
                 <ArrowRight className="h-5 w-5" />
               </a>
-              <a href="tel:+1-702-830-9222" className="btn-outline inline-block">
-                Call (702) 830-9222
+              <a href={SITE_PHONE_TEL_HREF} className="btn-outline inline-block">
+                Call {SITE_PHONE_DISPLAY}
               </a>
             </div>
             <div className="mt-6 flex flex-wrap gap-6 justify-center text-sm text-secondary-600">

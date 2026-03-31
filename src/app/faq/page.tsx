@@ -1,3 +1,4 @@
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import type { Metadata } from 'next';
 import Breadcrumb from '@/components/Breadcrumb';
 import FAQ from '@/components/FAQ';
@@ -6,8 +7,7 @@ import SchemaMarkup from '@/components/SchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'How Long Does Probate Take in Nevada? | FAQ | Las Vegas Probate Timeline',
-  description:
-    'How long does probate take in Nevada? 6-8 months (vs 9-18 in California). Complete FAQ with expert answers on timeline, costs ($1,000 court fees), Clark County procedures. Free consultation: (702) 830-9222',
+  description: `How long does probate take in Nevada? 6-8 months (vs 9-18 in California). Complete FAQ with expert answers on timeline, costs ($1,000 court fees), Clark County procedures. Free consultation: ${SITE_PHONE_DISPLAY}`,
   keywords:
     'how long does probate take in nevada, Nevada probate timeline, probate FAQ, Clark County probate, Nevada probate costs, probate timeline Las Vegas, certificate of incumbency',
   alternates: {
@@ -44,10 +44,10 @@ export default function FAQPage() {
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+1-702-830-9222"
+              href={SITE_PHONE_TEL_HREF}
               className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-primary-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
             >
-              Call Now: (702) 830-9222
+              Call Now: {SITE_PHONE_DISPLAY}
             </a>
             <a
               href="https://drjanduffy.realscout.com/onboarding"
@@ -143,10 +143,10 @@ export default function FAQPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+1-702-830-9222"
+              href={SITE_PHONE_TEL_HREF}
               className="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
             >
-              Call (702) 830-9222
+              Call {SITE_PHONE_DISPLAY}
             </a>
             <a
               href="https://drjanduffy.realscout.com/onboarding"

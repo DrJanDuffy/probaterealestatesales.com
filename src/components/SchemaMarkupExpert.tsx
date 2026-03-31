@@ -1,3 +1,7 @@
+/**
+ * Educational UI only: root `layout.tsx` already injects WebSite, LocalBusiness, Person, and
+ * RealEstateAgent JSON-LD aligned with GBP — do not duplicate graphs here.
+ */
 import {
   Award,
   Building,
@@ -9,314 +13,8 @@ import {
   Star,
   Users,
 } from 'lucide-react';
-import { YOUTUBE_CHANNEL_URL } from '@/config/youtube';
-import { FACEBOOK_PAGE_URL, THREADS_PROFILE_URL } from '@/config/site-google';
-import {
-  GBP_BUSINESS_NAME,
-  GBP_DESCRIPTION,
-  GBP_OPENING_HOURS_STRING,
-  SITE_PHONE_DISPLAY,
-  SITE_PHONE_E164,
-} from '@/lib/site-contact';
-
-const schemaData = {
-  '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Dr. Jan Duffy',
-  alternateName: 'Dr. Jan Duffy',
-  jobTitle: 'Probate Real Estate Specialist',
-  description:
-    'Las Vegas probate real estate expert with 20+ years experience, specializing in inherited property sales, estate liquidation, and court-approved property sales with comprehensive probate real estate services.',
-  url: 'https://www.probaterealestatesales.com',
-  image: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
-  telephone: SITE_PHONE_E164,
-  email: 'DrJanSells@ProbateRealEstateSales.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '400 S 4th St suite 250 b',
-    addressLocality: 'Las Vegas',
-    addressRegion: 'NV',
-    postalCode: '89101',
-    addressCountry: 'US',
-  },
-  sameAs: [
-    FACEBOOK_PAGE_URL,
-    THREADS_PROFILE_URL,
-    'https://www.facebook.com/drjanduffyrealtor',
-    'https://www.linkedin.com/in/drjanduffy',
-    YOUTUBE_CHANNEL_URL,
-  ],
-  hasCredential: [
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'certification',
-      name: '9 Exceptions to Probate Expert',
-      recognizedBy: {
-        '@type': 'Organization',
-        name: 'National Association of Probate Professionals',
-      },
-    },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'degree',
-      name: 'Doctor of Philosophy in Research',
-      recognizedBy: {
-        '@type': 'Organization',
-        name: 'University of Nevada, Las Vegas',
-      },
-    },
-    {
-      '@type': 'EducationalOccupationalCredential',
-      credentialCategory: 'license',
-      name: 'Nevada Real Estate License',
-      recognizedBy: {
-        '@type': 'Organization',
-        name: 'Nevada Real Estate Division',
-      },
-    },
-  ],
-  knowsAbout: [
-    'Probate Real Estate',
-    'Estate Sales',
-    'Nevada Probate Law',
-    'Las Vegas Real Estate',
-    'Inherited Property Sales',
-    'Clark County Probate Court',
-    'Estate Liquidation',
-    'Property Valuation',
-    'Court-Approved Property Sales',
-    'Comprehensive Probate Real Estate Services',
-    'Legal Compliance',
-    'Property Preparation and Sale',
-    'Probate Process Navigation',
-    'Family Support Services',
-    'Estate Property Valuation',
-    'Court Documentation',
-    'Probate Timeline Management',
-  ],
-  memberOf: [
-    {
-      '@type': 'Organization',
-      name: 'National Association of Probate Professionals',
-    },
-    {
-      '@type': 'Organization',
-      name: 'Nevada State Bar Association - Probate Section',
-    },
-    {
-      '@type': 'Organization',
-      name: 'Estate Planning Council of Southern Nevada',
-    },
-    {
-      '@type': 'Organization',
-      name: 'National Academy of Elder Law Attorneys',
-    },
-    {
-      '@type': 'Organization',
-      name: 'Greater Las Vegas Association of Realtors',
-    },
-  ],
-  worksFor: {
-    '@type': 'Organization',
-    name: GBP_BUSINESS_NAME,
-    url: 'https://www.probaterealestatesales.com',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '400 S 4th St suite 250 b',
-      addressLocality: 'Las Vegas',
-      addressRegion: 'NV',
-      postalCode: '89101',
-    },
-  },
-  award: [
-    'Probate Realtor of the Year - Las Vegas Real Estate Awards 2024',
-    'Top 1% of Probate Specialists - National Probate Network',
-    'Excellence in Estate Services - Nevada Association of Realtors',
-  ],
-  hasOccupation: {
-    '@type': 'Occupation',
-    name: 'Probate Real Estate Specialist',
-    description:
-      'Specialized real estate professional focusing on court-supervised property sales and estate liquidation',
-    occupationLocation: {
-      '@type': 'Place',
-      name: 'Las Vegas, Nevada',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Las Vegas',
-        addressRegion: 'NV',
-      },
-    },
-  },
-  serviceArea: {
-    '@type': 'Place',
-    name: 'Clark County, Nevada',
-    description:
-      'Primary service area including Las Vegas, Henderson, Summerlin, North Las Vegas, Boulder City, Enterprise, Mesquite, and Spring Valley',
-    address: {
-      '@type': 'PostalAddress',
-      addressRegion: 'NV',
-    },
-  },
-};
-
-const businessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'RealEstateAgent',
-  name: 'Dr. Jan Duffy - Probate Real Estate Specialist',
-  description: GBP_DESCRIPTION,
-  url: 'https://www.probaterealestatesales.com',
-  telephone: SITE_PHONE_E164,
-  email: 'DrJanSells@ProbateRealEstateSales.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '400 S 4th St suite 250 b',
-    addressLocality: 'Las Vegas',
-    addressRegion: 'NV',
-    postalCode: '89101',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: '36.1699',
-    longitude: '-115.1398',
-  },
-  openingHours: GBP_OPENING_HOURS_STRING,
-  priceRange: '$$',
-  paymentAccepted: ['Cash', 'Check', 'Credit Card', 'Bank Transfer'],
-  currenciesAccepted: 'USD',
-  areaServed: [
-    {
-      '@type': 'City',
-      name: 'Las Vegas',
-    },
-    {
-      '@type': 'City',
-      name: 'Henderson',
-    },
-    {
-      '@type': 'City',
-      name: 'North Las Vegas',
-    },
-    {
-      '@type': 'City',
-      name: 'Boulder City',
-    },
-    {
-      '@type': 'City',
-      name: 'Summerlin',
-    },
-  ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Probate Real Estate Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Estate Property Valuation',
-          description: 'Free comprehensive market analysis and court-compliant property appraisals',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Probate Process Navigation',
-          description: 'Step-by-step guidance through court requirements and legal compliance',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Property Preparation & Sale',
-          description: 'Complete property preparation, staging, and strategic marketing',
-        },
-      },
-    ],
-  },
-};
-
-const localBusinessSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
-  name: GBP_BUSINESS_NAME,
-  description: GBP_DESCRIPTION,
-  url: 'https://www.probaterealestatesales.com',
-  telephone: SITE_PHONE_E164,
-  email: 'DrJanSells@ProbateRealEstateSales.com',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: '400 S 4th St suite 250 b',
-    addressLocality: 'Las Vegas',
-    addressRegion: 'NV',
-    postalCode: '89101',
-    addressCountry: 'US',
-  },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: '36.1699',
-    longitude: '-115.1398',
-  },
-  openingHours: GBP_OPENING_HOURS_STRING,
-  priceRange: '$$',
-  paymentAccepted: ['Cash', 'Check', 'Credit Card', 'Bank Transfer'],
-  currenciesAccepted: 'USD',
-  areaServed: [
-    {
-      '@type': 'City',
-      name: 'Las Vegas',
-    },
-    {
-      '@type': 'City',
-      name: 'Henderson',
-    },
-    {
-      '@type': 'City',
-      name: 'North Las Vegas',
-    },
-    {
-      '@type': 'City',
-      name: 'Boulder City',
-    },
-    {
-      '@type': 'City',
-      name: 'Summerlin',
-    },
-  ],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Probate Real Estate Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Estate Property Valuation',
-          description: 'Free comprehensive market analysis and court-compliant property appraisals',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Probate Process Navigation',
-          description: 'Step-by-step guidance through court requirements and legal compliance',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Property Preparation & Sale',
-          description: 'Complete property preparation, staging, and strategic marketing',
-        },
-      },
-    ],
-  },
-};
+import { OFFICE_ADDRESS_LINE } from '@/config/site-google';
+import { GBP_BUSINESS_NAME, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 
 export default function SchemaMarkupExpert() {
   return (
@@ -329,11 +27,11 @@ export default function SchemaMarkupExpert() {
             Schema Markup Implementation
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-secondary-900 mb-4">
-            Structured Data for Dr. Jan Duffy
+            Structured Data for {GBP_BUSINESS_NAME}
           </h2>
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto">
-            Comprehensive schema markup implementation to enhance search visibility and establish
-            Dr. Duffy as Las Vegas's premier probate real estate expert.
+            The site publishes LocalBusiness, Person, and related JSON-LD from a single source that
+            mirrors your Google Business Profile (name, NAP, hours, description).
           </p>
         </div>
 
@@ -369,14 +67,14 @@ export default function SchemaMarkupExpert() {
                 <h4 className="text-lg font-semibold text-secondary-900">Real Estate Agent</h4>
               </div>
               <p className="text-secondary-600 text-sm mb-4">
-                Positions Dr. Duffy as a specialized real estate professional
+                Positions the brokerage-aligned agent entity with services and service area
               </p>
               <ul className="space-y-2 text-sm text-secondary-600">
                 <li>• Business services and offerings</li>
                 <li>• Service area and coverage</li>
                 <li>• Payment methods and pricing</li>
                 <li>• Operating hours and availability</li>
-                <li>• Aggregate ratings and reviews</li>
+                <li>• Maps and social profile links (sameAs)</li>
               </ul>
             </div>
 
@@ -446,7 +144,7 @@ export default function SchemaMarkupExpert() {
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="h-5 w-5 text-green-600" />
-                  <span className="text-sm text-secondary-700">Las Vegas, NV 89101</span>
+                  <span className="text-sm text-secondary-700">{OFFICE_ADDRESS_LINE}</span>
                 </div>
               </div>
             </div>
@@ -536,26 +234,6 @@ export default function SchemaMarkupExpert() {
             </div>
           </div>
         </div>
-
-        {/* Hidden Schema Data for Search Engines */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(schemaData),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(businessSchema),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
-          }}
-        />
       </div>
     </section>
   );

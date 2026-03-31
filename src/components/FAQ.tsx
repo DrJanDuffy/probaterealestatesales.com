@@ -1,5 +1,7 @@
 'use client';
 
+import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
+
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { useState } from 'react';
 
@@ -280,10 +282,10 @@ export default function FAQ() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+1-702-830-9222"
+                href={SITE_PHONE_TEL_HREF}
                 className="text-primary-700 hover:text-primary-900 font-semibold"
               >
-                Call Now: (702) 830-9222
+                Call Now: {SITE_PHONE_DISPLAY}
               </a>
               <a
                 href="https://drjanduffy.realscout.com/onboarding"

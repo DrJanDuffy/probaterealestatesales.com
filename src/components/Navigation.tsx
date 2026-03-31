@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
-import { GBP_BUSINESS_NAME } from '@/lib/site-contact';
+import { GBP_BUSINESS_NAME, SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 
 const navigation = {
   main: [
@@ -194,11 +194,11 @@ export default function Navigation() {
             <div className="flex items-center gap-2 px-3 py-2 bg-primary-50 rounded-lg">
               <Phone className="h-4 w-4 text-primary-700" />
               <a
-                href="tel:+1-702-830-9222"
+                href={SITE_PHONE_TEL_HREF}
                 className="text-primary-700 font-semibold text-sm hover:text-primary-900 transition-colors focus-ring rounded-md px-1"
-                aria-label="Call Probate Real Estate Sales at (702) 830-9222"
+                aria-label={`Call Probate Real Estate Sales at ${SITE_PHONE_DISPLAY}`}
               >
-                (702) 830-9222
+                {SITE_PHONE_DISPLAY}
               </a>
             </div>
 
@@ -376,12 +376,12 @@ export default function Navigation() {
           <div className="lg:hidden flex items-center gap-3">
             {/* Mobile Phone Link */}
             <a
-              href="tel:+1-702-830-9222"
+              href={SITE_PHONE_TEL_HREF}
               className="flex items-center gap-1 px-3 py-1.5 bg-primary-50 rounded-md text-primary-700 font-semibold text-sm hover:bg-primary-100 transition-colors focus-ring"
-              aria-label="Call (702) 830-9222"
+              aria-label={`Call ${SITE_PHONE_DISPLAY}`}
             >
               <Phone className="h-4 w-4" />
-              <span className="hidden sm:inline">(702) 830-9222</span>
+              <span className="hidden sm:inline">{SITE_PHONE_DISPLAY}</span>
             </a>
             <button
               type="button"
@@ -528,8 +528,8 @@ export default function Navigation() {
               <div className="text-sm text-secondary-600">
                 <div className="flex items-center gap-2 mb-2">
                   <Phone className="h-4 w-4" />
-                  <a href="tel:+1-702-830-9222" className="text-primary-700 font-medium">
-                    (702) 830-9222
+                  <a href={SITE_PHONE_TEL_HREF} className="text-primary-700 font-medium">
+                    {SITE_PHONE_DISPLAY}
                   </a>
                 </div>
                 <div className="text-xs text-secondary-500">

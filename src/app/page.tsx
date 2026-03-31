@@ -12,19 +12,18 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import { SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 
 // Removed heavy components - moved to dedicated pages for better performance
 
 export const metadata: Metadata = {
   title: 'Probate Real Estate Sales | Las Vegas & Clark County Probate Real Estate',
-  description:
-    'Probate Real Estate Sales: expert probate real estate in Las Vegas and Clark County—court-approved property sales, estate liquidation, and Nevada’s 6–8 month timeline. Free consultation: (702) 830-9222.',
+  description: `Probate Real Estate Sales: expert probate real estate in Las Vegas and Clark County—court-approved property sales, estate liquidation, and Nevada’s 6–8 month timeline. Free consultation: ${SITE_PHONE_DISPLAY}.`,
   keywords:
     'probate real estate sales, probate homes Las Vegas, Clark County probate, probate property sales, inherited property sales, Nevada probate real estate',
   openGraph: {
     title: 'Probate Real Estate Sales | Las Vegas & Clark County Probate Real Estate',
-    description:
-      'Probate Real Estate Sales: Las Vegas and Clark County probate real estate—court-approved sales and inherited property guidance. Free consultation: (702) 830-9222.',
+    description: `Probate Real Estate Sales: Las Vegas and Clark County probate real estate—court-approved sales and inherited property guidance. Free consultation: ${SITE_PHONE_DISPLAY}.`,
     type: 'website',
     locale: 'en_US',
     siteName: 'Probate Real Estate Sales',
@@ -41,8 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Probate Real Estate Sales | Las Vegas Probate Real Estate',
-    description:
-      'Probate Real Estate Sales: Las Vegas and Clark County probate real estate services. Free consultation: (702) 830-9222.',
+    description: `Probate Real Estate Sales: Las Vegas and Clark County probate real estate services. Free consultation: ${SITE_PHONE_DISPLAY}.`,
     images: ['/images/og-dr-jan-duffy.jpg'],
   },
   alternates: {
@@ -415,8 +413,9 @@ export default function Home() {
               Why Choose Dr. Jan Duffy?
             </h2>
             <p className="text-lg text-secondary-600 mb-6">
-              With 20+ years of experience, 500+ properties sold, and a Ph.D. in Research, Dr. Jan
-              Duffy brings unparalleled expertise to every probate transaction. Learn more about{' '}
+              With 20+ years of experience, deep work in probate and trust property sales, and a Ph.D.
+              in Research, Dr. Jan Duffy brings focused expertise to every probate transaction. Learn
+              more about{' '}
               <Link
                 href="/about/"
                 className="text-primary-700 hover:text-primary-900 font-semibold underline"
@@ -441,16 +440,16 @@ export default function Home() {
             </p>
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-3xl font-bold text-primary-700 mb-2">500+</div>
-                <div className="text-secondary-700 font-medium">Properties Sold</div>
+                <div className="text-2xl font-bold text-primary-700 mb-2">Probate &amp; trust</div>
+                <div className="text-secondary-700 font-medium">Las Vegas &amp; Clark County focus</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
                 <div className="text-3xl font-bold text-primary-700 mb-2">20+</div>
                 <div className="text-secondary-700 font-medium">Years Experience</div>
               </div>
               <div className="bg-gray-50 rounded-lg p-6">
-                <div className="text-3xl font-bold text-primary-700 mb-2">98%</div>
-                <div className="text-secondary-700 font-medium">Client Satisfaction</div>
+                <div className="text-2xl font-bold text-primary-700 mb-2">Ph.D.</div>
+                <div className="text-secondary-700 font-medium">Research &amp; data-driven guidance</div>
               </div>
             </div>
             <Link

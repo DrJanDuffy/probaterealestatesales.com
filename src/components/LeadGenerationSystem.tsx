@@ -196,7 +196,7 @@ export default function LeadGenerationSystem() {
                   </span>
                   <span className="flex items-center gap-2">
                     <Users className="h-4 w-4 text-accent-600" />
-                    500+ Properties Sold
+                    Probate sales experience
                   </span>
                   <span className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-green-600" />

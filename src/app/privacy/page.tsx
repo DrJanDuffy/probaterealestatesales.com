@@ -1,3 +1,4 @@
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
@@ -238,8 +239,8 @@ export default function PrivacyPage() {
                 <p className="text-secondary-700 mb-2">License: S.0197614</p>
                 <p className="text-secondary-700 mb-2">
                   Phone:{' '}
-                  <a href="tel:+1-702-830-9222" className="text-primary-700 hover:text-primary-900">
-                    (702) 830-9222
+                  <a href={SITE_PHONE_TEL_HREF} className="text-primary-700 hover:text-primary-900">
+                    {SITE_PHONE_DISPLAY}
                   </a>
                 </p>
                 <p className="text-secondary-700">
