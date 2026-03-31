@@ -9,7 +9,7 @@ import {
   GBP_BUSINESS_NAME,
   GBP_DESCRIPTION,
   GBP_OPENING_HOURS_STRING,
-  SITE_PHONE_TEL,
+  SITE_PHONE_E164,
 } from '@/lib/site-contact';
 import { defaultSchemas } from '@/lib/schema';
 
@@ -18,7 +18,7 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' });
 export const metadata: Metadata = {
   title: 'Probate Real Estate Sales | Las Vegas & Clark County Probate Real Estate',
   description:
-    'Probate Real Estate Sales: expert probate real estate in Las Vegas and Clark County—court-approved property sales, estate liquidation, and Nevada’s 6–8 month timeline. Free consultation: (702) 830-9222.',
+    "Expert probate real estate services in Las Vegas and Clark County. Specialized in comprehensive probate real estate services, court-approved property sales, and estate liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
   keywords:
     'probate real estate sales, probate homes Las Vegas, Clark County probate, probate property sales, inherited property sales, Nevada probate real estate, grokipedia',
   authors: [
@@ -28,10 +28,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Probate Real Estate Sales | Las Vegas & Clark County Probate Real Estate',
     description:
-      'Probate Real Estate Sales: Las Vegas and Clark County probate real estate—court-approved sales and inherited property guidance. Free consultation: (702) 830-9222.',
+      "Expert probate real estate services in Las Vegas and Clark County. Specialized in comprehensive probate real estate services, court-approved property sales, and estate liquidation with Nevada's fastest probate process (6-8 months vs California's 9-18 months).",
     type: 'website',
     locale: 'en_US',
-    siteName: 'Probate Real Estate Sales',
+    siteName: 'Probate Real Estate Sales - Dr. Jan Duffy',
     url: '/',
     images: [
       {
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Probate Real Estate Sales | Las Vegas Probate Real Estate',
+    title: 'Probate Real Estate Sales | Las Vegas & Clark County',
     description:
-      'Probate Real Estate Sales: Las Vegas and Clark County probate real estate services. Free consultation: (702) 830-9222.',
+      "Expert probate real estate services in Las Vegas and Clark County. Nevada's fastest probate process: 6-8 months vs California's 9-18 months.",
     images: ['/images/og-dr-jan-duffy.jpg'],
   },
   alternates: {
@@ -133,7 +133,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 postalCode: '89101',
                 addressCountry: 'US',
               },
-              telephone: SITE_PHONE_TEL,
+              telephone: SITE_PHONE_E164,
               email: 'DrJanSells@ProbateRealEstateSales.com',
               openingHours: GBP_OPENING_HOURS_STRING,
               priceRange: '$$',

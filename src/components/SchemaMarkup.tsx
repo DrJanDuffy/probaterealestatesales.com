@@ -13,7 +13,7 @@ import {
   generateWebPageSchema,
   generateWebSiteSchema,
 } from '@/lib/schema';
-import { GBP_BUSINESS_NAME } from '@/lib/site-contact';
+import { GBP_BUSINESS_NAME, SITE_PHONE_E164 } from '@/lib/site-contact';
 
 /** Returns true if schema is or contains an FAQPage (root, inside @graph, or in array). Used to avoid duplicate FAQPage. */
 function schemaIsOrContainsFAQPage(schema: any): boolean {
@@ -32,7 +32,16 @@ function customSchemaHasFAQPage(schema: any): boolean {
 }
 
 interface SchemaMarkupProps {
-  type: 'home' | 'service' | 'faq' | 'article' | 'contact' | 'legal' | 'location' | 'property';
+  type:
+    | 'home'
+    | 'service'
+    | 'faq'
+    | 'breadcrumb'
+    | 'article'
+    | 'contact'
+    | 'legal'
+    | 'location'
+    | 'property';
   breadcrumbs?: Array<{ name: string; url: string }>;
   article?: {
     headline: string;
@@ -123,7 +132,7 @@ export default function SchemaMarkup({
           defaultSchemas.howTo,
           defaultSchemas.legalService,
           generateWebSiteSchema({
-            name: 'Las Vegas Probate Real Estate Sales',
+            name: GBP_BUSINESS_NAME,
             url: 'https://www.probaterealestatesales.com',
             description:
               'Expert probate real estate services in Las Vegas and Clark County, Nevada',
@@ -263,6 +272,11 @@ export default function SchemaMarkup({
         }
         break;
 
+      /** Hub pages: BreadcrumbList only (layout already injects Person + LocalBusiness) */
+      case 'breadcrumb':
+        schemas = [];
+        break;
+
       case 'article':
         if (article) {
           schemas = [generateArticleSchema(article), defaultSchemas.organization];
@@ -284,7 +298,7 @@ export default function SchemaMarkup({
               name: GBP_BUSINESS_NAME,
               contactPoint: {
                 '@type': 'ContactPoint',
-                telephone: '+1-702-830-9222',
+                telephone: SITE_PHONE_E164,
                 contactType: 'customer service',
                 areaServed: 'US-NV',
                 availableLanguage: 'English',

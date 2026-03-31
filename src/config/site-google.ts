@@ -12,25 +12,77 @@ export const SITE_LOGO_ABSOLUTE_URL = `${SITE_ORIGIN}/images/dr-jan-duffy.jpg`;
 /** Single-line address for Maps query params (matches GBP / site NAP) */
 export const OFFICE_ADDRESS_LINE = '400 S 4th St suite 250 b, Las Vegas, NV 89101';
 
-/** Google Maps: search / place listing (use in schema.org hasMap + sameAs) */
-export const OFFICE_GOOGLE_MAPS_LISTING_URL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(OFFICE_ADDRESS_LINE)}`;
+/**
+ * Maps search / embed fallback when no GBP place URL is set in env.
+ * Must match the Google Maps listing (business title + address on GBP).
+ */
+export const OFFICE_MAPS_SEARCH_QUERY =
+  'Probate Real Estate Sales - Dr. Jan Duffy, 400 S 4th St suite 250 b, Las Vegas, NV 89101';
 
-/** Google Maps: driving directions (Call / Directions / GBP consistency) */
-export const OFFICE_GOOGLE_MAPS_DIRECTIONS_URL = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(OFFICE_ADDRESS_LINE)}`;
+/** True when URL looks like a Google Maps / GBP share link (not the marketing site). */
+function isLikelyGoogleMapsOrGbpUrl(url: string): boolean {
+  try {
+    const u = new URL(url);
+    const host = u.hostname.toLowerCase();
+    if (host === 'www.probaterealestatesales.com' || host === 'probaterealestatesales.com') {
+      return false;
+    }
+    return (
+      host.includes('google.') ||
+      host === 'goo.gl' ||
+      host.endsWith('.goo.gl') ||
+      host === 'g.page' ||
+      host.endsWith('.page.link') ||
+      host.includes('maps.app.goo.gl') ||
+      host === 'share.google'
+    );
+  } catch {
+    return false;
+  }
+}
 
-/** Embed iframe src (Google Maps embed) */
-export const OFFICE_GOOGLE_MAPS_EMBED_SRC = `https://www.google.com/maps?q=${encodeURIComponent(OFFICE_ADDRESS_LINE)}&output=embed&hl=en&z=15`;
+const MAPS_LISTING_FALLBACK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(OFFICE_MAPS_SEARCH_QUERY)}`;
+
+/**
+ * Google Maps listing URL for schema `hasMap`, footer, and sameAs tail.
+ * Priority: explicit env → GBP Maps URL from NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL → address search.
+ * Paste the official link from Google Business Profile (Share) so the pin matches GBP.
+ */
+export const OFFICE_GOOGLE_MAPS_LISTING_URL = (() => {
+  const explicit = process.env.NEXT_PUBLIC_GOOGLE_MAPS_LISTING_URL?.trim();
+  if (explicit) return explicit;
+  const gbp = process.env.NEXT_PUBLIC_GOOGLE_BUSINESS_PROFILE_URL?.trim();
+  if (gbp && /^https?:\/\//i.test(gbp) && isLikelyGoogleMapsOrGbpUrl(gbp)) {
+    return gbp;
+  }
+  return MAPS_LISTING_FALLBACK;
+})();
+
+/** Driving directions; optional full URL override for Vercel env. */
+export const OFFICE_GOOGLE_MAPS_DIRECTIONS_URL = (() => {
+  const explicit = process.env.NEXT_PUBLIC_GOOGLE_MAPS_DIRECTIONS_URL?.trim();
+  if (explicit) return explicit;
+  return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(OFFICE_MAPS_SEARCH_QUERY)}`;
+})();
+
+/**
+ * Embed iframe src. Prefer `NEXT_PUBLIC_GOOGLE_MAPS_EMBED_SRC` from Maps → Share → Embed a map (exact pin).
+ */
+export const OFFICE_GOOGLE_MAPS_EMBED_SRC = (() => {
+  const explicit = process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_SRC?.trim();
+  if (explicit) return explicit;
+  return `https://www.google.com/maps?q=${encodeURIComponent(OFFICE_MAPS_SEARCH_QUERY)}&output=embed&hl=en&z=15`;
+})();
 
 /** Official business profiles (use in footer + sameAs; keep in sync with GBP / marketing). */
-export const FACEBOOK_PAGE_URL = 'https://www.facebook.com/probaterealestatesales' as const;
+/** Must match Google Business Profile “Social profiles” (Facebook). */
+export const FACEBOOK_PAGE_URL = 'https://www.facebook.com/LasVegasProbate' as const;
 export const INSTAGRAM_PAGE_URL = 'https://www.instagram.com/probaterealestatesales' as const;
-export const LINKEDIN_COMPANY_URL = 'https://www.linkedin.com/company/probaterealestatesales' as const;
 export const THREADS_PROFILE_URL = 'https://www.threads.com/@probaterealestatesales' as const;
 
 const SOCIAL_SAME_AS = [
   SITE_ORIGIN,
   FACEBOOK_PAGE_URL,
-  LINKEDIN_COMPANY_URL,
   INSTAGRAM_PAGE_URL,
   THREADS_PROFILE_URL,
 ] as const;

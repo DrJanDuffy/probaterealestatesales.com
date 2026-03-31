@@ -286,7 +286,7 @@ export default function FAQ() {
                 Call Now: (702) 830-9222
               </a>
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 className="inline-flex items-center justify-center px-6 py-3 border border-secondary-300 text-base font-medium rounded-md text-secondary-700 bg-white hover:bg-secondary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
               >
                 Free Consultation

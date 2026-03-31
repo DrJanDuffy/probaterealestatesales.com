@@ -363,7 +363,7 @@ export default function Navigation() {
 
             {/* CTA Button */}
             <Link
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 hover-lift transition-all duration-200 focus-ring"
               aria-label="Get your free probate consultation"
               rel="noopener noreferrer"
@@ -513,7 +513,7 @@ export default function Navigation() {
             {/* Mobile CTA */}
             <div className="border-t border-secondary-200 pt-4">
               <Link
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 className="block w-full text-center bg-primary-600 text-white px-4 py-3 rounded-md text-base font-medium hover:bg-primary-700 hover-lift transition-all duration-200 focus-ring"
                 onClick={() => setMobileMenuOpen(false)}
                 aria-label="Get your free probate consultation"

@@ -15,7 +15,6 @@ import Link from 'next/link';
 import {
   FACEBOOK_PAGE_URL,
   INSTAGRAM_PAGE_URL,
-  LINKEDIN_COMPANY_URL,
   THREADS_PROFILE_URL,
   OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
   OFFICE_GOOGLE_MAPS_LISTING_URL,
@@ -267,16 +266,6 @@ export default function Footer() {
                   Instagram
                 </a>
                 <a
-                  href={LINKEDIN_COMPANY_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 hover:text-white transition-colors focus-ring-dark rounded-md"
-                  aria-label="Probate Real Estate Sales on LinkedIn"
-                >
-                  <ExternalLink className="h-3.5 w-3.5" aria-hidden />
-                  LinkedIn
-                </a>
-                <a
                   href={THREADS_PROFILE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -526,7 +515,7 @@ export default function Footer() {
           {/* CTA Section */}
           <div className="mt-6 text-center">
             <Link
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               className="inline-flex items-center bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 hover-lift transition-all duration-200 focus-ring-dark"
               aria-label="Get your free probate consultation"
               rel="noopener noreferrer"

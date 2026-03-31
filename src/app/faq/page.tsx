@@ -50,7 +50,7 @@ export default function FAQPage() {
               Call Now: (702) 830-9222
             </a>
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               className="inline-flex items-center justify-center px-8 py-4 border border-white text-lg font-medium rounded-md text-white hover:bg-white hover:text-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-colors"
             >
               Free Consultation
@@ -149,7 +149,7 @@ export default function FAQPage() {
               Call (702) 830-9222
             </a>
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               className="inline-flex items-center justify-center px-8 py-4 border border-primary-300 text-lg font-medium rounded-md text-primary-700 bg-white hover:bg-primary-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors"
             >
               Schedule Free Consultation

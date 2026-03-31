@@ -2,7 +2,6 @@ import {
   FACEBOOK_PAGE_URL,
   getLocalBusinessSameAsUrls,
   INSTAGRAM_PAGE_URL,
-  LINKEDIN_COMPANY_URL,
   THREADS_PROFILE_URL,
   OFFICE_GOOGLE_MAPS_LISTING_URL,
   SITE_LOGO_ABSOLUTE_URL,
@@ -13,7 +12,7 @@ import {
   GBP_DESCRIPTION,
   GBP_OPENING_HOURS_ARRAY,
   SITE_BRAND_PRIMARY,
-  SITE_PHONE_TEL,
+  SITE_PHONE_E164,
 } from '@/lib/site-contact';
 
 export interface LocalBusinessSchema {
@@ -318,8 +317,12 @@ export const webSiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   '@id': 'https://www.probaterealestatesales.com/#website',
-  name: SITE_BRAND_PRIMARY,
-  alternateName: [GBP_BUSINESS_NAME, 'Las Vegas Probate Realtor'],
+  name: GBP_BUSINESS_NAME,
+  alternateName: [
+    SITE_BRAND_PRIMARY,
+    'Las Vegas Probate Realtor',
+    'Las Vegas Probate Real Estate Sales',
+  ],
   url: 'https://www.probaterealestatesales.com',
   description: GBP_DESCRIPTION,
   publisher: {
@@ -348,7 +351,7 @@ export const personSchema = {
     'Dr. Jan Duffy is a top Las Vegas probate realtor with 20+ years of experience. Licensed Nevada real estate professional (S.0197614) specializing in probate, trust, and conservatorship real estate sales. Ph.D. in Research, expert in Clark County probate court procedures. 500+ probate properties sold.',
   url: 'https://www.probaterealestatesales.com/about/',
   image: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
-  telephone: SITE_PHONE_TEL,
+  telephone: SITE_PHONE_E164,
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
@@ -392,7 +395,13 @@ export const personSchema = {
     name: 'Berkshire Hathaway HomeServices Nevada Properties',
     url: 'https://www.berkshirehathawayhs.com',
   },
-  sameAs: ['https://www.probaterealestatesales.com/about/'],
+  /** Profile URLs (not site pages) — aligned with Organization sameAs in this file */
+  sameAs: [
+    FACEBOOK_PAGE_URL,
+    INSTAGRAM_PAGE_URL,
+    THREADS_PROFILE_URL,
+    YOUTUBE_CHANNEL_URL,
+  ],
 };
 
 // Default schema data for the Nevada probate real estate business
@@ -403,7 +412,7 @@ export const defaultSchemas = {
   localBusiness: {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
-    /** Stable id so Review.itemReviewed can reference the same entity */
+    /** Stable id for @graph references (e.g. testimonials Review.itemReviewed) */
     '@id': 'https://www.probaterealestatesales.com/#localbusiness',
     name: GBP_BUSINESS_NAME,
     alternateName: [
@@ -412,7 +421,7 @@ export const defaultSchemas = {
     ],
     description: GBP_DESCRIPTION,
     url: 'https://www.probaterealestatesales.com',
-    telephone: SITE_PHONE_TEL,
+    telephone: SITE_PHONE_E164,
     email: 'DrJanSells@ProbateRealEstateSales.com',
     address: {
       '@type': 'PostalAddress',
@@ -478,25 +487,18 @@ export const defaultSchemas = {
         },
       ],
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: 5,
-      reviewCount: 25,
-      bestRating: 5,
-      worstRating: 1,
-    },
   },
 
   realEstateAgent: {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
     '@id': 'https://www.probaterealestatesales.com/#agent',
-    name: 'Dr. Jan Duffy',
+    name: GBP_BUSINESS_NAME,
     image: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
     description:
       'Licensed Nevada real estate agent specializing in comprehensive probate real estate services, court-approved property sales, and inherited property transactions. Expert in Clark County probate court procedures and Nevada probate law.',
     url: 'https://www.probaterealestatesales.com',
-    telephone: SITE_PHONE_TEL,
+    telephone: SITE_PHONE_E164,
     email: 'DrJanSells@ProbateRealEstateSales.com',
     address: {
       '@type': 'PostalAddress',
@@ -575,12 +577,12 @@ export const defaultSchemas = {
   legalService: {
     '@context': 'https://schema.org',
     '@type': 'LegalService',
-    name: 'Nevada Probate Legal Services',
+    name: GBP_BUSINESS_NAME,
     description:
       'Comprehensive probate legal services in Nevada, including certificate of incumbency, trust administration, and probate court representation.',
     provider: {
       '@type': 'Organization',
-      name: 'Las Vegas Probate Real Estate Sales',
+      name: GBP_BUSINESS_NAME,
       url: 'https://www.probaterealestatesales.com',
     },
     serviceType: 'Probate Administration',
@@ -692,14 +694,13 @@ export const defaultSchemas = {
     logo: SITE_LOGO_ABSOLUTE_URL,
     contactPoint: {
       '@type': 'ContactPoint',
-      telephone: SITE_PHONE_TEL,
+      telephone: SITE_PHONE_E164,
       contactType: 'customer service',
       areaServed: 'US-NV',
       availableLanguage: 'English',
     },
     sameAs: [
       FACEBOOK_PAGE_URL,
-      LINKEDIN_COMPANY_URL,
       INSTAGRAM_PAGE_URL,
       THREADS_PROFILE_URL,
       YOUTUBE_CHANNEL_URL,

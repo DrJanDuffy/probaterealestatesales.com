@@ -18,7 +18,7 @@ const primaryCTA = {
   primaryButton: {
     text: 'Schedule Free Consultation',
     subtext: 'Speak directly with Dr. Duffy',
-    href: 'http://drjanduffy.realscout.com/onboarding',
+    href: 'https://drjanduffy.realscout.com/onboarding',
     icon: Calendar,
   },
   secondaryButton: {
@@ -44,7 +44,7 @@ const serviceCTAs = [
     title: 'Property Valuation',
     description: 'Get an accurate market analysis of your inherited property',
     buttonText: 'Free Valuation',
-    href: 'http://drjanduffy.realscout.com/onboarding',
+    href: 'https://drjanduffy.realscout.com/onboarding',
     icon: Shield,
     color: 'primary',
   },
@@ -52,7 +52,7 @@ const serviceCTAs = [
     title: 'Probate Consultation',
     description: 'Speak with Dr. Duffy about your specific situation',
     buttonText: 'Schedule Call',
-    href: 'http://drjanduffy.realscout.com/onboarding',
+    href: 'https://drjanduffy.realscout.com/onboarding',
     icon: Phone,
     color: 'accent',
   },
@@ -83,7 +83,7 @@ const urgencyCTAs = [
     message: "Dr. Duffy's average timeline vs. 90-day market average",
     urgency: 'Medium',
     buttonText: 'Fast-Track Service',
-    href: 'http://drjanduffy.realscout.com/onboarding',
+    href: 'https://drjanduffy.realscout.com/onboarding',
     icon: ArrowRight,
     color: 'accent',
   },
@@ -93,7 +93,7 @@ const urgencyCTAs = [
     message: 'Average 15% above initial estate valuations',
     urgency: 'Medium',
     buttonText: 'Value Assessment',
-    href: 'http://drjanduffy.realscout.com/onboarding',
+    href: 'https://drjanduffy.realscout.com/onboarding',
     icon: Star,
     color: 'green',
   },
@@ -351,7 +351,7 @@ export default function CallToActionComponents() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 className="btn-primary inline-block"
               >
                 Start Converting Visitors

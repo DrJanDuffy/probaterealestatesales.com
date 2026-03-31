@@ -36,7 +36,7 @@ export default function ContactSection() {
                     Call Dr. Duffy Directly
                   </a>
                   <a
-                    href="http://drjanduffy.realscout.com/onboarding"
+                    href="https://drjanduffy.realscout.com/onboarding"
                     className="btn-outline inline-flex items-center justify-center"
                   >
                     Schedule Free Consultation

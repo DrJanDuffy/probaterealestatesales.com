@@ -16,6 +16,7 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import { SITE_PHONE_E164 } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -51,7 +52,7 @@ export default function AboutPage() {
     description:
       'Dr. Jan Duffy is a top Las Vegas probate realtor with 20+ years of experience. Licensed Nevada real estate professional (S.0197614) specializing in probate real estate sales. Ph.D. in Research, expert in Clark County probate procedures.',
     email: 'DrJanSells@ProbateRealEstateSales.com',
-    telephone: '+1-702-830-9222',
+    telephone: SITE_PHONE_E164,
     url: 'https://www.probaterealestatesales.com/about/',
     knowsAbout: [
       'Nevada Probate Law',

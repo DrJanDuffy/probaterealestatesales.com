@@ -107,7 +107,7 @@ export default function Hero() {
               {/* Primary CTAs */}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="http://drjanduffy.realscout.com/onboarding"
+                  href="https://drjanduffy.realscout.com/onboarding"
                   className="btn-primary group inline-flex items-center justify-center text-lg px-8 py-4 focus-ring"
                   aria-label="Get your free probate property consultation"
                   rel="noopener noreferrer"

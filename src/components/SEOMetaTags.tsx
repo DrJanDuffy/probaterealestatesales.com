@@ -6,7 +6,7 @@ import {
   GBP_BUSINESS_NAME,
   GBP_DESCRIPTION,
   GBP_OPENING_HOURS_ARRAY,
-  SITE_PHONE_TEL,
+  SITE_PHONE_E164,
   SITE_WEBSITE_GBP,
 } from '@/lib/site-contact';
 
@@ -140,7 +140,7 @@ export default function SEOMetaTags({
       <meta name="business:contact_data:region" content="NV" />
       <meta name="business:contact_data:postal_code" content="89101" />
       <meta name="business:contact_data:country_name" content="United States" />
-      <meta name="business:contact_data:phone_number" content={SITE_PHONE_TEL} />
+      <meta name="business:contact_data:phone_number" content={SITE_PHONE_E164} />
       <meta name="business:contact_data:email" content="DrJanSells@ProbateRealEstateSales.com" />
       <meta name="business:contact_data:website" content={SITE_WEBSITE_GBP} />
 
@@ -185,7 +185,7 @@ export default function SEOMetaTags({
             name: GBP_BUSINESS_NAME,
             description: GBP_DESCRIPTION,
             url: 'https://www.probaterealestatesales.com',
-            telephone: SITE_PHONE_TEL,
+            telephone: SITE_PHONE_E164,
             email: 'DrJanSells@ProbateRealEstateSales.com',
             address: {
               '@type': 'PostalAddress',

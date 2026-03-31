@@ -198,7 +198,7 @@ export default function ServicesPage() {
           {/* Multi-Option CTA Strategy */}
           <div className="cta-matrix space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               className="primary-cta bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center space-x-2"
             >
               <Phone className="w-5 h-5" />
@@ -208,14 +208,14 @@ export default function ServicesPage() {
               </span>
             </a>
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               className="secondary-cta bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
             >
               <Download className="w-5 h-5" />
               <span>Download: "2025 Nevada Probate Timeline + Checklist"</span>
             </a>
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               className="tertiary-cta bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
             >
               <Calculator className="w-5 h-5" />
@@ -295,7 +295,7 @@ export default function ServicesPage() {
               </div>
 
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 className="micro-conversion w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
               >
                 <span>See Our Court Confirmation Process</span>
@@ -368,7 +368,7 @@ export default function ServicesPage() {
               </div>
 
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 className="micro-conversion w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
               >
                 <span>Learn About Independent Administration</span>
@@ -441,7 +441,7 @@ export default function ServicesPage() {
               </div>
 
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 className="micro-conversion w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2"
               >
                 <span>Start Trust Administration</span>
@@ -615,7 +615,7 @@ export default function ServicesPage() {
                   Time Saved: <span>4-6 months</span>
                 </p>
                 <a
-                  href="http://drjanduffy.realscout.com/onboarding"
+                  href="https://drjanduffy.realscout.com/onboarding"
                   className="cta bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 mt-4 inline-block"
                 >
                   Start Accelerated Process Today
@@ -668,7 +668,7 @@ export default function ServicesPage() {
               Questions? Our probate specialists are online now
             </p>
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               className="chat-trigger bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 flex items-center mx-auto space-x-2 inline-block"
             >
               <MessageCircle className="w-5 h-5" />
@@ -714,13 +714,13 @@ export default function ServicesPage() {
 
           <div className="space-x-4">
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               className="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 inline-block"
             >
               Get Free Property Assessment
             </a>
             <a
-              href="http://drjanduffy.realscout.com/onboarding"
+              href="https://drjanduffy.realscout.com/onboarding"
               className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 inline-block"
             >
               Download Probate Guide

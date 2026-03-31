@@ -15,7 +15,8 @@ import {
   GBP_BUSINESS_NAME,
   GBP_DESCRIPTION,
   GBP_OPENING_HOURS_STRING,
-  SITE_PHONE_TEL,
+  SITE_PHONE_DISPLAY,
+  SITE_PHONE_E164,
 } from '@/lib/site-contact';
 
 const schemaData = {
@@ -28,7 +29,7 @@ const schemaData = {
     'Las Vegas probate real estate expert with 20+ years experience, specializing in inherited property sales, estate liquidation, and court-approved property sales with comprehensive probate real estate services.',
   url: 'https://www.probaterealestatesales.com',
   image: 'https://www.probaterealestatesales.com/images/dr-jan-duffy.jpg',
-  telephone: SITE_PHONE_TEL,
+  telephone: SITE_PHONE_E164,
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
@@ -165,7 +166,7 @@ const businessSchema = {
   name: 'Dr. Jan Duffy - Probate Real Estate Specialist',
   description: GBP_DESCRIPTION,
   url: 'https://www.probaterealestatesales.com',
-  telephone: SITE_PHONE_TEL,
+  telephone: SITE_PHONE_E164,
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
@@ -244,7 +245,7 @@ const localBusinessSchema = {
   name: GBP_BUSINESS_NAME,
   description: GBP_DESCRIPTION,
   url: 'https://www.probaterealestatesales.com',
-  telephone: SITE_PHONE_TEL,
+  telephone: SITE_PHONE_E164,
   email: 'DrJanSells@ProbateRealEstateSales.com',
   address: {
     '@type': 'PostalAddress',
@@ -435,7 +436,7 @@ export default function SchemaMarkupExpert() {
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-primary-700" />
-                  <span className="text-sm text-secondary-700">+1-702-830-9222</span>
+                  <span className="text-sm text-secondary-700">{SITE_PHONE_DISPLAY}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-accent-600" />
@@ -512,7 +513,7 @@ export default function SchemaMarkupExpert() {
                 View Optimized Content
               </a>
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 className="btn-outline inline-block"
               >
                 Schedule SEO Consultation

@@ -354,7 +354,7 @@ export default function SEOContentStrategy() {
                 Read Optimized Probate Guide
               </a>
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 className="btn-outline inline-block"
               >
                 Schedule SEO Consultation

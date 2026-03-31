@@ -197,7 +197,7 @@ export default function BlogPage() {
           </Link>
         </div>
       </section>
-      <SchemaMarkup type="faq" breadcrumbs={breadcrumbs} />
+      <SchemaMarkup type="breadcrumb" breadcrumbs={breadcrumbs} />
     </main>
   );
 }

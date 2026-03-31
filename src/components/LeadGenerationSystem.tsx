@@ -360,7 +360,7 @@ export default function LeadGenerationSystem() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 className="btn-primary inline-block"
               >
                 Start Lead Generation

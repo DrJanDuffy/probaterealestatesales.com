@@ -13,6 +13,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import { SITE_PHONE_E164 } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -75,7 +76,7 @@ export default function ProbateEstateSalesPage() {
               provider: {
                 '@type': 'RealEstateAgent',
                 name: 'Dr. Jan Duffy',
-                telephone: '+1-702-830-9222',
+                telephone: SITE_PHONE_E164,
               },
               areaServed: {
                 '@type': 'City',

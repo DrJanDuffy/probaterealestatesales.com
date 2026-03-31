@@ -115,7 +115,7 @@ export default function Testimonials() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <a
-                    href="http://drjanduffy.realscout.com/onboarding"
+                    href="https://drjanduffy.realscout.com/onboarding"
                     className="btn-primary inline-flex items-center justify-center"
                   >
                     Get Your Free Consultation
@@ -277,7 +277,7 @@ export default function Testimonials() {
                 Watch Video Testimonials
               </a>
               <a
-                href="http://drjanduffy.realscout.com/onboarding"
+                href="https://drjanduffy.realscout.com/onboarding"
                 className="btn-outline inline-block"
               >
                 Schedule Free Consultation
