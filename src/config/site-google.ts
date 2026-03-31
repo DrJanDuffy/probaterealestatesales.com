@@ -25,12 +25,14 @@ export const OFFICE_GOOGLE_MAPS_EMBED_SRC = `https://www.google.com/maps?q=${enc
 export const FACEBOOK_PAGE_URL = 'https://www.facebook.com/probaterealestatesales' as const;
 export const INSTAGRAM_PAGE_URL = 'https://www.instagram.com/probaterealestatesales' as const;
 export const LINKEDIN_COMPANY_URL = 'https://www.linkedin.com/company/probaterealestatesales' as const;
+export const THREADS_PROFILE_URL = 'https://www.threads.com/@probaterealestatesales' as const;
 
 const SOCIAL_SAME_AS = [
   SITE_ORIGIN,
   FACEBOOK_PAGE_URL,
   LINKEDIN_COMPANY_URL,
   INSTAGRAM_PAGE_URL,
+  THREADS_PROFILE_URL,
 ] as const;
 
 /**

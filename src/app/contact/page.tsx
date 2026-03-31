@@ -8,6 +8,7 @@ import {
   FACEBOOK_PAGE_URL,
   INSTAGRAM_PAGE_URL,
   LINKEDIN_COMPANY_URL,
+  THREADS_PROFILE_URL,
   OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
   OFFICE_GOOGLE_MAPS_EMBED_SRC,
 } from '@/config/site-google';
@@ -119,6 +120,17 @@ export default function ContactPage() {
                 className="text-primary-700 underline hover:text-primary-900"
               >
                 LinkedIn
+              </a>
+              <span className="text-secondary-400 mx-1.5" aria-hidden>
+                ·
+              </span>
+              <a
+                href={THREADS_PROFILE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-700 underline hover:text-primary-900"
+              >
+                Threads
               </a>
             </p>
           </div>

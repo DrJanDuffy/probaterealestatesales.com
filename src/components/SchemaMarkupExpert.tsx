@@ -10,7 +10,7 @@ import {
   Users,
 } from 'lucide-react';
 import { YOUTUBE_CHANNEL_URL } from '@/config/youtube';
-import { FACEBOOK_PAGE_URL } from '@/config/site-google';
+import { FACEBOOK_PAGE_URL, THREADS_PROFILE_URL } from '@/config/site-google';
 import {
   GBP_BUSINESS_NAME,
   GBP_DESCRIPTION,
@@ -40,6 +40,7 @@ const schemaData = {
   },
   sameAs: [
     FACEBOOK_PAGE_URL,
+    THREADS_PROFILE_URL,
     'https://www.facebook.com/drjanduffyrealtor',
     'https://www.linkedin.com/in/drjanduffy',
     YOUTUBE_CHANNEL_URL,
