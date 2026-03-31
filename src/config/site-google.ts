@@ -21,11 +21,16 @@ export const OFFICE_GOOGLE_MAPS_DIRECTIONS_URL = `https://www.google.com/maps/di
 /** Embed iframe src (Google Maps embed) */
 export const OFFICE_GOOGLE_MAPS_EMBED_SRC = `https://www.google.com/maps?q=${encodeURIComponent(OFFICE_ADDRESS_LINE)}&output=embed&hl=en&z=15`;
 
+/** Official business profiles (use in footer + sameAs; keep in sync with GBP / marketing). */
+export const FACEBOOK_PAGE_URL = 'https://www.facebook.com/probaterealestatesales' as const;
+export const INSTAGRAM_PAGE_URL = 'https://www.instagram.com/probaterealestatesales' as const;
+export const LINKEDIN_COMPANY_URL = 'https://www.linkedin.com/company/probaterealestatesales' as const;
+
 const SOCIAL_SAME_AS = [
   SITE_ORIGIN,
-  'https://www.facebook.com/probaterealestatesales',
-  'https://www.linkedin.com/company/probaterealestatesales',
-  'https://www.instagram.com/probaterealestatesales',
+  FACEBOOK_PAGE_URL,
+  LINKEDIN_COMPANY_URL,
+  INSTAGRAM_PAGE_URL,
 ] as const;
 
 /**

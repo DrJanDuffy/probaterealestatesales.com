@@ -5,6 +5,9 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import {
+  FACEBOOK_PAGE_URL,
+  INSTAGRAM_PAGE_URL,
+  LINKEDIN_COMPANY_URL,
   OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
   OFFICE_GOOGLE_MAPS_EMBED_SRC,
 } from '@/config/site-google';
@@ -84,6 +87,39 @@ export default function ContactPage() {
               <span className="block text-secondary-600 mt-2">
                 Service area: {GBP_SERVICE_AREA_PRIMARY}
               </span>
+            </p>
+            <p className="text-sm pt-2">
+              <span className="font-medium text-secondary-800">Social: </span>
+              <a
+                href={FACEBOOK_PAGE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-700 underline hover:text-primary-900"
+              >
+                Facebook
+              </a>
+              <span className="text-secondary-400 mx-1.5" aria-hidden>
+                ·
+              </span>
+              <a
+                href={INSTAGRAM_PAGE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-700 underline hover:text-primary-900"
+              >
+                Instagram
+              </a>
+              <span className="text-secondary-400 mx-1.5" aria-hidden>
+                ·
+              </span>
+              <a
+                href={LINKEDIN_COMPANY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-700 underline hover:text-primary-900"
+              >
+                LinkedIn
+              </a>
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">

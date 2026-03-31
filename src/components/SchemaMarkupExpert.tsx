@@ -10,6 +10,7 @@ import {
   Users,
 } from 'lucide-react';
 import { YOUTUBE_CHANNEL_URL } from '@/config/youtube';
+import { FACEBOOK_PAGE_URL } from '@/config/site-google';
 import {
   GBP_BUSINESS_NAME,
   GBP_DESCRIPTION,
@@ -38,8 +39,9 @@ const schemaData = {
     addressCountry: 'US',
   },
   sameAs: [
-    'https://www.linkedin.com/in/drjanduffy',
+    FACEBOOK_PAGE_URL,
     'https://www.facebook.com/drjanduffyrealtor',
+    'https://www.linkedin.com/in/drjanduffy',
     YOUTUBE_CHANNEL_URL,
   ],
   hasCredential: [

@@ -1,5 +1,8 @@
 import {
+  FACEBOOK_PAGE_URL,
   getLocalBusinessSameAsUrls,
+  INSTAGRAM_PAGE_URL,
+  LINKEDIN_COMPANY_URL,
   OFFICE_GOOGLE_MAPS_LISTING_URL,
   SITE_LOGO_ABSOLUTE_URL,
 } from '@/config/site-google';
@@ -693,12 +696,7 @@ export const defaultSchemas = {
       areaServed: 'US-NV',
       availableLanguage: 'English',
     },
-    sameAs: [
-      'https://www.facebook.com/probaterealestatesales',
-      'https://www.linkedin.com/company/probaterealestatesales',
-      'https://www.instagram.com/probaterealestatesales',
-      YOUTUBE_CHANNEL_URL,
-    ],
+    sameAs: [FACEBOOK_PAGE_URL, LINKEDIN_COMPANY_URL, INSTAGRAM_PAGE_URL, YOUTUBE_CHANNEL_URL],
     founder: {
       '@type': 'Person',
       name: 'Dr. Jan Duffy',
