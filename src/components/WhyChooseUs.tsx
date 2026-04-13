@@ -1,4 +1,3 @@
-import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import {
   Award,
   Building,
@@ -14,6 +13,7 @@ import {
   Users,
 } from 'lucide-react';
 import Image from 'next/image';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 
 const reasons = [
   {
@@ -64,7 +64,7 @@ const reasons = [
 const credentials = [
   {
     icon: GraduationCap,
-    title: 'Doctor of Philosophy',
+    title: 'Ph.D.',
     subtitle: 'Research',
     description: 'Academic expertise in research methodology and analysis',
     color: 'text-blue-700',
@@ -262,7 +262,9 @@ export default function WhyChooseUs() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-2xl md:text-3xl font-bold mb-2">Licensed Nevada</div>
-              <div className="text-white/95 text-sm md:text-base">Real estate professional (S.0197614)</div>
+              <div className="text-white/95 text-sm md:text-base">
+                Real estate professional (S.0197614)
+              </div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold mb-2">20+</div>
@@ -270,7 +272,9 @@ export default function WhyChooseUs() {
             </div>
             <div>
               <div className="text-2xl md:text-3xl font-bold mb-2">Clark County</div>
-              <div className="text-white/95 text-sm md:text-base">Probate &amp; trust property focus</div>
+              <div className="text-white/95 text-sm md:text-base">
+                Probate &amp; trust property focus
+              </div>
             </div>
             <div>
               <div className="text-2xl md:text-3xl font-bold mb-2">Ph.D.</div>

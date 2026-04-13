@@ -117,9 +117,7 @@ export default function SchemaMarkupExpert() {
                 </div>
                 <div className="flex items-center gap-3">
                   <GraduationCap className="h-5 w-5 text-blue-600" />
-                  <span className="text-sm text-secondary-700">
-                    Doctor of Philosophy in Research
-                  </span>
+                  <span className="text-sm text-secondary-700">Ph.D. in Research</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Building className="h-5 w-5 text-green-600" />
