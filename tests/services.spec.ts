@@ -128,10 +128,9 @@ test.describe('Services Page Tests', () => {
     await expect(statusSelect).toBeVisible();
     await expect(typeSelect).toBeVisible();
 
-    // Check submit button
-    const submitButton = page.locator('button[type="submit"]');
-    await expect(submitButton).toBeVisible();
-    await expect(submitButton).toContainText('Get Your Timeline');
+    // Check timeline action button (no HTML form — type="button")
+    const timelineButton = page.getByRole('button', { name: 'Get Your Timeline' });
+    await expect(timelineButton).toBeVisible();
   });
 
   test('should display trust-building elements', async ({ page }) => {

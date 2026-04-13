@@ -1,10 +1,11 @@
-import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { ArrowRight, Calculator, DollarSign, Home, Phone, TrendingUp } from 'lucide-react';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import { CalendlyBookingPanel } from '@/components/calendly/CalendlyBookingPanel';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -47,248 +48,15 @@ export default function HomeValuationPage() {
         </div>
       </section>
 
-      {/* Valuation Form */}
+      {/* Schedule CMA discussion (Calendly replaces legacy valuation request form) */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-xl shadow-lg p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-secondary-900 mb-6 text-center">
-              Request Your Free Property Valuation & Comparative Market Analysis (CMA)
-            </h2>
-            <p className="text-secondary-600 text-center mb-8">
-              Fill out the form below and our probate real estate experts will provide you with a
-              comprehensive property valuation and comparative market analysis (CMA) to help you
-              understand your probate property's fair market value.
-            </p>
-
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="propertyAddress"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    Property Address *
-                  </label>
-                  <input
-                    type="text"
-                    id="propertyAddress"
-                    name="propertyAddress"
-                    required
-                    placeholder="Street Address"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="city"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    City *
-                  </label>
-                  <select
-                    id="city"
-                    name="city"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  >
-                    <option value="">Select City</option>
-                    <option value="las-vegas">Las Vegas</option>
-                    <option value="henderson">Henderson</option>
-                    <option value="summerlin">Summerlin</option>
-                    <option value="north-las-vegas">North Las Vegas</option>
-                    <option value="boulder-city">Boulder City</option>
-                    <option value="mesquite">Mesquite</option>
-                    <option value="spring-valley">Spring Valley</option>
-                    <option value="enterprise">Enterprise</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-6">
-                <div>
-                  <label
-                    htmlFor="zipCode"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    ZIP Code *
-                  </label>
-                  <input
-                    type="text"
-                    id="zipCode"
-                    name="zipCode"
-                    required
-                    placeholder="89101"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="propertyType"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    Property Type *
-                  </label>
-                  <select
-                    id="propertyType"
-                    name="propertyType"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  >
-                    <option value="">Select Type</option>
-                    <option value="single-family">Single Family Home</option>
-                    <option value="condo">Condo</option>
-                    <option value="townhouse">Townhouse</option>
-                    <option value="multi-family">Multi-Family</option>
-                    <option value="land">Land</option>
-                  </select>
-                </div>
-                <div>
-                  <label
-                    htmlFor="bedrooms"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    Bedrooms
-                  </label>
-                  <input
-                    type="number"
-                    id="bedrooms"
-                    name="bedrooms"
-                    min="0"
-                    placeholder="3"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="bathrooms"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    Bathrooms
-                  </label>
-                  <input
-                    type="number"
-                    id="bathrooms"
-                    name="bathrooms"
-                    min="0"
-                    step="0.5"
-                    placeholder="2"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="squareFeet"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    Square Feet
-                  </label>
-                  <input
-                    type="number"
-                    id="squareFeet"
-                    name="squareFeet"
-                    min="0"
-                    placeholder="2000"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="yearBuilt"
-                  className="block text-sm font-medium text-secondary-700 mb-2"
-                >
-                  Year Built
-                </label>
-                <input
-                  type="number"
-                  id="yearBuilt"
-                  name="yearBuilt"
-                  min="1800"
-                  max={new Date().getFullYear()}
-                  placeholder="2000"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="ownerName"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    Your Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="ownerName"
-                    name="ownerName"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    Phone Number *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-secondary-700 mb-2"
-                >
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="notes"
-                  className="block text-sm font-medium text-secondary-700 mb-2"
-                >
-                  Additional Information
-                </label>
-                <textarea
-                  id="notes"
-                  name="notes"
-                  rows={4}
-                  placeholder="Tell us about the property condition, recent renovations, or any special features..."
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                ></textarea>
-              </div>
-
-              <div>
-                <button
-                  type="submit"
-                  className="w-full bg-primary-600 text-white px-6 py-4 rounded-md font-medium text-lg hover:bg-primary-700 transition-colors flex items-center justify-center"
-                >
-                  <Calculator className="h-5 w-5 mr-2" />
-                  Get Free Valuation
-                </button>
-              </div>
-            </form>
+            <CalendlyBookingPanel
+              title="Request your free property valuation & CMA"
+              description="Schedule a short call so we can discuss your probate property and next steps for a comparative market analysis (CMA) in Las Vegas and Clark County."
+              embedMinHeight={650}
+            />
           </div>
         </div>
       </section>

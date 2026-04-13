@@ -1,6 +1,7 @@
-import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
-import { Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
+import { Clock, Mail, MapPin, Phone } from 'lucide-react';
 import Image from 'next/image';
+import { CalendlyBookingPanel } from '@/components/calendly/CalendlyBookingPanel';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 
 export default function ContactSection() {
   return (
@@ -65,117 +66,14 @@ export default function ContactSection() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
+          {/* Schedule (Calendly replaces legacy contact form) */}
           <div className="bg-secondary-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-semibold text-secondary-900 mb-6">Send us a Message</h3>
-
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="firstName"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    First Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    required
-                    className="input-field"
-                    placeholder="Enter your first name"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="lastName"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    Last Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    required
-                    className="input-field"
-                    placeholder="Enter your last name"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-secondary-700 mb-2"
-                >
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="input-field"
-                  placeholder="Enter your email address"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-secondary-700 mb-2"
-                >
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="input-field"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="propertyAddress"
-                  className="block text-sm font-medium text-secondary-700 mb-2"
-                >
-                  Property Address
-                </label>
-                <input
-                  type="text"
-                  id="propertyAddress"
-                  name="propertyAddress"
-                  className="input-field"
-                  placeholder="Enter the property address (if known)"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-secondary-700 mb-2"
-                >
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={4}
-                  className="input-field resize-none"
-                  placeholder="Tell us about your situation and how we can help..."
-                />
-              </div>
-
-              <button type="submit" className="btn-primary w-full group">
-                Send Message
-                <Send className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </form>
+            <CalendlyBookingPanel
+              title="Schedule a call"
+              description="Pick a time for a private 15-minute conversation, or open the calendar in a new window with the button below."
+              embedMinHeight={620}
+              embedClassName="mx-auto max-w-4xl overflow-hidden rounded-xl border border-primary-200 bg-white shadow-md"
+            />
           </div>
 
           {/* Contact Information */}

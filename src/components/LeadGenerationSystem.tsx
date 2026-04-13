@@ -1,74 +1,6 @@
-import {
-  ArrowRight,
-  Award,
-  Building,
-  Calendar,
-  CheckCircle,
-  Clock,
-  FileText,
-  Mail,
-  Users,
-} from 'lucide-react';
+import { Award, Building, Calendar, CheckCircle, Clock, FileText, Mail, Users } from 'lucide-react';
+import { CalendlyBookingPanel } from '@/components/calendly/CalendlyBookingPanel';
 import { GOOGLE_BUSINESS_REVIEW_URL } from '@/config/site-google';
-
-const formFields = [
-  {
-    name: 'name',
-    label: 'Full Name',
-    type: 'text',
-    required: true,
-    placeholder: 'Enter your full name',
-  },
-  {
-    name: 'email',
-    label: 'Email Address',
-    type: 'email',
-    required: true,
-    placeholder: 'Enter your email address',
-  },
-  {
-    name: 'phone',
-    label: 'Phone Number',
-    type: 'tel',
-    required: true,
-    placeholder: 'Enter your phone number',
-  },
-  {
-    name: 'propertyAddress',
-    label: 'Property Address',
-    type: 'text',
-    required: false,
-    placeholder: 'Enter the property address (if known)',
-  },
-  {
-    name: 'relationshipToEstate',
-    label: 'Relationship to Estate',
-    type: 'select',
-    required: true,
-    options: ['Executor', 'Heir', 'Administrator', 'Other'],
-  },
-  {
-    name: 'timeline',
-    label: 'Timeline',
-    type: 'select',
-    required: true,
-    options: ['Immediate', '3 months', '6 months', 'Planning ahead'],
-  },
-  {
-    name: 'currentProbateStatus',
-    label: 'Current Probate Status',
-    type: 'select',
-    required: true,
-    options: ['Not started', 'In progress', 'Ready to sell'],
-  },
-  {
-    name: 'message',
-    label: 'Message/Questions',
-    type: 'textarea',
-    required: false,
-    placeholder: 'Tell us about your situation or ask any questions',
-  },
-];
 
 const valuePropositions = [
   {
@@ -134,12 +66,11 @@ const followUpSequence = [
 const leadCaptureForm = {
   headline: 'Get Your Free Probate Property Evaluation from Dr. Jan Duffy',
   subheadline: 'Compassionate, expert guidance through your probate property sale',
-  formTitle: 'Free Probate Consultation Request',
-  submitButton: 'Get My Free Evaluation',
+  scheduleTitle: 'Schedule your free probate consultation',
+  scheduleDescription:
+    'Pick a time that works for you. After you book, we follow up with helpful resources tailored to your situation.',
   privacyNote:
-    'Your information is confidential and will only be used to provide you with the requested consultation.',
-  successMessage:
-    'Thank you! Dr. Duffy will contact you within 2 hours to discuss your probate property situation.',
+    'Scheduling is handled securely through Calendly. For urgent needs, call us using the number on this site.',
 };
 
 export default function LeadGenerationSystem() {
@@ -212,72 +143,17 @@ export default function LeadGenerationSystem() {
               </div>
             </div>
 
-            {/* Lead Capture Form */}
+            {/* Schedule consultation (Calendly) */}
             <div className="bg-white rounded-2xl shadow-soft p-8 border border-gray-100">
-              <h4 className="text-xl font-semibold text-secondary-900 mb-6 text-center">
-                {leadCaptureForm.formTitle}
-              </h4>
-
-              <form className="space-y-4">
-                {formFields.map((field) => (
-                  <div key={field.name}>
-                    <label
-                      htmlFor={field.name}
-                      className="block text-sm font-medium text-secondary-700 mb-2"
-                    >
-                      {field.label}
-                      {field.required && <span className="text-red-500 ml-1">*</span>}
-                    </label>
-
-                    {field.type === 'select' ? (
-                      <select
-                        id={field.name}
-                        name={field.name}
-                        required={field.required}
-                        aria-label={field.label}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                      >
-                        <option value="">Select an option</option>
-                        {field.options?.map((option) => (
-                          <option key={option} value={option}>
-                            {option}
-                          </option>
-                        ))}
-                      </select>
-                    ) : field.type === 'textarea' ? (
-                      <textarea
-                        id={field.name}
-                        name={field.name}
-                        required={field.required}
-                        placeholder={field.placeholder}
-                        rows={3}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                      />
-                    ) : (
-                      <input
-                        id={field.name}
-                        type={field.type}
-                        name={field.name}
-                        required={field.required}
-                        placeholder={field.placeholder}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
-                      />
-                    )}
-                  </div>
-                ))}
-
-                <button
-                  type="submit"
-                  className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2"
-                >
-                  {leadCaptureForm.submitButton}
-                  <ArrowRight className="h-5 w-5" />
-                </button>
-
-                <p className="text-xs text-secondary-500 text-center">
-                  {leadCaptureForm.privacyNote}
-                </p>
-              </form>
+              <CalendlyBookingPanel
+                title={leadCaptureForm.scheduleTitle}
+                description={leadCaptureForm.scheduleDescription}
+                embedMinHeight={620}
+                className="pb-2"
+              />
+              <p className="text-xs text-secondary-500 text-center mt-4">
+                {leadCaptureForm.privacyNote}
+              </p>
             </div>
           </div>
         </div>

@@ -1,9 +1,8 @@
 'use client';
 
-import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
-
 import { Calculator, DollarSign, Home, Phone, TrendingUp } from 'lucide-react';
 import { useState } from 'react';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 
 interface ValuationForm {
   propertyType: 'SFR' | 'MF' | 'CONDO' | 'TOWNHOUSE' | 'OTHER';
@@ -187,7 +186,7 @@ export default function PropertyValuationCalculator() {
                 Property Details
               </h3>
 
-              <form className="space-y-6">
+              <div className="space-y-6">
                 {/* Property Type */}
                 <div>
                   <label
@@ -414,7 +413,7 @@ export default function PropertyValuationCalculator() {
                     </>
                   )}
                 </button>
-              </form>
+              </div>
             </div>
 
             {/* Results Display */}
@@ -428,8 +427,8 @@ export default function PropertyValuationCalculator() {
                     Get Your Property Valuation
                   </h3>
                   <p className="text-gray-600">
-                    Fill out the form and click calculate to get an instant estimate of your
-                    inherited property's market value.
+                    Enter your property details and click calculate to get an instant estimate of
+                    your inherited property&apos;s market value.
                   </p>
                 </div>
               ) : (

@@ -3,16 +3,27 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
+import { CalendlyBookingPanel } from '@/components/calendly/CalendlyBookingPanel';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import {
   FACEBOOK_PAGE_URL,
   INSTAGRAM_PAGE_URL,
   LINKEDIN_COMPANY_URL,
-  THREADS_PROFILE_URL,
   OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
   OFFICE_GOOGLE_MAPS_EMBED_SRC,
+  THREADS_PROFILE_URL,
 } from '@/config/site-google';
-import { GBP_BUSINESS_CATEGORY, GBP_BUSINESS_NAME, GBP_DESCRIPTION, GBP_SERVICE_AREA_PRIMARY, GBP_SPECIAL_HOURS, SITE_SMS_HREF, SITE_WEBSITE_GBP, SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
+import {
+  GBP_BUSINESS_CATEGORY,
+  GBP_BUSINESS_NAME,
+  GBP_DESCRIPTION,
+  GBP_SERVICE_AREA_PRIMARY,
+  GBP_SPECIAL_HOURS,
+  SITE_PHONE_DISPLAY,
+  SITE_PHONE_TEL_HREF,
+  SITE_SMS_HREF,
+  SITE_WEBSITE_GBP,
+} from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -53,8 +64,8 @@ export default function ContactPage() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Contact us</h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Reach the same team and phone number as our{' '}
-            <span className="font-semibold text-white">Google Business Profile</span>—most clients find
-            us there first.
+            <span className="font-semibold text-white">Google Business Profile</span>—most clients
+            find us there first.
           </p>
         </div>
       </section>
@@ -64,7 +75,9 @@ export default function ContactPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center text-secondary-600 mb-10 max-w-3xl mx-auto space-y-3">
             <p>
-              <span className="font-semibold text-secondary-900 text-lg block">{GBP_BUSINESS_NAME}</span>
+              <span className="font-semibold text-secondary-900 text-lg block">
+                {GBP_BUSINESS_NAME}
+              </span>
               <span className="text-sm text-secondary-500">{GBP_BUSINESS_CATEGORY}</span>
             </p>
             <p className="text-secondary-700 leading-relaxed">{GBP_DESCRIPTION}</p>
@@ -237,125 +250,15 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Contact Form Section */}
+      {/* Schedule (Calendly replaces legacy contact form) */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
-            <h2 className="text-3xl font-bold text-secondary-900 mb-2 text-center">
-              Send Us a Message
-            </h2>
-            <p className="text-secondary-600 text-center mb-8">
-              Fill out the form below and we'll get back to you as soon as possible.
-            </p>
-
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label
-                    htmlFor="firstName"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    First Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="lastName"
-                    className="block text-sm font-medium text-secondary-700 mb-2"
-                  >
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-secondary-700 mb-2"
-                >
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium text-secondary-700 mb-2"
-                >
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-secondary-700 mb-2"
-                >
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
-                  placeholder="Tell us about your probate property situation..."
-                ></textarea>
-              </div>
-
-              <div className="flex items-start">
-                <input
-                  id="consent"
-                  name="consent"
-                  type="checkbox"
-                  required
-                  className="h-4 w-4 text-primary-700 focus:ring-primary-500 border-gray-300 rounded mt-1"
-                />
-                <label htmlFor="consent" className="ml-3 text-sm text-secondary-600">
-                  I agree to receive marketing communications via voice call, text message, or email
-                  from Probate Real Estate Sales. Text HELP to {SITE_PHONE_DISPLAY} for assistance.
-                  Consent is not a condition of purchase. Msg/data rates may apply. Reply STOP to
-                  unsubscribe.
-                </label>
-              </div>
-
-              <div>
-                <button
-                  type="submit"
-                  className="w-full bg-primary-600 text-white px-6 py-4 rounded-md font-medium text-lg hover:bg-primary-700 transition-colors flex items-center justify-center"
-                >
-                  <MessageSquare className="h-5 w-5 mr-2" />
-                  Send Message
-                </button>
-              </div>
-            </form>
+            <CalendlyBookingPanel
+              title="Schedule time with us"
+              description="Choose a time for a private 15-minute conversation. You can also call or text us using the contact options above."
+              embedMinHeight={650}
+            />
           </div>
         </div>
       </section>
