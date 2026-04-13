@@ -63,7 +63,7 @@ export default function LasVegasProbateGuide() {
           author: 'Dr. Jan Duffy',
           datePublished: '2025-01-01T00:00:00Z',
           dateModified: new Date().toISOString(),
-          url: 'https://www.probaterealestatesales.com/resources/las-vegas-probate-guide',
+          url: 'https://www.probaterealestatesales.com/resources/las-vegas-probate-guide/',
           image: 'https://www.probaterealestatesales.com/images/las-vegas-probate-guide.jpg',
         }}
         customSchema={{

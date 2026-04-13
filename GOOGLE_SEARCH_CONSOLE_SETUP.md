@@ -63,6 +63,11 @@ This guide will help you set up and verify your website in Google Search Console
 - Select **"URL prefix"** property type
 - Enter: `https://www.probaterealestatesales.com`
 
+### Canonical Testing Rule
+- For **URL Inspection** and **Rich Results Test**, always submit canonical `www` URLs with trailing slash first.
+- Example: `https://www.probaterealestatesales.com/contact/`
+- Non-www / no-slash variants are redirect sources and can produce misleading validation failures.
+
 ### Step 3: Verify Ownership
 
 **Method 1: HTML Meta Tag (Easiest - Already Configured)**
@@ -230,6 +235,13 @@ After setup, verify the following:
 - Check for crawl errors
 - Verify robots.txt isn't blocking
 - Ensure pages have proper canonical URLs
+
+### Issue: "Unable to resolve https://probaterealestatesales.com/"
+**Solution**:
+- Ensure apex domain is added in **Vercel → Project → Settings → Domains**
+- In DNS, set apex (`@`) to Vercel's required record for this project and remove conflicting apex records
+- Keep Cloudflare in DNS-only mode (no proxy) if Cloudflare manages DNS
+- Use canonical `https://www.probaterealestatesales.com/.../` in testing while DNS propagation completes
 
 ### Issue: "Structured data errors"
 **Solution**:

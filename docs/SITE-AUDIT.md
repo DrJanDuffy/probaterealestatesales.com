@@ -4,6 +4,9 @@ Use after major content or template changes. Prefer [Rich Results Test](https://
 
 ## Technical SEO
 
+- [ ] `https://probaterealestatesales.com/` resolves over HTTPS (no DNS/TLS failure).
+- [ ] Apex (`https://probaterealestatesales.com/`) permanently redirects to `https://www.probaterealestatesales.com/` in a single hop.
+- [ ] `https://www.probaterealestatesales.com/` returns `200`.
 - [ ] `https://www.probaterealestatesales.com/sitemap.xml` loads and lists canonical URLs (trailing slash).
 - [ ] `robots.txt` allows crawling and points sitemap to `www` on production.
 - [ ] Root layout `metadataBase` and page-level `alternates.canonical` match live URLs.

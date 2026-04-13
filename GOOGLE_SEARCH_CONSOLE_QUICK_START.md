@@ -2,6 +2,10 @@
 
 ## ⚡ 5-Minute Setup
 
+### Canonical URL Rule (Important)
+- Use `https://www.probaterealestatesales.com/.../` in URL Inspection and Rich Results Test.
+- Do not validate non-canonical examples first (apex or missing trailing slash), because those are redirect variants.
+
 ### Step 1: Get Verification Code
 1. Go to [Google Search Console](https://search.google.com/search-console)
 2. Click **"Add Property"** → **"URL prefix"**
@@ -62,6 +66,17 @@ If GSC shows **"Not found (404)"** for URLs like:
 - **`http://probaterealestatesales.com/`** or **`https://probaterealestatesales.com/terms`** – The bare domain must reach your app so middleware can 301 to `https://www...`. In **Vercel → Project → Settings → Domains**, add `probaterealestatesales.com` (in addition to `www.probaterealestatesales.com`). Point both to the same project; middleware will redirect non-www and HTTP to the canonical URL.
 
 **"Unable to resolve https://probaterealestatesales.com/"** – This means DNS does not resolve the bare domain (apex). Fix it in your DNS provider (e.g. Cloudflare, your registrar): add the **apex** record Vercel shows when you add `probaterealestatesales.com` (usually an A record to Vercel’s IP or a CNAME flattening setup). Until the apex resolves, only `https://www.probaterealestatesales.com` will work; the site and canonicals use `www`, so the live site is fine.
+
+### Apex DNS Fix Checklist (Vercel + Registrar)
+1. In **Vercel → Project → Settings → Domains**, make sure both domains are attached:
+   - `www.probaterealestatesales.com`
+   - `probaterealestatesales.com`
+2. In your DNS provider, set apex (`@`) to the exact record value Vercel shows for this project.
+3. Remove conflicting apex records (old A/AAAA/CNAME entries pointing elsewhere).
+4. If using Cloudflare, keep DNS-only (gray cloud), not proxied.
+5. Re-test:
+   - `https://probaterealestatesales.com/` should permanently redirect to `https://www.probaterealestatesales.com/`
+   - `https://www.probaterealestatesales.com/` should return `200`
 
 ## Crawled - currently not indexed (non-www URLs)
 

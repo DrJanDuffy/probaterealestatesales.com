@@ -40,7 +40,8 @@ Post-December 2025 Core Update, **E-E-A-T** (Experience, Expertise, Authoritativ
    - Check for 404s: open a few URLs from the sitemap
 
 3. **Structured Data**
-   - Use [Rich Results Test](https://search.google.com/test/rich-results) on homepage and a service page
+   - Use [Rich Results Test](https://search.google.com/test/rich-results) on canonical `www` URLs first (with trailing slash)
+   - Example: `https://www.probaterealestatesales.com/` and `https://www.probaterealestatesales.com/services/`
    - Fix any errors or warnings
 
 4. **Mobile-Friendly**
@@ -75,6 +76,11 @@ Post-December 2025 Core Update, **E-E-A-T** (Experience, Expertise, Authoritativ
 - **Preferred:** `https://www.probaterealestatesales.com/contact/`
 - Middleware redirects: `http` → `https`, non-www → www, adds trailing slash
 - All sitemap and internal links use this format
+
+## Apex Fallback Note
+
+- If a tool reports `Unable to resolve https://probaterealestatesales.com/`, test the canonical `www` URL first to validate markup/indexing behavior.
+- Then fix apex DNS in Vercel + registrar so apex resolves and permanently redirects to `www`.
 
 ## Quick Links
 

@@ -3,9 +3,9 @@ import {
   getLocalBusinessSameAsUrls,
   INSTAGRAM_PAGE_URL,
   LINKEDIN_COMPANY_URL,
-  THREADS_PROFILE_URL,
   OFFICE_GOOGLE_MAPS_LISTING_URL,
   SITE_LOGO_ABSOLUTE_URL,
+  THREADS_PROFILE_URL,
 } from '@/config/site-google';
 import { YOUTUBE_CHANNEL_URL } from '@/config/youtube';
 import {
@@ -846,14 +846,18 @@ export function generateLegalServiceSchema(service: {
   };
 }
 
-const LOCAL_BUSINESS_REVIEW_TARGET_ID = 'https://www.probaterealestatesales.com/#localbusiness';
+/** Stable @id — must match `defaultSchemas.localBusiness['@id']` (layout JSON-LD). */
+export const SITE_LOCAL_BUSINESS_JSONLD_ID =
+  'https://www.probaterealestatesales.com/#localbusiness' as const;
+
+const LOCAL_ORG_REVIEW_TARGET_ID = `${SITE_LOCAL_BUSINESS_JSONLD_ID}-org`;
 
 function resolveItemReviewed(item?: { name: string; type?: string }) {
   const name = item?.name ?? GBP_BUSINESS_NAME;
   if (item?.type === 'Organization') {
     return {
       '@type': 'Organization' as const,
-      '@id': `${LOCAL_BUSINESS_REVIEW_TARGET_ID}-org`,
+      '@id': LOCAL_ORG_REVIEW_TARGET_ID,
       name,
       url: 'https://www.probaterealestatesales.com/',
     };
@@ -861,10 +865,66 @@ function resolveItemReviewed(item?: { name: string; type?: string }) {
   /** Google review snippets: itemReviewed must be a supported type (e.g. LocalBusiness). */
   return {
     '@type': 'LocalBusiness' as const,
-    '@id': LOCAL_BUSINESS_REVIEW_TARGET_ID,
+    '@id': SITE_LOCAL_BUSINESS_JSONLD_ID,
     name,
     url: 'https://www.probaterealestatesales.com/',
   };
+}
+
+/** Fields for a Review nested under LocalBusiness `review` (omit itemReviewed per Google). */
+export type NestedReviewForLocalBusinessInput = {
+  author: string;
+  reviewBody: string;
+  ratingValue: number;
+  datePublished: string;
+  bestRating?: number;
+  worstRating?: number;
+};
+
+/**
+ * One LocalBusiness node with nested `review` + `aggregateRating`.
+ * Use on pages that show multiple reviews so Google does not treat each Review as an orphan
+ * (avoids Review snippet "invalid parent" / parent_node issues). Same @id as layout merges graph.
+ *
+ * @see https://developers.google.com/search/docs/appearance/structured-data/review-snippet#embedded-review-example
+ */
+export function buildLocalBusinessNestedReviewsStructuredData(
+  reviews: NestedReviewForLocalBusinessInput[]
+): Record<string, unknown> {
+  const count = reviews.length;
+  const sum = reviews.reduce((acc, r) => acc + r.ratingValue, 0);
+  const ratingValue = count === 0 ? 0 : Math.round((sum / count) * 100) / 100;
+
+  const base: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': SITE_LOCAL_BUSINESS_JSONLD_ID,
+    name: GBP_BUSINESS_NAME,
+    review: reviews.map((r) => ({
+      '@type': 'Review',
+      author: { '@type': 'Person', name: r.author },
+      reviewBody: r.reviewBody,
+      reviewRating: {
+        '@type': 'Rating',
+        ratingValue: r.ratingValue,
+        bestRating: r.bestRating ?? 5,
+        worstRating: r.worstRating ?? 1,
+      },
+      datePublished: r.datePublished,
+    })),
+  };
+
+  if (count > 0) {
+    base.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue,
+      reviewCount: count,
+      bestRating: 5,
+      worstRating: 1,
+    };
+  }
+
+  return base;
 }
 
 export function generateReviewSchema(review: {

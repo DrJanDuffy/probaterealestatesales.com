@@ -6,8 +6,8 @@ import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import { GOOGLE_BUSINESS_REVIEW_URL } from '@/config/site-google';
-import { generateReviewSchema } from '@/lib/schema';
-import { GBP_BUSINESS_NAME, SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
+import { buildLocalBusinessNestedReviewsStructuredData } from '@/lib/schema';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -160,30 +160,21 @@ export default function TestimonialsPage() {
     { name: 'Testimonials', url: '/testimonials/' },
   ];
 
-  const reviewGraph = {
-    '@context': 'https://schema.org',
-    '@graph': testimonials.map((testimonial) => {
-      const node = generateReviewSchema({
-        author: testimonial.name,
-        reviewBody: `${testimonial.emotionalSituation} ${testimonial.specificAction} ${testimonial.specificResult} ${testimonial.emotionalOutcome}`,
-        ratingValue: testimonial.rating,
-        datePublished: testimonial.datePublished,
-        itemReviewed: {
-          name: GBP_BUSINESS_NAME,
-          type: 'LocalBusiness',
-        },
-      });
-      const { '@context': _c, ...rest } = node;
-      return rest;
-    }),
-  };
+  const testimonialsReviewLd = buildLocalBusinessNestedReviewsStructuredData(
+    testimonials.map((t) => ({
+      author: t.name,
+      reviewBody: `${t.emotionalSituation} ${t.specificAction} ${t.specificResult} ${t.emotionalOutcome}`,
+      ratingValue: t.rating,
+      datePublished: t.datePublished,
+    }))
+  );
 
   return (
     <main className="min-h-screen bg-gray-50">
       <script
         type="application/ld+json"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD schema injection is safe
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewGraph) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(testimonialsReviewLd) }}
       />
       <Breadcrumb items={breadcrumbs.slice(1)} />
       {/* Hero Section */}
@@ -365,14 +356,17 @@ export default function TestimonialsPage() {
                 Professional credentials &amp; local focus
               </h2>
               <p className="text-lg text-secondary-600">
-                Licensed Nevada probate real estate guidance for Las Vegas and Clark County families.
+                Licensed Nevada probate real estate guidance for Las Vegas and Clark County
+                families.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               <div>
                 <div className="text-2xl font-bold text-primary-700 mb-2">Licensed Nevada</div>
-                <div className="text-secondary-600 text-sm">Real estate professional (S.0197614)</div>
+                <div className="text-secondary-600 text-sm">
+                  Real estate professional (S.0197614)
+                </div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-primary-700 mb-2">Clark County</div>
