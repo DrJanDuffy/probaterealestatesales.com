@@ -71,6 +71,19 @@ Post-December 2025 Core Update, **E-E-A-T** (Experience, Expertise, Authoritativ
 | Update sitemap when adding pages | Automatic (Next.js generates) |
 | Re-submit sitemap after major changes | Optional |
 
+## Manual GSC Action Queue
+
+1. Inspect canonical URL first (www + trailing slash).
+2. Prioritize:
+   - homepage
+   - `/services/` and newly added service pages
+   - top location pages
+   - recently updated blog/resource pages
+3. If issue found:
+   - fix code/template
+   - run live URL test
+   - click **Validate fix** in Page indexing/Enhancements report
+
 ## URL Format (Canonical)
 
 - **Preferred:** `https://www.probaterealestatesales.com/contact/`

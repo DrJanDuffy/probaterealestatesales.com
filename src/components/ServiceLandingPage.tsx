@@ -1,0 +1,109 @@
+import Link from 'next/link';
+import Breadcrumb from '@/components/Breadcrumb';
+import SchemaMarkup from '@/components/SchemaMarkup';
+import { OFFICE_ADDRESS_LINE } from '@/config/site-google';
+import { getRelatedServices, type ServicePageContent } from '@/lib/service-pages';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
+
+type ServiceLandingPageProps = {
+  service: ServicePageContent;
+};
+
+export default function ServiceLandingPage({ service }: ServiceLandingPageProps) {
+  const relatedServices = getRelatedServices(service);
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Services', url: '/services/' },
+    { name: service.title, url: `/services/${service.slug}/` },
+  ];
+
+  return (
+    <main className="min-h-screen bg-white">
+      <Breadcrumb items={breadcrumbs.slice(1)} />
+      <SchemaMarkup
+        type="breadcrumb"
+        breadcrumbs={breadcrumbs}
+        customSchema={{
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: service.title,
+          description: service.summary,
+          serviceType: service.category,
+          url: service.canonicalUrl,
+          areaServed: {
+            '@type': 'AdministrativeArea',
+            name: 'Clark County, Nevada',
+          },
+          provider: {
+            '@id': 'https://www.probaterealestatesales.com/#localbusiness',
+          },
+        }}
+      />
+
+      <section className="bg-gray-50 border-b">
+        <div className="mx-auto max-w-5xl px-4 py-14">
+          <p className="text-sm font-semibold uppercase tracking-wide text-primary-700">
+            {service.category}
+          </p>
+          <h1 className="mt-2 text-4xl font-bold text-secondary-900">{service.title}</h1>
+          <p className="mt-4 text-lg text-secondary-700">{service.summary}</p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-4 py-12">
+        <div className="rounded-xl border bg-white p-6 shadow-sm">
+          <h2 className="text-2xl font-semibold text-secondary-900">
+            Service Coverage: Las Vegas & Clark County
+          </h2>
+          <p className="mt-4 text-secondary-700">{service.details}</p>
+          <p className="mt-4 text-secondary-700">
+            Contact: <a href={SITE_PHONE_TEL_HREF}>{SITE_PHONE_DISPLAY}</a>
+          </p>
+          <p className="text-secondary-700">Office: {OFFICE_ADDRESS_LINE}</p>
+        </div>
+
+        {relatedServices.length > 0 && (
+          <div className="mt-8 rounded-xl border bg-gray-50 p-6">
+            <h2 className="text-2xl font-semibold text-secondary-900">Related Services</h2>
+            <ul className="mt-4 grid gap-3 md:grid-cols-2">
+              {relatedServices.map((related) => (
+                <li key={related.slug} className="rounded-lg border bg-white p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-primary-700">
+                    {related.category}
+                  </p>
+                  <Link
+                    href={`/services/${related.slug}/`}
+                    className="mt-1 block font-semibold text-secondary-900 hover:text-primary-700"
+                  >
+                    {related.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <a
+            href={SITE_PHONE_TEL_HREF}
+            className="rounded-md bg-primary-700 px-5 py-3 font-semibold text-white hover:bg-primary-800"
+          >
+            Call {SITE_PHONE_DISPLAY}
+          </a>
+          <Link
+            href="/contact/"
+            className="rounded-md border border-primary-700 px-5 py-3 font-semibold text-primary-700 hover:bg-primary-50"
+          >
+            Request Consultation
+          </Link>
+          <Link
+            href="/services/"
+            className="rounded-md border border-secondary-300 px-5 py-3 font-semibold text-secondary-700 hover:bg-gray-50"
+          >
+            View All Services
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+}

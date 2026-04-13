@@ -96,6 +96,25 @@ this usually means Google is crawling the **non-www** variant. Those URLs are no
 
 ## 📊 What to Monitor
 
+### Manual GSC Actions (Post-Deploy)
+- Confirm property coverage:
+  - URL-prefix property: `https://www.probaterealestatesales.com/`
+  - Optional domain property: `probaterealestatesales.com`
+- Submit/re-submit sitemap when route inventory changes:
+  - `https://www.probaterealestatesales.com/sitemap.xml`
+- URL Inspection priority queue (highest first):
+  - homepage
+  - services hub and new/updated service pages
+  - locations hub and priority location pages
+  - resources and blog pages updated this sprint
+- For enhancement/indexing issues:
+  1. fix template/code issue
+  2. test live URL
+  3. click **Validate fix** in the affected report
+- Monitoring cadence:
+  - weekly: Page indexing + Enhancements
+  - monthly: Performance trends (queries/pages) and content refresh list
+
 ### Week 1-2
 - **Coverage**: Check for indexing errors
 - **Performance**: Track impressions and clicks

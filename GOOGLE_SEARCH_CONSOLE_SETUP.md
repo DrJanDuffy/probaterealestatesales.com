@@ -116,6 +116,21 @@ After verification, request indexing for key pages:
 
 ## 📊 Post-Setup Monitoring
 
+### Manual GSC Workflow (Operational)
+1. **Property verification**
+   - Keep URL-prefix property verified: `https://www.probaterealestatesales.com/`
+   - Optionally maintain domain property for host variants: `probaterealestatesales.com`
+2. **Sitemap operations**
+   - Keep `https://www.probaterealestatesales.com/sitemap.xml` submitted
+   - Re-submit after adding/removing key routes
+3. **URL Inspection queue**
+   - Prioritize homepage, `/services/`, new service pages, and key local pages
+4. **Validation flow**
+   - Fix issue -> live URL test -> click **Validate fix** in the relevant GSC report
+5. **Cadence**
+   - Weekly: Page indexing + Enhancements
+   - Monthly: Performance query/page review and content refresh plan
+
 ### Week 1-2: Initial Monitoring
 
 1. **Coverage Report**

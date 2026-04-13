@@ -1,22 +1,8 @@
 import type { MetadataRoute } from 'next';
-import { headers } from 'next/headers';
 
-function sitemapBaseUrl(hostHeader: string): string {
-  const host = (hostHeader.split(':')[0] || 'localhost').toLowerCase();
-  if (host === 'localhost' || host === '127.0.0.1' || host.endsWith('.vercel.app')) {
-    return `https://${host}`;
-  }
-  if (host.includes('probaterealestatesales.com')) {
-    return 'https://www.probaterealestatesales.com';
-  }
-  return `https://${host}`;
-}
+const CANONICAL_SITE_ORIGIN = 'https://www.probaterealestatesales.com';
 
-export default async function robots(): Promise<MetadataRoute.Robots> {
-  const headersList = await headers();
-  const host = headersList.get('x-forwarded-host') || headersList.get('host') || 'localhost';
-  const baseUrl = sitemapBaseUrl(host);
-
+export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       // Default: allow all crawlers
@@ -75,6 +61,6 @@ export default async function robots(): Promise<MetadataRoute.Robots> {
         allow: '/',
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: `${CANONICAL_SITE_ORIGIN}/sitemap.xml`,
   };
 }

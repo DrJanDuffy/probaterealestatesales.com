@@ -38,6 +38,7 @@ export const INDEXNOW_URLS = [
   'https://www.probaterealestatesales.com/locations/spring-valley/',
   'https://www.probaterealestatesales.com/resources/nevada-probate-guide/',
   'https://www.probaterealestatesales.com/resources/las-vegas-probate-guide/',
+  'https://www.probaterealestatesales.com/resources/las-vegas-probate-legal-resources/',
   'https://www.probaterealestatesales.com/privacy/',
   'https://www.probaterealestatesales.com/terms/',
   'https://www.probaterealestatesales.com/blog/probate-videos/',

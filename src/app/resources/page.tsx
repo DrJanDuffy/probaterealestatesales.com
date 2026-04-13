@@ -1,4 +1,3 @@
-import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import { ArrowRight } from 'lucide-react';
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
@@ -12,10 +11,11 @@ import NevadaProbateLaws from '@/components/NevadaProbateLaws';
 import ProbateCostCalculator from '@/components/ProbateCostCalculator';
 import ProbatePropertyChecklist from '@/components/ProbatePropertyChecklist';
 import ProbateTimeline from '@/components/ProbateTimeline';
+import RealScoutOfficeListings from '@/components/RealScoutOfficeListings';
 import SchemaMarkup from '@/components/SchemaMarkup';
 import SchemaMarkupExpert from '@/components/SchemaMarkupExpert';
-import RealScoutOfficeListings from '@/components/RealScoutOfficeListings';
 import SEOContentStrategy from '@/components/SEOContentStrategy';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -108,6 +108,35 @@ export default function ResourcesPage() {
                 Guides, FAQs, videos, and downloadable resources
               </p>
             </a>
+
+            <Link
+              href="/resources/las-vegas-probate-legal-resources/"
+              className="bg-white rounded-xl shadow-soft p-6 border border-secondary-100 hover:shadow-lg transition-shadow duration-300 text-center group"
+            >
+              <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <svg
+                  className="h-8 w-8 text-slate-700"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <title>Courts and legal aid</title>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  />
+                </svg>
+              </div>
+              <h3 className="text-lg font-semibold text-secondary-900 mb-2">
+                Courts &amp; legal aid (Clark County)
+              </h3>
+              <p className="text-sm text-secondary-600">
+                Self-help center, courts, and Legal Aid contacts for Las Vegas
+              </p>
+            </Link>
 
             <a
               href="#nevada-laws"

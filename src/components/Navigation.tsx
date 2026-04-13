@@ -100,6 +100,11 @@ const navigation = {
       description: 'Las Vegas & Clark County probate guide',
     },
     {
+      name: 'Legal resources',
+      href: '/resources/las-vegas-probate-legal-resources',
+      description: 'Courts, self-help & legal aid',
+    },
+    {
       name: 'FAQ & Q&A',
       href: '/faq',
       description: 'Comprehensive probate real estate questions & answers',
@@ -121,6 +126,51 @@ const navigation = {
     },
   ],
   services: [
+    {
+      name: 'Probate Real Estate Sales',
+      href: '/services/probate-real-estate-sales/',
+      description: 'Full-service probate sales in Clark County',
+    },
+    {
+      name: 'Estate Liquidation',
+      href: '/services/estate-liquidation/',
+      description: 'Estate, trust, and multi-parcel liquidation',
+    },
+    {
+      name: 'Court-Approved Property Sales',
+      href: '/services/court-approved-property-sales/',
+      description: 'Nevada court-confirmed probate sales',
+    },
+    {
+      name: 'Trust Sale Services',
+      href: '/services/trust-sale-services/',
+      description: 'Trust-owned property sales in 30-45 days',
+    },
+    {
+      name: 'Probate Property Valuation',
+      href: '/services/probate-property-valuation/',
+      description: 'Real Estate Appraiser valuation services',
+    },
+    {
+      name: 'Estate Property CMA Reports',
+      href: '/services/estate-property-cma-reports/',
+      description: 'Detailed CMAs for executors and attorneys',
+    },
+    {
+      name: 'Estate Attorney Referral Services',
+      href: '/services/estate-attorney-referral-services/',
+      description: 'Coordinated support for probate counsel',
+    },
+    {
+      name: 'Partition Action Consulting',
+      href: '/services/partition-action-consulting/',
+      description: 'Court-ordered partition sale consulting',
+    },
+    {
+      name: 'Executor Property Consulting',
+      href: '/services/executor-property-consulting/',
+      description: 'Free confidential executor consulting',
+    },
     {
       name: 'Probate Division',
       href: '/probate-division/',

@@ -1,4 +1,4 @@
-import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 // Import components for SEO and schema markup
 
 import {
@@ -127,6 +127,21 @@ export default function LasVegasProbateGuide() {
         </div>
       </section>
 
+      <section className="border-b border-gray-200 bg-slate-50 py-5">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-sm text-gray-700 md:text-base">
+            <span className="font-semibold text-gray-900">See also:</span>{' '}
+            <Link
+              href="/resources/las-vegas-probate-legal-resources/"
+              className="font-medium text-blue-700 underline decoration-blue-300 underline-offset-2 hover:text-blue-900"
+            >
+              Clark County courts, self-help &amp; Legal Aid directory
+            </Link>{' '}
+            — phones, addresses, and official links for Las Vegas.
+          </p>
+        </div>
+      </section>
+
       {/* Key Statistics */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -144,7 +159,9 @@ export default function LasVegasProbateGuide() {
             <div className="space-y-2">
               <div className="text-2xl font-bold text-purple-600">Licensed</div>
               <div className="text-gray-600">Nevada real estate</div>
-              <div className="text-sm text-gray-500">S.0197614 — verify with your legal counsel on fees</div>
+              <div className="text-sm text-gray-500">
+                S.0197614 — verify with your legal counsel on fees
+              </div>
             </div>
             <div className="space-y-2">
               <div className="text-4xl font-bold text-orange-600">20+</div>

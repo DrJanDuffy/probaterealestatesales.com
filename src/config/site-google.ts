@@ -84,7 +84,7 @@ export const OFFICE_GOOGLE_MAPS_EMBED_SRC = (() => {
 
 /** Official business profiles (use in footer + sameAs; keep in sync with GBP / marketing). */
 /** Must match Google Business Profile “Social profiles” (Facebook). */
-export const FACEBOOK_PAGE_URL = 'https://www.facebook.com/LasVegasProbate' as const;
+export const FACEBOOK_PAGE_URL = 'http://facebook.com/probaterealestatesales' as const;
 /** Company page — align with GBP “Social profiles” when listed */
 export const LINKEDIN_COMPANY_URL =
   'https://www.linkedin.com/company/probaterealestatesales' as const;

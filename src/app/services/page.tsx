@@ -1,4 +1,3 @@
-import { SITE_PHONE_TEL_HREF, SITE_PHONE_DISPLAY } from '@/lib/site-contact';
 import {
   ArrowRight,
   Award,
@@ -20,8 +19,10 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Breadcrumb from '@/components/Breadcrumb';
-import { SITE_LOGO_ABSOLUTE_URL } from '@/config/site-google';
 import SchemaMarkup from '@/components/SchemaMarkup';
+import { SITE_LOGO_ABSOLUTE_URL } from '@/config/site-google';
+import { SERVICE_PAGES } from '@/lib/service-pages';
+import { SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 
 const FAQ = dynamic(() => import('@/components/FAQ'), {
   loading: () => <div className="py-16 text-center text-gray-500">Loading FAQ...</div>,
@@ -221,6 +222,33 @@ export default function ServicesPage() {
               <Calculator className="w-5 h-5" />
               <span>Get Free Property Assessment</span>
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="mb-8 text-center text-3xl font-bold text-gray-900">
+            Service Categories and Specialized Offerings
+          </h2>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {SERVICE_PAGES.map((service) => (
+              <Link
+                key={service.slug}
+                href={`/services/${service.slug}/`}
+                className="rounded-xl border border-gray-200 bg-gray-50 p-6 transition hover:border-primary-300 hover:shadow-md"
+              >
+                <p className="text-xs font-semibold uppercase tracking-wide text-primary-700">
+                  {service.category}
+                </p>
+                <h3 className="mt-2 text-xl font-bold text-gray-900">{service.title}</h3>
+                <p className="mt-3 text-sm text-gray-700">{service.summary}</p>
+                <span className="mt-4 inline-flex items-center font-semibold text-primary-700">
+                  View service details
+                  <ArrowRight className="ml-1 h-4 w-4" />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
@@ -669,7 +697,7 @@ export default function ServicesPage() {
             </p>
             <a
               href="https://drjanduffy.realscout.com/onboarding"
-              className="chat-trigger bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 flex items-center mx-auto space-x-2 inline-block"
+              className="chat-trigger bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 inline-flex items-center mx-auto space-x-2"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Chat with Probate Expert</span>

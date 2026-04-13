@@ -47,6 +47,9 @@ export const GBP_OPENING_HOURS_ARRAY = ['Mo-Fr 08:00-18:00', 'Sa 09:00-14:00'] a
 
 export const GBP_OPENING_HOURS_STRING = 'Mo-Fr 08:00-18:00, Sa 09:00-14:00';
 
+/** GBP opening date (September 20, 2008) in ISO format for schema fields. */
+export const GBP_OPENING_DATE_ISO = '2008-09-20';
+
 /** Special hours from GBP (show in visible hours; re-validate each year) */
 export const GBP_SPECIAL_HOURS = [
   { label: 'Easter', dateLabel: 'April 5, 2026', note: 'Closed' },

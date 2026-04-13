@@ -6,6 +6,7 @@ import {
   Clock,
   Download,
   FileText,
+  Gavel,
   Play,
   Star,
   TrendingUp,
@@ -14,6 +15,15 @@ import {
 import Link from 'next/link';
 
 const essentialGuides = [
+  {
+    title: 'Las Vegas courts, self-help & Legal Aid (directory)',
+    description:
+      'Civil Law Self-Help Center, Regional Justice Center, Family Courts, and Legal Aid Center of Southern Nevada—addresses and phones',
+    icon: Gavel,
+    duration: 'Quick reference',
+    category: 'Clark County',
+    link: '/resources/las-vegas-probate-legal-resources',
+  },
   {
     title: "Understanding Nevada Probate Laws: A Homeowner's Guide",
     description: "Dr. Duffy's comprehensive guide to Nevada probate laws and procedures",

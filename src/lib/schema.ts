@@ -11,6 +11,7 @@ import { YOUTUBE_CHANNEL_URL } from '@/config/youtube';
 import {
   GBP_BUSINESS_NAME,
   GBP_DESCRIPTION,
+  GBP_OPENING_DATE_ISO,
   GBP_OPENING_HOURS_ARRAY,
   SITE_BRAND_PRIMARY,
   SITE_PHONE_E164,
@@ -703,7 +704,7 @@ export const defaultSchemas = {
       name: 'Dr. Jan Duffy',
       jobTitle: 'Founder & Principal Broker',
     },
-    foundingDate: '2020',
+    foundingDate: GBP_OPENING_DATE_ISO,
     address: {
       '@type': 'PostalAddress',
       streetAddress: '400 S 4th St suite 250 b',

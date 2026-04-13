@@ -81,6 +81,11 @@ const footerNavigation = {
       description: 'Las Vegas & Clark County guide',
     },
     {
+      name: 'Legal resources directory',
+      href: '/resources/las-vegas-probate-legal-resources',
+      description: 'Courts, self-help & legal aid',
+    },
+    {
       name: 'Probate Timeline',
       href: '/resources/nevada-probate-guide#timeline',
       description: '6-8 month timeline',

@@ -18,6 +18,7 @@ Use after major content or template changes. Prefer [Rich Results Test](https://
 - [ ] LocalBusiness / LegalService JSON-LD: NAP + hours match Google Business Profile.
 - [ ] `logo` / `image` URLs return 200 (use `SITE_LOGO_ABSOLUTE_URL` from `src/config/site-google.ts`).
 - [ ] At most one FAQPage per page (see `SchemaMarkup` dedupe logic).
+- [ ] Main schema entity matches visible page purpose (for service pages, `Service` data matches on-page service content).
 
 ## Google Maps & GBP
 
@@ -28,6 +29,13 @@ Use after major content or template changes. Prefer [Rich Results Test](https://
 
 - [ ] Lighthouse: contrast (primary text on white uses 700/900), heading order, no hydration errors on legal pages with dates.
 - [ ] Images: descriptive `alt` with location/service where relevant.
+
+## GSC Operations
+
+- [ ] URL-prefix property (`https://www.probaterealestatesales.com/`) verified and active.
+- [ ] Sitemap submitted (`https://www.probaterealestatesales.com/sitemap.xml`) and re-submitted after route changes.
+- [ ] Weekly review completed for Page indexing + Enhancements reports.
+- [ ] Validation flow followed for issues: fix -> live URL test -> Validate fix.
 
 ## RealScout / IDX
 
