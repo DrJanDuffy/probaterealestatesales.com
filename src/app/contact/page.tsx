@@ -257,7 +257,7 @@ export default function ContactPage() {
             <CalendlyBookingPanel
               title="Schedule time with us"
               description="Choose a time for a private 15-minute conversation. You can also call or text us using the contact options above."
-              embedMinHeight={650}
+              embedHeight={700}
             />
           </div>
         </div>

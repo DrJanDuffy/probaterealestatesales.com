@@ -71,8 +71,8 @@ export default function ContactSection() {
             <CalendlyBookingPanel
               title="Schedule a call"
               description="Pick a time for a private 15-minute conversation, or open the calendar in a new window with the button below."
-              embedMinHeight={620}
-              embedClassName="mx-auto max-w-4xl overflow-hidden rounded-xl border border-primary-200 bg-white shadow-md"
+              embedHeight={700}
+              embedClassName="mx-auto max-w-4xl rounded-xl border border-primary-200 bg-white shadow-md"
             />
           </div>
 

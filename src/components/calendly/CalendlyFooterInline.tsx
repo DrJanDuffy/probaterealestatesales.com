@@ -15,8 +15,8 @@ export function CalendlyFooterInline() {
         popup.
       </p>
       <CalendlyInlineEmbed
-        minHeight={700}
-        className="mx-auto max-w-4xl overflow-hidden rounded-lg border border-secondary-700 bg-secondary-950 shadow-lg"
+        height={700}
+        className="mx-auto max-w-4xl rounded-lg border border-secondary-700 bg-secondary-950 shadow-lg"
       />
       <p className="text-center mt-6">
         <CalendlyScheduleButton variant="footerLink" />

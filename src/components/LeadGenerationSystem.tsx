@@ -148,7 +148,7 @@ export default function LeadGenerationSystem() {
               <CalendlyBookingPanel
                 title={leadCaptureForm.scheduleTitle}
                 description={leadCaptureForm.scheduleDescription}
-                embedMinHeight={620}
+                embedHeight={700}
                 className="pb-2"
               />
               <p className="text-xs text-secondary-500 text-center mt-4">

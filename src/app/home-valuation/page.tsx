@@ -55,7 +55,7 @@ export default function HomeValuationPage() {
             <CalendlyBookingPanel
               title="Request your free property valuation & CMA"
               description="Schedule a short call so we can discuss your probate property and next steps for a comparative market analysis (CMA) in Las Vegas and Clark County."
-              embedMinHeight={650}
+              embedHeight={700}
             />
           </div>
         </div>

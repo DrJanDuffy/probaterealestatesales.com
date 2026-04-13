@@ -6,8 +6,8 @@ import { CalendlyScheduleButton } from '@/components/calendly/CalendlyScheduleBu
 type CalendlyBookingPanelProps = {
   title: string;
   description?: string;
-  /** Height for the inline embed (px). */
-  embedMinHeight?: number;
+  /** Fixed height for the inline Calendly embed (px). */
+  embedHeight?: number;
   className?: string;
   embedClassName?: string;
   showPopupFallback?: boolean;
@@ -20,9 +20,9 @@ type CalendlyBookingPanelProps = {
 export function CalendlyBookingPanel({
   title,
   description,
-  embedMinHeight = 650,
+  embedHeight = 700,
   className = '',
-  embedClassName = 'mx-auto max-w-4xl overflow-hidden rounded-lg border border-gray-200 bg-white shadow-lg',
+  embedClassName = 'mx-auto max-w-4xl rounded-lg border border-gray-200 bg-white shadow-lg',
   showPopupFallback = true,
 }: CalendlyBookingPanelProps) {
   return (
@@ -31,7 +31,7 @@ export function CalendlyBookingPanel({
       {description ? (
         <p className="text-secondary-600 text-center mb-6 max-w-2xl mx-auto">{description}</p>
       ) : null}
-      <CalendlyInlineEmbed minHeight={embedMinHeight} className={embedClassName} />
+      <CalendlyInlineEmbed height={embedHeight} className={embedClassName} />
       {showPopupFallback ? (
         <p className="text-center mt-4">
           <CalendlyScheduleButton variant="outline" />

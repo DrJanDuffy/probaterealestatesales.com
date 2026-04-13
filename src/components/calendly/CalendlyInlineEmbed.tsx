@@ -4,8 +4,11 @@ import { useEffect, useRef } from 'react';
 import { CALENDLY_SCHEDULE_URL } from '@/config/calendly';
 
 type CalendlyInlineEmbedProps = {
-  /** Minimum height of the embed container (Calendly iframe). */
-  minHeight?: number;
+  /**
+   * Fixed height of the embed container in px. Calendly’s iframe expects a parent with explicit
+   * `height` (not only `min-height`), or the widget can collapse to a thin strip with scrollbars.
+   */
+  height?: number;
   className?: string;
   /** Accessible label for the scheduling region. */
   ariaLabel?: string;
@@ -16,11 +19,11 @@ type CalendlyInlineEmbedProps = {
  * with declarative `.calendly-inline-widget`).
  */
 export function CalendlyInlineEmbed({
-  minHeight = 700,
+  height = 700,
   className = '',
   ariaLabel = 'Calendly scheduling',
 }: CalendlyInlineEmbedProps) {
-  const containerRef = useRef<HTMLElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const didInitRef = useRef(false);
 
   useEffect(() => {
@@ -59,10 +62,11 @@ export function CalendlyInlineEmbed({
   }, []);
 
   return (
-    <section
+    <div
       ref={containerRef}
-      className={className}
-      style={{ minWidth: 320, minHeight }}
+      role="region"
+      className={`block w-full ${className}`.trim()}
+      style={{ minWidth: 320, height, minHeight: height }}
       aria-label={ariaLabel}
     />
   );
