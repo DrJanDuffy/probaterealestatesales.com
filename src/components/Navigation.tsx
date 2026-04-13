@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
+import { CalendlyScheduleButton } from '@/components/calendly/CalendlyScheduleButton';
 import { GBP_BUSINESS_NAME, SITE_PHONE_DISPLAY, SITE_PHONE_TEL_HREF } from '@/lib/site-contact';
 
 const navigation = {
@@ -411,7 +412,11 @@ export default function Navigation() {
               Contact
             </Link>
 
-            {/* CTA Button */}
+            {/* CTA Buttons */}
+            <CalendlyScheduleButton
+              variant="outline"
+              className="hidden lg:inline-flex border-primary-600 text-primary-700"
+            />
             <Link
               href="https://drjanduffy.realscout.com/onboarding"
               className="bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 hover-lift transition-all duration-200 focus-ring"
@@ -561,7 +566,14 @@ export default function Navigation() {
             </Link>
 
             {/* Mobile CTA */}
-            <div className="border-t border-secondary-200 pt-4">
+            <div className="border-t border-secondary-200 pt-4 space-y-3">
+              <div className="flex justify-center">
+                <CalendlyScheduleButton
+                  variant="outline"
+                  className="w-full sm:w-auto justify-center"
+                  onScheduleClick={() => setMobileMenuOpen(false)}
+                />
+              </div>
               <Link
                 href="https://drjanduffy.realscout.com/onboarding"
                 className="block w-full text-center bg-primary-600 text-white px-4 py-3 rounded-md text-base font-medium hover:bg-primary-700 hover-lift transition-all duration-200 focus-ring"

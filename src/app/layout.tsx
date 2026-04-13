@@ -2,16 +2,17 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
+import { CalendlyBadgeScript } from '@/components/calendly/CalendlyBadgeScript';
 import Footer from '@/components/Footer';
 import Navigation from '@/components/Navigation';
 import { getLocalBusinessSameAsUrls, OFFICE_GOOGLE_MAPS_LISTING_URL } from '@/config/site-google';
+import { defaultSchemas } from '@/lib/schema';
 import {
   GBP_BUSINESS_NAME,
   GBP_DESCRIPTION,
   GBP_OPENING_HOURS_STRING,
   SITE_PHONE_E164,
 } from '@/lib/site-contact';
-import { defaultSchemas } from '@/lib/schema';
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
@@ -86,6 +87,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="dns-prefetch" href="https://maps.googleapis.com" />
         <link rel="dns-prefetch" href="https://www.youtube-nocookie.com" />
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
+        <link rel="dns-prefetch" href="https://assets.calendly.com" />
+        <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css" />
 
         {/* WebSite + LocalBusiness + RealEstateAgent + Person (E-E-A-T) - on every page */}
         <script
@@ -200,6 +203,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navigation />
         <main>{children}</main>
         <Footer />
+        <CalendlyBadgeScript />
       </body>
     </html>
   );

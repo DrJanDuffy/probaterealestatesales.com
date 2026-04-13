@@ -12,14 +12,16 @@ import {
   Users,
 } from 'lucide-react';
 import Link from 'next/link';
+import { CalendlyFooterInline } from '@/components/calendly/CalendlyFooterInline';
+import { CalendlyScheduleButton } from '@/components/calendly/CalendlyScheduleButton';
 import {
   FACEBOOK_PAGE_URL,
   GOOGLE_BUSINESS_REVIEW_URL,
   INSTAGRAM_PAGE_URL,
   LINKEDIN_COMPANY_URL,
-  THREADS_PROFILE_URL,
   OFFICE_GOOGLE_MAPS_DIRECTIONS_URL,
   OFFICE_GOOGLE_MAPS_LISTING_URL,
+  THREADS_PROFILE_URL,
 } from '@/config/site-google';
 import {
   GBP_BUSINESS_CATEGORY,
@@ -425,6 +427,8 @@ export default function Footer() {
               ))}
             </ul>
           </div>
+
+          <CalendlyFooterInline />
         </div>
 
         {/* Bottom Section */}
@@ -530,7 +534,7 @@ export default function Footer() {
           </div>
 
           {/* CTA Section */}
-          <div className="mt-6 text-center">
+          <div className="mt-6 flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4">
             <Link
               href="https://drjanduffy.realscout.com/onboarding"
               className="inline-flex items-center bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 hover-lift transition-all duration-200 focus-ring-dark"
@@ -539,6 +543,7 @@ export default function Footer() {
             >
               Get Your Free Probate Consultation
             </Link>
+            <CalendlyScheduleButton variant="outline" className="!ring-offset-secondary-900" />
           </div>
         </div>
       </div>
